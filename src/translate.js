@@ -27,14 +27,20 @@ Answer strictly as JSON:
 
 const MAX_LEN = 600;
 
-export async function translate(env, text) {
+export async function translate(env, text, direction) {
   const input = String(text ?? '').trim().slice(0, MAX_LEN);
   if (!input) throw new Error('empty input');
+
+  // Direction is normally auto-detected; the site can force it.
+  const forced =
+    direction === 'en->pt' ? '\nThe user explicitly requests: translate INTO European Portuguese.'
+    : direction === 'pt->en' ? '\nThe user explicitly requests: translate INTO English.'
+    : '';
 
   const raw = await chat(
     env,
     [
-      { role: 'system', content: SYSTEM },
+      { role: 'system', content: SYSTEM + forced },
       { role: 'user', content: input },
     ],
     { json: true }

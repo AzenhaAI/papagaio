@@ -56,7 +56,7 @@ export async function handleApi(request, env, path) {
     }
     if (!body?.text?.trim()) return json({ error: 'text is required' }, 400);
     try {
-      return json(await translate(env, body.text));
+      return json(await translate(env, body.text, body.direction));
     } catch (e) {
       return json({ error: e.message }, 502);
     }

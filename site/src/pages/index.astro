@@ -10,13 +10,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </p>
 
   <div class="panel" style="margin-top: 22px;">
+    <div id="dir" style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
+      <button data-d="auto" class="dirbtn active">⇄ Auto</button>
+      <button data-d="en->pt" class="dirbtn">🇬🇧 EN → 🇵🇹 PT</button>
+      <button data-d="pt->en" class="dirbtn">🇵🇹 PT → 🇬🇧 EN</button>
+    </div>
     <textarea id="src" rows="3" placeholder="Type a phrase in English or Portuguese…"
       style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
-    <div style="display:flex; align-items:center; gap:14px; margin-top:12px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
       <button class="btn" id="go">Translate</button>
       <span class="muted" id="status"></span>
+      <span class="muted" id="dirhint" style="font-size:13.5px;">Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.</span>
     </div>
+    <style>
+      .dirbtn {
+        background: var(--panel2); color: var(--muted); border: 1px solid #2a4433;
+        border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
+      }
+      .dirbtn.active { background: var(--accent); color: #08130c; font-weight: 600; border-color: var(--accent); }
+    </style>
     <div id="out" style="display:none; margin-top:18px;">
       <div id="tr" style="font-size:22px; font-weight:600;"></div>
       <div id="lit" class="muted" style="font-style:italic;"></div>
@@ -39,6 +52,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     const $ = (id) => document.getElementById(id);
+    let dir = 'auto';
+    const HINTS = {
+      'auto': 'Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.',
+      'en->pt': 'English in — European Portuguese out.',
+      'pt->en': 'Portuguese in — English out.',
+    };
+    document.querySelectorAll('.dirbtn').forEach((b) => {
+      b.addEventListener('click', () => {
+        dir = b.dataset.d;
+        document.querySelectorAll('.dirbtn').forEach((x) => x.classList.toggle('active', x === b));
+        $('dirhint').textContent = HINTS[dir];
+      });
+    });
     async function run() {
       const text = $('src').value.trim();
       if (!text) return;
@@ -48,7 +74,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const r = await fetch('https://papagaio.kirshp.workers.dev/api/translate', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text }),
+          body: JSON.stringify({ text, ...(dir !== 'auto' ? { direction: dir } : {}) }),
         });
         const t = await r.json();
         if (!r.ok) throw new Error(t.error ?? r.status);
