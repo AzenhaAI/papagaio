@@ -228,6 +228,22 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  if (text.startsWith('/link')) {
+    // Pairing code for the mobile app: same D1, same progress.
+    const token = crypto.randomUUID();
+    await env.DB.prepare(
+      `INSERT INTO devices (token, user_id, label, created_at) VALUES (?, ?, 'mobile', ?)`
+    ).bind(token, uid, now()).run();
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: `📱 *Pair your app*\n\nPaste this into PapaGaio mobile:\n\n\`${token}\`\n\n` +
+            `_Your progress stays in sync: start a card on the phone, finish it here._\n` +
+            `Anyone with this code can read your deck — keep it to yourself.`,
+      parse_mode: 'Markdown',
+    });
+    return;
+  }
+
   if (text.startsWith('/stats')) {
     const s = await env.DB.prepare(
       `SELECT

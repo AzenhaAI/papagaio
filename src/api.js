@@ -147,6 +147,40 @@ export async function handleApi(request, env, path) {
     return fresh ? json({ card: fresh, isNew: true }) : json({ card: null });
   }
 
+  if (path === '/api/units' && request.method === 'GET') {
+    const course = new URL(request.url).searchParams.get('course') ?? 'pt';
+    const { results } = await env.DB.prepare(
+      `SELECT c.unit AS unit, COUNT(*) AS total,
+         SUM(CASE WHEN uc.card_id IS NOT NULL THEN 1 ELSE 0 END) AS started,
+         SUM(CASE WHEN uc.reps > 0 THEN 1 ELSE 0 END) AS learned
+       FROM cards c LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
+       WHERE c.course = ?2 AND c.owner IS NULL GROUP BY c.unit`
+    ).bind(uid, course).all();
+    return json({ course, units: results });
+  }
+
+  if (path === '/api/mine' && request.method === 'GET') {
+    const { results } = await env.DB.prepare(
+      `SELECT * FROM cards WHERE owner = ? ORDER BY id DESC LIMIT 200`
+    ).bind(uid).all();
+    return json({ cards: results });
+  }
+
+  if (path === '/api/mine' && request.method === 'POST') {
+    const body = await request.json().catch(() => null);
+    if (!body?.term || !body?.trans) return json({ error: 'term and trans are required' }, 400);
+    const id = `u${uid.toString(36)}-${Date.now().toString(36)}`;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO cards (id, course, term, trans, note, tags, freq, owner, unit)
+         VALUES (?, ?, ?, ?, ?, '["mine"]', 100000, ?, 'mine')`
+      ).bind(id, body.course ?? 'pt', body.term, body.trans, body.note ?? '', uid),
+      env.DB.prepare(`INSERT INTO user_cards (user_id, card_id, due) VALUES (?, ?, ?)`)
+        .bind(uid, id, new Date().toISOString()),
+    ]);
+    return json({ ok: true, id });
+  }
+
   if (path === '/api/answer' && request.method === 'POST') {
     const body = await request.json().catch(() => null);
     if (!body?.card_id || !body?.grade) return json({ error: 'card_id and grade are required' }, 400);
