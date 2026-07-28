@@ -13,17 +13,37 @@ const COURSES = {
 
 const SCENARIOS = {
   pt: {
-    cafe:       { label: '☕ Café',       open: 'Bom dia! O que deseja?' },
-    autocarro:  { label: '🚌 Autocarro',  open: 'Boa tarde! Para onde vai?' },
-    banco:      { label: '🏦 Banco',      open: 'Bom dia! Em que posso ajudar?' },
-    medico:     { label: '🩺 Médico',     open: 'Boa tarde! O que o traz cá hoje?' },
-    condominio: { label: '🏢 Vizinho',    open: 'Olá, vizinho! Tudo bem?' },
+    cafe:       { label: '☕ Café',        open: 'Bom dia! O que deseja?' },
+    autocarro:  { label: '🚌 Autocarro',   open: 'Boa tarde! Para onde vai?' },
+    banco:      { label: '🏦 Banco',       open: 'Bom dia! Em que posso ajudar?' },
+    medico:     { label: '🩺 Médico',      open: 'Boa tarde! O que o traz cá hoje?' },
+    condominio: { label: '🏢 Vizinho',     open: 'Olá, vizinho! Tudo bem?' },
+    farmacia:   { label: '💊 Farmácia',    open: 'Bom dia! Precisa de alguma coisa?' },
+    cabeleireiro: { label: '💇 Cabeleireiro', open: 'Olá! Como quer o corte hoje?' },
+    sindico:    { label: '🔧 Síndico',     open: 'Bom dia. Diga-me, qual é o problema no prédio?' },
+    arrendamento: { label: '🏠 Arrendar casa', open: 'Boa tarde! Vem ver o apartamento?' },
+    aima:       { label: '🛂 AIMA',        open: 'Bom dia. Tem marcação? Mostre-me os seus documentos, se faz favor.' },
+    taxi:       { label: '🚕 Táxi',        open: 'Boa tarde! Para onde?' },
+    mercado:    { label: '🥬 Mercado',     open: 'Bom dia, freguês! O que vai levar hoje?' },
+    suporte:    { label: '📞 Suporte',     open: 'Boa tarde, está a falar com o apoio ao cliente. Em que posso ajudar?' },
+    vizinho_barulho: { label: '🔊 Barulho', open: 'Olá... desculpe, podemos falar sobre o barulho de ontem à noite?' },
   },
   en: {
-    work:      { label: '💼 Work chat',  open: 'Hi! Got a minute to talk about the project?' },
-    smalltalk: { label: '🗣 Small talk', open: "Hey! How's your day going so far?" },
-    interview: { label: '📊 Interview',  open: 'Thanks for coming in. Tell me a bit about yourself.' },
+    work:       { label: '💼 Work chat',    open: 'Hi! Got a minute to talk about the project?' },
+    smalltalk:  { label: '🗣 Small talk',   open: "Hey! How's your day going so far?" },
+    interview:  { label: '📊 Interview',    open: 'Thanks for coming in. Tell me a bit about yourself.' },
+    negotiation:{ label: '🤝 Negotiation',  open: "So, let's talk numbers. What did you have in mind?" },
+    present:    { label: '📈 Present data', open: 'The floor is yours — walk us through the findings.' },
+    conflict:   { label: '⚡ Team conflict', open: "Look, I have to be honest — I'm not happy with how the sprint went." },
+    networking: { label: '🎪 Networking',   open: "Hi there! I don't think we've met — are you enjoying the conference?" },
+    client:     { label: '☎️ Client call',  open: 'Hi, thanks for taking the call. We have a few concerns about the report.' },
   },
+};
+
+const LEVELS = {
+  slow:   { label: '🐢 Slow & simple', prompt: 'Speak very simply, short sentences, common words only. Be patient like with a beginner.' },
+  normal: { label: '🚶 Normal',        prompt: 'Speak naturally but clearly, at a measured pace.' },
+  street: { label: '🏃 Street',        prompt: 'Speak like a real local: contractions, fillers, colloquialisms, natural speed. Do not simplify.' },
 };
 
 export default {
@@ -332,15 +352,16 @@ async function dialogTurn(env, msg, session) {
   ).bind(session.user_id, course).all();
 
   const scen = SCENARIOS[course][session.scenario];
+  const levelPrompt = LEVELS[session.level]?.prompt ?? LEVELS.normal.prompt;
   const system =
     course === 'pt'
       ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
-        `Learner level A1–A2. Keep replies short (1–2 sentences), simple, always end with a question. ` +
+        `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
         `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
         `If the learner made a mistake, put a brief correction in English in "note", else "". ` +
         `Answer strictly as JSON: {"reply": "your line in Portuguese", "note": "correction in English or empty"}.`
       : `You are a friendly English coach (British English). Scene: ${scen.label}. Learner level B1–B2. ` +
-        `Keep replies short (1–2 sentences), always end with a question. ` +
+        `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
         `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
         `If the learner made a mistake, put a brief correction in "note", else "". ` +
         `Answer strictly as JSON: {"reply": "your line in English", "note": "correction or empty"}.`;
@@ -391,20 +412,40 @@ async function handleCallback(cb, env) {
     return;
   }
 
+  // Scenario picked → offer difficulty levels.
   if (data.startsWith('t:')) {
     const [, course, key] = data.split(':');
     const scen = SCENARIOS[course]?.[key];
     if (!scen) return;
-    await env.DB.prepare(
-      `INSERT INTO dialog (user_id, course, scenario, messages, started_at) VALUES (?, ?, ?, ?, ?)
-       ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
-         messages = excluded.messages, started_at = excluded.started_at`
-    ).bind(uid, course, key, JSON.stringify([{ role: 'assistant', content: scen.open }]), now()).run();
     await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
     await tg(env, 'editMessageText', {
       chat_id: cb.message.chat.id,
       message_id: cb.message.message_id,
-      text: `🎭 ${COURSES[course].flag} ${scen.label}\nReply with voice messages. End + get a recap: /stop`,
+      text: `🎭 ${COURSES[course].flag} ${scen.label}\nHow should the coach speak?`,
+      reply_markup: {
+        inline_keyboard: Object.entries(LEVELS).map(([lk, l]) => [
+          { text: l.label, callback_data: `l:${course}:${key}:${lk}` },
+        ]),
+      },
+    });
+    return;
+  }
+
+  // Level picked → start the dialog.
+  if (data.startsWith('l:')) {
+    const [, course, key, level] = data.split(':');
+    const scen = SCENARIOS[course]?.[key];
+    if (!scen || !LEVELS[level]) return;
+    await env.DB.prepare(
+      `INSERT INTO dialog (user_id, course, scenario, level, messages, started_at) VALUES (?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
+         level = excluded.level, messages = excluded.messages, started_at = excluded.started_at`
+    ).bind(uid, course, key, level, JSON.stringify([{ role: 'assistant', content: scen.open }]), now()).run();
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id,
+      message_id: cb.message.message_id,
+      text: `🎭 ${COURSES[course].flag} ${scen.label} · ${LEVELS[level].label}\nReply with voice messages. End + get a recap: /stop`,
     });
     try {
       const audio = await synthesize(scen.open, course);
