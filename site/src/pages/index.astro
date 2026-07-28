@@ -135,7 +135,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     let inflight = null;  // AbortController of the request in flight
     let debounce = null;  // live-translate timer
 
-    // История в localStorage — №3 из списка.
+    // Translation history lives in localStorage only.
     const HKEY = 'pg_history';
     const hist = () => JSON.parse(localStorage.getItem(HKEY) ?? '[]');
     function pushHist(src, t) {
@@ -221,7 +221,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       c.addEventListener('click', () => { $('src').value = c.textContent; run(); });
     });
 
-    // 🔊 — синтез через /api/tts, португальская сторона результата.
+    // 🔊 — synthesize the Portuguese side of the result via /api/tts.
     $('speak').addEventListener('click', async () => {
       if (!last) return;
       const ptSide = last.direction === 'en->pt' ? last.translation : last.source;
