@@ -1,0 +1,627 @@
+// PapaGaio — Telegram bot for learning pt-PT and English. Cloudflare Worker + D1.
+
+import { schedule } from './fsrs.js';
+import { synthesize } from './tts.js';
+import { transcribe, chat } from './groq.js';
+
+const COURSES = {
+  pt: { flag: '🇵🇹', name: 'Português' },
+  en: { flag: '🇬🇧', name: 'English' },
+};
+
+const SCENARIOS = {
+  pt: {
+    cafe:       { label: '☕ Café',       open: 'Bom dia! O que deseja?' },
+    autocarro:  { label: '🚌 Autocarro',  open: 'Boa tarde! Para onde vai?' },
+    banco:      { label: '🏦 Banco',      open: 'Bom dia! Em que posso ajudar?' },
+    medico:     { label: '🩺 Médico',     open: 'Boa tarde! O que o traz cá hoje?' },
+    condominio: { label: '🏢 Vizinho',    open: 'Olá, vizinho! Tudo bem?' },
+  },
+  en: {
+    work:      { label: '💼 Work chat',  open: 'Hi! Got a minute to talk about the project?' },
+    smalltalk: { label: '🗣 Small talk', open: "Hey! How's your day going so far?" },
+    interview: { label: '📊 Interview',  open: 'Thanks for coming in. Tell me a bit about yourself.' },
+  },
+};
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (request.method === 'POST' && url.pathname === `/tg/${env.WEBHOOK_SECRET}`) {
+      const update = await request.json();
+      try {
+        await handleUpdate(update, env);
+      } catch (e) {
+        console.log('update error:', e.message);
+      }
+      return new Response('ok');
+    }
+    return new Response('PapaGaio 🦜');
+  },
+
+  async scheduled(_event, env) {
+    await tick(env);
+  },
+};
+
+// ---------- Telegram ----------
+
+async function tg(env, method, payload) {
+  const res = await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/${method}`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  return res.json();
+}
+
+// ---------- Incoming updates ----------
+
+async function handleUpdate(update, env) {
+  if (update.callback_query) return handleCallback(update.callback_query, env);
+
+  const msg = update.message;
+  if (!msg) return;
+  // A round video note is voice too — the audio track transcribes the same way.
+  if (msg.video_note) {
+    msg.voice = { file_id: msg.video_note.file_id, duration: msg.video_note.duration };
+    return handleVoice(msg, env);
+  }
+  if (msg.voice) return handleVoice(msg, env);
+  if (!msg.text) return;
+  const text = msg.text.trim();
+  const uid = msg.from.id;
+  const chat = msg.chat.id;
+
+  if (text.startsWith('/start')) {
+    await env.DB.prepare(
+      `INSERT INTO users (id, chat_id, name, created_at) VALUES (?, ?, ?, ?)
+       ON CONFLICT(id) DO UPDATE SET chat_id = excluded.chat_id, active = 1`
+    ).bind(uid, chat, msg.from.first_name ?? '', now()).run();
+    await tg(env, 'setMyCommands', {
+      commands: [
+        { command: 'talk',   description: '🎭 Voice dialog with the AI coach' },
+        { command: 'stop',   description: '🏁 End the dialog + error recap' },
+        { command: 'now',    description: 'A card right now' },
+        { command: 'stats',  description: '📊 Statistics' },
+        { command: 'lang',   description: 'Languages: PT / EN / both' },
+        { command: 'pause',  description: 'Pause' },
+        { command: 'resume', description: 'Resume' },
+      ],
+    });
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text:
+        '🦜 *PapaGaio*\n\nOne card every 15 minutes during working hours (09:00–18:00). ' +
+        'One tap — and back to work.\n\nWhich languages are we learning?',
+      parse_mode: 'Markdown',
+      reply_markup: courseKeyboard(),
+    });
+    return;
+  }
+
+  if (text.startsWith('/lang')) {
+    await tg(env, 'sendMessage', {
+      chat_id: chat, text: 'Which languages are we learning?', reply_markup: courseKeyboard(),
+    });
+    return;
+  }
+
+  if (text.startsWith('/now')) {
+    const user = await getUser(env, uid);
+    if (user) {
+      const sent = await sendExercise(env, user);
+      if (!sent) await tg(env, 'sendMessage', { chat_id: chat, text: 'Nothing to review right now — all done for today 🎉' });
+    }
+    return;
+  }
+
+  if (text.startsWith('/pause')) {
+    await env.DB.prepare(`UPDATE users SET active = 0 WHERE id = ?`).bind(uid).run();
+    await tg(env, 'sendMessage', { chat_id: chat, text: 'Paused. Come back with /resume.' });
+    return;
+  }
+
+  if (text.startsWith('/resume')) {
+    await env.DB.prepare(
+      `UPDATE users SET active = 1, paused_until = NULL, miss_streak = 0 WHERE id = ?`
+    ).bind(uid).run();
+    await tg(env, 'sendMessage', { chat_id: chat, text: 'Back on track 🦜' });
+    return;
+  }
+
+  if (text.startsWith('/talk')) {
+    if (!env.GROQ_API_KEY) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'The voice coach is not connected yet: GROQ_API_KEY is missing.' });
+      return;
+    }
+    const active = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+    if (active) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'A dialog is already running — reply with a voice message. End it with /stop.' });
+      return;
+    }
+    const user = await getUser(env, uid);
+    const rows = [];
+    for (const c of (user?.courses ?? 'pt').split(',').filter((c) => SCENARIOS[c])) {
+      const buttons = Object.entries(SCENARIOS[c]).map(([key, s]) => ({
+        text: `${COURSES[c].flag} ${s.label}`, callback_data: `t:${c}:${key}`,
+      }));
+      for (let i = 0; i < buttons.length; i += 2) rows.push(buttons.slice(i, i + 2));
+    }
+    await tg(env, 'sendMessage', {
+      chat_id: chat, text: '🎭 Pick a scene — then we talk in voice messages:',
+      reply_markup: { inline_keyboard: rows },
+    });
+    return;
+  }
+
+  if (text.startsWith('/stop')) {
+    const session = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+    if (!session) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'No active dialog. Start one with /talk.' });
+      return;
+    }
+    await env.DB.prepare(`DELETE FROM dialog WHERE user_id = ?`).bind(uid).run();
+    const history = JSON.parse(session.messages);
+    if (history.filter((m) => m.role === 'user').length === 0) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'Dialog closed.' });
+      return;
+    }
+    try {
+      const summary = await chat(env, [
+        {
+          role: 'system',
+          content:
+            'You are a language teacher. Below is a dialog with a learner. Give a short recap in English: ' +
+            'the 2–4 main mistakes the learner made and better phrasings. If there were no mistakes, praise in one line. No fluff.',
+        },
+        { role: 'user', content: history.map((m) => `${m.role === 'user' ? 'Learner' : 'Coach'}: ${m.content}`).join('\n') },
+      ]);
+      await tg(env, 'sendMessage', { chat_id: chat, text: '🏁 Recap:\n\n' + summary });
+    } catch (e) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'Dialog closed (recap failed: ' + e.message.slice(0, 80) + ')' });
+    }
+    return;
+  }
+
+  if (text.startsWith('/stats')) {
+    const s = await env.DB.prepare(
+      `SELECT
+         (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND reps > 0) AS learned,
+         (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND due <= ?2) AS due_now,
+         (SELECT COUNT(*) FROM events WHERE user_id = ?1 AND kind = 'answer' AND date(created_at) = date('now')) AS today,
+         (SELECT COUNT(*) FROM events WHERE user_id = ?1 AND kind = 'answer' AND correct = 1 AND date(created_at) = date('now')) AS today_ok`
+    ).bind(uid, now()).first();
+    const acc = s.today ? Math.round((100 * s.today_ok) / s.today) : 0;
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: `📊 In progress: ${s.learned}\nDue now: ${s.due_now}\nAnswered today: ${s.today} (${acc}% correct)`,
+    });
+    return;
+  }
+}
+
+function courseKeyboard() {
+  return {
+    inline_keyboard: [[
+      { text: '🇵🇹 Português', callback_data: 'c:pt' },
+      { text: '🇬🇧 English', callback_data: 'c:en' },
+      { text: '🦜 Both', callback_data: 'c:pt,en' },
+    ]],
+  };
+}
+
+// ---------- Voice messages ----------
+
+async function handleVoice(msg, env) {
+  const uid = msg.from.id;
+  const chatId = msg.chat.id;
+  if (!env.GROQ_API_KEY) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: 'Speech recognition is not connected yet: GROQ_API_KEY is missing.' });
+    return;
+  }
+  if ((msg.voice.duration ?? 0) > 60) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: 'Too long — up to 60 seconds, se faz favor 🦜' });
+    return;
+  }
+
+  const session = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+  if (session) return dialogTurn(env, msg, session);
+
+  const pending = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
+  if (pending?.exercise === 'voice') return pronunciationCheck(env, msg, pending);
+
+  await tg(env, 'sendMessage', {
+    chat_id: chatId,
+    text: 'I listen to voice messages in a dialog (/talk) or when I ask you to pronounce a word.',
+  });
+}
+
+async function pronunciationCheck(env, msg, pending) {
+  const uid = msg.from.id;
+  const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
+  const bytes = await tgFile(env, msg.voice.file_id);
+  const heard = await transcribe(env, bytes, card.course);
+
+  const norm = (s) => s.toLowerCase().replace(/[.,!?;:¿¡"'«»…-]/g, ' ').replace(/\s+/g, ' ').trim();
+  const ok = norm(heard) === norm(card.term) || norm(heard).includes(norm(card.term));
+  const grade = ok ? 3 : 1;
+
+  const uc = await env.DB.prepare(`SELECT * FROM user_cards WHERE user_id = ? AND card_id = ?`).bind(uid, card.id).first();
+  const ns = schedule(uc, grade);
+  await env.DB.batch([
+    env.DB.prepare(
+      `UPDATE user_cards SET stability=?, difficulty=?, reps=?, lapses=?, state=?, due=?, last_review=? WHERE user_id=? AND card_id=?`
+    ).bind(ns.stability, ns.difficulty, ns.reps, ns.lapses, ns.state, ns.due, ns.last_review, uid, card.id),
+    env.DB.prepare(
+      `INSERT INTO events (user_id, card_id, kind, exercise, rating, correct, created_at) VALUES (?, ?, 'answer', 'voice', ?, ?, ?)`
+    ).bind(uid, card.id, grade, ok ? 1 : 0, now()),
+    env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+    env.DB.prepare(`UPDATE users SET miss_streak = 0 WHERE id = ?`).bind(uid),
+  ]);
+
+  const text = ok
+    ? `✅ Clean! I heard: "${heard}"`
+    : `🤏 I heard: "${heard}"\nTarget: *${card.term}*\nThe word comes back today — let's try again.`;
+  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown' });
+}
+
+async function dialogTurn(env, msg, session) {
+  const chatId = msg.chat.id;
+  const course = session.course;
+  const bytes = await tgFile(env, msg.voice.file_id);
+  const heard = await transcribe(env, bytes, course);
+  if (!heard) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: "Didn't catch that — say it again?" });
+    return;
+  }
+
+  const history = JSON.parse(session.messages);
+  history.push({ role: 'user', content: heard });
+
+  const { results: known } = await env.DB.prepare(
+    `SELECT c.term FROM user_cards uc JOIN cards c ON c.id = uc.card_id
+     WHERE uc.user_id = ? AND c.course = ? AND uc.reps >= 1 ORDER BY uc.stability DESC LIMIT 30`
+  ).bind(session.user_id, course).all();
+
+  const scen = SCENARIOS[course][session.scenario];
+  const system =
+    course === 'pt'
+      ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
+        `Learner level A1–A2. Keep replies short (1–2 sentences), simple, always end with a question. ` +
+        `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
+        `If the learner made a mistake, put a brief correction in English in "note", else "". ` +
+        `Answer strictly as JSON: {"reply": "your line in Portuguese", "note": "correction in English or empty"}.`
+      : `You are a friendly English coach (British English). Scene: ${scen.label}. Learner level B1–B2. ` +
+        `Keep replies short (1–2 sentences), always end with a question. ` +
+        `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
+        `If the learner made a mistake, put a brief correction in "note", else "". ` +
+        `Answer strictly as JSON: {"reply": "your line in English", "note": "correction or empty"}.`;
+
+  const raw = await chat(env, [{ role: 'system', content: system }, ...history.slice(-12)], { json: true });
+  let reply, note;
+  try {
+    ({ reply, note } = JSON.parse(raw));
+  } catch {
+    reply = raw; note = '';
+  }
+
+  history.push({ role: 'assistant', content: reply });
+  await env.DB.batch([
+    env.DB.prepare(`UPDATE dialog SET messages = ? WHERE user_id = ?`)
+      .bind(JSON.stringify(history.slice(-16)), session.user_id),
+    env.DB.prepare(`INSERT INTO events (user_id, kind, exercise, created_at) VALUES (?, 'voice', 'talk', ?)`)
+      .bind(session.user_id, now()),
+  ]);
+
+  let caption = `🗣 ${reply}`;
+  if (note) caption += `\n\n✏️ ${note}`;
+  try {
+    const audio = await synthesize(reply, course);
+    await tgVoice(env, chatId, audio, caption);
+  } catch (e) {
+    console.log('tts fallback:', e.message);
+    await tg(env, 'sendMessage', { chat_id: chatId, text: caption });
+  }
+}
+
+// ---------- Button answers ----------
+
+async function handleCallback(cb, env) {
+  const uid = cb.from.id;
+  const data = cb.data ?? '';
+
+  if (data.startsWith('c:')) {
+    const courses = data.slice(2);
+    await env.DB.prepare(`UPDATE users SET courses = ? WHERE id = ?`).bind(courses, uid).run();
+    const names = courses.split(',').map((c) => COURSES[c].flag + ' ' + COURSES[c].name).join(' + ');
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id,
+      message_id: cb.message.message_id,
+      text: `Learning: ${names}.\nThe first card arrives at the next slot, or hit /now.`,
+    });
+    return;
+  }
+
+  if (data.startsWith('t:')) {
+    const [, course, key] = data.split(':');
+    const scen = SCENARIOS[course]?.[key];
+    if (!scen) return;
+    await env.DB.prepare(
+      `INSERT INTO dialog (user_id, course, scenario, messages, started_at) VALUES (?, ?, ?, ?, ?)
+       ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
+         messages = excluded.messages, started_at = excluded.started_at`
+    ).bind(uid, course, key, JSON.stringify([{ role: 'assistant', content: scen.open }]), now()).run();
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id,
+      message_id: cb.message.message_id,
+      text: `🎭 ${COURSES[course].flag} ${scen.label}\nReply with voice messages. End + get a recap: /stop`,
+    });
+    try {
+      const audio = await synthesize(scen.open, course);
+      await tgVoice(env, cb.message.chat.id, audio, `🗣 ${scen.open}`);
+    } catch {
+      await tg(env, 'sendMessage', { chat_id: cb.message.chat.id, text: `🗣 ${scen.open}` });
+    }
+    return;
+  }
+
+  if (!data.startsWith('a:')) return;
+  const chosen = parseInt(data.slice(2), 10);
+
+  const pending = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
+  if (!pending || pending.message_id !== cb.message.message_id) {
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: 'This card is no longer active' });
+    return;
+  }
+
+  const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
+  const correct = chosen === pending.correct_idx;
+  const grade = correct ? 3 : 1;
+  const latency = Date.now() - new Date(pending.sent_at).getTime();
+
+  const uc = await env.DB.prepare(
+    `SELECT * FROM user_cards WHERE user_id = ? AND card_id = ?`
+  ).bind(uid, card.id).first();
+  const ns = schedule(uc, grade);
+
+  await env.DB.batch([
+    env.DB.prepare(
+      `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id, card_id) DO UPDATE SET
+         stability = excluded.stability, difficulty = excluded.difficulty,
+         reps = excluded.reps, lapses = excluded.lapses, state = excluded.state,
+         due = excluded.due, last_review = excluded.last_review`
+    ).bind(uid, card.id, ns.stability, ns.difficulty, ns.reps, ns.lapses, ns.state, ns.due, ns.last_review),
+    env.DB.prepare(
+      `INSERT INTO events (user_id, card_id, kind, exercise, rating, correct, latency_ms, created_at)
+       VALUES (?, ?, 'answer', ?, ?, ?, ?, ?)`
+    ).bind(uid, card.id, pending.exercise, grade, correct ? 1 : 0, latency, now()),
+    env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+    env.DB.prepare(`UPDATE users SET miss_streak = 0 WHERE id = ?`).bind(uid),
+  ]);
+
+  await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: correct ? '✅' : '❌' });
+
+  const flag = COURSES[card.course].flag;
+  let result = `${correct ? '✅' : '❌'} ${flag} *${card.term}* — ${card.trans}`;
+  if (card.ex_t) result += `\n💬 _${card.ex_t}_`;
+  if (card.note) result += `\nℹ️ ${card.note}`;
+
+  const editMethod = pending.exercise === 'audio' ? 'editMessageCaption' : 'editMessageText';
+  const textField = pending.exercise === 'audio' ? 'caption' : 'text';
+  await tg(env, editMethod, {
+    chat_id: cb.message.chat.id,
+    message_id: cb.message.message_id,
+    [textField]: result,
+    parse_mode: 'Markdown',
+  });
+}
+
+// ---------- Cron ----------
+
+async function tick(env) {
+  const nowDate = new Date();
+  const { results: users } = await env.DB.prepare(`SELECT * FROM users WHERE active = 1`).all();
+
+  for (const user of users ?? []) {
+    if (user.paused_until && new Date(user.paused_until) > nowDate) continue;
+
+    const hour = localHour(user.tz, nowDate);
+    if (hour < user.hour_start || hour >= user.hour_end) continue;
+
+    if (user.last_push_at &&
+        nowDate - new Date(user.last_push_at) < user.interval_min * 60000) continue;
+
+    // The previous card was ignored.
+    const pending = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(user.id).first();
+    if (pending) {
+      const miss = user.miss_streak + 1;
+      if (miss >= 3) {
+        // Go quiet until tomorrow's window — no shaming.
+        const hoursToStart = ((24 - hour + user.hour_start) % 24) || 24;
+        const until = new Date(nowDate.getTime() + hoursToStart * 3600000).toISOString();
+        await env.DB.batch([
+          env.DB.prepare(`UPDATE users SET miss_streak = 0, paused_until = ? WHERE id = ?`).bind(until, user.id),
+          env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(user.id),
+          env.DB.prepare(`INSERT INTO events (user_id, kind, created_at) VALUES (?, 'miss', ?)`).bind(user.id, now()),
+        ]);
+        await tg(env, 'sendMessage', {
+          chat_id: user.chat_id,
+          text: "Looks like now isn't the time for cards — going quiet until tomorrow. Bring me back sooner: /now 🦜",
+        });
+        continue;
+      }
+      await env.DB.prepare(`UPDATE users SET miss_streak = ? WHERE id = ?`).bind(miss, user.id).run();
+    }
+
+    await sendExercise(env, user);
+  }
+}
+
+// ---------- Exercises ----------
+
+async function sendExercise(env, user) {
+  const course = pickCourse(user);
+
+  // Due reviews come first.
+  let card = await env.DB.prepare(
+    `SELECT c.*, uc.reps AS learner_reps FROM user_cards uc JOIN cards c ON c.id = uc.card_id
+     WHERE uc.user_id = ? AND uc.due <= ? AND c.course = ?
+     ORDER BY uc.due LIMIT 1`
+  ).bind(user.id, now(), course).first();
+
+  let isNew = false;
+  if (!card) {
+    const intro = await env.DB.prepare(
+      `SELECT COUNT(*) AS n FROM events e JOIN cards c ON c.id = e.card_id
+       WHERE e.user_id = ? AND e.kind = 'intro' AND c.course = ? AND date(e.created_at) = date('now')`
+    ).bind(user.id, course).first();
+    if (intro.n >= user.new_per_day) return false;
+
+    card = await env.DB.prepare(
+      `SELECT * FROM cards WHERE course = ?
+       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?)
+       ORDER BY freq LIMIT 1`
+    ).bind(course, user.id).first();
+    isNew = true;
+  }
+  if (!card) return false;
+
+  // Exercise type: new words always show term→translation, then we mix.
+  let exercise;
+  if (isNew) exercise = 't_ru';
+  else if (env.GROQ_API_KEY && (card.learner_reps ?? 0) >= 2 && Math.random() < 0.2) exercise = 'voice';
+  else if (card.audio && Math.random() < 0.3) exercise = 'audio';
+  else exercise = Math.random() < 0.5 ? 't_ru' : 'ru_t';
+
+  // Pronunciation: no answer options, we wait for a voice message.
+  if (exercise === 'voice') {
+    const sent = await tg(env, 'sendMessage', {
+      chat_id: user.chat_id,
+      text: `🎤 Say it out loud:\n${COURSES[card.course].flag} *${card.term}* — ${card.trans}`,
+      parse_mode: 'Markdown',
+    });
+    if (!sent?.ok) return false;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO pending (user_id, card_id, exercise, correct_idx, message_id, sent_at)
+         VALUES (?, ?, 'voice', NULL, ?, ?)
+         ON CONFLICT(user_id) DO UPDATE SET card_id = excluded.card_id, exercise = excluded.exercise,
+           correct_idx = NULL, message_id = excluded.message_id, sent_at = excluded.sent_at`
+      ).bind(user.id, card.id, sent.result.message_id, now()),
+      env.DB.prepare(`UPDATE users SET last_push_at = ? WHERE id = ?`).bind(now(), user.id),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, exercise, created_at) VALUES (?, ?, 'push', 'voice', ?)`
+      ).bind(user.id, card.id, now()),
+    ]);
+    return true;
+  }
+
+  const askTrans = exercise !== 'ru_t'; // answer options are translations
+  const { results: distractors } = await env.DB.prepare(
+    `SELECT ${askTrans ? 'trans' : 'term'} AS v FROM cards
+     WHERE course = ? AND id != ? ORDER BY RANDOM() LIMIT 3`
+  ).bind(course, card.id).all();
+
+  const options = distractors.map((d) => d.v);
+  const correctIdx = Math.floor(Math.random() * 4);
+  options.splice(correctIdx, 0, askTrans ? card.trans : card.term);
+
+  const keyboard = {
+    inline_keyboard: options.map((o, i) => [{ text: o, callback_data: `a:${i}` }]),
+  };
+
+  const flag = COURSES[card.course].flag;
+  let sent;
+  if (exercise === 'audio') {
+    sent = await tg(env, 'sendVoice', {
+      chat_id: user.chat_id,
+      voice: env.AUDIO_BASE + card.audio,
+      caption: `${flag} What did you hear?`,
+      reply_markup: keyboard,
+    });
+  } else {
+    const question = exercise === 't_ru'
+      ? `${flag} *${card.term}*${isNew ? '\n🆕 new word' : ''}`
+      : `💬 *${card.trans}*`;
+    sent = await tg(env, 'sendMessage', {
+      chat_id: user.chat_id,
+      text: question,
+      parse_mode: 'Markdown',
+      reply_markup: keyboard,
+    });
+  }
+  if (!sent?.ok) return false;
+
+  const batch = [
+    env.DB.prepare(
+      `INSERT INTO pending (user_id, card_id, exercise, correct_idx, message_id, sent_at)
+       VALUES (?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id) DO UPDATE SET
+         card_id = excluded.card_id, exercise = excluded.exercise,
+         correct_idx = excluded.correct_idx, message_id = excluded.message_id,
+         sent_at = excluded.sent_at`
+    ).bind(user.id, card.id, exercise, correctIdx, sent.result.message_id, now()),
+    env.DB.prepare(`UPDATE users SET last_push_at = ? WHERE id = ?`).bind(now(), user.id),
+    env.DB.prepare(
+      `INSERT INTO events (user_id, card_id, kind, exercise, created_at) VALUES (?, ?, 'push', ?, ?)`
+    ).bind(user.id, card.id, exercise, now()),
+  ];
+  if (isNew) {
+    batch.push(
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?, ?, 'intro', ?)`
+      ).bind(user.id, card.id, now())
+    );
+  }
+  await env.DB.batch(batch);
+  return true;
+}
+
+// ---------- Helpers ----------
+
+async function getUser(env, id) {
+  return env.DB.prepare(`SELECT * FROM users WHERE id = ?`).bind(id).first();
+}
+
+async function tgFile(env, fileId) {
+  const info = await tg(env, 'getFile', { file_id: fileId });
+  if (!info.ok) throw new Error('getFile failed');
+  const r = await fetch(`https://api.telegram.org/file/bot${env.TG_TOKEN}/${info.result.file_path}`);
+  return new Uint8Array(await r.arrayBuffer());
+}
+
+async function tgVoice(env, chatId, bytes, caption) {
+  const fd = new FormData();
+  fd.append('chat_id', String(chatId));
+  fd.append('caption', caption.slice(0, 1024));
+  fd.append('voice', new Blob([bytes], { type: 'audio/mpeg' }), 'reply.mp3');
+  const r = await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/sendVoice`, {
+    method: 'POST',
+    body: fd,
+  });
+  const j = await r.json();
+  if (!j.ok) console.log('sendVoice failed:', JSON.stringify(j).slice(0, 200));
+  return j;
+}
+
+function pickCourse(user) {
+  const list = user.courses.split(',').filter((c) => COURSES[c]);
+  if (list.length === 0) return 'pt';
+  return list[Math.floor(Math.random() * list.length)];
+}
+
+function localHour(tz, date) {
+  return parseInt(
+    new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hour12: false, timeZone: tz }).format(date),
+    10
+  );
+}
+
+function now() {
+  return new Date().toISOString();
+}

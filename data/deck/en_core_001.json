@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "deck": "en_core_001",
+    "course": "en",
+    "level": "B1-B2",
+    "note": "English doesn't start from hello: conversational glue and work vocabulary — what actually powers live speech and AI dialog."
+  },
+  "cards": [
+    { "id": "en0001", "term": "actually", "trans": "in fact, as it really is", "pos": "adv", "note": "softens disagreement: Actually, I think...", "ex_t": "Actually, that's not quite what I meant.", "ex_trans": "", "tags": ["glue"], "freq": 1 },
+    { "id": "en0002", "term": "to be fair", "trans": "to give a balanced view", "pos": "phrase", "note": "", "ex_t": "To be fair, we had very little time.", "ex_trans": "", "tags": ["glue"], "freq": 2 },
+    { "id": "en0003", "term": "I'd rather", "trans": "I would prefer to", "pos": "phrase", "note": "followed by a bare infinitive: I'd rather stay", "ex_t": "I'd rather discuss this tomorrow.", "ex_trans": "", "tags": ["glue"], "freq": 3 },
+    { "id": "en0004", "term": "it depends on", "trans": "it is determined by", "pos": "phrase", "note": "on, not from — a common Slavic-language calque", "ex_t": "It depends on the budget.", "ex_trans": "", "tags": ["glue", "trap"], "freq": 4 },
+    { "id": "en0005", "term": "as far as I know", "trans": "to the best of my knowledge", "pos": "phrase", "note": "", "ex_t": "As far as I know, the deadline hasn't changed.", "ex_trans": "", "tags": ["glue"], "freq": 5 },
+    { "id": "en0006", "term": "to figure out", "trans": "to work out, to solve by thinking", "pos": "verb", "note": "", "ex_t": "I need to figure out why the numbers don't match.", "ex_trans": "", "tags": ["work"], "freq": 6 },
+    { "id": "en0007", "term": "to come up with", "trans": "to invent, to propose (an idea)", "pos": "verb", "note": "", "ex_t": "We came up with a better approach.", "ex_trans": "", "tags": ["work"], "freq": 7 },
+    { "id": "en0008", "term": "to point out", "trans": "to draw attention to", "pos": "verb", "note": "", "ex_t": "She pointed out a flaw in the analysis.", "ex_trans": "", "tags": ["work"], "freq": 8 },
+    { "id": "en0009", "term": "roughly", "trans": "approximately", "pos": "adv", "note": "roughly speaking = in general terms", "ex_t": "It costs roughly two thousand euros.", "ex_trans": "", "tags": ["work"], "freq": 9 },
+    { "id": "en0010", "term": "insight", "trans": "a deep, decision-changing understanding", "pos": "noun", "note": "in analytics: a finding that changes the decision", "ex_t": "The survey gave us a key insight into user behaviour.", "ex_trans": "", "tags": ["work", "data"], "freq": 10 },
+    { "id": "en0011", "term": "to make sense", "trans": "to be logical, understandable", "pos": "phrase", "note": "does it make sense? = is it clear/logical?", "ex_t": "Does this chart make sense to you?", "ex_trans": "", "tags": ["glue", "work"], "freq": 11 },
+    { "id": "en0012", "term": "to be supposed to", "trans": "to be expected/meant to", "pos": "phrase", "note": "softer than must: intended, but not guaranteed", "ex_t": "The report was supposed to be ready yesterday.", "ex_trans": "", "tags": ["glue"], "freq": 12 },
+    { "id": "en0013", "term": "to end up", "trans": "to finally arrive at (a state)", "pos": "verb", "note": "with a gerund: ended up rewriting everything", "ex_t": "We ended up rewriting the whole pipeline.", "ex_trans": "", "tags": ["glue"], "freq": 13 },
+    { "id": "en0014", "term": "in a nutshell", "trans": "summed up in a few words", "pos": "phrase", "note": "", "ex_t": "In a nutshell, sales are up, margins are down.", "ex_trans": "", "tags": ["glue", "work"], "freq": 14 },
+    { "id": "en0015", "term": "to narrow down", "trans": "to reduce the set of options", "pos": "verb", "note": "", "ex_t": "Let's narrow down the options to three.", "ex_trans": "", "tags": ["work"], "freq": 15 },
+    { "id": "en0016", "term": "trade-off", "trans": "an exchange of one benefit for another", "pos": "noun", "note": "not a compromise: you give up one thing to gain another", "ex_t": "There's a trade-off between speed and accuracy.", "ex_trans": "", "tags": ["work", "data"], "freq": 16 },
+    { "id": "en0017", "term": "to double-check", "trans": "to verify once more", "pos": "verb", "note": "", "ex_t": "Let me double-check the numbers before we send it.", "ex_trans": "", "tags": ["work"], "freq": 17 },
+    { "id": "en0018", "term": "eventually", "trans": "in the end, after some time", "pos": "adv", "note": "false friend: NOT 'possibly' — it means 'sooner or later'", "ex_t": "Eventually, we found the bug.", "ex_trans": "", "tags": ["glue", "trap"], "freq": 18 },
+    { "id": "en0019", "term": "to rely on", "trans": "to depend on, to trust", "pos": "verb", "note": "", "ex_t": "We rely on external survey data.", "ex_trans": "", "tags": ["work", "data"], "freq": 19 },
+    { "id": "en0020", "term": "fair enough", "trans": "a mild way to accept an argument", "pos": "phrase", "note": "gentle concession in a discussion", "ex_t": "— We can't afford it. — Fair enough.", "ex_trans": "", "tags": ["glue"], "freq": 20 }
+  ]
+}

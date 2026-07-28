@@ -1,0 +1,12 @@
+{
+  "name": "papagaio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seed": "node scripts/load_deck.mjs",
+    "audio": "node scripts/gen_audio.mjs"
+  },
+  "devDependencies": {
+    "ws": "^8.18.0"
+  }
+}

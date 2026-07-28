@@ -1,0 +1,16 @@
+name = "papagaio"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "papagaio"
+database_id = "67178255-f07a-43f7-98e2-cf45528e32e9"
+
+[vars]
+AUDIO_BASE = "https://shpara.com/papagaio/audio/"
+
+# Secrets (not in this file): TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY — see scripts/setup_webhook.sh
