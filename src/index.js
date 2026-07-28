@@ -43,12 +43,16 @@ const SCENARIOS = {
 // Units unlock in order: the next opens once the previous is ≥70% started.
 const UNIT_ORDER = {
   pt: [
-    { key: 'basics',  label: '👋 Basics' },
-    { key: 'verbos',  label: '⚙️ Core verbs' },
-    { key: 'tempo',   label: '🕐 Time' },
-    { key: 'comida',  label: '🍽 Food & café' },
-    { key: 'cidade',  label: '🏙 City' },
-    { key: 'madeira', label: '🌴 Madeira' },
+    { key: 'basics',     label: '👋 Basics' },
+    { key: 'numeros',    label: '🔢 Numbers' },
+    { key: 'verbos',     label: '⚙️ Core verbs' },
+    { key: 'tempo',      label: '🕐 Time & dates' },
+    { key: 'comida',     label: '🍽 Food & café' },
+    { key: 'familia',    label: '👨‍👩‍👧 People' },
+    { key: 'casa',       label: '🏠 Home' },
+    { key: 'cidade',     label: '🏙 City' },
+    { key: 'burocracia', label: '📋 Paperwork' },
+    { key: 'madeira',    label: '🌴 Madeira' },
   ],
   en: [
     { key: 'glue', label: '🧩 Conversational glue' },
@@ -714,11 +718,16 @@ async function sendExercise(env, user) {
   else if (card.audio && Math.random() < 0.3) exercise = 'audio';
   else exercise = Math.random() < 0.5 ? 't_ru' : 'ru_t';
 
+  // A new card supersedes the previous one — kill its buttons so the chat
+  // never shows two live cards at once.
+  await expirePending(env, user);
+
   // Pronunciation: no answer options, we wait for a voice message.
   if (exercise === 'voice') {
     const sent = await tg(env, 'sendMessage', {
       chat_id: user.chat_id,
-      text: `🎤 Say it out loud:\n${COURSES[card.course].flag} *${card.term}* — ${card.trans}`,
+      text: `🎤 *Say it out loud*\n\n${COURSES[card.course].flag} *${card.term}* — ${card.trans}\n\n` +
+            `_Hold the 🎤 button at the bottom right and say the word. I'll tell you what I heard._`,
       parse_mode: 'Markdown',
     });
     if (!sent?.ok) return false;
@@ -801,6 +810,22 @@ async function sendExercise(env, user) {
   }
   await env.DB.batch(batch);
   return true;
+}
+
+/** Strips buttons off the previous unanswered card so only one is ever live. */
+async function expirePending(env, user) {
+  const prev = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(user.id).first();
+  if (!prev?.message_id) return;
+  const method = prev.exercise === 'audio' ? 'editMessageCaption' : 'editMessageText';
+  const field = prev.exercise === 'audio' ? 'caption' : 'text';
+  const card = await env.DB.prepare(`SELECT term, trans FROM cards WHERE id = ?`).bind(prev.card_id).first();
+  await tg(env, method, {
+    chat_id: user.chat_id,
+    message_id: prev.message_id,
+    [field]: card ? `⏭ _Skipped_ — ${card.term} — ${card.trans}` : '⏭ _Skipped_',
+    parse_mode: 'Markdown',
+    reply_markup: { inline_keyboard: [] },
+  });
 }
 
 /** Per-unit progress for a user: [{unit, total, started}] in course order. */
