@@ -102,6 +102,8 @@ async function handleUpdate(update, env) {
         { command: 'talk',   description: '🎭 Voice dialog with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
         { command: 'now',    description: 'A card right now' },
+        { command: 'undo',   description: '↩️ Take back the last answer' },
+        { command: 'export', description: '💾 Download everything as JSON' },
         { command: 'stats',  description: '📊 Statistics' },
         { command: 'lang',   description: 'Languages: PT / EN / both' },
         { command: 'pause',  description: 'Pause' },
@@ -135,6 +137,79 @@ async function handleUpdate(update, env) {
       const sent = await sendExercise(env, user);
       if (!sent) await tg(env, 'sendMessage', { chat_id: chat, text: 'Nothing to review right now — all done for today 🎉' });
     }
+    return;
+  }
+
+  if (text.startsWith('/export')) {
+    // Your review history is the one dataset here with no archive anywhere else.
+    const [cards, ucards, events] = await Promise.all([
+      env.DB.prepare(`SELECT * FROM cards WHERE owner IS NULL OR owner = ?`).bind(uid).all(),
+      env.DB.prepare(`SELECT * FROM user_cards WHERE user_id = ?`).bind(uid).all(),
+      env.DB.prepare(`SELECT * FROM events WHERE user_id = ? ORDER BY id`).bind(uid).all(),
+    ]);
+    const dump = JSON.stringify({
+      exported_at: now(),
+      user_id: uid,
+      cards: cards.results,
+      user_cards: ucards.results,
+      events: events.results,
+    }, null, 1);
+
+    const fd = new FormData();
+    fd.append('chat_id', String(chat));
+    fd.append('caption',
+      `💾 ${cards.results.length} cards, ${ucards.results.length} in progress, ${events.results.length} events.\n` +
+      `Plain JSON — re-importable, and yours to keep.`);
+    fd.append('document', new Blob([dump], { type: 'application/json' }),
+      `papagaio-${now().slice(0, 10)}.json`);
+    await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/sendDocument`, { method: 'POST', body: fd });
+    return;
+  }
+
+  if (text.startsWith('/undo')) {
+    // Cards arrive mid-workday; a fat-finger tap must not write a permanent
+    // lapse into the history that FSRS tuning will later learn from.
+    const last = await env.DB.prepare(
+      `SELECT * FROM events WHERE user_id = ? AND kind = 'answer' ORDER BY id DESC LIMIT 1`
+    ).bind(uid).first();
+    if (!last) {
+      await tg(env, 'sendMessage', { chat_id: chat, text: 'Nothing to undo yet.' });
+      return;
+    }
+    const prev = await env.DB.prepare(
+      `SELECT * FROM events WHERE user_id = ?1 AND card_id = ?2 AND kind = 'answer' AND id < ?3
+       ORDER BY id DESC LIMIT 1`
+    ).bind(uid, last.card_id, last.id).first();
+    const card = await env.DB.prepare(`SELECT term, trans FROM cards WHERE id = ?`).bind(last.card_id).first();
+
+    // Replay the card's history without the mistaken answer.
+    const { results: history } = await env.DB.prepare(
+      `SELECT rating, created_at FROM events
+       WHERE user_id = ?1 AND card_id = ?2 AND kind = 'answer' AND id <> ?3 ORDER BY id`
+    ).bind(uid, last.card_id, last.id).all();
+
+    let state = null;
+    for (const h of history) state = schedule(state, h.rating ?? 3, new Date(h.created_at));
+
+    await env.DB.batch([
+      env.DB.prepare(`DELETE FROM events WHERE id = ?`).bind(last.id),
+      state
+        ? env.DB.prepare(
+            `UPDATE user_cards SET stability=?, difficulty=?, reps=?, lapses=?, state=?, due=?, last_review=?
+             WHERE user_id=? AND card_id=?`
+          ).bind(state.stability, state.difficulty, state.reps, state.lapses, state.state,
+                 state.due, state.last_review, uid, last.card_id)
+        : env.DB.prepare(`DELETE FROM user_cards WHERE user_id = ? AND card_id = ?`).bind(uid, last.card_id),
+    ]);
+
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: `↩️ *Undone* — ${card?.term ?? last.card_id}\n\n` +
+            (state
+              ? `Back to where it was ${prev ? 'before that answer' : 'when introduced'}, due ${state.due.slice(0, 10)}.`
+              : `The card is new again.`),
+      parse_mode: 'Markdown',
+    });
     return;
   }
 
@@ -256,7 +331,7 @@ async function handleUpdate(update, env) {
 
   // A card waiting for a typed answer claims the message before the translator does.
   const typing = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
-  if (typing?.exercise === 'type' || typing?.exercise === 'dictation') {
+  if (['type', 'dictation', 'cloze'].includes(typing?.exercise)) {
     return checkTyped(env, msg, typing);
   }
 
@@ -720,9 +795,17 @@ async function sendExercise(env, user) {
 
   // Typed production: no options, we wait for text. Dictation hears a whole
   // sentence — connected speech is the thing single words never teach.
-  if (exercise === 'type' || exercise === 'dictation') {
+  if (exercise === 'type' || exercise === 'dictation' || exercise === 'cloze') {
     let sent;
-    if (exercise === 'dictation') {
+    if (exercise === 'cloze') {
+      sent = await tg(env, 'sendMessage', {
+        chat_id: user.chat_id,
+        text: `🧩 *Fill the gap*\n\n${COURSES[card.course].flag} ${cloze.sentence}\n\n` +
+              (card.ex_trans ? `_${card.ex_trans}_\n\n` : '') +
+              `_Type the missing word. Accents optional._`,
+        parse_mode: 'Markdown',
+      });
+    } else if (exercise === 'dictation') {
       try {
         const audio = await synthesize(card.ex_t, card.course);
         sent = await tgVoice(env, user.chat_id, audio,
@@ -782,9 +865,7 @@ async function sendExercise(env, user) {
     });
   } else {
     // Every card says what to do — a bare word with four buttons is a riddle.
-    const question = exercise === 'cloze'
-      ? `🧩 *Fill the gap*\n\n${flag} ${cloze.sentence}\n\n_${card.ex_trans || 'Which word belongs here?'}_`
-      : exercise === 't_ru'
+    const question = exercise === 't_ru'
         ? (isNew
             ? `🆕 *New word*\n\n${flag} *${card.term}*\n\n_What does it mean? Tap your guess — the answer follows._`
             : `${flag} *${card.term}*\n\n_What does it mean?_`)
@@ -876,7 +957,10 @@ async function checkTyped(env, msg, pending) {
   const uid = msg.from.id;
   const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
   if (!card) return;
-  const expected = pending.exercise === 'dictation' ? card.ex_t : card.term;
+  const expected =
+    pending.exercise === 'dictation' ? card.ex_t
+    : pending.exercise === 'cloze' ? (clozeFrom(card)?.answer ?? card.term)
+    : card.term;
   const given = msg.text.trim();
 
   const exact = norm(given) === norm(expected);
@@ -884,7 +968,9 @@ async function checkTyped(env, msg, pending) {
   const dist = levenshtein(bare(given), bare(expected));
   const close = !exact && !accentsOnly && dist <= Math.max(1, Math.floor(bare(expected).length / 6));
 
-  const grade = exact ? 3 : accentsOnly ? 3 : close ? 2 : 1;
+  // Accents are not decoration in Portuguese — está and esta are different
+  // words — so a diacritic miss is Hard, never a free pass.
+  const grade = exact ? 3 : accentsOnly ? 2 : close ? 2 : 1;
 
   const uc = await env.DB.prepare(
     `SELECT * FROM user_cards WHERE user_id = ? AND card_id = ?`
