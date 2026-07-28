@@ -3,6 +3,9 @@
 
 import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
+import { ensureEntry } from './entry.js';
+import { SCENARIOS, LEVELS, coachTurn, scenarioList } from './coach.js';
+import { chat } from './groq.js';
 import { synthesize } from './tts.js';
 
 const CORS = {
@@ -114,6 +117,49 @@ export async function handleApi(request, env, path) {
     return card ? json(card) : json({ error: 'not found' }, 404);
   }
 
+  // An account without Telegram. The bot is one way in, not the only one: the
+  // app can create its own user and token, and everything except the chat
+  // works the same. Ids are negative so they can never collide with a Telegram
+  // user id, and chat_id < 0 is what keeps the cron push away from them.
+  if (path === '/api/device' && request.method === 'POST') {
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    const body = await request.json().catch(() => ({}));
+    const courses = body?.courses === 'en' || body?.courses === 'pt,en' ? body.courses : 'pt';
+
+    const row = await env.DB.prepare(
+      `SELECT MIN(id) AS lo FROM users WHERE id < 0`
+    ).first();
+    const id = Math.min(-1, (row?.lo ?? 0) - 1);
+
+    const token = crypto.randomUUID();
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO users (id, chat_id, name, courses, created_at) VALUES (?, ?, 'app', ?, ?)`
+      ).bind(id, id, courses, new Date().toISOString()),
+      env.DB.prepare(
+        `INSERT INTO devices (token, user_id, label, created_at) VALUES (?, ?, 'app', ?)`
+      ).bind(token, id, new Date().toISOString()),
+    ]);
+    return json({ token, courses });
+  }
+
+  // The dictionary article, written on first request and kept forever, so a
+  // word costs one model call in its whole life. Public like /api/translate —
+  // the cap is what stops it being a free LLM endpoint for the internet.
+  if (path.startsWith('/api/entry/') && request.method === 'GET') {
+    const id = decodeURIComponent(path.slice('/api/entry/'.length));
+    const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(id).first();
+    if (!card) return json({ error: 'not found' }, 404);
+    if (!card.entry && !(await underPublicCap(env, request))) {
+      return json({ error: 'daily limit reached' }, 429);
+    }
+    try {
+      return json({ id, entry: await ensureEntry(env, card) });
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+  }
+
   // ---- authenticated ----
 
   const uid = await authUser(env, request);
@@ -140,8 +186,11 @@ export async function handleApi(request, env, path) {
     ).bind(uid, new Date().toISOString(), course).first();
     if (card) return json({ card, isNew: false });
     const fresh = await env.DB.prepare(
-      `SELECT * FROM cards WHERE course = ? AND (owner IS NULL OR owner = ?1)
-       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?1)
+      // Numbered placeholders throughout: mixing `?` with `?1` made D1 throw,
+      // which only ever showed up for a user with no cards yet — the very
+      // first card of a fresh account.
+      `SELECT * FROM cards WHERE course = ?1 AND (owner IS NULL OR owner = ?2)
+       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?2)
        ORDER BY freq LIMIT 1`
     ).bind(course, uid).first();
     return fresh ? json({ card: fresh, isNew: true }) : json({ card: null });
@@ -157,6 +206,113 @@ export async function handleApi(request, env, path) {
        WHERE c.course = ?2 AND c.owner IS NULL GROUP BY c.unit`
     ).bind(uid, course).all();
     return json({ course, units: results });
+  }
+
+  // ---- coach ----
+  //
+  // The bot talks to it in voice; the app talks in text and asks /api/tts when
+  // it wants to hear the line. Both go through coachTurn, so there is one
+  // personality, not two. The session lives in `dialog`, one row per user, so a
+  // conversation started in the app can be continued in Telegram.
+
+  if (path === '/api/coach/scenarios' && request.method === 'GET') {
+    const course = new URL(request.url).searchParams.get('course') ?? 'pt';
+    return json({
+      course,
+      scenarios: scenarioList(course),
+      levels: Object.entries(LEVELS).map(([key, l]) => ({ key, label: l.label })),
+    });
+  }
+
+  if (path === '/api/coach' && request.method === 'GET') {
+    const s = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+    if (!s) return json({ session: null });
+    return json({
+      session: {
+        course: s.course,
+        scenario: s.scenario,
+        level: s.level,
+        messages: JSON.parse(s.messages ?? '[]'),
+      },
+    });
+  }
+
+  if (path === '/api/coach' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'coach not configured' }, 503);
+    const body = await request.json().catch(() => null);
+
+    // Leaving the scene: close the session and hand back the error recap.
+    if (body?.stop) {
+      const s = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+      await env.DB.prepare(`DELETE FROM dialog WHERE user_id = ?`).bind(uid).run();
+      const history = JSON.parse(s?.messages ?? '[]');
+      if (!history.some((m) => m.role === 'user')) return json({ recap: '' });
+      try {
+        const recap = await chat(env, [
+          {
+            role: 'system',
+            content:
+              'You are a language teacher. Below is a dialog with a learner. Give a short recap in English: ' +
+              'the 2–4 main mistakes the learner made and better phrasings. If there were no mistakes, praise in one line. No fluff.',
+          },
+          {
+            role: 'user',
+            content: history
+              .map((m) => `${m.role === 'user' ? 'Learner' : 'Coach'}: ${m.content}`)
+              .join('\n'),
+          },
+        ]);
+        return json({ recap });
+      } catch (e) {
+        return json({ recap: '', error: e.message });
+      }
+    }
+
+    const course = body?.course === 'en' ? 'en' : 'pt';
+    const scenario = String(body?.scenario ?? '');
+    const level = LEVELS[body?.level] ? body.level : 'normal';
+    const scen = SCENARIOS[course]?.[scenario];
+    if (!scen) return json({ error: 'unknown scenario' }, 400);
+
+    // Opening the scene: no model call, just the scripted first line.
+    if (body?.start) {
+      const opening = [{ role: 'assistant', content: scen.open }];
+      await env.DB.prepare(
+        `INSERT INTO dialog (user_id, course, scenario, level, messages, started_at) VALUES (?, ?, ?, ?, ?, ?)
+         ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
+           level = excluded.level, messages = excluded.messages, started_at = excluded.started_at`
+      ).bind(uid, course, scenario, level, JSON.stringify(opening), new Date().toISOString()).run();
+      return json({ reply: scen.open, note: '', messages: opening });
+    }
+
+    const said = String(body?.message ?? '').trim().slice(0, 600);
+    if (!said) return json({ error: 'message is required' }, 400);
+
+    const s = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
+    const history = JSON.parse(s?.messages ?? '[]');
+
+    try {
+      const turn = await coachTurn(env, {
+        userId: uid,
+        course,
+        scenario,
+        level,
+        history,
+        said,
+      });
+      await env.DB.batch([
+        env.DB.prepare(
+          `INSERT INTO dialog (user_id, course, scenario, level, messages, started_at) VALUES (?, ?, ?, ?, ?, ?)
+           ON CONFLICT(user_id) DO UPDATE SET messages = excluded.messages`
+        ).bind(uid, course, scenario, level, JSON.stringify(turn.history), new Date().toISOString()),
+        env.DB.prepare(
+          `INSERT INTO events (user_id, kind, exercise, created_at) VALUES (?, 'coach', 'app_talk', ?)`
+        ).bind(uid, new Date().toISOString()),
+      ]);
+      return json({ reply: turn.reply, note: turn.note, messages: turn.history });
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
   }
 
   if (path === '/api/mine' && request.method === 'GET') {

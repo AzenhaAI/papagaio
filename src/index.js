@@ -5,40 +5,13 @@ import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
 import { handleApi } from './api.js';
+import { SCENARIOS, LEVELS, coachTurn } from './coach.js';
 
 const COURSES = {
   pt: { flag: '🇵🇹', name: 'Português' },
   en: { flag: '🇬🇧', name: 'English' },
 };
 
-const SCENARIOS = {
-  pt: {
-    cafe:       { label: '☕ Café',        open: 'Bom dia! O que deseja?' },
-    autocarro:  { label: '🚌 Autocarro',   open: 'Boa tarde! Para onde vai?' },
-    banco:      { label: '🏦 Banco',       open: 'Bom dia! Em que posso ajudar?' },
-    medico:     { label: '🩺 Médico',      open: 'Boa tarde! O que o traz cá hoje?' },
-    condominio: { label: '🏢 Vizinho',     open: 'Olá, vizinho! Tudo bem?' },
-    farmacia:   { label: '💊 Farmácia',    open: 'Bom dia! Precisa de alguma coisa?' },
-    cabeleireiro: { label: '💇 Cabeleireiro', open: 'Olá! Como quer o corte hoje?' },
-    sindico:    { label: '🔧 Síndico',     open: 'Bom dia. Diga-me, qual é o problema no prédio?' },
-    arrendamento: { label: '🏠 Arrendar casa', open: 'Boa tarde! Vem ver o apartamento?' },
-    aima:       { label: '🛂 AIMA',        open: 'Bom dia. Tem marcação? Mostre-me os seus documentos, se faz favor.' },
-    taxi:       { label: '🚕 Táxi',        open: 'Boa tarde! Para onde?' },
-    mercado:    { label: '🥬 Mercado',     open: 'Bom dia, freguês! O que vai levar hoje?' },
-    suporte:    { label: '📞 Suporte',     open: 'Boa tarde, está a falar com o apoio ao cliente. Em que posso ajudar?' },
-    vizinho_barulho: { label: '🔊 Barulho', open: 'Olá... desculpe, podemos falar sobre o barulho de ontem à noite?' },
-  },
-  en: {
-    work:       { label: '💼 Work chat',    open: 'Hi! Got a minute to talk about the project?' },
-    smalltalk:  { label: '🗣 Small talk',   open: "Hey! How's your day going so far?" },
-    interview:  { label: '📊 Interview',    open: 'Thanks for coming in. Tell me a bit about yourself.' },
-    negotiation:{ label: '🤝 Negotiation',  open: "So, let's talk numbers. What did you have in mind?" },
-    present:    { label: '📈 Present data', open: 'The floor is yours — walk us through the findings.' },
-    conflict:   { label: '⚡ Team conflict', open: "Look, I have to be honest — I'm not happy with how the sprint went." },
-    networking: { label: '🎪 Networking',   open: "Hi there! I don't think we've met — are you enjoying the conference?" },
-    client:     { label: '☎️ Client call',  open: 'Hi, thanks for taking the call. We have a few concerns about the report.' },
-  },
-};
 
 // Units unlock in order: the next opens once the previous is ≥70% started.
 const UNIT_ORDER = {
@@ -60,11 +33,6 @@ const UNIT_ORDER = {
   ],
 };
 
-const LEVELS = {
-  slow:   { label: '🐢 Slow & simple', prompt: 'Speak very simply, short sentences, common words only. Be patient like with a beginner.' },
-  normal: { label: '🚶 Normal',        prompt: 'Speak naturally but clearly, at a measured pace.' },
-  street: { label: '🏃 Street',        prompt: 'Speak like a real local: contractions, fillers, colloquialisms, natural speed. Do not simplify.' },
-};
 
 export default {
   async fetch(request, env) {
@@ -393,41 +361,18 @@ async function dialogTurn(env, msg, session) {
     return;
   }
 
-  const history = JSON.parse(session.messages);
-  history.push({ role: 'user', content: heard });
+  const { reply, note, history } = await coachTurn(env, {
+    userId: session.user_id,
+    course,
+    scenario: session.scenario,
+    level: session.level,
+    history: JSON.parse(session.messages),
+    said: heard,
+  });
 
-  const { results: known } = await env.DB.prepare(
-    `SELECT c.term FROM user_cards uc JOIN cards c ON c.id = uc.card_id
-     WHERE uc.user_id = ? AND c.course = ? AND uc.reps >= 1 ORDER BY uc.stability DESC LIMIT 30`
-  ).bind(session.user_id, course).all();
-
-  const scen = SCENARIOS[course][session.scenario];
-  const levelPrompt = LEVELS[session.level]?.prompt ?? LEVELS.normal.prompt;
-  const system =
-    course === 'pt'
-      ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
-        `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
-        `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
-        `If the learner made a mistake, put a brief correction in English in "note", else "". ` +
-        `Answer strictly as JSON: {"reply": "your line in Portuguese", "note": "correction in English or empty"}.`
-      : `You are a friendly English coach (British English). Scene: ${scen.label}. Learner level B1–B2. ` +
-        `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
-        `Prefer words the learner already knows: ${known.map((k) => k.term).join(', ') || '—'}. ` +
-        `If the learner made a mistake, put a brief correction in "note", else "". ` +
-        `Answer strictly as JSON: {"reply": "your line in English", "note": "correction or empty"}.`;
-
-  const raw = await chat(env, [{ role: 'system', content: system }, ...history.slice(-12)], { json: true });
-  let reply, note;
-  try {
-    ({ reply, note } = JSON.parse(raw));
-  } catch {
-    reply = raw; note = '';
-  }
-
-  history.push({ role: 'assistant', content: reply });
   await env.DB.batch([
     env.DB.prepare(`UPDATE dialog SET messages = ? WHERE user_id = ?`)
-      .bind(JSON.stringify(history.slice(-16)), session.user_id),
+      .bind(JSON.stringify(history), session.user_id),
     env.DB.prepare(`INSERT INTO events (user_id, kind, exercise, created_at) VALUES (?, 'voice', 'talk', ?)`)
       .bind(session.user_id, now()),
   ]);
@@ -649,7 +594,12 @@ function formatEntry(card, e) {
 
 async function tick(env) {
   const nowDate = new Date();
-  const { results: users } = await env.DB.prepare(`SELECT * FROM users WHERE active = 1`).all();
+  // chat_id < 0 marks an app-only account created through POST /api/device —
+  // there is no Telegram chat to push into, and the app schedules its own
+  // reminders on the phone anyway.
+  const { results: users } = await env.DB.prepare(
+    `SELECT * FROM users WHERE active = 1 AND chat_id > 0`
+  ).all();
 
   for (const user of users ?? []) {
     if (user.paused_until && new Date(user.paused_until) > nowDate) continue;
