@@ -43,8 +43,26 @@ from the bot; old tokens can be revoked by deleting the row in `devices`.
 |---|---|---|---|
 | POST | `/api/translate` | `{text, direction?}` | translation object (below) |
 | POST | `/api/tts` | `{text, course}` | `audio/mpeg` bytes, cached 7 days |
+| POST | `/api/read` | `{text}` | reading analysis (below) |
 | GET | `/api/deck` | `?course=pt&limit=500` | `{course, count, cards[]}` |
 | GET | `/api/card/:id` | — | one card |
+| GET | `/api/entry/:id` | — | `{id, entry}`, written on first request |
+| GET | `/api/wiki/:id` | — | `{pt, en}` summaries, or nulls |
+
+`/api/read` accepts the device token optionally: without it every word comes
+back `status: "new"`, with it words you have already met are marked. Response:
+
+```json
+{
+  "text": "...",
+  "words": [{"surface": "moro", "lemma": "morar", "gloss": "to live",
+             "pos": "verb", "status": "known", "card_id": "pt0045", "audio": "pt0045.mp3"}],
+  "counts": {"new": 15, "in_deck": 3, "known": 8}
+}
+```
+
+`status` is `new` | `in_deck` | `known`. Function words are omitted entirely —
+only content words come back, each distinct surface form once.
 
 `direction` is `"en->pt"`, `"pt->en"` or omitted for auto-detect.
 
@@ -114,8 +132,40 @@ Conjugation arrays are five persons in order: **eu, tu, ele/ela, nós, eles/elas
 ### Units
 
 Ordered unlock — the next unit opens once the previous is ≥70% started.
-Order for `pt`: `basics → verbos → tempo → comida → cidade → madeira`.
-For `en`: `glue → work`. Show locked units greyed with a padlock, never hide them.
+Order for `pt`: `basics → frases → numeros → verbos → tempo → comida → familia
+→ casa → cidade → burocracia → madeira`. For `en`: `glue → work → meetings →
+writing → social → data → money → life`. Show locked units greyed with a
+padlock, never hide them.
+
+**Grammar is not in that chain.** `unit: "gramatica"` is a parallel track that
+opens once `verbos` is half started, and then takes about a quarter of the new
+cards. Cards there have `pos: "drill"` and are excluded from `/api/deck`, so
+the dictionary stays a dictionary.
+
+### Exercise types
+
+The bot runs six, graduated by how well a card is known. The app should at
+minimum match the typed ones — picking from four options is recognition, and
+recognition is the thing the product already over-serves.
+
+| Type | Prompt | Answer |
+|---|---|---|
+| `t_ru` | the term | pick the translation |
+| `ru_t` | the translation | pick the term |
+| `audio` | the term spoken | pick what you heard |
+| `cloze` | the example sentence with the term blanked | **type** the missing word |
+| `dictation` | the whole example sentence spoken | **type** what you heard |
+| `type` | the translation | **type** the term |
+| `drill` | a grammar prompt | **type** the form |
+
+Typed answers are graded with tolerance: an exact match is Good, a miss only on
+diacritics is **Hard** (`está` and `esta` are different words, so it is never a
+free pass), a one-character slip is Hard, anything else is Again. Say which of
+the four it was — "right word, mind the accents" teaches, "wrong" does not.
+
+Cloze is built by blanking the term inside `ex_t`; when the term does not appear
+there literally, skip cloze for that card rather than inventing a gap. About 83%
+of the deck supports it.
 
 ## Screens
 
@@ -130,8 +180,15 @@ For `en`: `glue → work`. Show locked units greyed with a padlock, never hide t
 5. **Settings** — pairing, notification window and interval, theme, course
    selection (pt / en / both).
 
-Dialog with the AI coach stays in Telegram for now: voice recording plus
-streaming is a big lift and the bot already does it well.
+Two things the bot grew that the app still lacks, both worth carrying over:
+
+- **Undo.** Cards arrive mid-workday and a fat-finger tap should not write a
+  permanent lapse. The bot replays the card's history without the mistaken
+  answer rather than patching state, so nothing false is left for later FSRS
+  tuning to learn from. The app needs the same, ideally as a swipe-back.
+- **Export.** The review history is the only dataset in this project with no
+  archive anywhere else. `/export` in the bot ships cards, progress and the full
+  event log as JSON. The app should be able to do the same to Files/Drive.
 
 ## Sync strategy
 
