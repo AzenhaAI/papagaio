@@ -12,6 +12,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <title>{title}</title>
   <meta name="description" content={desc} />
   <link rel="icon" href={`${base}/icon.svg`} type="image/svg+xml" />
+  <script is:inline>
+    // Theme before first paint — no flash.
+    const saved = localStorage.getItem('pg_theme');
+    if (saved) document.documentElement.dataset.theme = saved;
+  </script>
   <style is:global>
     :root {
       --bg: #0e1a14;
@@ -24,6 +29,16 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       --warn: #ff9d5c;
       --radius: 14px;
       --max: 880px;
+    }
+    :root[data-theme="light"] {
+      --bg: #f4f8f4;
+      --panel: #ffffff;
+      --panel2: #e9f1ea;
+      --text: #14261a;
+      --muted: #5b7263;
+      --accent: #1f9d58;
+      --accent2: #b8860b;
+      --warn: #c05621;
     }
     * { box-sizing: border-box; }
     body {
@@ -67,8 +82,59 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <a href={`${base}/about/`}>About</a>
       <a href="https://t.me/papagaio_bot">Telegram bot</a>
     </nav>
+    <button id="burger" aria-label="Menu" style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
   </header>
+
+  <div id="drawer-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:40;"></div>
+  <aside id="drawer" style="position:fixed; top:0; right:-290px; width:280px; height:100vh; background:var(--panel);
+    z-index:50; transition:right .25s ease; padding:22px; display:flex; flex-direction:column; gap:4px; box-shadow:-8px 0 30px rgba(0,0,0,.35);">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+      <strong style="font-size:18px;">Menu</strong>
+      <button id="drawer-close" aria-label="Close" style="background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer;">✕</button>
+    </div>
+    <a class="drawer-link" href={`${base}/`}>🔤 Translator</a>
+    <a class="drawer-link" href={`${base}/dictionary/`}>📖 Dictionary</a>
+    <a class="drawer-link" href={`${base}/about/`}>ℹ️ About</a>
+    <a class="drawer-link" href="https://t.me/papagaio_bot">🦜 Telegram bot</a>
+    <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
+    <button id="theme-toggle" class="drawer-link" style="background:none; border:0; font:inherit; text-align:left; cursor:pointer; width:100%;">🌗 Theme: <span id="theme-name">dark</span></button>
+    <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
+    <a class="drawer-link" href="https://github.com/kirshp/papagaio">⭐ GitHub</a>
+    <a class="drawer-link" href="mailto:aurapark888@gmail.com">✉️ Contact</a>
+    <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
+    <span class="drawer-link muted" style="cursor:default;">🤖 Android app — soon</span>
+    <span class="drawer-link muted" style="cursor:default;">🍎 iOS app — soon</span>
+  </aside>
   <main><slot /></main>
+  <style is:global>
+    .drawer-link {
+      display: block; padding: 9px 10px; border-radius: 8px; color: var(--text);
+      font-size: 15.5px; text-decoration: none;
+    }
+    .drawer-link:hover { background: var(--panel2); text-decoration: none; }
+    #drawer.open { right: 0; }
+    @media (max-width: 720px) { header.site nav { display: none; } }
+  </style>
+  <script is:inline>
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const open = (o) => {
+      drawer.classList.toggle('open', o);
+      overlay.style.display = o ? 'block' : 'none';
+    };
+    document.getElementById('burger').onclick = () => open(true);
+    document.getElementById('drawer-close').onclick = () => open(false);
+    overlay.onclick = () => open(false);
+
+    const nameEl = document.getElementById('theme-name');
+    nameEl.textContent = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+    document.getElementById('theme-toggle').onclick = () => {
+      const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('pg_theme', next);
+      nameEl.textContent = next;
+    };
+  </script>
   <footer class="site">
     PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.
     · <a href="https://github.com/kirshp/papagaio">Source on GitHub</a>
