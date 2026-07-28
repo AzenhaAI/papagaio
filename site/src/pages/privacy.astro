@@ -7,8 +7,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>The short version</h2>
   <p style="max-width:640px;">
-    PapaGaio has no ads, no trackers for sale, and no interest in your identity.
-    Everything stored is there to teach you a language, nothing else.
+    PapaGaio has no ads and sells nothing to anyone. Everything stored is there
+    to teach you a language or to see which pages get used.
   </p>
 
   <h2>Website</h2>
@@ -16,6 +16,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li>Your translation history is stored <strong style="color:var(--text)">only in your browser</strong> (localStorage). We never see it.</li>
     <li>Text you translate is sent to our server and forwarded to Groq (US) for processing. It is not stored on our side.</li>
     <li>A daily request counter per IP address exists purely to prevent abuse; it holds no content.</li>
+  </ul>
+
+  <h2>Analytics</h2>
+  <ul class="muted" style="max-width:640px; line-height:1.9;">
+    <li><strong style="color:var(--text)">Cloudflare Web Analytics</strong> runs always: page counts with no cookies and no cross-site tracking.</li>
+    <li><strong style="color:var(--text)">Google Analytics</strong> loads <em>only</em> if you press Allow on the banner. Decline and the script is never fetched. Your choice is remembered in your browser; clear site data to be asked again.</li>
   </ul>
 
   <h2>Telegram bot</h2>
