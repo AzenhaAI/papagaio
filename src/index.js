@@ -254,6 +254,12 @@ async function handleUpdate(update, env) {
 
   if (text.startsWith('/')) return; // unknown command — stay quiet
 
+  // A card waiting for a typed answer claims the message before the translator does.
+  const typing = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
+  if (typing?.exercise === 'type' || typing?.exercise === 'dictation') {
+    return checkTyped(env, msg, typing);
+  }
+
   // Anything else is a translation request. This is the point of the product:
   // a translator that never slips into Brazilian, wired straight into the deck.
   await handleTranslation(env, uid, chat, text);
@@ -667,12 +673,22 @@ async function sendExercise(env, user) {
   }
   if (!card) return false;
 
-  // Exercise type: new words always show term→translation, then we mix.
+  // Exercise type. Difficulty is graduated by how well the card is known:
+  // recognition first, production only once the word has stuck a couple of times.
   let exercise;
-  if (isNew) exercise = 't_ru';
-  else if (env.GROQ_API_KEY && (card.learner_reps ?? 0) >= 2 && Math.random() < 0.2) exercise = 'voice';
-  else if (card.audio && Math.random() < 0.3) exercise = 'audio';
-  else exercise = Math.random() < 0.5 ? 't_ru' : 'ru_t';
+  const cloze = clozeFrom(card);
+  if (isNew) {
+    exercise = 't_ru';
+  } else {
+    const reps = card.learner_reps ?? 0;
+    const pool = ['t_ru', 'ru_t'];
+    if (cloze) pool.push('cloze');
+    if (card.audio) pool.push('audio');
+    if (reps >= 2) pool.push('type');
+    if (reps >= 2 && card.ex_t) pool.push('dictation');
+    if (env.GROQ_API_KEY && reps >= 3) pool.push('voice');
+    exercise = pool[Math.floor(Math.random() * pool.length)];
+  }
 
   // A new card supersedes the previous one — kill its buttons so the chat
   // never shows two live cards at once.
@@ -702,7 +718,44 @@ async function sendExercise(env, user) {
     return true;
   }
 
-  const askTrans = exercise !== 'ru_t'; // answer options are translations
+  // Typed production: no options, we wait for text. Dictation hears a whole
+  // sentence — connected speech is the thing single words never teach.
+  if (exercise === 'type' || exercise === 'dictation') {
+    let sent;
+    if (exercise === 'dictation') {
+      try {
+        const audio = await synthesize(card.ex_t, card.course);
+        sent = await tgVoice(env, user.chat_id, audio,
+          `✍️ Dictation — type what you hear. Accents optional, spelling counts.`);
+      } catch {
+        return false; // no audio, no dictation
+      }
+    } else {
+      sent = await tg(env, 'sendMessage', {
+        chat_id: user.chat_id,
+        text: `⌨️ *Write it in ${COURSES[card.course].name}*\n\n💬 ${card.trans}\n\n` +
+              `_Type your answer as a message. Accents optional._`,
+        parse_mode: 'Markdown',
+      });
+    }
+    if (!sent?.ok) return false;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO pending (user_id, card_id, exercise, correct_idx, message_id, sent_at)
+         VALUES (?, ?, ?, NULL, ?, ?)
+         ON CONFLICT(user_id) DO UPDATE SET card_id = excluded.card_id, exercise = excluded.exercise,
+           correct_idx = NULL, message_id = excluded.message_id, sent_at = excluded.sent_at`
+      ).bind(user.id, card.id, exercise, sent.result.message_id, now()),
+      env.DB.prepare(`UPDATE users SET last_push_at = ? WHERE id = ?`).bind(now(), user.id),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, exercise, created_at) VALUES (?, ?, 'push', ?, ?)`
+      ).bind(user.id, card.id, exercise, now()),
+    ]);
+    return true;
+  }
+
+  // Options are translations, except when the answer is the term itself.
+  const askTrans = exercise === 't_ru' || exercise === 'audio';
   const { results: distractors } = await env.DB.prepare(
     `SELECT ${askTrans ? 'trans' : 'term'} AS v FROM cards
      WHERE course = ? AND id != ? AND owner IS NULL ORDER BY RANDOM() LIMIT 3`
@@ -729,11 +782,13 @@ async function sendExercise(env, user) {
     });
   } else {
     // Every card says what to do — a bare word with four buttons is a riddle.
-    const question = exercise === 't_ru'
-      ? (isNew
-          ? `🆕 *New word*\n\n${flag} *${card.term}*\n\n_What does it mean? Tap your guess — the answer follows._`
-          : `${flag} *${card.term}*\n\n_What does it mean?_`)
-      : `💬 *${card.trans}*\n\n_How do you say it in ${lang}?_`;
+    const question = exercise === 'cloze'
+      ? `🧩 *Fill the gap*\n\n${flag} ${cloze.sentence}\n\n_${card.ex_trans || 'Which word belongs here?'}_`
+      : exercise === 't_ru'
+        ? (isNew
+            ? `🆕 *New word*\n\n${flag} *${card.term}*\n\n_What does it mean? Tap your guess — the answer follows._`
+            : `${flag} *${card.term}*\n\n_What does it mean?_`)
+        : `💬 *${card.trans}*\n\n_How do you say it in ${lang}?_`;
     sent = await tg(env, 'sendMessage', {
       chat_id: user.chat_id,
       text: question,
@@ -768,12 +823,112 @@ async function sendExercise(env, user) {
   return true;
 }
 
+// ---------- Typed answers ----------
+
+const ARTICLES = ['o ', 'a ', 'os ', 'as ', 'um ', 'uma ', 'the ', 'to '];
+
+/** Punctuation and case out; accents kept. */
+const norm = (s) =>
+  String(s ?? '').toLowerCase().replace(/[.,!?;:¿¡"'«»…()\-]/g, ' ').replace(/\s+/g, ' ').trim();
+
+/** Same, with diacritics folded away — for "right word, wrong accent". */
+const bare = (s) => norm(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+function levenshtein(a, b) {
+  const m = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+  for (let j = 0; j <= a.length; j++) m[0][j] = j;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      m[i][j] = b[i - 1] === a[j - 1]
+        ? m[i - 1][j - 1]
+        : 1 + Math.min(m[i - 1][j - 1], m[i][j - 1], m[i - 1][j]);
+    }
+  }
+  return m[b.length][a.length];
+}
+
+/**
+ * Builds a fill-the-gap prompt from the card's example sentence.
+ * Returns null when the term does not literally appear in it — a wrong gap
+ * teaches nothing, so we simply skip cloze for that card.
+ */
+function clozeFrom(card) {
+  if (!card.ex_t || !card.term) return null;
+  const candidates = [card.term];
+  for (const art of ARTICLES) {
+    if (card.term.toLowerCase().startsWith(art)) candidates.push(card.term.slice(art.length));
+  }
+  for (const cand of candidates) {
+    if (cand.length < 2) continue;
+    const idx = card.ex_t.toLowerCase().indexOf(cand.toLowerCase());
+    if (idx === -1) continue;
+    const found = card.ex_t.slice(idx, idx + cand.length);
+    return {
+      sentence: card.ex_t.slice(0, idx) + '_'.repeat(Math.max(found.length, 4)) + card.ex_t.slice(idx + cand.length),
+      answer: found,
+    };
+  }
+  return null;
+}
+
+/** Grades a typed answer for the 'type' and 'dictation' exercises. */
+async function checkTyped(env, msg, pending) {
+  const uid = msg.from.id;
+  const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
+  if (!card) return;
+  const expected = pending.exercise === 'dictation' ? card.ex_t : card.term;
+  const given = msg.text.trim();
+
+  const exact = norm(given) === norm(expected);
+  const accentsOnly = !exact && bare(given) === bare(expected);
+  const dist = levenshtein(bare(given), bare(expected));
+  const close = !exact && !accentsOnly && dist <= Math.max(1, Math.floor(bare(expected).length / 6));
+
+  const grade = exact ? 3 : accentsOnly ? 3 : close ? 2 : 1;
+
+  const uc = await env.DB.prepare(
+    `SELECT * FROM user_cards WHERE user_id = ? AND card_id = ?`
+  ).bind(uid, card.id).first();
+  const ns = schedule(uc, grade);
+  await env.DB.batch([
+    env.DB.prepare(
+      `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id, card_id) DO UPDATE SET
+         stability = excluded.stability, difficulty = excluded.difficulty,
+         reps = excluded.reps, lapses = excluded.lapses, state = excluded.state,
+         due = excluded.due, last_review = excluded.last_review`
+    ).bind(uid, card.id, ns.stability, ns.difficulty, ns.reps, ns.lapses, ns.state, ns.due, ns.last_review),
+    env.DB.prepare(
+      `INSERT INTO events (user_id, card_id, kind, exercise, rating, correct, created_at)
+       VALUES (?, ?, 'answer', ?, ?, ?, ?)`
+    ).bind(uid, card.id, pending.exercise, grade, grade > 1 ? 1 : 0, now()),
+    env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+    env.DB.prepare(`UPDATE users SET miss_streak = 0 WHERE id = ?`).bind(uid),
+  ]);
+
+  let text;
+  if (exact) {
+    text = `✅ *Exactly right*\n\n${expected}`;
+  } else if (accentsOnly) {
+    text = `✅ *Right word* — mind the accents:\n\n${expected}\n_You wrote: ${given}_`;
+  } else if (close) {
+    text = `🤏 *Almost* — a slip of the finger.\n\nCorrect: *${expected}*\nYou wrote: ${given}`;
+  } else {
+    text = `❌ *Not quite. The answer is:*\n\n${expected}`;
+    if (pending.exercise === 'dictation') text += `\n_${card.ex_trans || card.trans}_`;
+    text += `\n\n_You'll see this one again soon._`;
+  }
+  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown' });
+}
+
 /** Strips buttons off the previous unanswered card so only one is ever live. */
 async function expirePending(env, user) {
   const prev = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(user.id).first();
   if (!prev?.message_id) return;
-  const method = prev.exercise === 'audio' ? 'editMessageCaption' : 'editMessageText';
-  const field = prev.exercise === 'audio' ? 'caption' : 'text';
+  const voiceBased = prev.exercise === 'audio' || prev.exercise === 'dictation';
+  const method = voiceBased ? 'editMessageCaption' : 'editMessageText';
+  const field = voiceBased ? 'caption' : 'text';
   const card = await env.DB.prepare(`SELECT term, trans FROM cards WHERE id = ?`).bind(prev.card_id).first();
   await tg(env, method, {
     chat_id: user.chat_id,
