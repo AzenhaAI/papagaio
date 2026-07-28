@@ -17,6 +17,9 @@ const COURSES = {
 const UNIT_ORDER = {
   pt: [
     { key: 'basics',     label: '👋 Basics' },
+    // Chunks before inventory: "dá para pagar aqui?" gets you further on day one
+    // than the months of the year do.
+    { key: 'frases',     label: '💬 Ready-made phrases' },
     { key: 'numeros',    label: '🔢 Numbers' },
     { key: 'verbos',     label: '⚙️ Core verbs' },
     { key: 'tempo',      label: '🕐 Time & dates' },
@@ -103,6 +106,7 @@ async function handleUpdate(update, env) {
         { command: 'talk',   description: '🎭 Voice dialog with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
         { command: 'now',    description: 'A card right now' },
+        { command: 'drill',  description: '📐 Practise grammar on demand' },
         { command: 'undo',   description: '↩️ Take back the last answer' },
         { command: 'export', description: '💾 Download everything as JSON' },
         { command: 'stats',  description: '📊 Statistics' },
@@ -137,6 +141,17 @@ async function handleUpdate(update, env) {
     if (user) {
       const sent = await sendExercise(env, user);
       if (!sent) await tg(env, 'sendMessage', { chat_id: chat, text: 'Nothing to review right now — all done for today 🎉' });
+    }
+    return;
+  }
+
+  if (text.startsWith('/drill')) {
+    const user = await getUser(env, uid);
+    if (user) {
+      const sent = await sendExercise(env, user, { unit: 'gramatica' });
+      if (!sent) {
+        await tg(env, 'sendMessage', { chat_id: chat, text: 'No grammar drills left to practise right now 🎉' });
+      }
     }
     return;
   }
@@ -726,18 +741,25 @@ async function tick(env) {
 
 // ---------- Exercises ----------
 
-async function sendExercise(env, user) {
-  const course = pickCourse(user);
+async function sendExercise(env, user, opts = {}) {
+  const course = opts.unit === 'gramatica' ? 'pt' : pickCourse(user);
 
-  // Due reviews come first.
+  // Due reviews come first — within the requested unit when one is forced.
   let card = await env.DB.prepare(
     `SELECT c.*, uc.reps AS learner_reps FROM user_cards uc JOIN cards c ON c.id = uc.card_id
-     WHERE uc.user_id = ? AND uc.due <= ? AND c.course = ?
+     WHERE uc.user_id = ?1 AND uc.due <= ?2 AND c.course = ?3
+       AND (?4 IS NULL OR c.unit = ?4)
      ORDER BY uc.due LIMIT 1`
-  ).bind(user.id, now(), course).first();
+  ).bind(user.id, now(), course, opts.unit ?? null).first();
 
   let isNew = false;
-  if (!card) {
+  if (!card && opts.unit) {
+    // On-demand practice ignores the daily cap and the unlock order: asking
+    // for a drill is a deliberate act, not the scheduler's doing.
+    card = await nextInUnit(env, user, course, opts.unit);
+    isNew = true;
+  }
+  if (!card && !opts.unit) {
     const intro = await env.DB.prepare(
       `SELECT COUNT(*) AS n FROM events e JOIN cards c ON c.id = e.card_id
        WHERE e.user_id = ? AND e.kind = 'intro' AND c.course = ? AND date(e.created_at) = date('now')`
