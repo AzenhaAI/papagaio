@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "note": "Dictionary entries for core_001 verbs. Merged into cards by load_deck.mjs via id. Persons: eu, tu, ele/ela/você, nós, eles/elas/vocês (European Portuguese drops vós in speech). Quotes are proverbs or pre-1936 literature — public domain only."
+  },
+  "entries": {
+    "pt0028": {
+      "meanings": [
+        { "trans": "to be (identity, origin, profession)", "note": "sou russo, sou analista" },
+        { "trans": "to be (permanent traits)", "note": "a Madeira é linda" },
+        { "trans": "to happen, to take place", "note": "a festa é no sábado" }
+      ],
+      "synonyms": [],
+      "collocations": [
+        { "t": "ser de", "trans": "to be from — sou de Moscovo" },
+        { "t": "ser capaz de", "trans": "to be able to" },
+        { "t": "é que", "trans": "emphasis glue: onde é que fica?" }
+      ],
+      "grammar": "ser for permanent, estar for temporary: sou russo (always) vs estou cansado (now).",
+      "conj": {
+        "presente": ["sou", "és", "é", "somos", "são"],
+        "pps": ["fui", "foste", "foi", "fomos", "foram"],
+        "imperfeito": ["era", "eras", "era", "éramos", "eram"]
+      },
+      "lit": [
+        { "text": "Tudo vale a pena se a alma não é pequena.", "src": "Fernando Pessoa, Mar Português (1934)" }
+      ]
+    },
+    "pt0029": {
+      "meanings": [
+        { "trans": "to be (temporary state)", "note": "estou cansado" },
+        { "trans": "to be located", "note": "está na mesa" },
+        { "trans": "estar a + infinitive: progressive", "note": "estou a trabalhar = I'm working" }
+      ],
+      "synonyms": ["encontrar-se (formal)"],
+      "collocations": [
+        { "t": "estar a fazer", "trans": "to be doing — THE pt-PT progressive; Brazilians say estou fazendo" },
+        { "t": "estar com fome", "trans": "to be hungry" },
+        { "t": "estar de férias", "trans": "to be on holiday" }
+      ],
+      "grammar": "estar + a + infinitive is the European progressive. estar com X = to feel X (fome, sede, frio).",
+      "conj": {
+        "presente": ["estou", "estás", "está", "estamos", "estão"],
+        "pps": ["estive", "estiveste", "esteve", "estivemos", "estiveram"],
+        "imperfeito": ["estava", "estavas", "estava", "estávamos", "estavam"]
+      },
+      "lit": []
+    },
+    "pt0030": {
+      "meanings": [
+        { "trans": "to have, to own", "note": "tenho duas filhas" },
+        { "trans": "to be N years old", "note": "tenho quarenta anos — never with ser" },
+        { "trans": "ter de/que: to have to", "note": "tenho de ir = I must go" }
+      ],
+      "synonyms": ["possuir (formal)"],
+      "collocations": [
+        { "t": "ter de", "trans": "to have to (pt-PT prefers de over que)" },
+        { "t": "ter a certeza", "trans": "to be sure" },
+        { "t": "ter razão", "trans": "to be right" },
+        { "t": "ter saudades de", "trans": "to miss — the untranslatable one" }
+      ],
+      "grammar": "Age, hunger, fear, luck — all with ter: tenho fome, tenho medo, tenho sorte.",
+      "conj": {
+        "presente": ["tenho", "tens", "tem", "temos", "têm"],
+        "pps": ["tive", "tiveste", "teve", "tivemos", "tiveram"],
+        "imperfeito": ["tinha", "tinhas", "tinha", "tínhamos", "tinham"]
+      },
+      "lit": [
+        { "text": "Quem tem boca vai a Roma.", "src": "provérbio" }
+      ]
+    },
+    "pt0031": {
+      "meanings": [
+        { "trans": "to go", "note": "vou ao supermercado" },
+        { "trans": "ir + infinitive: near future", "note": "vou fazer = I'll do — the spoken future" },
+        { "trans": "to be going (well/badly)", "note": "como vai isso?" }
+      ],
+      "synonyms": ["deslocar-se (formal)"],
+      "collocations": [
+        { "t": "ir a / ir para", "trans": "a = short visit, para = moving/settling" },
+        { "t": "ir de autocarro", "trans": "to go by bus" },
+        { "t": "ir ter com", "trans": "to go meet someone — very pt-PT" }
+      ],
+      "grammar": "Future in speech is ir + infinitive: vou comprar. The one-word future (comprarei) is bookish.",
+      "conj": {
+        "presente": ["vou", "vais", "vai", "vamos", "vão"],
+        "pps": ["fui", "foste", "foi", "fomos", "foram"],
+        "imperfeito": ["ia", "ias", "ia", "íamos", "iam"]
+      },
+      "lit": [
+        { "text": "Devagar se vai ao longe.", "src": "provérbio" }
+      ]
+    },
+    "pt0032": {
+      "meanings": [
+        { "trans": "to do, to make", "note": "o que estás a fazer?" },
+        { "trans": "weather and time expressions", "note": "faz calor; faz dois anos que..." },
+        { "trans": "fazer anos: to have a birthday", "note": "faço anos amanhã" }
+      ],
+      "synonyms": ["realizar (formal)", "elaborar (formal)"],
+      "collocations": [
+        { "t": "fazer falta", "trans": "to be missed / needed" },
+        { "t": "fazer de conta", "trans": "to pretend" },
+        { "t": "não faz mal", "trans": "no harm done, never mind" }
+      ],
+      "grammar": "Impersonal for weather: faz frio, faz sol. And for elapsed time: faz um ano que moro cá.",
+      "conj": {
+        "presente": ["faço", "fazes", "faz", "fazemos", "fazem"],
+        "pps": ["fiz", "fizeste", "fez", "fizemos", "fizeram"],
+        "imperfeito": ["fazia", "fazias", "fazia", "fazíamos", "faziam"]
+      },
+      "lit": [
+        { "text": "Não deixes para amanhã o que podes fazer hoje.", "src": "provérbio" }
+      ]
+    },
+    "pt0033": {
+      "meanings": [
+        { "trans": "can, to be able to", "note": "posso pagar com cartão?" },
+        { "trans": "may (permission)", "note": "posso entrar?" }
+      ],
+      "synonyms": ["conseguir (to manage to)"],
+      "collocations": [
+        { "t": "pode ser", "trans": "maybe / that works" },
+        { "t": "não pode ser!", "trans": "no way!" },
+        { "t": "pode ser que + conjuntivo", "trans": "it may be that..." }
+      ],
+      "grammar": "poder = possibility/permission; conseguir = managing to succeed: não consigo abrir (I can't manage).",
+      "conj": {
+        "presente": ["posso", "podes", "pode", "podemos", "podem"],
+        "pps": ["pude", "pudeste", "pôde", "pudemos", "puderam"],
+        "imperfeito": ["podia", "podias", "podia", "podíamos", "podiam"]
+      },
+      "lit": [
+        { "text": "Querer é poder.", "src": "provérbio" }
+      ]
+    },
+    "pt0034": {
+      "meanings": [
+        { "trans": "to want", "note": "quero um café" },
+        { "trans": "queria: I'd like (polite)", "note": "queria um café, se faz favor" },
+        { "trans": "querer dizer: to mean", "note": "o que quer dizer isto?" }
+      ],
+      "synonyms": ["desejar (formal)"],
+      "collocations": [
+        { "t": "querer dizer", "trans": "to mean" },
+        { "t": "sem querer", "trans": "by accident" },
+        { "t": "quer... quer...", "trans": "whether... or... (formal)" }
+      ],
+      "grammar": "In shops and cafés use imperfeito de cortesia: queria (I'd like), not quero (I want).",
+      "conj": {
+        "presente": ["quero", "queres", "quer", "queremos", "querem"],
+        "pps": ["quis", "quiseste", "quis", "quisemos", "quiseram"],
+        "imperfeito": ["queria", "querias", "queria", "queríamos", "queriam"]
+      },
+      "lit": [
+        { "text": "Querer é poder.", "src": "provérbio" }
+      ]
+    },
+    "pt0035": {
+      "meanings": [
+        { "trans": "to know (facts, information)", "note": "não sei onde fica" },
+        { "trans": "to know how to", "note": "sei nadar = I can swim" },
+        { "trans": "to taste (saber a)", "note": "sabe a canela — tastes of cinnamon" }
+      ],
+      "synonyms": [],
+      "collocations": [
+        { "t": "saber de cor", "trans": "to know by heart" },
+        { "t": "sabe bem", "trans": "it feels/tastes good" },
+        { "t": "que eu saiba", "trans": "as far as I know" }
+      ],
+      "grammar": "saber = facts and skills; conhecer = people and places: sei o caminho / conheço o Porto.",
+      "conj": {
+        "presente": ["sei", "sabes", "sabe", "sabemos", "sabem"],
+        "pps": ["soube", "soubeste", "soube", "soubemos", "souberam"],
+        "imperfeito": ["sabia", "sabias", "sabia", "sabíamos", "sabiam"]
+      },
+      "lit": [
+        { "text": "O saber não ocupa lugar.", "src": "provérbio" }
+      ]
+    },
+    "pt0036": {
+      "meanings": [
+        { "trans": "to say, to tell", "note": "como se diz isto?" },
+        { "trans": "diz-me: tell me", "note": "clitic after the verb in pt-PT statements" }
+      ],
+      "synonyms": ["afirmar (formal)", "contar (to tell a story)"],
+      "collocations": [
+        { "t": "querer dizer", "trans": "to mean" },
+        { "t": "por assim dizer", "trans": "so to speak" },
+        { "t": "diga!", "trans": "how Portuguese answer the phone or a shop counter" }
+      ],
+      "grammar": "Clitic placement is the pt-PT marker: diz-me (statement) but não me digas (after negation).",
+      "conj": {
+        "presente": ["digo", "dizes", "diz", "dizemos", "dizem"],
+        "pps": ["disse", "disseste", "disse", "dissemos", "disseram"],
+        "imperfeito": ["dizia", "dizias", "dizia", "dizíamos", "diziam"]
+      },
+      "lit": [
+        { "text": "Diz-me com quem andas, dir-te-ei quem és.", "src": "provérbio" }
+      ]
+    },
+    "pt0037": {
+      "meanings": [
+        { "trans": "to see", "note": "vejo o mar daqui" },
+        { "trans": "to watch", "note": "ver televisão" },
+        { "trans": "to check", "note": "vou ver se está aberto" }
+      ],
+      "synonyms": ["observar (formal)", "olhar (to look at)"],
+      "collocations": [
+        { "t": "ter a ver com", "trans": "to have to do with" },
+        { "t": "vamos ver", "trans": "we'll see" },
+        { "t": "está-se mesmo a ver", "trans": "it's obvious (colloquial)" }
+      ],
+      "grammar": "ver vs olhar: vejo o mar (perceive) vs olho para o mar (direct my gaze).",
+      "conj": {
+        "presente": ["vejo", "vês", "vê", "vemos", "veem"],
+        "pps": ["vi", "viste", "viu", "vimos", "viram"],
+        "imperfeito": ["via", "vias", "via", "víamos", "viam"]
+      },
+      "lit": [
+        { "text": "Quem vê caras não vê corações.", "src": "provérbio" }
+      ]
+    },
+    "pt0038": {
+      "meanings": [
+        { "trans": "to give", "note": "dá-me isso, se faz favor" },
+        { "trans": "dar para: to be possible / to overlook", "note": "dá para pagar? / a janela dá para o mar" },
+        { "trans": "dar com: to run into", "note": "dei com ele no mercado" }
+      ],
+      "synonyms": ["entregar (to hand over)", "oferecer (to gift)"],
+      "collocations": [
+        { "t": "dar para", "trans": "to be doable: dá para amanhã?" },
+        { "t": "dar-se bem com", "trans": "to get along with" },
+        { "t": "dar um passeio", "trans": "to take a walk" },
+        { "t": "dar jeito", "trans": "to be handy — very pt-PT" }
+      ],
+      "grammar": "dar jeito and dar para are everyday Portugal; learn them as units.",
+      "conj": {
+        "presente": ["dou", "dás", "dá", "damos", "dão"],
+        "pps": ["dei", "deste", "deu", "demos", "deram"],
+        "imperfeito": ["dava", "davas", "dava", "dávamos", "davam"]
+      },
+      "lit": [
+        { "text": "A cavalo dado não se olha o dente.", "src": "provérbio" }
+      ]
+    },
+    "pt0039": {
+      "meanings": [
+        { "trans": "to come", "note": "venho da Rússia" },
+        { "trans": "vir buscar: to come pick up", "note": "venho buscar a encomenda" }
+      ],
+      "synonyms": [],
+      "collocations": [
+        { "t": "vir de", "trans": "to come from" },
+        { "t": "vir buscar", "trans": "to come get" },
+        { "t": "a semana que vem", "trans": "next week" }
+      ],
+      "grammar": "Careful: PPS of vir (vim, vieste, veio) vs ver (vi, viste, viu) — classic mix-up.",
+      "conj": {
+        "presente": ["venho", "vens", "vem", "vimos", "vêm"],
+        "pps": ["vim", "vieste", "veio", "viemos", "vieram"],
+        "imperfeito": ["vinha", "vinhas", "vinha", "vínhamos", "vinham"]
+      },
+      "lit": [
+        { "text": "Depois da tempestade vem a bonança.", "src": "provérbio" }
+      ]
+    },
+    "pt0040": {
+      "meanings": [
+        { "trans": "to stay, to remain", "note": "fico em casa" },
+        { "trans": "to be located", "note": "onde fica a farmácia?" },
+        { "trans": "to become / end up", "note": "fiquei contente" },
+        { "trans": "to suit", "note": "fica-te bem — it suits you" }
+      ],
+      "synonyms": ["permanecer (formal)"],
+      "collocations": [
+        { "t": "ficar com", "trans": "to keep, to take: fico com este" },
+        { "t": "ficar bem/mal", "trans": "to suit / not suit" },
+        { "t": "ficar sem", "trans": "to run out of" }
+      ],
+      "grammar": "pt-PT spelling: PPS nós = ficámos (acute), presente = ficamos. Brazilians write both without accent.",
+      "conj": {
+        "presente": ["fico", "ficas", "fica", "ficamos", "ficam"],
+        "pps": ["fiquei", "ficaste", "ficou", "ficámos", "ficaram"],
+        "imperfeito": ["ficava", "ficavas", "ficava", "ficávamos", "ficavam"]
+      },
+      "lit": []
+    },
+    "pt0041": {
+      "meanings": [
+        { "trans": "to speak, to talk", "note": "fala inglês?" },
+        { "trans": "falar com: to talk to", "note": "preciso de falar contigo" }
+      ],
+      "synonyms": ["conversar (to chat)", "dizer (to say)"],
+      "collocations": [
+        { "t": "falar de/sobre", "trans": "to talk about" },
+        { "t": "falar mais alto", "trans": "to speak up" },
+        { "t": "por falar nisso", "trans": "speaking of which" }
+      ],
+      "grammar": "Model regular -ar verb. PPS nós in pt-PT: falámos (with acute) vs presente falamos.",
+      "conj": {
+        "presente": ["falo", "falas", "fala", "falamos", "falam"],
+        "pps": ["falei", "falaste", "falou", "falámos", "falaram"],
+        "imperfeito": ["falava", "falavas", "falava", "falávamos", "falavam"]
+      },
+      "lit": []
+    },
+    "pt0042": {
+      "meanings": [
+        { "trans": "to understand", "note": "the default in Portugal; entender sounds foreign here" },
+        { "trans": "to realise, to notice", "note": "percebi logo que era ele" }
+      ],
+      "synonyms": ["entender", "compreender (formal)"],
+      "collocations": [
+        { "t": "percebes?", "trans": "you know? — conversation filler" },
+        { "t": "perceber de", "trans": "to know about: percebo de dados" },
+        { "t": "já percebi", "trans": "got it" }
+      ],
+      "grammar": "Model regular -er verb. perceber de X = to be knowledgeable about X.",
+      "conj": {
+        "presente": ["percebo", "percebes", "percebe", "percebemos", "percebem"],
+        "pps": ["percebi", "percebeste", "percebeu", "percebemos", "perceberam"],
+        "imperfeito": ["percebia", "percebias", "percebia", "percebíamos", "percebiam"]
+      },
+      "lit": []
+    }
+  }
+}

@@ -30,7 +30,9 @@ CREATE TABLE IF NOT EXISTS cards (
   tags     TEXT,               -- JSON array
   freq     INTEGER,            -- frequency rank = order of introduction
   audio    TEXT,               -- file name under /papagaio/audio/, no base URL
-  owner    INTEGER             -- NULL = shared deck; user id = added from a translation
+  owner    INTEGER,            -- NULL = shared deck; user id = added from a translation
+  entry    TEXT                -- rich dictionary entry (JSON): meanings, synonyms,
+                               -- collocations, grammar, conj, lit (public-domain quotes)
 );
 
 CREATE INDEX IF NOT EXISTS idx_cards_course_freq ON cards(course, freq);
@@ -97,6 +99,7 @@ CREATE TABLE IF NOT EXISTS dialog (
   user_id    INTEGER PRIMARY KEY,
   course     TEXT NOT NULL,
   scenario   TEXT NOT NULL,
+  level      TEXT DEFAULT 'normal',  -- slow | normal | street
   messages   TEXT NOT NULL DEFAULT '[]',
   started_at TEXT NOT NULL
 );

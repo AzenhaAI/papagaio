@@ -456,6 +456,20 @@ async function handleCallback(cb, env) {
     return;
   }
 
+  // Full dictionary entry under a card.
+  if (data.startsWith('d:')) {
+    const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(data.slice(2)).first();
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    if (card?.entry) {
+      await tg(env, 'sendMessage', {
+        chat_id: cb.message.chat.id,
+        text: formatEntry(card, JSON.parse(card.entry)),
+        parse_mode: 'Markdown',
+      });
+    }
+    return;
+  }
+
   if (data === 'add' || data === 'say') {
     const last = await env.DB.prepare(`SELECT * FROM tr_last WHERE user_id = ?`).bind(uid).first();
     if (!last) {
@@ -541,7 +555,40 @@ async function handleCallback(cb, env) {
     message_id: cb.message.message_id,
     [textField]: result,
     parse_mode: 'Markdown',
+    // Rich dictionary entry available → offer it.
+    ...(card.entry ? { reply_markup: { inline_keyboard: [[{ text: '📖 More', callback_data: `d:${card.id}` }]] } } : {}),
   });
+}
+
+const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
+const TENSES = { presente: 'Presente', pps: 'Pretérito perfeito', imperfeito: 'Imperfeito' };
+
+/** Renders a dictionary entry as a Telegram message. */
+function formatEntry(card, e) {
+  let s = `📖 *${card.term}*${card.gender ? ` (${card.gender})` : ''}\n`;
+
+  if (e.meanings?.length) {
+    s += '\n' + e.meanings.map((m, i) =>
+      `${i + 1}. ${m.trans}${m.note ? ` — _${m.note}_` : ''}`).join('\n');
+  }
+  if (e.conj) {
+    for (const [tense, name] of Object.entries(TENSES)) {
+      if (!e.conj[tense]) continue;
+      s += `\n\n*${name}*`;
+      e.conj[tense].forEach((f, i) => { s += `\n${PERSONS[i]} — \`${f}\``; });
+    }
+  }
+  if (e.collocations?.length) {
+    s += '\n\n*Collocations*';
+    for (const c of e.collocations) s += `\n• \`${c.t}\` — ${c.trans}`;
+  }
+  if (e.synonyms?.length) s += `\n\n≈ ${e.synonyms.join(', ')}`;
+  if (e.grammar) s += `\n\nℹ️ ${e.grammar}`;
+  if (e.lit?.length) {
+    s += '\n';
+    for (const l of e.lit) s += `\n💬 _${l.text}_\n   — ${l.src}`;
+  }
+  return s.slice(0, 4000);
 }
 
 // ---------- Cron ----------
