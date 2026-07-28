@@ -44,6 +44,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     if (saved) document.documentElement.dataset.theme = saved;
   </script>
   <style is:global>
+    /* Portuguese flag palette: green and red, with the flag's own gold between them. */
     :root {
       --bg: #0e1a14;
       --panel: #16241c;
@@ -52,6 +53,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       --muted: #8fa898;
       --accent: #34d17b;
       --accent2: #ffc857;
+      --red: #e8453c;
       --warn: #ff9d5c;
       --radius: 14px;
       --max: 880px;
@@ -64,7 +66,14 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       --muted: #5b7263;
       --accent: #1f9d58;
       --accent2: #b8860b;
+      --red: #c8102e;
       --warn: #c05621;
+    }
+    /* The flag's own 2:3 proportion, as a hairline across the top. */
+    body::before {
+      content: '';
+      position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 70;
+      background: linear-gradient(to right, var(--accent) 0 40%, var(--red) 40% 100%);
     }
     * { box-sizing: border-box; }
     body {
@@ -77,8 +86,8 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       max-width: var(--max); margin: 0 auto; padding: 20px 20px 0;
       display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
     }
-    header.site .logo { font-size: 26px; font-weight: 700; color: var(--text); }
-    header.site .logo span { color: var(--accent); }
+    header.site .logo { font-size: 26px; font-weight: 700; color: var(--accent); }
+    header.site .logo span { color: var(--red); }
     header.site nav { display: flex; gap: 18px; margin-left: auto; }
     header.site nav a { color: var(--muted); font-size: 15px; }
     header.site nav a:hover { color: var(--text); text-decoration: none; }

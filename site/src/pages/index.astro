@@ -190,7 +190,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           : '';
         $('lit').textContent = t.literal && t.literal !== t.translation ? 'literally: ' + t.literal : '';
         $('diff').innerHTML = (t.br_diff ?? []).length
-          ? '<div style="color:var(--warn); font-weight:600; margin-bottom:6px;">⚠️ Not Brazilian</div>' +
+          ? '<div style="color:var(--red); font-weight:600; margin-bottom:6px;">🇵🇹 Portugal, not Brazil</div>' +
             t.br_diff.map((d) =>
               `<div><code style="color:var(--accent)">${d.pt}</code>` +
               ` <span class="muted">— in Brazil</span> <code>${d.br}</code>` +
