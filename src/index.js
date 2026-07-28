@@ -5,6 +5,7 @@ import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
 import { handleApi } from './api.js';
+import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn } from './coach.js';
 
 const COURSES = {
@@ -314,32 +315,63 @@ async function handleUpdate(update, env) {
   }
 
   if (text.startsWith('/stats')) {
-    const s = await env.DB.prepare(
-      `SELECT
-         (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND reps > 0) AS learned,
-         (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND due <= ?2) AS due_now,
-         (SELECT COUNT(*) FROM events WHERE user_id = ?1 AND kind = 'answer' AND date(created_at) = date('now')) AS today,
-         (SELECT COUNT(*) FROM events WHERE user_id = ?1 AND kind = 'answer' AND correct = 1 AND date(created_at) = date('now')) AS today_ok`
-    ).bind(uid, now()).first();
-    const acc = s.today ? Math.round((100 * s.today_ok) / s.today) : 0;
-    // Unit progress bars per active course.
+    const st = await buildStats(env, uid);
     const user = await getUser(env, uid);
-    let units = '';
-    for (const c of (user?.courses ?? 'pt').split(',').filter((c) => COURSES[c])) {
-      const stats = await unitStats(env, uid, c);
-      if (!stats.length) continue;
-      units += `\n\n${COURSES[c].flag}`;
-      let locked = false;
-      for (let i = 0; i < stats.length; i++) {
-        if (i > 0 && stats[i - 1].started / stats[i - 1].total < 0.7) locked = true;
-        const filled = Math.round((8 * stats[i].started) / stats[i].total);
-        units += `\n${locked ? '🔒' : ''}${stats[i].label} ${'▰'.repeat(filled)}${'▱'.repeat(8 - filled)} ${stats[i].started}/${stats[i].total}`;
+    const t = st.totals;
+
+    let out = `📊 *Progress*\n`;
+    out += `\nLearned: *${t.learned}* of ${t.pt_words + t.en_words} words`;
+    if (t.drills) out += ` (+${st.units.find((u) => u.unit === 'gramatica')?.learned ?? 0} of ${t.drills} drills)`;
+    out += `\nDue now: *${t.due_now}*`;
+    if (st.retention_30d !== null) out += `\nCorrect over 30 days: *${st.retention_30d}%* of ${t.answers} answers`;
+
+    // Load ahead. Knowing Thursday is heavy is actionable.
+    if (st.forecast.length) {
+      const peak = Math.max(...st.forecast.map((f) => f.n));
+      out += `\n\n*Coming up*`;
+      for (const f of st.forecast.slice(0, 7)) {
+        const d = new Date(f.day + 'T12:00:00Z');
+        const label = d.toLocaleDateString('en-GB', { weekday: 'short' });
+        const bar = '▰'.repeat(Math.max(1, Math.round((10 * f.n) / peak)));
+        out += `\n${label} ${bar} ${f.n}`;
       }
     }
-    await tg(env, 'sendMessage', {
-      chat_id: chat,
-      text: `📊 In progress: ${s.learned}\nDue now: ${s.due_now}\nAnswered today: ${s.today} (${acc}% correct)${units}`,
-    });
+
+    if (st.by_exercise.length) {
+      out += `\n\n*By exercise*`;
+      for (const e of st.by_exercise) out += `\n${e.exercise}: ${e.pct}% of ${e.n}`;
+    }
+
+    // A proxy, and labelled as one — it is a reading of your own answers, not
+    // a prediction of an exam nobody here has sat.
+    const c = st.ciple;
+    out += `\n\n🇵🇹 *CIPLE A2 readiness* — rough proxy`;
+    out += `\nVocabulary ${bar10(c.vocabulary)} ${c.words_learned}/${c.words_target}`;
+    if (c.grammar !== null) out += `\nGrammar ${bar10(c.grammar)} ${c.grammar}%`;
+    if (c.listening !== null) out += `\nListening ${bar10(c.listening)} ${c.listening}%`;
+    if (c.production !== null) out += `\nProduction ${bar10(c.production)} ${c.production}%`;
+
+    if (st.weakest.length) {
+      out += `\n\n*Giving you trouble*`;
+      for (const w of st.weakest.slice(0, 5)) {
+        out += `\n${w.term} — ${w.trans} _(${w.lapses}✗)_`;
+      }
+    }
+
+    for (const co of (user?.courses ?? 'pt').split(',').filter((x) => COURSES[x])) {
+      const us = await unitStats(env, uid, co);
+      if (!us.length) continue;
+      out += `\n\n${COURSES[co].flag} *Units*`;
+      let locked = false;
+      for (let i = 0; i < us.length; i++) {
+        if (i > 0 && us[i - 1].key !== 'gramatica' && us[i - 1].started / us[i - 1].total < 0.7) locked = true;
+        const filled = Math.round((8 * us[i].started) / us[i].total);
+        out += `\n${locked ? '🔒' : ''}${us[i].label} ${'▰'.repeat(filled)}${'▱'.repeat(8 - filled)} ${us[i].started}/${us[i].total}`;
+      }
+    }
+
+    out += `\n\n_Full picture: shpara.com/papagaio/progress_`;
+    await tg(env, 'sendMessage', { chat_id: chat, text: out, parse_mode: 'Markdown' });
     return;
   }
 
@@ -1153,6 +1185,12 @@ function localHour(tz, date) {
     new Intl.DateTimeFormat('en-GB', { hour: 'numeric', hour12: false, timeZone: tz }).format(date),
     10
   );
+}
+
+/** A ten-cell meter for a percentage. */
+function bar10(p) {
+  const f = Math.max(0, Math.min(10, Math.round((p ?? 0) / 10)));
+  return '▰'.repeat(f) + '▱'.repeat(10 - f);
 }
 
 function now() {

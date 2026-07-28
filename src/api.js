@@ -10,6 +10,7 @@ import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
 import { analyse } from './read.js';
+import { buildStats } from './stats.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -232,6 +233,10 @@ export async function handleApi(request, env, path) {
 
   const uid = await authUser(env, request);
   if (path.startsWith('/api/') && !uid) return json({ error: 'device token required' }, 401);
+
+  if (path === '/api/stats' && request.method === 'GET') {
+    return json(await buildStats(env, uid));
+  }
 
   if (path === '/api/progress' && request.method === 'GET') {
     const s = await env.DB.prepare(

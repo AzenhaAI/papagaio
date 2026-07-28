@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Progress — PapaGaio" desc="Review load ahead, retention, and a rough CIPLE A2 readiness reading — from your own answers.">
+  <h1>Progress</h1>
+  <p class="muted" style="max-width:640px;">
+    No streaks and no green-square calendar: a missed day is not a failure state.
+    What is here is the load coming at you and how well the answers are going.
+  </p>
+
+  <div id="gate" class="panel" style="margin-top:20px;">
+    <p style="margin:0 0 12px;">Connect your deck to see your numbers.</p>
+    <p class="muted" style="font-size:14.5px; margin:0 0 12px;">
+      Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">Telegram bot</a> and paste the code.
+    </p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="tok" type="text" placeholder="paste the /link code"
+        style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
+               border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
+      <button class="btn" id="tok-save">Connect</button>
+    </div>
+  </div>
+
+  <div id="app" style="display:none;">
+    <div class="tiles" id="tiles"></div>
+
+    <h2>Review load, next 14 days</h2>
+    <div class="panel viz-root"><div id="forecast"></div></div>
+
+    <h2>Accuracy by exercise</h2>
+    <div class="panel viz-root"><div id="byex"></div></div>
+
+    <h2>CIPLE A2 readiness</h2>
+    <p class="muted" style="margin-top:-4px; font-size:14.5px;">
+      A proxy read off your own answers, not a prediction. Vocabulary counts words
+      you have actually recalled against a conventional A2 target of 1000.
+    </p>
+    <div class="panel"><div id="ciple"></div></div>
+
+    <h2>Giving you trouble</h2>
+    <div class="panel"><div id="weak"></div></div>
+
+    <details style="margin-top:20px;">
+      <summary class="muted" style="cursor:pointer;">Table view</summary>
+      <div id="table" style="overflow-x:auto;"></div>
+    </details>
+  </div>
+
+  <style>
+    .viz-root {
+      --mark: var(--accent);
+      --grid: color-mix(in srgb, var(--text) 12%, transparent);
+      --axis: color-mix(in srgb, var(--text) 28%, transparent);
+    }
+    .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:18px; }
+    .tile { background:var(--panel); border-radius:14px; padding:16px 18px; }
+    .tile .v { font-size:30px; font-weight:700; line-height:1.1; }
+    .tile .k { color:var(--muted); font-size:13.5px; margin-top:4px; }
+    .row { display:grid; grid-template-columns:96px 1fr 62px; align-items:center; gap:10px; margin:7px 0; font-size:14.5px; }
+    .track { background:var(--panel2); border-radius:4px; height:16px; position:relative; overflow:hidden; }
+    .fill { background:var(--mark); height:100%; border-radius:0 4px 4px 0; min-width:2px; }
+    .num { text-align:right; color:var(--muted); font-variant-numeric:tabular-nums; }
+    table { border-collapse:collapse; width:100%; font-size:14px; margin-top:10px; }
+    th, td { text-align:left; padding:6px 12px 6px 0; border-bottom:1px solid var(--panel2); }
+    th { color:var(--muted); font-weight:600; }
+    td.n { text-align:right; font-variant-numeric:tabular-nums; }
+  </style>
+
+  <script>
+    const API = 'https://papagaio.kirshp.workers.dev';
+    const $ = (id) => document.getElementById(id);
+    const TOKKEY = 'pg_token';
+    const esc = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+    $('tok-save').onclick = () => {
+      const v = $('tok').value.trim();
+      if (v) { localStorage.setItem(TOKKEY, v); load(); }
+    };
+
+    async function load() {
+      const t = localStorage.getItem(TOKKEY);
+      if (!t) return;
+      const r = await fetch(`${API}/api/stats`, { headers: { 'x-device-token': t } });
+      if (!r.ok) { $('gate').querySelector('p').textContent = 'That code did not work — check it and try again.'; return; }
+      render(await r.json());
+      $('gate').style.display = 'none';
+      $('app').style.display = 'block';
+    }
+
+    function render(s) {
+      const t = s.totals;
+      $('tiles').innerHTML = [
+        [t.learned, 'words recalled'],
+        [t.due_now, 'due right now'],
+        [s.retention_30d === null ? '—' : s.retention_30d + '%', 'correct, 30 days'],
+        [t.answers, 'answers all time'],
+      ].map(([v, k]) => `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
+
+      // One series: the bar length carries the magnitude, so colour adds nothing.
+      const peak = Math.max(1, ...s.forecast.map((f) => f.n));
+      $('forecast').innerHTML = s.forecast.length
+        ? s.forecast.map((f) => {
+            const d = new Date(f.day + 'T12:00:00Z');
+            const lab = d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric' });
+            return `<div class="row"><span class="muted">${lab}</span>
+              <div class="track"><div class="fill" style="width:${(100 * f.n) / peak}%"></div></div>
+              <span class="num">${f.n}</span></div>`;
+          }).join('')
+        : '<p class="muted">Nothing scheduled yet.</p>';
+
+      $('byex').innerHTML = s.by_exercise.length
+        ? s.by_exercise.map((e) => `<div class="row"><span>${esc(e.exercise)}</span>
+            <div class="track"><div class="fill" style="width:${e.pct ?? 0}%"></div></div>
+            <span class="num">${e.pct ?? 0}% · ${e.n}</span></div>`).join('')
+        : '<p class="muted">No answers yet.</p>';
+
+      const c = s.ciple;
+      const meter = (label, val, note) => val === null ? '' :
+        `<div class="row"><span>${label}</span>
+          <div class="track"><div class="fill" style="width:${val}%"></div></div>
+          <span class="num">${note ?? val + '%'}</span></div>`;
+      $('ciple').innerHTML =
+        `<div style="font-size:26px; font-weight:700; margin-bottom:10px;">${c.overall}% <span class="muted" style="font-size:14px; font-weight:400;">overall proxy</span></div>` +
+        meter('Vocabulary', c.vocabulary, `${c.words_learned}/${c.words_target}`) +
+        meter('Grammar', c.grammar) +
+        meter('Listening', c.listening) +
+        meter('Production', c.production);
+
+      $('weak').innerHTML = s.weakest.length
+        ? s.weakest.map((w) => `<div style="padding:6px 0; border-bottom:1px solid var(--panel2);">
+            <strong>${esc(w.term)}</strong> <span class="muted">— ${esc(w.trans)}</span>
+            <span class="num" style="float:right;">${w.lapses} missed</span></div>`).join('')
+        : '<p class="muted">Nothing is tripping you up yet.</p>';
+
+      $('table').innerHTML =
+        '<table><thead><tr><th>Unit</th><th>Course</th><th class="n">Started</th><th class="n">Recalled</th><th class="n">Total</th></tr></thead><tbody>' +
+        s.units.map((u) => `<tr><td>${esc(u.unit ?? '—')}</td><td>${esc(u.course)}</td>
+          <td class="n">${u.started}</td><td class="n">${u.learned}</td><td class="n">${u.total}</td></tr>`).join('') +
+        '</tbody></table>';
+    }
+
+    load();
+  </script>
+</BaseLayout>
