@@ -10,6 +10,11 @@ binding = "DB"
 database_name = "papagaio"
 database_id = "67178255-f07a-43f7-98e2-cf45528e32e9"
 
+# Workers AI: the vision model that reads text off a photo (src/vision.js).
+# Same account as the Worker, so no extra credential.
+[ai]
+binding = "AI"
+
 [vars]
 AUDIO_BASE = "https://shpara.com/papagaio/audio/"
 

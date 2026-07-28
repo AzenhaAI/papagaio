@@ -16,7 +16,7 @@ export async function transcribe(env, bytes, language) {
   return (j.text ?? '').trim();
 }
 
-export async function chat(env, messages, { json = false } = {}) {
+export async function chat(env, messages, { json = false, model } = {}) {
   const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -24,7 +24,7 @@ export async function chat(env, messages, { json = false } = {}) {
       'content-type': 'application/json',
     },
     body: JSON.stringify({
-      model: env.GROQ_MODEL ?? 'llama-3.3-70b-versatile',
+      model: model ?? env.GROQ_MODEL ?? 'llama-3.3-70b-versatile',
       messages,
       temperature: 0.6,
       ...(json ? { response_format: { type: 'json_object' } } : {}),

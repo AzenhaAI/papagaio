@@ -6,6 +6,8 @@ import { schedule } from './fsrs.js';
 import { ensureEntry } from './entry.js';
 import { SCENARIOS, LEVELS, coachTurn, scenarioList } from './coach.js';
 import { chat } from './groq.js';
+import { readAndTranslate } from './vision.js';
+import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
 
 const CORS = {
@@ -117,6 +119,23 @@ export async function handleApi(request, env, path) {
     return card ? json(card) : json({ error: 'not found' }, 404);
   }
 
+  // Photo in, phrase out. One round trip does the reading and the translation,
+  // which is why this is not on-device OCR.
+  if (path === '/api/vision' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'translator not configured' }, 503);
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    const body = await request.json().catch(() => null);
+    const image = String(body?.image ?? '');
+    if (!image) return json({ error: 'image is required' }, 400);
+    try {
+      const out = await readAndTranslate(env, image, body?.direction);
+      if (!out.source) return json({ error: 'no text found in that picture' }, 422);
+      return json(out);
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+  }
+
   // An account without Telegram. The bot is one way in, not the only one: the
   // app can create its own user and token, and everything except the chat
   // works the same. Ids are negative so they can never collide with a Telegram
@@ -155,6 +174,39 @@ export async function handleApi(request, env, path) {
     }
     try {
       return json({ id, entry: await ensureEntry(env, card) });
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+  }
+
+  // What Wikipedia has on the word, in both languages. Not every word has an
+  // encyclopedia behind it — "levada" does, "obrigado" does not — so an empty
+  // answer is a normal answer. Cached at the edge for a day: the summaries
+  // barely move and this is somebody else's server.
+  if (path.startsWith('/api/wiki/') && request.method === 'GET') {
+    const id = decodeURIComponent(path.slice('/api/wiki/'.length));
+    const card = await env.DB.prepare(
+      `SELECT term, trans, pos FROM cards WHERE id = ?`
+    ).bind(id).first();
+    if (!card) return json({ error: 'not found' }, 404);
+
+    const cache = caches.default;
+    // Version in the key: bumping it retires every cached answer at once.
+    const key = new Request(`https://papagaio.cache/wiki/v4/${encodeURIComponent(id)}`);
+    const hit = await cache.match(key);
+    if (hit) return hit;
+
+    try {
+      const found = await lookupWiki(card.term, card.trans, card.pos);
+      const resp = new Response(JSON.stringify({ id, ...found }), {
+        headers: {
+          'content-type': 'application/json; charset=utf-8',
+          'cache-control': 'public, max-age=86400',
+          ...CORS,
+        },
+      });
+      await cache.put(key, resp.clone());
+      return resp;
     } catch (e) {
       return json({ error: e.message }, 502);
     }
