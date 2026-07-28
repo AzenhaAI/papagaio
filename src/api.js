@@ -3,6 +3,7 @@
 
 import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
+import { synthesize } from './tts.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -17,7 +18,8 @@ const json = (data, status = 200) =>
   });
 
 // Public translate endpoint powers the website, so it needs a cheap abuse guard.
-const PUBLIC_DAILY_CAP = 200;
+// Live-translate fires on typing pauses, so the cap is per-request, not per-phrase.
+const PUBLIC_DAILY_CAP = 500;
 
 async function underPublicCap(env, request) {
   const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
@@ -59,6 +61,37 @@ export async function handleApi(request, env, path) {
       return json(await translate(env, body.text, body.direction));
     } catch (e) {
       return json({ error: e.message }, 502);
+    }
+  }
+
+  if (path === '/api/tts' && request.method === 'POST') {
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    const body = await request.json().catch(() => null);
+    const text = String(body?.text ?? '').trim().slice(0, 300);
+    if (!text) return json({ error: 'text is required' }, 400);
+    const course = body?.course === 'en' ? 'en' : 'pt';
+
+    // Same phrase → same audio; cache it at the edge for a week.
+    const cache = caches.default;
+    const key = new Request(
+      `https://papagaio.cache/tts/${course}/${encodeURIComponent(text)}`
+    );
+    const hit = await cache.match(key);
+    if (hit) return hit;
+
+    try {
+      const audio = await synthesize(text, course);
+      const resp = new Response(audio, {
+        headers: {
+          'content-type': 'audio/mpeg',
+          'cache-control': 'public, max-age=604800',
+          ...CORS,
+        },
+      });
+      await cache.put(key, resp.clone());
+      return resp;
+    } catch (e) {
+      return json({ error: 'tts failed: ' + e.message }, 502);
     }
   }
 
