@@ -9,6 +9,7 @@ import { chat } from './groq.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
+import { analyse } from './read.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -118,6 +119,20 @@ export async function handleApi(request, env, path) {
       `SELECT * FROM cards WHERE id = ? AND owner IS NULL`
     ).bind(id).first();
     return card ? json(card) : json({ error: 'not found' }, 404);
+  }
+
+  // Reading mode. Public, but a device token turns it from a glossing tool into
+  // a progress-aware reader: words you already know stop being highlighted.
+  if (path === '/api/read' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'reader not configured' }, 503);
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    const body = await request.json().catch(() => null);
+    if (!body?.text?.trim()) return json({ error: 'text is required' }, 400);
+    try {
+      return json(await analyse(env, body.text, await authUser(env, request)));
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
   }
 
   // Photo in, phrase out. One round trip does the reading and the translation,

@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Reader — PapaGaio" desc="Paste any European Portuguese text and read it with every word glossed and checked against your own deck.">
+  <h1>Read real Portuguese</h1>
+  <p class="muted" style="max-width:640px;">
+    Paste a notice from your building, a letter from Finanças, a news article.
+    Every content word gets a gloss, and words already in your deck stop being
+    highlighted — so what stands out is exactly what you still have to learn.
+  </p>
+
+  <div class="panel" style="margin-top:20px;">
+    <textarea id="src" rows="6" maxlength="4000"
+      placeholder="Cole aqui um texto em português…&#10;&#10;O elevador do prédio está avariado outra vez. O senhorio disse que vem amanhã tratar disto."
+      style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+             border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
+    <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
+      <button class="btn" id="go">Read it</button>
+      <span id="spin" style="display:none; width:18px; height:18px; border:2.5px solid var(--panel2); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite;"></span>
+      <span class="muted" id="status" style="font-size:14px;"></span>
+    </div>
+  </div>
+
+  <div id="out" style="display:none; margin-top:18px;">
+    <div id="legend" class="muted" style="font-size:13.5px; margin-bottom:10px;"></div>
+    <div class="panel" id="body" style="font-size:19px; line-height:2.1;"></div>
+  </div>
+
+  <div id="pop" style="display:none; position:fixed; z-index:80; background:var(--panel);
+    border:1px solid var(--panel2); border-radius:12px; padding:14px 16px; max-width:300px;
+    box-shadow:0 12px 40px rgba(0,0,0,.45);">
+    <div id="pop-term" style="font-size:18px; font-weight:600;"></div>
+    <div id="pop-gloss" class="muted" style="margin-top:2px;"></div>
+    <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+      <button class="iconbtn" id="pop-say" title="Listen">🔊</button>
+      <button id="pop-add" style="background:var(--accent); color:#08130c; border:0; border-radius:8px;
+        padding:6px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer;">➕ Add to deck</button>
+    </div>
+  </div>
+
+  <details style="margin-top:24px;">
+    <summary class="muted" style="cursor:pointer;">Connect your deck</summary>
+    <p class="muted" style="font-size:14.5px; max-width:640px;">
+      Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">Telegram bot</a> and paste
+      the code here. The reader will then know which words you have already learned, and
+      “add to deck” will put new ones straight into your review queue.
+    </p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="tok" type="text" placeholder="paste the /link code"
+        style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
+               border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
+      <button class="btn" id="tok-save">Save</button>
+    </div>
+    <div class="muted" id="tok-state" style="font-size:13.5px; margin-top:8px;"></div>
+  </details>
+
+  <style>
+    .w { cursor: pointer; border-bottom: 2px solid transparent; }
+    .w-new { border-bottom-color: var(--red); }
+    .w-deck { border-bottom-color: var(--accent2); }
+    .w-known { border-bottom-color: transparent; opacity: .75; }
+    .w:hover { background: var(--panel2); border-radius: 4px; }
+    .iconbtn { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 2px 6px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+
+  <script>
+    const API = 'https://papagaio.kirshp.workers.dev';
+    const $ = (id) => document.getElementById(id);
+    const TOKKEY = 'pg_token';
+    let words = new Map();
+    let current = null;
+
+    // --- deck connection ---
+    const showTok = () => {
+      const t = localStorage.getItem(TOKKEY);
+      $('tok-state').textContent = t ? `Connected (…${t.slice(-6)}).` : 'Not connected — words are glossed but not tracked.';
+      if (t) $('tok').value = t;
+    };
+    $('tok-save').onclick = () => {
+      const v = $('tok').value.trim();
+      if (v) localStorage.setItem(TOKKEY, v); else localStorage.removeItem(TOKKEY);
+      showTok();
+    };
+    showTok();
+
+    const headers = () => {
+      const h = { 'content-type': 'application/json' };
+      const t = localStorage.getItem(TOKKEY);
+      if (t) h['x-device-token'] = t;
+      return h;
+    };
+
+    // --- reading ---
+    async function run() {
+      const text = $('src').value.trim();
+      if (!text) return;
+      $('go').disabled = true; $('spin').style.display = 'inline-block'; $('status').textContent = '';
+      try {
+        const r = await fetch(`${API}/api/read`, {
+          method: 'POST', headers: headers(), body: JSON.stringify({ text }),
+        });
+        const d = await r.json();
+        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — try again tomorrow.' : (d.error ?? r.status));
+        render(text, d);
+      } catch (e) {
+        $('status').textContent = 'error: ' + e.message;
+      }
+      $('go').disabled = false; $('spin').style.display = 'none';
+    }
+
+    function render(text, d) {
+      words = new Map();
+      for (const w of d.words) words.set(w.surface.toLowerCase(), w);
+
+      const c = d.counts ?? {};
+      $('legend').innerHTML =
+        `<span style="border-bottom:2px solid var(--red)">new</span> ${c.new ?? 0} · ` +
+        `<span style="border-bottom:2px solid var(--accent2)">in your deck</span> ${c.in_deck ?? 0} · ` +
+        `<span style="opacity:.75">learned</span> ${c.known ?? 0}` +
+        (localStorage.getItem(TOKKEY) ? '' : ' — connect your deck below to track what you know');
+
+      // Walk the original text so punctuation and line breaks survive.
+      $('body').innerHTML = text.split(/(\s+)/).map((tok) => {
+        const key = tok.replace(/[^\p{L}\p{M}'-]/gu, '').toLowerCase();
+        const w = words.get(key);
+        if (!w) return escape(tok);
+        const cls = w.status === 'new' ? 'w-new' : w.status === 'in_deck' ? 'w-deck' : 'w-known';
+        return `<span class="w ${cls}" data-k="${key}">${escape(tok)}</span>`;
+      }).join('');
+
+      $('out').style.display = 'block';
+      $('body').querySelectorAll('.w').forEach((el) => {
+        el.onclick = (ev) => openPop(ev, words.get(el.dataset.k));
+      });
+    }
+
+    const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    function openPop(ev, w) {
+      if (!w) return;
+      current = w;
+      $('pop-term').textContent = w.lemma + (w.pos ? ` · ${w.pos}` : '');
+      $('pop-gloss').textContent = w.gloss;
+      $('pop-add').style.display = w.status === 'new' ? '' : 'none';
+      const p = $('pop');
+      p.style.display = 'block';
+      const r = ev.target.getBoundingClientRect();
+      p.style.left = Math.min(r.left, window.innerWidth - 320) + 'px';
+      p.style.top = (r.bottom + 8) + 'px';
+      ev.stopPropagation();
+    }
+    document.addEventListener('click', () => { $('pop').style.display = 'none'; });
+    $('pop').addEventListener('click', (e) => e.stopPropagation());
+
+    $('pop-say').onclick = async () => {
+      if (!current) return;
+      const r = await fetch(`${API}/api/tts`, {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ text: current.lemma, course: 'pt' }),
+      });
+      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+    };
+
+    $('pop-add').onclick = async () => {
+      if (!current) return;
+      if (!localStorage.getItem(TOKKEY)) {
+        $('pop-gloss').textContent = 'Connect your deck first (below).';
+        return;
+      }
+      const r = await fetch(`${API}/api/mine`, {
+        method: 'POST', headers: headers(),
+        body: JSON.stringify({ term: current.lemma, trans: current.gloss, course: 'pt' }),
+      });
+      $('pop-add').textContent = r.ok ? '✅ Added' : '✕ Failed';
+      setTimeout(() => { $('pop').style.display = 'none'; $('pop-add').textContent = '➕ Add to deck'; }, 900);
+    };
+
+    $('go').onclick = run;
+    $('src').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run();
+    });
+  </script>
+</BaseLayout>
