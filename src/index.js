@@ -574,9 +574,13 @@ async function handleCallback(cb, env) {
   await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: correct ? '✅' : '❌' });
 
   const flag = COURSES[card.course].flag;
-  let result = `${correct ? '✅' : '❌'} ${flag} *${card.term}* — ${card.trans}`;
-  if (card.ex_t) result += `\n💬 _${card.ex_t}_`;
+  // Say plainly whether they were right, then the answer — not just a mark.
+  let result = correct
+    ? `✅ *Correct*\n\n${flag} *${card.term}* — ${card.trans}`
+    : `❌ *Not quite. The answer is:*\n\n${flag} *${card.term}* — ${card.trans}`;
+  if (card.ex_t) result += `\n\n💬 _${card.ex_t}_`;
   if (card.note) result += `\nℹ️ ${card.note}`;
+  if (!correct) result += `\n\n_You'll see this one again soon._`;
 
   const editMethod = pending.exercise === 'audio' ? 'editMessageCaption' : 'editMessageText';
   const textField = pending.exercise === 'audio' ? 'caption' : 'text';
@@ -732,18 +736,23 @@ async function sendExercise(env, user) {
   };
 
   const flag = COURSES[card.course].flag;
+  const lang = COURSES[card.course].name;
   let sent;
   if (exercise === 'audio') {
     sent = await tg(env, 'sendVoice', {
       chat_id: user.chat_id,
       voice: env.AUDIO_BASE + card.audio,
-      caption: `${flag} What did you hear?`,
+      caption: `🔊 *Listen* — which word is it?\n_Tap the ${lang} word you heard._`,
+      parse_mode: 'Markdown',
       reply_markup: keyboard,
     });
   } else {
+    // Every card says what to do — a bare word with four buttons is a riddle.
     const question = exercise === 't_ru'
-      ? `${flag} *${card.term}*${isNew ? '\n🆕 new word' : ''}`
-      : `💬 *${card.trans}*`;
+      ? (isNew
+          ? `🆕 *New word*\n\n${flag} *${card.term}*\n\n_What does it mean? Tap your guess — the answer follows._`
+          : `${flag} *${card.term}*\n\n_What does it mean?_`)
+      : `💬 *${card.trans}*\n\n_How do you say it in ${lang}?_`;
     sent = await tg(env, 'sendMessage', {
       chat_id: user.chat_id,
       text: question,
