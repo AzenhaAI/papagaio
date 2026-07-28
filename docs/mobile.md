@@ -4,6 +4,9 @@ The Worker at `https://papagaio.kirshp.workers.dev` is an API first; the Telegra
 bot is one client of it. The app is the second client and shares the same D1, so
 progress is continuous: start a card on the phone, finish it in Telegram.
 
+The app lives in its own repo (`~/Projects/papagaio_app`, Flutter). Its
+`lib/api.dart` is the Dart mirror of this document — change the two together.
+
 ## Why an app at all
 
 The bot already works, so the app must earn its place. Three things it does that
