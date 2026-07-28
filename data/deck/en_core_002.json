@@ -1,0 +1,3614 @@
+{
+  "meta": {
+    "deck": "en_core_002",
+    "course": "en",
+    "level": "B2-C1",
+    "note": "The band above competence: hedging, disagreeing politely, meetings, written register, money and admin, and the vocabulary of describing data. Units interleave so the unlock order stays varied. Examples are written for the deck — nothing here is quoted from anyone."
+  },
+  "cards": [
+    {
+      "id": "en0021",
+      "term": "to follow up",
+      "trans": "to check back on something after an earlier message or meeting",
+      "pos": "verb",
+      "note": "follow up ON a matter, WITH a person; the noun is hyphenated: a follow-up",
+      "ex_t": "I'll follow up with the supplier on Monday if we still haven't heard back.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "follow-ups"
+      ],
+      "freq": 21,
+      "unit": "work"
+    },
+    {
+      "id": "en0022",
+      "term": "circle back (to something)",
+      "trans": "return to a topic, or to a person, later once something more urgent is done",
+      "pos": "verb",
+      "note": "Business register and heavily overused, so save it for deferrals you actually intend to honour. The neutral alternative is 'come back to'.",
+      "ex_t": "Let's circle back to the pricing question once Marta has the final numbers.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "deferring",
+        "business-register"
+      ],
+      "freq": 22,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0023",
+      "term": "to be up to",
+      "trans": "to be doing or busy with something",
+      "pos": "phrase",
+      "note": "\"What have you been up to?\" is a standard opener — answer with an activity, not a feeling.",
+      "ex_t": "What have you been up to since we last spoke?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "smalltalk",
+        "opener"
+      ],
+      "freq": 23,
+      "unit": "social"
+    },
+    {
+      "id": "en0024",
+      "term": "caveat",
+      "trans": "a warning attached to a claim, marking where it may not hold",
+      "pos": "noun",
+      "note": "Collocations: attach a caveat, with the caveat that..., the usual caveats apply. Stress the first syllable, KAV-ee-at.",
+      "ex_t": "The uplift is real, but it comes with one caveat: we only have four weeks of data.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "hedging",
+        "presenting"
+      ],
+      "freq": 24,
+      "unit": "data"
+    },
+    {
+      "id": "en0025",
+      "term": "outstanding",
+      "trans": "still not paid, or still waiting to be dealt with",
+      "pos": "adj",
+      "note": "Looks like the praise word, but here it means unpaid. An 'outstanding balance' is money you owe, not money you have.",
+      "ex_t": "There are two outstanding invoices on the account, both from March.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "invoices",
+        "admin"
+      ],
+      "freq": 25,
+      "unit": "money"
+    },
+    {
+      "id": "en0026",
+      "term": "chase up",
+      "trans": "to contact someone again about something they have not yet done or sent",
+      "pos": "verb",
+      "note": "Separable: chase it up, chase up the referral. Americans say 'follow up on'.",
+      "ex_t": "If the clinic hasn't rung by Friday, I'll chase them up.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal-verb",
+        "admin"
+      ],
+      "freq": 26,
+      "unit": "life"
+    },
+    {
+      "id": "en0027",
+      "term": "having said that",
+      "trans": "used to add a point that partly contradicts what you have just said",
+      "pos": "phrase",
+      "note": "'That said' is the shorter, slightly more formal twin; both are fine in writing.",
+      "ex_t": "The model performed well last quarter; having said that, I wouldn't rely on it for the new market.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "contrast",
+        "signposting"
+      ],
+      "freq": 27,
+      "unit": "glue"
+    },
+    {
+      "id": "en0028",
+      "term": "blocker",
+      "trans": "something that stops work going any further until it is resolved",
+      "pos": "noun",
+      "note": "names the obstacle, not the person; say what is blocking you and who can clear it",
+      "ex_t": "The only blocker is access to the production database.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 28,
+      "unit": "work"
+    },
+    {
+      "id": "en0029",
+      "term": "park (something)",
+      "trans": "deliberately set a topic aside so the meeting can move on",
+      "pos": "verb",
+      "note": "Usually 'park it for now'. It implies you will return to the topic, and people notice when you never do.",
+      "ex_t": "Can we park the naming debate and finish the roadmap first?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "deferring"
+      ],
+      "freq": 29,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0030",
+      "term": "to fancy",
+      "trans": "to want something or feel like having it",
+      "pos": "verb",
+      "note": "The everyday British way to offer: Do you fancy...? Not used in this sense in American English.",
+      "ex_t": "Do you fancy a coffee before the meeting?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food",
+        "uk"
+      ],
+      "freq": 30,
+      "unit": "social"
+    },
+    {
+      "id": "en0031",
+      "term": "account for",
+      "trans": "to make up a given share of a total; also, to allow for something in an analysis",
+      "pos": "verb",
+      "note": "Two senses that live side by side. 'Accounts for 30%' = makes up. 'Once we account for seasonality' = adjust for. Context separates them.",
+      "ex_t": "Mobile users account for just under a third of all sessions.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "freq": 31,
+      "unit": "data"
+    },
+    {
+      "id": "en0032",
+      "term": "chase",
+      "trans": "to contact someone repeatedly to get money or an answer they owe you",
+      "pos": "verb",
+      "note": "Normal office register, not aggressive. You chase an invoice, a payment or a person; 'chase them up' is slightly softer.",
+      "ex_t": "I'll chase the client again on Friday if the payment still hasn't landed.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "invoices",
+        "work"
+      ],
+      "freq": 32,
+      "unit": "money"
+    },
+    {
+      "id": "en0033",
+      "term": "sort out",
+      "trans": "to deal with a problem or arrange something so that it works",
+      "pos": "verb",
+      "note": "Separable: sort it out, never 'sort out it'. Also passive-ish: I'll get it sorted.",
+      "ex_t": "The agency said they'd sort out the broken heater by Tuesday.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal-verb",
+        "housing"
+      ],
+      "freq": 33,
+      "unit": "life"
+    },
+    {
+      "id": "en0034",
+      "term": "as far as I'm aware",
+      "trans": "used to state something while admitting you may not have the full picture",
+      "pos": "phrase",
+      "note": "Covers you if you turn out to be wrong. The negative answer form is 'not that I'm aware of'.",
+      "ex_t": "As far as I'm aware, nobody has touched that table since March.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "spoken",
+        "work"
+      ],
+      "freq": 34,
+      "unit": "glue"
+    },
+    {
+      "id": "en0035",
+      "term": "to own",
+      "trans": "to be the person answerable for getting something done",
+      "pos": "verb",
+      "note": "owning a task means being accountable for it, not doing every part yourself",
+      "ex_t": "Who owns the migration once the consultants leave?",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "ownership"
+      ],
+      "freq": 35,
+      "unit": "work"
+    },
+    {
+      "id": "en0036",
+      "term": "jump in",
+      "trans": "interrupt a speaker briefly to add or correct something",
+      "pos": "verb",
+      "note": "Soften it with 'sorry to' or 'can I just'. Without the softener it sounds abrupt on a call.",
+      "ex_t": "Sorry to jump in, but that deadline moved last week.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "interrupting"
+      ],
+      "freq": 36,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0037",
+      "term": "Kind regards",
+      "trans": "a warm but professional way to close an email",
+      "pos": "phrase",
+      "note": "The UK default. 'Regards' alone reads cooler, 'Best wishes' warmer; 'Yours sincerely' now belongs to formal letters.",
+      "ex_t": "I closed with 'Kind regards' rather than anything friendlier.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email",
+        "sign-off"
+      ],
+      "freq": 37,
+      "unit": "writing"
+    },
+    {
+      "id": "en0038",
+      "term": "to head off",
+      "trans": "to leave a place",
+      "pos": "verb",
+      "note": "Softer than \"to leave\" — announces your departure without sounding abrupt.",
+      "ex_t": "I'll head off around six if that's alright.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "leaving"
+      ],
+      "freq": 38,
+      "unit": "social"
+    },
+    {
+      "id": "en0039",
+      "term": "bear out",
+      "trans": "to confirm that a claim or an expectation was correct",
+      "pos": "verb",
+      "note": "Often passive and often negative: 'that isn't borne out by the data'. Past participle is borne, not born.",
+      "ex_t": "The full quarter bears out what the early sample suggested.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "evidence"
+      ],
+      "freq": 39,
+      "unit": "data"
+    },
+    {
+      "id": "en0040",
+      "term": "invoice",
+      "trans": "to send someone a formal request for payment",
+      "pos": "verb",
+      "note": "Used as a verb: invoice the client, invoice for the extra hours. 'Raise an invoice' means to create one.",
+      "ex_t": "We invoice at the end of every month and expect payment within thirty days.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "invoices",
+        "work"
+      ],
+      "freq": 40,
+      "unit": "money"
+    },
+    {
+      "id": "en0041",
+      "term": "get back to someone",
+      "trans": "to reply to someone later, once you have an answer",
+      "pos": "phrase",
+      "note": "'I'll get back to you' is often a polite way of saying 'not now'.",
+      "ex_t": "The council took three weeks to get back to me about the permit.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phone",
+        "admin"
+      ],
+      "freq": 41,
+      "unit": "life"
+    },
+    {
+      "id": "en0042",
+      "term": "off the top of my head",
+      "trans": "from memory, without checking, so possibly not exact",
+      "pos": "idiom",
+      "note": "Buys thinking time and licenses an approximate number. Usually sits at the front of the answer.",
+      "ex_t": "Off the top of my head it's about forty thousand rows, but let me check.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "buying-time",
+        "idiom"
+      ],
+      "freq": 42,
+      "unit": "glue"
+    },
+    {
+      "id": "en0043",
+      "term": "scope",
+      "trans": "the agreed boundaries of what a piece of work includes",
+      "pos": "noun",
+      "note": "fixed phrases: in scope, out of scope, the scope of work",
+      "ex_t": "Let's agree the scope before anyone starts building.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "scope"
+      ],
+      "freq": 43,
+      "unit": "work"
+    },
+    {
+      "id": "en0044",
+      "term": "push back (on something)",
+      "trans": "disagree with a plan or request and say why, instead of simply accepting it",
+      "pos": "verb",
+      "note": "Neutral and even valued in UK workplaces. The conditional 'I'd push back' is gentler than 'I push back'. Noun form: pushback.",
+      "ex_t": "I'd push back slightly on the timeline, because two weeks isn't enough for testing.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "disagreeing"
+      ],
+      "freq": 44,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0045",
+      "term": "I'm afraid",
+      "trans": "a polite marker that bad news or a refusal is coming",
+      "pos": "phrase",
+      "note": "Nothing to do with fear. It is the standard British softener for saying no in writing.",
+      "ex_t": "I'm afraid we can't take this on before September.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "saying-no",
+        "register"
+      ],
+      "freq": 45,
+      "unit": "writing"
+    },
+    {
+      "id": "en0046",
+      "term": "to get up to",
+      "trans": "to do or spend free time on something",
+      "pos": "verb",
+      "note": "The weekend question: What did you get up to at the weekend? British English says at the weekend, not on.",
+      "ex_t": "We didn't get up to much on Saturday.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weekend",
+        "uk"
+      ],
+      "freq": 46,
+      "unit": "social"
+    },
+    {
+      "id": "en0047",
+      "term": "year on year",
+      "trans": "compared with the same period twelve months earlier",
+      "pos": "phrase",
+      "note": "British form; Americans write year over year (YoY). Hyphenate before a noun: year-on-year growth.",
+      "ex_t": "Revenue is up eleven per cent year on year, and flat on the previous quarter.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends",
+        "comparison"
+      ],
+      "freq": 47,
+      "unit": "data"
+    },
+    {
+      "id": "en0048",
+      "term": "settle",
+      "trans": "to pay a bill or debt in full",
+      "pos": "verb",
+      "note": "Formal, standard in letters from banks and utilities. 'Settle up' is the casual version between friends.",
+      "ex_t": "Please settle the balance before the end of the month to avoid interest.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "invoices",
+        "banking"
+      ],
+      "freq": 48,
+      "unit": "money"
+    },
+    {
+      "id": "en0049",
+      "term": "bear with me",
+      "trans": "please be patient for a moment while I do something",
+      "pos": "phrase",
+      "note": "Spelt 'bear', not 'bare'. Constant on the phone and at counters.",
+      "ex_t": "Bear with me while I pull your file up on the system.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phone",
+        "service"
+      ],
+      "freq": 49,
+      "unit": "life"
+    },
+    {
+      "id": "en0050",
+      "term": "I take your point",
+      "trans": "used to accept that what someone said is valid before you answer it",
+      "pos": "phrase",
+      "note": "Nearly always followed by 'but' or 'though' — that pivot is what makes it polite rather than agreement.",
+      "ex_t": "I take your point about the deadline, though I'd still want to test it properly.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "disagreeing",
+        "concession",
+        "work"
+      ],
+      "freq": 50,
+      "unit": "glue"
+    },
+    {
+      "id": "en0051",
+      "term": "deliverable",
+      "trans": "a specific piece of work you have agreed to hand over",
+      "pos": "noun",
+      "note": "usually plural in plans: the deliverables for phase one",
+      "ex_t": "There are three deliverables in this phase, and the report is the first.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "scope"
+      ],
+      "freq": 51,
+      "unit": "work"
+    },
+    {
+      "id": "en0052",
+      "term": "take it offline",
+      "trans": "agree to discuss a side issue after the meeting, with fewer people",
+      "pos": "phrase",
+      "note": "'Offline' here means 'not in this meeting'. It has nothing to do with being off the internet.",
+      "ex_t": "That's a database question, so shall we take it offline and report back on Thursday?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "deferring"
+      ],
+      "freq": 52,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0053",
+      "term": "to be into",
+      "trans": "to be keen on something as an interest",
+      "pos": "phrase",
+      "note": "Informal; followed by a noun or an -ing form.",
+      "ex_t": "She's really into open-water swimming.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "hobbies"
+      ],
+      "freq": 53,
+      "unit": "social"
+    },
+    {
+      "id": "en0054",
+      "term": "underlying",
+      "trans": "describing the real trend once one-off effects are stripped out",
+      "pos": "adj",
+      "note": "Frequent pairs: underlying trend, underlying growth, underlying cause. Sits opposite headline.",
+      "ex_t": "Strip out the campaign spike and underlying demand is flat.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends"
+      ],
+      "freq": 54,
+      "unit": "data"
+    },
+    {
+      "id": "en0055",
+      "term": "reimburse",
+      "trans": "to pay someone back for money they have spent",
+      "pos": "verb",
+      "note": "You reimburse a person, not a cost: reimburse me for the ticket, not reimburse the ticket. Noun: reimbursement.",
+      "ex_t": "The company will reimburse you for the taxi once you upload the receipt.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "work",
+        "admin"
+      ],
+      "freq": 55,
+      "unit": "money"
+    },
+    {
+      "id": "en0056",
+      "term": "put someone through",
+      "trans": "to connect a caller to another person or department by telephone",
+      "pos": "verb",
+      "note": "From your side: I was put through to the wrong department. Related: hold the line.",
+      "ex_t": "I'll put you through to the billing team now.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phone",
+        "phrasal-verb"
+      ],
+      "freq": 56,
+      "unit": "life"
+    },
+    {
+      "id": "en0057",
+      "term": "the thing is",
+      "trans": "used to introduce the problem or objection you are about to raise",
+      "pos": "phrase",
+      "note": "Signals bad news gently. Informal — good in meetings, weak in formal writing.",
+      "ex_t": "I'd love to help, but the thing is, I'm already covering two reports this week.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "softening",
+        "spoken"
+      ],
+      "freq": 57,
+      "unit": "glue"
+    },
+    {
+      "id": "en0058",
+      "term": "recap",
+      "trans": "go back over the main points briefly so everyone has them clear",
+      "pos": "verb",
+      "note": "Also a noun: 'a quick recap'. Opening with 'To recap' tells the room a summary is coming, not a new argument.",
+      "ex_t": "Before we finish, let me recap what each team has agreed to.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "summarising"
+      ],
+      "freq": 58,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0059",
+      "term": "a heads-up",
+      "trans": "advance warning about something that is coming",
+      "pos": "noun",
+      "note": "Hyphenated as a noun; you give someone a heads-up. Informal, so Slack and internal email only.",
+      "ex_t": "Just a heads-up: the dashboard will be down on Friday morning.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "slack",
+        "email"
+      ],
+      "freq": 59,
+      "unit": "writing"
+    },
+    {
+      "id": "en0060",
+      "term": "to get on with",
+      "trans": "to have a friendly relationship with someone",
+      "pos": "verb",
+      "note": "British; Americans say get along with. \"Get on with it\" is a different thing entirely — it means hurry up.",
+      "ex_t": "I get on with everyone on the analytics team.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "uk",
+        "trap"
+      ],
+      "freq": 60,
+      "unit": "social"
+    },
+    {
+      "id": "en0061",
+      "term": "materially",
+      "trans": "to a degree large enough to change a decision",
+      "pos": "adv",
+      "note": "Formal, common in reports and audit language. 'Not materially different' is a tactful way of saying the gap is real but irrelevant.",
+      "ex_t": "Excluding the outliers does not materially change the result.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "freq": 61,
+      "unit": "data"
+    },
+    {
+      "id": "en0062",
+      "term": "incur",
+      "trans": "to bring a cost, charge or penalty on yourself",
+      "pos": "verb",
+      "note": "Formal, and the object is always something unwanted: costs, charges, fees, a penalty, interest.",
+      "ex_t": "Cancelling after the deadline will incur a fee of fifty euros.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "admin"
+      ],
+      "freq": 62,
+      "unit": "money"
+    },
+    {
+      "id": "en0063",
+      "term": "book in",
+      "trans": "to arrange an appointment or place for someone, especially at a clinic",
+      "pos": "verb",
+      "note": "British; Americans say 'schedule'. You book someone in FOR something.",
+      "ex_t": "They booked me in for a scan on the 14th.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "appointments",
+        "healthcare"
+      ],
+      "freq": 63,
+      "unit": "life"
+    },
+    {
+      "id": "en0064",
+      "term": "broadly speaking",
+      "trans": "in general terms, without going into exceptions",
+      "pos": "phrase",
+      "note": "Same frame as 'roughly speaking' for numbers and 'strictly speaking' for precision.",
+      "ex_t": "Broadly speaking, users who sign up at the weekend churn faster.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "signposting"
+      ],
+      "freq": 64,
+      "unit": "glue"
+    },
+    {
+      "id": "en0065",
+      "term": "to flag",
+      "trans": "to draw attention to a problem or point early",
+      "pos": "verb",
+      "note": "BrE often adds up: flag it up in the meeting; it signals a risk, not blame",
+      "ex_t": "I'd rather flag the risk now than explain it in the review.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 65,
+      "unit": "work"
+    },
+    {
+      "id": "en0066",
+      "term": "loop someone in",
+      "trans": "bring another person into a conversation or thread so they know what is happening",
+      "pos": "verb",
+      "note": "Separable, and the pronoun must sit in the middle: loop her in, never 'loop in her'.",
+      "ex_t": "I'll loop Sofia in before we commit to a date.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "collaboration"
+      ],
+      "freq": 66,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0067",
+      "term": "to make a move",
+      "trans": "to start leaving",
+      "pos": "idiom",
+      "note": "Usually \"I'd better make a move\" — the polite British signal that you are about to go.",
+      "ex_t": "It's getting late, so I'd better make a move.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "leaving",
+        "uk"
+      ],
+      "freq": 67,
+      "unit": "social"
+    },
+    {
+      "id": "en0068",
+      "term": "skew",
+      "trans": "to pull a figure or a sample in one direction and so distort it",
+      "pos": "verb",
+      "note": "Also an adjective, skewed, and a noun. 'The sample skews young' means it leans young.",
+      "ex_t": "A handful of enterprise accounts skew the average basket size upwards.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "uncertainty"
+      ],
+      "freq": 68,
+      "unit": "data"
+    },
+    {
+      "id": "en0069",
+      "term": "arrears",
+      "trans": "money that is owed because payments were missed",
+      "pos": "noun",
+      "note": "Always plural. 'Paid in arrears' also just means paid after the period worked, as with a monthly salary, and that sense is neutral.",
+      "ex_t": "Two missed payments and the account is already in arrears.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "banking",
+        "admin"
+      ],
+      "freq": 69,
+      "unit": "money"
+    },
+    {
+      "id": "en0070",
+      "term": "bring forward",
+      "trans": "to move an appointment or event to an earlier date or time",
+      "pos": "verb",
+      "note": "The opposite is 'push back' or 'put back'. American 'move up' also means earlier, which confuses everyone.",
+      "ex_t": "Can we bring the appointment forward to Monday morning?",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "appointments",
+        "phrasal-verb"
+      ],
+      "freq": 70,
+      "unit": "life"
+    },
+    {
+      "id": "en0071",
+      "term": "heads-up",
+      "trans": "an early warning that something is coming",
+      "pos": "noun",
+      "note": "almost always with give: give someone a heads-up; informal but fine at work",
+      "ex_t": "Thanks for the heads-up about tomorrow's outage.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "follow-ups"
+      ],
+      "freq": 71,
+      "unit": "work"
+    },
+    {
+      "id": "en0072",
+      "term": "run something by someone",
+      "trans": "show an idea to someone informally to get their reaction before it is final",
+      "pos": "verb",
+      "note": "Signals you want a reaction, not formal sign-off. 'Run it past someone' is the more common British variant.",
+      "ex_t": "Let me run the draft budget by finance before I present it.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "collaboration"
+      ],
+      "freq": 72,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0073",
+      "term": "cheers",
+      "trans": "thanks; also goodbye, or a toast",
+      "pos": "phrase",
+      "note": "Informal British. Fine with colleagues and in shops, too casual for a formal email.",
+      "ex_t": "Cheers for sorting that out so quickly.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "register",
+        "uk"
+      ],
+      "freq": 73,
+      "unit": "social"
+    },
+    {
+      "id": "en0074",
+      "term": "rule out",
+      "trans": "to eliminate an explanation as impossible or unsupported",
+      "pos": "verb",
+      "note": "Separable: rule it out. The weaker cousin, 'we can't rule out', is a standard hedge.",
+      "ex_t": "We can rule out a tracking bug, since the server logs show the same drop.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "evidence"
+      ],
+      "freq": 74,
+      "unit": "data"
+    },
+    {
+      "id": "en0075",
+      "term": "direct debit",
+      "trans": "an arrangement letting a company take an agreed amount from your account automatically",
+      "pos": "noun",
+      "note": "The company pulls a variable amount; a standing order is you pushing a fixed one. Neither term exists in American English.",
+      "ex_t": "I've set up a direct debit for the electricity so I stop forgetting it.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "banking",
+        "subscriptions"
+      ],
+      "freq": 75,
+      "unit": "money"
+    },
+    {
+      "id": "en0076",
+      "term": "in writing",
+      "trans": "recorded in a letter or email rather than agreed only in speech",
+      "pos": "phrase",
+      "note": "The standard move once a complaint turns serious. Also 'put it in writing'.",
+      "ex_t": "Ask the landlord to confirm the rent reduction in writing.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "complaints",
+        "admin"
+      ],
+      "freq": 76,
+      "unit": "life"
+    },
+    {
+      "id": "en0077",
+      "term": "I'm not sure I follow",
+      "trans": "a polite way of saying you have not understood and need it explained again",
+      "pos": "phrase",
+      "note": "Places the gap on you rather than the speaker, so nobody loses face. Far softer than 'that wasn't clear'.",
+      "ex_t": "I'm not sure I follow: is the discount applied before or after VAT?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "checking-understanding"
+      ],
+      "freq": 77,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0078",
+      "term": "to bump into",
+      "trans": "to meet someone by chance",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "I bumped into an old colleague at the market.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "smalltalk"
+      ],
+      "freq": 78,
+      "unit": "social"
+    },
+    {
+      "id": "en0079",
+      "term": "discrepancy",
+      "trans": "a difference between two figures that ought to match",
+      "pos": "noun",
+      "note": "Neutral and blame-free, which makes it safer than 'error' when you raise it with another team.",
+      "ex_t": "There is a small discrepancy between the billing export and the dashboard.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "quality"
+      ],
+      "freq": 79,
+      "unit": "data"
+    },
+    {
+      "id": "en0080",
+      "term": "excess",
+      "trans": "the part of an insurance claim you pay yourself before the insurer pays the rest",
+      "pos": "noun",
+      "note": "British insurance term; Americans say deductible. A 'voluntary excess' lowers your premium in exchange for paying more per claim.",
+      "ex_t": "The repair came to eight hundred euros, but with a three-hundred euro excess the insurer only paid five.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "insurance"
+      ],
+      "freq": 80,
+      "unit": "money"
+    },
+    {
+      "id": "en0081",
+      "term": "GP",
+      "trans": "the local family doctor who treats everyday problems and refers you onwards",
+      "pos": "noun",
+      "note": "Short for general practitioner; say the letters. Register with a GP, see your GP.",
+      "ex_t": "You'll need to see a GP before the hospital will look at it.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "uk"
+      ],
+      "freq": 81,
+      "unit": "life"
+    },
+    {
+      "id": "en0082",
+      "term": "to put it another way",
+      "trans": "used to restate what you have just said in clearer terms",
+      "pos": "phrase",
+      "note": "Useful when you see blank faces. 'Let me put it this way' is the more informal version.",
+      "ex_t": "The lift is real but tiny — to put it another way, we spent six weeks for half a percent.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "signposting",
+        "clarifying"
+      ],
+      "freq": 82,
+      "unit": "glue"
+    },
+    {
+      "id": "en0083",
+      "term": "to sign off on",
+      "trans": "to give final approval to a piece of work",
+      "pos": "verb",
+      "note": "BrE often drops on: sign off the budget; the noun is sign-off",
+      "ex_t": "Nothing goes live until legal has signed off on the wording.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "ownership"
+      ],
+      "freq": 83,
+      "unit": "work"
+    },
+    {
+      "id": "en0084",
+      "term": "bring someone up to speed",
+      "trans": "give someone the background they are missing so they can take part properly",
+      "pos": "phrase",
+      "note": "Separable, and the topic follows 'on'. 'Get up to speed' is the version you use about yourself.",
+      "ex_t": "Tiago has just joined the project, so I'll bring him up to speed on the migration.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "checking-understanding"
+      ],
+      "freq": 84,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0085",
+      "term": "gentle reminder",
+      "trans": "a soft prompt about something that is overdue",
+      "pos": "phrase",
+      "note": "Many British readers hear it as passive-aggressive; 'just checking in on this' is safer.",
+      "ex_t": "She opened with a gentle reminder that the deadline was yesterday.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "chasing",
+        "trap"
+      ],
+      "freq": 85,
+      "unit": "writing"
+    },
+    {
+      "id": "en0086",
+      "term": "I won't keep you",
+      "trans": "a polite way of ending a conversation",
+      "pos": "phrase",
+      "note": "Puts the leaving on you rather than on them, so it sounds considerate instead of bored.",
+      "ex_t": "Anyway, I won't keep you — enjoy the rest of your evening.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "leaving"
+      ],
+      "freq": 86,
+      "unit": "social"
+    },
+    {
+      "id": "en0087",
+      "term": "reconcile",
+      "trans": "to work out why two sets of figures differ and bring them into agreement",
+      "pos": "verb",
+      "note": "Pattern: reconcile A with or against B. The noun is reconciliation.",
+      "ex_t": "I spent the morning reconciling the finance numbers with our own totals.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "quality"
+      ],
+      "freq": 87,
+      "unit": "data"
+    },
+    {
+      "id": "en0088",
+      "term": "premium",
+      "trans": "the amount you pay for an insurance policy, usually monthly or yearly",
+      "pos": "noun",
+      "note": "Not the adjective 'premium' meaning high-end. Premiums are quoted, they rise and fall, and you pay them.",
+      "ex_t": "My premium went up by thirty per cent after the claim.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "insurance"
+      ],
+      "freq": 88,
+      "unit": "money"
+    },
+    {
+      "id": "en0089",
+      "term": "surgery",
+      "trans": "the building or practice where a GP sees patients",
+      "pos": "noun",
+      "note": "British trap: here it is not an operation. 'She's at the surgery' means at the doctor's.",
+      "ex_t": "The surgery opens at eight, so ring then for a same-day appointment.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "uk"
+      ],
+      "freq": 89,
+      "unit": "life"
+    },
+    {
+      "id": "en0090",
+      "term": "granted",
+      "trans": "used to admit a point is true before arguing that it doesn't matter much",
+      "pos": "adv",
+      "note": "Sits at the front of the sentence with a comma. 'Admittedly' does the same job more formally.",
+      "ex_t": "Granted, the sample is small, but the pattern is hard to ignore.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "concession",
+        "disagreeing"
+      ],
+      "freq": 90,
+      "unit": "glue"
+    },
+    {
+      "id": "en0091",
+      "term": "bandwidth",
+      "trans": "the time and attention someone has spare for more work",
+      "pos": "noun",
+      "note": "uncountable in this sense and slightly informal; keep it out of formal writing",
+      "ex_t": "I haven't got the bandwidth to take on another dashboard this week.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities"
+      ],
+      "freq": 91,
+      "unit": "work"
+    },
+    {
+      "id": "en0092",
+      "term": "flag (something)",
+      "trans": "raise something so the group notices it now, without necessarily solving it",
+      "pos": "verb",
+      "note": "British colleagues often say 'flag up'. Flagging is explicitly not the same as taking ownership, which is why it is useful.",
+      "ex_t": "I want to flag a risk: the supplier still hasn't confirmed the delivery date.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "raising-issues"
+      ],
+      "freq": 92,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0093",
+      "term": "to nudge",
+      "trans": "to prompt someone lightly about an unanswered request",
+      "pos": "verb",
+      "note": "Warmer and lighter than 'chase'; very common in chat.",
+      "ex_t": "I'll nudge him again if there's nothing by Thursday.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "chasing"
+      ],
+      "freq": 93,
+      "unit": "writing"
+    },
+    {
+      "id": "en0094",
+      "term": "to get round to",
+      "trans": "to finally find the time to do something",
+      "pos": "verb",
+      "note": "British spelling is round; followed by an -ing form: get round to booking.",
+      "ex_t": "I still haven't got round to booking the flights.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "hobbies",
+        "uk"
+      ],
+      "freq": 94,
+      "unit": "social"
+    },
+    {
+      "id": "en0095",
+      "term": "patchy",
+      "trans": "present in some places and missing in others; uneven in quality",
+      "pos": "adj",
+      "note": "Very British and very useful for incomplete data or uneven results: patchy coverage, patchy adoption.",
+      "ex_t": "Coverage before 2023 is patchy, so I would not chart that period.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "quality"
+      ],
+      "freq": 95,
+      "unit": "data"
+    },
+    {
+      "id": "en0096",
+      "term": "cover",
+      "trans": "the protection an insurance policy gives you",
+      "pos": "noun",
+      "note": "Uncountable in British English: cover for theft, never 'a cover'. Americans say coverage.",
+      "ex_t": "Check whether the policy includes cover for flooding before you sign.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "insurance"
+      ],
+      "freq": 96,
+      "unit": "money"
+    },
+    {
+      "id": "en0097",
+      "term": "referral",
+      "trans": "an official request from one doctor for you to be seen by a specialist",
+      "pos": "noun",
+      "note": "Verb: refer someone to. The document itself is a referral letter.",
+      "ex_t": "The dermatologist won't take you without a referral from your GP.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare"
+      ],
+      "freq": 97,
+      "unit": "life"
+    },
+    {
+      "id": "en0098",
+      "term": "I'm not entirely convinced",
+      "trans": "a mild way of saying you disagree or still have serious doubts",
+      "pos": "phrase",
+      "note": "British understatement: it usually means you disagree quite firmly.",
+      "ex_t": "I'm not entirely convinced the drop is seasonal.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "disagreeing",
+        "softening",
+        "british"
+      ],
+      "freq": 98,
+      "unit": "glue"
+    },
+    {
+      "id": "en0099",
+      "term": "to push back",
+      "trans": "to resist or question a request rather than simply accept it",
+      "pos": "verb",
+      "note": "push back ON a request; a separate sense moves a date later: push the launch back",
+      "ex_t": "She pushed back on the timeline and asked for two more weeks.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities"
+      ],
+      "freq": 99,
+      "unit": "work"
+    },
+    {
+      "id": "en0100",
+      "term": "action point",
+      "trans": "a specific task agreed in a meeting, with an owner and usually a deadline",
+      "pos": "noun",
+      "note": "British minutes use 'action point' or just 'action'; 'action item' is American. 'Action' is also used as a verb in offices ('who's actioning this?'), which is heavy jargon.",
+      "ex_t": "There are three action points from today and two of them are mine.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "summarising",
+        "british"
+      ],
+      "freq": 100,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0101",
+      "term": "Many thanks",
+      "trans": "a brief, warm closing thank-you",
+      "pos": "phrase",
+      "note": "Works as a sign-off when you have asked for something; a shade warmer than 'Thanks'.",
+      "ex_t": "Many thanks for turning this around so quickly.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email",
+        "sign-off"
+      ],
+      "freq": 101,
+      "unit": "writing"
+    },
+    {
+      "id": "en0102",
+      "term": "up for",
+      "trans": "willing to join in with something",
+      "pos": "phrase",
+      "note": "Do not mix it up with \"up to\": Are you up for it? means willing, What are you up to? means doing.",
+      "ex_t": "Are you up for a walk on Sunday?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weekend",
+        "trap"
+      ],
+      "freq": 102,
+      "unit": "social"
+    },
+    {
+      "id": "en0103",
+      "term": "plateau",
+      "trans": "to stop rising and stay at roughly the same level",
+      "pos": "verb",
+      "note": "Pronounced PLAT-oh in Britain. Also a noun: we've hit a plateau. Neighbours: level off, flatten out.",
+      "ex_t": "Sign-ups climbed for six weeks and then plateaued.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends"
+      ],
+      "freq": 103,
+      "unit": "data"
+    },
+    {
+      "id": "en0104",
+      "term": "quote",
+      "trans": "a stated price for a job or service, given before you agree to it",
+      "pos": "noun",
+      "note": "Nothing to do with quoting words here. You get or request a quote; 'quotation' is the formal written version.",
+      "ex_t": "I got three quotes for the car insurance and the cheapest was half the price of the worst.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "insurance",
+        "contracts"
+      ],
+      "freq": 104,
+      "unit": "money"
+    },
+    {
+      "id": "en0105",
+      "term": "repeat prescription",
+      "trans": "a renewal of regular medication issued without a new appointment",
+      "pos": "noun",
+      "note": "British system term; the American equivalent is a 'refill'.",
+      "ex_t": "I've ordered my repeat prescription through the app.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "uk"
+      ],
+      "freq": 105,
+      "unit": "life"
+    },
+    {
+      "id": "en0106",
+      "term": "backlog",
+      "trans": "work that has piled up and is still waiting to be done",
+      "pos": "noun",
+      "note": "you clear, work through or prioritise a backlog",
+      "ex_t": "The backlog has grown faster than we can clear it.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities"
+      ],
+      "freq": 106,
+      "unit": "work"
+    },
+    {
+      "id": "en0107",
+      "term": "wrap up",
+      "trans": "bring a meeting or a topic to an end, usually with a short summary",
+      "pos": "verb",
+      "note": "Noun form is hyphenated: 'a quick wrap-up'.",
+      "ex_t": "We're nearly out of time, so let's wrap up and take the rest by email.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "summarising"
+      ],
+      "freq": 107,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0108",
+      "term": "anyway",
+      "trans": "a signal that you are closing a topic or a conversation",
+      "pos": "adv",
+      "note": "Sentence-initial and with a falling tone it means \"let's wrap this up\", not \"nevertheless\".",
+      "ex_t": "Anyway, I should let you get back to work.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "leaving"
+      ],
+      "freq": 108,
+      "unit": "social"
+    },
+    {
+      "id": "en0109",
+      "term": "uptick",
+      "trans": "a small rise, especially after a flat or falling stretch",
+      "pos": "noun",
+      "note": "Deliberately small; don't use it for a big jump. Opposite: a dip. Pattern: an uptick in something.",
+      "ex_t": "There is a modest uptick in weekend traffic, though it sits within normal variation.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends"
+      ],
+      "freq": 109,
+      "unit": "data"
+    },
+    {
+      "id": "en0110",
+      "term": "tax return",
+      "trans": "the yearly form on which you declare your income to the tax office",
+      "pos": "noun",
+      "note": "You file or submit a return. The return is the form; the money you get back is a refund or rebate.",
+      "ex_t": "I file my tax return in April, once the bank sends the interest statement.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "tax",
+        "admin"
+      ],
+      "freq": 110,
+      "unit": "money"
+    },
+    {
+      "id": "en0111",
+      "term": "over the counter",
+      "trans": "sold in a pharmacy without a prescription",
+      "pos": "adj",
+      "note": "Hyphenated before a noun: over-the-counter painkillers. OTC on packaging.",
+      "ex_t": "Ibuprofen is available over the counter, so you don't need to see anyone.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare"
+      ],
+      "freq": 111,
+      "unit": "life"
+    },
+    {
+      "id": "en0112",
+      "term": "give or take",
+      "trans": "used after a number to show it is approximate",
+      "pos": "phrase",
+      "note": "Can carry the margin: 'give or take a week'. Spoken only — keep it out of reports.",
+      "ex_t": "The job runs in twenty minutes, give or take.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "numbers",
+        "spoken"
+      ],
+      "freq": 112,
+      "unit": "glue"
+    },
+    {
+      "id": "en0113",
+      "term": "to escalate",
+      "trans": "to raise an issue to someone more senior for a decision",
+      "pos": "verb",
+      "note": "neutral, not aggressive; also intransitive, as in costs escalated quickly",
+      "ex_t": "If they miss the second deadline, we escalate it to their director.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 113,
+      "unit": "work"
+    },
+    {
+      "id": "en0114",
+      "term": "to have the bandwidth",
+      "trans": "to have enough spare time or capacity",
+      "pos": "idiom",
+      "note": "A polite way to refuse without writing a flat no.",
+      "ex_t": "I don't have the bandwidth to take this on this quarter.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "saying-no",
+        "work"
+      ],
+      "freq": 114,
+      "unit": "writing"
+    },
+    {
+      "id": "en0115",
+      "term": "to take up",
+      "trans": "to start a new hobby or activity",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "He took up bouldering after moving to the island.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "hobbies"
+      ],
+      "freq": 115,
+      "unit": "social"
+    },
+    {
+      "id": "en0116",
+      "term": "taper off",
+      "trans": "to decrease gradually and then stop",
+      "pos": "verb",
+      "note": "Gentler than drop or collapse: the fall is slow and smooth rather than sudden.",
+      "ex_t": "Interest in the feature tapers off after the first fortnight.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends"
+      ],
+      "freq": 116,
+      "unit": "data"
+    },
+    {
+      "id": "en0117",
+      "term": "write off",
+      "trans": "to accept that a debt will never be repaid, or to count a cost against taxable income",
+      "pos": "verb",
+      "note": "Separable: write it off. A car damaged beyond repair is 'a write-off', hyphenated as a noun.",
+      "ex_t": "You can write off the laptop against tax if you use it mainly for work.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "tax",
+        "insurance"
+      ],
+      "freq": 117,
+      "unit": "money"
+    },
+    {
+      "id": "en0118",
+      "term": "waiting list",
+      "trans": "the queue of people waiting for a treatment or appointment",
+      "pos": "noun",
+      "note": "You are ON a waiting list. 'Physio' is the normal short form of physiotherapy.",
+      "ex_t": "I'm on the waiting list for physio, apparently for four months.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "appointments"
+      ],
+      "freq": 118,
+      "unit": "life"
+    },
+    {
+      "id": "en0119",
+      "term": "let me come back to you on that",
+      "trans": "used to postpone an answer you don't have yet",
+      "pos": "phrase",
+      "note": "Far better than inventing a number, but only if you actually do come back.",
+      "ex_t": "I don't want to guess the licence cost — let me come back to you on that.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "buying-time",
+        "work"
+      ],
+      "freq": 119,
+      "unit": "glue"
+    },
+    {
+      "id": "en0120",
+      "term": "scope creep",
+      "trans": "the slow growth of a task beyond what was agreed",
+      "pos": "noun",
+      "note": "uncountable; the usual verb is set in, as in scope creep has set in",
+      "ex_t": "Every extra chart they ask for is scope creep, and nobody is moving the deadline.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "scope"
+      ],
+      "freq": 120,
+      "unit": "work"
+    },
+    {
+      "id": "en0121",
+      "term": "see where someone is coming from",
+      "trans": "understand the reasoning behind what someone says, even when you don't agree with it",
+      "pos": "idiom",
+      "note": "Informal but safe in meetings. The continuous form is fixed: 'where you come from' means your home country, which is a different conversation entirely.",
+      "ex_t": "I can see where you're coming from, since you've been burned by a rushed launch before.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "disagreeing"
+      ],
+      "freq": 121,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0122",
+      "term": "you alright?",
+      "trans": "a casual British greeting, not a question about your health",
+      "pos": "phrase",
+      "note": "Answer \"Yeah, you?\" — reporting how you actually feel is the classic mistake here.",
+      "ex_t": "You alright? I haven't seen you in ages.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "uk",
+        "trap"
+      ],
+      "freq": 122,
+      "unit": "social"
+    },
+    {
+      "id": "en0123",
+      "term": "like-for-like",
+      "trans": "compared on the same basis, with known differences stripped out",
+      "pos": "adj",
+      "note": "British retail and finance term; Americans say same-store or comparable. Hyphenated before a noun.",
+      "ex_t": "On a like-for-like basis the two regions are almost identical.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "comparison"
+      ],
+      "freq": 123,
+      "unit": "data"
+    },
+    {
+      "id": "en0124",
+      "term": "rebate",
+      "trans": "money given back to you because you paid too much",
+      "pos": "noun",
+      "note": "A rebate comes back after overpayment; a discount is taken off up front. Usually 'tax rebate' or 'a rebate on the bill'.",
+      "ex_t": "I was on the wrong tax code all year, so a rebate should come through in June.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "tax"
+      ],
+      "freq": 124,
+      "unit": "money"
+    },
+    {
+      "id": "en0125",
+      "term": "fit note",
+      "trans": "a doctor's statement about whether you are well enough to work",
+      "pos": "noun",
+      "note": "Officially replaced 'sick note', though people still say sick note in conversation.",
+      "ex_t": "My GP gave me a fit note for two weeks.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "uk"
+      ],
+      "freq": 125,
+      "unit": "life"
+    },
+    {
+      "id": "en0126",
+      "term": "up to a point",
+      "trans": "used to agree partly but not completely",
+      "pos": "phrase",
+      "note": "A gentle brake. Said on its own with no follow-up it can sound dismissive.",
+      "ex_t": "That's true up to a point, though it breaks down for enterprise accounts.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "disagreeing",
+        "concession"
+      ],
+      "freq": 126,
+      "unit": "glue"
+    },
+    {
+      "id": "en0127",
+      "term": "out of scope",
+      "trans": "outside the agreed boundaries of the work",
+      "pos": "phrase",
+      "note": "opposite of in scope; both follow the verb be",
+      "ex_t": "Anything before 2019 is out of scope for this analysis.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "scope"
+      ],
+      "freq": 127,
+      "unit": "work"
+    },
+    {
+      "id": "en0128",
+      "term": "sense-check",
+      "trans": "check quickly and informally that an idea or figure is reasonable before it goes further",
+      "pos": "verb",
+      "note": "Chiefly British, and also a noun: 'a quick sense-check'. American colleagues say 'sanity check', which is falling out of favour.",
+      "ex_t": "Can I sense-check this with you? These figures look too good.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "checking-understanding",
+        "british"
+      ],
+      "freq": 128,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0129",
+      "term": "not fussed",
+      "trans": "having no strong preference",
+      "pos": "phrase",
+      "note": "Warm and British; \"I don't care\" in the same slot sounds cold.",
+      "ex_t": "I'm not fussed where we eat, you choose.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food",
+        "uk"
+      ],
+      "freq": 129,
+      "unit": "social"
+    },
+    {
+      "id": "en0130",
+      "term": "proxy",
+      "trans": "a measurable stand-in for something you cannot measure directly",
+      "pos": "noun",
+      "note": "Pattern: a proxy for X. Naming it out loud shows you know the measure is imperfect, which buys credibility.",
+      "ex_t": "We use session length as a proxy for engagement, which is crude but workable.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "method"
+      ],
+      "freq": 130,
+      "unit": "data"
+    },
+    {
+      "id": "en0131",
+      "term": "allowance",
+      "trans": "an amount you may earn or use before a rule or charge starts to apply",
+      "pos": "noun",
+      "note": "In tax and travel this is a threshold, not pocket money: personal allowance, baggage allowance, mileage allowance.",
+      "ex_t": "The first slice of your income falls under the personal allowance and isn't taxed.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "tax",
+        "work"
+      ],
+      "freq": 131,
+      "unit": "money"
+    },
+    {
+      "id": "en0132",
+      "term": "out of hours",
+      "trans": "outside normal opening or working times",
+      "pos": "phrase",
+      "note": "Hyphenated before a noun: an out-of-hours service. Used for clinics, plumbers and helplines.",
+      "ex_t": "If it gets worse tonight, ring the out-of-hours number.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "healthcare",
+        "service"
+      ],
+      "freq": 132,
+      "unit": "life"
+    },
+    {
+      "id": "en0133",
+      "term": "strictly speaking",
+      "trans": "used to give the exact, technically correct version of something",
+      "pos": "phrase",
+      "note": "Can come across as pedantic if you use it to win small points.",
+      "ex_t": "Strictly speaking, it isn't a bug — the spec never covered that case.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "signposting"
+      ],
+      "freq": 133,
+      "unit": "glue"
+    },
+    {
+      "id": "en0134",
+      "term": "turnaround",
+      "trans": "the time needed to complete something and send it back",
+      "pos": "noun",
+      "note": "one word as a noun: a quick turnaround; as a verb it splits: turn it around by Friday",
+      "ex_t": "They promise a two-day turnaround on any data request.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "deadlines"
+      ],
+      "freq": 134,
+      "unit": "work"
+    },
+    {
+      "id": "en0135",
+      "term": "hold that thought",
+      "trans": "ask someone to keep an idea for a moment while something else is finished",
+      "pos": "phrase",
+      "note": "Friendly and slightly informal. It promises you will come back within the same meeting; for anything longer, use 'park'.",
+      "ex_t": "Hold that thought while we get the numbers on screen, then you can explain.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "interrupting",
+        "deferring"
+      ],
+      "freq": 135,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0136",
+      "term": "to run something past someone",
+      "trans": "to show something to someone for their opinion before it goes out",
+      "pos": "verb",
+      "note": "past, not passed. Americans say 'run by'.",
+      "ex_t": "Can I run the wording past you before I send it?",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "work",
+        "trap"
+      ],
+      "freq": 136,
+      "unit": "writing"
+    },
+    {
+      "id": "en0137",
+      "term": "knackered",
+      "trans": "extremely tired",
+      "pos": "adj",
+      "note": "Very informal British. Fine with friends, avoid with a client.",
+      "ex_t": "I was knackered after the hike, so we had an early night.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "register",
+        "uk"
+      ],
+      "freq": 137,
+      "unit": "social"
+    },
+    {
+      "id": "en0138",
+      "term": "granularity",
+      "trans": "the level of detail at which data is recorded or reported",
+      "pos": "noun",
+      "note": "Adjective: granular. 'Can we go more granular?' means can we break it down further.",
+      "ex_t": "We only have daily granularity, so the hourly question can't be answered.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "method"
+      ],
+      "freq": 138,
+      "unit": "data"
+    },
+    {
+      "id": "en0139",
+      "term": "net",
+      "trans": "left after tax and other deductions have been taken off",
+      "pos": "adj",
+      "note": "Opposite of gross, the amount before deductions. Can follow the number: two thousand net.",
+      "ex_t": "The salary looks generous until you work out the net figure.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "tax",
+        "work"
+      ],
+      "freq": 139,
+      "unit": "money"
+    },
+    {
+      "id": "en0140",
+      "term": "letting agent",
+      "trans": "a company that rents out a property for the owner and deals with tenants",
+      "pos": "noun",
+      "note": "British. 'To let' means for rent, hence the boards outside flats.",
+      "ex_t": "The letting agent takes a month's rent as a fee.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "uk"
+      ],
+      "freq": 140,
+      "unit": "life"
+    },
+    {
+      "id": "en0141",
+      "term": "arguably",
+      "trans": "used to present a claim as defensible rather than certain",
+      "pos": "adv",
+      "note": "Softens a bold claim; used on every sentence it makes you sound half-hearted.",
+      "ex_t": "This is arguably the cleanest dataset we have.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "writing"
+      ],
+      "freq": 141,
+      "unit": "glue"
+    },
+    {
+      "id": "en0142",
+      "term": "to slip",
+      "trans": "to fall behind a planned date",
+      "pos": "verb",
+      "note": "dates and deadlines slip by themselves, with no object; the noun is slippage",
+      "ex_t": "The launch date has slipped twice already.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "deadlines"
+      ],
+      "freq": 142,
+      "unit": "work"
+    },
+    {
+      "id": "en0143",
+      "term": "iron out",
+      "trans": "resolve the small problems or disagreements left in something broadly agreed",
+      "pos": "verb",
+      "note": "Only for minor wrinkles. If the disagreement is fundamental, 'thrash out' or 'work through' is the honest choice.",
+      "ex_t": "The contract is basically settled; we just need to iron out the payment terms.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "negotiating"
+      ],
+      "freq": 143,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0144",
+      "term": "to come across as",
+      "trans": "to give a particular impression, often without meaning to",
+      "pos": "verb",
+      "note": "About how the reader receives it, not what you intended. This is the whole idea of tone in email.",
+      "ex_t": "That one-line reply comes across as colder than you meant.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "register"
+      ],
+      "freq": 144,
+      "unit": "writing"
+    },
+    {
+      "id": "en0145",
+      "term": "a lie-in",
+      "trans": "a morning spent staying in bed later than usual",
+      "pos": "noun",
+      "note": "You have a lie-in. Americans say sleep in.",
+      "ex_t": "The one thing I want at the weekend is a proper lie-in.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weekend",
+        "uk"
+      ],
+      "freq": 145,
+      "unit": "social"
+    },
+    {
+      "id": "en0146",
+      "term": "spurious",
+      "trans": "looking genuine but in fact false",
+      "pos": "adj",
+      "note": "Formal. The standard pair is spurious correlation. Too strong for an honest slip: it implies the finding is worthless.",
+      "ex_t": "With enough variables you will find a spurious correlation sooner or later.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "uncertainty"
+      ],
+      "freq": 146,
+      "unit": "data"
+    },
+    {
+      "id": "en0147",
+      "term": "pro rata",
+      "trans": "in proportion to the time or share involved",
+      "pos": "adv",
+      "note": "Common in contracts and part-time adverts: 'thirty thousand pro rata' is the full-time rate scaled to your hours.",
+      "ex_t": "If you cancel halfway through the year, the fee is refunded pro rata.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "work"
+      ],
+      "freq": 147,
+      "unit": "money"
+    },
+    {
+      "id": "en0148",
+      "term": "tenancy agreement",
+      "trans": "the contract between tenant and landlord setting out rent and rules",
+      "pos": "noun",
+      "note": "British for 'lease'. The tenancy is the arrangement; you are the tenant.",
+      "ex_t": "Read the tenancy agreement before you sign anything about pets.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "admin"
+      ],
+      "freq": 148,
+      "unit": "life"
+    },
+    {
+      "id": "en0149",
+      "term": "flag (something to someone)",
+      "trans": "to draw attention to something so that others can act on it",
+      "pos": "verb",
+      "note": "British English also uses 'flag up'. The standard office verb for raising an issue without escalating it.",
+      "ex_t": "I'll flag the missing region codes to the data team this morning.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "work",
+        "signposting",
+        "british"
+      ],
+      "freq": 149,
+      "unit": "glue"
+    },
+    {
+      "id": "en0150",
+      "term": "dependency",
+      "trans": "something your work cannot start or finish without",
+      "pos": "noun",
+      "note": "a dependency ON something; in plans it is usually plural",
+      "ex_t": "Our only dependency is the new data feed, and it isn't ready.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 150,
+      "unit": "work"
+    },
+    {
+      "id": "en0151",
+      "term": "nail down",
+      "trans": "make something vague definite, such as a date, a number or a commitment",
+      "pos": "verb",
+      "note": "Also used of people: 'I couldn't nail him down to a date' means he kept avoiding the commitment.",
+      "ex_t": "Before we leave, can we nail down who is presenting on Monday?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "decisions"
+      ],
+      "freq": 151,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0152",
+      "term": "curt",
+      "trans": "so short that it sounds rude",
+      "pos": "adj",
+      "note": "In British email the usual cause is a one-line reply with no greeting.",
+      "ex_t": "His answer was accurate but curt, so I softened the opening line.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "register"
+      ],
+      "freq": 152,
+      "unit": "writing"
+    },
+    {
+      "id": "en0153",
+      "term": "peckish",
+      "trans": "slightly hungry",
+      "pos": "adj",
+      "note": "British and understated — far milder than starving.",
+      "ex_t": "I'm getting a bit peckish — shall we find somewhere?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food",
+        "uk"
+      ],
+      "freq": 153,
+      "unit": "social"
+    },
+    {
+      "id": "en0154",
+      "term": "conflate",
+      "trans": "to treat two distinct things as if they were one",
+      "pos": "verb",
+      "note": "Pattern: conflate A with B. Handy in review, and politer than telling someone they are confused.",
+      "ex_t": "The slide conflates new users with reactivated ones.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "argument"
+      ],
+      "freq": 154,
+      "unit": "data"
+    },
+    {
+      "id": "en0155",
+      "term": "instalment",
+      "trans": "one of several smaller payments spread over time",
+      "pos": "noun",
+      "note": "One 'l' in British spelling, two in American. The fixed phrase is 'pay in instalments'.",
+      "ex_t": "They let me pay the deposit in three monthly instalments.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "banking",
+        "contracts"
+      ],
+      "freq": 155,
+      "unit": "money"
+    },
+    {
+      "id": "en0156",
+      "term": "notice period",
+      "trans": "how far in advance you must tell the other side you are ending an agreement",
+      "pos": "noun",
+      "note": "Also used about jobs. 'Give notice' means formally announce you are leaving.",
+      "ex_t": "There's a two-month notice period, so tell them by the end of March.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "admin"
+      ],
+      "freq": 156,
+      "unit": "life"
+    },
+    {
+      "id": "en0157",
+      "term": "on balance",
+      "trans": "after weighing both sides, taken as a whole",
+      "pos": "phrase",
+      "note": "Marks a conclusion after the pros and cons, so it shouldn't open the discussion.",
+      "ex_t": "On balance, I'd keep the old pipeline until the migration settles.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "signposting",
+        "concluding"
+      ],
+      "freq": 157,
+      "unit": "glue"
+    },
+    {
+      "id": "en0158",
+      "term": "bottleneck",
+      "trans": "the one slow step that holds up everything after it",
+      "pos": "noun",
+      "note": "about a stage or resource, not a person's character",
+      "ex_t": "Manual approval is the bottleneck, not the analysis.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 158,
+      "unit": "work"
+    },
+    {
+      "id": "en0159",
+      "term": "flesh out",
+      "trans": "add the missing detail to an idea that exists only in outline",
+      "pos": "verb",
+      "note": "Watch the spelling. 'Flush out' means force something into the open and is a completely different verb.",
+      "ex_t": "The concept is good; flesh it out with costs and I'll take it to the board.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "developing-ideas"
+      ],
+      "freq": 159,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0160",
+      "term": "as discussed",
+      "trans": "referring back to something already agreed in conversation",
+      "pos": "phrase",
+      "note": "'As per our discussion' is stiffer and can read as building a case against the reader.",
+      "ex_t": "As discussed, I've attached the revised figures.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email"
+      ],
+      "freq": 160,
+      "unit": "writing"
+    },
+    {
+      "id": "en0161",
+      "term": "I'll let you get on",
+      "trans": "a polite way to end a conversation with someone who is busy",
+      "pos": "phrase",
+      "note": "\"Get on\" here means carry on with what they were doing.",
+      "ex_t": "Right, I'll let you get on — we'll speak next week.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "leaving",
+        "uk"
+      ],
+      "freq": 161,
+      "unit": "social"
+    },
+    {
+      "id": "en0162",
+      "term": "confounder",
+      "trans": "a hidden third factor that drives both things you are comparing",
+      "pos": "noun",
+      "note": "Also confounding variable, and the verb confound. 'Controlling for confounders' is the fixed phrase.",
+      "ex_t": "Region is an obvious confounder here: the two groups aren't drawn from the same market.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "method",
+        "causation"
+      ],
+      "freq": 162,
+      "unit": "data"
+    },
+    {
+      "id": "en0163",
+      "term": "lump sum",
+      "trans": "a single large payment made all at once",
+      "pos": "noun",
+      "note": "The natural opposite of instalments; used for pensions, bonuses and annual subscriptions.",
+      "ex_t": "Paying the year up front as a lump sum works out about ten per cent cheaper.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "banking",
+        "subscriptions"
+      ],
+      "freq": 163,
+      "unit": "money"
+    },
+    {
+      "id": "en0164",
+      "term": "wear and tear",
+      "trans": "the normal damage that comes from ordinary use over time",
+      "pos": "phrase",
+      "note": "Nearly always in the fixed phrase 'fair wear and tear' — what a landlord may not deduct from your deposit.",
+      "ex_t": "Faded paint is fair wear and tear, so they can't charge you for it.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing"
+      ],
+      "freq": 164,
+      "unit": "life"
+    },
+    {
+      "id": "en0165",
+      "term": "correct me if I'm wrong",
+      "trans": "used before a statement you believe is true, inviting the other person to correct it",
+      "pos": "phrase",
+      "note": "A polite way to challenge someone: you sound tentative while still making the point.",
+      "ex_t": "Correct me if I'm wrong, but this table hasn't refreshed since Friday.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "disagreeing",
+        "spoken"
+      ],
+      "freq": 165,
+      "unit": "glue"
+    },
+    {
+      "id": "en0166",
+      "term": "workaround",
+      "trans": "a temporary way of getting past a problem without fixing it",
+      "pos": "noun",
+      "note": "one word as a noun; the verb is two words: work around the problem",
+      "ex_t": "We have a workaround, but it won't survive the next release.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "blockers"
+      ],
+      "freq": 166,
+      "unit": "work"
+    },
+    {
+      "id": "en0167",
+      "term": "run through (something)",
+      "trans": "go over a list or a set of points quickly, from start to finish",
+      "pos": "verb",
+      "note": "Noun form: 'a quick run-through'. 'Run through' is a fast preview; 'go through' suggests something slower and more thorough.",
+      "ex_t": "I'll run through the agenda first so you know what's coming.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "summarising"
+      ],
+      "freq": 167,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0168",
+      "term": "no rush",
+      "trans": "a signal that the request is not urgent",
+      "pos": "phrase",
+      "note": "Takes the pressure off, but it will be taken literally, so add a real date if one exists.",
+      "ex_t": "Have a look when you get a chance; no rush.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "chasing",
+        "register"
+      ],
+      "freq": 168,
+      "unit": "writing"
+    },
+    {
+      "id": "en0169",
+      "term": "to go down well",
+      "trans": "to be received positively",
+      "pos": "idiom",
+      "note": "Works equally for food, jokes, news and presentations.",
+      "ex_t": "The dessert went down very well with everyone.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food"
+      ],
+      "freq": 169,
+      "unit": "social"
+    },
+    {
+      "id": "en0170",
+      "term": "anecdotal",
+      "trans": "based on scattered individual reports rather than systematic evidence",
+      "pos": "adj",
+      "note": "Anecdotal evidence is the set phrase. Mildly dismissive, so soften it: 'this is still anecdotal, but...'.",
+      "ex_t": "So far the complaints are anecdotal; I want to see whether the tickets back them up.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "evidence"
+      ],
+      "freq": 170,
+      "unit": "data"
+    },
+    {
+      "id": "en0171",
+      "term": "rolling contract",
+      "trans": "an agreement that continues automatically until one side ends it",
+      "pos": "noun",
+      "note": "'Rolling' is the key word: a rolling subscription rolls over each month. Compare 'fixed-term', which ends on a set date.",
+      "ex_t": "It's a rolling monthly contract, so you can leave whenever you like with thirty days' notice.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "subscriptions"
+      ],
+      "freq": 171,
+      "unit": "money"
+    },
+    {
+      "id": "en0172",
+      "term": "break clause",
+      "trans": "a term in a contract letting either side end it early",
+      "pos": "noun",
+      "note": "You 'exercise' or 'trigger' a break clause. Common in rentals and phone contracts.",
+      "ex_t": "There's a break clause at six months if the job falls through.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "admin"
+      ],
+      "freq": 172,
+      "unit": "life"
+    },
+    {
+      "id": "en0173",
+      "term": "long story short",
+      "trans": "used to skip the detail and jump to the outcome",
+      "pos": "phrase",
+      "note": "Keep the promise — whatever follows should genuinely be short.",
+      "ex_t": "Long story short, the join was duplicating rows.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "signposting",
+        "spoken"
+      ],
+      "freq": 173,
+      "unit": "glue"
+    },
+    {
+      "id": "en0174",
+      "term": "to park",
+      "trans": "to set something aside deliberately to return to it later",
+      "pos": "verb",
+      "note": "in a meeting, park it means come back to it, not drop it",
+      "ex_t": "Can we park the pricing question until we have the numbers?",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities"
+      ],
+      "freq": 174,
+      "unit": "work"
+    },
+    {
+      "id": "en0175",
+      "term": "talk over someone",
+      "trans": "keep speaking while another person is speaking, so they cannot be heard",
+      "pos": "verb",
+      "note": "Word order changes the meaning completely: 'talk something over' means discuss it properly, while 'talk over someone' is rude.",
+      "ex_t": "Sorry, I talked over you there. Please finish.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "interrupting"
+      ],
+      "freq": 175,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0176",
+      "term": "thread",
+      "trans": "a chain of replies kept under one message or topic",
+      "pos": "noun",
+      "note": "'Reply in thread' means do not post it to the whole channel.",
+      "ex_t": "Let's keep this in the thread so the channel stays readable.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "slack"
+      ],
+      "freq": 176,
+      "unit": "writing"
+    },
+    {
+      "id": "en0177",
+      "term": "moreish",
+      "trans": "so tasty that you keep wanting more",
+      "pos": "adj",
+      "note": "British; it compliments the food rather than criticising the eater.",
+      "ex_t": "Those little cheese pastries are dangerously moreish.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food",
+        "uk"
+      ],
+      "freq": 177,
+      "unit": "social"
+    },
+    {
+      "id": "en0178",
+      "term": "cherry-pick",
+      "trans": "to choose only the cases that support your argument",
+      "pos": "verb",
+      "note": "An accusation about method, not a word for an innocent mistake. Hyphenated in British usage.",
+      "ex_t": "If you cherry-pick the two best weeks, of course the campaign looks brilliant.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "argument"
+      ],
+      "freq": 178,
+      "unit": "data"
+    },
+    {
+      "id": "en0179",
+      "term": "auto-renew",
+      "trans": "to continue for another period automatically unless you cancel",
+      "pos": "verb",
+      "note": "Noun: auto-renewal. Usually the detail people miss: it auto-renewed and they were charged for another year.",
+      "ex_t": "The trial auto-renews into a yearly plan, so cancel before the tenth.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "subscriptions",
+        "contracts"
+      ],
+      "freq": 179,
+      "unit": "money"
+    },
+    {
+      "id": "en0180",
+      "term": "play up",
+      "trans": "to work badly or cause trouble, of a device, a body part or a child",
+      "pos": "idiom",
+      "note": "British and informal, but fine with a landlord or a doctor: my knee's playing up again.",
+      "ex_t": "The boiler's been playing up since the cold snap.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "uk"
+      ],
+      "freq": 180,
+      "unit": "life"
+    },
+    {
+      "id": "en0181",
+      "term": "for what it's worth",
+      "trans": "used to offer an opinion while playing down its importance",
+      "pos": "phrase",
+      "note": "Modest on the surface, but often used to slip in a strong opinion.",
+      "ex_t": "For what it's worth, I'd run the test for another week.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "softening",
+        "spoken"
+      ],
+      "freq": 181,
+      "unit": "glue"
+    },
+    {
+      "id": "en0182",
+      "term": "remit",
+      "trans": "the area of work someone is officially responsible for",
+      "pos": "noun",
+      "note": "formal and distinctly British; the usual complaint is that's outside my remit",
+      "ex_t": "Pricing sits outside my remit, but I can point you to the right team.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "ownership",
+        "uk"
+      ],
+      "freq": 182,
+      "unit": "work"
+    },
+    {
+      "id": "en0183",
+      "term": "break up",
+      "trans": "of a voice on a call: become fragmented and hard to hear because the connection is poor",
+      "pos": "verb",
+      "note": "Fixed in the continuous: 'you're breaking up'. Compare 'you cut out', where the sound disappeared altogether.",
+      "ex_t": "You're breaking up. Could you turn your camera off and try again?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "calls"
+      ],
+      "freq": 183,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0184",
+      "term": "to ping",
+      "trans": "to send a short message to get someone's attention",
+      "pos": "verb",
+      "note": "Internal chat only. You would never write that you will ping a client.",
+      "ex_t": "Ping me when the export finishes.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "slack",
+        "register"
+      ],
+      "freq": 184,
+      "unit": "writing"
+    },
+    {
+      "id": "en0185",
+      "term": "spoilt for choice",
+      "trans": "having so many good options that choosing is hard",
+      "pos": "idiom",
+      "note": "British spelling spoilt; American English writes spoiled.",
+      "ex_t": "With three markets within walking distance, we're spoilt for choice.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food",
+        "uk"
+      ],
+      "freq": 185,
+      "unit": "social"
+    },
+    {
+      "id": "en0186",
+      "term": "inconclusive",
+      "trans": "not clear enough to settle the question either way",
+      "pos": "adj",
+      "note": "Says the analysis was sound but the answer isn't there. Much weaker, and safer, than claiming no effect.",
+      "ex_t": "The test is inconclusive: the effect could be anywhere between nothing and six per cent.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "uncertainty"
+      ],
+      "freq": 186,
+      "unit": "data"
+    },
+    {
+      "id": "en0187",
+      "term": "damp",
+      "trans": "unwanted moisture in the walls or structure of a building",
+      "pos": "noun",
+      "note": "Uncountable noun as well as an adjective: 'we have damp' is normal. Related: mould (US mold), condensation.",
+      "ex_t": "There's damp behind the wardrobe and the plaster has gone black.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "housing",
+        "uk"
+      ],
+      "freq": 187,
+      "unit": "life"
+    },
+    {
+      "id": "en0188",
+      "term": "mind you",
+      "trans": "used to add a qualifying afterthought to what you have just said",
+      "pos": "phrase",
+      "note": "Strongly British and conversational; starts the qualifying clause or the next sentence.",
+      "ex_t": "It's much faster now — mind you, it hasn't had any real load yet.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "contrast",
+        "british",
+        "spoken"
+      ],
+      "freq": 188,
+      "unit": "glue"
+    },
+    {
+      "id": "en0189",
+      "term": "to be on the hook for",
+      "trans": "to be the one who will be blamed if something goes wrong",
+      "pos": "idiom",
+      "note": "informal; implies responsibility you did not necessarily want",
+      "ex_t": "If the figures are wrong, I'm on the hook for it, not the tool.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "ownership"
+      ],
+      "freq": 189,
+      "unit": "work"
+    },
+    {
+      "id": "en0190",
+      "term": "overrun",
+      "trans": "continue past the time something was supposed to finish",
+      "pos": "verb",
+      "note": "Chiefly British; Americans say 'run over'. Stress the second syllable as a verb and the first as a noun ('a slight overrun').",
+      "ex_t": "The review overran by twenty minutes and I missed the start of your call.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "time",
+        "british"
+      ],
+      "freq": 190,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0191",
+      "term": "bland",
+      "trans": "lacking flavour or character",
+      "pos": "adj",
+      "note": "Also used about films, design and writing.",
+      "ex_t": "The soup was warm but pretty bland.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "food"
+      ],
+      "freq": 191,
+      "unit": "social"
+    },
+    {
+      "id": "en0192",
+      "term": "read too much into",
+      "trans": "to draw a bigger conclusion from something than it can support",
+      "pos": "phrase",
+      "note": "Nearly always negative or conditional: don't or wouldn't read too much into. A polite brake on an eager stakeholder.",
+      "ex_t": "I wouldn't read too much into a single week's dip.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "hedging"
+      ],
+      "freq": 192,
+      "unit": "data"
+    },
+    {
+      "id": "en0193",
+      "term": "terminate",
+      "trans": "to end a contract formally",
+      "pos": "verb",
+      "note": "Legal register — for contracts and services, not for a meeting or a subscription you casually drop. In speech, use cancel or end.",
+      "ex_t": "Either side can terminate the agreement with sixty days' written notice.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "admin"
+      ],
+      "freq": 193,
+      "unit": "money"
+    },
+    {
+      "id": "en0194",
+      "term": "park (a topic)",
+      "trans": "to set something aside deliberately and return to it later",
+      "pos": "verb",
+      "note": "Meeting shorthand: 'let's park that'. It sounds dismissive if the topic is never unparked.",
+      "ex_t": "Can we park the naming question and finish the schema first?",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "buying-time",
+        "work",
+        "british"
+      ],
+      "freq": 194,
+      "unit": "glue"
+    },
+    {
+      "id": "en0195",
+      "term": "handover",
+      "trans": "the passing of work and knowledge to whoever takes it on next",
+      "pos": "noun",
+      "note": "one word as a noun, two as a verb: hand over the project",
+      "ex_t": "We've got one week for a proper handover before she leaves.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "ownership"
+      ],
+      "freq": 195,
+      "unit": "work"
+    },
+    {
+      "id": "en0196",
+      "term": "talk at cross purposes",
+      "trans": "appear to be having one conversation while in fact meaning two different things",
+      "pos": "idiom",
+      "note": "Nearly always 'we're talking at cross purposes', which lets both sides retreat from a confused argument. 'Purposes' is always plural.",
+      "ex_t": "I think we're talking at cross purposes: I meant the client's deadline, not ours.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "checking-understanding"
+      ],
+      "freq": 196,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0197",
+      "term": "COB",
+      "trans": "close of business, the end of the working day used as a deadline",
+      "pos": "noun",
+      "note": "British-leaning; EOD is the American equivalent. Always add the time zone with spread-out teams.",
+      "ex_t": "Could you send the draft by COB Wednesday?",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "work",
+        "email"
+      ],
+      "freq": 197,
+      "unit": "writing"
+    },
+    {
+      "id": "en0198",
+      "term": "muggy",
+      "trans": "unpleasantly warm and humid",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "It's been muggy all week and I can't sleep.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weather"
+      ],
+      "freq": 198,
+      "unit": "social"
+    },
+    {
+      "id": "en0199",
+      "term": "sanity check",
+      "trans": "a quick rough test that a number is not obviously wrong",
+      "pos": "noun",
+      "note": "Also a verb: sanity-check the query. Informal but standard at work; some teams prefer 'quick check' in writing.",
+      "ex_t": "As a sanity check, the totals should add up to the figure on the invoice.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "method"
+      ],
+      "freq": 199,
+      "unit": "data"
+    },
+    {
+      "id": "en0200",
+      "term": "waive",
+      "trans": "to choose not to charge or enforce something you had the right to",
+      "pos": "verb",
+      "note": "Waive a fee, a charge, a requirement, your rights. Not the same word as 'wave'; the noun is waiver.",
+      "ex_t": "They waived the transfer fee because the delay was their fault.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "banking"
+      ],
+      "freq": 200,
+      "unit": "money"
+    },
+    {
+      "id": "en0201",
+      "term": "meter reading",
+      "trans": "the number shown on your gas, water or electricity meter, given to the supplier",
+      "pos": "noun",
+      "note": "Verb: read the meter. Estimated bills are why this comes up so often.",
+      "ex_t": "Send them a meter reading or they'll carry on estimating the bill.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "utilities"
+      ],
+      "freq": 201,
+      "unit": "life"
+    },
+    {
+      "id": "en0202",
+      "term": "admittedly",
+      "trans": "used to acknowledge a weakness in your own argument",
+      "pos": "adv",
+      "note": "More formal than 'granted' and comfortable in written reports.",
+      "ex_t": "The method is slow, admittedly, but it's the only one we can audit.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "concession",
+        "writing"
+      ],
+      "freq": 202,
+      "unit": "glue"
+    },
+    {
+      "id": "en0203",
+      "term": "play devil's advocate",
+      "trans": "argue the opposite case on purpose, to test how strong an idea really is",
+      "pos": "idiom",
+      "note": "Announce it before you argue, otherwise people assume the objection is genuinely yours.",
+      "ex_t": "Let me play devil's advocate for a second: what if users never find the new button?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "disagreeing"
+      ],
+      "freq": 203,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0204",
+      "term": "to action",
+      "trans": "to deal with a request",
+      "pos": "verb",
+      "note": "A noun turned into a verb. Widespread in British offices, disliked by careful writers; 'deal with' is safer.",
+      "ex_t": "The request was actioned the same afternoon.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "register",
+        "trap"
+      ],
+      "freq": 204,
+      "unit": "writing"
+    },
+    {
+      "id": "en0205",
+      "term": "drizzle",
+      "trans": "fine, light rain",
+      "pos": "noun",
+      "note": "Also a verb: it's drizzling. In cooking it means to pour a thin stream of oil.",
+      "ex_t": "It's only drizzle, we can still walk down.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weather"
+      ],
+      "freq": 205,
+      "unit": "social"
+    },
+    {
+      "id": "en0206",
+      "term": "back-of-the-envelope",
+      "trans": "worked out roughly, without precision",
+      "pos": "adj",
+      "note": "Used before a noun: a back-of-the-envelope figure. Flags honestly that the number is approximate.",
+      "ex_t": "A back-of-the-envelope estimate puts the saving at about two days a month.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "estimation"
+      ],
+      "freq": 206,
+      "unit": "data"
+    },
+    {
+      "id": "en0207",
+      "term": "binding",
+      "trans": "legally forcing both sides to do what they agreed",
+      "pos": "adj",
+      "note": "Usually 'legally binding'. 'Non-binding' marks a document as an intention only, such as a draft offer.",
+      "ex_t": "Once you tick the box and confirm, the quote becomes binding.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts"
+      ],
+      "freq": 207,
+      "unit": "money"
+    },
+    {
+      "id": "en0208",
+      "term": "in arrears",
+      "trans": "behind with payments that are already due",
+      "pos": "phrase",
+      "note": "Formal, common in letters. It also means paid at the end of a period: rent paid in arrears.",
+      "ex_t": "The account is two months in arrears, so they've frozen it.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "utilities",
+        "money"
+      ],
+      "freq": 208,
+      "unit": "life"
+    },
+    {
+      "id": "en0209",
+      "term": "come to think of it",
+      "trans": "used when something occurs to you as you are speaking",
+      "pos": "phrase",
+      "note": "Makes an idea sound spontaneous rather than prepared, which lowers the stakes of raising it.",
+      "ex_t": "Come to think of it, the same thing happened after the last release.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "spoken",
+        "afterthought"
+      ],
+      "freq": 209,
+      "unit": "glue"
+    },
+    {
+      "id": "en0210",
+      "term": "go off on a tangent",
+      "trans": "drift away from the topic into something only loosely related",
+      "pos": "idiom",
+      "note": "The older British form is 'go off at a tangent' and is still heard. Useful when steering a meeting back: 'I've gone off on a tangent, sorry.'",
+      "ex_t": "We went off on a tangent about hiring and never got back to the budget.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "steering"
+      ],
+      "freq": 210,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0211",
+      "term": "to chuck it down",
+      "trans": "to rain very heavily",
+      "pos": "idiom",
+      "note": "Informal British and always with \"it\": it's chucking it down.",
+      "ex_t": "We got to the door just as it started chucking it down.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weather",
+        "uk"
+      ],
+      "freq": 211,
+      "unit": "social"
+    },
+    {
+      "id": "en0212",
+      "term": "order of magnitude",
+      "trans": "a factor of roughly ten; the rough scale of a number rather than its exact size",
+      "pos": "phrase",
+      "note": "'An order of magnitude larger' means about ten times larger. Don't stretch it to mean 'a bit bigger'.",
+      "ex_t": "We only need the order of magnitude here: is it hundreds or thousands?",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "estimation"
+      ],
+      "freq": 212,
+      "unit": "data"
+    },
+    {
+      "id": "en0213",
+      "term": "the small print",
+      "trans": "the detailed conditions of a contract, where the awkward rules sit",
+      "pos": "idiom",
+      "note": "British; Americans say 'the fine print'. Normally with read or check, and it implies something unwelcome is buried there.",
+      "ex_t": "The offer looked great until I read the small print and found the exit fee.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "contracts",
+        "insurance"
+      ],
+      "freq": 213,
+      "unit": "money"
+    },
+    {
+      "id": "en0214",
+      "term": "top up",
+      "trans": "to add money or credit to something so it is full again",
+      "pos": "verb",
+      "note": "British; the noun is 'a top-up'. Used for phone credit, travel cards and drinks too.",
+      "ex_t": "I need to top up the electricity key before the weekend.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "utilities",
+        "phrasal-verb"
+      ],
+      "freq": 214,
+      "unit": "life"
+    },
+    {
+      "id": "en0215",
+      "term": "just to be clear",
+      "trans": "used before restating something to remove any misunderstanding",
+      "pos": "phrase",
+      "note": "Tone-sensitive: delivered flatly it reads as a correction or a warning shot.",
+      "ex_t": "Just to be clear, we're only changing the weekly view, not the daily one.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "signposting",
+        "clarifying",
+        "work"
+      ],
+      "freq": 215,
+      "unit": "glue"
+    },
+    {
+      "id": "en0216",
+      "term": "buffer",
+      "trans": "extra time built into a plan in case something goes wrong",
+      "pos": "noun",
+      "note": "the usual collocation is build in a buffer",
+      "ex_t": "There's no buffer in this plan, so one bad week sinks it.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "deadlines"
+      ],
+      "freq": 216,
+      "unit": "work"
+    },
+    {
+      "id": "en0217",
+      "term": "thrash something out",
+      "trans": "discuss a difficult issue at length until an agreement is reached",
+      "pos": "verb",
+      "note": "Chiefly British, and the tone implies real effort. Americans say 'hash out' for the same thing.",
+      "ex_t": "We spent the whole afternoon thrashing out who owns the data.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "negotiating",
+        "british"
+      ],
+      "freq": 217,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0218",
+      "term": "Please find attached",
+      "trans": "a formal way to introduce a file you are sending",
+      "pos": "phrase",
+      "note": "Old-fashioned. 'I've attached the contract' reads better in modern British email.",
+      "ex_t": "Please find attached the signed contract.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email",
+        "register"
+      ],
+      "freq": 218,
+      "unit": "writing"
+    },
+    {
+      "id": "en0219",
+      "term": "to brighten up",
+      "trans": "to become sunnier, or more cheerful",
+      "pos": "verb",
+      "note": "Used of weather, of rooms and of people.",
+      "ex_t": "They reckon it'll brighten up by lunchtime.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weather"
+      ],
+      "freq": 219,
+      "unit": "social"
+    },
+    {
+      "id": "en0220",
+      "term": "headline figure",
+      "trans": "the single number quoted publicly, before any adjustment",
+      "pos": "noun",
+      "note": "British reporting language and the natural opposite of underlying. Also headline rate, headline number.",
+      "ex_t": "The headline figure is forty per cent growth; the like-for-like number is nearer twelve.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "freq": 220,
+      "unit": "data"
+    },
+    {
+      "id": "en0221",
+      "term": "proof of address",
+      "trans": "a document showing where you live, required to open accounts",
+      "pos": "noun",
+      "note": "Usually a recent utility bill or bank statement. Goes with 'proof of identity' and 'photo ID'.",
+      "ex_t": "They wouldn't open the account without proof of address dated in the last three months.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "bureaucracy",
+        "admin"
+      ],
+      "freq": 221,
+      "unit": "life"
+    },
+    {
+      "id": "en0222",
+      "term": "namely",
+      "trans": "used to specify exactly who or what you mean",
+      "pos": "adv",
+      "note": "Introduces the complete list; 'such as' introduces examples only.",
+      "ex_t": "Two markets are dragging the average down, namely Spain and Poland.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "signposting",
+        "writing"
+      ],
+      "freq": 222,
+      "unit": "glue"
+    },
+    {
+      "id": "en0223",
+      "term": "to be snowed under",
+      "trans": "to have far more work than you can reasonably handle",
+      "pos": "idiom",
+      "note": "British and informal; snowed under WITH work, and always passive",
+      "ex_t": "I'm snowed under until Thursday, so anything new will have to wait.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities",
+        "uk"
+      ],
+      "freq": 223,
+      "unit": "work"
+    },
+    {
+      "id": "en0224",
+      "term": "have reservations (about something)",
+      "trans": "have doubts you are prepared to state, without rejecting the idea outright",
+      "pos": "phrase",
+      "note": "Formal and measured, and it survives well in written minutes. Usually 'some reservations' or 'serious reservations'.",
+      "ex_t": "I have reservations about launching in August, though I won't block it.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "disagreeing",
+        "formal"
+      ],
+      "freq": 224,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0225",
+      "term": "at your earliest convenience",
+      "trans": "as soon as you reasonably can",
+      "pos": "phrase",
+      "note": "Polite but distant and vague. If you need a date, write the date.",
+      "ex_t": "Please confirm the figures at your earliest convenience.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email",
+        "chasing"
+      ],
+      "freq": 225,
+      "unit": "writing"
+    },
+    {
+      "id": "en0226",
+      "term": "mild",
+      "trans": "pleasantly not cold for the season",
+      "pos": "adj",
+      "note": "In weather talk it is a compliment; about food the same word means not spicy.",
+      "ex_t": "It's been a very mild winter here.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weather",
+        "trap"
+      ],
+      "freq": 226,
+      "unit": "social"
+    },
+    {
+      "id": "en0227",
+      "term": "mask",
+      "trans": "to hide a real pattern behind a summary figure",
+      "pos": "verb",
+      "note": "'The average masks...' is a workhorse opening for any analyst. Near neighbours: obscure, conceal.",
+      "ex_t": "The flat average masks a sharp split between new and returning customers.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "freq": 227,
+      "unit": "data"
+    },
+    {
+      "id": "en0228",
+      "term": "sign off",
+      "trans": "to approve something officially, usually spending or a document",
+      "pos": "verb",
+      "note": "In this sense it takes 'on': sign off on the budget. Bare 'sign off' can also mean ending a message, or in Britain being declared unfit for work.",
+      "ex_t": "Finance has to sign off on any purchase over a thousand euros.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "work",
+        "admin"
+      ],
+      "freq": 228,
+      "unit": "money"
+    },
+    {
+      "id": "en0229",
+      "term": "be entitled to",
+      "trans": "to have an official right to something",
+      "pos": "phrase",
+      "note": "Officialese, everywhere in letters. But calling a person 'entitled' is an insult: they think they deserve special treatment.",
+      "ex_t": "As a resident you're entitled to the same cover as anyone else.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "bureaucracy",
+        "register"
+      ],
+      "freq": 229,
+      "unit": "life"
+    },
+    {
+      "id": "en0230",
+      "term": "to triage",
+      "trans": "to sort tasks by urgency before deciding what to do",
+      "pos": "verb",
+      "note": "borrowed from medicine; it means sorting, not solving",
+      "ex_t": "Let's triage the requests first and see what actually needs doing this week.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "priorities"
+      ],
+      "freq": 230,
+      "unit": "work"
+    },
+    {
+      "id": "en0231",
+      "term": "with all due respect",
+      "trans": "a formal opening that signals firm disagreement, usually with someone more senior",
+      "pos": "phrase",
+      "note": "A trap. It sounds courteous but almost always precedes a blunt contradiction, and British listeners often hear it as combative. 'I'd see it slightly differently' is safer.",
+      "ex_t": "With all due respect, the figures in that report are three months old.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "disagreeing",
+        "register-trap"
+      ],
+      "freq": 231,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0232",
+      "term": "in due course",
+      "trans": "at some suitable point later, with no date promised",
+      "pos": "phrase",
+      "note": "A British hedge: the reader will correctly hear 'not soon'.",
+      "ex_t": "We'll share the full results in due course.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "register"
+      ],
+      "freq": 232,
+      "unit": "writing"
+    },
+    {
+      "id": "en0233",
+      "term": "a quiet one",
+      "trans": "an evening or weekend spent doing very little",
+      "pos": "noun",
+      "note": "Usually \"we had a quiet one\" — a normal, positive answer to the weekend question.",
+      "ex_t": "We had a quiet one, just a film and an early night.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weekend",
+        "uk"
+      ],
+      "freq": 233,
+      "unit": "social"
+    },
+    {
+      "id": "en0234",
+      "term": "offset",
+      "trans": "to cancel out part or all of a movement in the opposite direction",
+      "pos": "verb",
+      "note": "Usually passive: X was offset by Y. Stress differs by word class: OFF-set the noun, off-SET the verb.",
+      "ex_t": "Losses in the north were offset by a strong quarter in Lisbon.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "trends"
+      ],
+      "freq": 234,
+      "unit": "data"
+    },
+    {
+      "id": "en0235",
+      "term": "overdrawn",
+      "trans": "having taken more money out of an account than it contained",
+      "pos": "adj",
+      "note": "Adjective for you or the account; the arrangement itself is 'an overdraft'. Informally, 'in the red'.",
+      "ex_t": "The subscription went out before payday and left me overdrawn.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "banking"
+      ],
+      "freq": 235,
+      "unit": "money"
+    },
+    {
+      "id": "en0236",
+      "term": "then again",
+      "trans": "used to introduce a thought that undercuts what you have just said",
+      "pos": "phrase",
+      "note": "Signals thinking aloud, which makes a change of position sound reasonable rather than inconsistent.",
+      "ex_t": "We could rebuild it properly — then again, nobody has opened that report in months.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "contrast",
+        "spoken"
+      ],
+      "freq": 236,
+      "unit": "glue"
+    },
+    {
+      "id": "en0237",
+      "term": "to get something over the line",
+      "trans": "to finish something that is almost complete",
+      "pos": "idiom",
+      "note": "British; suits the last push on a project, not the start of one",
+      "ex_t": "One more review and we can get this over the line.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "deadlines",
+        "uk"
+      ],
+      "freq": 237,
+      "unit": "work"
+    },
+    {
+      "id": "en0238",
+      "term": "table (something)",
+      "trans": "in British usage, to put a proposal forward formally for discussion",
+      "pos": "verb",
+      "note": "A genuine transatlantic trap: in American English, tabling something means postponing it indefinitely, the opposite meaning. On mixed calls, say 'put forward' or 'postpone' and avoid the word.",
+      "ex_t": "The finance team tabled a revised budget at yesterday's board meeting.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "register-trap",
+        "british"
+      ],
+      "freq": 238,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0239",
+      "term": "I hope this finds you well",
+      "trans": "a neutral opening pleasantry in an email",
+      "pos": "phrase",
+      "note": "Harmless but empty; British colleagues will not miss it if you go straight to the point.",
+      "ex_t": "I hope this finds you well. I'm writing about next month's workshop.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "email",
+        "register"
+      ],
+      "freq": 239,
+      "unit": "writing"
+    },
+    {
+      "id": "en0240",
+      "term": "to potter about",
+      "trans": "to spend time on small, unhurried tasks",
+      "pos": "verb",
+      "note": "British; potter around is equally correct. Americans say putter.",
+      "ex_t": "I spent Sunday pottering about in the garden.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "weekend",
+        "uk"
+      ],
+      "freq": 240,
+      "unit": "social"
+    },
+    {
+      "id": "en0241",
+      "term": "knock-on effect",
+      "trans": "a consequence that follows indirectly from an earlier change",
+      "pos": "noun",
+      "note": "British; Americans say ripple effect. Knock-on also works as an adjective: knock-on costs, knock-on delays.",
+      "ex_t": "The pricing change had a knock-on effect on support volumes.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "causation"
+      ],
+      "freq": 241,
+      "unit": "data"
+    },
+    {
+      "id": "en0242",
+      "term": "shop around",
+      "trans": "to compare prices from several providers before buying",
+      "pos": "verb",
+      "note": "Phrasal verb with no object: shop around for car insurance. Standard advice about insurance, energy and mobile plans.",
+      "ex_t": "Shop around before the policy renews instead of accepting whatever price they send you.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "insurance",
+        "subscriptions"
+      ],
+      "freq": 242,
+      "unit": "money"
+    },
+    {
+      "id": "en0243",
+      "term": "ombudsman",
+      "trans": "an independent official who investigates complaints against companies or public bodies",
+      "pos": "noun",
+      "note": "Usually free, and only available once the company's own complaints process is exhausted.",
+      "ex_t": "If they reject the claim, take it to the ombudsman.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "complaints",
+        "bureaucracy"
+      ],
+      "freq": 243,
+      "unit": "life"
+    },
+    {
+      "id": "en0244",
+      "term": "at a push",
+      "trans": "if it is really necessary, though it would be a stretch",
+      "pos": "phrase",
+      "note": "British; it warns that you are agreeing at the very limit of what's possible.",
+      "ex_t": "I could have a draft ready by Thursday at a push.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "hedging",
+        "british",
+        "spoken"
+      ],
+      "freq": 244,
+      "unit": "glue"
+    },
+    {
+      "id": "en0245",
+      "term": "nice-to-have",
+      "trans": "a feature that would be welcome but is not required",
+      "pos": "noun",
+      "note": "hyphenated as a noun and usually set against a must-have",
+      "ex_t": "Real-time refresh is a nice-to-have, not a requirement.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "scope"
+      ],
+      "freq": 245,
+      "unit": "work"
+    },
+    {
+      "id": "en0246",
+      "term": "AOB",
+      "trans": "any other business: the slot near the end of an agenda for items nobody listed in advance",
+      "pos": "noun",
+      "note": "Standard on British agendas and minutes, said as three separate letters. With an international group, say the full 'any other business' at least once.",
+      "ex_t": "We've got five minutes for AOB if anyone has something short.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "agenda",
+        "british"
+      ],
+      "freq": 246,
+      "unit": "meetings"
+    },
+    {
+      "id": "en0247",
+      "term": "to word",
+      "trans": "to choose the exact way something is expressed",
+      "pos": "verb",
+      "note": "Use this, not 'formulate', which sounds academic. The noun is the wording.",
+      "ex_t": "I'd word that last paragraph more carefully.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "register",
+        "trap"
+      ],
+      "freq": 247,
+      "unit": "writing"
+    },
+    {
+      "id": "en0248",
+      "term": "to hit it off",
+      "trans": "to like each other immediately",
+      "pos": "idiom",
+      "note": "Add with for the other person: they hit it off with the new team.",
+      "ex_t": "We hit it off straight away and talked for an hour.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "smalltalk"
+      ],
+      "freq": 248,
+      "unit": "social"
+    },
+    {
+      "id": "en0249",
+      "term": "take with a pinch of salt",
+      "trans": "to treat something as unreliable and not act on it fully",
+      "pos": "idiom",
+      "note": "British form; Americans say a grain of salt. Fine spoken in a meeting, too casual for a written report.",
+      "ex_t": "Take the first day of data with a pinch of salt, as the tagging was still settling.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "hedging"
+      ],
+      "freq": 249,
+      "unit": "data"
+    },
+    {
+      "id": "en0250",
+      "term": "out of pocket",
+      "trans": "personally worse off in money terms after paying for something",
+      "pos": "idiom",
+      "note": "British usage is strictly about losing your own money. In American English it can also mean unreachable, which causes real confusion by email.",
+      "ex_t": "If the refund never arrives, I'm forty euros out of pocket.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "work",
+        "admin"
+      ],
+      "freq": 250,
+      "unit": "money"
+    },
+    {
+      "id": "en0251",
+      "term": "flag up",
+      "trans": "to draw attention to a problem early so that it is not missed",
+      "pos": "verb",
+      "note": "British; Americans say 'flag' or 'raise'. Useful when you want proof that you warned someone.",
+      "ex_t": "I flagged up the damp when I moved in, and it's all in the email.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "complaints",
+        "phrasal-verb"
+      ],
+      "freq": 251,
+      "unit": "life"
+    }
+  ]
+}

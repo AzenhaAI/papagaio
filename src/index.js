@@ -28,8 +28,14 @@ const UNIT_ORDER = {
     { key: 'madeira',    label: '🌴 Madeira' },
   ],
   en: [
-    { key: 'glue', label: '🧩 Conversational glue' },
-    { key: 'work', label: '💼 Work' },
+    { key: 'glue',     label: '🧩 Conversational glue' },
+    { key: 'work',     label: '💼 Work' },
+    { key: 'meetings', label: '🗓 Meetings & calls' },
+    { key: 'writing',  label: '✍️ Written English' },
+    { key: 'social',   label: '🗣 Small talk' },
+    { key: 'data',     label: '📊 Data & analysis' },
+    { key: 'money',    label: '💷 Money & admin' },
+    { key: 'life',     label: '🏠 Living abroad' },
   ],
 };
 

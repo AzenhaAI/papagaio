@@ -5,10 +5,12 @@
 // the first time somebody opens it and keep it in D1 forever — so a word costs
 // one model call in its whole life, and the app can read it offline after.
 //
-// Quotes are the risky part: a model asked for literature will happily invent a
-// line and attribute it to Pessoa. The prompt therefore prefers proverbs, which
-// are anonymous and traditional, and demands the model drop the field entirely
-// rather than guess. Anything it does return is flagged unverified in the UI.
+// What this deliberately does NOT do is quote literature. A model asked for a
+// line of Pessoa will produce one, correctly formatted, correctly attributed,
+// and invented. Flagging it "unverified" does not help: a learner reads the
+// quote, not the badge. So generated articles carry no `lit` at all — the
+// quotes in the app are the handwritten ones in data/entries, checked by a
+// human against a real edition.
 
 import { chat } from './groq.js';
 
@@ -19,8 +21,8 @@ Hard rules:
 - Conjugation arrays are exactly five persons in this order: eu, tu, ele/ela, nós, eles/elas. European Portuguese drops vós in speech — never include it.
 - Only give "conj" for verbs. For anything else omit the field.
 - Explanations and glosses are in English. The learner is an English speaker learning Portuguese.
-- "lit" is for PUBLIC DOMAIN material only: traditional proverbs (ditados populares), or literature published before 1936 (Camões, Pessoa's early work, Florbel Espanca, Eça de Queirós). Never song lyrics, never anything modern.
-- If you are not certain a quote is real and public domain, return "lit": []. An empty list is correct; an invented attribution is not.
+- NEVER quote literature, songs, proverbs, or any named source. You cannot verify a quotation and an invented one is worse than none. Nothing in your answer may be presented as somebody's words.
+- Examples you write yourself are fine and expected — they are plainly yours, not a quotation.
 - Be concise. Two to four meanings, a handful of collocations.
 
 Answer strictly as JSON:
@@ -29,8 +31,7 @@ Answer strictly as JSON:
   "synonyms": ["pt-PT synonyms, may be empty"],
   "collocations": [{"t": "the Portuguese phrase", "trans": "what it means in English"}],
   "grammar": "one or two sentences on how the word behaves, or empty string",
-  "conj": {"presente": ["...","...","...","...","..."], "pps": [...], "imperfeito": [...]},
-  "lit": [{"text": "the quote in Portuguese", "src": "Author, Work (year)"}]
+  "conj": {"presente": ["...","...","...","...","..."], "pps": [...], "imperfeito": [...]}
 }`;
 
 /** Five slots, strings only — anything else is a model slip, not a form. */
@@ -62,10 +63,8 @@ function clean(out, isVerb) {
       .map((c) => ({ t: String(c.t), trans: String(c.trans) })),
     grammar: String(out.grammar ?? ''),
     conj,
-    lit: list(out.lit)
-      .filter((q) => q?.text && q?.src)
-      .slice(0, 3)
-      .map((q) => ({ text: String(q.text), src: String(q.src), unverified: true })),
+    // No `lit`: see the note at the top. A model's quotation is a fabrication
+    // with a citation attached, so it is dropped rather than shown.
   };
 }
 
@@ -74,8 +73,7 @@ const isEmpty = (e) =>
   !e.synonyms.length &&
   !e.collocations.length &&
   !e.grammar &&
-  !Object.keys(e.conj).length &&
-  !e.lit.length;
+  !Object.keys(e.conj).length;
 
 /**
  * Returns the card's article, writing one first if it doesn't have one.
