@@ -26,6 +26,7 @@ const UNIT_ORDER = {
     { key: 'cidade',     label: '🏙 City' },
     { key: 'burocracia', label: '📋 Paperwork' },
     { key: 'madeira',    label: '🌴 Madeira' },
+    { key: 'gramatica',  label: '📐 Grammar' },
   ],
   en: [
     { key: 'glue',     label: '🧩 Conversational glue' },
@@ -331,7 +332,7 @@ async function handleUpdate(update, env) {
 
   // A card waiting for a typed answer claims the message before the translator does.
   const typing = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
-  if (['type', 'dictation', 'cloze'].includes(typing?.exercise)) {
+  if (['type', 'dictation', 'cloze', 'drill'].includes(typing?.exercise)) {
     return checkTyped(env, msg, typing);
   }
 
@@ -752,7 +753,11 @@ async function sendExercise(env, user) {
   // recognition first, production only once the word has stuck a couple of times.
   let exercise;
   const cloze = clozeFrom(card);
-  if (isNew) {
+  if (card.pos === 'drill') {
+    // A grammar drill is a production exercise by definition — picking the right
+    // contraction out of four teaches nothing about producing it.
+    exercise = 'drill';
+  } else if (isNew) {
     exercise = 't_ru';
   } else {
     const reps = card.learner_reps ?? 0;
@@ -795,9 +800,18 @@ async function sendExercise(env, user) {
 
   // Typed production: no options, we wait for text. Dictation hears a whole
   // sentence — connected speech is the thing single words never teach.
-  if (exercise === 'type' || exercise === 'dictation' || exercise === 'cloze') {
+  if (exercise === 'type' || exercise === 'dictation' || exercise === 'cloze' || exercise === 'drill') {
     let sent;
-    if (exercise === 'cloze') {
+    if (exercise === 'drill') {
+      const hint = card.trans === 'ser or estar?'
+        ? '_ser or estar?_'
+        : `_${card.trans}_`;
+      sent = await tg(env, 'sendMessage', {
+        chat_id: user.chat_id,
+        text: `📐 *Grammar*\n\n🇵🇹 ${card.ex_t}\n\n${hint}\n\n_Type the missing form._`,
+        parse_mode: 'Markdown',
+      });
+    } else if (exercise === 'cloze') {
       sent = await tg(env, 'sendMessage', {
         chat_id: user.chat_id,
         text: `🧩 *Fill the gap*\n\n${COURSES[card.course].flag} ${cloze.sentence}\n\n` +
@@ -841,7 +855,8 @@ async function sendExercise(env, user) {
   const askTrans = exercise === 't_ru' || exercise === 'audio';
   const { results: distractors } = await env.DB.prepare(
     `SELECT ${askTrans ? 'trans' : 'term'} AS v FROM cards
-     WHERE course = ? AND id != ? AND owner IS NULL ORDER BY RANDOM() LIMIT 3`
+     WHERE course = ? AND id != ? AND owner IS NULL AND pos IS NOT 'drill'
+     ORDER BY RANDOM() LIMIT 3`
   ).bind(course, card.id).all();
 
   const options = distractors.map((d) => d.v);
@@ -960,7 +975,7 @@ async function checkTyped(env, msg, pending) {
   const expected =
     pending.exercise === 'dictation' ? card.ex_t
     : pending.exercise === 'cloze' ? (clozeFrom(card)?.answer ?? card.term)
-    : card.term;
+    : card.term; // 'type' and 'drill' both want the term itself
   const given = msg.text.trim();
 
   const exact = norm(given) === norm(expected);
@@ -1005,6 +1020,12 @@ async function checkTyped(env, msg, pending) {
     if (pending.exercise === 'dictation') text += `\n_${card.ex_trans || card.trans}_`;
     text += `\n\n_You'll see this one again soon._`;
   }
+  // A drill without the rule behind it is just a fact to memorise.
+  if (pending.exercise === 'drill') {
+    if (card.ex_t) text += `\n\n🇵🇹 ${card.ex_t.replace('___', `*${expected}*`)}`;
+    if (card.ex_trans) text += `\n_${card.ex_trans}_`;
+    if (card.note) text += `\n\nℹ️ ${card.note}`;
+  }
   await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown' });
 }
 
@@ -1037,20 +1058,39 @@ async function unitStats(env, userId, course) {
   return (UNIT_ORDER[course] ?? []).filter((u) => map[u.key]).map((u) => ({ ...u, ...map[u.key] }));
 }
 
-/** Next new card: first incomplete unit whose predecessor is ≥70% started. */
+/**
+ * Next new card. Vocabulary units unlock in sequence, but grammar is a parallel
+ * track: constructions are needed alongside words, not after all of them, so
+ * drills open once the core verbs are underway and then take a quarter of the
+ * new-card budget.
+ */
 async function pickNewCard(env, user, course) {
   const units = await unitStats(env, user.id, course);
-  let target = null;
-  for (let i = 0; i < units.length; i++) {
-    if (i > 0 && units[i - 1].started / units[i - 1].total < 0.7) break;
-    if (units[i].started < units[i].total) { target = units[i].key; break; }
+  const byKey = Object.fromEntries(units.map((u) => [u.key, u]));
+
+  const verbs = byKey.verbos;
+  const gram = byKey.gramatica;
+  const grammarOpen = course === 'pt' && verbs && verbs.started / verbs.total >= 0.5;
+  if (grammarOpen && gram && gram.started < gram.total && Math.random() < 0.25) {
+    const drill = await nextInUnit(env, user, course, 'gramatica');
+    if (drill) return drill;
   }
-  if (!target) return null;
+
+  let target = null;
+  for (const u of units) {
+    if (u.key === 'gramatica') continue; // not part of the sequential chain
+    if (target === null && u.started < u.total) { target = u.key; break; }
+    if (u.started / u.total < 0.7) break; // gate the rest behind this one
+  }
+  return target ? nextInUnit(env, user, course, target) : null;
+}
+
+function nextInUnit(env, user, course, unit) {
   return env.DB.prepare(
     `SELECT * FROM cards WHERE course = ?1 AND unit = ?2 AND owner IS NULL
      AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?3)
      ORDER BY freq LIMIT 1`
-  ).bind(course, target, user.id).first();
+  ).bind(course, unit, user.id).first();
 }
 
 // ---------- Helpers ----------

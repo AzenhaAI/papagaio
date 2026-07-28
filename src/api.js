@@ -106,7 +106,8 @@ export async function handleApi(request, env, path) {
     const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 500);
     const { results } = await env.DB.prepare(
       `SELECT id, course, term, trans, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
-       FROM cards WHERE course = ? AND owner IS NULL ORDER BY freq LIMIT ?`
+       FROM cards WHERE course = ? AND owner IS NULL AND pos IS NOT 'drill'
+       ORDER BY freq LIMIT ?`
     ).bind(course, limit).all();
     return json({ course, count: results.length, cards: results });
   }
