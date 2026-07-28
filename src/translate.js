@@ -15,10 +15,14 @@ Hard rules:
 - In br_diff list every word in YOUR Portuguese output that a Brazilian would say differently. This is the learner's main value — be thorough but only include real divergences.
 - Keep register natural for the situation: a café order is not a formal letter.
 
+- If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
+
 Answer strictly as JSON:
 {
   "direction": "en->pt" or "pt->en",
   "translation": "the translation",
+  "corrected_source": "the input with mistakes fixed, or empty string if the input was already correct",
+  "corrections": [{"wrong": "cista", "right": "custa", "why": "verb custar — to cost"}],
   "literal": "a more word-for-word rendering, or empty string if it matches the translation",
   "register": "neutral" or "formal" or "informal",
   "br_diff": [{"pt": "autocarro", "br": "ônibus", "gloss": "bus"}],
@@ -58,6 +62,8 @@ export async function translate(env, text, direction) {
     source: input,
     direction: out.direction ?? 'en->pt',
     translation: out.translation ?? '',
+    corrected_source: out.corrected_source || '',
+    corrections: Array.isArray(out.corrections) ? out.corrections.filter((c) => c?.wrong && c?.right) : [],
     literal: out.literal || '',
     register: out.register || 'neutral',
     br_diff: Array.isArray(out.br_diff) ? out.br_diff.filter((d) => d?.pt && d?.br) : [],
@@ -65,18 +71,27 @@ export async function translate(env, text, direction) {
   };
 }
 
-/** Renders a translation for Telegram (Markdown). */
+/** Renders a translation for Telegram (Markdown), self-explanatory card. */
 export function formatTranslation(t) {
   const targetIsPt = t.direction === 'en->pt';
-  let s = `${targetIsPt ? '🇵🇹' : '🇬🇧'} *${t.translation}*`;
+  // Direction header makes the scenario obvious at a glance.
+  let s = `${targetIsPt ? '🇬🇧 → 🇵🇹' : '🇵🇹 → 🇬🇧'}\n*${t.translation}*`;
 
-  if (t.literal && t.literal !== t.translation) s += `\n📐 _${t.literal}_`;
-  if (t.register !== 'neutral') s += `\n🎩 ${t.register}`;
+  if (t.corrections.length) {
+    s += `\n\n✏️ *Your text had a slip:*`;
+    for (const c of t.corrections) {
+      s += `\n• \`${c.wrong}\` → \`${c.right}\`${c.why ? ` — ${c.why}` : ''}`;
+    }
+    if (t.corrected_source) s += `\nCorrect version: _${t.corrected_source}_`;
+  }
+
+  if (t.literal && t.literal !== t.translation) s += `\n📐 literally: _${t.literal}_`;
+  if (t.register !== 'neutral') s += `\n🗣 register: ${t.register}`;
 
   if (t.br_diff.length) {
-    s += '\n\n⚠️ *Not Brazilian:*';
+    s += `\n\n⚠️ *pt-PT, not Brazilian:*`;
     for (const d of t.br_diff) {
-      s += `\n• \`${d.pt}\` — in Brazil \`${d.br}\`${d.gloss ? ` (${d.gloss})` : ''}`;
+      s += `\n• \`${d.pt}\` — in Brazil they say \`${d.br}\`${d.gloss ? ` (${d.gloss})` : ''}`;
     }
   }
   if (t.note) s += `\n\nℹ️ ${t.note}`;

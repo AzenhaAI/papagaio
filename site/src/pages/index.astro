@@ -53,6 +53,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <button class="iconbtn" id="speak" title="Listen">🔊</button>
         <button class="iconbtn" id="copy" title="Copy">📋</button>
       </div>
+      <div id="fix" style="margin-top:8px;"></div>
       <div id="lit" class="muted" style="font-style:italic;"></div>
       <div id="diff" style="margin-top:12px;"></div>
       <div id="note" class="muted" style="margin-top:10px;"></div>
@@ -144,7 +145,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         last = t;
         $('out').style.display = 'block';
         $('tr').textContent = (t.direction === 'en->pt' ? '🇵🇹 ' : '🇬🇧 ') + t.translation;
-        $('lit').textContent = t.literal && t.literal !== t.translation ? t.literal : '';
+        $('fix').innerHTML = (t.corrections ?? []).length
+          ? '<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ Your text had a slip</div>' +
+            t.corrections.map((c) =>
+              `<div><code>${c.wrong}</code> → <code style="color:var(--accent)">${c.right}</code>` +
+              (c.why ? ` <span class="muted">— ${c.why}</span>` : '') + '</div>').join('') +
+            (t.corrected_source ? `<div class="muted" style="font-size:14px;">Correct version: <em>${t.corrected_source}</em></div>` : '')
+          : '';
+        $('lit').textContent = t.literal && t.literal !== t.translation ? 'literally: ' + t.literal : '';
         $('diff').innerHTML = (t.br_diff ?? []).length
           ? '<div style="color:var(--warn); font-weight:600; margin-bottom:6px;">⚠️ Not Brazilian</div>' +
             t.br_diff.map((d) =>
