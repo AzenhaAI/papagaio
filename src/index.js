@@ -40,6 +40,22 @@ const SCENARIOS = {
   },
 };
 
+// Units unlock in order: the next opens once the previous is ≥70% started.
+const UNIT_ORDER = {
+  pt: [
+    { key: 'basics',  label: '👋 Basics' },
+    { key: 'verbos',  label: '⚙️ Core verbs' },
+    { key: 'tempo',   label: '🕐 Time' },
+    { key: 'comida',  label: '🍽 Food & café' },
+    { key: 'cidade',  label: '🏙 City' },
+    { key: 'madeira', label: '🌴 Madeira' },
+  ],
+  en: [
+    { key: 'glue', label: '🧩 Conversational glue' },
+    { key: 'work', label: '💼 Work' },
+  ],
+};
+
 const LEVELS = {
   slow:   { label: '🐢 Slow & simple', prompt: 'Speak very simply, short sentences, common words only. Be patient like with a beginner.' },
   normal: { label: '🚶 Normal',        prompt: 'Speak naturally but clearly, at a measured pace.' },
@@ -221,9 +237,23 @@ async function handleUpdate(update, env) {
          (SELECT COUNT(*) FROM events WHERE user_id = ?1 AND kind = 'answer' AND correct = 1 AND date(created_at) = date('now')) AS today_ok`
     ).bind(uid, now()).first();
     const acc = s.today ? Math.round((100 * s.today_ok) / s.today) : 0;
+    // Unit progress bars per active course.
+    const user = await getUser(env, uid);
+    let units = '';
+    for (const c of (user?.courses ?? 'pt').split(',').filter((c) => COURSES[c])) {
+      const stats = await unitStats(env, uid, c);
+      if (!stats.length) continue;
+      units += `\n\n${COURSES[c].flag}`;
+      let locked = false;
+      for (let i = 0; i < stats.length; i++) {
+        if (i > 0 && stats[i - 1].started / stats[i - 1].total < 0.7) locked = true;
+        const filled = Math.round((8 * stats[i].started) / stats[i].total);
+        units += `\n${locked ? '🔒' : ''}${stats[i].label} ${'▰'.repeat(filled)}${'▱'.repeat(8 - filled)} ${stats[i].started}/${stats[i].total}`;
+      }
+    }
     await tg(env, 'sendMessage', {
       chat_id: chat,
-      text: `📊 In progress: ${s.learned}\nDue now: ${s.due_now}\nAnswered today: ${s.today} (${acc}% correct)`,
+      text: `📊 In progress: ${s.learned}\nDue now: ${s.due_now}\nAnswered today: ${s.today} (${acc}% correct)${units}`,
     });
     return;
   }
@@ -652,11 +682,7 @@ async function sendExercise(env, user) {
     ).bind(user.id, course).first();
     if (intro.n >= user.new_per_day) return false;
 
-    card = await env.DB.prepare(
-      `SELECT * FROM cards WHERE course = ?1 AND (owner IS NULL OR owner = ?2)
-       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?2)
-       ORDER BY freq LIMIT 1`
-    ).bind(course, user.id).first();
+    card = await pickNewCard(env, user, course);
     isNew = true;
   }
   if (!card) return false;
@@ -750,6 +776,34 @@ async function sendExercise(env, user) {
   }
   await env.DB.batch(batch);
   return true;
+}
+
+/** Per-unit progress for a user: [{unit, total, started}] in course order. */
+async function unitStats(env, userId, course) {
+  const { results } = await env.DB.prepare(
+    `SELECT c.unit AS unit, COUNT(*) AS total,
+       SUM(CASE WHEN uc.card_id IS NOT NULL THEN 1 ELSE 0 END) AS started
+     FROM cards c LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
+     WHERE c.course = ?2 AND c.owner IS NULL GROUP BY c.unit`
+  ).bind(userId, course).all();
+  const map = Object.fromEntries(results.map((s) => [s.unit, s]));
+  return (UNIT_ORDER[course] ?? []).filter((u) => map[u.key]).map((u) => ({ ...u, ...map[u.key] }));
+}
+
+/** Next new card: first incomplete unit whose predecessor is ≥70% started. */
+async function pickNewCard(env, user, course) {
+  const units = await unitStats(env, user.id, course);
+  let target = null;
+  for (let i = 0; i < units.length; i++) {
+    if (i > 0 && units[i - 1].started / units[i - 1].total < 0.7) break;
+    if (units[i].started < units[i].total) { target = units[i].key; break; }
+  }
+  if (!target) return null;
+  return env.DB.prepare(
+    `SELECT * FROM cards WHERE course = ?1 AND unit = ?2 AND owner IS NULL
+     AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?3)
+     ORDER BY freq LIMIT 1`
+  ).bind(course, target, user.id).first();
 }
 
 // ---------- Helpers ----------

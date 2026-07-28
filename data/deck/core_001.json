@@ -7,88 +7,1358 @@
     "note": "First batch. Order by freq = order of introduction."
   },
   "cards": [
-    { "id": "pt0001", "pt": "olá", "trans": "hello", "pos": "interj", "gender": null, "note": "", "ex_t": "Olá, tudo bem?", "ex_trans": "Hello, how are you?", "tags": ["core", "saudacao"], "freq": 1 },
-    { "id": "pt0002", "pt": "bom dia", "trans": "good morning", "pos": "phrase", "gender": null, "note": "until noon; after that — boa tarde", "ex_t": "Bom dia! Um café, se faz favor.", "ex_trans": "Good morning! A coffee, please.", "tags": ["core", "saudacao"], "freq": 2 },
-    { "id": "pt0003", "pt": "boa tarde", "trans": "good afternoon", "pos": "phrase", "gender": null, "note": "from noon until dark", "ex_t": "Boa tarde, faz favor.", "ex_trans": "Good afternoon, please.", "tags": ["core", "saudacao"], "freq": 3 },
-    { "id": "pt0004", "pt": "boa noite", "trans": "good evening / good night", "pos": "phrase", "gender": null, "note": "both a greeting and a farewell", "ex_t": "Boa noite, até amanhã.", "ex_trans": "Good night, see you tomorrow.", "tags": ["core", "saudacao"], "freq": 4 },
-    { "id": "pt0005", "pt": "obrigado", "trans": "thank you", "pos": "interj", "gender": null, "note": "agrees with the SPEAKER's gender: men say obrigado, women — obrigada", "ex_t": "Muito obrigado pela ajuda.", "ex_trans": "Thank you very much for the help.", "tags": ["core", "cortesia"], "freq": 5 },
-    { "id": "pt0006", "pt": "de nada", "trans": "you're welcome", "pos": "phrase", "gender": null, "note": "", "ex_t": "— Obrigado! — De nada.", "ex_trans": "— Thanks! — You're welcome.", "tags": ["core", "cortesia"], "freq": 6 },
-    { "id": "pt0007", "pt": "se faz favor", "trans": "please (request)", "pos": "phrase", "gender": null, "note": "distinctly European Portuguese; Brazilians say por favor", "ex_t": "A conta, se faz favor.", "ex_trans": "The bill, please.", "tags": ["core", "cortesia", "pt-pt"], "freq": 7 },
-    { "id": "pt0008", "pt": "desculpe", "trans": "excuse me / sorry", "pos": "interj", "gender": null, "note": "formal; informal — desculpa", "ex_t": "Desculpe, pode ajudar-me?", "ex_trans": "Excuse me, can you help me?", "tags": ["core", "cortesia"], "freq": 8 },
-    { "id": "pt0009", "pt": "com licença", "trans": "excuse me (passing by)", "pos": "phrase", "gender": null, "note": "when squeezing past someone, not when apologising", "ex_t": "Com licença, posso passar?", "ex_trans": "Excuse me, may I pass?", "tags": ["core", "cortesia"], "freq": 9 },
-    { "id": "pt0010", "pt": "adeus", "trans": "goodbye", "pos": "interj", "gender": null, "note": "", "ex_t": "Adeus, boa viagem!", "ex_trans": "Goodbye, have a good trip!", "tags": ["core", "saudacao"], "freq": 10 },
-    { "id": "pt0011", "pt": "até logo", "trans": "see you later", "pos": "phrase", "gender": null, "note": "", "ex_t": "Até logo, vemo-nos amanhã.", "ex_trans": "See you later, we'll meet tomorrow.", "tags": ["core", "saudacao"], "freq": 11 },
-    { "id": "pt0012", "pt": "sim", "trans": "yes", "pos": "adv", "gender": null, "note": "in speech people often repeat the verb instead: «Tens?» — «Tenho»", "ex_t": "Sim, claro.", "ex_trans": "Yes, of course.", "tags": ["core"], "freq": 12 },
-    { "id": "pt0013", "pt": "não", "trans": "no; not", "pos": "adv", "gender": null, "note": "", "ex_t": "Não, obrigado.", "ex_trans": "No, thank you.", "tags": ["core"], "freq": 13 },
-    { "id": "pt0014", "pt": "não percebo", "trans": "I don't understand", "pos": "phrase", "gender": null, "note": "key pt-PT marker: perceber = to understand; Brazilian entender sounds foreign here", "ex_t": "Desculpe, não percebo.", "ex_trans": "Sorry, I don't understand.", "tags": ["core", "sobrevivencia", "pt-pt"], "freq": 14 },
-    { "id": "pt0015", "pt": "não falo bem português", "trans": "I don't speak Portuguese well", "pos": "phrase", "gender": null, "note": "the phrase that makes people slow down for you", "ex_t": "Desculpe, não falo bem português.", "ex_trans": "Sorry, I don't speak Portuguese well.", "tags": ["core", "sobrevivencia"], "freq": 15 },
-    { "id": "pt0016", "pt": "pode repetir, se faz favor?", "trans": "can you repeat, please?", "pos": "phrase", "gender": null, "note": "", "ex_t": "Pode repetir, se faz favor? Não percebi.", "ex_trans": "Can you repeat, please? I didn't understand.", "tags": ["core", "sobrevivencia"], "freq": 16 },
-    { "id": "pt0017", "pt": "mais devagar", "trans": "slower", "pos": "phrase", "gender": null, "note": "", "ex_t": "Pode falar mais devagar?", "ex_trans": "Can you speak slower?", "tags": ["core", "sobrevivencia"], "freq": 17 },
-    { "id": "pt0018", "pt": "quanto custa?", "trans": "how much is it?", "pos": "phrase", "gender": null, "note": "", "ex_t": "Quanto custa isto?", "ex_trans": "How much is this?", "tags": ["core", "compras"], "freq": 18 },
-    { "id": "pt0019", "pt": "a conta", "trans": "the bill", "pos": "noun", "gender": "f", "note": "in a café you ask: «A conta, se faz favor»", "ex_t": "A conta, se faz favor.", "ex_trans": "The bill, please.", "tags": ["core", "cafe"], "freq": 19 },
-    { "id": "pt0020", "pt": "onde fica...?", "trans": "where is...?", "pos": "phrase", "gender": null, "note": "ficar for places = to be located", "ex_t": "Onde fica a farmácia?", "ex_trans": "Where is the pharmacy?", "tags": ["core", "direcoes"], "freq": 20 },
-    { "id": "pt0021", "pt": "quem", "trans": "who", "pos": "pron", "gender": null, "note": "", "ex_t": "Quem é aquele senhor?", "ex_trans": "Who is that gentleman?", "tags": ["core", "interrogativo"], "freq": 21 },
-    { "id": "pt0022", "pt": "o que", "trans": "what", "pos": "pron", "gender": null, "note": "in live speech almost always «o que é que»: O que é que fazes?", "ex_t": "O que é que isto significa?", "ex_trans": "What does this mean?", "tags": ["core", "interrogativo", "pt-pt"], "freq": 22 },
-    { "id": "pt0023", "pt": "quando", "trans": "when", "pos": "adv", "gender": null, "note": "", "ex_t": "Quando é que abre?", "ex_trans": "When does it open?", "tags": ["core", "interrogativo"], "freq": 23 },
-    { "id": "pt0024", "pt": "onde", "trans": "where", "pos": "adv", "gender": null, "note": "where to — para onde; where from — de onde", "ex_t": "Onde estás?", "ex_trans": "Where are you?", "tags": ["core", "interrogativo"], "freq": 24 },
-    { "id": "pt0025", "pt": "porquê", "trans": "why", "pos": "adv", "gender": null, "note": "the question is porquê (standalone) or «Porque é que...?»; the answer is porque (because)", "ex_t": "Porque é que fechou?", "ex_trans": "Why did it close?", "tags": ["core", "interrogativo"], "freq": 25 },
-    { "id": "pt0026", "pt": "como", "trans": "how", "pos": "adv", "gender": null, "note": "", "ex_t": "Como se diz isto em português?", "ex_trans": "How do you say this in Portuguese?", "tags": ["core", "interrogativo"], "freq": 26 },
-    { "id": "pt0027", "pt": "qual", "trans": "which", "pos": "pron", "gender": null, "note": "plural — quais", "ex_t": "Qual é o teu?", "ex_trans": "Which one is yours?", "tags": ["core", "interrogativo"], "freq": 27 },
-    { "id": "pt0028", "pt": "ser", "trans": "to be (permanent)", "pos": "verb", "gender": null, "note": "permanent traits: sou russo. Temporary states — estar", "ex_t": "Eu sou russo, moro na Madeira.", "ex_trans": "I'm Russian, I live in Madeira.", "tags": ["core", "verbo", "irregular"], "freq": 28 },
-    { "id": "pt0029", "pt": "estar", "trans": "to be (temporary), to be located", "pos": "verb", "gender": null, "note": "states and location: estou cansado, está na mesa", "ex_t": "Estou cansado hoje.", "ex_trans": "I'm tired today.", "tags": ["core", "verbo", "irregular"], "freq": 29 },
-    { "id": "pt0030", "pt": "ter", "trans": "to have", "pos": "verb", "gender": null, "note": "age uses ter: tenho 40 anos, never ser", "ex_t": "Tenho duas filhas.", "ex_trans": "I have two daughters.", "tags": ["core", "verbo", "irregular"], "freq": 30 },
-    { "id": "pt0031", "pt": "ir", "trans": "to go", "pos": "verb", "gender": null, "note": "spoken future: vou fazer = I'll do", "ex_t": "Vou ao supermercado.", "ex_trans": "I'm going to the supermarket.", "tags": ["core", "verbo", "irregular"], "freq": 31 },
-    { "id": "pt0032", "pt": "fazer", "trans": "to do, to make", "pos": "verb", "gender": null, "note": "", "ex_t": "O que é que estás a fazer?", "ex_trans": "What are you doing?", "tags": ["core", "verbo", "irregular"], "freq": 32 },
-    { "id": "pt0033", "pt": "poder", "trans": "can, to be able", "pos": "verb", "gender": null, "note": "", "ex_t": "Posso pagar com cartão?", "ex_trans": "Can I pay by card?", "tags": ["core", "verbo", "irregular"], "freq": 33 },
-    { "id": "pt0034", "pt": "querer", "trans": "to want", "pos": "verb", "gender": null, "note": "in a café queria (I'd like) is politer than quero", "ex_t": "Queria um café, se faz favor.", "ex_trans": "I'd like a coffee, please.", "tags": ["core", "verbo", "irregular"], "freq": 34 },
-    { "id": "pt0035", "pt": "saber", "trans": "to know (facts), to know how", "pos": "verb", "gender": null, "note": "knowing a person — conhecer", "ex_t": "Não sei onde fica.", "ex_trans": "I don't know where it is.", "tags": ["core", "verbo", "irregular"], "freq": 35 },
-    { "id": "pt0036", "pt": "dizer", "trans": "to say, to tell", "pos": "verb", "gender": null, "note": "", "ex_t": "Como se diz isto?", "ex_trans": "How do you say this?", "tags": ["core", "verbo", "irregular"], "freq": 36 },
-    { "id": "pt0037", "pt": "ver", "trans": "to see", "pos": "verb", "gender": null, "note": "", "ex_t": "Vejo o mar daqui.", "ex_trans": "I can see the sea from here.", "tags": ["core", "verbo", "irregular"], "freq": 37 },
-    { "id": "pt0038", "pt": "dar", "trans": "to give", "pos": "verb", "gender": null, "note": "«dá para...?» = is it possible...?", "ex_t": "Dá para pagar aqui?", "ex_trans": "Can I pay here?", "tags": ["core", "verbo", "irregular"], "freq": 38 },
-    { "id": "pt0039", "pt": "vir", "trans": "to come", "pos": "verb", "gender": null, "note": "easily confused with ver — check the forms", "ex_t": "Venho da Rússia.", "ex_trans": "I come from Russia.", "tags": ["core", "verbo", "irregular"], "freq": 39 },
-    { "id": "pt0040", "pt": "ficar", "trans": "to stay; to be located; to become", "pos": "verb", "gender": null, "note": "a very broad verb, you hear it constantly", "ex_t": "Fico em casa hoje.", "ex_trans": "I'm staying home today.", "tags": ["core", "verbo"], "freq": 40 },
-    { "id": "pt0041", "pt": "falar", "trans": "to speak", "pos": "verb", "gender": null, "note": "", "ex_t": "Fala inglês?", "ex_trans": "Do you speak English?", "tags": ["core", "verbo"], "freq": 41 },
-    { "id": "pt0042", "pt": "perceber", "trans": "to understand", "pos": "verb", "gender": null, "note": "the default verb for understanding in Portugal", "ex_t": "Percebeste?", "ex_trans": "Did you understand?", "tags": ["core", "verbo", "pt-pt"], "freq": 42 },
-    { "id": "pt0043", "pt": "gostar", "trans": "to like", "pos": "verb", "gender": null, "note": "always with de: gosto de café", "ex_t": "Gosto muito da Madeira.", "ex_trans": "I really like Madeira.", "tags": ["core", "verbo"], "freq": 43 },
-    { "id": "pt0044", "pt": "precisar", "trans": "to need", "pos": "verb", "gender": null, "note": "with de: preciso de ajuda", "ex_t": "Preciso de ajuda.", "ex_trans": "I need help.", "tags": ["core", "verbo"], "freq": 44 },
-    { "id": "pt0045", "pt": "morar", "trans": "to live (reside)", "pos": "verb", "gender": null, "note": "with em: moro no Funchal", "ex_t": "Moro no Funchal há dois anos.", "ex_trans": "I've lived in Funchal for two years.", "tags": ["core", "verbo"], "freq": 45 },
-    { "id": "pt0046", "pt": "trabalhar", "trans": "to work", "pos": "verb", "gender": null, "note": "", "ex_t": "Trabalho com dados.", "ex_trans": "I work with data.", "tags": ["core", "verbo", "trabalho"], "freq": 46 },
-    { "id": "pt0047", "pt": "hoje", "trans": "today", "pos": "adv", "gender": null, "note": "", "ex_t": "Hoje está bom tempo.", "ex_trans": "The weather is good today.", "tags": ["core", "tempo"], "freq": 47 },
-    { "id": "pt0048", "pt": "amanhã", "trans": "tomorrow", "pos": "adv", "gender": null, "note": "", "ex_t": "Amanhã vou trabalhar.", "ex_trans": "Tomorrow I'm going to work.", "tags": ["core", "tempo"], "freq": 48 },
-    { "id": "pt0049", "pt": "ontem", "trans": "yesterday", "pos": "adv", "gender": null, "note": "", "ex_t": "Ontem estive na praia.", "ex_trans": "Yesterday I was at the beach.", "tags": ["core", "tempo"], "freq": 49 },
-    { "id": "pt0050", "pt": "agora", "trans": "now", "pos": "adv", "gender": null, "note": "", "ex_t": "Agora não posso.", "ex_trans": "I can't right now.", "tags": ["core", "tempo"], "freq": 50 },
-    { "id": "pt0051", "pt": "sempre", "trans": "always", "pos": "adv", "gender": null, "note": "", "ex_t": "Bebo sempre café de manhã.", "ex_trans": "I always drink coffee in the morning.", "tags": ["core", "tempo"], "freq": 51 },
-    { "id": "pt0052", "pt": "nunca", "trans": "never", "pos": "adv", "gender": null, "note": "", "ex_t": "Nunca estive em Lisboa.", "ex_trans": "I've never been to Lisbon.", "tags": ["core", "tempo"], "freq": 52 },
-    { "id": "pt0053", "pt": "a hora", "trans": "hour; time", "pos": "noun", "gender": "f", "note": "what time is it? — Que horas são?", "ex_t": "Que horas são?", "ex_trans": "What time is it?", "tags": ["core", "tempo"], "freq": 53 },
-    { "id": "pt0054", "pt": "o dia", "trans": "day", "pos": "noun", "gender": "m", "note": "masculine despite ending in -a", "ex_t": "Bom dia! Que dia lindo.", "ex_trans": "Good morning! What a beautiful day.", "tags": ["core", "tempo"], "freq": 54 },
-    { "id": "pt0055", "pt": "a semana", "trans": "week", "pos": "noun", "gender": "f", "note": "", "ex_t": "Na próxima semana vou viajar.", "ex_trans": "Next week I'm travelling.", "tags": ["core", "tempo"], "freq": 55 },
-    { "id": "pt0056", "pt": "o mês", "trans": "month", "pos": "noun", "gender": "m", "note": "plural — meses", "ex_t": "Este mês está caro.", "ex_trans": "This month is expensive.", "tags": ["core", "tempo"], "freq": 56 },
-    { "id": "pt0057", "pt": "o ano", "trans": "year", "pos": "noun", "gender": "m", "note": "", "ex_t": "Tenho quarenta anos.", "ex_trans": "I'm forty years old.", "tags": ["core", "tempo"], "freq": 57 },
-    { "id": "pt0058", "pt": "a casa", "trans": "house, home", "pos": "noun", "gender": "f", "note": "homewards — para casa, no article", "ex_t": "Vou para casa.", "ex_trans": "I'm going home.", "tags": ["core", "lugar"], "freq": 58 },
-    { "id": "pt0059", "pt": "a rua", "trans": "street", "pos": "noun", "gender": "f", "note": "", "ex_t": "Moro nesta rua.", "ex_trans": "I live on this street.", "tags": ["core", "lugar"], "freq": 59 },
-    { "id": "pt0060", "pt": "a loja", "trans": "shop", "pos": "noun", "gender": "f", "note": "", "ex_t": "A loja fecha às sete.", "ex_trans": "The shop closes at seven.", "tags": ["core", "lugar", "compras"], "freq": 60 },
-    { "id": "pt0061", "pt": "o supermercado", "trans": "supermarket", "pos": "noun", "gender": "m", "note": "", "ex_t": "Vou ao supermercado comprar pão.", "ex_trans": "I'm going to the supermarket to buy bread.", "tags": ["core", "lugar", "compras"], "freq": 61 },
-    { "id": "pt0062", "pt": "a farmácia", "trans": "pharmacy", "pos": "noun", "gender": "f", "note": "", "ex_t": "Onde fica a farmácia mais próxima?", "ex_trans": "Where is the nearest pharmacy?", "tags": ["core", "lugar", "saude"], "freq": 62 },
-    { "id": "pt0063", "pt": "o banco", "trans": "bank; bench", "pos": "noun", "gender": "m", "note": "one word for both meanings", "ex_t": "Preciso de ir ao banco.", "ex_trans": "I need to go to the bank.", "tags": ["core", "lugar", "financas"], "freq": 63 },
-    { "id": "pt0064", "pt": "a casa de banho", "trans": "bathroom, toilet", "pos": "noun", "gender": "f", "note": "European Portuguese; Brazilian banheiro is not used here", "ex_t": "Onde fica a casa de banho?", "ex_trans": "Where is the bathroom?", "tags": ["core", "lugar", "pt-pt"], "freq": 64 },
-    { "id": "pt0065", "pt": "o autocarro", "trans": "bus", "pos": "noun", "gender": "m", "note": "European Portuguese; Brazilian ônibus won't be understood here", "ex_t": "Apanho o autocarro para o Funchal.", "ex_trans": "I take the bus to Funchal.", "tags": ["core", "transporte", "pt-pt"], "freq": 65 },
-    { "id": "pt0066", "pt": "o comboio", "trans": "train", "pos": "noun", "gender": "m", "note": "Brazilian trem is not used; Madeira has no trains but you'll need the word", "ex_t": "O comboio para o Porto sai às oito.", "ex_trans": "The train to Porto leaves at eight.", "tags": ["core", "transporte", "pt-pt"], "freq": 66 },
-    { "id": "pt0067", "pt": "o telemóvel", "trans": "mobile phone", "pos": "noun", "gender": "m", "note": "European Portuguese; Brazilian celular is not used here", "ex_t": "Esqueci-me do telemóvel em casa.", "ex_trans": "I forgot my phone at home.", "tags": ["core", "pt-pt"], "freq": 67 },
-    { "id": "pt0068", "pt": "a água", "trans": "water", "pos": "noun", "gender": "f", "note": "feminine, article a despite the stressed á", "ex_t": "Uma água sem gás, se faz favor.", "ex_trans": "A still water, please.", "tags": ["core", "comida"], "freq": 68 },
-    { "id": "pt0069", "pt": "o pão", "trans": "bread", "pos": "noun", "gender": "m", "note": "plural — pães", "ex_t": "Queria dois pães, se faz favor.", "ex_trans": "I'd like two bread rolls, please.", "tags": ["core", "comida"], "freq": 69 },
-    { "id": "pt0070", "pt": "o café", "trans": "coffee; café", "pos": "noun", "gender": "m", "note": "just «um café» = an espresso", "ex_t": "Um café, se faz favor.", "ex_trans": "An espresso, please.", "tags": ["core", "comida", "cafe"], "freq": 70 },
-    { "id": "pt0071", "pt": "o leite", "trans": "milk", "pos": "noun", "gender": "m", "note": "masculine, though it looks feminine", "ex_t": "Café com leite, se faz favor.", "ex_trans": "Coffee with milk, please.", "tags": ["core", "comida"], "freq": 71 },
-    { "id": "pt0072", "pt": "o vinho", "trans": "wine", "pos": "noun", "gender": "m", "note": "", "ex_t": "Um copo de vinho tinto.", "ex_trans": "A glass of red wine.", "tags": ["core", "comida"], "freq": 72 },
-    { "id": "pt0073", "pt": "a cerveja", "trans": "beer", "pos": "noun", "gender": "f", "note": "a small draft is um fino (north) / uma imperial (south and Madeira)", "ex_t": "Uma imperial, se faz favor.", "ex_trans": "A draft beer, please.", "tags": ["core", "comida", "pt-pt"], "freq": 73 },
-    { "id": "pt0074", "pt": "o peixe", "trans": "fish", "pos": "noun", "gender": "m", "note": "", "ex_t": "O peixe aqui é muito fresco.", "ex_trans": "The fish here is very fresh.", "tags": ["core", "comida"], "freq": 74 },
-    { "id": "pt0075", "pt": "a carne", "trans": "meat", "pos": "noun", "gender": "f", "note": "", "ex_t": "Não como carne.", "ex_trans": "I don't eat meat.", "tags": ["core", "comida"], "freq": 75 },
-    { "id": "pt0076", "pt": "o pequeno-almoço", "trans": "breakfast", "pos": "noun", "gender": "m", "note": "European Portuguese; Brazilian café da manhã is not used here", "ex_t": "O pequeno-almoço é às oito.", "ex_trans": "Breakfast is at eight.", "tags": ["core", "comida", "pt-pt"], "freq": 76 },
-    { "id": "pt0077", "pt": "o almoço", "trans": "lunch", "pos": "noun", "gender": "m", "note": "the verb is almoçar", "ex_t": "Vamos almoçar?", "ex_trans": "Shall we have lunch?", "tags": ["core", "comida"], "freq": 77 },
-    { "id": "pt0078", "pt": "o jantar", "trans": "dinner", "pos": "noun", "gender": "m", "note": "both a noun and a verb", "ex_t": "O jantar está pronto.", "ex_trans": "Dinner is ready.", "tags": ["core", "comida"], "freq": 78 },
-    { "id": "pt0079", "pt": "a levada", "trans": "levada (irrigation channel)", "pos": "noun", "gender": "f", "note": "Madeira's 15th-century water channels with walking trails alongside", "ex_t": "Vamos fazer uma levada no domingo.", "ex_trans": "Let's walk a levada on Sunday.", "tags": ["madeira", "lugar"], "freq": 79 },
-    { "id": "pt0080", "pt": "a poncha", "trans": "poncha", "pos": "noun", "gender": "f", "note": "Madeiran drink: sugar-cane aguardente, honey, lemon", "ex_t": "Uma poncha, se faz favor.", "ex_trans": "A poncha, please.", "tags": ["madeira", "comida"], "freq": 80 },
-    { "id": "pt0081", "pt": "o bolo do caco", "trans": "bolo do caco", "pos": "noun", "gender": "m", "note": "Madeiran flatbread with garlic butter; nothing to do with cake despite bolo = cake", "ex_t": "Um bolo do caco com manteiga de alho.", "ex_trans": "A bolo do caco with garlic butter.", "tags": ["madeira", "comida"], "freq": 81 },
-    { "id": "pt0082", "pt": "a espetada", "trans": "espetada", "pos": "noun", "gender": "f", "note": "Madeiran beef skewer on a laurel stick", "ex_t": "A espetada em pau de louro é típica daqui.", "ex_trans": "Espetada on a laurel stick is typical here.", "tags": ["madeira", "comida"], "freq": 82 },
-    { "id": "pt0083", "pt": "a chinesa", "trans": "coffee with milk (Madeiran)", "pos": "noun", "gender": "f", "note": "Madeira only; on the mainland order a galão or garoto", "ex_t": "Uma chinesa, se faz favor.", "ex_trans": "A coffee with milk, please.", "tags": ["madeira", "cafe"], "freq": 83 }
+    {
+      "id": "pt0001",
+      "pt": "olá",
+      "trans": "hello",
+      "pos": "interj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Olá, tudo bem?",
+      "ex_trans": "Hello, how are you?",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 1,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0002",
+      "pt": "bom dia",
+      "trans": "good morning",
+      "pos": "phrase",
+      "gender": null,
+      "note": "until noon; after that — boa tarde",
+      "ex_t": "Bom dia! Um café, se faz favor.",
+      "ex_trans": "Good morning! A coffee, please.",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 2,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0003",
+      "pt": "boa tarde",
+      "trans": "good afternoon",
+      "pos": "phrase",
+      "gender": null,
+      "note": "from noon until dark",
+      "ex_t": "Boa tarde, faz favor.",
+      "ex_trans": "Good afternoon, please.",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 3,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0004",
+      "pt": "boa noite",
+      "trans": "good evening / good night",
+      "pos": "phrase",
+      "gender": null,
+      "note": "both a greeting and a farewell",
+      "ex_t": "Boa noite, até amanhã.",
+      "ex_trans": "Good night, see you tomorrow.",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 4,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0005",
+      "pt": "obrigado",
+      "trans": "thank you",
+      "pos": "interj",
+      "gender": null,
+      "note": "agrees with the SPEAKER's gender: men say obrigado, women — obrigada",
+      "ex_t": "Muito obrigado pela ajuda.",
+      "ex_trans": "Thank you very much for the help.",
+      "tags": [
+        "core",
+        "cortesia"
+      ],
+      "freq": 5,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0006",
+      "pt": "de nada",
+      "trans": "you're welcome",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "— Obrigado! — De nada.",
+      "ex_trans": "— Thanks! — You're welcome.",
+      "tags": [
+        "core",
+        "cortesia"
+      ],
+      "freq": 6,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0007",
+      "pt": "se faz favor",
+      "trans": "please (request)",
+      "pos": "phrase",
+      "gender": null,
+      "note": "distinctly European Portuguese; Brazilians say por favor",
+      "ex_t": "A conta, se faz favor.",
+      "ex_trans": "The bill, please.",
+      "tags": [
+        "core",
+        "cortesia",
+        "pt-pt"
+      ],
+      "freq": 7,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0008",
+      "pt": "desculpe",
+      "trans": "excuse me / sorry",
+      "pos": "interj",
+      "gender": null,
+      "note": "formal; informal — desculpa",
+      "ex_t": "Desculpe, pode ajudar-me?",
+      "ex_trans": "Excuse me, can you help me?",
+      "tags": [
+        "core",
+        "cortesia"
+      ],
+      "freq": 8,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0009",
+      "pt": "com licença",
+      "trans": "excuse me (passing by)",
+      "pos": "phrase",
+      "gender": null,
+      "note": "when squeezing past someone, not when apologising",
+      "ex_t": "Com licença, posso passar?",
+      "ex_trans": "Excuse me, may I pass?",
+      "tags": [
+        "core",
+        "cortesia"
+      ],
+      "freq": 9,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0010",
+      "pt": "adeus",
+      "trans": "goodbye",
+      "pos": "interj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Adeus, boa viagem!",
+      "ex_trans": "Goodbye, have a good trip!",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 10,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0011",
+      "pt": "até logo",
+      "trans": "see you later",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Até logo, vemo-nos amanhã.",
+      "ex_trans": "See you later, we'll meet tomorrow.",
+      "tags": [
+        "core",
+        "saudacao"
+      ],
+      "freq": 11,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0012",
+      "pt": "sim",
+      "trans": "yes",
+      "pos": "adv",
+      "gender": null,
+      "note": "in speech people often repeat the verb instead: «Tens?» — «Tenho»",
+      "ex_t": "Sim, claro.",
+      "ex_trans": "Yes, of course.",
+      "tags": [
+        "core"
+      ],
+      "freq": 12,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0013",
+      "pt": "não",
+      "trans": "no; not",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Não, obrigado.",
+      "ex_trans": "No, thank you.",
+      "tags": [
+        "core"
+      ],
+      "freq": 13,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0014",
+      "pt": "não percebo",
+      "trans": "I don't understand",
+      "pos": "phrase",
+      "gender": null,
+      "note": "key pt-PT marker: perceber = to understand; Brazilian entender sounds foreign here",
+      "ex_t": "Desculpe, não percebo.",
+      "ex_trans": "Sorry, I don't understand.",
+      "tags": [
+        "core",
+        "sobrevivencia",
+        "pt-pt"
+      ],
+      "freq": 14,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0015",
+      "pt": "não falo bem português",
+      "trans": "I don't speak Portuguese well",
+      "pos": "phrase",
+      "gender": null,
+      "note": "the phrase that makes people slow down for you",
+      "ex_t": "Desculpe, não falo bem português.",
+      "ex_trans": "Sorry, I don't speak Portuguese well.",
+      "tags": [
+        "core",
+        "sobrevivencia"
+      ],
+      "freq": 15,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0016",
+      "pt": "pode repetir, se faz favor?",
+      "trans": "can you repeat, please?",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Pode repetir, se faz favor? Não percebi.",
+      "ex_trans": "Can you repeat, please? I didn't understand.",
+      "tags": [
+        "core",
+        "sobrevivencia"
+      ],
+      "freq": 16,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0017",
+      "pt": "mais devagar",
+      "trans": "slower",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Pode falar mais devagar?",
+      "ex_trans": "Can you speak slower?",
+      "tags": [
+        "core",
+        "sobrevivencia"
+      ],
+      "freq": 17,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0018",
+      "pt": "quanto custa?",
+      "trans": "how much is it?",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Quanto custa isto?",
+      "ex_trans": "How much is this?",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "freq": 18,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0019",
+      "pt": "a conta",
+      "trans": "the bill",
+      "pos": "noun",
+      "gender": "f",
+      "note": "in a café you ask: «A conta, se faz favor»",
+      "ex_t": "A conta, se faz favor.",
+      "ex_trans": "The bill, please.",
+      "tags": [
+        "core",
+        "cafe"
+      ],
+      "freq": 19,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0020",
+      "pt": "onde fica...?",
+      "trans": "where is...?",
+      "pos": "phrase",
+      "gender": null,
+      "note": "ficar for places = to be located",
+      "ex_t": "Onde fica a farmácia?",
+      "ex_trans": "Where is the pharmacy?",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 20,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0021",
+      "pt": "quem",
+      "trans": "who",
+      "pos": "pron",
+      "gender": null,
+      "note": "",
+      "ex_t": "Quem é aquele senhor?",
+      "ex_trans": "Who is that gentleman?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 21,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0022",
+      "pt": "o que",
+      "trans": "what",
+      "pos": "pron",
+      "gender": null,
+      "note": "in live speech almost always «o que é que»: O que é que fazes?",
+      "ex_t": "O que é que isto significa?",
+      "ex_trans": "What does this mean?",
+      "tags": [
+        "core",
+        "interrogativo",
+        "pt-pt"
+      ],
+      "freq": 22,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0023",
+      "pt": "quando",
+      "trans": "when",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Quando é que abre?",
+      "ex_trans": "When does it open?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 23,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0024",
+      "pt": "onde",
+      "trans": "where",
+      "pos": "adv",
+      "gender": null,
+      "note": "where to — para onde; where from — de onde",
+      "ex_t": "Onde estás?",
+      "ex_trans": "Where are you?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 24,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0025",
+      "pt": "porquê",
+      "trans": "why",
+      "pos": "adv",
+      "gender": null,
+      "note": "the question is porquê (standalone) or «Porque é que...?»; the answer is porque (because)",
+      "ex_t": "Porque é que fechou?",
+      "ex_trans": "Why did it close?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 25,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0026",
+      "pt": "como",
+      "trans": "how",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Como se diz isto em português?",
+      "ex_trans": "How do you say this in Portuguese?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 26,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0027",
+      "pt": "qual",
+      "trans": "which",
+      "pos": "pron",
+      "gender": null,
+      "note": "plural — quais",
+      "ex_t": "Qual é o teu?",
+      "ex_trans": "Which one is yours?",
+      "tags": [
+        "core",
+        "interrogativo"
+      ],
+      "freq": 27,
+      "unit": "basics"
+    },
+    {
+      "id": "pt0028",
+      "pt": "ser",
+      "trans": "to be (permanent)",
+      "pos": "verb",
+      "gender": null,
+      "note": "permanent traits: sou russo. Temporary states — estar",
+      "ex_t": "Eu sou russo, moro na Madeira.",
+      "ex_trans": "I'm Russian, I live in Madeira.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 28,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0029",
+      "pt": "estar",
+      "trans": "to be (temporary), to be located",
+      "pos": "verb",
+      "gender": null,
+      "note": "states and location: estou cansado, está na mesa",
+      "ex_t": "Estou cansado hoje.",
+      "ex_trans": "I'm tired today.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 29,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0030",
+      "pt": "ter",
+      "trans": "to have",
+      "pos": "verb",
+      "gender": null,
+      "note": "age uses ter: tenho 40 anos, never ser",
+      "ex_t": "Tenho duas filhas.",
+      "ex_trans": "I have two daughters.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 30,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0031",
+      "pt": "ir",
+      "trans": "to go",
+      "pos": "verb",
+      "gender": null,
+      "note": "spoken future: vou fazer = I'll do",
+      "ex_t": "Vou ao supermercado.",
+      "ex_trans": "I'm going to the supermarket.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 31,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0032",
+      "pt": "fazer",
+      "trans": "to do, to make",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O que é que estás a fazer?",
+      "ex_trans": "What are you doing?",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 32,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0033",
+      "pt": "poder",
+      "trans": "can, to be able",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Posso pagar com cartão?",
+      "ex_trans": "Can I pay by card?",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 33,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0034",
+      "pt": "querer",
+      "trans": "to want",
+      "pos": "verb",
+      "gender": null,
+      "note": "in a café queria (I'd like) is politer than quero",
+      "ex_t": "Queria um café, se faz favor.",
+      "ex_trans": "I'd like a coffee, please.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 34,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0035",
+      "pt": "saber",
+      "trans": "to know (facts), to know how",
+      "pos": "verb",
+      "gender": null,
+      "note": "knowing a person — conhecer",
+      "ex_t": "Não sei onde fica.",
+      "ex_trans": "I don't know where it is.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 35,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0036",
+      "pt": "dizer",
+      "trans": "to say, to tell",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Como se diz isto?",
+      "ex_trans": "How do you say this?",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 36,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0037",
+      "pt": "ver",
+      "trans": "to see",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Vejo o mar daqui.",
+      "ex_trans": "I can see the sea from here.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 37,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0038",
+      "pt": "dar",
+      "trans": "to give",
+      "pos": "verb",
+      "gender": null,
+      "note": "«dá para...?» = is it possible...?",
+      "ex_t": "Dá para pagar aqui?",
+      "ex_trans": "Can I pay here?",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 38,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0039",
+      "pt": "vir",
+      "trans": "to come",
+      "pos": "verb",
+      "gender": null,
+      "note": "easily confused with ver — check the forms",
+      "ex_t": "Venho da Rússia.",
+      "ex_trans": "I come from Russia.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "freq": 39,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0040",
+      "pt": "ficar",
+      "trans": "to stay; to be located; to become",
+      "pos": "verb",
+      "gender": null,
+      "note": "a very broad verb, you hear it constantly",
+      "ex_t": "Fico em casa hoje.",
+      "ex_trans": "I'm staying home today.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "freq": 40,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0041",
+      "pt": "falar",
+      "trans": "to speak",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Fala inglês?",
+      "ex_trans": "Do you speak English?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "freq": 41,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0042",
+      "pt": "perceber",
+      "trans": "to understand",
+      "pos": "verb",
+      "gender": null,
+      "note": "the default verb for understanding in Portugal",
+      "ex_t": "Percebeste?",
+      "ex_trans": "Did you understand?",
+      "tags": [
+        "core",
+        "verbo",
+        "pt-pt"
+      ],
+      "freq": 42,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0043",
+      "pt": "gostar",
+      "trans": "to like",
+      "pos": "verb",
+      "gender": null,
+      "note": "always with de: gosto de café",
+      "ex_t": "Gosto muito da Madeira.",
+      "ex_trans": "I really like Madeira.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "freq": 43,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0044",
+      "pt": "precisar",
+      "trans": "to need",
+      "pos": "verb",
+      "gender": null,
+      "note": "with de: preciso de ajuda",
+      "ex_t": "Preciso de ajuda.",
+      "ex_trans": "I need help.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "freq": 44,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0045",
+      "pt": "morar",
+      "trans": "to live (reside)",
+      "pos": "verb",
+      "gender": null,
+      "note": "with em: moro no Funchal",
+      "ex_t": "Moro no Funchal há dois anos.",
+      "ex_trans": "I've lived in Funchal for two years.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "freq": 45,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0046",
+      "pt": "trabalhar",
+      "trans": "to work",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Trabalho com dados.",
+      "ex_trans": "I work with data.",
+      "tags": [
+        "core",
+        "verbo",
+        "trabalho"
+      ],
+      "freq": 46,
+      "unit": "verbos"
+    },
+    {
+      "id": "pt0047",
+      "pt": "hoje",
+      "trans": "today",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Hoje está bom tempo.",
+      "ex_trans": "The weather is good today.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 47,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0048",
+      "pt": "amanhã",
+      "trans": "tomorrow",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Amanhã vou trabalhar.",
+      "ex_trans": "Tomorrow I'm going to work.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 48,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0049",
+      "pt": "ontem",
+      "trans": "yesterday",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ontem estive na praia.",
+      "ex_trans": "Yesterday I was at the beach.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 49,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0050",
+      "pt": "agora",
+      "trans": "now",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Agora não posso.",
+      "ex_trans": "I can't right now.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 50,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0051",
+      "pt": "sempre",
+      "trans": "always",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Bebo sempre café de manhã.",
+      "ex_trans": "I always drink coffee in the morning.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 51,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0052",
+      "pt": "nunca",
+      "trans": "never",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Nunca estive em Lisboa.",
+      "ex_trans": "I've never been to Lisbon.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 52,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0053",
+      "pt": "a hora",
+      "trans": "hour; time",
+      "pos": "noun",
+      "gender": "f",
+      "note": "what time is it? — Que horas são?",
+      "ex_t": "Que horas são?",
+      "ex_trans": "What time is it?",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 53,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0054",
+      "pt": "o dia",
+      "trans": "day",
+      "pos": "noun",
+      "gender": "m",
+      "note": "masculine despite ending in -a",
+      "ex_t": "Bom dia! Que dia lindo.",
+      "ex_trans": "Good morning! What a beautiful day.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 54,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0055",
+      "pt": "a semana",
+      "trans": "week",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Na próxima semana vou viajar.",
+      "ex_trans": "Next week I'm travelling.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 55,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0056",
+      "pt": "o mês",
+      "trans": "month",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural — meses",
+      "ex_t": "Este mês está caro.",
+      "ex_trans": "This month is expensive.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 56,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0057",
+      "pt": "o ano",
+      "trans": "year",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Tenho quarenta anos.",
+      "ex_trans": "I'm forty years old.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 57,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0058",
+      "pt": "a casa",
+      "trans": "house, home",
+      "pos": "noun",
+      "gender": "f",
+      "note": "homewards — para casa, no article",
+      "ex_t": "Vou para casa.",
+      "ex_trans": "I'm going home.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "freq": 58,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0059",
+      "pt": "a rua",
+      "trans": "street",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Moro nesta rua.",
+      "ex_trans": "I live on this street.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "freq": 59,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0060",
+      "pt": "a loja",
+      "trans": "shop",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A loja fecha às sete.",
+      "ex_trans": "The shop closes at seven.",
+      "tags": [
+        "core",
+        "lugar",
+        "compras"
+      ],
+      "freq": 60,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0061",
+      "pt": "o supermercado",
+      "trans": "supermarket",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Vou ao supermercado comprar pão.",
+      "ex_trans": "I'm going to the supermarket to buy bread.",
+      "tags": [
+        "core",
+        "lugar",
+        "compras"
+      ],
+      "freq": 61,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0062",
+      "pt": "a farmácia",
+      "trans": "pharmacy",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Onde fica a farmácia mais próxima?",
+      "ex_trans": "Where is the nearest pharmacy?",
+      "tags": [
+        "core",
+        "lugar",
+        "saude"
+      ],
+      "freq": 62,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0063",
+      "pt": "o banco",
+      "trans": "bank; bench",
+      "pos": "noun",
+      "gender": "m",
+      "note": "one word for both meanings",
+      "ex_t": "Preciso de ir ao banco.",
+      "ex_trans": "I need to go to the bank.",
+      "tags": [
+        "core",
+        "lugar",
+        "financas"
+      ],
+      "freq": 63,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0064",
+      "pt": "a casa de banho",
+      "trans": "bathroom, toilet",
+      "pos": "noun",
+      "gender": "f",
+      "note": "European Portuguese; Brazilian banheiro is not used here",
+      "ex_t": "Onde fica a casa de banho?",
+      "ex_trans": "Where is the bathroom?",
+      "tags": [
+        "core",
+        "lugar",
+        "pt-pt"
+      ],
+      "freq": 64,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0065",
+      "pt": "o autocarro",
+      "trans": "bus",
+      "pos": "noun",
+      "gender": "m",
+      "note": "European Portuguese; Brazilian ônibus won't be understood here",
+      "ex_t": "Apanho o autocarro para o Funchal.",
+      "ex_trans": "I take the bus to Funchal.",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "freq": 65,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0066",
+      "pt": "o comboio",
+      "trans": "train",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Brazilian trem is not used; Madeira has no trains but you'll need the word",
+      "ex_t": "O comboio para o Porto sai às oito.",
+      "ex_trans": "The train to Porto leaves at eight.",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "freq": 66,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0067",
+      "pt": "o telemóvel",
+      "trans": "mobile phone",
+      "pos": "noun",
+      "gender": "m",
+      "note": "European Portuguese; Brazilian celular is not used here",
+      "ex_t": "Esqueci-me do telemóvel em casa.",
+      "ex_trans": "I forgot my phone at home.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "freq": 67,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0068",
+      "pt": "a água",
+      "trans": "water",
+      "pos": "noun",
+      "gender": "f",
+      "note": "feminine, article a despite the stressed á",
+      "ex_t": "Uma água sem gás, se faz favor.",
+      "ex_trans": "A still water, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 68,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0069",
+      "pt": "o pão",
+      "trans": "bread",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural — pães",
+      "ex_t": "Queria dois pães, se faz favor.",
+      "ex_trans": "I'd like two bread rolls, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 69,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0070",
+      "pt": "o café",
+      "trans": "coffee; café",
+      "pos": "noun",
+      "gender": "m",
+      "note": "just «um café» = an espresso",
+      "ex_t": "Um café, se faz favor.",
+      "ex_trans": "An espresso, please.",
+      "tags": [
+        "core",
+        "comida",
+        "cafe"
+      ],
+      "freq": 70,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0071",
+      "pt": "o leite",
+      "trans": "milk",
+      "pos": "noun",
+      "gender": "m",
+      "note": "masculine, though it looks feminine",
+      "ex_t": "Café com leite, se faz favor.",
+      "ex_trans": "Coffee with milk, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 71,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0072",
+      "pt": "o vinho",
+      "trans": "wine",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Um copo de vinho tinto.",
+      "ex_trans": "A glass of red wine.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 72,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0073",
+      "pt": "a cerveja",
+      "trans": "beer",
+      "pos": "noun",
+      "gender": "f",
+      "note": "a small draft is um fino (north) / uma imperial (south and Madeira)",
+      "ex_t": "Uma imperial, se faz favor.",
+      "ex_trans": "A draft beer, please.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "freq": 73,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0074",
+      "pt": "o peixe",
+      "trans": "fish",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O peixe aqui é muito fresco.",
+      "ex_trans": "The fish here is very fresh.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 74,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0075",
+      "pt": "a carne",
+      "trans": "meat",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Não como carne.",
+      "ex_trans": "I don't eat meat.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 75,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0076",
+      "pt": "o pequeno-almoço",
+      "trans": "breakfast",
+      "pos": "noun",
+      "gender": "m",
+      "note": "European Portuguese; Brazilian café da manhã is not used here",
+      "ex_t": "O pequeno-almoço é às oito.",
+      "ex_trans": "Breakfast is at eight.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "freq": 76,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0077",
+      "pt": "o almoço",
+      "trans": "lunch",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the verb is almoçar",
+      "ex_t": "Vamos almoçar?",
+      "ex_trans": "Shall we have lunch?",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 77,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0078",
+      "pt": "o jantar",
+      "trans": "dinner",
+      "pos": "noun",
+      "gender": "m",
+      "note": "both a noun and a verb",
+      "ex_t": "O jantar está pronto.",
+      "ex_trans": "Dinner is ready.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 78,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0079",
+      "pt": "a levada",
+      "trans": "levada (irrigation channel)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira's 15th-century water channels with walking trails alongside",
+      "ex_t": "Vamos fazer uma levada no domingo.",
+      "ex_trans": "Let's walk a levada on Sunday.",
+      "tags": [
+        "madeira",
+        "lugar"
+      ],
+      "freq": 79,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0080",
+      "pt": "a poncha",
+      "trans": "poncha",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeiran drink: sugar-cane aguardente, honey, lemon",
+      "ex_t": "Uma poncha, se faz favor.",
+      "ex_trans": "A poncha, please.",
+      "tags": [
+        "madeira",
+        "comida"
+      ],
+      "freq": 80,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0081",
+      "pt": "o bolo do caco",
+      "trans": "bolo do caco",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Madeiran flatbread with garlic butter; nothing to do with cake despite bolo = cake",
+      "ex_t": "Um bolo do caco com manteiga de alho.",
+      "ex_trans": "A bolo do caco with garlic butter.",
+      "tags": [
+        "madeira",
+        "comida"
+      ],
+      "freq": 81,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0082",
+      "pt": "a espetada",
+      "trans": "espetada",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeiran beef skewer on a laurel stick",
+      "ex_t": "A espetada em pau de louro é típica daqui.",
+      "ex_trans": "Espetada on a laurel stick is typical here.",
+      "tags": [
+        "madeira",
+        "comida"
+      ],
+      "freq": 82,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0083",
+      "pt": "a chinesa",
+      "trans": "coffee with milk (Madeiran)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira only; on the mainland order a galão or garoto",
+      "ex_t": "Uma chinesa, se faz favor.",
+      "ex_trans": "A coffee with milk, please.",
+      "tags": [
+        "madeira",
+        "cafe"
+      ],
+      "freq": 83,
+      "unit": "comida"
+    }
   ]
 }
