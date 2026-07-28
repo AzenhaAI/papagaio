@@ -9,10 +9,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     Every card has native-quality audio.
   </p>
 
-  <div style="display:flex; gap:10px; margin: 18px 0;">
+  <div style="display:flex; gap:10px; margin: 18px 0; flex-wrap:wrap;">
     <button class="btn" data-course="pt" id="btn-pt">🇵🇹 Portuguese</button>
     <button class="btn" data-course="en" id="btn-en" style="background:var(--panel2); color:var(--text);">🇬🇧 English</button>
+    <input id="q" type="search" placeholder="Search…"
+      style="flex:1; min-width:180px; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+             border-radius:10px; padding:8px 14px; font:inherit;" />
   </div>
+  <div id="tags" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;"></div>
 
   <div id="list"></div>
 
@@ -20,14 +24,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const AUDIO = 'https://shpara.com/papagaio/audio/';
     const API = 'https://papagaio.kirshp.workers.dev/api/deck';
     const list = document.getElementById('list');
+    let all = [];      // loaded cards of the current course
+    let tag = null;    // active tag filter
 
-    async function load(course) {
-      document.getElementById('btn-pt').style.cssText = course === 'pt' ? '' : 'background:var(--panel2); color:var(--text)';
-      document.getElementById('btn-en').style.cssText = course === 'en' ? '' : 'background:var(--panel2); color:var(--text)';
-      list.innerHTML = '<p class="muted">loading…</p>';
-      const r = await fetch(`${API}?course=${course}&limit=500`);
-      const { cards } = await r.json();
-      list.innerHTML = cards.map((c) => `
+    function render() {
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      const cards = all.filter((c) =>
+        (!tag || (c.tags ?? '').includes(`"${tag}"`)) &&
+        (!q || c.term.toLowerCase().includes(q) || c.trans.toLowerCase().includes(q))
+      );
+      list.innerHTML = (cards.length ? cards : []).map((c) => `
         <div class="panel" style="margin-bottom:10px; padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
           <strong style="font-size:18px;">${c.term}</strong>
           ${c.gender ? `<span class="muted">(${c.gender})</span>` : ''}
@@ -36,8 +42,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>` : ''}
           ${c.note ? `<div class="muted" style="width:100%; font-size:14px;">${c.note}</div>` : ''}
           ${c.ex_t ? `<div class="muted" style="width:100%; font-size:14px; font-style:italic;">${c.ex_t}</div>` : ''}
-        </div>`).join('');
+        </div>`).join('') || '<p class="muted">Nothing matches.</p>';
     }
+
+    function renderTags() {
+      const counts = {};
+      all.forEach((c) => JSON.parse(c.tags ?? '[]').forEach((t) => { counts[t] = (counts[t] ?? 0) + 1; }));
+      const box = document.getElementById('tags');
+      box.innerHTML = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([t, n]) =>
+        `<button class="tagbtn" data-t="${t}" style="background:${tag === t ? 'var(--accent)' : 'var(--panel2)'};
+          color:${tag === t ? '#08130c' : 'var(--muted)'}; border:0; border-radius:16px; padding:4px 12px;
+          font:inherit; font-size:13px; cursor:pointer;">${t} · ${n}</button>`).join('');
+      box.querySelectorAll('.tagbtn').forEach((b) => {
+        b.onclick = () => { tag = tag === b.dataset.t ? null : b.dataset.t; renderTags(); render(); };
+      });
+    }
+
+    async function load(course) {
+      document.getElementById('btn-pt').style.cssText = course === 'pt' ? '' : 'background:var(--panel2); color:var(--text)';
+      document.getElementById('btn-en').style.cssText = course === 'en' ? '' : 'background:var(--panel2); color:var(--text)';
+      list.innerHTML = '<p class="muted">loading…</p>';
+      const r = await fetch(`${API}?course=${course}&limit=500`);
+      all = (await r.json()).cards;
+      tag = null;
+      renderTags();
+      render();
+    }
+    document.getElementById('q').addEventListener('input', render);
     document.getElementById('btn-pt').onclick = () => load('pt');
     document.getElementById('btn-en').onclick = () => load('en');
     load('pt');

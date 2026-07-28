@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="404 — PapaGaio">
+  <div style="text-align:center; padding:60px 0;">
+    <div style="font-size:80px;">🦜</div>
+    <h1>404 — esta página voou</h1>
+    <p class="muted">This page flew away. <em>Voar</em> — to fly; you just learned a verb.</p>
+    <p style="margin-top:24px;"><a class="btn" href={`${base}/`}>Back to the translator</a></p>
+  </div>
+</BaseLayout>

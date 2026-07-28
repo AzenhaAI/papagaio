@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Privacy — PapaGaio">
+  <h1>Privacy</h1>
+  <p class="muted">Last updated: 28 July 2026</p>
+
+  <h2>The short version</h2>
+  <p style="max-width:640px;">
+    PapaGaio has no ads, no trackers for sale, and no interest in your identity.
+    Everything stored is there to teach you a language, nothing else.
+  </p>
+
+  <h2>Website</h2>
+  <ul class="muted" style="max-width:640px; line-height:1.9;">
+    <li>Your translation history is stored <strong style="color:var(--text)">only in your browser</strong> (localStorage). We never see it.</li>
+    <li>Text you translate is sent to our server and forwarded to Groq (US) for processing. It is not stored on our side.</li>
+    <li>A daily request counter per IP address exists purely to prevent abuse; it holds no content.</li>
+  </ul>
+
+  <h2>Telegram bot</h2>
+  <ul class="muted" style="max-width:640px; line-height:1.9;">
+    <li>We store your Telegram user id, first name, learning progress and the cards you add. This is the product.</li>
+    <li>Voice messages are transcribed by Groq (US) and are not kept after transcription.</li>
+    <li>Dialog sessions with the AI coach keep only the recent turns needed for context, and are deleted at /stop.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <ul class="muted" style="max-width:640px; line-height:1.9;">
+    <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database.</li>
+    <li><strong style="color:var(--text)">Groq</strong> — translation, dialog and speech recognition.</li>
+    <li><strong style="color:var(--text)">Microsoft Edge TTS</strong> — audio synthesis (receives only the text to be spoken).</li>
+  </ul>
+
+  <h2>Your data, your call</h2>
+  <p class="muted" style="max-width:640px;">
+    Want your bot data gone? Send /pause and email
+    <a href="mailto:aurapark888@gmail.com">aurapark888@gmail.com</a> — everything
+    tied to your Telegram id will be deleted.
+  </p>
+</BaseLayout>
