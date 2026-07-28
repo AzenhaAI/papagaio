@@ -1,0 +1,78 @@
+---
+const { title = 'PapaGaio — European Portuguese, not Brazilian', desc = 'Translator and language tutor for European Portuguese (pt-PT). Flashcards in Telegram, AI voice coach, zero subscriptions.' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- noindex until Kirill reviews the site -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <link rel="icon" href={`${base}/icon.svg`} type="image/svg+xml" />
+  <style is:global>
+    :root {
+      --bg: #0e1a14;
+      --panel: #16241c;
+      --panel2: #1c2e23;
+      --text: #e8f2ea;
+      --muted: #8fa898;
+      --accent: #34d17b;
+      --accent2: #ffc857;
+      --warn: #ff9d5c;
+      --radius: 14px;
+      --max: 880px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header.site {
+      max-width: var(--max); margin: 0 auto; padding: 20px 20px 0;
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    header.site .logo { font-size: 26px; font-weight: 700; color: var(--text); }
+    header.site .logo span { color: var(--accent); }
+    header.site nav { display: flex; gap: 18px; margin-left: auto; }
+    header.site nav a { color: var(--muted); font-size: 15px; }
+    header.site nav a:hover { color: var(--text); text-decoration: none; }
+    main { max-width: var(--max); margin: 0 auto; padding: 28px 20px 60px; }
+    footer.site {
+      max-width: var(--max); margin: 0 auto; padding: 24px 20px 40px;
+      color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--panel2);
+    }
+    .panel { background: var(--panel); border-radius: var(--radius); padding: 22px; }
+    .btn {
+      display: inline-block; background: var(--accent); color: #08130c;
+      font-weight: 600; padding: 10px 20px; border-radius: 10px; border: 0;
+      font-size: 16px; cursor: pointer;
+    }
+    .btn:hover { filter: brightness(1.08); text-decoration: none; }
+    .muted { color: var(--muted); }
+    h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; }
+    h2 { font-size: 21px; margin: 34px 0 12px; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <a class="logo" href={`${base}/`}>Papa<span>Gaio</span> 🦜</a>
+    <nav>
+      <a href={`${base}/`}>Translator</a>
+      <a href={`${base}/dictionary/`}>Dictionary</a>
+      <a href={`${base}/about/`}>About</a>
+      <a href="https://t.me/papagaio_bot">Telegram bot</a>
+    </nav>
+  </header>
+  <main><slot /></main>
+  <footer class="site">
+    PapaGaio — European Portuguese, never Brazilian. Free forever, no premium tier.
+    · <a href="https://github.com/kirshp/papagaio">Source on GitHub</a>
+    · Part of <a href="https://shpara.com">shpara.com</a>
+  </footer>
+</body>
+</html>

@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TABLE IF NOT EXISTS cards (
-  id       TEXT PRIMARY KEY,   -- pt0001 / en0001
+  id       TEXT PRIMARY KEY,   -- pt0001 / en0001, or u<id> for user-added
   course   TEXT NOT NULL,      -- pt | en
   term     TEXT NOT NULL,      -- word in the target language
   trans    TEXT NOT NULL,      -- translation / definition
@@ -29,10 +29,37 @@ CREATE TABLE IF NOT EXISTS cards (
   ex_trans TEXT,
   tags     TEXT,               -- JSON array
   freq     INTEGER,            -- frequency rank = order of introduction
-  audio    TEXT                -- file name under /papagaio/audio/, no base URL
+  audio    TEXT,               -- file name under /papagaio/audio/, no base URL
+  owner    INTEGER             -- NULL = shared deck; user id = added from a translation
 );
 
 CREATE INDEX IF NOT EXISTS idx_cards_course_freq ON cards(course, freq);
+
+-- Device tokens for the mobile app and the website.
+CREATE TABLE IF NOT EXISTS devices (
+  token      TEXT PRIMARY KEY,
+  user_id    INTEGER NOT NULL,
+  label      TEXT,
+  created_at TEXT NOT NULL
+);
+
+-- Abuse guard for the public translate endpoint.
+CREATE TABLE IF NOT EXISTS api_usage (
+  day TEXT NOT NULL,
+  ip  TEXT NOT NULL,
+  n   INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (day, ip)
+);
+
+-- Last translation per user, so the "add to deck" button has something to add.
+CREATE TABLE IF NOT EXISTS tr_last (
+  user_id    INTEGER PRIMARY KEY,
+  course     TEXT NOT NULL,
+  term       TEXT NOT NULL,
+  trans      TEXT NOT NULL,
+  note       TEXT,
+  created_at TEXT NOT NULL
+);
 
 -- FSRS state per card per user.
 CREATE TABLE IF NOT EXISTS user_cards (

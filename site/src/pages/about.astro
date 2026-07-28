@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About — PapaGaio">
+  <h1>About PapaGaio</h1>
+  <p style="max-width: 640px;">
+    Born out of frustration: three years of language schools, flashcard apps that
+    paywall the useful parts, and translators that quietly teach Brazilian
+    Portuguese to people living in Portugal.
+  </p>
+
+  <h2>What it does</h2>
+  <ul class="muted" style="max-width: 640px; line-height: 1.9;">
+    <li><strong style="color:var(--text)">Translator with a pt-PT guarantee</strong> — flags every Brazilian divergence.</li>
+    <li><strong style="color:var(--text)">A card every 15 minutes</strong> in Telegram during working hours. One tap. FSRS spaced repetition.</li>
+    <li><strong style="color:var(--text)">AI voice coach</strong> — scenario roleplay (café, bank, doctor), speaks and listens, corrects gently.</li>
+    <li><strong style="color:var(--text)">Pronunciation checks</strong> — say the word, Whisper verifies what you actually said.</li>
+    <li><strong style="color:var(--text)">Your phrases become cards</strong> — translate anything, one tap adds it to your deck with audio.</li>
+  </ul>
+
+  <h2>Anti-features</h2>
+  <ul class="muted" style="max-width: 640px; line-height: 1.9;">
+    <li>No subscriptions, no premium tier, no locked content. Ever.</li>
+    <li>No streak shaming — ignore three cards and the bot politely goes quiet until tomorrow.</li>
+    <li>No Brazilian Portuguese mixed in. pt-PT only, checked card by card.</li>
+  </ul>
+
+  <h2>Stack</h2>
+  <p class="muted" style="max-width: 640px;">
+    Cloudflare Workers + D1, Edge TTS, Groq Whisper, FSRS. Everything runs on
+    free tiers. <a href="https://github.com/kirshp/papagaio">Source on GitHub</a>.
+  </p>
+
+  <p style="margin-top: 30px;">
+    <a class="btn" href="https://t.me/papagaio_bot">Open the bot →</a>
+  </p>
+</BaseLayout>

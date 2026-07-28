@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout>
+  <h1>Translate into <em>European</em> Portuguese.<br />Not Brazilian.</h1>
+  <p class="muted" style="max-width: 640px;">
+    Google and DeepL default to Brazilian Portuguese — which gets you blank stares
+    in Portugal. PapaGaio always answers in pt-PT and flags every word a Brazilian
+    would say differently.
+  </p>
+
+  <div class="panel" style="margin-top: 22px;">
+    <textarea id="src" rows="3" placeholder="Type a phrase in English or Portuguese…"
+      style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+             border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
+    <div style="display:flex; align-items:center; gap:14px; margin-top:12px;">
+      <button class="btn" id="go">Translate</button>
+      <span class="muted" id="status"></span>
+    </div>
+    <div id="out" style="display:none; margin-top:18px;">
+      <div id="tr" style="font-size:22px; font-weight:600;"></div>
+      <div id="lit" class="muted" style="font-style:italic;"></div>
+      <div id="diff" style="margin-top:12px;"></div>
+      <div id="note" class="muted" style="margin-top:10px;"></div>
+      <div class="muted" style="margin-top:16px; font-size:14px;">
+        Want it as a flashcard with audio?
+        <a href="https://t.me/papagaio_bot">Send it to the bot</a> — one tap adds it to your deck.
+      </div>
+    </div>
+  </div>
+
+  <h2>Why this exists</h2>
+  <p class="muted" style="max-width: 640px;">
+    Three years of language schools and every big translator quietly teaching the
+    wrong dialect. PapaGaio is a translator, a frequency deck with spaced
+    repetition, a pronunciation checker and an AI voice coach — in Telegram,
+    free, with no premium tier. <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/about/`}>More →</a>
+  </p>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    async function run() {
+      const text = $('src').value.trim();
+      if (!text) return;
+      $('go').disabled = true;
+      $('status').textContent = 'translating…';
+      try {
+        const r = await fetch('https://papagaio.kirshp.workers.dev/api/translate', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text }),
+        });
+        const t = await r.json();
+        if (!r.ok) throw new Error(t.error ?? r.status);
+        $('out').style.display = 'block';
+        $('tr').textContent = (t.direction === 'en->pt' ? '🇵🇹 ' : '🇬🇧 ') + t.translation;
+        $('lit').textContent = t.literal && t.literal !== t.translation ? t.literal : '';
+        $('diff').innerHTML = (t.br_diff ?? []).length
+          ? '<div style="color:var(--warn); font-weight:600; margin-bottom:6px;">⚠️ Not Brazilian</div>' +
+            t.br_diff.map((d) =>
+              `<div><code style="color:var(--accent)">${d.pt}</code>` +
+              ` <span class="muted">— in Brazil</span> <code>${d.br}</code>` +
+              (d.gloss ? ` <span class="muted">(${d.gloss})</span>` : '') + '</div>'
+            ).join('')
+          : '';
+        $('note').textContent = t.note || '';
+      } catch (e) {
+        $('status').textContent = 'error: ' + e.message;
+        $('go').disabled = false;
+        return;
+      }
+      $('status').textContent = '';
+      $('go').disabled = false;
+    }
+    $('go').addEventListener('click', run);
+    $('src').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run();
+    });
+  </script>
+</BaseLayout>

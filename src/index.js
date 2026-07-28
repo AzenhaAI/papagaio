@@ -3,6 +3,8 @@
 import { schedule } from './fsrs.js';
 import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
+import { translate, formatTranslation } from './translate.js';
+import { handleApi } from './api.js';
 
 const COURSES = {
   pt: { flag: '🇵🇹', name: 'Português' },
@@ -35,6 +37,9 @@ export default {
         console.log('update error:', e.message);
       }
       return new Response('ok');
+    }
+    if (url.pathname.startsWith('/api/')) {
+      return handleApi(request, env, url.pathname);
     }
     return new Response('PapaGaio 🦜');
   },
@@ -93,7 +98,10 @@ async function handleUpdate(update, env) {
       chat_id: chat,
       text:
         '🦜 *PapaGaio*\n\nOne card every 15 minutes during working hours (09:00–18:00). ' +
-        'One tap — and back to work.\n\nWhich languages are we learning?',
+        'One tap — and back to work.\n\n' +
+        'Send me any phrase and I translate it — always *European* Portuguese, ' +
+        'with a warning wherever Brazilian differs. One tap adds it to your deck.\n\n' +
+        'Which languages are we learning?',
       parse_mode: 'Markdown',
       reply_markup: courseKeyboard(),
     });
@@ -199,6 +207,45 @@ async function handleUpdate(update, env) {
     });
     return;
   }
+
+  if (text.startsWith('/')) return; // unknown command — stay quiet
+
+  // Anything else is a translation request. This is the point of the product:
+  // a translator that never slips into Brazilian, wired straight into the deck.
+  await handleTranslation(env, uid, chat, text);
+}
+
+async function handleTranslation(env, uid, chatId, text) {
+  if (!env.GROQ_API_KEY) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: 'The translator needs GROQ_API_KEY to be set.' });
+    return;
+  }
+  await tg(env, 'sendChatAction', { chat_id: chatId, action: 'typing' });
+
+  let t;
+  try {
+    t = await translate(env, text);
+  } catch (e) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: 'Translation failed: ' + e.message.slice(0, 120) });
+    return;
+  }
+
+  // The learner's target is always the non-English side.
+  const term = t.direction === 'en->pt' ? t.translation : t.source;
+  const trans = t.direction === 'en->pt' ? t.source : t.translation;
+
+  await env.DB.prepare(
+    `INSERT INTO tr_last (user_id, course, term, trans, note, created_at) VALUES (?, 'pt', ?, ?, ?, ?)
+     ON CONFLICT(user_id) DO UPDATE SET term = excluded.term, trans = excluded.trans,
+       note = excluded.note, created_at = excluded.created_at`
+  ).bind(uid, term, trans, t.note ?? '', now()).run();
+
+  await tg(env, 'sendMessage', {
+    chat_id: chatId,
+    text: formatTranslation(t),
+    parse_mode: 'Markdown',
+    reply_markup: { inline_keyboard: [[{ text: '➕ Add to deck', callback_data: 'add' }, { text: '🔊 Listen', callback_data: 'say' }]] },
+  });
 }
 
 function courseKeyboard() {
@@ -368,6 +415,41 @@ async function handleCallback(cb, env) {
     return;
   }
 
+  if (data === 'add' || data === 'say') {
+    const last = await env.DB.prepare(`SELECT * FROM tr_last WHERE user_id = ?`).bind(uid).first();
+    if (!last) {
+      await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: 'Nothing to add' });
+      return;
+    }
+    if (data === 'say') {
+      await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+      try {
+        const audio = await synthesize(last.term, last.course);
+        await tgVoice(env, cb.message.chat.id, audio, `🔊 ${last.term}`);
+      } catch (e) {
+        await tg(env, 'sendMessage', { chat_id: cb.message.chat.id, text: 'Audio failed: ' + e.message.slice(0, 80) });
+      }
+      return;
+    }
+    // User cards live in the same table, tagged with owner so they stay private
+    // and sort after the frequency deck.
+    const id = `u${uid.toString(36)}-${Date.now().toString(36)}`;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO cards (id, course, term, trans, note, tags, freq, owner)
+         VALUES (?, ?, ?, ?, ?, '["mine"]', 100000, ?)`
+      ).bind(id, last.course, last.term, last.trans, last.note ?? '', uid),
+      env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, due) VALUES (?, ?, ?)`
+      ).bind(uid, id, now()),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?, ?, 'add', ?)`
+      ).bind(uid, id, now()),
+    ]);
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: '➕ Added — it will come back as a card' });
+    return;
+  }
+
   if (!data.startsWith('a:')) return;
   const chosen = parseInt(data.slice(2), 10);
 
@@ -483,8 +565,8 @@ async function sendExercise(env, user) {
     if (intro.n >= user.new_per_day) return false;
 
     card = await env.DB.prepare(
-      `SELECT * FROM cards WHERE course = ?
-       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?)
+      `SELECT * FROM cards WHERE course = ?1 AND (owner IS NULL OR owner = ?2)
+       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?2)
        ORDER BY freq LIMIT 1`
     ).bind(course, user.id).first();
     isNew = true;
@@ -524,7 +606,7 @@ async function sendExercise(env, user) {
   const askTrans = exercise !== 'ru_t'; // answer options are translations
   const { results: distractors } = await env.DB.prepare(
     `SELECT ${askTrans ? 'trans' : 'term'} AS v FROM cards
-     WHERE course = ? AND id != ? ORDER BY RANDOM() LIMIT 3`
+     WHERE course = ? AND id != ? AND owner IS NULL ORDER BY RANDOM() LIMIT 3`
   ).bind(course, card.id).all();
 
   const options = distractors.map((d) => d.v);

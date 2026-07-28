@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Dictionary — PapaGaio">
+  <h1>The deck</h1>
+  <p class="muted">
+    The shared frequency deck the bot teaches from. European Portuguese from A1
+    (survival first, Madeira vocabulary included) and English from B1–B2.
+    Every card has native-quality audio.
+  </p>
+
+  <div style="display:flex; gap:10px; margin: 18px 0;">
+    <button class="btn" data-course="pt" id="btn-pt">🇵🇹 Portuguese</button>
+    <button class="btn" data-course="en" id="btn-en" style="background:var(--panel2); color:var(--text);">🇬🇧 English</button>
+  </div>
+
+  <div id="list"></div>
+
+  <script>
+    const AUDIO = 'https://shpara.com/papagaio/audio/';
+    const API = 'https://papagaio.kirshp.workers.dev/api/deck';
+    const list = document.getElementById('list');
+
+    async function load(course) {
+      document.getElementById('btn-pt').style.cssText = course === 'pt' ? '' : 'background:var(--panel2); color:var(--text)';
+      document.getElementById('btn-en').style.cssText = course === 'en' ? '' : 'background:var(--panel2); color:var(--text)';
+      list.innerHTML = '<p class="muted">loading…</p>';
+      const r = await fetch(`${API}?course=${course}&limit=500`);
+      const { cards } = await r.json();
+      list.innerHTML = cards.map((c) => `
+        <div class="panel" style="margin-bottom:10px; padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
+          <strong style="font-size:18px;">${c.term}</strong>
+          ${c.gender ? `<span class="muted">(${c.gender})</span>` : ''}
+          <span>— ${c.trans}</span>
+          ${c.audio ? `<button onclick="new Audio('${AUDIO}${c.audio}').play()"
+            style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>` : ''}
+          ${c.note ? `<div class="muted" style="width:100%; font-size:14px;">${c.note}</div>` : ''}
+          ${c.ex_t ? `<div class="muted" style="width:100%; font-size:14px; font-style:italic;">${c.ex_t}</div>` : ''}
+        </div>`).join('');
+    }
+    document.getElementById('btn-pt').onclick = () => load('pt');
+    document.getElementById('btn-en').onclick = () => load('en');
+    load('pt');
+  </script>
+</BaseLayout>
