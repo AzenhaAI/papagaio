@@ -54,7 +54,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <input id="say" placeholder="responde em português…" autocomplete="off"
         style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:12px 14px; font:inherit; font-size:16px;" />
+      <button id="mic" title="Speak your reply"
+        style="background:var(--panel2); border:1px solid #2a4433; border-radius:10px;
+               font-size:20px; padding:0 16px; cursor:pointer;">🎙</button>
       <button class="btn" id="send">Send</button>
+    </div>
+    <div class="muted" id="micstate" style="font-size:13px; margin-top:6px;">
+      🎙 speak instead of typing — the coach will answer out loud
     </div>
   </div>
 
@@ -159,7 +165,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       };
     }
 
-    async function send() {
+    // ---- microphone ----
+    let rec = null, chunks = [], recording = false;
+
+    async function micToggle() {
+      if (recording) { rec.stop(); return; }
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const mime = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4']
+          .find((m) => MediaRecorder.isTypeSupported(m)) || '';
+        rec = new MediaRecorder(stream, mime ? { mimeType: mime } : {});
+        chunks = [];
+        rec.ondataavailable = (e) => chunks.push(e.data);
+        rec.onstop = async () => {
+          stream.getTracks().forEach((t) => t.stop());
+          recording = false;
+          $('mic').style.background = 'var(--panel2)';
+          $('micstate').textContent = '🤖 a ouvir…';
+          const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
+          const ext = (rec.mimeType || 'webm').includes('mp4') ? 'm4a' : 'webm';
+          const fd = new FormData();
+          fd.append('audio', blob, `say.${ext}`);
+          fd.append('language', course);
+          const r = await fetch(`${API}/api/transcribe`, {
+            method: 'POST', headers: { 'x-device-token': localStorage.getItem(TOKKEY) }, body: fd,
+          });
+          const d = await r.json();
+          $('micstate').textContent = '🎙 speak instead of typing — the coach will answer out loud';
+          if (d.text) { $('say').value = d.text; send(true); }
+          else $('micstate').textContent = '🎙 ' + (d.error ?? 'did not catch that — try again');
+        };
+        rec.start();
+        recording = true;
+        $('mic').style.background = 'color-mix(in srgb, var(--red) 40%, var(--panel2))';
+        $('micstate').textContent = '🔴 recording — tap 🎙 again to stop';
+      } catch {
+        $('micstate').textContent = 'microphone blocked — allow it in the browser and retry';
+      }
+    }
+    $('mic').onclick = micToggle;
+
+    async function speak(text) {
+      const r = await fetch(`${API}/api/tts`, {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ text, course }),
+      });
+      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+    }
+
+    async function send(voiced = false) {
       const text = $('say').value.trim();
       if (!text) return;
       $('say').value = '';
@@ -175,9 +229,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       });
       const d = await r.json();
       think.remove();
-      if (d.reply) bubble('coach', d.reply, d.note);
+      if (d.reply) {
+        bubble('coach', d.reply, d.note);
+        // A spoken turn earns a spoken answer — the full voice loop, in a browser.
+        if (voiced) speak(d.reply);
+      }
     }
-    $('send').onclick = send;
+    $('send').onclick = () => send(false);
     $('say').addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
 
     $('finish').onclick = async () => {

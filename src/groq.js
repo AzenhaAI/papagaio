@@ -1,8 +1,10 @@
 // Groq: Whisper for voice transcription + LLM for dialogs. Free tier.
 
-export async function transcribe(env, bytes, language) {
+export async function transcribe(env, bytes, language, filename = 'voice.ogg', mime = 'audio/ogg') {
+  // Whisper keys the container format off the filename extension, so browser
+  // recordings (webm in Chrome, mp4 in Safari) must arrive under their own name.
   const fd = new FormData();
-  fd.append('file', new Blob([bytes], { type: 'audio/ogg' }), 'voice.ogg');
+  fd.append('file', new Blob([bytes], { type: mime }), filename);
   fd.append('model', 'whisper-large-v3-turbo');
   fd.append('language', language);
   fd.append('response_format', 'json');

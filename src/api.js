@@ -5,7 +5,7 @@ import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
 import { ensureEntry } from './entry.js';
 import { SCENARIOS, LEVELS, coachTurn, scenarioList } from './coach.js';
-import { chat } from './groq.js';
+import { chat, transcribe } from './groq.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
@@ -242,6 +242,25 @@ export async function handleApi(request, env, path) {
 
   const uid = await authUser(env, request);
   if (path.startsWith('/api/') && !uid) return json({ error: 'device token required' }, 401);
+
+  // Browser microphone → text. Sits behind the device token like the coach
+  // itself: transcription costs Groq minutes, and the page that records is
+  // token-gated anyway.
+  if (path === '/api/transcribe' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'transcription not configured' }, 503);
+    const form = await request.formData().catch(() => null);
+    const f = form?.get('audio');
+    if (!f || typeof f === 'string') return json({ error: 'audio file is required' }, 400);
+    if (f.size > 2_000_000) return json({ error: 'recording too long' }, 413);
+    const language = form.get('language') === 'en' ? 'en' : 'pt';
+    try {
+      const bytes = new Uint8Array(await f.arrayBuffer());
+      const text = await transcribe(env, bytes, language, f.name || 'voice.webm', f.type || 'audio/webm');
+      return json({ text });
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+  }
 
   if (path === '/api/stats' && request.method === 'GET') {
     return json(await buildStats(env, uid));
