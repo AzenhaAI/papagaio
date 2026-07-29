@@ -1,0 +1,582 @@
+{
+  "meta": {
+    "deck": "core_004",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Second circle of verbs. Generated with adversarial pt-PT review."
+  },
+  "cards": [
+    {
+      "id": "pt0221",
+      "pt": "comer",
+      "trans": "to eat",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Depois da levada vamos comer bolo do caco com manteiga de alho.",
+      "ex_trans": "After the levada walk we're going to eat bolo do caco with garlic butter.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 221
+    },
+    {
+      "id": "pt0222",
+      "pt": "beber",
+      "trans": "to drink",
+      "pos": "verb",
+      "gender": null,
+      "note": "Portugal says beber for most drinks; Brazil prefers tomar.",
+      "ex_t": "Vamos beber uma poncha no fim do dia?",
+      "ex_trans": "Shall we drink a poncha at the end of the day?",
+      "tags": [
+        "core",
+        "verbo",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "freq": 222
+    },
+    {
+      "id": "pt0223",
+      "pt": "comprar",
+      "trans": "to buy",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Preciso de comprar fruta e legumes no Mercado dos Lavradores.",
+      "ex_trans": "I need to buy fruit and vegetables at the Mercado dos Lavradores.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 223
+    },
+    {
+      "id": "pt0224",
+      "pt": "chegar",
+      "trans": "to arrive",
+      "pos": "verb",
+      "gender": null,
+      "note": "chegar a + place in Portugal (chegar ao Funchal); Brazil says chegar em.",
+      "ex_t": "O autocarro costuma chegar atrasado quando chove no Funchal.",
+      "ex_trans": "The bus usually arrives late when it rains in Funchal.",
+      "tags": [
+        "core",
+        "verbo",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "freq": 224
+    },
+    {
+      "id": "pt0225",
+      "pt": "sair",
+      "trans": "to leave, go out",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Hoje vou sair do trabalho mais cedo para ir à farmácia.",
+      "ex_trans": "Today I'm leaving work earlier to go to the pharmacy.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 225
+    },
+    {
+      "id": "pt0226",
+      "pt": "entrar",
+      "trans": "to enter, go in",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Preciso do código para entrar na garagem do condomínio.",
+      "ex_trans": "I need the code to get into the building's garage.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 226
+    },
+    {
+      "id": "pt0227",
+      "pt": "voltar",
+      "trans": "to return, go back",
+      "pos": "verb",
+      "gender": null,
+      "note": "voltar a + infinitive = to do something again.",
+      "ex_t": "Tenho de voltar à AIMA na quinta para levantar o cartão de residência.",
+      "ex_trans": "I have to go back to AIMA on Thursday to pick up my residence card.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 227
+    },
+    {
+      "id": "pt0228",
+      "pt": "abrir",
+      "trans": "to open",
+      "pos": "verb",
+      "gender": null,
+      "note": "Irregular past participle: aberto.",
+      "ex_t": "A padaria só vai abrir às sete, ainda é cedo.",
+      "ex_trans": "The bakery only opens at seven, it's still early.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 228
+    },
+    {
+      "id": "pt0229",
+      "pt": "fechar",
+      "trans": "to close",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O supermercado vai fechar às nove; ainda dá tempo.",
+      "ex_trans": "The supermarket closes at nine; there's still time.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 229
+    },
+    {
+      "id": "pt0230",
+      "pt": "esperar",
+      "trans": "to wait; to hope",
+      "pos": "verb",
+      "gender": null,
+      "note": "Means both to wait and to hope/expect.",
+      "ex_t": "Detesto esperar pelo autocarro à chuva sem abrigo.",
+      "ex_trans": "I hate waiting for the bus in the rain with no shelter.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 230
+    },
+    {
+      "id": "pt0231",
+      "pt": "procurar",
+      "trans": "to look for",
+      "pos": "verb",
+      "gender": null,
+      "note": "False friend: to look for, not to procure.",
+      "ex_t": "Estou a procurar um T1 com varanda perto do Lido.",
+      "ex_trans": "I'm looking for a one-bedroom flat with a balcony near the Lido.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 231
+    },
+    {
+      "id": "pt0232",
+      "pt": "encontrar",
+      "trans": "to find; to meet",
+      "pos": "verb",
+      "gender": null,
+      "note": "Also to meet up: encontrar-se com alguém.",
+      "ex_t": "Não consigo encontrar o recibo da renda no meu email.",
+      "ex_trans": "I can't find the rent receipt in my email.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 232
+    },
+    {
+      "id": "pt0233",
+      "pt": "pedir",
+      "trans": "to ask for, order",
+      "pos": "verb",
+      "gender": null,
+      "note": "Ask FOR something; asking a question is perguntar.",
+      "ex_t": "Ao balcão, vou pedir um galão e um pastel de nata.",
+      "ex_trans": "At the counter, I'll order a galão and a custard tart.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 233
+    },
+    {
+      "id": "pt0234",
+      "pt": "pôr",
+      "trans": "to put",
+      "pos": "verb",
+      "gender": null,
+      "note": "Highly irregular; Brazil usually says colocar.",
+      "ex_t": "Vou pôr as compras no frigorífico antes que o peixe estrague.",
+      "ex_trans": "I'll put the shopping in the fridge before the fish goes off.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "freq": 234
+    },
+    {
+      "id": "pt0235",
+      "pt": "trazer",
+      "trans": "to bring",
+      "pos": "verb",
+      "gender": null,
+      "note": "Bring towards the speaker; taking away is levar.",
+      "ex_t": "Podes trazer pão e queijo quando vieres do mercado?",
+      "ex_trans": "Can you bring bread and cheese when you come from the market?",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 235
+    },
+    {
+      "id": "pt0236",
+      "pt": "deixar",
+      "trans": "to leave (something); to let",
+      "pos": "verb",
+      "gender": null,
+      "note": "Also to let: deixa-me ver = let me see.",
+      "ex_t": "Vou deixar a encomenda na portaria do condomínio.",
+      "ex_trans": "I'll leave the parcel at the building's front desk.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 236
+    },
+    {
+      "id": "pt0237",
+      "pt": "começar",
+      "trans": "to begin, start",
+      "pos": "verb",
+      "gender": null,
+      "note": "começar a + infinitive: começar a trabalhar.",
+      "ex_t": "A reunião de equipa vai começar às nove em ponto.",
+      "ex_trans": "The team meeting starts at nine sharp.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 237
+    },
+    {
+      "id": "pt0238",
+      "pt": "acabar",
+      "trans": "to finish, end",
+      "pos": "verb",
+      "gender": null,
+      "note": "acabar de + infinitive = to have just done something.",
+      "ex_t": "Quero acabar este dashboard antes do almoço.",
+      "ex_trans": "I want to finish this dashboard before lunch.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 238
+    },
+    {
+      "id": "pt0239",
+      "pt": "usar",
+      "trans": "to use; to wear",
+      "pos": "verb",
+      "gender": null,
+      "note": "Also to wear: usar óculos.",
+      "ex_t": "Podes usar o multibanco ao lado da farmácia para levantar dinheiro.",
+      "ex_trans": "You can use the ATM next to the pharmacy to withdraw cash.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 239
+    },
+    {
+      "id": "pt0240",
+      "pt": "ajudar",
+      "trans": "to help",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O vizinho veio ajudar-me a subir as compras até ao terceiro andar.",
+      "ex_trans": "The neighbour came to help me carry the shopping up to the third floor.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 240
+    },
+    {
+      "id": "pt0241",
+      "pt": "viver",
+      "trans": "to live",
+      "pos": "verb",
+      "gender": null,
+      "note": "morar is only to reside; viver also means to live (life).",
+      "ex_t": "Gosto de viver na Madeira, apesar das subidas.",
+      "ex_trans": "I like living in Madeira, despite the hills.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 241
+    },
+    {
+      "id": "pt0242",
+      "pt": "dormir",
+      "trans": "to sleep",
+      "pos": "verb",
+      "gender": null,
+      "note": "Stem change: eu durmo.",
+      "ex_t": "Com este calor é difícil dormir sem ventoinha.",
+      "ex_trans": "In this heat it's hard to sleep without a fan.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 242
+    },
+    {
+      "id": "pt0243",
+      "pt": "acordar",
+      "trans": "to wake up",
+      "pos": "verb",
+      "gender": null,
+      "note": "False friend: to wake up, not to accord or agree.",
+      "ex_t": "Amanhã tenho de acordar às seis para apanhar o primeiro autocarro.",
+      "ex_trans": "Tomorrow I have to wake up at six to catch the first bus.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 243
+    },
+    {
+      "id": "pt0244",
+      "pt": "ouvir",
+      "trans": "to hear, listen",
+      "pos": "verb",
+      "gender": null,
+      "note": "Presente: eu ouço.",
+      "ex_t": "Gosto de ouvir o mar da varanda ao fim da tarde.",
+      "ex_trans": "I like listening to the sea from the balcony in the late afternoon.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 244
+    },
+    {
+      "id": "pt0245",
+      "pt": "ler",
+      "trans": "to read",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Costumo ler as notícias ao pequeno-almoço no café da esquina.",
+      "ex_trans": "I usually read the news over breakfast at the corner café.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 245
+    },
+    {
+      "id": "pt0246",
+      "pt": "escrever",
+      "trans": "to write",
+      "pos": "verb",
+      "gender": null,
+      "note": "Irregular past participle: escrito.",
+      "ex_t": "Tenho de escrever um email ao senhorio por causa da humidade.",
+      "ex_trans": "I have to write an email to the landlord about the damp.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 246
+    },
+    {
+      "id": "pt0247",
+      "pt": "enviar",
+      "trans": "to send",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Vou enviar os documentos digitalizados para a AIMA ainda hoje.",
+      "ex_trans": "I'll send the scanned documents to AIMA later today.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 247
+    },
+    {
+      "id": "pt0248",
+      "pt": "receber",
+      "trans": "to receive",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Devo receber o novo cartão de residência este mês.",
+      "ex_trans": "I should receive the new residence card this month.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 248
+    },
+    {
+      "id": "pt0249",
+      "pt": "mudar",
+      "trans": "to change; to move",
+      "pos": "verb",
+      "gender": null,
+      "note": "mudar de casa = to move house.",
+      "ex_t": "Vamos mudar de casa para Câmara de Lobos em setembro.",
+      "ex_trans": "We're moving house to Câmara de Lobos in September.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 249
+    },
+    {
+      "id": "pt0250",
+      "pt": "tentar",
+      "trans": "to try",
+      "pos": "verb",
+      "gender": null,
+      "note": "tentar + infinitive, no preposition.",
+      "ex_t": "Vou tentar apanhar o autocarro das oito e meia.",
+      "ex_trans": "I'm going to try to catch the half past eight bus.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 250
+    },
+    {
+      "id": "pt0251",
+      "pt": "conseguir",
+      "trans": "to manage to, succeed",
+      "pos": "verb",
+      "gender": null,
+      "note": "conseguir = manage to; poder = may/can. Presente: eu consigo.",
+      "ex_t": "Ao sábado é difícil conseguir mesa numa esplanada no centro.",
+      "ex_trans": "On Saturdays it's hard to get a table at a terrace café in the centre.",
+      "tags": [
+        "core",
+        "verbo",
+        "irregular"
+      ],
+      "unit": "verbos",
+      "freq": 251
+    },
+    {
+      "id": "pt0252",
+      "pt": "esquecer",
+      "trans": "to forget",
+      "pos": "verb",
+      "gender": null,
+      "note": "Usually reflexive: esquecer-se de.",
+      "ex_t": "Não te podes esquecer do guarda-chuva; no Funchal chove sem avisar.",
+      "ex_trans": "You mustn't forget your umbrella; in Funchal it rains without warning.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 252
+    },
+    {
+      "id": "pt0253",
+      "pt": "lembrar",
+      "trans": "to remember; to remind",
+      "pos": "verb",
+      "gender": null,
+      "note": "lembrar-se de = remember; lembrar alguém de = remind.",
+      "ex_t": "Podes lembrar-me de pagar a quota do condomínio no dia um?",
+      "ex_trans": "Can you remind me to pay the condo fee on the first?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 253
+    },
+    {
+      "id": "pt0254",
+      "pt": "conhecer",
+      "trans": "to know (people, places); to meet",
+      "pos": "verb",
+      "gender": null,
+      "note": "People and places; facts are saber.",
+      "ex_t": "Queres conhecer a levada do Caldeirão Verde no sábado?",
+      "ex_trans": "Do you want to check out the Caldeirão Verde levada on Saturday?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 254
+    },
+    {
+      "id": "pt0255",
+      "pt": "vender",
+      "trans": "to sell",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "A banca do mercado começou a vender anonas esta semana.",
+      "ex_trans": "The market stall started selling custard apples this week.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "freq": 255
+    }
+  ]
+}

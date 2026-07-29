@@ -1,0 +1,584 @@
+{
+  "meta": {
+    "deck": "core_006",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Work, money and digital life in Portugal."
+  },
+  "cards": [
+    {
+      "id": "pt0291",
+      "pt": "a reunião",
+      "trans": "meeting",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A reunião de equipa começa às dez, logo a seguir ao café.",
+      "ex_trans": "The team meeting starts at ten, right after coffee.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 291
+    },
+    {
+      "id": "pt0292",
+      "pt": "o trabalho",
+      "trans": "work; job",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Hoje vou a pé para o trabalho porque o autocarro está atrasado.",
+      "ex_trans": "Today I'm walking to work because the bus is late.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 292
+    },
+    {
+      "id": "pt0293",
+      "pt": "a empresa",
+      "trans": "company",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A empresa deixa-me trabalhar a partir de casa dois dias por semana.",
+      "ex_trans": "The company lets me work from home two days a week.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 293
+    },
+    {
+      "id": "pt0294",
+      "pt": "o colega",
+      "trans": "colleague",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Same form for both sexes: o colega / a colega — only the article changes.",
+      "ex_t": "Vou almoçar com um colega perto do Mercado dos Lavradores.",
+      "ex_trans": "I'm having lunch with a colleague near the Lavradores Market.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 294
+    },
+    {
+      "id": "pt0295",
+      "pt": "o chefe",
+      "trans": "boss",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O chefe quer o dashboard pronto antes da reunião de sexta.",
+      "ex_trans": "The boss wants the dashboard ready before Friday's meeting.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 295
+    },
+    {
+      "id": "pt0296",
+      "pt": "o cliente",
+      "trans": "client; customer",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O cliente pediu mais uma alteração ao relatório de vendas.",
+      "ex_trans": "The client asked for one more change to the sales report.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 296
+    },
+    {
+      "id": "pt0297",
+      "pt": "o projeto",
+      "trans": "project",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Este projeto de dados tem de estar fechado até ao fim do mês.",
+      "ex_trans": "This data project has to be wrapped up by the end of the month.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 297
+    },
+    {
+      "id": "pt0298",
+      "pt": "o prazo",
+      "trans": "deadline",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Deadline — but also shelf life: every yogurt has a 'prazo de validade' (expiry date).",
+      "ex_t": "O prazo para entregar o relatório é sexta-feira ao meio-dia.",
+      "ex_trans": "The deadline to hand in the report is Friday at noon.",
+      "tags": [
+        "core",
+        "trabalho",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 298
+    },
+    {
+      "id": "pt0299",
+      "pt": "o relatório",
+      "trans": "report",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Enviei o relatório mensal ao chefe antes do almoço.",
+      "ex_trans": "I sent the monthly report to the boss before lunch.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 299
+    },
+    {
+      "id": "pt0300",
+      "pt": "os dados",
+      "trans": "data",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Always plural: 'os dados estão limpos'. Singular 'o dado' is a die (the one you roll).",
+      "ex_t": "Os dados de vendas chegam todas as manhãs num ficheiro CSV.",
+      "ex_trans": "The sales data arrives every morning in a CSV file.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 300
+    },
+    {
+      "id": "pt0301",
+      "pt": "o ficheiro",
+      "trans": "file (computer)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pt-PT; Brazil says 'arquivo'. In Portugal 'arquivo' means an archive.",
+      "ex_t": "Não consigo abrir o ficheiro que me enviaste ontem.",
+      "ex_trans": "I can't open the file you sent me yesterday.",
+      "tags": [
+        "core",
+        "trabalho",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "freq": 301
+    },
+    {
+      "id": "pt0302",
+      "pt": "o computador",
+      "trans": "computer",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Deixei o computador do trabalho a atualizar durante a noite.",
+      "ex_trans": "I left the work computer updating overnight.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 302
+    },
+    {
+      "id": "pt0303",
+      "pt": "o ecrã",
+      "trans": "screen",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pt-PT; Brazil says 'tela'. In Portugal 'tela' is a painter's canvas.",
+      "ex_t": "Trabalho muito melhor com um segundo ecrã em casa.",
+      "ex_trans": "I work much better with a second screen at home.",
+      "tags": [
+        "core",
+        "trabalho",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "freq": 303
+    },
+    {
+      "id": "pt0304",
+      "pt": "o rato",
+      "trans": "mouse (computer)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pt-PT for the computer mouse — Brazil keeps the English 'mouse'. Also the animal.",
+      "ex_t": "Comprei um rato novo para o computador do escritório.",
+      "ex_trans": "I bought a new mouse for the office computer.",
+      "tags": [
+        "core",
+        "trabalho",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "freq": 304
+    },
+    {
+      "id": "pt0305",
+      "pt": "a palavra-passe",
+      "trans": "password",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT; Brazil says 'senha'. In Portugal 'senha' is the queue ticket you pull at AIMA, the Finanças or the pharmacy.",
+      "ex_t": "Mudei outra vez a palavra-passe do e-mail da empresa.",
+      "ex_trans": "I changed the company email password yet again.",
+      "tags": [
+        "core",
+        "trabalho",
+        "pt-pt",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 305
+    },
+    {
+      "id": "pt0306",
+      "pt": "o correio eletrónico",
+      "trans": "email",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Formal term — in speech everyone says 'o e-mail'. pt-PT accent: eletrónico, not the Brazilian eletrônico.",
+      "ex_t": "Recebi a fatura da luz por correio eletrónico.",
+      "ex_trans": "I received the electricity bill by email.",
+      "tags": [
+        "core",
+        "trabalho",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "freq": 306
+    },
+    {
+      "id": "pt0307",
+      "pt": "a fatura",
+      "trans": "invoice; receipt",
+      "pos": "noun",
+      "gender": "f",
+      "note": "In Portugal every café asks 'Fatura com contribuinte?' — whether you want your tax number on the receipt.",
+      "ex_t": "Pediste a fatura com contribuinte no café?",
+      "ex_trans": "Did you ask for the receipt with your tax number at the café?",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 307
+    },
+    {
+      "id": "pt0308",
+      "pt": "o ordenado",
+      "trans": "salary; wages",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Everyday pt-PT word for salary ('salário' also works; Brazil uses only 'salário').",
+      "ex_t": "O ordenado cai na conta no último dia útil do mês.",
+      "ex_trans": "The salary lands in the account on the last working day of the month.",
+      "tags": [
+        "core",
+        "financas",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "freq": 308
+    },
+    {
+      "id": "pt0309",
+      "pt": "o IVA",
+      "trans": "VAT",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O IVA já está incluído no preço do menu do almoço.",
+      "ex_trans": "VAT is already included in the price of the lunch menu.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 309
+    },
+    {
+      "id": "pt0310",
+      "pt": "o IRS",
+      "trans": "income tax",
+      "pos": "noun",
+      "gender": "m",
+      "note": "False friend for US ears: in Portugal the IRS is the personal income tax itself, not an agency — the tax office is 'as Finanças'.",
+      "ex_t": "Entreguei o IRS online no Portal das Finanças em abril.",
+      "ex_trans": "I filed my income tax online on the tax office portal in April.",
+      "tags": [
+        "core",
+        "financas",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 310
+    },
+    {
+      "id": "pt0311",
+      "pt": "a conta bancária",
+      "trans": "bank account",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Abri uma conta bancária cá para receber o ordenado.",
+      "ex_trans": "I opened a bank account here to receive my salary.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 311
+    },
+    {
+      "id": "pt0312",
+      "pt": "o empréstimo",
+      "trans": "loan",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Pedimos um empréstimo ao banco para comprar um apartamento no Funchal.",
+      "ex_trans": "We asked the bank for a loan to buy a flat in Funchal.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 312
+    },
+    {
+      "id": "pt0313",
+      "pt": "a poupança",
+      "trans": "savings",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Todos os meses vai uma parte do ordenado para a poupança.",
+      "ex_trans": "Every month part of the salary goes into savings.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 313
+    },
+    {
+      "id": "pt0314",
+      "pt": "transferir",
+      "trans": "to transfer",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Vou transferir a renda por MB WAY ainda hoje.",
+      "ex_trans": "I'm going to transfer the rent by MB WAY later today.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 314
+    },
+    {
+      "id": "pt0315",
+      "pt": "poupar",
+      "trans": "to save (money)",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Levo o almoço de casa para poupar algum dinheiro.",
+      "ex_trans": "I bring lunch from home to save some money.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 315
+    },
+    {
+      "id": "pt0316",
+      "pt": "gastar",
+      "trans": "to spend",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Tento não gastar mais de dez euros por dia em cafés.",
+      "ex_trans": "I try not to spend more than ten euros a day on coffees.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 316
+    },
+    {
+      "id": "pt0317",
+      "pt": "ganhar",
+      "trans": "to earn; to win",
+      "pos": "verb",
+      "gender": null,
+      "note": "Covers both 'to earn' (ganhar bem) and 'to win' (ganhar um prémio).",
+      "ex_t": "Quanto se pode ganhar como analista de dados no Funchal?",
+      "ex_trans": "How much can you earn as a data analyst in Funchal?",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 317
+    },
+    {
+      "id": "pt0318",
+      "pt": "o imposto",
+      "trans": "tax",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O imposto sobre o carro paga-se uma vez por ano.",
+      "ex_trans": "The car tax is paid once a year.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "freq": 318
+    },
+    {
+      "id": "pt0319",
+      "pt": "o contribuinte",
+      "trans": "taxpayer; tax number (NIF)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Literally 'taxpayer', but in shops it means your NIF: the cashier's 'Contribuinte?' asks whether to put your tax number on the receipt.",
+      "ex_t": "No supermercado perguntam sempre se quero contribuinte na fatura.",
+      "ex_trans": "At the supermarket they always ask if I want my tax number on the receipt.",
+      "tags": [
+        "core",
+        "financas",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 319
+    },
+    {
+      "id": "pt0320",
+      "pt": "a reforma",
+      "trans": "retirement; pension",
+      "pos": "noun",
+      "gender": "f",
+      "note": "False friend: in pt-PT this is retirement or the pension, not 'reform'. Brazil says 'aposentadoria'; 'reformado' = retired.",
+      "ex_t": "A minha vizinha do prédio já está na reforma.",
+      "ex_trans": "My neighbour in the building is already retired.",
+      "tags": [
+        "core",
+        "financas",
+        "pt-pt",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 320
+    },
+    {
+      "id": "pt0321",
+      "pt": "o feriado",
+      "trans": "public holiday",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Amanhã é feriado e o escritório está fechado.",
+      "ex_trans": "Tomorrow is a public holiday and the office is closed.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 321
+    },
+    {
+      "id": "pt0322",
+      "pt": "as férias",
+      "trans": "holidays; vacation",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Always plural: 'as férias são em agosto'.",
+      "ex_t": "Em agosto tiro duas semanas de férias para caminhar nas levadas.",
+      "ex_trans": "In August I take two weeks of holidays to walk the levadas.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 322
+    },
+    {
+      "id": "pt0323",
+      "pt": "a folga",
+      "trans": "day off",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Na segunda tenho folga e vou ao mercado logo de manhã.",
+      "ex_trans": "On Monday I have a day off and I'm going to the market first thing in the morning.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 323
+    },
+    {
+      "id": "pt0324",
+      "pt": "o horário",
+      "trans": "schedule; timetable",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O horário dos autocarros muda nos feriados.",
+      "ex_trans": "The bus timetable changes on public holidays.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "freq": 324
+    },
+    {
+      "id": "pt0325",
+      "pt": "o escritório",
+      "trans": "office",
+      "pos": "noun",
+      "gender": "m",
+      "note": "The office as a place — a desk is 'a secretária' (which also means 'secretary'). Spanish 'escritorio' (desk) misleads here.",
+      "ex_t": "O escritório fica perto do teleférico, no centro do Funchal.",
+      "ex_trans": "The office is near the cable car, in the centre of Funchal.",
+      "tags": [
+        "core",
+        "trabalho",
+        "trap"
+      ],
+      "unit": "trabalho",
+      "freq": 325
+    }
+  ]
+}

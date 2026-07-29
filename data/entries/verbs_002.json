@@ -1,0 +1,1278 @@
+{
+  "meta": {
+    "note": "Conjugations for the second verb circle. Verified for European forms."
+  },
+  "entries": {
+    "pt0221": {
+      "conj": {
+        "presente": [
+          "como",
+          "comes",
+          "come",
+          "comemos",
+          "comem"
+        ],
+        "pps": [
+          "comi",
+          "comeste",
+          "comeu",
+          "comemos",
+          "comeram"
+        ],
+        "imperfeito": [
+          "comia",
+          "comias",
+          "comia",
+          "comíamos",
+          "comiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "comer fora",
+          "trans": "to eat out"
+        },
+        {
+          "t": "comer qualquer coisa",
+          "trans": "to grab a bite"
+        }
+      ]
+    },
+    "pt0222": {
+      "conj": {
+        "presente": [
+          "bebo",
+          "bebes",
+          "bebe",
+          "bebemos",
+          "bebem"
+        ],
+        "pps": [
+          "bebi",
+          "bebeste",
+          "bebeu",
+          "bebemos",
+          "beberam"
+        ],
+        "imperfeito": [
+          "bebia",
+          "bebias",
+          "bebia",
+          "bebíamos",
+          "bebiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "beber um copo",
+          "trans": "to have a drink"
+        },
+        {
+          "t": "beber água da torneira",
+          "trans": "to drink tap water"
+        }
+      ]
+    },
+    "pt0223": {
+      "conj": {
+        "presente": [
+          "compro",
+          "compras",
+          "compra",
+          "compramos",
+          "compram"
+        ],
+        "pps": [
+          "comprei",
+          "compraste",
+          "comprou",
+          "comprámos",
+          "compraram"
+        ],
+        "imperfeito": [
+          "comprava",
+          "compravas",
+          "comprava",
+          "comprávamos",
+          "compravam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "comprar online",
+          "trans": "to buy online"
+        },
+        {
+          "t": "comprar em segunda mão",
+          "trans": "to buy second-hand"
+        }
+      ]
+    },
+    "pt0224": {
+      "conj": {
+        "presente": [
+          "chego",
+          "chegas",
+          "chega",
+          "chegamos",
+          "chegam"
+        ],
+        "pps": [
+          "cheguei",
+          "chegaste",
+          "chegou",
+          "chegámos",
+          "chegaram"
+        ],
+        "imperfeito": [
+          "chegava",
+          "chegavas",
+          "chegava",
+          "chegávamos",
+          "chegavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "chegar a horas",
+          "trans": "to arrive on time"
+        },
+        {
+          "t": "chegar atrasado",
+          "trans": "to arrive late"
+        },
+        {
+          "t": "chegar a casa",
+          "trans": "to get home"
+        }
+      ],
+      "grammar": "chegar a + place (cheguei ao Funchal); Brazil uses chegar em. PPS spelling: cheguei (g→gu before e)."
+    },
+    "pt0225": {
+      "conj": {
+        "presente": [
+          "saio",
+          "sais",
+          "sai",
+          "saímos",
+          "saem"
+        ],
+        "pps": [
+          "saí",
+          "saíste",
+          "saiu",
+          "saímos",
+          "saíram"
+        ],
+        "imperfeito": [
+          "saía",
+          "saías",
+          "saía",
+          "saíamos",
+          "saíam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "sair de casa",
+          "trans": "to leave the house"
+        },
+        {
+          "t": "sair à noite",
+          "trans": "to go out at night"
+        }
+      ],
+      "grammar": "Presente eu saio; mind the accents in the PPS: saí, saiu, saíram."
+    },
+    "pt0226": {
+      "conj": {
+        "presente": [
+          "entro",
+          "entras",
+          "entra",
+          "entramos",
+          "entram"
+        ],
+        "pps": [
+          "entrei",
+          "entraste",
+          "entrou",
+          "entrámos",
+          "entraram"
+        ],
+        "imperfeito": [
+          "entrava",
+          "entravas",
+          "entrava",
+          "entrávamos",
+          "entravam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "entrar em contacto",
+          "trans": "to get in touch"
+        },
+        {
+          "t": "entrar na fila",
+          "trans": "to join the queue"
+        }
+      ],
+      "grammar": "Takes em: entrar no autocarro, entrar em casa."
+    },
+    "pt0227": {
+      "conj": {
+        "presente": [
+          "volto",
+          "voltas",
+          "volta",
+          "voltamos",
+          "voltam"
+        ],
+        "pps": [
+          "voltei",
+          "voltaste",
+          "voltou",
+          "voltámos",
+          "voltaram"
+        ],
+        "imperfeito": [
+          "voltava",
+          "voltavas",
+          "voltava",
+          "voltávamos",
+          "voltavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "voltar para casa",
+          "trans": "to go back home"
+        },
+        {
+          "t": "voltar atrás",
+          "trans": "to turn back, backtrack"
+        }
+      ],
+      "grammar": "voltar a + infinitive = to do something again: voltei a tentar."
+    },
+    "pt0228": {
+      "conj": {
+        "presente": [
+          "abro",
+          "abres",
+          "abre",
+          "abrimos",
+          "abrem"
+        ],
+        "pps": [
+          "abri",
+          "abriste",
+          "abriu",
+          "abrimos",
+          "abriram"
+        ],
+        "imperfeito": [
+          "abria",
+          "abrias",
+          "abria",
+          "abríamos",
+          "abriam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "abrir uma conta",
+          "trans": "to open an account"
+        },
+        {
+          "t": "abrir a porta",
+          "trans": "to open the door"
+        }
+      ],
+      "grammar": "Regular except the past participle: aberto."
+    },
+    "pt0229": {
+      "conj": {
+        "presente": [
+          "fecho",
+          "fechas",
+          "fecha",
+          "fechamos",
+          "fecham"
+        ],
+        "pps": [
+          "fechei",
+          "fechaste",
+          "fechou",
+          "fechámos",
+          "fecharam"
+        ],
+        "imperfeito": [
+          "fechava",
+          "fechavas",
+          "fechava",
+          "fechávamos",
+          "fechavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "fechar à chave",
+          "trans": "to lock"
+        },
+        {
+          "t": "fechar a conta",
+          "trans": "to close the account / settle the bill"
+        }
+      ]
+    },
+    "pt0230": {
+      "conj": {
+        "presente": [
+          "espero",
+          "esperas",
+          "espera",
+          "esperamos",
+          "esperam"
+        ],
+        "pps": [
+          "esperei",
+          "esperaste",
+          "esperou",
+          "esperámos",
+          "esperaram"
+        ],
+        "imperfeito": [
+          "esperava",
+          "esperavas",
+          "esperava",
+          "esperávamos",
+          "esperavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "esperar na fila",
+          "trans": "to wait in the queue"
+        },
+        {
+          "t": "espera aí",
+          "trans": "hold on a second"
+        }
+      ],
+      "grammar": "esperar por alguém = wait for someone; esperar que + subjunctive = to hope that."
+    },
+    "pt0231": {
+      "conj": {
+        "presente": [
+          "procuro",
+          "procuras",
+          "procura",
+          "procuramos",
+          "procuram"
+        ],
+        "pps": [
+          "procurei",
+          "procuraste",
+          "procurou",
+          "procurámos",
+          "procuraram"
+        ],
+        "imperfeito": [
+          "procurava",
+          "procuravas",
+          "procurava",
+          "procurávamos",
+          "procuravam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "procurar casa",
+          "trans": "to house-hunt"
+        },
+        {
+          "t": "procurar emprego",
+          "trans": "to job-hunt"
+        },
+        {
+          "t": "andar à procura de",
+          "trans": "to be looking for"
+        }
+      ]
+    },
+    "pt0232": {
+      "conj": {
+        "presente": [
+          "encontro",
+          "encontras",
+          "encontra",
+          "encontramos",
+          "encontram"
+        ],
+        "pps": [
+          "encontrei",
+          "encontraste",
+          "encontrou",
+          "encontrámos",
+          "encontraram"
+        ],
+        "imperfeito": [
+          "encontrava",
+          "encontravas",
+          "encontrava",
+          "encontrávamos",
+          "encontravam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "encontrar-se com",
+          "trans": "to meet up with"
+        },
+        {
+          "t": "encontrar lugar",
+          "trans": "to find a spot"
+        }
+      ],
+      "grammar": "encontrar = to find; encontrar-se com alguém = to meet up with someone."
+    },
+    "pt0233": {
+      "conj": {
+        "presente": [
+          "peço",
+          "pedes",
+          "pede",
+          "pedimos",
+          "pedem"
+        ],
+        "pps": [
+          "pedi",
+          "pediste",
+          "pediu",
+          "pedimos",
+          "pediram"
+        ],
+        "imperfeito": [
+          "pedia",
+          "pedias",
+          "pedia",
+          "pedíamos",
+          "pediam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "pedir a conta",
+          "trans": "to ask for the bill"
+        },
+        {
+          "t": "pedir ajuda",
+          "trans": "to ask for help"
+        },
+        {
+          "t": "pedir desculpa",
+          "trans": "to apologise"
+        }
+      ],
+      "grammar": "pedir algo a alguém = ask someone for something; a question is perguntar. Presente: eu peço."
+    },
+    "pt0234": {
+      "conj": {
+        "presente": [
+          "ponho",
+          "pões",
+          "põe",
+          "pomos",
+          "põem"
+        ],
+        "pps": [
+          "pus",
+          "puseste",
+          "pôs",
+          "pusemos",
+          "puseram"
+        ],
+        "imperfeito": [
+          "punha",
+          "punhas",
+          "punha",
+          "púnhamos",
+          "punham"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "pôr a mesa",
+          "trans": "to set the table"
+        },
+        {
+          "t": "pôr gasolina",
+          "trans": "to fill up with petrol"
+        }
+      ],
+      "grammar": "Fully irregular (ponho, pus, punha); the only infinitive with a circumflex; compounds like supor and repor follow it."
+    },
+    "pt0235": {
+      "conj": {
+        "presente": [
+          "trago",
+          "trazes",
+          "traz",
+          "trazemos",
+          "trazem"
+        ],
+        "pps": [
+          "trouxe",
+          "trouxeste",
+          "trouxe",
+          "trouxemos",
+          "trouxeram"
+        ],
+        "imperfeito": [
+          "trazia",
+          "trazias",
+          "trazia",
+          "trazíamos",
+          "traziam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "trazer de casa",
+          "trans": "to bring from home"
+        },
+        {
+          "t": "trazer boas notícias",
+          "trans": "to bring good news"
+        }
+      ],
+      "grammar": "PPS trouxe (x sounds like ss); trazer = bring towards the speaker, levar = take away."
+    },
+    "pt0236": {
+      "conj": {
+        "presente": [
+          "deixo",
+          "deixas",
+          "deixa",
+          "deixamos",
+          "deixam"
+        ],
+        "pps": [
+          "deixei",
+          "deixaste",
+          "deixou",
+          "deixámos",
+          "deixaram"
+        ],
+        "imperfeito": [
+          "deixava",
+          "deixavas",
+          "deixava",
+          "deixávamos",
+          "deixavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "deixar recado",
+          "trans": "to leave a message"
+        },
+        {
+          "t": "deixar cair",
+          "trans": "to drop"
+        },
+        {
+          "t": "deixar em paz",
+          "trans": "to leave alone"
+        }
+      ],
+      "grammar": "deixar de + infinitive = to stop doing something: deixei de fumar."
+    },
+    "pt0237": {
+      "conj": {
+        "presente": [
+          "começo",
+          "começas",
+          "começa",
+          "começamos",
+          "começam"
+        ],
+        "pps": [
+          "comecei",
+          "começaste",
+          "começou",
+          "começámos",
+          "começaram"
+        ],
+        "imperfeito": [
+          "começava",
+          "começavas",
+          "começava",
+          "começávamos",
+          "começavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "começar a trabalhar",
+          "trans": "to start working"
+        },
+        {
+          "t": "começar do zero",
+          "trans": "to start from scratch"
+        }
+      ],
+      "grammar": "começar a + infinitive; PPS spelling: eu comecei (ç→c before e)."
+    },
+    "pt0238": {
+      "conj": {
+        "presente": [
+          "acabo",
+          "acabas",
+          "acaba",
+          "acabamos",
+          "acabam"
+        ],
+        "pps": [
+          "acabei",
+          "acabaste",
+          "acabou",
+          "acabámos",
+          "acabaram"
+        ],
+        "imperfeito": [
+          "acabava",
+          "acabavas",
+          "acabava",
+          "acabávamos",
+          "acabavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "acabar de chegar",
+          "trans": "to have just arrived"
+        },
+        {
+          "t": "acabou-se",
+          "trans": "that's the end of it"
+        }
+      ],
+      "grammar": "acabar de + infinitive = to have just done something: acabei de almoçar."
+    },
+    "pt0239": {
+      "conj": {
+        "presente": [
+          "uso",
+          "usas",
+          "usa",
+          "usamos",
+          "usam"
+        ],
+        "pps": [
+          "usei",
+          "usaste",
+          "usou",
+          "usámos",
+          "usaram"
+        ],
+        "imperfeito": [
+          "usava",
+          "usavas",
+          "usava",
+          "usávamos",
+          "usavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "usar óculos",
+          "trans": "to wear glasses"
+        },
+        {
+          "t": "usar o multibanco",
+          "trans": "to use the ATM"
+        }
+      ]
+    },
+    "pt0240": {
+      "conj": {
+        "presente": [
+          "ajudo",
+          "ajudas",
+          "ajuda",
+          "ajudamos",
+          "ajudam"
+        ],
+        "pps": [
+          "ajudei",
+          "ajudaste",
+          "ajudou",
+          "ajudámos",
+          "ajudaram"
+        ],
+        "imperfeito": [
+          "ajudava",
+          "ajudavas",
+          "ajudava",
+          "ajudávamos",
+          "ajudavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "posso ajudar?",
+          "trans": "can I help?"
+        },
+        {
+          "t": "ajudar nas tarefas",
+          "trans": "to help with the chores"
+        }
+      ],
+      "grammar": "ajudar alguém a + infinitive: ajudou-me a carregar as compras."
+    },
+    "pt0241": {
+      "conj": {
+        "presente": [
+          "vivo",
+          "vives",
+          "vive",
+          "vivemos",
+          "vivem"
+        ],
+        "pps": [
+          "vivi",
+          "viveste",
+          "viveu",
+          "vivemos",
+          "viveram"
+        ],
+        "imperfeito": [
+          "vivia",
+          "vivias",
+          "vivia",
+          "vivíamos",
+          "viviam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "viver sozinho",
+          "trans": "to live alone"
+        },
+        {
+          "t": "viver no estrangeiro",
+          "trans": "to live abroad"
+        }
+      ],
+      "grammar": "morar = reside only; viver = reside or live (life in general)."
+    },
+    "pt0242": {
+      "conj": {
+        "presente": [
+          "durmo",
+          "dormes",
+          "dorme",
+          "dormimos",
+          "dormem"
+        ],
+        "pps": [
+          "dormi",
+          "dormiste",
+          "dormiu",
+          "dormimos",
+          "dormiram"
+        ],
+        "imperfeito": [
+          "dormia",
+          "dormias",
+          "dormia",
+          "dormíamos",
+          "dormiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "dormir a sesta",
+          "trans": "to take a nap"
+        },
+        {
+          "t": "dormir até tarde",
+          "trans": "to sleep in"
+        }
+      ],
+      "grammar": "Stem vowel o→u only in eu durmo; the rest is regular."
+    },
+    "pt0243": {
+      "conj": {
+        "presente": [
+          "acordo",
+          "acordas",
+          "acorda",
+          "acordamos",
+          "acordam"
+        ],
+        "pps": [
+          "acordei",
+          "acordaste",
+          "acordou",
+          "acordámos",
+          "acordaram"
+        ],
+        "imperfeito": [
+          "acordava",
+          "acordavas",
+          "acordava",
+          "acordávamos",
+          "acordavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "acordar cedo",
+          "trans": "to wake up early"
+        },
+        {
+          "t": "acordar mal disposto",
+          "trans": "to wake up grumpy"
+        }
+      ],
+      "grammar": "Means to wake up; to agree is concordar or combinar."
+    },
+    "pt0244": {
+      "conj": {
+        "presente": [
+          "ouço",
+          "ouves",
+          "ouve",
+          "ouvimos",
+          "ouvem"
+        ],
+        "pps": [
+          "ouvi",
+          "ouviste",
+          "ouviu",
+          "ouvimos",
+          "ouviram"
+        ],
+        "imperfeito": [
+          "ouvia",
+          "ouvias",
+          "ouvia",
+          "ouvíamos",
+          "ouviam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "ouvir música",
+          "trans": "to listen to music"
+        },
+        {
+          "t": "ouvir dizer que",
+          "trans": "to hear that"
+        }
+      ],
+      "grammar": "Presente eu ouço; all other forms are regular."
+    },
+    "pt0245": {
+      "conj": {
+        "presente": [
+          "leio",
+          "lês",
+          "lê",
+          "lemos",
+          "leem"
+        ],
+        "pps": [
+          "li",
+          "leste",
+          "leu",
+          "lemos",
+          "leram"
+        ],
+        "imperfeito": [
+          "lia",
+          "lias",
+          "lia",
+          "líamos",
+          "liam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "ler as notícias",
+          "trans": "to read the news"
+        },
+        {
+          "t": "ler em voz alta",
+          "trans": "to read aloud"
+        }
+      ],
+      "grammar": "Presente leio, lês, lê, lemos, leem (AO90 drops the old lêem); PPS li, leste, leu."
+    },
+    "pt0246": {
+      "conj": {
+        "presente": [
+          "escrevo",
+          "escreves",
+          "escreve",
+          "escrevemos",
+          "escrevem"
+        ],
+        "pps": [
+          "escrevi",
+          "escreveste",
+          "escreveu",
+          "escrevemos",
+          "escreveram"
+        ],
+        "imperfeito": [
+          "escrevia",
+          "escrevias",
+          "escrevia",
+          "escrevíamos",
+          "escreviam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "escrever um email",
+          "trans": "to write an email"
+        },
+        {
+          "t": "escrever à mão",
+          "trans": "to write by hand"
+        }
+      ],
+      "grammar": "Regular except the past participle: escrito."
+    },
+    "pt0247": {
+      "conj": {
+        "presente": [
+          "envio",
+          "envias",
+          "envia",
+          "enviamos",
+          "enviam"
+        ],
+        "pps": [
+          "enviei",
+          "enviaste",
+          "enviou",
+          "enviámos",
+          "enviaram"
+        ],
+        "imperfeito": [
+          "enviava",
+          "enviavas",
+          "enviava",
+          "enviávamos",
+          "enviavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "enviar em anexo",
+          "trans": "to send as an attachment"
+        },
+        {
+          "t": "enviar uma mensagem",
+          "trans": "to send a message"
+        }
+      ]
+    },
+    "pt0248": {
+      "conj": {
+        "presente": [
+          "recebo",
+          "recebes",
+          "recebe",
+          "recebemos",
+          "recebem"
+        ],
+        "pps": [
+          "recebi",
+          "recebeste",
+          "recebeu",
+          "recebemos",
+          "receberam"
+        ],
+        "imperfeito": [
+          "recebia",
+          "recebias",
+          "recebia",
+          "recebíamos",
+          "recebiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "receber o ordenado",
+          "trans": "to get paid"
+        },
+        {
+          "t": "receber visitas",
+          "trans": "to have guests over"
+        }
+      ]
+    },
+    "pt0249": {
+      "conj": {
+        "presente": [
+          "mudo",
+          "mudas",
+          "muda",
+          "mudamos",
+          "mudam"
+        ],
+        "pps": [
+          "mudei",
+          "mudaste",
+          "mudou",
+          "mudámos",
+          "mudaram"
+        ],
+        "imperfeito": [
+          "mudava",
+          "mudavas",
+          "mudava",
+          "mudávamos",
+          "mudavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "mudar de casa",
+          "trans": "to move house"
+        },
+        {
+          "t": "mudar de emprego",
+          "trans": "to change jobs"
+        },
+        {
+          "t": "mudar de ideias",
+          "trans": "to change one's mind"
+        }
+      ],
+      "grammar": "mudar de + noun (casa, emprego, ideias); mudar-se = to move house."
+    },
+    "pt0250": {
+      "conj": {
+        "presente": [
+          "tento",
+          "tentas",
+          "tenta",
+          "tentamos",
+          "tentam"
+        ],
+        "pps": [
+          "tentei",
+          "tentaste",
+          "tentou",
+          "tentámos",
+          "tentaram"
+        ],
+        "imperfeito": [
+          "tentava",
+          "tentavas",
+          "tentava",
+          "tentávamos",
+          "tentavam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "tentar outra vez",
+          "trans": "to try again"
+        },
+        {
+          "t": "vale a pena tentar",
+          "trans": "it's worth a try"
+        }
+      ],
+      "grammar": "tentar + infinitive directly, no preposition: vou tentar chegar cedo."
+    },
+    "pt0251": {
+      "conj": {
+        "presente": [
+          "consigo",
+          "consegues",
+          "consegue",
+          "conseguimos",
+          "conseguem"
+        ],
+        "pps": [
+          "consegui",
+          "conseguiste",
+          "conseguiu",
+          "conseguimos",
+          "conseguiram"
+        ],
+        "imperfeito": [
+          "conseguia",
+          "conseguias",
+          "conseguia",
+          "conseguíamos",
+          "conseguiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "não consigo dormir",
+          "trans": "I can't sleep"
+        },
+        {
+          "t": "conseguir lugar",
+          "trans": "to get a spot"
+        }
+      ],
+      "grammar": "conseguir = manage/succeed after effort; poder = permission or possibility. Presente: eu consigo."
+    },
+    "pt0252": {
+      "conj": {
+        "presente": [
+          "esqueço",
+          "esqueces",
+          "esquece",
+          "esquecemos",
+          "esquecem"
+        ],
+        "pps": [
+          "esqueci",
+          "esqueceste",
+          "esqueceu",
+          "esquecemos",
+          "esqueceram"
+        ],
+        "imperfeito": [
+          "esquecia",
+          "esquecias",
+          "esquecia",
+          "esquecíamos",
+          "esqueciam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "esquecer-se de",
+          "trans": "to forget to / about"
+        },
+        {
+          "t": "esquece!",
+          "trans": "forget it!"
+        }
+      ],
+      "grammar": "Usually pronominal: esquecer-se de + noun or infinitive. Presente: eu esqueço (c→ç before o)."
+    },
+    "pt0253": {
+      "conj": {
+        "presente": [
+          "lembro",
+          "lembras",
+          "lembra",
+          "lembramos",
+          "lembram"
+        ],
+        "pps": [
+          "lembrei",
+          "lembraste",
+          "lembrou",
+          "lembrámos",
+          "lembraram"
+        ],
+        "imperfeito": [
+          "lembrava",
+          "lembravas",
+          "lembrava",
+          "lembrávamos",
+          "lembravam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "lembrar-se de",
+          "trans": "to remember to"
+        },
+        {
+          "t": "se bem me lembro",
+          "trans": "if I remember rightly"
+        }
+      ],
+      "grammar": "lembrar-se de = to remember; lembrar alguém de = to remind someone."
+    },
+    "pt0254": {
+      "conj": {
+        "presente": [
+          "conheço",
+          "conheces",
+          "conhece",
+          "conhecemos",
+          "conhecem"
+        ],
+        "pps": [
+          "conheci",
+          "conheceste",
+          "conheceu",
+          "conhecemos",
+          "conheceram"
+        ],
+        "imperfeito": [
+          "conhecia",
+          "conhecias",
+          "conhecia",
+          "conhecíamos",
+          "conheciam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "prazer em conhecer",
+          "trans": "nice to meet you"
+        },
+        {
+          "t": "conhecer a ilha",
+          "trans": "to get to know the island"
+        }
+      ],
+      "grammar": "conhecer = know people/places (PPS conheci = I met for the first time); saber = know facts and skills."
+    },
+    "pt0255": {
+      "conj": {
+        "presente": [
+          "vendo",
+          "vendes",
+          "vende",
+          "vendemos",
+          "vendem"
+        ],
+        "pps": [
+          "vendi",
+          "vendeste",
+          "vendeu",
+          "vendemos",
+          "venderam"
+        ],
+        "imperfeito": [
+          "vendia",
+          "vendias",
+          "vendia",
+          "vendíamos",
+          "vendiam"
+        ]
+      },
+      "collocations": [
+        {
+          "t": "vende-se",
+          "trans": "for sale (sign)"
+        },
+        {
+          "t": "vender a bom preço",
+          "trans": "to sell at a good price"
+        }
+      ]
+    }
+  }
+}

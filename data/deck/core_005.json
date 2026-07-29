@@ -1,0 +1,590 @@
+{
+  "meta": {
+    "deck": "core_005",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Adjectives and adverbs of daily life."
+  },
+  "cards": [
+    {
+      "id": "pt0256",
+      "pt": "bom",
+      "trans": "good",
+      "pos": "adj",
+      "gender": null,
+      "note": "Adjective 'good' — pairs with nouns: um café bom. Feminine is irregular: boa. For 'well' with verbs use bem, never bom.",
+      "ex_t": "Este bolo do caco é mesmo bom.",
+      "ex_trans": "This bolo do caco is really good.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 256
+    },
+    {
+      "id": "pt0257",
+      "pt": "bem",
+      "trans": "well",
+      "pos": "adv",
+      "gender": null,
+      "note": "Adverb 'well' — pairs with verbs: correu bem, falas bem. Also intensifies: bem cedo = quite early. Never swap with the adjective bom.",
+      "ex_t": "Correu tudo bem na AIMA, já tenho a morada atualizada.",
+      "ex_trans": "Everything went well at AIMA, my address is already updated.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 257
+    },
+    {
+      "id": "pt0258",
+      "pt": "mau",
+      "trans": "bad",
+      "pos": "adj",
+      "gender": null,
+      "note": "Adjective 'bad' — mau tempo. Feminine is irregular: má. The adverb is mal.",
+      "ex_t": "O tempo está mau no norte da ilha hoje.",
+      "ex_trans": "The weather is bad in the north of the island today.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 258
+    },
+    {
+      "id": "pt0259",
+      "pt": "mal",
+      "trans": "badly",
+      "pos": "adv",
+      "gender": null,
+      "note": "Adverb 'badly' — dormi mal. Also 'hardly / as soon as': mal cheguei. Not the adjective mau.",
+      "ex_t": "Sem café, trabalho mal a manhã toda.",
+      "ex_trans": "Without coffee I work badly all morning.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 259
+    },
+    {
+      "id": "pt0260",
+      "pt": "grande",
+      "trans": "big",
+      "pos": "adj",
+      "gender": null,
+      "note": "One form for both genders. After the noun = big (uma casa grande); before it = great (um grande amigo).",
+      "ex_t": "Leva uma garrafa de água grande para a levada.",
+      "ex_trans": "Take a big bottle of water for the levada.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 260
+    },
+    {
+      "id": "pt0261",
+      "pt": "pequeno",
+      "trans": "small",
+      "pos": "adj",
+      "gender": null,
+      "note": "In Portugal breakfast is o pequeno-almoço — 'café da manhã' is Brazilian.",
+      "ex_t": "O nosso apartamento é pequeno, mas tem varanda.",
+      "ex_trans": "Our flat is small, but it has a balcony.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "freq": 261
+    },
+    {
+      "id": "pt0262",
+      "pt": "novo",
+      "trans": "new",
+      "pos": "adj",
+      "gender": null,
+      "note": "Also means 'young': o colega novo can be the young colleague. Context decides.",
+      "ex_t": "Comprei um telemóvel novo na Worten.",
+      "ex_trans": "I bought a new mobile phone at Worten.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 262
+    },
+    {
+      "id": "pt0263",
+      "pt": "velho",
+      "trans": "old",
+      "pos": "adj",
+      "gender": null,
+      "note": "Fine for things; for people mais velho or idoso is politer.",
+      "ex_t": "O prédio é velho, mas o elevador funciona bem.",
+      "ex_trans": "The building is old, but the lift works well.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 263
+    },
+    {
+      "id": "pt0264",
+      "pt": "bonito",
+      "trans": "pretty, beautiful",
+      "pos": "adj",
+      "gender": null,
+      "note": "Everyday speech in Portugal often prefers giro/gira for 'pretty, cute'.",
+      "ex_t": "O pôr do sol na Ponta do Sol é muito bonito.",
+      "ex_trans": "The sunset at Ponta do Sol is very beautiful.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "freq": 264
+    },
+    {
+      "id": "pt0265",
+      "pt": "fácil",
+      "trans": "easy",
+      "pos": "adj",
+      "gender": null,
+      "note": "Same form for m/f; plural fáceis.",
+      "ex_t": "A levada dos Balcões é fácil, dá para ir com crianças.",
+      "ex_trans": "The Balcões levada is easy, you can go with kids.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 265
+    },
+    {
+      "id": "pt0266",
+      "pt": "difícil",
+      "trans": "difficult",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "É difícil encontrar estacionamento no centro do Funchal.",
+      "ex_trans": "It's difficult to find parking in central Funchal.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 266
+    },
+    {
+      "id": "pt0267",
+      "pt": "rápido",
+      "trans": "fast",
+      "pos": "adj",
+      "gender": null,
+      "note": "Adjective; as an everyday adverb Portugal prefers depressa: fala depressa.",
+      "ex_t": "O teleférico é mais rápido do que o autocarro para o Monte.",
+      "ex_trans": "The cable car is faster than the bus to Monte.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "freq": 267
+    },
+    {
+      "id": "pt0268",
+      "pt": "cheio",
+      "trans": "full",
+      "pos": "adj",
+      "gender": null,
+      "note": "ch sounds like English 'sh'. cheio de = full of; estou cheio = I'm full (food).",
+      "ex_t": "O autocarro das oito está sempre cheio.",
+      "ex_trans": "The eight o'clock bus is always full.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 268
+    },
+    {
+      "id": "pt0269",
+      "pt": "limpo",
+      "trans": "clean",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O quarto já está limpo, podes entrar.",
+      "ex_trans": "The room is already clean, you can go in.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 269
+    },
+    {
+      "id": "pt0270",
+      "pt": "sujo",
+      "trans": "dirty",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O chão do mercado fica sujo ao fim do dia.",
+      "ex_trans": "The market floor gets dirty by the end of the day.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 270
+    },
+    {
+      "id": "pt0271",
+      "pt": "certo",
+      "trans": "right, correct",
+      "pos": "adj",
+      "gender": null,
+      "note": "'You are right' is tens razão, not 'estás certo'. Certo? at the end of a sentence = right?/agreed?",
+      "ex_t": "Desta vez apanhei o autocarro certo.",
+      "ex_trans": "This time I caught the right bus.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 271
+    },
+    {
+      "id": "pt0272",
+      "pt": "igual",
+      "trans": "the same, equal",
+      "pos": "adj",
+      "gender": null,
+      "note": "Takes a: igual ao teu, igual à minha — never 'igual que'. Same form for m/f.",
+      "ex_t": "A poncha aqui é igual à do Funchal, mas mais barata.",
+      "ex_trans": "The poncha here is the same as in Funchal, but cheaper.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 272
+    },
+    {
+      "id": "pt0273",
+      "pt": "diferente",
+      "trans": "different",
+      "pos": "adj",
+      "gender": null,
+      "note": "Takes de: diferente do Funchal. Same form for m/f.",
+      "ex_t": "O clima no norte é bem diferente do clima no Funchal.",
+      "ex_trans": "The climate in the north is quite different from the climate in Funchal.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 273
+    },
+    {
+      "id": "pt0274",
+      "pt": "importante",
+      "trans": "important",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "É importante guardar o recibo da renda.",
+      "ex_trans": "It's important to keep the rent receipt.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 274
+    },
+    {
+      "id": "pt0275",
+      "pt": "cansado",
+      "trans": "tired",
+      "pos": "adj",
+      "gender": null,
+      "note": "With estar: estou cansado = I'm tired. 'Tiring' is cansativo — o dia foi cansativo.",
+      "ex_t": "Estou cansado, a levada do Caldeirão Verde é longa.",
+      "ex_trans": "I'm tired, the Caldeirão Verde levada is long.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 275
+    },
+    {
+      "id": "pt0276",
+      "pt": "contente",
+      "trans": "glad, pleased",
+      "pos": "adj",
+      "gender": null,
+      "note": "Same form for m/f; used with estar for a momentary 'pleased'.",
+      "ex_t": "Estou contente com o apartamento novo no Caniço.",
+      "ex_trans": "I'm pleased with the new flat in Caniço.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 276
+    },
+    {
+      "id": "pt0277",
+      "pt": "feliz",
+      "trans": "happy",
+      "pos": "adj",
+      "gender": null,
+      "note": "Same form for m/f; plural felizes. Stronger and more lasting than contente, which is the everyday 'glad'.",
+      "ex_t": "O vizinho está feliz porque o Marítimo ganhou.",
+      "ex_trans": "The neighbour is happy because Marítimo won.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 277
+    },
+    {
+      "id": "pt0278",
+      "pt": "sozinho",
+      "trans": "alone",
+      "pos": "adj",
+      "gender": null,
+      "note": "Adjective, agrees: sozinha. The adverb só also means 'alone', but sozinho is more common.",
+      "ex_t": "Não vás sozinho à levada, o tempo muda depressa.",
+      "ex_trans": "Don't go on the levada alone, the weather changes fast.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 278
+    },
+    {
+      "id": "pt0279",
+      "pt": "juntos",
+      "trans": "together",
+      "pos": "adj",
+      "gender": null,
+      "note": "Usually plural and agrees in gender: duas colegas vão juntas.",
+      "ex_t": "Vamos juntos ao mercado no sábado de manhã.",
+      "ex_trans": "Let's go to the market together on Saturday morning.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 279
+    },
+    {
+      "id": "pt0280",
+      "pt": "muito",
+      "trans": "very; a lot",
+      "pos": "adv",
+      "gender": null,
+      "note": "Invariable before adjectives and adverbs: muito cansada. Agrees before nouns: muitas pessoas.",
+      "ex_t": "Hoje está muito calor no Funchal.",
+      "ex_trans": "It's very hot in Funchal today.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 280
+    },
+    {
+      "id": "pt0281",
+      "pt": "pouco",
+      "trans": "little, not much",
+      "pos": "adv",
+      "gender": null,
+      "note": "Same rule as muito: pouco simpática (invariable) vs poucas lojas (agrees). um pouco = a bit.",
+      "ex_t": "Há pouco estacionamento perto do mercado.",
+      "ex_trans": "There's little parking near the market.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 281
+    },
+    {
+      "id": "pt0282",
+      "pt": "bastante",
+      "trans": "quite, plenty",
+      "pos": "adv",
+      "gender": null,
+      "note": "Means 'quite / plenty of', not English 'enough' — that is suficiente, or chega ('that's enough').",
+      "ex_t": "A subida para o Monte é bastante íngreme.",
+      "ex_trans": "The climb up to Monte is quite steep.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 282
+    },
+    {
+      "id": "pt0283",
+      "pt": "demasiado",
+      "trans": "too, too much",
+      "pos": "adv",
+      "gender": null,
+      "note": "The pt-PT word for 'too': demasiado caro. Brazilians say muito caro or caro demais — you will rarely hear demasiado in Brazil.",
+      "ex_t": "Esse restaurante na marina é demasiado caro.",
+      "ex_trans": "That restaurant at the marina is too expensive.",
+      "tags": [
+        "core",
+        "adverbio",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "freq": 283
+    },
+    {
+      "id": "pt0284",
+      "pt": "quase",
+      "trans": "almost",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "O frigorífico está quase vazio, temos de ir ao Pingo Doce.",
+      "ex_trans": "The fridge is almost empty, we have to go to Pingo Doce.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adjetivos",
+      "freq": 284
+    },
+    {
+      "id": "pt0285",
+      "pt": "já",
+      "trans": "already",
+      "pos": "adv",
+      "gender": null,
+      "note": "Wider than 'already': já vou = I'm coming right now; Já foste à Calheta? = Have you ever been...; já não = not anymore (not 'not yet').",
+      "ex_t": "Já tens o cartão de residência da AIMA?",
+      "ex_trans": "Do you already have the residence card from AIMA?",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 285
+    },
+    {
+      "id": "pt0286",
+      "pt": "ainda",
+      "trans": "still, yet",
+      "pos": "adv",
+      "gender": null,
+      "note": "'Still' in positives: ainda trabalho lá. With não it means 'not yet': ainda não. Opposite of já não = no longer.",
+      "ex_t": "Ainda estou à espera do técnico da MEO.",
+      "ex_trans": "I'm still waiting for the MEO technician.",
+      "tags": [
+        "core",
+        "adverbio",
+        "trap"
+      ],
+      "unit": "adjetivos",
+      "freq": 286
+    },
+    {
+      "id": "pt0287",
+      "pt": "também",
+      "trans": "also, too",
+      "pos": "adv",
+      "gender": null,
+      "note": "In negatives use também não: Eu também não = me neither.",
+      "ex_t": "Eu também trabalho a partir de casa às sextas.",
+      "ex_trans": "I also work from home on Fridays.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adjetivos",
+      "freq": 287
+    },
+    {
+      "id": "pt0288",
+      "pt": "só",
+      "trans": "only",
+      "pos": "adv",
+      "gender": null,
+      "note": "Also 'alone' (estou só). Apenas is the formal synonym; só is what you hear in daily life.",
+      "ex_t": "Só tenho uma nota de vinte, tens troco?",
+      "ex_trans": "I only have a twenty note, do you have change?",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adjetivos",
+      "freq": 288
+    },
+    {
+      "id": "pt0289",
+      "pt": "antes",
+      "trans": "before",
+      "pos": "adv",
+      "gender": null,
+      "note": "antes de + infinitive: antes de sair = before leaving.",
+      "ex_t": "Vê a previsão do tempo antes de fazer a levada.",
+      "ex_trans": "Check the weather forecast before doing the levada.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adjetivos",
+      "freq": 289
+    },
+    {
+      "id": "pt0290",
+      "pt": "depois",
+      "trans": "after, afterwards",
+      "pos": "adv",
+      "gender": null,
+      "note": "depois de + infinitive: depois de almoçar. Alone = afterwards.",
+      "ex_t": "Vamos beber uma poncha depois do trabalho.",
+      "ex_trans": "Let's have a poncha after work.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adjetivos",
+      "freq": 290
+    }
+  ]
+}
