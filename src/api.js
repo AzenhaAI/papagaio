@@ -229,6 +229,15 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  if (path === '/api/coach/scenarios' && request.method === 'GET') {
+    const course = new URL(request.url).searchParams.get('course') ?? 'pt';
+    return json({
+      course,
+      scenarios: scenarioList(course),
+      levels: Object.entries(LEVELS).map(([key, l]) => ({ key, label: l.label })),
+    });
+  }
+
   // ---- authenticated ----
 
   const uid = await authUser(env, request);
@@ -287,15 +296,6 @@ export async function handleApi(request, env, path) {
   // it wants to hear the line. Both go through coachTurn, so there is one
   // personality, not two. The session lives in `dialog`, one row per user, so a
   // conversation started in the app can be continued in Telegram.
-
-  if (path === '/api/coach/scenarios' && request.method === 'GET') {
-    const course = new URL(request.url).searchParams.get('course') ?? 'pt';
-    return json({
-      course,
-      scenarios: scenarioList(course),
-      levels: Object.entries(LEVELS).map(([key, l]) => ({ key, label: l.label })),
-    });
-  }
 
   if (path === '/api/coach' && request.method === 'GET') {
     const s = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
