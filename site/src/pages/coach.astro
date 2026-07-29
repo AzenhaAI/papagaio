@@ -2,12 +2,17 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="AI coach — PapaGaio" desc="Roleplay real situations in European Portuguese — café, bank, AIMA — with a coach that corrects gently and recaps your mistakes.">
-  <h1>AI coach</h1>
+  <h1>AI Coach</h1>
   <p class="muted" style="max-width:640px;">
-    Pick a scene and play it out. The coach stays in character, speaks pt-PT,
-    corrects you gently as you go, and hands you a recap of mistakes at the end.
-    In the <a href="https://t.me/papagaio_bot">Telegram bot</a> the same coach
-    listens and answers with a voice.
+    A live AI conversation partner. Pick a scene and play it out — it stays in
+    character, speaks pt-PT, adapts to the words you have already learned,
+    corrects you gently as you go, and writes a recap of your mistakes at the
+    end. In the <a href="https://t.me/papagaio_bot">Telegram bot</a> the same
+    coach listens to your voice and answers with one.
+  </p>
+  <p class="muted" style="font-size:13px; margin-top:-6px;">
+    🤖 Powered by an LLM on Groq + neural pt-PT voices. Every reply is generated
+    live — no scripts beyond the opening line.
   </p>
 
   <div id="gate" class="panel" style="margin-top:20px;">
@@ -159,11 +164,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (!text) return;
       $('say').value = '';
       bubble('me', text);
+      const think = document.createElement('div');
+      think.className = 'msg coach';
+      think.innerHTML = '<span class="b muted">🤖 a pensar…</span>';
+      $('log').appendChild(think);
+      $('log').scrollTop = $('log').scrollHeight;
       const r = await fetch(`${API}/api/coach`, {
         method: 'POST', headers: headers(),
         body: JSON.stringify({ message: text, course, scenario: scene, level }),
       });
       const d = await r.json();
+      think.remove();
       if (d.reply) bubble('coach', d.reply, d.note);
     }
     $('send').onclick = send;
