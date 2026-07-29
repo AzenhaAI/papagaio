@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Practice — PapaGaio" desc="Review your cards right in the browser — same deck, same schedule as the bot and the app.">
+  <h1>Practice</h1>
+  <p class="muted" style="max-width:640px;">
+    The same queue the bot pushes to Telegram, right here. Answer honestly —
+    the four buttons feed the scheduler, and it believes you.
+  </p>
+
+  <div id="gate" class="panel" style="margin-top:20px;">
+    <p style="margin:0 0 12px;">Connect your deck to practise.</p>
+    <p class="muted" style="font-size:14.5px; margin:0 0 12px;">
+      Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">Telegram bot</a> and paste the code once.
+    </p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="tok" type="text" placeholder="paste the /link code"
+        style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
+               border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
+      <button class="btn" id="tok-save">Connect</button>
+    </div>
+  </div>
+
+  <div id="app" style="display:none;">
+    <div style="display:flex; gap:10px; align-items:center; margin:18px 0 10px; flex-wrap:wrap;">
+      <button class="cbtn active" data-c="pt" id="c-pt">🇵🇹 Português</button>
+      <button class="cbtn" data-c="en" id="c-en">🇬🇧 English</button>
+      <span class="muted" id="session" style="margin-left:auto; font-size:14px;"></span>
+    </div>
+
+    <div class="panel" id="card" style="min-height:250px;">
+      <div class="muted" id="kind" style="font-size:13.5px;"></div>
+      <div id="prompt" style="font-size:28px; font-weight:700; margin:14px 0 4px;"></div>
+      <div class="muted" id="hint" style="font-style:italic;"></div>
+      <button class="iconbtn" id="hear" style="display:none;">🔊 listen</button>
+
+      <div id="answer-zone" style="margin-top:20px;"></div>
+
+      <div id="reveal" style="display:none; margin-top:18px; border-top:1px solid var(--panel2); padding-top:14px;">
+        <div id="solution" style="font-size:22px; font-weight:600;"></div>
+        <div class="muted" id="detail" style="margin-top:6px;"></div>
+        <div style="display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;">
+          <button class="grade" data-g="1" style="--gc: var(--red);">Again</button>
+          <button class="grade" data-g="2" style="--gc: var(--accent2);">Hard</button>
+          <button class="grade" data-g="3" style="--gc: var(--accent);">Good</button>
+          <button class="grade" data-g="4" style="--gc: var(--accent);">Easy</button>
+        </div>
+      </div>
+    </div>
+    <p class="muted" id="empty" style="display:none; font-size:15px;">
+      🎉 Queue is clear. New cards arrive on the bot's schedule — or add your own
+      from the <a href="./">translator</a> and the <a href="read/">reader</a>.
+    </p>
+  </div>
+
+  <style>
+    .cbtn { background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      border-radius:10px; padding:8px 16px; font:inherit; cursor:pointer; }
+    .cbtn.active { background:var(--accent); color:#08130c; font-weight:600; border-color:var(--accent); }
+    .iconbtn { background:none; border:1px solid var(--panel2); border-radius:8px;
+      color:var(--accent); cursor:pointer; font:inherit; font-size:14px; padding:4px 12px; margin-top:10px; }
+    .opt { display:block; width:100%; text-align:left; background:var(--panel2); color:var(--text);
+      border:1px solid #2a4433; border-radius:10px; padding:12px 16px; font:inherit; font-size:16px;
+      cursor:pointer; margin-top:8px; }
+    .opt:hover { border-color: var(--accent); }
+    .opt.right { background: color-mix(in srgb, var(--accent) 25%, var(--panel2)); border-color: var(--accent); }
+    .opt.wrong { background: color-mix(in srgb, var(--red) 22%, var(--panel2)); border-color: var(--red); }
+    .grade { flex:1; min-width:80px; background:var(--panel2); color:var(--text);
+      border:1px solid var(--gc); border-radius:10px; padding:10px 0; font:inherit; font-weight:600; cursor:pointer; }
+    .grade:hover { background: color-mix(in srgb, var(--gc) 20%, var(--panel2)); }
+    #typed { width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      border-radius:10px; padding:12px 14px; font:inherit; font-size:17px; }
+  </style>
+
+  <script>
+    const API = 'https://papagaio.kirshp.workers.dev';
+    const AUDIO = 'https://shpara.com/papagaio/audio/';
+    const $ = (id) => document.getElementById(id);
+    const TOKKEY = 'pg_token';
+    const esc = (s) => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    let course = 'pt';
+    let current = null;   // {card, isNew}
+    let deckCache = null; // for distractors
+    let done = 0, ok = 0;
+
+    $('tok-save').onclick = () => {
+      const v = $('tok').value.trim();
+      if (v) { localStorage.setItem(TOKKEY, v); boot(); }
+    };
+    document.querySelectorAll('.cbtn').forEach((b) => b.onclick = () => {
+      course = b.dataset.c;
+      document.querySelectorAll('.cbtn').forEach((x) => x.classList.toggle('active', x === b));
+      deckCache = null;
+      next();
+    });
+
+    const headers = () => ({ 'content-type': 'application/json', 'x-device-token': localStorage.getItem(TOKKEY) });
+
+    async function boot() {
+      if (!localStorage.getItem(TOKKEY)) return;
+      const r = await fetch(`${API}/api/progress`, { headers: headers() });
+      if (!r.ok) { $('gate').querySelector('p').textContent = 'That code did not work — check it and try again.'; return; }
+      $('gate').style.display = 'none';
+      $('app').style.display = 'block';
+      next();
+    }
+
+    async function next() {
+      $('reveal').style.display = 'none';
+      $('answer-zone').innerHTML = '';
+      $('empty').style.display = 'none';
+      $('card').style.display = 'block';
+      const r = await fetch(`${API}/api/next?course=${course}`, { headers: headers() });
+      const d = await r.json();
+      if (!d.card) { $('card').style.display = 'none'; $('empty').style.display = 'block'; return; }
+      current = d;
+      show(d.card, d.isNew);
+      $('session').textContent = done ? `${ok}/${done} this session` : '';
+    }
+
+    async function distractors(card) {
+      if (!deckCache) {
+        const r = await fetch(`${API}/api/deck?course=${course}&limit=500`);
+        deckCache = (await r.json()).cards;
+      }
+      return deckCache.filter((c) => c.id !== card.id)
+        .sort(() => Math.random() - 0.5).slice(0, 3).map((c) => c.trans);
+    }
+
+    async function show(card, isNew) {
+      const drill = card.pos === 'drill';
+      $('kind').textContent = drill ? '📐 grammar — type the form'
+        : isNew ? '🆕 new card — take a guess' : 'what does it mean?';
+      $('prompt').textContent = drill ? card.ex_t : card.term;
+      $('hint').textContent = drill ? card.trans : (card.gender ? `(${card.gender})` : '');
+      $('hear').style.display = card.audio ? '' : 'none';
+      $('hear').onclick = () => new Audio(AUDIO + card.audio).play();
+
+      if (drill) {
+        $('answer-zone').innerHTML =
+          `<input id="typed" placeholder="type the missing form…" autocomplete="off" />
+           <button class="btn" id="check" style="margin-top:10px;">Check</button>`;
+        const input = $('typed');
+        input.focus();
+        const bare = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
+        const check = () => {
+          const right = bare(input.value) === bare(card.term);
+          reveal(card, right ? (input.value.trim() === card.term ? 3 : 2) : 1, right);
+        };
+        $('check').onclick = check;
+        input.addEventListener('keydown', (e) => { if (e.key === 'Enter') check(); });
+      } else {
+        const opts = await distractors(card);
+        const all = [...opts];
+        const idx = Math.floor(Math.random() * 4);
+        all.splice(idx, 0, card.trans);
+        $('answer-zone').innerHTML = all.map((o, i) =>
+          `<button class="opt" data-i="${i}">${esc(o)}</button>`).join('');
+        document.querySelectorAll('.opt').forEach((b, i) => {
+          b.onclick = () => {
+            const right = i === idx;
+            b.classList.add(right ? 'right' : 'wrong');
+            if (!right) document.querySelectorAll('.opt')[idx].classList.add('right');
+            reveal(card, right ? 3 : 1, right);
+          };
+        });
+      }
+    }
+
+    function reveal(card, suggested, right) {
+      done++; if (right) ok++;
+      $('answer-zone').querySelectorAll('button, input').forEach((el) => el.disabled = true);
+      $('solution').textContent = `${card.term} — ${card.trans}`;
+      $('detail').innerHTML =
+        (card.ex_t ? `<div style="font-style:italic;">${esc(card.ex_t)}</div>` : '') +
+        (card.note ? `<div style="margin-top:4px;">ℹ️ ${esc(card.note)}</div>` : '');
+      $('reveal').style.display = 'block';
+      document.querySelectorAll('.grade').forEach((g) => {
+        g.onclick = async () => {
+          await fetch(`${API}/api/answer`, {
+            method: 'POST', headers: headers(),
+            body: JSON.stringify({ card_id: card.id, grade: +g.dataset.g, exercise: 'web' }),
+          });
+          next();
+        };
+        // Nudge toward the honest default without forcing it.
+        g.style.outline = +g.dataset.g === suggested ? '2px solid var(--gc)' : 'none';
+      });
+    }
+
+    boot();
+  </script>
+</BaseLayout>

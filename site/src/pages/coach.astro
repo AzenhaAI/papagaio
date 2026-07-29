@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="AI coach — PapaGaio" desc="Roleplay real situations in European Portuguese — café, bank, AIMA — with a coach that corrects gently and recaps your mistakes.">
+  <h1>AI coach</h1>
+  <p class="muted" style="max-width:640px;">
+    Pick a scene and play it out. The coach stays in character, speaks pt-PT,
+    corrects you gently as you go, and hands you a recap of mistakes at the end.
+    In the <a href="https://t.me/papagaio_bot">Telegram bot</a> the same coach
+    listens and answers with a voice.
+  </p>
+
+  <div id="gate" class="panel" style="margin-top:20px;">
+    <p style="margin:0 0 12px;">Connect your deck to talk — the coach leans on words you already know.</p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+      <input id="tok" type="text" placeholder="paste the /link code from the bot"
+        style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
+               border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
+      <button class="btn" id="tok-save">Connect</button>
+    </div>
+  </div>
+
+  <div id="pick" style="display:none;">
+    <h2 style="margin-top:22px;">Pick a scene</h2>
+    <div style="display:flex; gap:10px; margin-bottom:12px;">
+      <button class="cbtn active" data-c="pt" id="c-pt">🇵🇹 Português</button>
+      <button class="cbtn" data-c="en" id="c-en">🇬🇧 English</button>
+    </div>
+    <div id="scenes" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:10px;"></div>
+    <div id="levels" style="display:none; margin-top:14px;">
+      <div class="muted" style="font-size:14px; margin-bottom:8px;">How should the coach speak?</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="lbtn" data-l="slow">🐢 Slow &amp; simple</button>
+        <button class="lbtn" data-l="normal">🚶 Normal</button>
+        <button class="lbtn" data-l="street">🏃 Street</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="chat" style="display:none;">
+    <div style="display:flex; align-items:center; gap:10px; margin:20px 0 10px;">
+      <strong id="scene-name"></strong>
+      <button id="finish" style="margin-left:auto; background:var(--panel2); color:var(--text);
+        border:1px solid var(--red); border-radius:10px; padding:6px 16px; font:inherit; cursor:pointer;">
+        🏁 Finish &amp; recap</button>
+    </div>
+    <div class="panel" id="log" style="max-height:55vh; overflow-y:auto;"></div>
+    <div style="display:flex; gap:8px; margin-top:10px;">
+      <input id="say" placeholder="responde em português…" autocomplete="off"
+        style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+               border-radius:10px; padding:12px 14px; font:inherit; font-size:16px;" />
+      <button class="btn" id="send">Send</button>
+    </div>
+  </div>
+
+  <div id="recap" class="panel" style="display:none; margin-top:16px;"></div>
+
+  <style>
+    .cbtn { background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      border-radius:10px; padding:8px 16px; font:inherit; cursor:pointer; }
+    .cbtn.active { background:var(--accent); color:#08130c; font-weight:600; border-color:var(--accent); }
+    .scene { background:var(--panel); border:1px solid var(--panel2); border-radius:12px;
+      padding:14px; font:inherit; color:var(--text); cursor:pointer; text-align:left; font-size:15px; }
+    .scene:hover { border-color:var(--accent); }
+    .lbtn { background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      border-radius:10px; padding:8px 16px; font:inherit; cursor:pointer; }
+    .lbtn:hover { border-color:var(--accent); }
+    .msg { margin:10px 0; max-width:85%; }
+    .msg .b { padding:10px 14px; border-radius:12px; display:inline-block; }
+    .coach .b { background:var(--panel2); }
+    .me { text-align:right; margin-left:auto; }
+    .me .b { background:color-mix(in srgb, var(--accent) 22%, var(--panel2)); }
+    .note { font-size:13.5px; color:var(--accent2); margin-top:4px; }
+    .speak { background:none; border:0; cursor:pointer; font-size:15px; padding:0 4px; }
+  </style>
+
+  <script>
+    const API = 'https://papagaio.kirshp.workers.dev';
+    const $ = (id) => document.getElementById(id);
+    const TOKKEY = 'pg_token';
+    const esc = (s) => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    let course = 'pt';
+    let scene = null;
+    let level = 'normal';
+
+    $('tok-save').onclick = () => {
+      const v = $('tok').value.trim();
+      if (v) { localStorage.setItem(TOKKEY, v); boot(); }
+    };
+    const headers = () => ({ 'content-type': 'application/json', 'x-device-token': localStorage.getItem(TOKKEY) });
+
+    document.querySelectorAll('.cbtn').forEach((b) => b.onclick = () => {
+      course = b.dataset.c;
+      document.querySelectorAll('.cbtn').forEach((x) => x.classList.toggle('active', x === b));
+      scenes();
+    });
+
+    async function boot() {
+      if (!localStorage.getItem(TOKKEY)) return;
+      const r = await fetch(`${API}/api/progress`, { headers: headers() });
+      if (!r.ok) { $('gate').querySelector('p').textContent = 'That code did not work — check it and try again.'; return; }
+      $('gate').style.display = 'none';
+      $('pick').style.display = 'block';
+      scenes();
+    }
+
+    async function scenes() {
+      const r = await fetch(`${API}/api/coach/scenarios?course=${course}`);
+      const d = await r.json();
+      $('scenes').innerHTML = d.scenarios.map((s) =>
+        `<button class="scene" data-k="${s.key}">${esc(s.label)}</button>`).join('');
+      $('levels').style.display = 'none';
+      document.querySelectorAll('.scene').forEach((b) => b.onclick = () => {
+        scene = b.dataset.k;
+        document.querySelectorAll('.scene').forEach((x) => x.style.borderColor = x === b ? 'var(--accent)' : '');
+        $('levels').style.display = 'block';
+      });
+    }
+
+    document.querySelectorAll('.lbtn').forEach((b) => b.onclick = () => start(b.dataset.l));
+
+    async function start(lvl) {
+      level = lvl;
+      const r = await fetch(`${API}/api/coach`, {
+        method: 'POST', headers: headers(),
+        body: JSON.stringify({ start: true, course, scenario: scene, level }),
+      });
+      const d = await r.json();
+      if (d.error) { alert(d.error); return; }
+      $('pick').style.display = 'none';
+      $('recap').style.display = 'none';
+      $('chat').style.display = 'block';
+      $('log').innerHTML = '';
+      $('scene-name').textContent = d.label ?? scene;
+      bubble('coach', d.reply, d.note);
+      $('say').focus();
+    }
+
+    function bubble(who, text, note) {
+      const div = document.createElement('div');
+      div.className = `msg ${who === 'me' ? 'me' : 'coach'}`;
+      div.innerHTML = `<span class="b">${esc(text)}</span>` +
+        (who === 'coach' ? `<button class="speak" title="listen">🔊</button>` : '') +
+        (note ? `<div class="note">✏️ ${esc(note)}</div>` : '');
+      $('log').appendChild(div);
+      $('log').scrollTop = $('log').scrollHeight;
+      const sp = div.querySelector('.speak');
+      if (sp) sp.onclick = async () => {
+        const r = await fetch(`${API}/api/tts`, {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text, course }),
+        });
+        if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+      };
+    }
+
+    async function send() {
+      const text = $('say').value.trim();
+      if (!text) return;
+      $('say').value = '';
+      bubble('me', text);
+      const r = await fetch(`${API}/api/coach`, {
+        method: 'POST', headers: headers(),
+        body: JSON.stringify({ message: text, course, scenario: scene, level }),
+      });
+      const d = await r.json();
+      if (d.reply) bubble('coach', d.reply, d.note);
+    }
+    $('send').onclick = send;
+    $('say').addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
+
+    $('finish').onclick = async () => {
+      const r = await fetch(`${API}/api/coach`, {
+        method: 'POST', headers: headers(), body: JSON.stringify({ stop: true }),
+      });
+      const d = await r.json();
+      $('chat').style.display = 'none';
+      $('pick').style.display = 'block';
+      $('recap').style.display = 'block';
+      $('recap').innerHTML = `<strong>🏁 Recap</strong><div style="margin-top:8px; white-space:pre-wrap;">${esc(d.recap ?? d.reply ?? 'Session closed.')}</div>`;
+      scenes();
+    };
+
+    boot();
+  </script>
+</BaseLayout>
