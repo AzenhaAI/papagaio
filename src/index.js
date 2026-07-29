@@ -119,10 +119,12 @@ async function handleUpdate(update, env) {
     await tg(env, 'sendMessage', {
       chat_id: chat,
       text:
-        '🦜 *PapaGaio*\n\nOne card every 15 minutes during working hours (09:00–18:00). ' +
-        'One tap — and back to work.\n\n' +
-        'Send me any phrase and I translate it — always *European* Portuguese, ' +
-        'with a warning wherever Brazilian differs. One tap adds it to your deck.\n\n' +
+        '🦜 *PapaGaio*\n\n🎭 *Talk to the AI Coach* — /talk starts a live voice ' +
+        'roleplay: the café, the bank, AIMA. It hears you, answers with a real ' +
+        'pt-PT voice and corrects you gently.\n\n' +
+        'A card every 15 minutes during working hours (09:00–18:00) — one tap, ' +
+        'back to work. And send me any phrase for a translation that is always ' +
+        '*European* Portuguese, never Brazilian.\n\n' +
         'Which languages are we learning?',
       parse_mode: 'Markdown',
       reply_markup: courseKeyboard(),

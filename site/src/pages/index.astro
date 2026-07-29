@@ -2,7 +2,35 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
-  <h1>Translate into European Portuguese</h1>
+  <section style="background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
+    border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
+    padding:28px 26px; margin-bottom:34px;">
+    <div class="muted" style="font-size:13px; letter-spacing:.06em; text-transform:uppercase;">
+      🤖 AI · live · free forever</div>
+    <h1 style="margin-top:8px;">Talk your way around Madeira —<br />with an AI Coach that talks back</h1>
+    <p class="muted" style="max-width:620px;">
+      A live AI conversation partner in European Portuguese. It plays the barista,
+      the landlord, the AIMA official — hears you, answers in a neural pt-PT voice,
+      corrects you gently mid-scene and writes up your mistakes at the end.
+      It even knows which words you've already learned, and sticks to them.
+    </p>
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 18px;">
+      <span class="hero-chip">☕ Café</span><span class="hero-chip">🏦 Banco</span>
+      <span class="hero-chip">🛂 AIMA</span><span class="hero-chip">🩺 Médico</span>
+      <span class="hero-chip">🚕 Táxi</span><span class="hero-chip">🐢→🏃 3 speeds</span>
+    </div>
+    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="btn" href="coach/">🎭 Talk to the AI Coach</a>
+      <a class="btn" href="https://t.me/papagaio_bot"
+        style="background:var(--panel2); color:var(--text);">🎙 Voice version in Telegram</a>
+    </div>
+  </section>
+  <style>
+    .hero-chip { background:var(--panel2); border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      border-radius:20px; padding:5px 13px; font-size:13.5px; color:var(--text); }
+  </style>
+
+  <h2 style="margin-top:0;">Translate into European Portuguese</h2>
   <p class="muted" style="max-width: 640px;">
     The Portuguese actually spoken in Portugal and Madeira. Big translators
     default to the Brazilian variant — PapaGaio always answers in pt-PT and
@@ -72,6 +100,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <h2>How it works</h2>
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
     <div class="panel">
+      <div style="font-size:26px;">🎭</div>
+      <strong>Talk to the AI coach</strong>
+      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
+        /talk starts a voice roleplay — café, bank, doctor. It speaks pt-PT,
+        hears your replies and corrects gently. /stop gives an error recap.
+      </p>
+    </div>
+    <div class="panel">
       <div style="font-size:26px;">1️⃣</div>
       <strong>Translate anything</strong>
       <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
@@ -95,14 +131,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         pronunciation. Ignore three — it politely goes quiet until tomorrow.
       </p>
     </div>
-    <div class="panel">
-      <div style="font-size:26px;">🎭</div>
-      <strong>Talk to the AI coach</strong>
-      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
-        /talk starts a voice roleplay — café, bank, doctor. It speaks pt-PT,
-        hears your replies and corrects gently. /stop gives an error recap.
-      </p>
-    </div>
+
   </div>
 
   <h2>Why this exists</h2>
