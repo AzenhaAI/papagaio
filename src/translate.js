@@ -13,7 +13,10 @@ export const PT_RULES = `Hard rules:
 - Use pt-PT grammar: "estou a fazer" for the progressive, never "estou fazendo". Prefer clitic placement as used in Portugal (diz-me, não me digas).
 - Detect the input language and translate into the other one. If the input is neither English nor Portuguese, translate into European Portuguese.
 - In br_diff list every word in YOUR Portuguese output that a Brazilian would say differently. This is the learner's main value — be thorough but only include real divergences.
-- Keep register natural for the situation: a café order is not a formal letter.`;
+- Keep register natural for the situation: a café order is not a formal letter.
+- "translation" is ONLY the translated phrase. Never commentary, never advice, never two alternatives joined by a comma, never a sentence about what you would prefer to say. If several renderings are natural, put the best one in "translation" and mention the others in "note".
+- Fixed social formulas translate to the formula the other language actually uses, not word for word: "how do you do?" is "tudo bem?", not a discussion of formality.
+- "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer.`;
 
 const SYSTEM = `You translate between English and EUROPEAN Portuguese (pt-PT) as spoken in Portugal and Madeira.
 
