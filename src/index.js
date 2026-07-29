@@ -888,7 +888,7 @@ async function sendExercise(env, user, opts = {}) {
     } else {
       sent = await tg(env, 'sendMessage', {
         chat_id: user.chat_id,
-        text: `⌨️ *Write it in ${COURSES[card.course].name}*\n\n💬 ${card.trans}\n\n` +
+        text: `⌨️ *Write it in ${COURSES[card.course].name}*\n\n🔦 \`${card.trans}\`\n\n` +
               `_Type your answer as a message. Accents optional._`,
         parse_mode: 'Markdown',
       });
@@ -942,7 +942,7 @@ async function sendExercise(env, user, opts = {}) {
         ? (isNew
             ? `🆕 *New word*\n\n${flag} *${card.term}*\n\n_What does it mean? Tap your guess — the answer follows._`
             : `${flag} *${card.term}*\n\n_What does it mean?_`)
-        : `_How do you say this in ${lang}?_\n\n💬 «*${card.trans}*»\n\n_Tap the right word below._`;
+        : `_How do you say this in ${lang}?_\n\n🔦 \`${card.trans}\`\n\n_Tap the right word below._`;
     sent = await tg(env, 'sendMessage', {
       chat_id: user.chat_id,
       text: question,
