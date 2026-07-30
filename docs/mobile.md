@@ -167,6 +167,37 @@ Cloze is built by blanking the term inside `ex_t`; when the term does not appear
 there literally, skip cloze for that card rather than inventing a gap. About 83%
 of the deck supports it.
 
+### Coach recap
+
+`POST /api/coach {stop: true}` returns the mistakes as data, not prose:
+
+```json
+{
+  "summary": "The conversation went well with a few areas for improvement.",
+  "mistakes": [
+    {"wrong": "Eu estou trabalhando aqui dois anos",
+     "right": "Eu estou a trabalhar aqui há dois anos",
+     "why": "gerund progressive is Brazilian; pt-PT uses estar a + infinitive"}
+  ],
+  "recap": "…the same thing flattened to one string, for older clients",
+  "course": "pt"
+}
+```
+
+Offer them as cards. A phrase fumbled while actually speaking is the best review
+candidate there is, and the bot ships each one as a card whose `term` is the
+correct version and whose `ex_t` reads "You said: …". At most four items, ranked
+Brazilian-form first, then grammar, then word choice; corrections are guaranteed
+to be clean European Portuguese, and typing shortcuts like a missing accent on
+*cafe* never take a slot.
+
+### Voice in a browser
+
+`POST /api/transcribe` takes `multipart/form-data` with `audio` and `language`,
+returns `{text}`. The filename extension matters — Whisper keys the container
+format off it, so send `say.webm` from Chrome and `say.m4a` from Safari. Needs
+the device token. 2 MB ceiling.
+
 ## Screens
 
 1. **Card** — the home screen. Term, four options or four FSRS buttons, audio

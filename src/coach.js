@@ -111,3 +111,62 @@ export const scenarioList = (course) =>
     label: s.label,
     open: s.open,
   }));
+
+/**
+ * Ends a session and reads the learner's mistakes out of it.
+ *
+ * The recap used to be prose you read once and forgot. Returning the mistakes
+ * as data lets them become cards: the thing you got wrong while actually
+ * speaking is the single best candidate for review.
+ */
+export async function coachRecap(env, history) {
+  const said = history.filter((m) => m.role === 'user');
+  if (!said.length) return { summary: '', mistakes: [] };
+
+  const raw = await chat(env, [
+    {
+      role: 'system',
+      content:
+        'You are a teacher of EUROPEAN Portuguese (pt-PT) reviewing a roleplay with a learner.\n' +
+        'List what the LEARNER got wrong, most important first, in this priority order:\n' +
+        '1. BRAZILIAN forms where European Portuguese was wanted. This matters most. ' +
+        'The giveaways: "estou fazendo" instead of "estou a fazer" (the gerund progressive is ' +
+        'Brazilian — pt-PT uses estar a + infinitive), pegar for apanhar, ônibus for autocarro, ' +
+        'celular for telemóvel, banheiro for casa de banho, tela for ecrã, entender for perceber, ' +
+        'você where tu belongs, clitics before the verb in a plain statement (me diz for diz-me).\n' +
+        '2. Grammar: wrong person, wrong gender or article, ser/estar mixed up, missing "há" ' +
+        'for elapsed time, wrong preposition or a missing contraction.\n' +
+        '3. Word choice that a Portuguese speaker would not use.\n' +
+        'HARD RULES:\n' +
+        '- Your "right" version must itself be flawless European Portuguese. Never hand back a ' +
+        'correction that still contains a Brazilian form — fix every problem in that line at once.\n' +
+        '- Write "summary" and every "why" in ENGLISH. Only "wrong" and "right" hold Portuguese.\n' +
+        '- One entry per distinct mistake. If two lines share the same error, keep the clearer ' +
+        'one and drop the other; do not restate it with a longer quote.\n' +
+        '- The learner types without a Portuguese keyboard, so missing accents are usually just ' +
+        'that. Mention one ONLY when the accent changes the word (esta/está, e/é, avo/avô). ' +
+        'Never spend a slot on cafe/café, bancaria/bancária and the like.\n' +
+        '- At most 4 items, and fewer is better. If the only issues were typing shortcuts, ' +
+        'return an empty list and say the conversation went well.\n' +
+        'Finish with one honest, encouraging sentence about the conversation overall.\n' +
+        'Answer strictly as JSON: {"summary": "one sentence", "mistakes": ' +
+        '[{"wrong": "...", "right": "...", "why": "short reason"}]}',
+    },
+    {
+      role: 'user',
+      content: history.map((m) => `${m.role === 'user' ? 'Learner' : 'Coach'}: ${m.content}`).join('\n'),
+    },
+  ], { json: true });
+
+  try {
+    const out = JSON.parse(raw);
+    return {
+      summary: out.summary ?? '',
+      mistakes: (Array.isArray(out.mistakes) ? out.mistakes : [])
+        .filter((m) => m?.wrong && m?.right)
+        .slice(0, 4),
+    };
+  } catch {
+    return { summary: raw, mistakes: [] };
+  }
+}

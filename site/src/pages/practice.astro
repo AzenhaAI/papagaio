@@ -9,9 +9,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </p>
 
   <div id="gate" class="panel" style="margin-top:20px;">
-    <p style="margin:0 0 12px;">Connect your deck to practise.</p>
-    <p class="muted" style="font-size:14.5px; margin:0 0 12px;">
-      Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">Telegram bot</a> and paste the code once.
+    <p style="margin:0;" id="gate-msg">Getting your deck…</p>
+  </div>
+
+  <details id="link" style="margin-top:20px;">
+    <summary class="muted" style="cursor:pointer;">Already learning in the Telegram bot?</summary>
+    <p class="muted" style="font-size:14.5px; max-width:640px;">
+      Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">bot</a> and paste the code
+      to practise the same deck here and there.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
       <input id="tok" type="text" placeholder="paste the /link code"
@@ -19,6 +24,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
       <button class="btn" id="tok-save">Connect</button>
     </div>
+  </details>
   </div>
 
   <div id="app" style="display:none;">
@@ -97,9 +103,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const headers = () => ({ 'content-type': 'application/json', 'x-device-token': localStorage.getItem(TOKKEY) });
 
     async function boot() {
+      // No trip to Telegram required: an anonymous device is minted on first visit.
+      if (!localStorage.getItem(TOKKEY)) {
+        try {
+          const r = await fetch(`${API}/api/device`, {
+            method: 'POST', headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ courses: 'pt,en' }),
+          });
+          const d = await r.json();
+          if (!d.token) throw new Error(d.error ?? 'could not start a session');
+          localStorage.setItem(TOKKEY, d.token);
+        } catch (e) {
+          $('gate-msg').textContent = 'Could not start a session: ' + e.message;
+          return;
+        }
+      }
       if (!localStorage.getItem(TOKKEY)) return;
       const r = await fetch(`${API}/api/progress`, { headers: headers() });
-      if (!r.ok) { $('gate').querySelector('p').textContent = 'That code did not work — check it and try again.'; return; }
+      if (!r.ok) { localStorage.removeItem(TOKKEY); $('gate-msg').textContent = 'That code did not work — reload to start a fresh session.'; return; }
       $('gate').style.display = 'none';
       $('app').style.display = 'block';
       next();

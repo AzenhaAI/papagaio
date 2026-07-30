@@ -4,7 +4,7 @@
 import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
 import { ensureEntry } from './entry.js';
-import { SCENARIOS, LEVELS, coachTurn, scenarioList } from './coach.js';
+import { SCENARIOS, LEVELS, coachTurn, coachRecap, scenarioList } from './coach.js';
 import { chat, transcribe } from './groq.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
@@ -340,23 +340,14 @@ export async function handleApi(request, env, path) {
       const history = JSON.parse(s?.messages ?? '[]');
       if (!history.some((m) => m.role === 'user')) return json({ recap: '' });
       try {
-        const recap = await chat(env, [
-          {
-            role: 'system',
-            content:
-              'You are a language teacher. Below is a dialog with a learner. Give a short recap in English: ' +
-              'the 2–4 main mistakes the learner made and better phrasings. If there were no mistakes, praise in one line. No fluff.',
-          },
-          {
-            role: 'user',
-            content: history
-              .map((m) => `${m.role === 'user' ? 'Learner' : 'Coach'}: ${m.content}`)
-              .join('\n'),
-          },
-        ]);
-        return json({ recap });
+        // Structured, so a client can offer the corrections as cards instead of
+        // leaving them as prose to be read once and forgotten.
+        const { summary, mistakes } = await coachRecap(env, history);
+        const recap = [summary, ...mistakes.map((m) => `❌ ${m.wrong} → ✅ ${m.right}`)]
+          .filter(Boolean).join('\n');
+        return json({ recap, summary, mistakes, course: s?.course ?? 'pt' });
       } catch (e) {
-        return json({ recap: '', error: e.message });
+        return json({ recap: '', mistakes: [], error: e.message });
       }
     }
 

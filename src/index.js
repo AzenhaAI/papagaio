@@ -6,7 +6,7 @@ import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
 import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
-import { SCENARIOS, LEVELS, coachTurn } from './coach.js';
+import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
 
 const COURSES = {
   pt: { flag: '🇵🇹', name: 'Português' },
@@ -286,16 +286,30 @@ async function handleUpdate(update, env) {
       return;
     }
     try {
-      const summary = await chat(env, [
-        {
-          role: 'system',
-          content:
-            'You are a language teacher. Below is a dialog with a learner. Give a short recap in English: ' +
-            'the 2–4 main mistakes the learner made and better phrasings. If there were no mistakes, praise in one line. No fluff.',
-        },
-        { role: 'user', content: history.map((m) => `${m.role === 'user' ? 'Learner' : 'Coach'}: ${m.content}`).join('\n') },
-      ]);
-      await tg(env, 'sendMessage', { chat_id: chat, text: '🏁 Recap:\n\n' + summary });
+      const { summary, mistakes } = await coachRecap(env, history);
+      let out = '🏁 *Recap*';
+      if (summary) out += `\n\n${summary}`;
+      if (mistakes.length) {
+        out += '\n\n*What to fix*';
+        for (const m of mistakes) {
+          out += `\n\n❌ ${m.wrong}\n✅ *${m.right}*`;
+          if (m.why) out += `\n_${m.why}_`;
+        }
+        // The phrase you fumbled while actually speaking is the best possible
+        // review candidate, so it is one tap from the queue.
+        await env.DB.prepare(
+          `INSERT INTO tr_last (user_id, course, term, trans, note, created_at)
+           VALUES (?, ?, ?, ?, ?, ?)
+           ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, term = excluded.term,
+             trans = excluded.trans, note = excluded.note, created_at = excluded.created_at`
+        ).bind(uid, session.course, JSON.stringify(mistakes), 'coach-mistakes', '', now()).run();
+      }
+      await tg(env, 'sendMessage', {
+        chat_id: chat, text: out, parse_mode: 'Markdown',
+        ...(mistakes.length ? { reply_markup: { inline_keyboard: [[
+          { text: `➕ Add ${mistakes.length} correction${mistakes.length > 1 ? 's' : ''} to deck`, callback_data: 'fixadd' },
+        ]] } } : {}),
+      });
     } catch (e) {
       await tg(env, 'sendMessage', { chat_id: chat, text: 'Dialog closed (recap failed: ' + e.message.slice(0, 80) + ')' });
     }
@@ -601,6 +615,41 @@ async function handleCallback(cb, env) {
         parse_mode: 'Markdown',
       });
     }
+    return;
+  }
+
+  if (data === 'fixadd') {
+    const last = await env.DB.prepare(
+      `SELECT * FROM tr_last WHERE user_id = ? AND trans = 'coach-mistakes'`
+    ).bind(uid).first();
+    if (!last) {
+      await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: 'Nothing left to add' });
+      return;
+    }
+    let mistakes = [];
+    try { mistakes = JSON.parse(last.term); } catch { /* ignore */ }
+    const stamp = Date.now().toString(36);
+    const batch = [];
+    mistakes.forEach((m, i) => {
+      const id = `u${uid.toString(36)}-${stamp}-${i}`;
+      batch.push(env.DB.prepare(
+        `INSERT INTO cards (id, course, term, trans, note, ex_t, tags, freq, owner, unit)
+         VALUES (?, ?, ?, ?, ?, ?, '["mine","coach"]', 100000, ?, 'mine')`
+      ).bind(id, last.course, m.right, m.why || 'from your conversation', m.why ?? '',
+             `You said: ${m.wrong}`, uid));
+      batch.push(env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, due) VALUES (?, ?, ?)`
+      ).bind(uid, id, now()));
+    });
+    batch.push(env.DB.prepare(`DELETE FROM tr_last WHERE user_id = ?`).bind(uid));
+    if (batch.length) await env.DB.batch(batch);
+    await tg(env, 'answerCallbackQuery', {
+      callback_query_id: cb.id, text: `➕ ${mistakes.length} in your queue`,
+    });
+    await tg(env, 'editMessageReplyMarkup', {
+      chat_id: cb.message.chat.id, message_id: cb.message.message_id,
+      reply_markup: { inline_keyboard: [] },
+    });
     return;
   }
 
