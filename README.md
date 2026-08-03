@@ -51,10 +51,23 @@ free plans indefinitely for personal use.
 ## Layout
 
 ```
-src/            Worker: bot, FSRS, Edge TTS client, Groq client
+src/            Worker: bot, API, FSRS, coach, translator, reader, TTS, Groq
+site/           The website (Astro), built into ~/shpara1/papagaio/
 schema.sql      D1 schema
 data/deck/      Card decks (JSON), one file per batch
-scripts/        Deck seeding, audio generation, webhook setup
+data/entries/   Dictionary articles keyed by card id
+scripts/        Deck seeding, audio generation, diagnostics, webhook setup
+docs/           API contract for the app, competitor gap analysis
+build/          Generated SQL — rebuilt from data/, never committed
+```
+
+Useful scripts:
+
+```bash
+npm run seed       # data/deck/*.json  -> build/seed.sql
+npm run audio      # synthesize missing card audio, incrementally
+npm run grammar    # regenerate the grammar drill deck
+npm run check:tts  # is the Edge TTS version gate still open?
 ```
 
 Card format:

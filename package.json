@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "seed": "node scripts/load_deck.mjs",
-    "audio": "node scripts/gen_audio.mjs"
+    "audio": "node scripts/gen_audio.mjs",
+    "grammar": "node scripts/gen_grammar.mjs",
+    "check:tts": "node scripts/check_tts.mjs"
   },
   "devDependencies": {
     "ws": "^8.18.0"
