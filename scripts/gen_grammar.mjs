@@ -89,38 +89,8 @@ for (const [answer, sentence, gloss, why] of SER_ESTAR) {
   });
 }
 
-// ---------- conjugation, produced not recognised ----------
-
-const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
-const TENSES = { presente: 'presente', pps: 'pretérito perfeito' };
-// Past tense only for the verbs whose past is genuinely irregular and frequent.
-const PPS_FOR = new Set(['ser', 'estar', 'ter', 'ir', 'fazer', 'poder', 'dizer', 'ver', 'vir']);
-
-const entries = JSON.parse(readFileSync(join(root, 'data/entries/verbs_001.json'), 'utf8')).entries;
-const deck = JSON.parse(readFileSync(join(root, 'data/deck/core_001.json'), 'utf8'));
-const termById = Object.fromEntries(deck.cards.map((c) => [c.id, c.term ?? c.pt]));
-
-for (const [cardId, entry] of Object.entries(entries)) {
-  const verb = termById[cardId];
-  if (!verb || !entry.conj) continue;
-  for (const [tense, label] of Object.entries(TENSES)) {
-    if (!entry.conj[tense]) continue;
-    if (tense === 'pps' && !PPS_FOR.has(verb)) continue;
-    entry.conj[tense].forEach((form, i) => {
-      cards.push({
-        id: id(),
-        term: form,
-        trans: `${verb} — ${PERSONS[i]}, ${label}`,
-        pos: 'drill',
-        note: '',
-        ex_t: `${PERSONS[i]} ___`,
-        ex_trans: `${verb}, ${label}`,
-        tags: ['drill', 'conjugation', verb],
-        unit: 'gramatica',
-      });
-    });
-  }
-}
+// Conjugation drills live in gen_verb_drills.mjs now: a form in a sentence with
+// a time cue, rather than a row of a table read aloud.
 
 const out = {
   meta: {

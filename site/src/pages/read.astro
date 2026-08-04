@@ -35,7 +35,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
       <button class="iconbtn" id="pop-say" title="Listen">🔊</button>
       <button id="pop-add" style="background:var(--accent); color:#08130c; border:0; border-radius:8px;
-        padding:6px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer;">➕ Add to deck</button>
+        padding:6px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer;">➕ Learn this word</button>
     </div>
   </div>
 
@@ -44,7 +44,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <p class="muted" style="font-size:14.5px; max-width:640px;">
       Send <code>/link</code> to the <a href="https://t.me/papagaio_bot">Telegram bot</a> and paste
       the code here. The reader will then know which words you have already learned, and
-      “add to deck” will put new ones straight into your review queue.
+      “Learn this word” will put new ones straight into your review queue.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
       <input id="tok" type="text" placeholder="paste the /link code"
@@ -174,7 +174,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         body: JSON.stringify({ term: current.lemma, trans: current.gloss, course: 'pt' }),
       });
       $('pop-add').textContent = r.ok ? '✅ Added' : '✕ Failed';
-      setTimeout(() => { $('pop').style.display = 'none'; $('pop-add').textContent = '➕ Add to deck'; }, 900);
+      setTimeout(() => { $('pop').style.display = 'none'; $('pop-add').textContent = '➕ Learn this word'; }, 900);
     };
 
     $('go').onclick = run;

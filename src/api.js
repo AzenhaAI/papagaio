@@ -365,7 +365,13 @@ export async function handleApi(request, env, path) {
          ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
            level = excluded.level, messages = excluded.messages, started_at = excluded.started_at`
       ).bind(uid, course, scenario, level, JSON.stringify(opening), new Date().toISOString()).run();
-      return json({ reply: scen.open, note: '', messages: opening });
+      return json({
+        reply: scen.open,
+        gloss: scen.gloss ?? '',
+        note: '',
+        hints: scen.hints ?? [],
+        messages: opening,
+      });
     }
 
     const said = String(body?.message ?? '').trim().slice(0, 600);

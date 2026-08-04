@@ -9,7 +9,9 @@ import { fileURLToPath } from 'node:url';
 import WebSocket from 'ws';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const OUT_DIR = join(process.env.HOME, 'shpara1', 'papagaio', 'audio');
+// The site repo moved under ~/Projects; a stale path here silently re-synthesised
+// the whole deck into an abandoned folder and reported success.
+const OUT_DIR = join(process.env.HOME, 'Projects', 'shpara1', 'papagaio', 'audio');
 const TOKEN = '6A5AA1D4EAFF4E9FB37E23D68491D6F4';
 const VOICES = { pt: 'pt-PT-DuarteNeural', en: 'en-GB-RyanNeural' };
 const LANGS = { pt: 'pt-PT', en: 'en-GB' };

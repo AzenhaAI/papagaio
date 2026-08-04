@@ -110,6 +110,7 @@ async function handleUpdate(update, env) {
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
         { command: 'now',    description: 'A card right now' },
         { command: 'drill',  description: '📐 Practise grammar on demand' },
+        { command: 'skip',   description: '⏭ Mark a topic you already know' },
         { command: 'undo',   description: '↩️ Take back the last answer' },
         { command: 'export', description: '💾 Download everything as JSON' },
         { command: 'stats',  description: '📊 Statistics' },
@@ -158,6 +159,32 @@ async function handleUpdate(update, env) {
         await tg(env, 'sendMessage', { chat_id: chat, text: 'No grammar drills left to practise right now 🎉' });
       }
     }
+    return;
+  }
+
+  if (text.startsWith('/skip')) {
+    const user = await getUser(env, uid);
+    if (!user) return;
+    const rows = [];
+    for (const c of (user.courses ?? 'pt').split(',').filter((x) => COURSES[x])) {
+      const stats = await unitStats(env, uid, c);
+      for (const u of stats) {
+        if (u.started >= u.total) continue;
+        rows.push([{
+          text: `${COURSES[c].flag} ${u.label} · ${u.total - u.started} left`,
+          callback_data: `skipunit:${c}:${u.key}`,
+        }]);
+      }
+    }
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: rows.length
+        ? '⏭ *Already know a topic?*\n\nTap it and the remaining cards are marked known — ' +
+          'they return in a month as a spot check rather than never.'
+        : 'Nothing left to skip — every topic is already started.',
+      parse_mode: 'Markdown',
+      ...(rows.length ? { reply_markup: { inline_keyboard: rows } } : {}),
+    });
     return;
   }
 
@@ -435,7 +462,7 @@ async function handleTranslation(env, uid, chatId, text) {
     chat_id: chatId,
     text: formatTranslation(t),
     parse_mode: 'Markdown',
-    reply_markup: { inline_keyboard: [[{ text: '➕ Add to deck', callback_data: 'add' }, { text: '🔊 Listen', callback_data: 'say' }]] },
+    reply_markup: { inline_keyboard: [[{ text: '➕ Learn this word', callback_data: 'add' }, { text: '🔊 Listen', callback_data: 'say' }]] },
   });
 }
 
@@ -653,6 +680,68 @@ async function handleCallback(cb, env) {
     return;
   }
 
+  if (data === 'know') {
+    const pending = await env.DB.prepare(`SELECT * FROM pending WHERE user_id = ?`).bind(uid).first();
+    if (!pending || pending.message_id !== cb.message.message_id) {
+      await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: 'That card is no longer active' });
+      return;
+    }
+    const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
+    // A month out, not gone: claiming to know a word is a hypothesis, and the
+    // deck should test it once rather than take it on faith.
+    const due = new Date(Date.now() + 30 * 86400000).toISOString();
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
+         VALUES (?, ?, 30, 4, 1, 0, 2, ?, ?)
+         ON CONFLICT(user_id, card_id) DO UPDATE SET stability = 30, reps = 1, state = 2, due = excluded.due`
+      ).bind(uid, pending.card_id, due, now()),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, exercise, created_at) VALUES (?, ?, 'known', 'skip', ?)`
+      ).bind(uid, pending.card_id, now()),
+      env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+    ]);
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: '✓ Skipped — back in a month to check' });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id,
+      message_id: cb.message.message_id,
+      text: `✓ *${card?.term ?? ''}* — noted as known.\n\n` +
+            `_Skip the whole topic with /skip._`,
+      parse_mode: 'Markdown',
+    });
+    const user = await getUser(env, uid);
+    if (user) await sendExercise(env, user);
+    return;
+  }
+
+  // Bulk version of the same idea, one unit at a time.
+  if (data.startsWith('skipunit:')) {
+    const [, course, unit] = data.split(':');
+    const label = (UNIT_ORDER[course] ?? []).find((u) => u.key === unit)?.label ?? unit;
+    const due = new Date(Date.now() + 30 * 86400000).toISOString();
+    const { results } = await env.DB.prepare(
+      `SELECT id FROM cards WHERE course = ?1 AND unit = ?2 AND owner IS NULL
+       AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?3)`
+    ).bind(course, unit, uid).all();
+    if (results.length) {
+      await env.DB.batch(results.map((r) => env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
+         VALUES (?, ?, 30, 4, 1, 0, 2, ?, ?)
+         ON CONFLICT(user_id, card_id) DO NOTHING`
+      ).bind(uid, r.id, due, now())));
+    }
+    await tg(env, 'answerCallbackQuery', {
+      callback_query_id: cb.id, text: `✓ ${results.length} skipped`,
+    });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id,
+      message_id: cb.message.message_id,
+      text: `✓ ${label} — ${results.length} card${results.length === 1 ? '' : 's'} marked as known.\n\n` +
+            `They come back in a month as a spot check. Run /skip again for another topic.`,
+    });
+    return;
+  }
+
   if (data === 'add' || data === 'say') {
     const last = await env.DB.prepare(`SELECT * FROM tr_last WHERE user_id = ?`).bind(uid).first();
     if (!last) {
@@ -684,7 +773,7 @@ async function handleCallback(cb, env) {
         `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?, ?, 'add', ?)`
       ).bind(uid, id, now()),
     ]);
-    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: '➕ Added — it will come back as a card' });
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: '➕ Added — it comes back for review' });
     return;
   }
 
@@ -971,7 +1060,10 @@ async function sendExercise(env, user, opts = {}) {
   options.splice(correctIdx, 0, askTrans ? card.trans : card.term);
 
   const keyboard = {
-    inline_keyboard: options.map((o, i) => [{ text: o, callback_data: `a:${i}` }]),
+    inline_keyboard: [
+      ...options.map((o, i) => [{ text: o, callback_data: `a:${i}` }]),
+      ...(isNew ? [[{ text: '✓ I already know this', callback_data: 'know' }]] : []),
+    ],
   };
 
   const flag = COURSES[card.course].flag;
