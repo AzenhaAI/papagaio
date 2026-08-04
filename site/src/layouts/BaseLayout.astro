@@ -89,8 +89,15 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     header.site .logo { font-size: 26px; font-weight: 700; color: var(--accent); }
     header.site .logo span { color: var(--red); }
     header.site nav { display: flex; gap: 18px; margin-left: auto; }
-    header.site nav a { color: var(--muted); font-size: 15px; }
+    header.site nav a { color: var(--muted); font-size: 15px; white-space: nowrap; }
     header.site nav a:hover { color: var(--text); text-decoration: none; }
+    header.site { flex-wrap: nowrap; }
+    /* Six links do not fit a phone: below this width the burger is the nav. */
+    @media (max-width: 860px) {
+      header.site nav { display: none; }
+      header.site #burger { margin-left: auto; }
+    }
+    @media (min-width: 861px) { header.site #burger { display: none; } }
     main { max-width: var(--max); margin: 0 auto; padding: 28px 20px 60px; }
     footer.site {
       max-width: var(--max); margin: 0 auto; padding: 24px 20px 40px;
@@ -116,6 +123,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       <a href={`${base}/practice/`}>Cards</a>
       <a href={`${base}/`}>Translate</a>
       <a href={`${base}/dictionary/`}>Dictionary</a>
+      <a href={`${base}/verbs/`}>Verbs</a>
       <a href={`${base}/progress/`}>Progress</a>
       <a href="https://t.me/papagaio_bot">Telegram bot</a>
     </nav>
@@ -134,6 +142,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <a class="drawer-link" href={`${base}/coach/`}>🎭 AI coach</a>
     <a class="drawer-link" href={`${base}/read/`}>📰 Reader</a>
     <a class="drawer-link" href={`${base}/dictionary/`}>📖 Dictionary</a>
+    <a class="drawer-link" href={`${base}/verbs/`}>🔀 Verbs</a>
     <a class="drawer-link" href={`${base}/progress/`}>📊 Progress</a>
     <a class="drawer-link" href={`${base}/about/`}>ℹ️ About</a>
     <a class="drawer-link" href="https://t.me/papagaio_bot">🦜 Telegram bot</a>
@@ -171,7 +180,6 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     }
     .drawer-link:hover { background: var(--panel2); text-decoration: none; }
     #drawer.open { right: 0 !important; } /* inline right:-290px sets the resting position */
-    @media (max-width: 720px) { header.site nav { display: none; } }
   </style>
   <script is:inline>
     const drawer = document.getElementById('drawer');

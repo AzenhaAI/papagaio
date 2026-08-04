@@ -7,6 +7,7 @@ import { translate, formatTranslation } from './translate.js';
 import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
+import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
   pt: { flag: '🇵🇹', name: 'Português' },
@@ -106,7 +107,8 @@ async function handleUpdate(update, env) {
     ).bind(uid, chat, msg.from.first_name ?? '', now()).run();
     await tg(env, 'setMyCommands', {
       commands: [
-        { command: 'talk',   description: '🎭 Voice dialog with the AI coach' },
+        { command: 'course', description: '🎓 The course — lessons with a goal' },
+        { command: 'talk',   description: '🎭 Free practice with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
         { command: 'now',    description: 'A card right now' },
         { command: 'drill',  description: '📐 Practise grammar on demand' },
@@ -272,6 +274,28 @@ async function handleUpdate(update, env) {
       `UPDATE users SET active = 1, paused_until = NULL, miss_streak = 0 WHERE id = ?`
     ).bind(uid).run();
     await tg(env, 'sendMessage', { chat_id: chat, text: 'Back on track 🦜' });
+    return;
+  }
+
+  if (text.startsWith('/course')) {
+    const map = await courseMap(env, uid);
+    let out = `🎓 *${map.title}*\n${map.done} of ${map.total} lessons done\n`;
+    const rows = [];
+    for (const m of map.modules) {
+      out += `\n*${m.title}*\n_${m.blurb}_\n`;
+      for (const l of m.lessons) {
+        const mark = l.state === 'done' ? '✅' : l.state === 'open' ? '▶️' : '🔒';
+        out += `${mark} ${l.title}\n`;
+        if (l.state === 'open') {
+          rows.push([{ text: `▶️ ${l.title}`, callback_data: `lesson:${l.id}` }]);
+        }
+      }
+    }
+    out += `\n_Each lesson is a scene with a goal. Finish the goal and the next one opens._`;
+    await tg(env, 'sendMessage', {
+      chat_id: chat, text: out, parse_mode: 'Markdown',
+      ...(rows.length ? { reply_markup: { inline_keyboard: rows.slice(0, 6) } } : {}),
+    });
     return;
   }
 
@@ -559,12 +583,41 @@ async function dialogTurn(env, msg, session) {
 
   let caption = `🗣 ${reply}`;
   if (note) caption += `\n\n✏️ ${note}`;
+
+  // A lesson says what you are trying to do, so it has to say when you did it.
+  let finished = null;
+  const lesson = session.lesson ? lessonById(session.lesson) : null;
+  if (lesson) {
+    const { met, done } = await checkGoal(env, lesson, history);
+    caption += '\n\n' + lesson.must
+      .map((m, i) => `${met.includes(i) ? '☑' : '☐'} ${m}`)
+      .join('\n');
+    if (done) {
+      await completeLesson(env, msg.from.id, lesson.id);
+      await env.DB.prepare(`DELETE FROM dialog WHERE user_id = ?`).bind(msg.from.id).run();
+      finished = lesson;
+    }
+  }
   try {
     const audio = await synthesize(reply, course);
     await tgVoice(env, chatId, audio, caption);
   } catch (e) {
     console.log('tts fallback:', e.message);
     await tg(env, 'sendMessage', { chat_id: chatId, text: caption });
+  }
+
+  if (finished) {
+    const map = await courseMap(env, msg.from.id);
+    const next = map.modules.flatMap((m) => m.lessons).find((l) => l.id === map.next);
+    await tg(env, 'sendMessage', {
+      chat_id: chatId,
+      text: `🎓 *${finished.title}* — done.\n\n${map.done} of ${map.total} lessons complete.` +
+            (next ? `\n\nNext up: *${next.title}*\n_${next.goal}_` : `\n\nThat is the whole course.`),
+      parse_mode: 'Markdown',
+      ...(next ? { reply_markup: { inline_keyboard: [[
+        { text: `▶️ ${next.title}`, callback_data: `lesson:${next.id}` },
+      ]] } } : {}),
+    });
   }
 }
 
@@ -677,6 +730,36 @@ async function handleCallback(cb, env) {
       chat_id: cb.message.chat.id, message_id: cb.message.message_id,
       reply_markup: { inline_keyboard: [] },
     });
+    return;
+  }
+
+  if (data.startsWith('lesson:')) {
+    const lesson = lessonById(data.slice(7));
+    const scen = lesson && lessonScene(lesson);
+    if (!scen) return;
+    await env.DB.prepare(
+      `INSERT INTO dialog (user_id, course, scenario, level, lesson, messages, started_at)
+       VALUES (?, 'pt', ?, ?, ?, ?, ?)
+       ON CONFLICT(user_id) DO UPDATE SET course = 'pt', scenario = excluded.scenario,
+         level = excluded.level, lesson = excluded.lesson, messages = excluded.messages,
+         started_at = excluded.started_at`
+    ).bind(uid, lesson.scenario, scen.level, lesson.id,
+           JSON.stringify([{ role: 'assistant', content: scen.open }]), now()).run();
+
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    await tg(env, 'sendMessage', {
+      chat_id: cb.message.chat.id,
+      text: `🎓 *${lesson.title}*\n\n🎯 ${lesson.goal}\n\n` +
+            lesson.must.map((m) => `☐ ${m}`).join('\n') +
+            `\n\n_Reply with voice or text. /stop ends it early._`,
+      parse_mode: 'Markdown',
+    });
+    try {
+      const audio = await synthesize(scen.open, 'pt');
+      await tgVoice(env, cb.message.chat.id, audio, `🗣 ${scen.open}\n_${scen.gloss ?? ''}_`);
+    } catch {
+      await tg(env, 'sendMessage', { chat_id: cb.message.chat.id, text: `🗣 ${scen.open}` });
+    }
     return;
   }
 

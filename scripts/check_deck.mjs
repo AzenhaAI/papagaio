@@ -51,6 +51,12 @@ const GERUND_PROGRESSIVE = /\b(estou|estás|está|estamos|estão|estava|estavam)
 
 const problems = [];
 const seen = new Map();
+// Same word twice under different ids: the linter used to check ids only, and
+// "o fim de semana" got taught in two separate batches before anyone noticed.
+// Vocabulary only — drills repeat forms on purpose, because Portuguese does:
+// "eu era" and "ele era" are identical, and the future subjunctive of vir is
+// vir. Flagging those would bury the real duplicates in noise.
+const terms = new Map();
 let cards = 0, clozeOk = 0;
 
 for (const file of readdirSync(join(root, 'data/deck')).filter((f) => f.endsWith('.json')).sort()) {
@@ -66,6 +72,12 @@ for (const file of readdirSync(join(root, 'data/deck')).filter((f) => f.endsWith
     if (!c.id || !term || !c.trans) { problems.push(`${where}: missing id, term or trans`); continue; }
     if (seen.has(c.id)) problems.push(`${where}: duplicate id, also in ${seen.get(c.id)}`);
     seen.set(c.id, file);
+
+    if (c.pos !== 'drill') {
+      const key = `${course}:${term.toLowerCase()}`;
+      if (terms.has(key)) problems.push(`${where}: "${term}" already taught as ${terms.get(key)}`);
+      terms.set(key, `${c.id} in ${file}`);
+    }
     if (/[А-Яа-яЁё]/.test(JSON.stringify(c))) problems.push(`${where}: Cyrillic in a public deck`);
 
     // Cloze needs the term to appear in its own example, verbatim.

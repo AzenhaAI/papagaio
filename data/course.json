@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "course": "pt",
+    "title": "Living in Madeira",
+    "note": "Modules of lessons, each a scene with a goal the coach can check. A free conversation is where you end up, not where a learner starts: the missing rung is knowing what you are trying to achieve and being told when you achieved it. Lessons reuse the coach personas from src/coach.js."
+  },
+  "modules": [
+    {
+      "key": "first-contacts",
+      "title": "First contacts",
+      "blurb": "The exchanges you have before you can have any others.",
+      "lessons": [
+        {
+          "id": "m1l1",
+          "title": "Order at a café",
+          "scenario": "cafe",
+          "level": "slow",
+          "goal": "Greet the barista, order a coffee and something to eat, then ask for the bill.",
+          "must": [
+            "a greeting appropriate to the time of day",
+            "an order that includes se faz favor or por favor",
+            "asking for the bill"
+          ],
+          "phrases": ["Bom dia", "Queria um café, se faz favor", "A conta, se faz favor"]
+        },
+        {
+          "id": "m1l2",
+          "title": "Say who you are",
+          "scenario": "condominio",
+          "level": "slow",
+          "goal": "Tell the neighbour your name, where you are from and how long you have lived here.",
+          "must": [
+            "your name",
+            "where you are from, using ser",
+            "how long you have lived here, using morar and há"
+          ],
+          "phrases": ["Chamo-me…", "Sou da Rússia", "Moro cá há dois anos"]
+        },
+        {
+          "id": "m1l3",
+          "title": "Ask them to slow down",
+          "scenario": "mercado",
+          "level": "street",
+          "goal": "The seller speaks fast. Say you are still learning, ask them to repeat and to speak more slowly, and finish your purchase anyway.",
+          "must": [
+            "saying you do not understand or are still learning",
+            "asking them to repeat or slow down",
+            "completing the purchase"
+          ],
+          "phrases": ["Não percebo", "Pode repetir, se faz favor?", "Pode falar mais devagar?"]
+        }
+      ]
+    },
+    {
+      "key": "getting-around",
+      "title": "Getting around",
+      "blurb": "Buses that come late, taxis, and asking the way without a map.",
+      "lessons": [
+        {
+          "id": "m2l1",
+          "title": "Take the bus",
+          "scenario": "autocarro",
+          "level": "slow",
+          "goal": "Say where you are going, ask the price and whether the bus stops near the market.",
+          "must": ["your destination", "asking the price", "a question about the stop"],
+          "phrases": ["Para o Funchal", "Quanto custa o bilhete?", "Passa perto do mercado?"]
+        },
+        {
+          "id": "m2l2",
+          "title": "Take a taxi to the airport",
+          "scenario": "taxi",
+          "level": "normal",
+          "goal": "Give the destination, ask how long it takes and whether you can pay by card.",
+          "must": ["the destination", "asking how long", "asking about paying by card"],
+          "phrases": ["Para o aeroporto, se faz favor", "Quanto tempo demora?", "Posso pagar com multibanco?"]
+        }
+      ]
+    },
+    {
+      "key": "money",
+      "title": "Shops and money",
+      "blurb": "Prices, change, and the words that appear on a receipt.",
+      "lessons": [
+        {
+          "id": "m3l1",
+          "title": "Buy at the market",
+          "scenario": "mercado",
+          "level": "normal",
+          "goal": "Ask the price per kilo, buy half a kilo of something, and ask if they have change for twenty euros.",
+          "must": ["asking the price", "a quantity", "asking about change"],
+          "phrases": ["Quanto custa o quilo?", "Meio quilo, se faz favor", "Tem troco de vinte euros?"]
+        },
+        {
+          "id": "m3l2",
+          "title": "Sort out a card problem",
+          "scenario": "banco",
+          "level": "normal",
+          "goal": "Explain that your card does not work, say since when, and ask what you need to bring.",
+          "must": ["describing the problem", "when it started", "asking what documents are needed"],
+          "phrases": ["O meu cartão não funciona", "Desde ontem", "O que preciso de trazer?"]
+        }
+      ]
+    },
+    {
+      "key": "home",
+      "title": "Home and neighbours",
+      "blurb": "The building, the landlord, and the noise upstairs.",
+      "lessons": [
+        {
+          "id": "m4l1",
+          "title": "Report a breakdown",
+          "scenario": "sindico",
+          "level": "normal",
+          "goal": "Report that the lift is broken and there is no hot water, and ask when it will be fixed.",
+          "must": ["the lift", "the hot water", "asking when it will be repaired"],
+          "phrases": ["O elevador está avariado", "Não há água quente", "Quando vai ser reparado?"]
+        },
+        {
+          "id": "m4l2",
+          "title": "View a flat",
+          "scenario": "arrendamento",
+          "level": "normal",
+          "goal": "Ask the rent, whether bills are included, and when you could move in.",
+          "must": ["asking the rent", "asking about bills", "asking about the date"],
+          "phrases": ["Quanto é a renda?", "As despesas estão incluídas?", "A partir de quando?"]
+        },
+        {
+          "id": "m4l3",
+          "title": "The noise last night",
+          "scenario": "vizinho_barulho",
+          "level": "street",
+          "goal": "Apologise, explain what happened, and promise it will not happen again — politely enough to keep the neighbour.",
+          "must": ["an apology", "an explanation", "a promise about the future"],
+          "phrases": ["Peço desculpa", "Tivemos visitas", "Não volta a acontecer"]
+        }
+      ]
+    },
+    {
+      "key": "health",
+      "title": "When something hurts",
+      "blurb": "The pharmacy first, the doctor second, and the words for both.",
+      "lessons": [
+        {
+          "id": "m5l1",
+          "title": "At the pharmacy",
+          "scenario": "farmacia",
+          "level": "normal",
+          "goal": "Describe a symptom, ask whether you need a prescription, and ask how to take the medicine.",
+          "must": ["a symptom", "asking about a prescription", "asking how to take it"],
+          "phrases": ["Dói-me a garganta", "Preciso de receita?", "Quantas vezes por dia?"]
+        },
+        {
+          "id": "m5l2",
+          "title": "Book and describe",
+          "scenario": "medico",
+          "level": "normal",
+          "goal": "Say what hurts, since when, and answer whether you have a fever.",
+          "must": ["what hurts", "how long it has hurt", "answering about fever"],
+          "phrases": ["Dói-me aqui", "Desde segunda-feira", "Sim, tenho febre"]
+        }
+      ]
+    },
+    {
+      "key": "paperwork",
+      "title": "Paperwork",
+      "blurb": "The counter, the queue ticket, and the appointment you booked in March.",
+      "lessons": [
+        {
+          "id": "m6l1",
+          "title": "At AIMA",
+          "scenario": "aima",
+          "level": "normal",
+          "goal": "Say you have an appointment and at what time, hand over your documents, and ask what happens next.",
+          "must": ["confirming the appointment and time", "offering documents", "asking what comes next"],
+          "phrases": ["Tenho marcação para as dez", "Aqui está o meu passaporte", "E agora, o que acontece?"]
+        },
+        {
+          "id": "m6l2",
+          "title": "Call support",
+          "scenario": "suporte",
+          "level": "street",
+          "goal": "Explain that the internet has been down since yesterday, give your client number, and ask for a technician.",
+          "must": ["the problem and since when", "a client number", "asking for a technician"],
+          "phrases": ["A internet não funciona desde ontem", "O meu número de cliente é…", "Podem enviar um técnico?"]
+        }
+      ]
+    }
+  ]
+}

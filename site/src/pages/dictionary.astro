@@ -32,15 +32,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <script>
     const AUDIO = 'https://shpara.com/papagaio/audio/';
     const API = 'https://papagaio.kirshp.workers.dev/api/deck';
+    const LOOKUP = 'https://papagaio.kirshp.workers.dev/api/lookup';
+    const TTS = 'https://papagaio.kirshp.workers.dev/api/tts';
     const list = document.getElementById('list');
     let all = [];      // loaded cards of the current course
     let tag = null;    // active tag filter
 
+    // Searching "cafe" must find "café": nobody reaches for the accent key, and
+    // Portuguese puts one on a great many words.
+    const fold = (x) => String(x ?? '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
     function render() {
-      const q = document.getElementById('q').value.trim().toLowerCase();
+      const q = fold(document.getElementById('q').value.trim());
       const cards = all.filter((c) =>
         (!tag || (c.tags ?? '').includes(`"${tag}"`)) &&
-        (!q || c.term.toLowerCase().includes(q) || c.trans.toLowerCase().includes(q))
+        (!q || fold(c.term).includes(q) || fold(c.trans).includes(q) || fold(c.note).includes(q))
       );
       list.innerHTML = (cards.length ? cards : []).map((c, i) => `
         <div class="panel" style="margin-bottom:10px; padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
@@ -55,7 +62,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           ${c.note ? `<div class="muted" style="width:100%; font-size:14px;">${c.note}</div>` : ''}
           ${c.ex_t ? `<div class="muted" style="width:100%; font-size:14px; font-style:italic;">${c.ex_t}</div>` : ''}
           ${c.entry ? `<div class="entrybox" id="e${i}" style="display:none; width:100%;"></div>` : ''}
-        </div>`).join('') || '<p class="muted">Nothing matches.</p>';
+        </div>`).join('') || missHtml(q);
+
+      const look = document.getElementById('lookbtn');
+      if (look) look.onclick = () => lookup(look.dataset.q);
 
       list.querySelectorAll('.morebtn').forEach((b) => {
         b.onclick = () => {
@@ -66,6 +76,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           else box.style.display = 'none';
         };
       });
+    }
+
+    // The deck is 400 words; Portuguese is not. A word we don't teach is still a
+    // word you met on a sign this morning, so a miss offers a live lookup rather
+    // than a dead end.
+    function missHtml(q) {
+      if (!q) return '<p class="muted">Nothing matches.</p>';
+      return `<div class="panel" style="text-align:center; padding:26px 18px;">
+        <p class="muted" style="margin:0 0 14px;">Not in the deck — it teaches the
+          most frequent words first. Look it up anyway?</p>
+        <button class="btn" id="lookbtn" data-q="${esc(document.getElementById('q').value.trim())}">
+          🔎 Look up «${esc(document.getElementById('q').value.trim())}»</button>
+      </div>`;
+    }
+
+    async function lookup(q) {
+      list.innerHTML = '<p class="muted">looking it up…</p>';
+      let d;
+      try {
+        d = await (await fetch(`${LOOKUP}?q=${encodeURIComponent(q)}`)).json();
+      } catch {
+        d = { error: 'network' };
+      }
+      if (!d || d.error || !d.card) {
+        list.innerHTML = `<p class="muted">No entry for «${esc(q)}».</p>`;
+        return;
+      }
+      const c = d.card;
+      // The conjugator is the authority on forms, so its table wins over any the
+      // article happens to carry.
+      const e = c.entry ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
+      if (d.conj) e.conj = d.conj;
+      remember({ ...c, course: c.course ?? 'pt' });
+
+      list.innerHTML = `
+        <div class="panel" style="padding:16px 18px;">
+          <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
+            <strong style="font-size:20px;">${esc(c.term)}</strong>
+            ${c.gender ? `<span class="muted">(${esc(c.gender)})</span>` : ''}
+            <span>— ${esc(c.trans)}</span>
+            <button id="saybtn" style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>
+            ${d.source === 'lookup' ? '<span class="muted" style="font-size:12.5px;">looked up live</span>' : ''}
+          </div>
+          ${c.note ? `<div class="muted" style="font-size:14px;">${esc(c.note)}</div>` : ''}
+          ${c.ex_t ? `<div class="muted" style="font-size:14px; font-style:italic;">${esc(c.ex_t)}</div>` : ''}
+          <div id="e-look"></div>
+        </div>`;
+      document.getElementById('e-look').innerHTML = renderEntry(e, c, 'look');
+      wireTabs('look');
+      document.getElementById('saybtn').onclick = async () => {
+        const r = await fetch(TTS, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text: c.term, course: 'pt' }),
+        });
+        if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+      };
     }
 
     const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];

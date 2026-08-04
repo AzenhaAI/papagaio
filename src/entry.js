@@ -122,3 +122,86 @@ export async function ensureEntry(env, card) {
 
   return entry;
 }
+
+const HEAD_SYSTEM = `You identify EUROPEAN Portuguese (pt-PT) words for a dictionary.
+
+Given one word or short phrase in either Portuguese or English, answer as JSON:
+{
+  "term": "the pt-PT headword, with its article for nouns (o gato, a casa); the infinitive for verbs",
+  "trans": "short English gloss, two or three senses at most, separated by semicolons",
+  "pos": "noun | verb | adj | adv | phrase | interj | prep | conj | num | pron",
+  "gender": "m or f for nouns, otherwise empty string",
+  "note": "one short usage note if it earns its place, otherwise empty string",
+  "ex_t": "one natural pt-PT example sentence using the word",
+  "ex_trans": "the example in English"
+}
+
+Hard rules:
+- European Portuguese only. Never Brazilian vocabulary, spelling or grammar.
+- If the input is English, answer with the Portuguese word for it.
+- British English spelling in every gloss and example: neighbour, colour, organise.
+- If the input is not a word in either language, set "term" to an empty string.`;
+
+/**
+ * A dictionary must answer for any word, not only the ones in the deck. Looks up
+ * whatever the learner typed, in either direction, and keeps the result in the
+ * cards table under owner 'lookup' — invisible to the deck (which filters on
+ * owner IS NULL), but never paid for twice, and ready to be promoted into
+ * somebody's own cards.
+ */
+export async function lookupWord(env, query) {
+  const q = String(query ?? '').trim().slice(0, 60);
+  if (!q) return null;
+
+  const id = `lk:${q.toLowerCase()}`;
+  const cached = await env.DB.prepare(
+    `SELECT * FROM cards WHERE id = ? AND owner = 'lookup'`
+  ).bind(id).first();
+  if (cached) return { ...cached, entry: await ensureEntry(env, cached) };
+
+  if (!env.GROQ_API_KEY) return null;
+
+  const raw = await chat(
+    env,
+    [{ role: 'system', content: HEAD_SYSTEM }, { role: 'user', content: q }],
+    { json: true }
+  );
+
+  let head;
+  try {
+    head = JSON.parse(raw);
+  } catch {
+    return null;
+  }
+  const term = String(head.term ?? '').trim();
+  if (!term) return null;
+
+  const card = {
+    id,
+    course: 'pt',
+    owner: 'lookup',
+    term,
+    trans: String(head.trans ?? '').trim(),
+    pos: String(head.pos ?? '').trim() || null,
+    gender: String(head.gender ?? '').trim() || null,
+    note: String(head.note ?? '').trim() || null,
+    ex_t: String(head.ex_t ?? '').trim() || null,
+    ex_trans: String(head.ex_trans ?? '').trim() || null,
+    tags: '["lookup"]',
+    unit: null,
+    freq: null,
+    audio: null,
+    entry: null,
+  };
+
+  await env.DB.prepare(
+    `INSERT OR REPLACE INTO cards
+       (id, course, owner, term, trans, pos, gender, note, ex_t, ex_trans, tags, unit, freq, audio, entry)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  ).bind(
+    card.id, card.course, card.owner, card.term, card.trans, card.pos, card.gender,
+    card.note, card.ex_t, card.ex_trans, card.tags, card.unit, card.freq, card.audio, card.entry
+  ).run();
+
+  return { ...card, entry: await ensureEntry(env, card) };
+}

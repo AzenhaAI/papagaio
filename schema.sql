@@ -113,3 +113,12 @@ CREATE TABLE IF NOT EXISTS pending (
   message_id  INTEGER,
   sent_at     TEXT
 );
+
+-- Course progress: one row per lesson a learner has opened.
+CREATE TABLE IF NOT EXISTS course_progress (
+  user_id      INTEGER NOT NULL,
+  lesson_id    TEXT    NOT NULL,
+  completed_at TEXT,
+  attempts     INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (user_id, lesson_id)
+);

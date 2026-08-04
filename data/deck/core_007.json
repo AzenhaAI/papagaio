@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "deck": "core_007",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A1",
+    "note": "The calendar, completed. Batch 2 gave four months out of twelve and no seasons at all — a closed set taught half is worse than not taught, because you cannot tell which half you are missing."
+  },
+  "cards": [
+    {
+      "id": "pt0326",
+      "pt": "fevereiro",
+      "trans": "February",
+      "pos": "noun",
+      "gender": "m",
+      "note": "months are lowercase in Portuguese",
+      "ex_t": "O Carnaval é em fevereiro.",
+      "ex_trans": "Carnival is in February.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 326
+    },
+    {
+      "id": "pt0327",
+      "pt": "abril",
+      "trans": "April",
+      "pos": "noun",
+      "gender": "m",
+      "note": "25 de Abril is the revolution and a public holiday",
+      "ex_t": "O 25 de Abril é feriado.",
+      "ex_trans": "The 25th of April is a public holiday.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 327
+    },
+    {
+      "id": "pt0328",
+      "pt": "maio",
+      "trans": "May",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Em maio a Madeira está cheia de flores.",
+      "ex_trans": "In May Madeira is full of flowers.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 328
+    },
+    {
+      "id": "pt0329",
+      "pt": "junho",
+      "trans": "June",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the santos populares month, with street festivals everywhere",
+      "ex_t": "Em junho há festas nas ruas.",
+      "ex_trans": "In June there are street festivals.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 329
+    },
+    {
+      "id": "pt0330",
+      "pt": "julho",
+      "trans": "July",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Julho é o mês mais cheio de turistas.",
+      "ex_trans": "July is the month most full of tourists.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 330
+    },
+    {
+      "id": "pt0331",
+      "pt": "setembro",
+      "trans": "September",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "As aulas começam em setembro.",
+      "ex_trans": "Classes start in September.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 331
+    },
+    {
+      "id": "pt0332",
+      "pt": "outubro",
+      "trans": "October",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Em outubro ainda dá para ir à praia.",
+      "ex_trans": "In October you can still go to the beach.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 332
+    },
+    {
+      "id": "pt0333",
+      "pt": "novembro",
+      "trans": "November",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Novembro é o mês mais chuvoso.",
+      "ex_trans": "November is the rainiest month.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 333
+    },
+    {
+      "id": "pt0334",
+      "pt": "a primavera",
+      "trans": "spring",
+      "pos": "noun",
+      "gender": "f",
+      "note": "seasons take the article: na primavera",
+      "ex_t": "Na primavera o tempo está agradável.",
+      "ex_trans": "In spring the weather is pleasant.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 334
+    },
+    {
+      "id": "pt0335",
+      "pt": "o verão",
+      "trans": "summer",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural verões",
+      "ex_t": "No verão a ilha fica cheia.",
+      "ex_trans": "In summer the island gets full.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 335
+    },
+    {
+      "id": "pt0336",
+      "pt": "o outono",
+      "trans": "autumn",
+      "pos": "noun",
+      "gender": "m",
+      "note": "British autumn, not American fall — pt-PT learners read British English",
+      "ex_t": "No outono chove mais.",
+      "ex_trans": "In autumn it rains more.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 336
+    },
+    {
+      "id": "pt0337",
+      "pt": "o inverno",
+      "trans": "winter",
+      "pos": "noun",
+      "gender": "m",
+      "note": "on Madeira it means rain and wind, rarely cold",
+      "ex_t": "O inverno na Madeira é suave.",
+      "ex_trans": "Winter in Madeira is mild.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 337
+    },
+    {
+      "id": "pt0338",
+      "pt": "a estação",
+      "trans": "season; station",
+      "pos": "noun",
+      "gender": "f",
+      "note": "both meanings — estação do ano is the season, estação de comboios the station",
+      "ex_t": "Qual é a tua estação do ano preferida?",
+      "ex_trans": "Which is your favourite season?",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 338
+    },
+    {
+      "id": "pt0342",
+      "pt": "a manhã",
+      "trans": "morning",
+      "pos": "noun",
+      "gender": "f",
+      "note": "de manhã = in the morning; mind the nasal ã",
+      "ex_t": "De manhã bebo sempre um café.",
+      "ex_trans": "In the morning I always drink a coffee.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 342
+    },
+    {
+      "id": "pt0343",
+      "pt": "a tarde",
+      "trans": "afternoon",
+      "pos": "noun",
+      "gender": "f",
+      "note": "à tarde = in the afternoon",
+      "ex_t": "À tarde vou ao médico.",
+      "ex_trans": "In the afternoon I am going to the doctor.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 343
+    },
+    {
+      "id": "pt0344",
+      "pt": "a noite",
+      "trans": "night, evening",
+      "pos": "noun",
+      "gender": "f",
+      "note": "à noite = at night; ontem à noite = last night",
+      "ex_t": "Ontem à noite houve muito barulho.",
+      "ex_trans": "Last night there was a lot of noise.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 344
+    },
+    {
+      "id": "pt0345",
+      "pt": "a madrugada",
+      "trans": "the small hours, early morning",
+      "pos": "noun",
+      "gender": "f",
+      "note": "roughly midnight to dawn — a word with no tidy English equivalent",
+      "ex_t": "O voo chega de madrugada.",
+      "ex_trans": "The flight arrives in the small hours.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 345
+    },
+    {
+      "id": "pt0346",
+      "pt": "anteontem",
+      "trans": "the day before yesterday",
+      "pos": "adv",
+      "gender": null,
+      "note": "one word, unlike English",
+      "ex_t": "Anteontem estive no mercado.",
+      "ex_trans": "The day before yesterday I was at the market.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 346
+    },
+    {
+      "id": "pt0347",
+      "pt": "depois de amanhã",
+      "trans": "the day after tomorrow",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Depois de amanhã tenho consulta.",
+      "ex_trans": "The day after tomorrow I have an appointment.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 347
+    },
+    {
+      "id": "pt0348",
+      "pt": "por volta de",
+      "trans": "around, approximately (time)",
+      "pos": "phrase",
+      "gender": null,
+      "note": "how people actually give an inexact time",
+      "ex_t": "Chego por volta das sete.",
+      "ex_trans": "I arrive around seven.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 348
+    },
+    {
+      "id": "pt0349",
+      "pt": "em ponto",
+      "trans": "sharp, on the dot",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "A reunião é às nove em ponto.",
+      "ex_trans": "The meeting is at nine sharp.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "freq": 349
+    }
+  ]
+}

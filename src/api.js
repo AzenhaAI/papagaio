@@ -3,7 +3,7 @@
 
 import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
-import { ensureEntry } from './entry.js';
+import { ensureEntry, lookupWord } from './entry.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap, scenarioList } from './coach.js';
 import { chat, transcribe } from './groq.js';
 import { readAndTranslate } from './vision.js';
@@ -11,6 +11,9 @@ import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
 import { analyse } from './read.js';
 import { buildStats } from './stats.js';
+import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
+import { conjugate } from './conjugate.js';
+import { VERBS, findVerb } from './verbs.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -229,6 +232,56 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  // A dictionary that only answers for words it already teaches is a deck
+  // browser. "gato" is not in the frequency deck and never will be at 400 words,
+  // but a learner who types it deserves an answer, so unknown words are looked
+  // up live and kept from then on.
+  if (path === '/api/lookup' && request.method === 'GET') {
+    const q = new URL(request.url).searchParams.get('q') ?? '';
+    if (!q.trim()) return json({ error: 'q required' }, 400);
+
+    // The deck first: its cards are hand-checked and carry audio.
+    const like = `%${q.trim().toLowerCase()}%`;
+    const hit = await env.DB.prepare(
+      `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
+         AND (lower(term) = ?1 OR lower(trans) = ?1)
+       ORDER BY freq LIMIT 1`
+    ).bind(q.trim().toLowerCase()).first()
+      ?? await env.DB.prepare(
+        `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
+           AND (lower(term) LIKE ?1 OR lower(trans) LIKE ?1)
+         ORDER BY freq LIMIT 1`
+      ).bind(like).first();
+
+    if (hit) {
+      const entry = await ensureEntry(env, hit).catch(() => null);
+      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term) });
+    }
+
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    try {
+      const card = await lookupWord(env, q);
+      if (!card) return json({ error: 'not found' }, 404);
+      // The engine is the authority on forms — the model is not asked for them.
+      return json({ source: 'lookup', card, conj: conjugate(card.term.replace(/^[oa]s? /, '')) });
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+  }
+
+  // Every verb conjugates, whether or not the deck teaches it — by rule, and by
+  // table where the rules break.
+  if (path === '/api/conjugate' && request.method === 'GET') {
+    const p = new URL(request.url).searchParams;
+    if (p.get('list') !== null) return json({ count: VERBS.length, verbs: VERBS });
+    const v = p.get('v') ?? '';
+    const known = findVerb(v);
+    const inf = (known?.inf ?? v).replace(/-se$/, '').trim().toLowerCase();
+    const forms = conjugate(inf);
+    if (!forms) return json({ error: 'not a verb' }, 404);
+    return json({ verb: known?.inf ?? inf, gloss: known?.gloss ?? '', conj: forms });
+  }
+
   if (path === '/api/coach/scenarios' && request.method === 'GET') {
     const course = new URL(request.url).searchParams.get('course') ?? 'pt';
     return json({
@@ -260,6 +313,10 @@ export async function handleApi(request, env, path) {
     } catch (e) {
       return json({ error: e.message }, 502);
     }
+  }
+
+  if (path === '/api/course' && request.method === 'GET') {
+    return json(await courseMap(env, uid));
   }
 
   if (path === '/api/stats' && request.method === 'GET') {
@@ -351,26 +408,41 @@ export async function handleApi(request, env, path) {
       }
     }
 
-    const course = body?.course === 'en' ? 'en' : 'pt';
-    const scenario = String(body?.scenario ?? '');
-    const level = LEVELS[body?.level] ? body.level : 'normal';
-    const scen = SCENARIOS[course]?.[scenario];
+    // A lesson carries its own scene and pace, so the client sends one id.
+    const lesson = body?.lesson ? lessonById(String(body.lesson)) : null;
+    if (body?.lesson && !lesson) return json({ error: 'unknown lesson' }, 400);
+
+    const course = lesson ? 'pt' : (body?.course === 'en' ? 'en' : 'pt');
+    const scenario = lesson ? lesson.scenario : String(body?.scenario ?? '');
+    const level = lesson
+      ? (LEVELS[lesson.level] ? lesson.level : 'normal')
+      : (LEVELS[body?.level] ? body.level : 'normal');
+    const scen = lesson ? lessonScene(lesson) : SCENARIOS[course]?.[scenario];
     if (!scen) return json({ error: 'unknown scenario' }, 400);
 
     // Opening the scene: no model call, just the scripted first line.
     if (body?.start) {
       const opening = [{ role: 'assistant', content: scen.open }];
       await env.DB.prepare(
-        `INSERT INTO dialog (user_id, course, scenario, level, messages, started_at) VALUES (?, ?, ?, ?, ?, ?)
+        `INSERT INTO dialog (user_id, course, scenario, level, lesson, messages, started_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?)
          ON CONFLICT(user_id) DO UPDATE SET course = excluded.course, scenario = excluded.scenario,
-           level = excluded.level, messages = excluded.messages, started_at = excluded.started_at`
-      ).bind(uid, course, scenario, level, JSON.stringify(opening), new Date().toISOString()).run();
+           level = excluded.level, lesson = excluded.lesson, messages = excluded.messages,
+           started_at = excluded.started_at`
+      ).bind(uid, course, scenario, level, lesson?.id ?? null,
+             JSON.stringify(opening), new Date().toISOString()).run();
       return json({
         reply: scen.open,
         gloss: scen.gloss ?? '',
         note: '',
-        hints: scen.hints ?? [],
+        hints: lesson?.phrases?.length
+          ? lesson.phrases.map((p) => ({ pt: p, en: '' }))
+          : scen.hints ?? [],
         messages: opening,
+        lesson: lesson && {
+          id: lesson.id, title: lesson.title, goal: lesson.goal,
+          must: lesson.must, met: [], done: false,
+        },
       });
     }
 
@@ -398,7 +470,23 @@ export async function handleApi(request, env, path) {
           `INSERT INTO events (user_id, kind, exercise, created_at) VALUES (?, 'coach', 'app_talk', ?)`
         ).bind(uid, new Date().toISOString()),
       ]);
-      return json({ reply: turn.reply, note: turn.note, messages: turn.history });
+
+      // Inside a lesson every turn also updates the checklist, and completing
+      // it is announced the moment it happens — not on /stop.
+      const activeLesson = s?.lesson ? lessonById(s.lesson) : null;
+      let lessonState = null;
+      if (activeLesson) {
+        const { met, done } = await checkGoal(env, activeLesson, turn.history);
+        lessonState = {
+          id: activeLesson.id, title: activeLesson.title, goal: activeLesson.goal,
+          must: activeLesson.must, met, done,
+        };
+        if (done) await completeLesson(env, uid, activeLesson.id);
+      }
+      return json({
+        reply: turn.reply, gloss: turn.gloss, note: turn.note, hints: turn.hints,
+        messages: turn.history, lesson: lessonState,
+      });
     } catch (e) {
       return json({ error: e.message }, 502);
     }
