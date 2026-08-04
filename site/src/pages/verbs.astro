@@ -35,24 +35,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
 
-    // Grouped the way a learner reaches for them, not the way a grammar book
-    // orders them: mood first, because choosing the mood is the hard part.
+    // Grouped the way a learner reaches for a form: first *when* did it happen,
+    // then which mood. You know you mean yesterday long before you know whether
+    // you need the conjuntivo, so time is the outer question.
     const GROUPS = [
-      ['Indicative', [
-        ['presente', 'Presente', 'now, and general truths'],
-        ['pps', 'Pretérito Perfeito', 'finished, at a point: ontem'],
-        ['imperfeito', 'Pretérito Imperfeito', 'ongoing or habitual back then'],
-        ['mais_que_perfeito', 'Mais-que-perfeito Composto', 'earlier than another past moment'],
-        ['futuro', 'Futuro', 'will: amanhã, para o ano'],
+      ['Past', [
+        ['Indicative', [
+          ['pps', 'Pretérito Perfeito', 'finished, at a point: ontem, no ano passado'],
+          ['imperfeito', 'Pretérito Imperfeito', 'ongoing or habitual back then: antigamente'],
+          ['mais_que_perfeito', 'Mais-que-perfeito Composto', 'earlier than another past moment'],
+        ]],
+        ['Subjunctive', [
+          ['imperfeito_conj', 'Imperfeito do Conjuntivo', 'after se: se eu tivesse…'],
+        ]],
       ]],
-      ['Subjunctive', [
-        ['presente_conj', 'Presente do Conjuntivo', 'after que, talvez, espero que…'],
-        ['imperfeito_conj', 'Imperfeito do Conjuntivo', 'after se: se eu tivesse…'],
-        ['futuro_conj', 'Futuro do Conjuntivo', 'after quando, se, assim que — very pt-PT'],
+      ['Present', [
+        ['Indicative', [
+          ['presente', 'Presente', 'now, and general truths: agora, hoje'],
+        ]],
+        ['Subjunctive', [
+          ['presente_conj', 'Presente do Conjuntivo', 'after que, talvez, espero que…'],
+        ]],
+        ['Other', [
+          ['condicional', 'Condicional', 'would: eu gostaria, seria melhor'],
+          ['imperativo', 'Imperativo', 'telling someone to do it'],
+        ]],
       ]],
-      ['Other', [
-        ['condicional', 'Condicional', 'would: eu gostaria, seria melhor'],
-        ['imperativo', 'Imperativo', 'telling someone to do it'],
+      ['Future', [
+        ['Indicative', [
+          ['futuro', 'Futuro', 'will: amanhã, para o ano'],
+        ]],
+        ['Subjunctive', [
+          ['futuro_conj', 'Futuro do Conjuntivo', 'after quando, se, assim que — very pt-PT'],
+        ]],
       ]],
     ];
 
@@ -77,11 +92,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="grow" style="display:flex; gap:6px; margin:16px 0 12px; flex-wrap:wrap;">` +
         GROUPS.map(([name], g) =>
-          `<button class="mood ${g === 0 ? 'on' : ''}" data-g="${g}">${name}</button>`).join('') +
+          `<button class="mood ${g === 1 ? 'on' : ''}" data-g="${g}">${name}</button>`).join('') +
         '</div>';
 
-      GROUPS.forEach(([, tenses], g) => {
-        html += `<div class="moodpane" data-g="${g}" style="display:${g === 0 ? 'block' : 'none'};">`;
+      GROUPS.forEach(([, moods], g) => {
+        html += `<div class="moodpane" data-g="${g}" style="display:${g === 1 ? 'block' : 'none'};">`;
+        for (const [mood, tenses] of moods) {
+          // A mood heading with nothing under it is noise: prune both levels.
+          if (!tenses.some(([k]) => c[k]?.length)) continue;
+          html += `<div class="moodlabel">${mood}</div>`;
         for (const [k, name, when] of tenses) {
           if (!c[k]?.length) continue;
           html += `<div style="margin-bottom:16px;">
@@ -98,6 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                  </div>`
               : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
             '</div></div>';
+        }
         }
         html += '</div>';
       });
@@ -164,6 +184,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       font: inherit; font-size: 14px; padding: 7px 18px; cursor: pointer;
     }
     .mood.on { background: var(--accent); color: #08130c; font-weight: 600; }
+    .moodlabel {
+      color: var(--muted); font-size: 11.5px; letter-spacing: .12em;
+      text-transform: uppercase; font-weight: 600; margin: 4px 0 8px;
+    }
     .vrow {
       display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
       background: none; border: 0; border-bottom: 1px solid var(--panel2);
