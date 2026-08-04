@@ -19,7 +19,7 @@
 // Run:  node scripts/build_lexicon.mjs [maxWords]
 // Out:  data/lexicon/lex_NNN.json  (sharded, so no single file is unreadable)
 
-import { createWriteStream, mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { createWriteStream, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync, existsSync } from 'node:fs';
 import { createInterface } from 'node:readline';
 import { createReadStream } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -37,6 +37,9 @@ const WIKT_URL = 'https://kaikki.org/dictionary/Portuguese/kaikki.org-dictionary
 
 mkdirSync(work, { recursive: true });
 mkdirSync(outDir, { recursive: true });
+// A shorter run must not leave the tail of a longer one behind: stale shards
+// would be loaded as if they were current.
+for (const f of readdirSync(outDir).filter((x) => x.startsWith('lex_'))) rmSync(join(outDir, f));
 
 async function fetchTo(url, file) {
   if (existsSync(file)) return file;
@@ -60,8 +63,18 @@ readFileSync(freqFile, 'utf8').split('\n').forEach((line, i) => {
 const POS = {
   noun: 'noun', verb: 'verb', adj: 'adj', adv: 'adv', pron: 'pron',
   prep: 'prep', conj: 'conj', num: 'num', intj: 'interj', phrase: 'phrase',
-  article: 'det', det: 'det', particle: 'particle', name: 'name',
+  article: 'det', det: 'det', particle: 'particle',
+  // No proper names: "Olga" is not vocabulary, and its Wiktionary entry is a
+  // transliteration note in scripts this app never shows.
 };
+
+// Wiktionary glosses sometimes carry the source spelling of a borrowing. The
+// app is English-and-Portuguese only, so anything in another script is dropped
+// rather than shown to a learner as if it were part of the definition.
+const stripOther = (t) => t
+  .replace(/\([^()]*[^\x00-\u024f][^()]*\)/g, '')
+  .replace(/\s{2,}/g, ' ')
+  .trim();
 
 // Wiktionary marks inflections with form_of; the conjugator owns those. Note
 // that "feminine" and "plural" on a *sense* are gender marking, not inflection
@@ -90,12 +103,17 @@ for await (const line of rl) {
   const senses = (e.senses ?? [])
     .filter((s) => !isInflection(s) && (s.glosses?.length ?? 0) > 0)
     .map((s) => ({
-      trans: String(s.glosses[s.glosses.length - 1]).trim(),
+      trans: stripOther(String(s.glosses[s.glosses.length - 1]).trim()),
       // Regional labels matter for us more than for a general dictionary: this
       // is how a pt-PT learner is told a sense is Brazilian.
       tags: (s.tags ?? []).filter((t) =>
         ['Brazil', 'Portugal', 'colloquial', 'slang', 'archaic', 'informal', 'vulgar'].includes(t)),
-      ex: (s.examples ?? []).map((x) => x.text).filter(Boolean).slice(0, 1)[0] ?? '',
+      // Examples are dropped whole if they contain a character outside Latin —
+      // usually a Cyrillic homoglyph typo'd into the Wiktionary source, which
+      // would look like Portuguese and be unsearchable.
+      ex: (s.examples ?? []).map((x) => x.text).filter(Boolean)
+        .filter((t) => !/[^\x00-\u024f\u2000-\u206f]/.test(t))
+        .slice(0, 1)[0] ?? '',
     }))
     .slice(0, 6);
   if (!senses.length) continue;

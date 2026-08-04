@@ -13,7 +13,7 @@ import { analyse } from './read.js';
 import { buildStats } from './stats.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
-import { VERBS, findVerb } from './verbs.js';
+import { VERBS, findVerb, fold } from './verbs.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -262,12 +262,10 @@ export async function handleApi(request, env, path) {
     // like "gato" costs nothing and answers instantly — the model is for the
     // tail this misses, not for the middle of the language.
     const lex = await env.DB.prepare(
-      `SELECT * FROM cards WHERE owner = 'lex' AND lower(term) = ?1
-       ORDER BY CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
-    ).bind(q.trim().toLowerCase()).first()
-      ?? await env.DB.prepare(
-        `SELECT * FROM cards WHERE owner = 'lex' AND lower(trans) LIKE ?1 ORDER BY freq LIMIT 1`
-      ).bind(like).first();
+      `SELECT * FROM cards WHERE owner = 'lex' AND (lower(term) = ?1 OR fold LIKE ?2)
+       ORDER BY CASE WHEN lower(term) = ?1 THEN 0 ELSE 1 END,
+                CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
+    ).bind(q.trim().toLowerCase(), `${fold(q.trim())} %`).first();
 
     if (lex) {
       const entry = lex.entry ? JSON.parse(lex.entry) : null;
@@ -288,15 +286,17 @@ export async function handleApi(request, env, path) {
   // Type-ahead over the lexicon. Cheap and public: it is one indexed LIKE over
   // rows we already have, no model involved.
   if (path === '/api/search' && request.method === 'GET') {
-    const s = (new URL(request.url).searchParams.get('q') ?? '').trim().toLowerCase();
-    if (s.length < 2) return json({ q: s, words: [] });
+    const raw = (new URL(request.url).searchParams.get('q') ?? '').trim().toLowerCase();
+    const s = fold(raw);
+    if (s.length < 2) return json({ q: raw, words: [] });
+    // Matching happens on the accent-blind column: "cao" must find "cão".
     const { results } = await env.DB.prepare(
       `SELECT id, term, trans, pos, gender, freq FROM cards
-       WHERE owner = 'lex' AND (lower(term) LIKE ?1 OR lower(trans) LIKE ?2)
-       ORDER BY CASE WHEN lower(term) = ?3 THEN 0
-                     WHEN lower(term) LIKE ?4 THEN 1 ELSE 2 END, freq
+       WHERE owner = 'lex' AND fold LIKE ?1
+       ORDER BY CASE WHEN fold = ?2 THEN 0
+                     WHEN fold LIKE ?3 THEN 1 ELSE 2 END, freq
        LIMIT 25`
-    ).bind(`%${s}%`, `%${s}%`, s, `${s}%`).all();
+    ).bind(`%${s}%`, s, `${s}%`).all();
     return json({ q: s, words: results });
   }
 

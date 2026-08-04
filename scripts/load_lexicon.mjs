@@ -14,6 +14,11 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'data', 'lexicon');
 
+// SQLite has no unaccent, so the accent-blind spelling is stored beside the
+// real one: "cao" has to find "cão" or the search is useless to anyone typing
+// on a phone keyboard.
+const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 
 const lines = [`DELETE FROM cards WHERE owner = 'lex';`];
@@ -37,11 +42,11 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
       source: 'Wiktionary (CC BY-SA 4.0)',
     };
     lines.push(
-      `INSERT OR REPLACE INTO cards (id, course, owner, term, trans, pos, gender, note, ex_t, ex_trans, tags, unit, freq, audio, entry) VALUES (` +
+      `INSERT OR REPLACE INTO cards (id, course, owner, term, trans, pos, gender, note, ex_t, ex_trans, tags, unit, freq, audio, entry, fold) VALUES (` +
       [
         q(`lex:${w.term}|${w.pos}`), q('pt'), q('lex'), q(w.term), q(trans), q(w.pos), q(w.gender),
         'NULL', q(w.senses.find((s) => s.ex)?.ex ?? null), 'NULL', q('["lexicon"]'), 'NULL',
-        String(w.rank), 'NULL', q(JSON.stringify(entry)),
+        String(w.rank), 'NULL', q(JSON.stringify(entry)), q(`${fold(w.term)} ${fold(trans)}`),
       ].join(', ') + `);`
     );
     n++;
