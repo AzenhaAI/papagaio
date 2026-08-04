@@ -46,6 +46,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     let all = [];      // loaded cards of the current course
     let tag = null;    // active tag filter
 
+    // Everything below builds HTML from server data, so it all goes through here.
+    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
     // Searching "cafe" must find "café": nobody reaches for the accent key, and
     // Portuguese puts one on a great many words.
     const fold = (x) => String(x ?? '').toLowerCase()
