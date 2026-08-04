@@ -52,7 +52,7 @@ free plans indefinitely for personal use.
 
 ```
 src/            Worker: bot, API, FSRS, coach, translator, reader, TTS, Groq
-site/           The website (Astro), built into ~/shpara1/papagaio/
+site/           The website (Astro), built into ~/Projects/shpara1/papagaio/
 schema.sql      D1 schema
 data/deck/      Card decks (JSON), one file per batch
 data/entries/   Dictionary articles keyed by card id

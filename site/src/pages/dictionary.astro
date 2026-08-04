@@ -18,6 +18,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
   <div id="tags" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;"></div>
 
+  <div id="histbox" style="display:none; margin-bottom:16px;">
+    <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">
+      <strong style="font-size:14.5px;">Recently opened</strong>
+      <button id="histclear" class="muted"
+        style="background:none; border:0; font:inherit; font-size:13px; cursor:pointer; text-decoration:underline;">clear</button>
+    </div>
+    <div id="histstrip" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px;"></div>
+  </div>
+
   <div id="list"></div>
 
   <script>
@@ -51,38 +60,159 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       list.querySelectorAll('.morebtn').forEach((b) => {
         b.onclick = () => {
           const i = b.dataset.i;
+          remember(cards[i]);
           const box = document.getElementById('e' + i);
-          if (box.style.display === 'none') { box.innerHTML = renderEntry(JSON.parse(cards[i].entry)); box.style.display = 'block'; }
+          if (box.style.display === 'none') { box.innerHTML = renderEntry(JSON.parse(cards[i].entry), cards[i], i); box.style.display = 'block'; wireTabs(i); }
           else box.style.display = 'none';
         };
       });
     }
 
     const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
-    const TENSES = { presente: 'Presente', pps: 'Pretérito perfeito', imperfeito: 'Imperfeito' };
+    // Grouped the way a learner reaches for them: when did it happen?
+    const TENSE_GROUPS = [
+      ['Past', [
+        ['pps', 'Pretérito Perfeito', 'finished, at a point: ontem, no ano passado'],
+        ['imperfeito', 'Pretérito Imperfeito', 'ongoing or habitual back then: antigamente, sempre'],
+        ['mais_que_perfeito', 'Mais-que-perfeito Composto', 'earlier than another past moment'],
+        ['imperfeito_conj', 'Imperfeito do Conjuntivo', 'after se: se eu tivesse…'],
+      ]],
+      ['Present', [
+        ['presente', 'Presente do Indicativo', 'now, and general truths: agora, hoje'],
+        ['presente_conj', 'Presente do Conjuntivo', 'after que, talvez, espero que…'],
+        ['condicional', 'Condicional', 'would: eu gostaria, seria melhor'],
+        ['imperativo', 'Imperativo', 'telling someone to do it'],
+      ]],
+      ['Future', [
+        ['futuro', 'Futuro do Indicativo', 'will: amanhã, para o ano'],
+        ['futuro_conj', 'Futuro do Conjuntivo', 'after quando, se, assim que — very pt-PT'],
+      ]],
+    ];
 
-    function renderEntry(e) {
-      let h = '';
-      if (e.meanings?.length) h += '<ol style="margin:10px 0 0; padding-left:20px;">' +
+    // Looking a word up is the signal worth keeping — not merely scrolling past it.
+    const HKEY = 'pg_dict_history';
+    const hist = () => { try { return JSON.parse(localStorage.getItem(HKEY) ?? '[]'); } catch { return []; } };
+
+    function remember(c) {
+      if (!c) return;
+      const entry = { id: c.id, term: c.term, trans: c.trans, course: c.course };
+      const next = [entry, ...hist().filter((x) => x.id !== c.id)].slice(0, 12);
+      localStorage.setItem(HKEY, JSON.stringify(next));
+      renderHist();
+    }
+
+    function renderHist() {
+      const h = hist();
+      document.getElementById('histbox').style.display = h.length ? 'block' : 'none';
+      document.getElementById('histstrip').innerHTML = h.map((x) => `
+        <button class="histchip" data-id="${x.id}" title="${esc(x.trans)}">
+          <span style="font-weight:600;">${esc(x.term)}</span>
+          <span class="muted" style="font-size:12.5px;">${esc(x.trans).slice(0, 28)}</span>
+        </button>`).join('');
+      document.querySelectorAll('.histchip').forEach((b) => {
+        b.onclick = () => {
+          // Jump to the word: clear filters so it cannot be hidden, then open it.
+          tag = null;
+          document.getElementById('q').value = '';
+          renderTags();
+          render();
+          const card = all.find((c) => c.id === b.dataset.id);
+          if (!card) return;
+          document.getElementById('q').value = card.term;
+          render();
+          const more = document.querySelector('.morebtn');
+          if (more) more.click();
+          document.getElementById('list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+      });
+    }
+
+    document.getElementById('histclear').onclick = () => {
+      localStorage.removeItem(HKEY);
+      renderHist();
+    };
+
+    // Tabs rather than one long scroll: meanings, usage and conjugation are
+    // three different questions, and you arrive with only one of them.
+    function renderEntry(e, card, i) {
+      const panes = [];
+
+      let dict = '';
+      if (e.meanings?.length) dict += '<ol style="margin:10px 0 0; padding-left:20px;">' +
         e.meanings.map((m) => `<li>${m.trans}${m.note ? ` <span class="muted">— ${m.note}</span>` : ''}</li>`).join('') + '</ol>';
+      if (e.synonyms?.length) dict += '<div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">' +
+        e.synonyms.map((x) => `<span class="syn">${esc(x)}</span>`).join('') + '</div>';
+      if (e.collocations?.length) dict += '<div style="margin-top:12px;">' +
+        e.collocations.map((c) => `<div style="font-size:14.5px;"><code style="color:var(--accent)">${esc(c.t)}</code> <span class="muted">— ${esc(c.trans)}</span></div>`).join('') + '</div>';
+      if (e.grammar) dict += `<div class="muted" style="margin-top:12px; font-size:14px;">ℹ️ ${esc(e.grammar)}</div>`;
+      if (dict) panes.push(['Dictionary', dict]);
+
+      let ex = '';
+      const line = (pt, en) => `<div style="margin-bottom:12px;">
+        <div style="font-size:15.5px;">${esc(pt)}</div>
+        ${en ? `<div class="muted" style="font-size:14px;">${esc(en)}</div>` : ''}</div>`;
+      if (card?.ex_t) ex += line(card.ex_t, card.ex_trans);
+      if (e.collocations?.length) ex += e.collocations.map((c) => line(c.t, c.trans)).join('');
+      if (e.lit?.length) ex += e.lit.map((l) =>
+        `<div style="margin-top:10px; font-size:14.5px; font-style:italic;">💬 ${esc(l.text)}<br />
+         <span class="muted" style="font-style:normal;">— ${esc(l.src)}</span></div>`).join('');
+      if (ex) panes.push(['Examples', ex]);
+
       if (e.conj) {
-        h += '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:12px; margin-top:12px;">';
-        for (const [t, name] of Object.entries(TENSES)) {
-          if (!e.conj[t]) continue;
-          h += `<div style="background:var(--panel2); border-radius:10px; padding:10px 14px;">
-            <strong style="font-size:13.5px;">${name}</strong>` +
-            e.conj[t].map((f, i) => `<div style="font-size:14px;"><span class="muted">${PERSONS[i]}</span> ${f}</div>`).join('') +
+        const groups = TENSE_GROUPS
+          .map(([label, tenses]) => [label, tenses.filter(([k]) => e.conj[k]?.length)])
+          .filter(([, tenses]) => tenses.length);
+        if (groups.length) {
+          let cj = `<div class="timerow" style="display:flex; gap:4px; margin-bottom:12px;">` +
+            groups.map(([label], g) =>
+              `<button class="time ${g === 0 ? 'on' : ''}" data-i="${i}" data-g="${g}">${label}</button>`).join('') +
             '</div>';
+          groups.forEach(([, tenses], g) => {
+            cj += `<div class="timepane" data-i="${i}" data-g="${g}" style="display:${g === 0 ? 'block' : 'none'};">`;
+            for (const [k, name, when] of tenses) {
+              cj += `<div style="margin-bottom:14px;">
+                <strong style="font-size:14.5px;">${name}</strong>
+                ${when ? `<div class="muted" style="font-size:13px; margin-bottom:5px;">${when}</div>` : ''}
+                <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
+                     display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
+                e.conj[k].map((f, n) => f
+                  ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
+                  : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
+                '</div></div>';
+            }
+            cj += '</div>';
+          });
+          panes.push(['Conjugations', cj]);
         }
-        h += '</div>';
       }
-      if (e.collocations?.length) h += '<div style="margin-top:12px;">' +
-        e.collocations.map((c) => `<div style="font-size:14.5px;"><code style="color:var(--accent)">${c.t}</code> <span class="muted">— ${c.trans}</span></div>`).join('') + '</div>';
-      if (e.synonyms?.length) h += `<div class="muted" style="margin-top:10px; font-size:14px;">≈ ${e.synonyms.join(', ')}</div>`;
-      if (e.grammar) h += `<div class="muted" style="margin-top:10px; font-size:14px;">ℹ️ ${e.grammar}</div>`;
-      if (e.lit?.length) h += e.lit.map((l) =>
-        `<div style="margin-top:10px; font-size:14.5px; font-style:italic;">💬 ${l.text}<br /><span class="muted" style="font-style:normal;">— ${l.src}</span></div>`).join('');
-      return h;
+
+      if (!panes.length) return '';
+      if (panes.length === 1) return `<div style="margin-top:10px;">${panes[0][1]}</div>`;
+
+      return `<div class="tabrow" data-i="${i}" style="display:flex; gap:6px; margin:12px 0 10px; flex-wrap:wrap;">` +
+        panes.map(([name], n) => `<button class="tab ${n === 0 ? 'on' : ''}" data-i="${i}" data-n="${n}">${name}</button>`).join('') +
+        '</div>' +
+        panes.map(([, html], n) =>
+          `<div class="pane" data-i="${i}" data-n="${n}" style="display:${n === 0 ? 'block' : 'none'};">${html}</div>`).join('');
+    }
+
+    function wireTabs(i) {
+      document.querySelectorAll(`.time[data-i="${i}"]`).forEach((b) => {
+        b.onclick = () => {
+          document.querySelectorAll(`.time[data-i="${i}"]`).forEach((x) => x.classList.toggle('on', x === b));
+          document.querySelectorAll(`.timepane[data-i="${i}"]`).forEach((pane) => {
+            pane.style.display = pane.dataset.g === b.dataset.g ? 'block' : 'none';
+          });
+        };
+      });
+      document.querySelectorAll(`.tab[data-i="${i}"]`).forEach((b) => {
+        b.onclick = () => {
+          document.querySelectorAll(`.tab[data-i="${i}"]`).forEach((x) => x.classList.toggle('on', x === b));
+          document.querySelectorAll(`.pane[data-i="${i}"]`).forEach((pane) => {
+            pane.style.display = pane.dataset.n === b.dataset.n ? 'block' : 'none';
+          });
+        };
+      });
     }
 
     function renderTags() {
@@ -108,9 +238,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       renderTags();
       render();
     }
+    renderHist();
     document.getElementById('q').addEventListener('input', render);
     document.getElementById('btn-pt').onclick = () => load('pt');
     document.getElementById('btn-en').onclick = () => load('en');
     load('pt');
   </script>
+  <style>
+    .histchip {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
+      background: var(--panel); border: 1px solid var(--panel2); border-radius: 12px;
+      padding: 8px 14px; font: inherit; font-size: 14.5px; color: var(--text);
+      cursor: pointer; white-space: nowrap; flex: none;
+    }
+    .histchip:hover { border-color: var(--accent); }
+    .tab {
+      background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
+      font: inherit; font-size: 14.5px; padding: 5px 2px; margin-right: 12px; cursor: pointer;
+    }
+    .tab.on { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
+    .time {
+      background: var(--panel2); border: 0; border-radius: 8px; color: var(--muted);
+      font: inherit; font-size: 13.5px; padding: 6px 14px; cursor: pointer; flex: 1;
+    }
+    .time.on { background: var(--accent); color: #08130c; font-weight: 600; }
+    .syn {
+      background: var(--panel2); border-radius: 14px; padding: 3px 11px;
+      font-size: 13.5px; color: var(--accent2);
+    }
+  </style>
 </BaseLayout>
