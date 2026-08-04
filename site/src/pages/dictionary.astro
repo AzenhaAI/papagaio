@@ -33,6 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const AUDIO = 'https://shpara.com/papagaio/audio/';
     const API = 'https://papagaio.kirshp.workers.dev/api/deck';
     const LOOKUP = 'https://papagaio.kirshp.workers.dev/api/lookup';
+    const SEARCH = 'https://papagaio.kirshp.workers.dev/api/search';
     const TTS = 'https://papagaio.kirshp.workers.dev/api/tts';
     const list = document.getElementById('list');
     let all = [];      // loaded cards of the current course
@@ -64,8 +65,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           ${c.entry ? `<div class="entrybox" id="e${i}" style="display:none; width:100%;"></div>` : ''}
         </div>`).join('') || missHtml(q);
 
-      const look = document.getElementById('lookbtn');
-      if (look) look.onclick = () => lookup(look.dataset.q);
+      // A miss in the deck goes straight to the 18k-word lexicon rather than
+      // making the learner press a button to be allowed to look something up.
+      if (!cards.length && q) suggest(document.getElementById('q').value.trim());
 
       list.querySelectorAll('.morebtn').forEach((b) => {
         b.onclick = () => {
@@ -82,13 +84,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // word you met on a sign this morning, so a miss offers a live lookup rather
     // than a dead end.
     function missHtml(q) {
-      if (!q) return '<p class="muted">Nothing matches.</p>';
-      return `<div class="panel" style="text-align:center; padding:26px 18px;">
-        <p class="muted" style="margin:0 0 14px;">Not in the deck — it teaches the
-          most frequent words first. Look it up anyway?</p>
-        <button class="btn" id="lookbtn" data-q="${esc(document.getElementById('q').value.trim())}">
-          🔎 Look up «${esc(document.getElementById('q').value.trim())}»</button>
-      </div>`;
+      return q ? '<p class="muted">searching the dictionary…</p>'
+               : '<p class="muted">Nothing matches.</p>';
+    }
+
+    let suggestSeq = 0;
+    async function suggest(q) {
+      const mine = ++suggestSeq;
+      let d;
+      try {
+        d = await (await fetch(`${SEARCH}?q=${encodeURIComponent(q)}`)).json();
+      } catch {
+        d = null;
+      }
+      // Typing is faster than the network: only the newest query may paint.
+      if (mine !== suggestSeq) return;
+      if (!d?.words?.length) {
+        list.innerHTML = `<div class="panel" style="text-align:center; padding:26px 18px;">
+          <p class="muted" style="margin:0 0 14px;">Not in the deck or the dictionary.</p>
+          <button class="btn" id="lookbtn">🔎 Look «${esc(q)}» up anyway</button>
+        </div>`;
+        document.getElementById('lookbtn').onclick = () => lookup(q);
+        return;
+      }
+      list.innerHTML = `<p class="muted" style="font-size:14px;">
+          Not taught by the deck — found in the dictionary:</p>` +
+        d.words.map((w) => `
+          <button class="lexrow" data-t="${esc(w.term)}">
+            <span><strong>${esc(w.term)}</strong>
+              <span class="muted" style="font-size:13px;"> ${esc(w.pos ?? '')}${w.gender ? ' ' + esc(w.gender) : ''}</span>
+            </span>
+            <span class="muted">${esc(w.trans).slice(0, 90)}</span>
+          </button>`).join('');
+      list.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t); });
     }
 
     async function lookup(q) {
@@ -319,6 +347,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       cursor: pointer; white-space: nowrap; flex: none;
     }
     .histchip:hover { border-color: var(--accent); }
+    .lexrow {
+      display: flex; justify-content: space-between; gap: 14px; align-items: baseline;
+      width: 100%; background: none; border: 0; border-bottom: 1px solid var(--panel2);
+      color: var(--text); font: inherit; font-size: 15px; text-align: left;
+      padding: 9px 4px; cursor: pointer;
+    }
+    .lexrow:hover { background: var(--panel2); }
+    .lexrow .muted { font-size: 13.5px; text-align: right; }
     .tab {
       background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
       font: inherit; font-size: 14.5px; padding: 5px 2px; margin-right: 12px; cursor: pointer;

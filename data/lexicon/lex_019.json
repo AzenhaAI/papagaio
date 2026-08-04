@@ -1,0 +1,10763 @@
+{
+ "meta": {
+  "shard": "019",
+  "source": "English Wiktionary via kaikki.org (CC BY-SA 4.0); ranking from OpenSubtitles 2018 frequency list (CC BY-SA 4.0)",
+  "note": "Lookup lexicon, not the teaching deck. Inflected forms are dropped — the conjugator generates them."
+ },
+ "words": [
+  {
+   "term": "inabitável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46872,
+   "senses": [
+    {
+     "trans": "uninhabitable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desintegração",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46873,
+   "senses": [
+    {
+     "trans": "disintegration",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "decomposition",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hipnótico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46880,
+   "senses": [
+    {
+     "trans": "hypnotic (relating to or causing hypnosis)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "enthralling; mesmerising (very exciting)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Cantuária",
+   "pos": "name",
+   "gender": null,
+   "rank": 46886,
+   "senses": [
+    {
+     "trans": "Canterbury (a city in Kent, England)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jesuíta",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 46888,
+   "senses": [
+    {
+     "trans": "Jesuit (member of the Society of Jesus, a Roman Catholic order)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jesuíta",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46888,
+   "senses": [
+    {
+     "trans": "of the Jesuits",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adesão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46891,
+   "senses": [
+    {
+     "trans": "accession; admission",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "adherence",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "support; adoption",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "membership; admission; affiliation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "coherence",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cotovelada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46895,
+   "senses": [
+    {
+     "trans": "a blow with the elbow",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "branquelo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 46899,
+   "senses": [
+    {
+     "trans": "whiteboy, cracker (white person)",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Ei, branquelo sujo! Coloquei minha mala no chão. Uma mulatona estava sentada nos degraus da varanda, balançando as pernas. Tinha uma boa aparência. –Olá, branquelo sujo! Eu não disse nada. Fiquei apenas olhando para ela."
+    }
+   ]
+  },
+  {
+   "term": "branquelo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46899,
+   "senses": [
+    {
+     "trans": "having a very pale skin",
+     "tags": [
+      "informal"
+     ],
+     "ex": "2015, Soraggi, Paulo Lima, Formigas de Camisetas Pretas, KBR EDITORA DIGITAL"
+    }
+   ]
+  },
+  {
+   "term": "amarraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 46909,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of amarrar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estiloso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46925,
+   "senses": [
+    {
+     "trans": "stylish",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mandrião",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46926,
+   "senses": [
+    {
+     "trans": "lazy",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mandrião",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 46926,
+   "senses": [
+    {
+     "trans": "a lazy person",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": "MANDRIÃO, ſ. m. homem ocioſo, deſapplicado."
+    },
+    {
+     "trans": "skua (predatory seabird of the family Stercorariidae)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gown; (strictly) christening gown",
+     "tags": [],
+     "ex": "MANDRIÃO, ſ. m.[…]Huma roupa até meio corpo larga como os bajús de que agora usão as mulheres por caſa."
+    },
+    {
+     "trans": "drone",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sem-vergonha",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 46931,
+   "senses": [
+    {
+     "trans": "sleazebag; scumbag (morally reprehensible person)",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sem-vergonha",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46931,
+   "senses": [
+    {
+     "trans": "morally reprehensible",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eticamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 46940,
+   "senses": [
+    {
+     "trans": "ethically",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alojar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 46947,
+   "senses": [
+    {
+     "trans": "to house, accommodate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to billet",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to host (data, services etc.)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "preferencial",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46963,
+   "senses": [
+    {
+     "trans": "preferential",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "confundiram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 46965,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of confundir",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desocupado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 46968,
+   "senses": [
+    {
+     "trans": "free (not in use)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "idle (not engaged in any occupation or employment)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arbitragem",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46969,
+   "senses": [
+    {
+     "trans": "arbitration (the act or process of arbitrating)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "arbitration (the use an arbitrator or arbiter in order to resolve a dispute)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "the process of acting as the referee of a match",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "the set of referees and assistant referees of a match",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "arbitrage (the buying of an item in one market and selling in another)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paxá",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 46974,
+   "senses": [
+    {
+     "trans": "pasha (highest honorary title during the Ottoman Empire)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adulteração",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46983,
+   "senses": [
+    {
+     "trans": "adulteration (the action of adulterating)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cuidaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 46985,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of cuidar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "narina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 46991,
+   "senses": [
+    {
+     "trans": "nostril (either of the two orifices located on the nose)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pégaso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 46993,
+   "senses": [
+    {
+     "trans": "pegasus (a mythological winged horse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Pégaso",
+   "pos": "name",
+   "gender": null,
+   "rank": 46993,
+   "senses": [
+    {
+     "trans": "Pegasus (mythical winged horse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Copérnico",
+   "pos": "name",
+   "gender": null,
+   "rank": 46996,
+   "senses": [
+    {
+     "trans": "Copernicus",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estressado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47012,
+   "senses": [
+    {
+     "trans": "Brazilian Portuguese standard spelling of stressado (“stressed”)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "curvo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47024,
+   "senses": [
+    {
+     "trans": "curved; bent",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "empadão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47036,
+   "senses": [
+    {
+     "trans": "empadão",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Ancara",
+   "pos": "name",
+   "gender": null,
+   "rank": 47038,
+   "senses": [
+    {
+     "trans": "Ankara (the capital city and province of Turkey)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gramofone",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47060,
+   "senses": [
+    {
+     "trans": "gramophone (historic wind-up record player)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dissimulação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47072,
+   "senses": [
+    {
+     "trans": "concealment",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dissimulation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "disguise, camouflage",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aproximaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47076,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of aproximar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chakra",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47077,
+   "senses": [
+    {
+     "trans": "alternative spelling of chacra",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tojo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47078,
+   "senses": [
+    {
+     "trans": "gorse; furze (Ulex europaeus, an evergreen shrub of Europe and northern Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desinteressado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47094,
+   "senses": [
+    {
+     "trans": "disinterested",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unselfish",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "impartial",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Marraquexe",
+   "pos": "name",
+   "gender": null,
+   "rank": 47095,
+   "senses": [
+    {
+     "trans": "Marrakech (the capital city of the Marrakesh-Safi region, Morocco)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ofuscar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47096,
+   "senses": [
+    {
+     "trans": "to outshine",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "genealogia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47098,
+   "senses": [
+    {
+     "trans": "genealogy (the descent of a person, family, or group from an ancestor or ancestors)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "genealogy (a record or table of such descent)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "genealogy (study and recording of descents)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pedante",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47100,
+   "senses": [
+    {
+     "trans": "pedant (person overly concerned with formal rules and trivial points of learning)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pedante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47100,
+   "senses": [
+    {
+     "trans": "pedantic (behaving as a pedant)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "periodicamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47106,
+   "senses": [
+    {
+     "trans": "periodically (in a regular, periodic manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "despenteado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47113,
+   "senses": [
+    {
+     "trans": "dishevelled (with the hair uncombed)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "velar",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47118,
+   "senses": [
+    {
+     "trans": "velar (articulated at the soft palate)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "velar",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47118,
+   "senses": [
+    {
+     "trans": "velar (a consonant articulated at the soft palate)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "velar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47118,
+   "senses": [
+    {
+     "trans": "to veil (cover with a veil)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to veil; to conceal; to hide",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to damage photographic film due to excessive light",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to keep a vigil (overnight watch over a deceased or dying person)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to protect; to defend (especially something abstract, such as reputation)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Fernandes",
+   "pos": "name",
+   "gender": null,
+   "rank": 47120,
+   "senses": [
+    {
+     "trans": "a surname",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "magenta",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47127,
+   "senses": [
+    {
+     "trans": "magenta (pinkish purple colour)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "magenta",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47127,
+   "senses": [
+    {
+     "trans": "magenta (being of the magenta colour)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "contemplação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47132,
+   "senses": [
+    {
+     "trans": "the act of beholding (staring with awe)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "the act of contemplating (considering with attention)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tonalidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47137,
+   "senses": [
+    {
+     "trans": "tonality, tone, shade, hue",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "atrofia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47139,
+   "senses": [
+    {
+     "trans": "atrophy (reduced functionality of an organ)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "diga-se",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 47145,
+   "senses": [
+    {
+     "trans": "ellipsis of diga-se de passagem",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see diga, se.",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "articular",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47147,
+   "senses": [
+    {
+     "trans": "to joint (to join by joints)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to pronounce, to utter",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to organize, to structure (to link in a coherent manner)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to connect, to joint, to unite",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to itemize (to set out in separate articles or paragraphs)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "articular",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47147,
+   "senses": [
+    {
+     "trans": "articular (related to joints)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "articular (which is of the nature of the grammatical article)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "articular",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47147,
+   "senses": [
+    {
+     "trans": "Meckel's cartilage (endoskeletal part of the mandibular arch of lower vertebrates, which, in mammals, gives rise to the ear ossicle, called the malleus)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "miraculosamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47148,
+   "senses": [
+    {
+     "trans": "miraculously",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "indulto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47150,
+   "senses": [
+    {
+     "trans": "pardon (forgiveness for an offence)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incólume",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47155,
+   "senses": [
+    {
+     "trans": "unscathed (not injured or harmed)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Jeremias",
+   "pos": "name",
+   "gender": null,
+   "rank": 47163,
+   "senses": [
+    {
+     "trans": "Jeremiah (a prophet)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Jeremiah (book of the Old Testament)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a male given name, equivalent to English Jeremiah",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ardiloso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47164,
+   "senses": [
+    {
+     "trans": "cunning; guileful",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47169,
+   "senses": [
+    {
+     "trans": "transom",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cerrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47171,
+   "senses": [
+    {
+     "trans": "to close, shut",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to seal",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "disponibilizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47185,
+   "senses": [
+    {
+     "trans": "to make available",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "licenciar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47186,
+   "senses": [
+    {
+     "trans": "to license",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fertilizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47191,
+   "senses": [
+    {
+     "trans": "to fertilize",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cheta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47204,
+   "senses": [
+    {
+     "trans": "small coin (small amount of money)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": "Eu não tenho cheta."
+    }
+   ]
+  },
+  {
+   "term": "asterisco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47211,
+   "senses": [
+    {
+     "trans": "asterisk (symbol used to highlight words or sentences)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ebulição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47215,
+   "senses": [
+    {
+     "trans": "boiling",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ebullition",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incontinência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47228,
+   "senses": [
+    {
+     "trans": "incontinence (lack of self-restraint)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "incontinence (inability to restrain discharge of urine or faeces)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aditivo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47232,
+   "senses": [
+    {
+     "trans": "additive (substance altering another substance)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mini-saia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47258,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1990) of minissaia; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "contrição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47260,
+   "senses": [
+    {
+     "trans": "contrition (sincere penitence or remorse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alli",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47265,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of ali",
+     "tags": [],
+     "ex": "Educado á custa do Estado na escola de West Point, sahio d’alli como alferes graduado do 4.° regimento de infanteria […]"
+    }
+   ]
+  },
+  {
+   "term": "decano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47269,
+   "senses": [
+    {
+     "trans": "dean (church dignitary)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "decane (aliphatic hydrocarbon isomer having the chemical formula C₁₀H₂₂)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "crawl",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47272,
+   "senses": [
+    {
+     "trans": "alternative spelling of crol",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hilário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47279,
+   "senses": [
+    {
+     "trans": "hilarious (very funny)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hilário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47279,
+   "senses": [
+    {
+     "trans": "one who trades donkeys or horses",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Hilário",
+   "pos": "name",
+   "gender": null,
+   "rank": 47279,
+   "senses": [
+    {
+     "trans": "a male given name",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rapa",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47284,
+   "senses": [
+    {
+     "trans": "a figure of authority who confiscates merchandise from unlicensed street vendors",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "expo",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47295,
+   "senses": [
+    {
+     "trans": "expo, exposition",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Expo",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47295,
+   "senses": [
+    {
+     "trans": "World Exposition (a regular international exposition)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "simbiose",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47296,
+   "senses": [
+    {
+     "trans": "symbiosis",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "evaporar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47301,
+   "senses": [
+    {
+     "trans": "to evaporate",
+     "tags": [],
+     "ex": "A água evapora à temperatura de 100ºC"
+    },
+    {
+     "trans": "to disappear, to vanish",
+     "tags": [],
+     "ex": "O menino evaporou!"
+    }
+   ]
+  },
+  {
+   "term": "desgostoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47302,
+   "senses": [
+    {
+     "trans": "disgusting",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "displeased, upset",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "trincar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47307,
+   "senses": [
+    {
+     "trans": "to latch (close with a latch)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to crack (form cracks, break apart under pressure)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to nibble, to chomp",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estricnina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47308,
+   "senses": [
+    {
+     "trans": "strychnine (a toxic, colourless, crystalline alkaloid)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "penhor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47310,
+   "senses": [
+    {
+     "trans": "pledge (solemn promise)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "pledge (security to guarantee payment of a debt)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Beijing",
+   "pos": "name",
+   "gender": null,
+   "rank": 47311,
+   "senses": [
+    {
+     "trans": "synonym of Pequim",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "coesão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47314,
+   "senses": [
+    {
+     "trans": "cohesion",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "coherence",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "indefinido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47316,
+   "senses": [
+    {
+     "trans": "indefinite (without limits)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "undefined (lacking a definition)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "undefined (that does not have a meaning)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "indefinite; undecided; uncertain",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "indefinite (which specifies an undetermined object)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "indefinido",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47316,
+   "senses": [
+    {
+     "trans": "that which is undefined",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an indefinite pronoun or article",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reportaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47318,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of reportar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "solista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47321,
+   "senses": [
+    {
+     "trans": "soloist (musician who performs alone)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "identificável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47323,
+   "senses": [
+    {
+     "trans": "identifiable (capable of being identified)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "merenda",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47337,
+   "senses": [
+    {
+     "trans": "a meal eaten by students in school",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dunch (small meal between lunch and dinner)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "snack",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "esteticista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47345,
+   "senses": [
+    {
+     "trans": "aesthetician (oneone who studies aesthetics)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "beautician (someone who provides beauty treatments)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hipotecar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47347,
+   "senses": [
+    {
+     "trans": "to mortgage",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to hypothecate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bimba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47355,
+   "senses": [
+    {
+     "trans": "inner and upper thighs",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "child penis",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "datação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47361,
+   "senses": [
+    {
+     "trans": "dating (estimation of the age of something)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arrasador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47367,
+   "senses": [
+    {
+     "trans": "crushing (that crushes)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ginseng",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47372,
+   "senses": [
+    {
+     "trans": "ginseng (any of several plants of the genus Panax)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ginseng (root or extract of the ginseng plant)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "machadada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47388,
+   "senses": [
+    {
+     "trans": "axe blow (a hit using an axe)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "diazepam",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47392,
+   "senses": [
+    {
+     "trans": "diazepam (minor tranquillizer, benzodiazepine)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tweed",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47398,
+   "senses": [
+    {
+     "trans": "tweed (coarse woolen fabric)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "remember",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47402,
+   "senses": [
+    {
+     "trans": "The act of having sex with one's ex.",
+     "tags": [
+      "informal"
+     ],
+     "ex": "E aí, soube que você encontrou a Andreia. Rolou um remember?"
+    }
+   ]
+  },
+  {
+   "term": "apogeu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47403,
+   "senses": [
+    {
+     "trans": "apogee (the point on the Moon's orbit, on the orbit of an artificial satellite or on the Sun's orbit in apparent annual motion, which is furthest from the Earth)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "peak; maximum moment; culmination",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adaptável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47405,
+   "senses": [
+    {
+     "trans": "adaptable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "convivência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47409,
+   "senses": [
+    {
+     "trans": "cohabitation, living together",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "intimacy",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lomba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47410,
+   "senses": [
+    {
+     "trans": "hill, hillock",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ridge",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "speed bump",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "causo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47411,
+   "senses": [
+    {
+     "trans": "story, narrative, account",
+     "tags": [],
+     "ex": "Nhô Barnabé conhece muitos causos de bichos parecidos com as fábulas europeias"
+    }
+   ]
+  },
+  {
+   "term": "quadrinhos",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47415,
+   "senses": [
+    {
+     "trans": "ellipsis of história em quadrinhos (“comics”)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fraque",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47419,
+   "senses": [
+    {
+     "trans": "morning dress, white tie and tails",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "tailcoat",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bradicardia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47420,
+   "senses": [
+    {
+     "trans": "bradycardia",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eca",
+   "pos": "interj",
+   "gender": null,
+   "rank": 47425,
+   "senses": [
+    {
+     "trans": "an exclamation of disgust; yuck, ew",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mestria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47431,
+   "senses": [
+    {
+     "trans": "ability (high level of capability or skill)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tímpano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47433,
+   "senses": [
+    {
+     "trans": "eardrum; tympanum (membrane that separates the outer ear from the middle ear)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "kettledrum (large drum with a tunable drumhead)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "tympanum (space between the sides of a pediment)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "tympanum (hearing organ of some amphibians and insects)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "the part of a bell that is struck by the clapper",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bulimia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47436,
+   "senses": [
+    {
+     "trans": "bulimia",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "para-brisas",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47438,
+   "senses": [
+    {
+     "trans": "windshield, windscreen",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ilustração",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47439,
+   "senses": [
+    {
+     "trans": "illustration (picture designed to decorate)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "illustration (act of illustrating: making clear by example)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "illustration (that which illustrates)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "knowledge",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "esquiva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47441,
+   "senses": [
+    {
+     "trans": "the avoidance of social contact",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a defensive move in capoeira",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "matéria-prima",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47447,
+   "senses": [
+    {
+     "trans": "raw material",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "franquia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47450,
+   "senses": [
+    {
+     "trans": "franchise (business licensed to operate under a given business model and brand)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "intratável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47454,
+   "senses": [
+    {
+     "trans": "untreatable",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unhandleable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Danúbio",
+   "pos": "name",
+   "gender": null,
+   "rank": 47455,
+   "senses": [
+    {
+     "trans": "Danube (a river in Europe; flowing 2,850 kilometers from the confluence of the Breg and Brigach at Donaueschingen, Germany, through Austria, Slovakia, Hungary, Croatia, Serbia, Romania, Bulgaria, Moldova, and Ukraine, into the Black Sea)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Selene",
+   "pos": "name",
+   "gender": null,
+   "rank": 47464,
+   "senses": [
+    {
+     "trans": "Selene (goddess of the moon)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cossaco",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47465,
+   "senses": [
+    {
+     "trans": "Cossack (relating to the Cossacks, warlike peoples of Ukraine and the banks of the Don, who enjoyed a certain administrative autonomy, or to their descendants)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cossaco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47465,
+   "senses": [
+    {
+     "trans": "Cossack (member of the tsarist army recruited in certain regions of Southwestern Russia)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Cossack (individual of the Cossacks or their descendant)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "borbulhar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47467,
+   "senses": [
+    {
+     "trans": "to bubble (to rise up in bubbles)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arqui-inimigo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47469,
+   "senses": [
+    {
+     "trans": "archenemy (a principal enemy)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Luisiana",
+   "pos": "name",
+   "gender": null,
+   "rank": 47474,
+   "senses": [
+    {
+     "trans": "Louisiana (a state in the Deep South and South Central regions of the United States)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "imperialista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47481,
+   "senses": [
+    {
+     "trans": "imperialist (of, relating to or supporting imperialism)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "imperialista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47481,
+   "senses": [
+    {
+     "trans": "imperialist (an advocate or actor in imperialism)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sucessivamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47482,
+   "senses": [
+    {
+     "trans": "successively",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sagaz",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47486,
+   "senses": [
+    {
+     "trans": "sagacious (having keen discernment)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Martinho",
+   "pos": "name",
+   "gender": null,
+   "rank": 47489,
+   "senses": [
+    {
+     "trans": "a male given name, equivalent to English Martin",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fato-macaco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47490,
+   "senses": [
+    {
+     "trans": "overall (protective garment worn over clothing)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "projetor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47491,
+   "senses": [
+    {
+     "trans": "projector (device)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Letónia",
+   "pos": "name",
+   "gender": null,
+   "rank": 47496,
+   "senses": [
+    {
+     "trans": "Latvia (a country in northeastern Europe; official name: República da Letónia; capital and largest city: Riga)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pedigree",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47497,
+   "senses": [
+    {
+     "trans": "pedigree (chart of ancestors, showing the breed of an animal)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pedigree",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47497,
+   "senses": [
+    {
+     "trans": "purebred; pedigree",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Amarillo",
+   "pos": "name",
+   "gender": null,
+   "rank": 47499,
+   "senses": [
+    {
+     "trans": "Amarillo (a city in the northwest plains of Texas, United States)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "escriturário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47517,
+   "senses": [
+    {
+     "trans": "bookkeeper",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clerk",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "scribe",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "equinócio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47530,
+   "senses": [
+    {
+     "trans": "equinox",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "apaixonaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47532,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of apaixonar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "acréscimo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47544,
+   "senses": [
+    {
+     "trans": "increase",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "injury time",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "precursor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47549,
+   "senses": [
+    {
+     "trans": "precursor (forerunner, predecessor)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "precursor (chemical compound)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "precursor",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47549,
+   "senses": [
+    {
+     "trans": "precursory (relating to events that will follow)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "prólogo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47556,
+   "senses": [
+    {
+     "trans": "prologue",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "apático",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47557,
+   "senses": [
+    {
+     "trans": "apathetic (void of feeling)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "listless (lacking enthusiasm)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "apático",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47557,
+   "senses": [
+    {
+     "trans": "apathete; apathist (an apathetic person)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "centrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47560,
+   "senses": [
+    {
+     "trans": "to centre",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to centralize",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "uníssono",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47585,
+   "senses": [
+    {
+     "trans": "unisonous",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "uníssono",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47585,
+   "senses": [
+    {
+     "trans": "unison",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nivelado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47596,
+   "senses": [
+    {
+     "trans": "level (same height at all places)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fiação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47597,
+   "senses": [
+    {
+     "trans": "spinning (thread)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "wiring",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "inesgotável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47600,
+   "senses": [
+    {
+     "trans": "inexhaustible",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "subversivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47604,
+   "senses": [
+    {
+     "trans": "subversive, insurgent",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hectare",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47611,
+   "senses": [
+    {
+     "trans": "hectare (unit of surface area)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "colono",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47628,
+   "senses": [
+    {
+     "trans": "colonist (a founder or member of a colony)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an immigrant farmer, especially from a European country",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "migrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47637,
+   "senses": [
+    {
+     "trans": "to migrate (to relocate from one region to another)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to migrate (to start using a different system or programming language)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "derivação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47644,
+   "senses": [
+    {
+     "trans": "derivation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "redoma",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47650,
+   "senses": [
+    {
+     "trans": "bell jar",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dome, cupola",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sadismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47653,
+   "senses": [
+    {
+     "trans": "sadism (enjoyment of inflicting pain)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Bartolomeu",
+   "pos": "name",
+   "gender": null,
+   "rank": 47656,
+   "senses": [
+    {
+     "trans": "a male given name, equivalent to English Bartholomew",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Bartholomew (one of the apostles)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "secaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47658,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of secar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "visivelmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47662,
+   "senses": [
+    {
+     "trans": "visibly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "apneia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47673,
+   "senses": [
+    {
+     "trans": "apnea (cessation of breathing)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "freediving / free-diving / free diving",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Srta.",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47674,
+   "senses": [
+    {
+     "trans": "abbreviation of senhorita",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "maus-tratos",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47679,
+   "senses": [
+    {
+     "trans": "mistreatment, abuse",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alicerce",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47689,
+   "senses": [
+    {
+     "trans": "foundation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "base, basis",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dramatizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47695,
+   "senses": [
+    {
+     "trans": "to dramatize",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "abrigado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47700,
+   "senses": [
+    {
+     "trans": "sheltered (protected from the wind and weather)",
+     "tags": [],
+     "ex": "Me escondi da tempestade numa parte abrigada da escarpa."
+    }
+   ]
+  },
+  {
+   "term": "desenharam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47709,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of desenhar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "feição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47712,
+   "senses": [
+    {
+     "trans": "figure, form, aspect",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "equivalência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47732,
+   "senses": [
+    {
+     "trans": "equivalence",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vislumbrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47737,
+   "senses": [
+    {
+     "trans": "to glimpse",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nazismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47738,
+   "senses": [
+    {
+     "trans": "Nazism (the ideology of Adolf Hitler’s NSDAP)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "inclusão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47746,
+   "senses": [
+    {
+     "trans": "inclusion",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "selecionar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47748,
+   "senses": [
+    {
+     "trans": "to select; to choose",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to select (define the objects or pixels to which operations will be applied)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incisivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47750,
+   "senses": [
+    {
+     "trans": "incisive (able to pierce or cut)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "incisive (forceful in expression)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incisivo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47750,
+   "senses": [
+    {
+     "trans": "incisor (front tooth of mammals)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "irrequieto",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47755,
+   "senses": [
+    {
+     "trans": "uneasy; restless",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "peróxido",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47761,
+   "senses": [
+    {
+     "trans": "peroxide",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ticket",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47765,
+   "senses": [
+    {
+     "trans": "alternative form of tíquete",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Rodelas",
+   "pos": "name",
+   "gender": null,
+   "rank": 47768,
+   "senses": [
+    {
+     "trans": "a municipality of Bahia, Brazil",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "carícia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47770,
+   "senses": [
+    {
+     "trans": "caress",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cuddle",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pô",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47773,
+   "senses": [
+    {
+     "trans": "apocopic form of pôr; used preceding the pronouns lo, la, los or las",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "eye dialect spelling of pôr, representing Caipira Portuguese",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pô",
+   "pos": "interj",
+   "gender": null,
+   "rank": 47773,
+   "senses": [
+    {
+     "trans": "It expresses astonishment, annoyance, boredom",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": "Pô, que difícil!"
+    }
+   ]
+  },
+  {
+   "term": "caule",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47776,
+   "senses": [
+    {
+     "trans": "stem (part of the axis of a plant, which normally supports the leaves)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "polimento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47777,
+   "senses": [
+    {
+     "trans": "polish, sheen, glossiness",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nébula",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47784,
+   "senses": [
+    {
+     "trans": "mist, haze",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "nebula",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bronquite",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47790,
+   "senses": [
+    {
+     "trans": "bronchitis (inflammation of the lungs)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adoçar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47793,
+   "senses": [
+    {
+     "trans": "to sweeten",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to blunt",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "spoiler",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47795,
+   "senses": [
+    {
+     "trans": "spoiler (document, review or comment that discloses the ending or some key surprise or twist in a story)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "spoiler (device to reduce lift and increase drag)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "spoiler (device to reduce lift and increase downforce)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "extrapolar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47802,
+   "senses": [
+    {
+     "trans": "to extrapolate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "flertar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47803,
+   "senses": [
+    {
+     "trans": "to flirt; to philander; to cocket; to dally",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "telepaticamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47815,
+   "senses": [
+    {
+     "trans": "telepathically",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "detetor",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47816,
+   "senses": [
+    {
+     "trans": "detecting",
+     "tags": [],
+     "ex": "aparelho detetor"
+    }
+   ]
+  },
+  {
+   "term": "detetor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47816,
+   "senses": [
+    {
+     "trans": "detector (someone or something that detects)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "enxoval",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47817,
+   "senses": [
+    {
+     "trans": "layette (collection of clothes and objects necessary for the service and use of a baby or a person who is going to or is setting up a house)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "correcional",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47829,
+   "senses": [
+    {
+     "trans": "correctional",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "misdemeanorous (relating to misdemeanors)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "of a trial that judges such crimes",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "correcional",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47829,
+   "senses": [
+    {
+     "trans": "jurisdiction of such a court",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desposar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47838,
+   "senses": [
+    {
+     "trans": "to espouse (become married to)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "beladona",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47847,
+   "senses": [
+    {
+     "trans": "belladonna, deadly nightshade (Atropa belladonna)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "naõ",
+   "pos": "adv",
+   "gender": null,
+   "rank": 47850,
+   "senses": [
+    {
+     "trans": "obsolete spelling of não",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "naõ",
+   "pos": "interj",
+   "gender": null,
+   "rank": 47850,
+   "senses": [
+    {
+     "trans": "obsolete spelling of não",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "entupir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47857,
+   "senses": [
+    {
+     "trans": "to stuff (to fill (something) up in a compressed manner)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to clog (to block or slow passage through)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to clog (to become blocked)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to cram (to eat greedily, and to satiety; to stuff)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Hanuman",
+   "pos": "name",
+   "gender": null,
+   "rank": 47860,
+   "senses": [
+    {
+     "trans": "Hanuman (Hindu god)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sexismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47871,
+   "senses": [
+    {
+     "trans": "sexism (discrimination based on gender)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "descampado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47873,
+   "senses": [
+    {
+     "trans": "vacant, uninhabited (of a dwelling or a lot)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "descampado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47873,
+   "senses": [
+    {
+     "trans": "wide stretch of land that is uncultivated and/or unused",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tomilho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47880,
+   "senses": [
+    {
+     "trans": "thyme (any plant of the genus Thymus, often used as seasoning)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gare",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47882,
+   "senses": [
+    {
+     "trans": "train station or platform",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "modalidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47885,
+   "senses": [
+    {
+     "trans": "modality (state of being modal)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "discipline (sub-category of a sport)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "metanol",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47887,
+   "senses": [
+    {
+     "trans": "methanol (the simplest aliphatic alcohol, CH₃OH)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desenhista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47896,
+   "senses": [
+    {
+     "trans": "drawer; draughtsman/draughtswoman (professional who creates drawings)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "afasia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47899,
+   "senses": [
+    {
+     "trans": "aphasia (pathological speech disorder)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "madrugador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47900,
+   "senses": [
+    {
+     "trans": "who wakes early",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "madrugador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47900,
+   "senses": [
+    {
+     "trans": "early bird (one who wakes early)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "escaramuça",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47913,
+   "senses": [
+    {
+     "trans": "skirmish",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "colherada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47914,
+   "senses": [
+    {
+     "trans": "spoonful (amount a spoon will hold)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a blow with a spoon",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "remanescente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47934,
+   "senses": [
+    {
+     "trans": "remaining (which remains)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "which survived",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "remanescente",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47934,
+   "senses": [
+    {
+     "trans": "survivor (one who survived)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "remainder (part or parts remaining)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "derrocada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47937,
+   "senses": [
+    {
+     "trans": "collapse",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ruin",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "landslide",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "marajá",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47938,
+   "senses": [
+    {
+     "trans": "maharaja",
+     "tags": [],
+     "ex": "Batatinha (Gastão Renné): Ei, Manda-Chuva, o que é um marajá?\nManda-Chuva (Lima Duarte): Que é o quê?\nBatatinha (Gastão Renné): Um marajá.\nManda-Chuva (Lima Duarte): Você está pensando que eu sou o quê, autor de dicionário?"
+    },
+    {
+     "trans": "a public officer with a high salary and other amenities",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estratosfera",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47946,
+   "senses": [
+    {
+     "trans": "stratosphere (layer of Earth's atmosphere)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "blasfemo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47949,
+   "senses": [
+    {
+     "trans": "blasphemous (lacking piety or respect for the sacred)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "matiné",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47955,
+   "senses": [
+    {
+     "trans": "European Portuguese standard spelling of matinê",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "poligamia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47960,
+   "senses": [
+    {
+     "trans": "polygamy (the practice of having multiple spouses or partners)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "proliferação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 47966,
+   "senses": [
+    {
+     "trans": "proliferation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ejacular",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47967,
+   "senses": [
+    {
+     "trans": "to cum (have an orgasm; ejaculate)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to eject",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "beija-flor",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 47973,
+   "senses": [
+    {
+     "trans": "hummingbird",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "propagar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47980,
+   "senses": [
+    {
+     "trans": "to propagate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to have offspring, reproduce",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rotular",
+   "pos": "verb",
+   "gender": null,
+   "rank": 47989,
+   "senses": [
+    {
+     "trans": "to label with an adhesive label",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to label (to categorise a person or thing)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cômodo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 47999,
+   "senses": [
+    {
+     "trans": "Brazilian Portuguese standard spelling of cómodo",
+     "tags": [],
+     "ex": "Apesar de as fases serem enormes e terem uma duração máxima de 60 minutos, existe o recurso de quick save. Afinal, não faria sentido e não seria nada cômodo comprar um jogo portátil que não se pode jogar a qualquer hora e em qualquer lugar, sem precisar se preocupar em achar um save point ou terminar a fase para poder salvar."
+    }
+   ]
+  },
+  {
+   "term": "cômodo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 47999,
+   "senses": [
+    {
+     "trans": "Brazilian Portuguese standard spelling of cómodo",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adotivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48015,
+   "senses": [
+    {
+     "trans": "adoptive (related through adoption)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fulcro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48016,
+   "senses": [
+    {
+     "trans": "fulcrum (the pivot about which a lever turns)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Serizawa",
+   "pos": "name",
+   "gender": null,
+   "rank": 48021,
+   "senses": [
+    {
+     "trans": "a surname from Japanese",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "decair",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48029,
+   "senses": [
+    {
+     "trans": "to decay",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "angiografia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48037,
+   "senses": [
+    {
+     "trans": "angiogram (X-ray image of the blood vessels)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "canudo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48039,
+   "senses": [
+    {
+     "trans": "tube, pipe",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "drinking straw (small hollow tube through which drink is sucked)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "diploma or certificate tube",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "diploma",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Cisjordânia",
+   "pos": "name",
+   "gender": null,
+   "rank": 48040,
+   "senses": [
+    {
+     "trans": "West Bank (a traditional region of Palestine)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "insensibilidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48045,
+   "senses": [
+    {
+     "trans": "insensibility (the property of being insensible: unable to feel something)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "insensibility (the property of being insensible: lacking emotions)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Mesopotâmia",
+   "pos": "name",
+   "gender": null,
+   "rank": 48048,
+   "senses": [
+    {
+     "trans": "Mesopotamia (a geographic region in southwest Asia, spanning from the rivers Euphrates and Tigris, located in modern Iraq, eastern Syria, and southeast Turkey; the site of one of the most ancient civilizations in the history of man)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Mesopotamia (a former province of the Roman Empire, existing from 116 to 117 AD and again from 198 to 637 AD)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Mesopotamia (the Mandate for Mesopotamia, a League of Nations mandate from 1920 to 1932, entrusted to the United Kingdom, that was the precursor to the independent state of Iraq)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Mesopotamia (a geographic region in northeast Argentina, between the Paraná and Uruguay rivers)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chibar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48059,
+   "senses": [
+    {
+     "trans": "to snitch",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to tell or reveal something",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sustentabilidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48062,
+   "senses": [
+    {
+     "trans": "sustainability (the ability to sustain something)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sustainability (the ability to carry out human activities without affecting the natural environment)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jinn",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48065,
+   "senses": [
+    {
+     "trans": "jinn (spirit)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "raide",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48071,
+   "senses": [
+    {
+     "trans": "raid",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "legitimamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48075,
+   "senses": [
+    {
+     "trans": "legitimately (in a legitimate manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "abóbada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48077,
+   "senses": [
+    {
+     "trans": "vault (arched ceiling)",
+     "tags": [],
+     "ex": "a abóbada não caiu... a abóbada não cairá!"
+    }
+   ]
+  },
+  {
+   "term": "rotativo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48081,
+   "senses": [
+    {
+     "trans": "rotary, rotating, revolving",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rotational",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chileno",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48084,
+   "senses": [
+    {
+     "trans": "Chilean",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chileno",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48084,
+   "senses": [
+    {
+     "trans": "Chilean",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cágado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48087,
+   "senses": [
+    {
+     "trans": "a terrapin, or any other freshwater turtle",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "side-necked turtle (member of the Pleurodira suborder of turtles)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a slow or lazy person",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cágado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48087,
+   "senses": [
+    {
+     "trans": "slow; lazy",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "recair",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48091,
+   "senses": [
+    {
+     "trans": "to fall again or often",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to relapse, reoffend",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bocejar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48095,
+   "senses": [
+    {
+     "trans": "yawn (open the mouth and take a deep breath)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nòs",
+   "pos": "pron",
+   "gender": null,
+   "rank": 48098,
+   "senses": [
+    {
+     "trans": "obsolete spelling of nós",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "certificação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48101,
+   "senses": [
+    {
+     "trans": "certification",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alarmado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48102,
+   "senses": [
+    {
+     "trans": "alarmed",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "penumbra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48106,
+   "senses": [
+    {
+     "trans": "situation of low light",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cetro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48113,
+   "senses": [
+    {
+     "trans": "scepter (ornamental staff)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "manchu",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48118,
+   "senses": [
+    {
+     "trans": "Manchu (relating to the Manchu people)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Manchu (relating to the Manchu language)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "manchu",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48118,
+   "senses": [
+    {
+     "trans": "Manchu (person of Manchuria)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Manchu (Tungusic language spoken by the Manchu people)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adúltero",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48119,
+   "senses": [
+    {
+     "trans": "adulterous",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adúltero",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48119,
+   "senses": [
+    {
+     "trans": "adulterer (one who commits adultery)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mingo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48126,
+   "senses": [
+    {
+     "trans": "nondiminutive eye dialect of mindinho",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "def",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48134,
+   "senses": [
+    {
+     "trans": "handicapped",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": "Referes-te a ti própria como a “Def”. Detestas o politicamente correto?"
+    },
+    {
+     "trans": "retarded, idiot",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": "Não sejas def."
+    }
+   ]
+  },
+  {
+   "term": "presépio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48156,
+   "senses": [
+    {
+     "trans": "nativity scene, nativity play",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "crib, manger",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "stable, stall",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Antares",
+   "pos": "name",
+   "gender": null,
+   "rank": 48170,
+   "senses": [
+    {
+     "trans": "Antares (brightest star in the constellation Scorpio)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Saigon",
+   "pos": "name",
+   "gender": null,
+   "rank": 48173,
+   "senses": [
+    {
+     "trans": "alternative form of Saigão: (historical or informal) Saigon (the former name of Ho Chi Minh City, the largest city in Vietnam; the former capital of South Vietnam)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "figurino",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48175,
+   "senses": [
+    {
+     "trans": "a design or pattern of an item of clothing",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "costume; outfit (set of clothing)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ulna",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48177,
+   "senses": [
+    {
+     "trans": "ulna",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Ganesha",
+   "pos": "name",
+   "gender": null,
+   "rank": 48179,
+   "senses": [
+    {
+     "trans": "alternative form of Ganexa",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "contento",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48189,
+   "senses": [
+    {
+     "trans": "archaic form of contente",
+     "tags": [
+      "archaic"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "talhada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48195,
+   "senses": [
+    {
+     "trans": "pressed tobacco from the United States",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "grão-mestre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48196,
+   "senses": [
+    {
+     "trans": "alternative spelling of Grão-Mestre",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Grão-Mestre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48196,
+   "senses": [
+    {
+     "trans": "Grandmaster (highest title for chess player)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "entalhe",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48207,
+   "senses": [
+    {
+     "trans": "cut, incision in wood",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "groove, notch",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "carving, engraving",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "felina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48215,
+   "senses": [
+    {
+     "trans": "a member or supporter of the MBL",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "deutério",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48220,
+   "senses": [
+    {
+     "trans": "deuterium (isotope of hydrogen)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mamba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48223,
+   "senses": [
+    {
+     "trans": "mamba (venomous snake of the genus Dendroaspis)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sêmen",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48224,
+   "senses": [
+    {
+     "trans": "semen (male reproductory fluid)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "espécimen",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48226,
+   "senses": [
+    {
+     "trans": "alternative form of espécime",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "convalescença",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48229,
+   "senses": [
+    {
+     "trans": "convalescence",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rabanete",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48237,
+   "senses": [
+    {
+     "trans": "radish (Raphanus raphanistrum subsp. sativus, syn. Raphanus sativus, a plant)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "radish (root of Raphanus raphanistrum subsp. sativus)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Brooklin",
+   "pos": "name",
+   "gender": null,
+   "rank": 48241,
+   "senses": [
+    {
+     "trans": "alternative spelling of Brooklyn",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an affluent neighborhood in São Paulo, Brazil",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gêmeo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48259,
+   "senses": [
+    {
+     "trans": "twin",
+     "tags": [],
+     "ex": "irmão gêmeo"
+    }
+   ]
+  },
+  {
+   "term": "gêmeo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48259,
+   "senses": [
+    {
+     "trans": "twin",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "calf (muscle in the back of the leg below the knee)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "libré",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48267,
+   "senses": [
+    {
+     "trans": "livery (distinctive uniform worn by a group)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caubói",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48270,
+   "senses": [
+    {
+     "trans": "cowboy (person who tends cattle, especially in the American West)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cowboy (a man who identifies with cowboy culture, including wearing a cowboy hat and being a fan of country and western music)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "otária",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48271,
+   "senses": [
+    {
+     "trans": "otary (pinniped of the family Otariidae)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "calvície",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48274,
+   "senses": [
+    {
+     "trans": "baldness (the state of being bald)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rosé",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48280,
+   "senses": [
+    {
+     "trans": "pinkish",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rosé",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48280,
+   "senses": [
+    {
+     "trans": "rosé (a pale pink wine)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fofoca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48283,
+   "senses": [
+    {
+     "trans": "gossip (idle talk)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Ela espalhou a fofoca por toda a cidade."
+    }
+   ]
+  },
+  {
+   "term": "nudismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48288,
+   "senses": [
+    {
+     "trans": "nudism (the practice of social, non-sexual nudity)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fênix",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48290,
+   "senses": [
+    {
+     "trans": "phoenix",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Fênix",
+   "pos": "name",
+   "gender": null,
+   "rank": 48290,
+   "senses": [
+    {
+     "trans": "Brazilian Portuguese standard spelling of Fénix",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "embalsamar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48296,
+   "senses": [
+    {
+     "trans": "to embalm (to preserve a corpse)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to embalm; to perfume",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ronin",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48302,
+   "senses": [
+    {
+     "trans": "ronin (masterless samurai)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "volumoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48307,
+   "senses": [
+    {
+     "trans": "bulky (large in size, mass, or volume)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "having many volumes",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Andaluzia",
+   "pos": "name",
+   "gender": null,
+   "rank": 48311,
+   "senses": [
+    {
+     "trans": "Andalusia (a historical region and autonomous community in southern Spain, the most populated and second largest of the seventeen autonomous communities that constitute Spain)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Suméria",
+   "pos": "name",
+   "gender": null,
+   "rank": 48317,
+   "senses": [
+    {
+     "trans": "Sumer (a historical region occupied by the earliest known ancient civilization of the ancient Near East (4th to 3rd millennia BC), located in lower Mesopotamia in modern southern Iraq)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "subscrição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48319,
+   "senses": [
+    {
+     "trans": "subscription",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "substantivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48340,
+   "senses": [
+    {
+     "trans": "substantive (of the essence or essential element of a thing)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "which is equivalent to a noun",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "substantivo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48340,
+   "senses": [
+    {
+     "trans": "noun (grammatical category)",
+     "tags": [],
+     "ex": "Na expressão \"casa rosa\", \"casa\" é um substantivo."
+    }
+   ]
+  },
+  {
+   "term": "auto-retrato",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48344,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1990) of autorretrato; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "turfa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48350,
+   "senses": [
+    {
+     "trans": "peat (soil formed of dead but not fully decayed plants)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "termal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48353,
+   "senses": [
+    {
+     "trans": "thermal",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "novelo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48354,
+   "senses": [
+    {
+     "trans": "ball of rolled up thread or string",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "intrigue, plot",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hydrangea",
+     "tags": [],
+     "ex": "(specifically) corymb of said plant"
+    }
+   ]
+  },
+  {
+   "term": "sul-africano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48360,
+   "senses": [
+    {
+     "trans": "South African (of or relating to South Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sul-africano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48360,
+   "senses": [
+    {
+     "trans": "South African (person from South Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bajulação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48365,
+   "senses": [
+    {
+     "trans": "flattery; fawning",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "adulation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "filiação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48377,
+   "senses": [
+    {
+     "trans": "adoption",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "filiation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "conjuntivite",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48382,
+   "senses": [
+    {
+     "trans": "conjunctivitis (inflammation of the eye’s conjuntiva)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "laroca",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48384,
+   "senses": [
+    {
+     "trans": "charming, lovable, cute",
+     "tags": [
+      "Portugal",
+      "informal"
+     ],
+     "ex": "carinha laroca"
+    }
+   ]
+  },
+  {
+   "term": "laroca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48384,
+   "senses": [
+    {
+     "trans": "fried codfish coated in batter",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reprovação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48388,
+   "senses": [
+    {
+     "trans": "reproof",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "reprobation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "disapproval",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "flunking",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "levedura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48390,
+   "senses": [
+    {
+     "trans": "yeast",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "saquearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48397,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of saquear",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "oficializar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48403,
+   "senses": [
+    {
+     "trans": "to officialize",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Sílvia",
+   "pos": "name",
+   "gender": null,
+   "rank": 48408,
+   "senses": [
+    {
+     "trans": "a female given name, equivalent to English Silvia",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "habilitação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48410,
+   "senses": [
+    {
+     "trans": "qualification",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ellipsis of carteira de habilitação (“driver's license”)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "absurdamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48420,
+   "senses": [
+    {
+     "trans": "absurdly (in an absurd fashion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "absurdly (to an extreme degree)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "kkk",
+   "pos": "interj",
+   "gender": null,
+   "rank": 48422,
+   "senses": [
+    {
+     "trans": "hahaha, kek (laugh)",
+     "tags": [],
+     "ex": "2002, Raquel da Cunha Recuero, COMUNIDADES VIRTUAIS NO IRC: O CASO DO #PELOTAS: Um estudo sobre a comunicação mediada por computador e a estruturação de comunidades virtuais, UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL FACULDADE DE BIBLIOTECONOMIA E COMUNICAÇÃO PROGRAMA DE PÓS-GRADUAÇÃO EM COMUNICAÇÃO E INFORMAÇÃO, page 109.\nA usuária A-Louka, por exemplo, costuma rir de um modo muito peculiar. Para rir, ela utiliza a expressão “kkkkkkkkkkkkkkkkkkkkkkkkkk”."
+    }
+   ]
+  },
+  {
+   "term": "KKK",
+   "pos": "interj",
+   "gender": null,
+   "rank": 48422,
+   "senses": [
+    {
+     "trans": "alternative form of kkk",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sacada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48432,
+   "senses": [
+    {
+     "trans": "pull (act of pulling)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "balcony (accessible structure extending from a building)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "oriel (large polygonal recess in a building)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an ingenious idea or understanding, insight, catch",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a solution to a problem",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "brief look, glimpse",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "floral",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48433,
+   "senses": [
+    {
+     "trans": "floral",
+     "tags": [],
+     "ex": "Um vestido floral."
+    }
+   ]
+  },
+  {
+   "term": "baboseira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48445,
+   "senses": [
+    {
+     "trans": "bullshit, nonsense",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "foolish conversation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ambiguidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48450,
+   "senses": [
+    {
+     "trans": "ambiguity (the state of being ambiguous)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ambiguity (an instance of ambiguity)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "almirantado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48451,
+   "senses": [
+    {
+     "trans": "admiralty (office or jurisdiction of an admiral)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alarde",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48457,
+   "senses": [
+    {
+     "trans": "large display, ostentation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "orchestra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48464,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of orquestra",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tonga",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48478,
+   "senses": [
+    {
+     "trans": "Tongan (Austronesian language spoken in Tonga)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "land for farming",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Tonga",
+   "pos": "name",
+   "gender": null,
+   "rank": 48478,
+   "senses": [
+    {
+     "trans": "Tonga (a country and archipelago of Polynesia in Oceania)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rottweiler",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48479,
+   "senses": [
+    {
+     "trans": "Rottweiler (a large breed of dog)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "heroicamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48485,
+   "senses": [
+    {
+     "trans": "heroically",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arrivederci",
+   "pos": "interj",
+   "gender": null,
+   "rank": 48488,
+   "senses": [
+    {
+     "trans": "arrivederci (Italian farewell)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "playback",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48496,
+   "senses": [
+    {
+     "trans": "playback (replaying of recorded sound or moving images)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "lip-syncing",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "entrave",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48498,
+   "senses": [
+    {
+     "trans": "obstacle, hindrance",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "precipitadamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48510,
+   "senses": [
+    {
+     "trans": "precipitously, abruptly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cantonês",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48512,
+   "senses": [
+    {
+     "trans": "Cantonese (relating to Canton)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Cantonese (relating to the Cantonese people)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Cantonese (relating to the Cantonese language)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cantonês",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48512,
+   "senses": [
+    {
+     "trans": "Cantonese (person from Canton)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Cantonese (language)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "brincaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48513,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of brincar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tetravô",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48523,
+   "senses": [
+    {
+     "trans": "great-great-great-grandfather",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estalajadeiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48525,
+   "senses": [
+    {
+     "trans": "innkeeper (person who runs an inn)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "enquadrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48527,
+   "senses": [
+    {
+     "trans": "to frame",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to fit into, to fall under",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "traumatizante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48536,
+   "senses": [
+    {
+     "trans": "traumatizing",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cortiça",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48539,
+   "senses": [
+    {
+     "trans": "cork (bark of the cork oak)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cork (tissue between the bark and cambium of woody plants)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "episcopal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48541,
+   "senses": [
+    {
+     "trans": "episcopal (relating to bishops)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "urologista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48552,
+   "senses": [
+    {
+     "trans": "urologist (doctor of urology)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ladeira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48556,
+   "senses": [
+    {
+     "trans": "a steep street",
+     "tags": [],
+     "ex": "Se eu tropeço, saio rolando ladeira abaixo!"
+    },
+    {
+     "trans": "a slope (area of ground that tends evenly upward or downward)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lembraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48568,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of lembrar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sobrepor",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48569,
+   "senses": [
+    {
+     "trans": "to overlap, superimpose",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to supersede",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eloquência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48576,
+   "senses": [
+    {
+     "trans": "eloquence (artistry and persuasiveness in speech or writing)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "manjedoura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48579,
+   "senses": [
+    {
+     "trans": "manger",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "trough (for animals)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "congelante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48585,
+   "senses": [
+    {
+     "trans": "freezing (capable of freezing)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "determinante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48588,
+   "senses": [
+    {
+     "trans": "which determines",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "determinante",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48588,
+   "senses": [
+    {
+     "trans": "determinant (a determining factor)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "determiner (class of words that identify or distinguish a referent without modifying it)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "determinant (a value associated with a square matrix)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "radiologista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48589,
+   "senses": [
+    {
+     "trans": "radiologist (practitioner of radiology)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tez",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48596,
+   "senses": [
+    {
+     "trans": "complexion (appearance of the skin on the face)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eczema",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48607,
+   "senses": [
+    {
+     "trans": "eczema (acute or chronic inflammation of the skin)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "saguão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48614,
+   "senses": [
+    {
+     "trans": "foyer; lobby; entrance hall",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "lightwell",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "guerrilheiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48619,
+   "senses": [
+    {
+     "trans": "guerrilla (soldier in a small, independent group)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fel",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48621,
+   "senses": [
+    {
+     "trans": "sourness, acerbity, bitterness",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sorrow",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gall; bile",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "putz",
+   "pos": "interj",
+   "gender": null,
+   "rank": 48625,
+   "senses": [
+    {
+     "trans": "used to emphasize something that has gone wrong; dammit! fuck! shit!",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Putz! Meu carro quebrou."
+    }
+   ]
+  },
+  {
+   "term": "felpudo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48627,
+   "senses": [
+    {
+     "trans": "fluffy (covered with fluff)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "shaggy (rough with long or thick hair)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "presídio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48633,
+   "senses": [
+    {
+     "trans": "penitentiary",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "prison; jail",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "obrigadíssimo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48635,
+   "senses": [
+    {
+     "trans": "very grateful",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "obrigadíssimo",
+   "pos": "interj",
+   "gender": null,
+   "rank": 48635,
+   "senses": [
+    {
+     "trans": "thank you very much",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "infinidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48636,
+   "senses": [
+    {
+     "trans": "infinity",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a number; a very large amount of something",
+     "tags": [],
+     "ex": "Há uma infinidade de textos para se aprender este assunto"
+    }
+   ]
+  },
+  {
+   "term": "fundaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48639,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of fundar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "azulejo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48644,
+   "senses": [
+    {
+     "trans": "tile",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "florir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48645,
+   "senses": [
+    {
+     "trans": "to flower; to blossom (to put forth blooms)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to adorn with flowers",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "curtição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48656,
+   "senses": [
+    {
+     "trans": "tanning (of leather)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "fun, pleasure",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pivot",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48662,
+   "senses": [
+    {
+     "trans": "unadapted form of pivô",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "malabarista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48666,
+   "senses": [
+    {
+     "trans": "juggler",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "calção",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48668,
+   "senses": [
+    {
+     "trans": "shorts",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "libanês",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48669,
+   "senses": [
+    {
+     "trans": "Lebanese (of, from, or pertaining to Lebanon)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "libanês",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48669,
+   "senses": [
+    {
+     "trans": "Lebanese (a person from Lebanon)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "polinização",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48673,
+   "senses": [
+    {
+     "trans": "pollination (transfer of pollen from an anther to a stigma)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "boliviano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48674,
+   "senses": [
+    {
+     "trans": "Bolivian",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "boliviano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48674,
+   "senses": [
+    {
+     "trans": "Bolivian",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "deformidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48682,
+   "senses": [
+    {
+     "trans": "deformity (the state of being deformed)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "deformity (the deformed part of something)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "abalo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48692,
+   "senses": [
+    {
+     "trans": "shake",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "shock",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "earthquake",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "disruption",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "departure",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "condicionamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48694,
+   "senses": [
+    {
+     "trans": "the act of establishing conditions",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "conditioning (process of modifying a person or animal’s behaviour)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "control of stored products’ temperature and humidity",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "fitness (quality of being physically fit)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ativação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48699,
+   "senses": [
+    {
+     "trans": "activation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cooler",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48707,
+   "senses": [
+    {
+     "trans": "cooler (insulated bin or box used with ice or freezer packs to keep food or beverages cold while picnicking or camping)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chupado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48712,
+   "senses": [
+    {
+     "trans": "having been sucked",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "very skinny",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "dried out",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "drunk",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "plagiarised",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "legionário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48718,
+   "senses": [
+    {
+     "trans": "legionary (soldier in a Roman legion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "legionnaire (soldier in the French Foreign Legion)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "legionário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48718,
+   "senses": [
+    {
+     "trans": "legionary (relating to a legion)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "PIB",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48720,
+   "senses": [
+    {
+     "trans": "acronym of produto interno bruto (“GDP (gross domestic product)”)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incumbência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48721,
+   "senses": [
+    {
+     "trans": "an incumbent obligation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "haram",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48723,
+   "senses": [
+    {
+     "trans": "haram (forbidden by Islamic law)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gaio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48727,
+   "senses": [
+    {
+     "trans": "jay (any bird of the genus Garrulus)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gaio",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48727,
+   "senses": [
+    {
+     "trans": "cheerful, jovial, colorful",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "usurpador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48731,
+   "senses": [
+    {
+     "trans": "usurper",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "erroneamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48752,
+   "senses": [
+    {
+     "trans": "erroneously, mistakenly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "micróbio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48758,
+   "senses": [
+    {
+     "trans": "microbe; microorganism (lifeform invisible to the naked eye)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "beliscão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48762,
+   "senses": [
+    {
+     "trans": "pinch",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amortecedor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48770,
+   "senses": [
+    {
+     "trans": "shock absorber (mechanical device, consisting of a spring and dashpot, to absorb shocks)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "anything that absorbs a shock",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amortecedor",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48770,
+   "senses": [
+    {
+     "trans": "shock-absorbing",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "escanzelado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48773,
+   "senses": [
+    {
+     "trans": "very skinny",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "idealmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48784,
+   "senses": [
+    {
+     "trans": "ideally",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paleta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48785,
+   "senses": [
+    {
+     "trans": "palette (thin board on which a painter lays and mixes colours)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "palette (range of colours in a given work)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "afirmaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48787,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of afirmar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reentrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48793,
+   "senses": [
+    {
+     "trans": "to reenter (to go back in)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vitrine",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48801,
+   "senses": [
+    {
+     "trans": "shop window (large window at the front of a shop used to display goods)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rebuliço",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48817,
+   "senses": [
+    {
+     "trans": "fuss (excessive activity, worry, bother, or talk about something)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bebedor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48820,
+   "senses": [
+    {
+     "trans": "drinker (someone who drinks)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "water fountain (device that dispenses drinking water)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "indevidamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48825,
+   "senses": [
+    {
+     "trans": "unduly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "galopante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48826,
+   "senses": [
+    {
+     "trans": "galloping (moving with a gallop)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "worsening at great speed",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vitral",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48831,
+   "senses": [
+    {
+     "trans": "stained glass",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "stained glass window",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estrella",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48834,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of estrela",
+     "tags": [],
+     "ex": "Saciado, cahiu de papo para cima, olhando as estrellas, que vinham nascendo."
+    }
+   ]
+  },
+  {
+   "term": "supérfluo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48838,
+   "senses": [
+    {
+     "trans": "superfluous (more than is sufficient)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "supérfluo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48838,
+   "senses": [
+    {
+     "trans": "superfluity (something that is superfluous)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "clan",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48849,
+   "senses": [
+    {
+     "trans": "alternative spelling of clã",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "úmido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48855,
+   "senses": [
+    {
+     "trans": "humid; damp; moist (somewhat wet or watery)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "coto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48859,
+   "senses": [
+    {
+     "trans": "stump (remaining part of an amputated limb or organ)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "stump (remaining part of an elongated object that has been chopped or mostly consumed)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "knot (joint of the fingers)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "moicano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48863,
+   "senses": [
+    {
+     "trans": "Mohican (of or pertaining to the Mohicans)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "moicano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48863,
+   "senses": [
+    {
+     "trans": "Mohican (indigenous people of North America)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Mohican (extinct Algonquian language spoken by the Mohican peole)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Mohawk (hairstyle)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "efeminado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48866,
+   "senses": [
+    {
+     "trans": "alternative form of afeminado",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "grinalda",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48868,
+   "senses": [
+    {
+     "trans": "wreath (ornamental circular band)",
+     "tags": [],
+     "ex": "2021 November 26, Sara Oliveira in Notícias magazine, “Grinaldas: tradição à porta\""
+    }
+   ]
+  },
+  {
+   "term": "aprisionamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48869,
+   "senses": [
+    {
+     "trans": "imprisonment (being forced to serve a sentence in a jail or prison)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "impacte",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48872,
+   "senses": [
+    {
+     "trans": "impact; collision; shock",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "impact (significant or strong influence or effect)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "exibicionismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48876,
+   "senses": [
+    {
+     "trans": "exhibitionism (practice of drawing attention to oneself)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "incinerar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48880,
+   "senses": [
+    {
+     "trans": "to incinerate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "empreitada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48886,
+   "senses": [
+    {
+     "trans": "contract, agreement",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "enterprise (venture)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "endeavour; an arduous task",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "handicap",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48889,
+   "senses": [
+    {
+     "trans": "handicap, disadvantage",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "advantage",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "percorreram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48892,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of percorrer",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "esperançosamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 48893,
+   "senses": [
+    {
+     "trans": "hopefully (in a hopeful manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "exportar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48894,
+   "senses": [
+    {
+     "trans": "to export",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "higiênico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48895,
+   "senses": [
+    {
+     "trans": "hygienic, sanitary",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tramaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48897,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of tramar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "juba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48899,
+   "senses": [
+    {
+     "trans": "mane (lion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "head of hair",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Juba",
+   "pos": "name",
+   "gender": null,
+   "rank": 48899,
+   "senses": [
+    {
+     "trans": "Juba (the capital city of South Sudan)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amassar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48904,
+   "senses": [
+    {
+     "trans": "to knead",
+     "tags": [],
+     "ex": "É melhor você esperar, ainda preciso misturar os ingredientes, amassar e levar ao fogo."
+    },
+    {
+     "trans": "to crush, to smash",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": "A briga durou pouco, pois logo fui amassado contra a parede."
+    },
+    {
+     "trans": "to win undoubtedly at an argumentation or quarrel",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": "Havia provas e havia testemunhas. Ele não pode negar, está totalmente amassado."
+    },
+    {
+     "trans": "to wrinkle (clothes)",
+     "tags": [],
+     "ex": "Estas camisas estão amassadas!"
+    },
+    {
+     "trans": "to dent, to crumple",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "esferográfica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48907,
+   "senses": [
+    {
+     "trans": "ballpoint pen",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "conciso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48910,
+   "senses": [
+    {
+     "trans": "concise (brief and precise)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "avistaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48915,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of avistar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "marinar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48917,
+   "senses": [
+    {
+     "trans": "to marinate (to soak in marinade)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alienação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48924,
+   "senses": [
+    {
+     "trans": "alienation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "divestiture, sale, disposition",
+     "tags": [],
+     "ex": "A alienação de ativos da empresa atingiu cerca 3 milhões de euros."
+    }
+   ]
+  },
+  {
+   "term": "trompetista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 48937,
+   "senses": [
+    {
+     "trans": "trumpeter (person who plays the trumpet)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Togo",
+   "pos": "name",
+   "gender": null,
+   "rank": 48950,
+   "senses": [
+    {
+     "trans": "Togo (a country in West Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alisar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 48958,
+   "senses": [
+    {
+     "trans": "to smooth; to flatten",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to soothe; to soften",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to straighten (of hair)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "piquete",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48962,
+   "senses": [
+    {
+     "trans": "small troop or guard",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "any other group of soldiers, firefighters or policemen",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "group of strikers (workers on strike)",
+     "tags": [],
+     "ex": "piquete de greve"
+    },
+    {
+     "trans": "a number of workers designated for turn-based work",
+     "tags": [],
+     "ex": "O Metro de Lisboa vai ter um “piquete de assistência” às 22 escadas rolantes e seis elevadores das estações Baixa-Chiado e Aeroporto."
+    }
+   ]
+  },
+  {
+   "term": "Piquete",
+   "pos": "name",
+   "gender": null,
+   "rank": 48962,
+   "senses": [
+    {
+     "trans": "a municipality of São Paulo, Brazil",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encarado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48965,
+   "senses": [
+    {
+     "trans": "seen, viewed (considered)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hidratação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48973,
+   "senses": [
+    {
+     "trans": "hydration",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "barnabé",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48977,
+   "senses": [
+    {
+     "trans": "a low-rank public officer",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rodoviário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48983,
+   "senses": [
+    {
+     "trans": "highway",
+     "tags": [],
+     "ex": "mapa rodoviário"
+    },
+    {
+     "trans": "road transport",
+     "tags": [],
+     "ex": "transporte rodoviário"
+    }
+   ]
+  },
+  {
+   "term": "discográfico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48989,
+   "senses": [
+    {
+     "trans": "discographical",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hipoxia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 48995,
+   "senses": [
+    {
+     "trans": "alternative form of hipóxia",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fronteiriço",
+   "pos": "adj",
+   "gender": null,
+   "rank": 48996,
+   "senses": [
+    {
+     "trans": "located or living near a border",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "wasabi",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 48998,
+   "senses": [
+    {
+     "trans": "wasabi (pungent Japanese condiment)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vacinado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49009,
+   "senses": [
+    {
+     "trans": "vaccinated (treated with a vaccine)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "immune, invulnerable to (something)",
+     "tags": [],
+     "ex": "Você pode dizer o que quiser, sou vacinado contra críticas!"
+    }
+   ]
+  },
+  {
+   "term": "Nebrasca",
+   "pos": "name",
+   "gender": null,
+   "rank": 49014,
+   "senses": [
+    {
+     "trans": "Nebraska (a state in the Midwestern region of the United States; capital: Lincoln)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sudoku",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49015,
+   "senses": [
+    {
+     "trans": "sudoku (a type of puzzle game)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dedicaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49016,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of dedicar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "calafrio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49020,
+   "senses": [
+    {
+     "trans": "shiver (the act or result of shivering)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rechonchudo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49023,
+   "senses": [
+    {
+     "trans": "plump; chubby (having a roughly round shape)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "plump; chubby (slightly fat)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "subconscientemente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49034,
+   "senses": [
+    {
+     "trans": "subconsciously, unknowingly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "kd",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49037,
+   "senses": [
+    {
+     "trans": "abbreviation of cadê (“where”)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Kd vc?\n Naum sei pq\n Vc sumiu\n To cum sds\n De qdo\n LOL\n Por qq besteira"
+    }
+   ]
+  },
+  {
+   "term": "intimar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49041,
+   "senses": [
+    {
+     "trans": "to summon (to order someone to appear in court)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Jó",
+   "pos": "name",
+   "gender": null,
+   "rank": 49043,
+   "senses": [
+    {
+     "trans": "Job (book of the Bible)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Job (biblical character)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rotor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49047,
+   "senses": [
+    {
+     "trans": "rotor (a rotating part of a mechanical device)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rotor (central part of a helicopter’s wings)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "splash",
+   "pos": "interj",
+   "gender": null,
+   "rank": 49050,
+   "senses": [
+    {
+     "trans": "splash",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "achatado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49060,
+   "senses": [
+    {
+     "trans": "flattened, compressed",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "crushed, squashed",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "roqueiro",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49062,
+   "senses": [
+    {
+     "trans": "rock (related to rock music)",
+     "tags": [],
+     "ex": "O tom roqueiro deste grupo é inconfundível."
+    }
+   ]
+  },
+  {
+   "term": "roqueiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49062,
+   "senses": [
+    {
+     "trans": "rocker (musician who plays rock music)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rocker (someone passionate about rock music)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a type of cannon that fires rocks",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "espumar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49067,
+   "senses": [
+    {
+     "trans": "to froth",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "smartphone",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49070,
+   "senses": [
+    {
+     "trans": "smartphone (mobile phone with greater computing capacity)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Borges",
+   "pos": "name",
+   "gender": null,
+   "rank": 49075,
+   "senses": [
+    {
+     "trans": "a surname",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "afirmativa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49081,
+   "senses": [
+    {
+     "trans": "affirmative (answer that shows agreement or acceptance)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bajulador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49082,
+   "senses": [
+    {
+     "trans": "sycophant; flatterer (one who flatters)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "CIC",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49085,
+   "senses": [
+    {
+     "trans": "a card that was issued in Brazil from 1970 to mid-1980s for natural persons, which was then replaced by the CPF",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "The identification number printed on a CIC card",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mal-estar",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49086,
+   "senses": [
+    {
+     "trans": "malaise (feeling of general bodily discomfort, fatigue or unpleasantness)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "timbre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49088,
+   "senses": [
+    {
+     "trans": "timbre (quality of a sound independent of its pitch and volume)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "seal (pattern, design)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "crest",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Jerusalem",
+   "pos": "name",
+   "gender": null,
+   "rank": 49089,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of Jerusalém",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gasoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49093,
+   "senses": [
+    {
+     "trans": "gaseous (relating to, or existing as, gas)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gaseous; gassy (containing gas)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gorgeous, sexy",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Senegal",
+   "pos": "name",
+   "gender": null,
+   "rank": 49110,
+   "senses": [
+    {
+     "trans": "Senegal (a country in West Africa)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Senegal (a river on the border between Senegal and Mauritania in West Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "topografia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49115,
+   "senses": [
+    {
+     "trans": "topography (graphic representation of the surface features of a place)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "podar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49116,
+   "senses": [
+    {
+     "trans": "to prune",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "palpitar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49117,
+   "senses": [
+    {
+     "trans": "to palpitate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to throb",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to opine, to guess, to suggest",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paladino",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49122,
+   "senses": [
+    {
+     "trans": "paladin (heroic champion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "paladin (knight in Charlemagne’s retinue)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "originário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49125,
+   "senses": [
+    {
+     "trans": "original",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "native",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chave-mestra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49126,
+   "senses": [
+    {
+     "trans": "skeleton key (a key that opens a range of locks)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "anything which creates opportunities",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "falange",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49147,
+   "senses": [
+    {
+     "trans": "phalanx; phalange",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "proximal phalange",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "phalanx",
+     "tags": [],
+     "ex": "Coordinate term: legião"
+    },
+    {
+     "trans": "legion",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rematar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49155,
+   "senses": [
+    {
+     "trans": "to finish off",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to shoot",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "assombro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49161,
+   "senses": [
+    {
+     "trans": "astonishment",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "terror",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Talmud",
+   "pos": "name",
+   "gender": null,
+   "rank": 49167,
+   "senses": [
+    {
+     "trans": "alternative form of Talmude",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "marroquino",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49172,
+   "senses": [
+    {
+     "trans": "Moroccan (of or relating to Morocco)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "marroquino",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49172,
+   "senses": [
+    {
+     "trans": "Moroccan (person from Morocco)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "margarina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49175,
+   "senses": [
+    {
+     "trans": "margarine",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Jacó",
+   "pos": "name",
+   "gender": null,
+   "rank": 49176,
+   "senses": [
+    {
+     "trans": "Jacob (one of the sons of Isaac and Rebecca)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a male given name, equivalent to English Jacob",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "práticamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49178,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1920) of praticamente",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Lugo",
+   "pos": "name",
+   "gender": null,
+   "rank": 49185,
+   "senses": [
+    {
+     "trans": "Lugo (a province of Galicia, Spain)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Lugo (a city, the provincial capital of Lugo, Galicia, Spain)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "quetamina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49186,
+   "senses": [
+    {
+     "trans": "alternative form of cetamina",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caqui",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49191,
+   "senses": [
+    {
+     "trans": "persimmon (fruit)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Portugal form of cáqui",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caqui",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49191,
+   "senses": [
+    {
+     "trans": "Portugal form of cáqui",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Escandinávia",
+   "pos": "name",
+   "gender": null,
+   "rank": 49194,
+   "senses": [
+    {
+     "trans": "Scandinavia (a geographic region of Northern Europe, consisting of Denmark, Norway, and Sweden collectively and sometimes Finland, Iceland, Åland and the Faroe Islands)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Scandinavia (a peninsula in Northern Europe, consisting of Norway, Sweden and most of northern Finland; in full, Scandinavian Peninsula)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "confessaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49195,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of confessar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "broa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49204,
+   "senses": [
+    {
+     "trans": "broa (type of cornbread made in Portugal, Galicia and Brazil)",
+     "tags": [],
+     "ex": "Logo de manhãzinha, o Zezinho Patola apareceu em nossa casa, bebeu um cálice de aguardente e comeu uma fatiazinha do miolo de uma broa, porque já não tinha dentes para a côdea, que é a parte mais gostosa"
+    },
+    {
+     "trans": "an attractive or hot woman",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "colírio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49209,
+   "senses": [
+    {
+     "trans": "collyrium, eyedrop (medicated liquid that is applied directly to the eyeball)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a very attractive or beautiful person; eye candy",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encontrão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49213,
+   "senses": [
+    {
+     "trans": "shock, jerk",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hustle, jostle",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fatalmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49233,
+   "senses": [
+    {
+     "trans": "fatally",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "casamata",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49240,
+   "senses": [
+    {
+     "trans": "bunker (hardened shelter)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "casemate (bombproof chamber as part of fortification)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "selectivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49249,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of seletivo; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tresloucado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49251,
+   "senses": [
+    {
+     "trans": "mad, crazy, insane",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "miligrama",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49252,
+   "senses": [
+    {
+     "trans": "milligram",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alfazema",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49255,
+   "senses": [
+    {
+     "trans": "lavender (plant)",
+     "tags": [],
+     "ex": "Eu cheiro a alfazema, eu sou poema / Eu sou aquela que tu querias ao teu lado no cinema"
+    },
+    {
+     "trans": "common lavender (Lavandula angustifolia)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "figurativamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49260,
+   "senses": [
+    {
+     "trans": "figuratively (in a figurative manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "flamengo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49263,
+   "senses": [
+    {
+     "trans": "Flemish (of or relating to Flanders)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Flemish (of or relating to the Flemish dialect)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "flamengo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49263,
+   "senses": [
+    {
+     "trans": "native or inhabitant of Flanders",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Flemish (the Dutch dialect spoken in Flanders)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "alternative form of flamingo",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ignóbil",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49269,
+   "senses": [
+    {
+     "trans": "ignoble",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vile",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "abject",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "telecinesia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49270,
+   "senses": [
+    {
+     "trans": "telekinesis (ability to move objects with the power of one’s thoughts)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lectivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49273,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of letivo; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "erotismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49284,
+   "senses": [
+    {
+     "trans": "erotism, eroticism",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "à-vontade",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49288,
+   "senses": [
+    {
+     "trans": "ease, confidence, disinhibition",
+     "tags": [],
+     "ex": "O à-vontade dele é impressionante!"
+    }
+   ]
+  },
+  {
+   "term": "legislativo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49296,
+   "senses": [
+    {
+     "trans": "legislative",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "legislativo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49296,
+   "senses": [
+    {
+     "trans": "ellipsis of poder legislativo",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alcoolizado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49316,
+   "senses": [
+    {
+     "trans": "drunk (intoxicated after drinking too much alcohol)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Maldivas",
+   "pos": "name",
+   "gender": null,
+   "rank": 49318,
+   "senses": [
+    {
+     "trans": "Maldives (an archipelago and country in South Asia, located in the Indian Ocean off the coast of India)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Bozo",
+   "pos": "name",
+   "gender": null,
+   "rank": 49321,
+   "senses": [
+    {
+     "trans": "nickname for Jair Bolsonaro (born 1955), former president of Brazil",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estorvar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49323,
+   "senses": [
+    {
+     "trans": "to hinder; to hamper (to delay or impede movement or progress)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chacinar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49330,
+   "senses": [
+    {
+     "trans": "to slaughter",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to massacre",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "espalho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49331,
+   "senses": [
+    {
+     "trans": "distraction",
+     "tags": [
+      "Portugal",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "daltónico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49337,
+   "senses": [
+    {
+     "trans": "European Portuguese standard spelling of daltônico (“color blind”)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "daltónico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49337,
+   "senses": [
+    {
+     "trans": "European Portuguese standard spelling of daltônico (“color blind”)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "residir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49338,
+   "senses": [
+    {
+     "trans": "to reside, dwell",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "crisma",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49344,
+   "senses": [
+    {
+     "trans": "confirmation (sacrament of sealing one’s adhesion to the doctrine)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rechristening (a ceremonial change of name or designation)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chrism (holy oil used in certain ceremonies)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "espalhafato",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49346,
+   "senses": [
+    {
+     "trans": "fuss (excessive activity, worry, bother, or talk about something)",
+     "tags": [],
+     "ex": "Tanto espalhafato, pensou Freyja, por um bebé que estava absolutamente indiferentea tudo aquilo que se passava à sua volta em sua honra. Ele estava vestido de forma magnífica num longo vestido de batismo rendado, uma herançade ..."
+    },
+    {
+     "trans": "ostentation (display intended to excite admiration or applause)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "evolutivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49348,
+   "senses": [
+    {
+     "trans": "evolutive; evolutionary (relating to evolution)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nadador-salvador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49349,
+   "senses": [
+    {
+     "trans": "lifeguard (attendant employed to save swimmers)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encanador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49352,
+   "senses": [
+    {
+     "trans": "plumber",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "botulismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49354,
+   "senses": [
+    {
+     "trans": "botulism (medical condition)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49355,
+   "senses": [
+    {
+     "trans": "winged (having wings)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "golpista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49358,
+   "senses": [
+    {
+     "trans": "scammer; swindler; fraudster (person who carries out a scam or fraud)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "coup plotter; coupist; putschist (one who takes part in a coup d'état)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "golpista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49358,
+   "senses": [
+    {
+     "trans": "supporting a coup d'état",
+     "tags": [],
+     "ex": "O STF (Supremo Tribunal Federal) retoma nesta quarta-feira (3) o julgamento do núcleo central da trama golpista. A sessão será aberta com a defesa do general da reserva Augusto Heleno, ex-chefe do GSI (Gabinete de Segurança Institucional), e terá em seguida a manifestação do advogado do ex-presidente Jair Bolsonaro (PL)."
+    }
+   ]
+  },
+  {
+   "term": "descabido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49360,
+   "senses": [
+    {
+     "trans": "inappropriate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "devastar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49361,
+   "senses": [
+    {
+     "trans": "to devastate; to lay waste (to completely destroy)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bailar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49364,
+   "senses": [
+    {
+     "trans": "to dance",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "enormemente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49367,
+   "senses": [
+    {
+     "trans": "enormously",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "clamor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49368,
+   "senses": [
+    {
+     "trans": "din (loud noise)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tentáculo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49379,
+   "senses": [
+    {
+     "trans": "tentacle (elongated, boneless, flexible appendage)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "condenaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49389,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of condenar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mote",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49391,
+   "senses": [
+    {
+     "trans": "motto",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "resignação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49392,
+   "senses": [
+    {
+     "trans": "resignation (all senses)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "submission",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fechamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49396,
+   "senses": [
+    {
+     "trans": "the act of closing",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "close; conclusion (final part of an event or project)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jejuar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49402,
+   "senses": [
+    {
+     "trans": "to fast (to abstain from or eat very little food)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to avoid or abstain from something one enjoys",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ponderado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49405,
+   "senses": [
+    {
+     "trans": "considered",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "weighted",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "determinaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49410,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of determinar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "rapazão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49411,
+   "senses": [
+    {
+     "trans": "synonym of rapagão",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Anaheim",
+   "pos": "name",
+   "gender": null,
+   "rank": 49419,
+   "senses": [
+    {
+     "trans": "Anaheim (a city in California, United States)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "galpão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49420,
+   "senses": [
+    {
+     "trans": "shed (a slight or temporary structure built to shade or shelter something)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dançante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49422,
+   "senses": [
+    {
+     "trans": "dancing (who dances)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amniótico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49426,
+   "senses": [
+    {
+     "trans": "amniotic (pertaining to the amnion)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "atraíram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49427,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of atrair",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "hospedar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49437,
+   "senses": [
+    {
+     "trans": "to host (to perform the role of a host)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paraplégico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49449,
+   "senses": [
+    {
+     "trans": "paraplegic",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paraplégico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49449,
+   "senses": [
+    {
+     "trans": "paraplegic",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "importador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49454,
+   "senses": [
+    {
+     "trans": "importer (a person who imports goods)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "importador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49454,
+   "senses": [
+    {
+     "trans": "which imports goods",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "parafernália",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49463,
+   "senses": [
+    {
+     "trans": "paraphernalia (miscellaneous items, especially the set of equipment required for a particular activity)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "doberman",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49469,
+   "senses": [
+    {
+     "trans": "Dobermann (a large breed of guard dog from Germany)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "concordância",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49472,
+   "senses": [
+    {
+     "trans": "agreement (state whereby several parties share a view or opinion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "agreement (the state of different words in a clause having the same value of a grammatical category)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "concordance (index showing the places a word may be found in a work)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "asteca",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49478,
+   "senses": [
+    {
+     "trans": "Aztec (any of the Nahua people of central Mexico, especially the Mexica)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Aztec; Nahuatl (Uto-Aztecan language of the Nahua)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "asteca",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49478,
+   "senses": [
+    {
+     "trans": "Aztec; Aztecan (of or relating to the Nahua or Mexica people)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Aztec; Aztecan; Nahuatl (of or relating to the Nahuatl language)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cavalheiresco",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49479,
+   "senses": [
+    {
+     "trans": "chivalrous (horourable and respectful, especially to women)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "croata",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49486,
+   "senses": [
+    {
+     "trans": "Croatian (of or relating to Croatia)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "croata",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49486,
+   "senses": [
+    {
+     "trans": "Croat (person from Croatia)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Croatian (the form of Serbo-Croatian spoken in Croatia)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "culparam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49487,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of culpar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estrebaria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49492,
+   "senses": [
+    {
+     "trans": "stable (building for horses)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "entorpecido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49493,
+   "senses": [
+    {
+     "trans": "numb",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "poderio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49497,
+   "senses": [
+    {
+     "trans": "power",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "domain",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reversível",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49498,
+   "senses": [
+    {
+     "trans": "reversible",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "propuseram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49503,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of propor",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "trimestral",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49504,
+   "senses": [
+    {
+     "trans": "trimonthly; quarterly (occurring at intervals of three months)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chafurdar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49505,
+   "senses": [
+    {
+     "trans": "to wallow (in mud); to paddle (walk in shallow water)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "matraquilhos",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49514,
+   "senses": [
+    {
+     "trans": "table football; foosball (table soccer)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "idos",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49515,
+   "senses": [
+    {
+     "trans": "ides (fifteenth day of March, May, July and October in the Roman calendar)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Leopoldo",
+   "pos": "name",
+   "gender": null,
+   "rank": 49518,
+   "senses": [
+    {
+     "trans": "a male given name from the Germanic languages, equivalent to English Leopold",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "anexar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49525,
+   "senses": [
+    {
+     "trans": "to annex, attach",
+     "tags": [],
+     "ex": "Abra todos os três arquivos anexados, imprima-os e os dê para mim."
+    }
+   ]
+  },
+  {
+   "term": "ambientador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49536,
+   "senses": [
+    {
+     "trans": "air freshener (device containing substances that neutralise unpleasant odours)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ginecologia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49548,
+   "senses": [
+    {
+     "trans": "gynecology (branch of medicine specialising in the problems of women)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caza",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49553,
+   "senses": [
+    {
+     "trans": "obsolete spelling of casa",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caza",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49553,
+   "senses": [
+    {
+     "trans": "obsolete spelling of casa",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "manicômio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49558,
+   "senses": [
+    {
+     "trans": "Brazilian Portuguese standard spelling of manicómio",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vitoria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49561,
+   "senses": [
+    {
+     "trans": "obsolete spelling of vitória",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Hórus",
+   "pos": "name",
+   "gender": null,
+   "rank": 49564,
+   "senses": [
+    {
+     "trans": "Horus (god of the sun)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ciumes",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49573,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of ciúmes",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pisa-papéis",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49574,
+   "senses": [
+    {
+     "trans": "alternative form of pesa-papéis",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "salivar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49576,
+   "senses": [
+    {
+     "trans": "to salivate (to secrete saliva)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "transcontinental",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49581,
+   "senses": [
+    {
+     "trans": "transcontinental",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dedão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49583,
+   "senses": [
+    {
+     "trans": "the thumb or big toe (the short, mobile digit of the hand; the largest toe)",
+     "tags": [],
+     "ex": "dedão do pé"
+    }
+   ]
+  },
+  {
+   "term": "blogger",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49588,
+   "senses": [
+    {
+     "trans": "blogger",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "repartição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49589,
+   "senses": [
+    {
+     "trans": "distribution",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "allocation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "shotgun",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49594,
+   "senses": [
+    {
+     "trans": "shotgun",
+     "tags": [],
+     "ex": "A shotgun tem um alto poder de fogo, mas é mais lenta se comparada a outras armas, como SMGs, por exemplo."
+    }
+   ]
+  },
+  {
+   "term": "exorcizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49597,
+   "senses": [
+    {
+     "trans": "to exorcise (to drive out an evil spirit from someone or something)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to get rid of something evil or reprehensible",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "catarata",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49599,
+   "senses": [
+    {
+     "trans": "cataract (waterfall of a river or lake that falls from a great height)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cataract (partial or total opacity of the ocular lens)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "soleira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49601,
+   "senses": [
+    {
+     "trans": "threshold, doorstep",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "violoncelista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49609,
+   "senses": [
+    {
+     "trans": "cellist (person who plays the cello)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "carregaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49614,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of carregar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "domesticar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49620,
+   "senses": [
+    {
+     "trans": "to domesticate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "giratório",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49646,
+   "senses": [
+    {
+     "trans": "rotating (that rotates; to operates by rotating)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "agreste",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49649,
+   "senses": [
+    {
+     "trans": "rural, rustic, wild, uncultivated",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "harsh",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rude",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unpleasant",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "antiterrorismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49651,
+   "senses": [
+    {
+     "trans": "antiterrorism (activity aiming at opposing terrorism)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "soluço",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49654,
+   "senses": [
+    {
+     "trans": "sob",
+     "tags": [],
+     "ex": "[…] agora só se ouvia algum soluço de aflição, o barulho inconfundível de alguém que acaba de tropeçar."
+    },
+    {
+     "trans": "hiccup",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estreitar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49655,
+   "senses": [
+    {
+     "trans": "to narrow",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to tighten",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to narrow (to get narrower)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "juju",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49658,
+   "senses": [
+    {
+     "trans": "synonym of juliet",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Jew",
+     "tags": [],
+     "ex": "Sabe quem mais chama judeu por \"juju\" ou \"jujuba\" na internet? Isso mesmo, neonazistas rs […]"
+    }
+   ]
+  },
+  {
+   "term": "festança",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49664,
+   "senses": [
+    {
+     "trans": "celebration; great fun and enjoyment",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a modest but fun and noisy party",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "azo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49668,
+   "senses": [
+    {
+     "trans": "occasion; opportunity",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "deslindar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49672,
+   "senses": [
+    {
+     "trans": "to unravel; to solve; to figure out (to find a solution)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to delimit; to demarcate (to find or mark the limits of)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "techno",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49675,
+   "senses": [
+    {
+     "trans": "alternative form of tecno",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "triturar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49682,
+   "senses": [
+    {
+     "trans": "to grind, to crush, to triturate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to shred",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "contorcer",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49687,
+   "senses": [
+    {
+     "trans": "to contort (to twist violently)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "transeunte",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49700,
+   "senses": [
+    {
+     "trans": "passer-by (a person who is walking by)",
+     "tags": [],
+     "ex": "Pus sangue pela boca, pelos ouvidos / Caí em estado de coma, hemorragia / E até os transeuntes que ali passavam / Sentiam um arrepio e viravam a cara"
+    }
+   ]
+  },
+  {
+   "term": "transeunte",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49700,
+   "senses": [
+    {
+     "trans": "transient, ephemeral (lasting for a short period of time)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "coscuvilhar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49701,
+   "senses": [
+    {
+     "trans": "to gossip",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "elegantemente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49708,
+   "senses": [
+    {
+     "trans": "elegantly (with elegance)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "urra",
+   "pos": "interj",
+   "gender": null,
+   "rank": 49710,
+   "senses": [
+    {
+     "trans": "hurrah (expressing approval, appreciation or happiness)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "urra",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49710,
+   "senses": [
+    {
+     "trans": "hurrah (a cry of hurrah!)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "casebre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49713,
+   "senses": [
+    {
+     "trans": "shack",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hovel (small house or hut)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "neonatal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49714,
+   "senses": [
+    {
+     "trans": "neonatal",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "tenista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49723,
+   "senses": [
+    {
+     "trans": "tennis player",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49725,
+   "senses": [
+    {
+     "trans": "synonym of rinoceronte",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "abortado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49727,
+   "senses": [
+    {
+     "trans": "aborted",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "objectivamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49740,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of objetivamente; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "torrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49744,
+   "senses": [
+    {
+     "trans": "to roast; to toast (to cook food so that it is dry and crisp)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to roast; to torrefy (to subject to intense heat)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to roast; to torrefy (to be subject to intense heat)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to spend or do away with something quickly, especially money",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "metediço",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49745,
+   "senses": [
+    {
+     "trans": "nosy (tending to snoop or meddle in other’s affairs)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gabarolas",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49747,
+   "senses": [
+    {
+     "trans": "alternative form of gabarola",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "narcotráfico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49751,
+   "senses": [
+    {
+     "trans": "drug trafficking (narcotic drug business)",
+     "tags": [],
+     "ex": "Existem 72 diferentes facções criminosas vinculadas ao narcotráfico, de acordo com o levantamento do Fórum Brasileiro de Segurança Pública e da Esfera Brasil, divulgado no segundo dia do Fórum Esfera, em Guarujá (SP), neste sábado (8)."
+    },
+    {
+     "trans": "a trafficked drug",
+     "tags": [],
+     "ex": "Além da tradicional exportação de narcotráficos diretamente para a Europa, há o comércio pelo litoral, no rumo norte, para as Guianas."
+    }
+   ]
+  },
+  {
+   "term": "naipe",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49753,
+   "senses": [
+    {
+     "trans": "suit (card game category)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a group or set (of things with similar features); a kind",
+     "tags": [],
+     "ex": "As músicas dele são de outro naipe."
+    },
+    {
+     "trans": "section (of a band or orchestra)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pedregulho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49756,
+   "senses": [
+    {
+     "trans": "pebble (small stone)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "boulder (large stone)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Pedregulho",
+   "pos": "name",
+   "gender": null,
+   "rank": 49756,
+   "senses": [
+    {
+     "trans": "a municipality of São Paulo, Brazil",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "musculatura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49758,
+   "senses": [
+    {
+     "trans": "musculature (the muscles of a body or organ collectively)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "batata-doce",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49765,
+   "senses": [
+    {
+     "trans": "sweet potato",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reincidente",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49767,
+   "senses": [
+    {
+     "trans": "recidivist; repeat offender (one who falls back into prior habits, especially crime)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "reincidente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49767,
+   "senses": [
+    {
+     "trans": "who is a repeat offender",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "triatlo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49770,
+   "senses": [
+    {
+     "trans": "triathlon",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Ajax",
+   "pos": "name",
+   "gender": null,
+   "rank": 49771,
+   "senses": [
+    {
+     "trans": "alternative form of Ájax",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gelataria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49777,
+   "senses": [
+    {
+     "trans": "alternative form of geladaria",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Danzig",
+   "pos": "name",
+   "gender": null,
+   "rank": 49778,
+   "senses": [
+    {
+     "trans": "Gdańsk (the capital city of Pomeranian Voivodeship, Poland)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pigmeu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49779,
+   "senses": [
+    {
+     "trans": "pygmy (a member of various African peoples noted for their low stature)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "pygmy (a member of a mythological race of dwarfs)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "pygmy (any dwarfish person)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "pygmy (an insignificant person)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pigmeu",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49779,
+   "senses": [
+    {
+     "trans": "dwarfish (very short)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caipira",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49782,
+   "senses": [
+    {
+     "trans": "a hillbilly, yokel, rustic",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caipira",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49782,
+   "senses": [
+    {
+     "trans": "rustic, hillbilly, provincial",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "free-range",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "date",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49786,
+   "senses": [
+    {
+     "trans": "date (romantic meeting)",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": "Antes de convidar o cara para um date, pense na situação que irá deixá-la mais confortável e evite, assim, gaguejar ou se atrapalhar toda na hora de fazer a proposta."
+    }
+   ]
+  },
+  {
+   "term": "húmus",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49788,
+   "senses": [
+    {
+     "trans": "humus (natural organic compounds found in the soil)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hummus",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "metafísica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49790,
+   "senses": [
+    {
+     "trans": "metaphysics (branch of philosophy that studies first principles)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fahrenheit",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49795,
+   "senses": [
+    {
+     "trans": "Fahrenheit",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pastagem",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49814,
+   "senses": [
+    {
+     "trans": "pasture (grassy land on which cattle is kept for feeding)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "acederam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49817,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of aceder",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "imerso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49822,
+   "senses": [
+    {
+     "trans": "immersed",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "submerged",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "excomungado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49828,
+   "senses": [
+    {
+     "trans": "excommunicate (having suffered excommunication)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cursed (having been cursed)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "loathsome, detestable (highly disagreeable)",
+     "tags": [],
+     "ex": "Se vendesse as gallinhas e a marrã? Infelizmente a excommungada raposa tinha comido a pedrez, a mais gorda. Precisava dar uma licção á raposa. Ia armar o mundeo junto do poleiro e quebrar o espinhaço daquella semvergonha."
+    }
+   ]
+  },
+  {
+   "term": "excomungado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49828,
+   "senses": [
+    {
+     "trans": "Satan",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a detestable person; a rascal, a scoundrel",
+     "tags": [],
+     "ex": "Dois excommungados tinham-lhe cahido em cima, um ferro batera-lhe no peito, outro nas costas, e elle se arrastara tiritando como um frango molhado. Tudo porque se esquentara e dissera uma palavra inconsideradamente."
+    }
+   ]
+  },
+  {
+   "term": "cigarreira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49829,
+   "senses": [
+    {
+     "trans": "cigarette case (a small flat case for holding cigarettes)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "além-mar",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49833,
+   "senses": [
+    {
+     "trans": "overseas (across a sea)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "assistolia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49835,
+   "senses": [
+    {
+     "trans": "asystole (absence of systole)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dualidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49837,
+   "senses": [
+    {
+     "trans": "duality (a classification into two subclasses or opposed parts).",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aqueceram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49839,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of aquecer",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aham",
+   "pos": "interj",
+   "gender": null,
+   "rank": 49848,
+   "senses": [
+    {
+     "trans": "mhm; uh-huh (yes)",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Expresses disbelief.",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "difteria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49851,
+   "senses": [
+    {
+     "trans": "diphtheria (infectious disease of the upper respiratory tract)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "nevasca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49860,
+   "senses": [
+    {
+     "trans": "snowstorm, blizzard (bad weather involving blowing winds and snow)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ronronar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49862,
+   "senses": [
+    {
+     "trans": "to purr (of a cat, to make a vibrating sound in its throat)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gloss",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49870,
+   "senses": [
+    {
+     "trans": "lip gloss (cosmetic product)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arraso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49873,
+   "senses": [
+    {
+     "trans": "act of razing or destroying",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "something considered excellent, beautiful, or very well done",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "retoque",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49876,
+   "senses": [
+    {
+     "trans": "tweak (a slight adjustment or modification)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "retouch (act of retouching)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "suspeitaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49888,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of suspeitar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "intransigente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49898,
+   "senses": [
+    {
+     "trans": "intransigent (unwilling to compromise or moderate a position)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "insensatez",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49906,
+   "senses": [
+    {
+     "trans": "insensitivity",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "forçosamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49908,
+   "senses": [
+    {
+     "trans": "by force; forcefully",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "in necessity; inevitably; necessarily",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "astrolábio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49909,
+   "senses": [
+    {
+     "trans": "astrolabe",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "plumagem",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49919,
+   "senses": [
+    {
+     "trans": "plumage (feathers collectively)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "beluga",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49920,
+   "senses": [
+    {
+     "trans": "beluga (cetacean, Delphinapterus leucas)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "retrógrado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49926,
+   "senses": [
+    {
+     "trans": "retrograde (moving backwards)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "opposing progress",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "retrógrado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49926,
+   "senses": [
+    {
+     "trans": "someone who opposes progress",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "filantropia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 49932,
+   "senses": [
+    {
+     "trans": "philanthropy (benevolent altruism with the intention of increasing the well-being of mankind)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "predominantemente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 49933,
+   "senses": [
+    {
+     "trans": "predominantly",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Mendes",
+   "pos": "name",
+   "gender": null,
+   "rank": 49951,
+   "senses": [
+    {
+     "trans": "a surname originating as a patronymic",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a municipality of Rio de Janeiro, Brazil",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "torturador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49954,
+   "senses": [
+    {
+     "trans": "torturer (one who tortures)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "torturador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49954,
+   "senses": [
+    {
+     "trans": "which or who tortures",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "garbo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49962,
+   "senses": [
+    {
+     "trans": "grace, style, chic, elegance",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "daintiness",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "polish",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gaélico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49965,
+   "senses": [
+    {
+     "trans": "Gaelic (relating to the languages of the Gaelic family)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gaélico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49965,
+   "senses": [
+    {
+     "trans": "any Goidelic language (Irish, Scottish Gaelic, or Manx Gaelic)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estalido",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 49966,
+   "senses": [
+    {
+     "trans": "a cracking or clicking sound",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paramilitar",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49968,
+   "senses": [
+    {
+     "trans": "paramilitary",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "paramilitar",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 49968,
+   "senses": [
+    {
+     "trans": "paramilitary (a member of a paramilitary group)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "simétrico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49973,
+   "senses": [
+    {
+     "trans": "symmetrical (exhibiting symmetry)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "afectuoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49976,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1990) of afetuoso; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "disseminar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 49979,
+   "senses": [
+    {
+     "trans": "to disseminate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to sow",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to promulgate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "Ardenas",
+   "pos": "name",
+   "gender": null,
+   "rank": 49980,
+   "senses": [
+    {
+     "trans": "Ardennes (forest, geographic region and low mountain range in France, Belgium, Germany and Luxembourg; in full, Ardennes Forest, Ardenne Forest, or Forest of Ardennes)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Ardennes (a department of Grand Est, France)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eréctil",
+   "pos": "adj",
+   "gender": null,
+   "rank": 49995,
+   "senses": [
+    {
+     "trans": "pre-reform spelling (used until 1990) of erétil; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  }
+ ]
+}
