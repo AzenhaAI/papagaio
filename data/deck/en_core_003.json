@@ -1,0 +1,1450 @@
+{
+  "meta": {
+    "deck": "en_core_003",
+    "course": "en",
+    "variant": "en-GB",
+    "level": "B1-B2",
+    "note": "Toward 500: the analyst-abroad's English. Data storytelling and its honest words (caveat, cherry-pick, sanity check), conference and networking currency, negotiation, B2 hedging (arguably, in hindsight), written register, and the meeting-call liturgy — you're on mute included."
+  },
+  "cards": [
+    {
+      "term": "to walk someone through",
+      "trans": "to explain something step by step",
+      "pos": "verb",
+      "note": "gentler than 'explain'; the demo verb",
+      "ex_t": "Let me walk you through the dashboard before we look at the numbers.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "unit": "data",
+      "id": "en0252",
+      "freq": 252
+    },
+    {
+      "term": "the big picture",
+      "trans": "the overall situation, ignoring details",
+      "pos": "noun",
+      "note": "big-picture as an adjective too",
+      "ex_t": "Before we dive in, here's the big picture.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "unit": "data",
+      "id": "en0253",
+      "freq": 253
+    },
+    {
+      "term": "to drill down",
+      "trans": "to move from summary to detail",
+      "pos": "verb",
+      "note": "born in BI tools, now general",
+      "ex_t": "If we drill down by region, the story changes.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0254",
+      "freq": 254
+    },
+    {
+      "term": "an outlier",
+      "trans": "a data point far from the others",
+      "pos": "noun",
+      "note": "also a person who doesn't fit the pattern",
+      "ex_t": "Strip the outliers and the trend is flat.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0255",
+      "freq": 255
+    },
+    {
+      "term": "a proxy",
+      "trans": "an indirect measure standing in for a real one",
+      "pos": "noun",
+      "note": "'a proxy for' — engagement as a proxy for satisfaction",
+      "ex_t": "Session length is a rough proxy for interest.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0256",
+      "freq": 256
+    },
+    {
+      "term": "granular",
+      "trans": "broken into fine detail",
+      "pos": "adj",
+      "note": "granularity is the noun",
+      "ex_t": "We need more granular numbers than monthly totals.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0257",
+      "freq": 257
+    },
+    {
+      "term": "skewed",
+      "trans": "distorted, not representative",
+      "pos": "adj",
+      "note": "a skewed sample; skewed towards",
+      "ex_t": "The survey skews towards younger users.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0258",
+      "freq": 258
+    },
+    {
+      "term": "robust",
+      "trans": "holding up under scrutiny or change",
+      "pos": "adj",
+      "note": "robust findings, a robust pipeline",
+      "ex_t": "The effect is robust across every segment we tried.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0259",
+      "freq": 259
+    },
+    {
+      "term": "to eyeball",
+      "trans": "to estimate by looking, without measuring",
+      "pos": "verb",
+      "note": "informal",
+      "ex_t": "Eyeballing the chart, growth stalled around March.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0260",
+      "freq": 260
+    },
+    {
+      "term": "a sanity check",
+      "trans": "a quick test that results are plausible",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Run a sanity check before the numbers go to the board.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0261",
+      "freq": 261
+    },
+    {
+      "term": "to cherry-pick",
+      "trans": "to select only the favourable evidence",
+      "pos": "verb",
+      "note": "accusation, not praise",
+      "ex_t": "Those slides cherry-pick the two good quarters.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0262",
+      "freq": 262
+    },
+    {
+      "term": "a caveat",
+      "trans": "a stated warning about limits of a claim",
+      "pos": "noun",
+      "note": "'one caveat:' — the honest analyst's word",
+      "ex_t": "One caveat: the sample predates the price change.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "writing"
+      ],
+      "unit": "data",
+      "id": "en0263",
+      "freq": 263
+    },
+    {
+      "term": "to overfit",
+      "trans": "to match past data so well it fails on new data",
+      "pos": "verb",
+      "note": "ML term that escaped into strategy talk",
+      "ex_t": "That plan is overfitted to last year's crisis.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0264",
+      "freq": 264
+    },
+    {
+      "term": "actionable",
+      "trans": "specific enough to act on",
+      "pos": "adj",
+      "note": "the word every stakeholder wants",
+      "ex_t": "Give me one actionable insight, not ten charts.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "work"
+      ],
+      "unit": "data",
+      "id": "en0265",
+      "freq": 265
+    },
+    {
+      "term": "a takeaway",
+      "trans": "the main point to remember",
+      "pos": "noun",
+      "note": "'key takeaways' — the closing slide",
+      "ex_t": "The takeaway: retention pays better than acquisition.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "presenting"
+      ],
+      "unit": "data",
+      "id": "en0266",
+      "freq": 266
+    },
+    {
+      "term": "to plateau",
+      "trans": "to stop growing after a rise",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Signups plateaued after the launch spike.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0267",
+      "freq": 267
+    },
+    {
+      "term": "a spike",
+      "trans": "a sudden sharp rise",
+      "pos": "noun",
+      "note": "spike vs dip",
+      "ex_t": "There's a spike every Sunday evening.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0268",
+      "freq": 268
+    },
+    {
+      "term": "a dip",
+      "trans": "a brief fall",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The dip in August is just holidays.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0269",
+      "freq": 269
+    },
+    {
+      "term": "year-on-year",
+      "trans": "compared with the same period last year",
+      "pos": "adv",
+      "note": "YoY in writing; month-on-month too",
+      "ex_t": "Revenue is up twelve percent year-on-year.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "money"
+      ],
+      "unit": "data",
+      "id": "en0270",
+      "freq": 270
+    },
+    {
+      "term": "a benchmark",
+      "trans": "a standard to compare against",
+      "pos": "noun",
+      "note": "to benchmark against",
+      "ex_t": "We benchmarked our churn against the industry.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0271",
+      "freq": 271
+    },
+    {
+      "term": "to give a talk",
+      "trans": "to present at an event",
+      "pos": "phrase",
+      "note": "'give', not 'make' or 'do'",
+      "ex_t": "I'm giving a talk on survey design in October.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "presenting"
+      ],
+      "unit": "social",
+      "id": "en0272",
+      "freq": 272
+    },
+    {
+      "term": "a keynote",
+      "trans": "the main invited talk of a conference",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The keynote ran twenty minutes over.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "presenting"
+      ],
+      "unit": "social",
+      "id": "en0273",
+      "freq": 273
+    },
+    {
+      "term": "a breakout session",
+      "trans": "a smaller parallel session",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The breakout sessions are where the real questions happen.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "presenting"
+      ],
+      "unit": "social",
+      "id": "en0274",
+      "freq": 274
+    },
+    {
+      "term": "to network",
+      "trans": "to build professional contacts",
+      "pos": "verb",
+      "note": "networking — the awkward art",
+      "ex_t": "Half the value of the conference is networking in the corridor.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0275",
+      "freq": 275
+    },
+    {
+      "term": "to reach out",
+      "trans": "to contact someone, often first contact",
+      "pos": "verb",
+      "note": "LinkedIn's favourite verb",
+      "ex_t": "Feel free to reach out if you're ever in Madeira.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "work"
+      ],
+      "unit": "social",
+      "id": "en0276",
+      "freq": 276
+    },
+    {
+      "term": "to touch base",
+      "trans": "to make brief contact to stay aligned",
+      "pos": "verb",
+      "note": "corporate but universal",
+      "ex_t": "Let's touch base after the summer.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "work"
+      ],
+      "unit": "social",
+      "id": "en0277",
+      "freq": 277
+    },
+    {
+      "term": "to pick someone's brain",
+      "trans": "to ask someone for informal expert advice",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Could I pick your brain about Play Store publishing?",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0278",
+      "freq": 278
+    },
+    {
+      "term": "a follow-up email",
+      "trans": "a message continuing an earlier conversation",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "I owe three follow-up emails from the conference.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "writing"
+      ],
+      "unit": "social",
+      "id": "en0279",
+      "freq": 279
+    },
+    {
+      "term": "to circle back",
+      "trans": "to return to a topic later",
+      "pos": "verb",
+      "note": "corporate; use with a smile",
+      "ex_t": "Let's circle back to budgets once the numbers land.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0280",
+      "freq": 280
+    },
+    {
+      "term": "offline",
+      "trans": "outside this meeting, privately",
+      "pos": "adv",
+      "note": "'take it offline' — end a derail politely",
+      "ex_t": "Good point — let's take it offline.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0281",
+      "freq": 281
+    },
+    {
+      "term": "the elephant in the room",
+      "trans": "the obvious problem nobody mentions",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Shall we address the elephant in the room — the deadline?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "social"
+      ],
+      "unit": "meetings",
+      "id": "en0282",
+      "freq": 282
+    },
+    {
+      "term": "to put something on the radar",
+      "trans": "to make someone aware early",
+      "pos": "phrase",
+      "note": "'on my radar' — known to me",
+      "ex_t": "Just putting it on your radar: the API changes in May.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0283",
+      "freq": 283
+    },
+    {
+      "term": "a trade-off",
+      "trans": "a compromise where gaining one thing costs another",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Speed versus accuracy is the usual trade-off.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "data"
+      ],
+      "unit": "work",
+      "id": "en0284",
+      "freq": 284
+    },
+    {
+      "term": "a dealbreaker",
+      "trans": "a condition that kills the agreement",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Weekly release cycles are a dealbreaker for them.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "money"
+      ],
+      "unit": "work",
+      "id": "en0285",
+      "freq": 285
+    },
+    {
+      "term": "leverage",
+      "trans": "power to influence a negotiation",
+      "pos": "noun",
+      "note": "also the verb, though some hate it",
+      "ex_t": "Being the only vendor gives them leverage.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "money"
+      ],
+      "unit": "work",
+      "id": "en0286",
+      "freq": 286
+    },
+    {
+      "term": "to meet halfway",
+      "trans": "to compromise equally",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "They dropped the fee; we met them halfway on the term.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "money"
+      ],
+      "unit": "work",
+      "id": "en0287",
+      "freq": 287
+    },
+    {
+      "term": "a ballpark figure",
+      "trans": "a rough estimate",
+      "pos": "noun",
+      "note": "'in the ballpark' — roughly right",
+      "ex_t": "Just give me a ballpark figure for the rebuild.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "data"
+      ],
+      "unit": "money",
+      "id": "en0288",
+      "freq": 288
+    },
+    {
+      "term": "to haggle",
+      "trans": "to argue over a price",
+      "pos": "verb",
+      "note": "markets yes, salaries carefully",
+      "ex_t": "Nobody haggles in Portuguese supermarkets.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "life"
+      ],
+      "unit": "money",
+      "id": "en0289",
+      "freq": 289
+    },
+    {
+      "term": "an invoice",
+      "trans": "a bill for work done",
+      "pos": "noun",
+      "note": "to invoice someone",
+      "ex_t": "Send the invoice with your Portuguese tax number.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "work"
+      ],
+      "unit": "money",
+      "id": "en0290",
+      "freq": 290
+    },
+    {
+      "term": "a quote",
+      "trans": "a stated fixed price for a job",
+      "pos": "noun",
+      "note": "to quote; 'get three quotes'",
+      "ex_t": "Get a second quote before you accept the plumber's.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "life"
+      ],
+      "unit": "money",
+      "id": "en0291",
+      "freq": 291
+    },
+    {
+      "term": "upfront",
+      "trans": "paid or stated in advance",
+      "pos": "adv",
+      "note": "'be upfront' — be honest early",
+      "ex_t": "They want thirty percent upfront.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0292",
+      "freq": 292
+    },
+    {
+      "term": "a deposit",
+      "trans": "money paid to secure something",
+      "pos": "noun",
+      "note": "on flats: one or two months here",
+      "ex_t": "The landlord wants two months as a deposit.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "life"
+      ],
+      "unit": "money",
+      "id": "en0293",
+      "freq": 293
+    },
+    {
+      "term": "to undercut",
+      "trans": "to offer a lower price than a rival",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "The new gym undercut everyone and filled up in a month.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0294",
+      "freq": 294
+    },
+    {
+      "term": "to some extent",
+      "trans": "partly, not completely",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "To some extent the delay was our fault.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0295",
+      "freq": 295
+    },
+    {
+      "term": "as far as I can tell",
+      "trans": "judging from what I can see",
+      "pos": "phrase",
+      "note": "honest uncertainty, elegantly",
+      "ex_t": "As far as I can tell, the bug predates the update.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0296",
+      "freq": 296
+    },
+    {
+      "term": "to put it mildly",
+      "trans": "that description is an understatement",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The rollout was bumpy, to put it mildly.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0297",
+      "freq": 297
+    },
+    {
+      "term": "in hindsight",
+      "trans": "looking back with today's knowledge",
+      "pos": "phrase",
+      "note": "'hindsight is 20/20'",
+      "ex_t": "In hindsight, we launched a month too early.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0298",
+      "freq": 298
+    },
+    {
+      "term": "at face value",
+      "trans": "accepting something as it appears",
+      "pos": "phrase",
+      "note": "'take it at face value'",
+      "ex_t": "Don't take the vendor's benchmark at face value.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "data"
+      ],
+      "unit": "glue",
+      "id": "en0299",
+      "freq": 299
+    },
+    {
+      "term": "by and large",
+      "trans": "in general, mostly",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "By and large, the migration went smoothly.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0300",
+      "freq": 300
+    },
+    {
+      "term": "a rule of thumb",
+      "trans": "a practical approximate rule",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Rule of thumb: one interviewer per five candidates.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "work"
+      ],
+      "unit": "glue",
+      "id": "en0301",
+      "freq": 301
+    },
+    {
+      "term": "to err on the side of caution",
+      "trans": "to choose the safer option when unsure",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "We erred on the side of caution and kept the old API alive.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "work"
+      ],
+      "unit": "glue",
+      "id": "en0302",
+      "freq": 302
+    },
+    {
+      "term": "to draft",
+      "trans": "to write a first version",
+      "pos": "verb",
+      "note": "a draft — the noun",
+      "ex_t": "I'll draft the announcement tonight for your review.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0303",
+      "freq": 303
+    },
+    {
+      "term": "to proofread",
+      "trans": "to check text for errors before sending",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Ask a native to proofread the store listing.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0304",
+      "freq": 304
+    },
+    {
+      "term": "concise",
+      "trans": "short and information-dense",
+      "pos": "adj",
+      "note": "the compliment English writing wants",
+      "ex_t": "Keep the summary concise — five lines, tops.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0305",
+      "freq": 305
+    },
+    {
+      "term": "verbose",
+      "trans": "using more words than needed",
+      "pos": "adj",
+      "note": "the opposite sin",
+      "ex_t": "The report is verbose; nobody reads page nine.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0306",
+      "freq": 306
+    },
+    {
+      "term": "as per",
+      "trans": "according to (formal)",
+      "pos": "phrase",
+      "note": "'as per our conversation' — email armour",
+      "ex_t": "As per the contract, support ends in March.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0307",
+      "freq": 307
+    },
+    {
+      "term": "to attach",
+      "trans": "to include a file with a message",
+      "pos": "verb",
+      "note": "'please find attached' — stiff but standard",
+      "ex_t": "I've attached the revised figures.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0308",
+      "freq": 308
+    },
+    {
+      "term": "to cc someone",
+      "trans": "to copy someone on an email",
+      "pos": "verb",
+      "note": "bcc — blind copy",
+      "ex_t": "Cc me on the thread with the landlord, please.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0309",
+      "freq": 309
+    },
+    {
+      "term": "a typo",
+      "trans": "a small typing mistake",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "There's a typo in the headline — of course there is.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0310",
+      "freq": 310
+    },
+    {
+      "term": "boilerplate",
+      "trans": "standard reusable text",
+      "pos": "noun",
+      "note": "contracts, emails, code",
+      "ex_t": "The privacy section is mostly boilerplate.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "work"
+      ],
+      "unit": "writing",
+      "id": "en0311",
+      "freq": 311
+    },
+    {
+      "term": "a residence permit",
+      "trans": "official permission to live in a country",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "My residence permit renewal took four months.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0312",
+      "freq": 312
+    },
+    {
+      "term": "to settle in",
+      "trans": "to become comfortable in a new place",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "It took a year to properly settle in on the island.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0313",
+      "freq": 313
+    },
+    {
+      "term": "a utility bill",
+      "trans": "a bill for electricity, water or gas",
+      "pos": "noun",
+      "note": "the proof-of-address workhorse",
+      "ex_t": "Banks ask for a utility bill with your name on it.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "money"
+      ],
+      "unit": "life",
+      "id": "en0314",
+      "freq": 314
+    },
+    {
+      "term": "a lease",
+      "trans": "a rental contract",
+      "pos": "noun",
+      "note": "to lease; the lease runs out",
+      "ex_t": "Our lease runs out in September.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "money"
+      ],
+      "unit": "life",
+      "id": "en0315",
+      "freq": 315
+    },
+    {
+      "term": "to commute",
+      "trans": "to travel regularly to work",
+      "pos": "verb",
+      "note": "the commute — the noun",
+      "ex_t": "I commute by scooter — ten minutes along the sea.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0316",
+      "freq": 316
+    },
+    {
+      "term": "healthcare",
+      "trans": "the system of medical services",
+      "pos": "noun",
+      "note": "public vs private healthcare",
+      "ex_t": "Public healthcare here is decent once you're registered.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0317",
+      "freq": 317
+    },
+    {
+      "term": "a GP",
+      "trans": "a general practitioner, family doctor",
+      "pos": "noun",
+      "note": "British term; 'see your GP'",
+      "ex_t": "You need a referral from your GP for the specialist.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0318",
+      "freq": 318
+    },
+    {
+      "term": "to homeschool",
+      "trans": "to educate children at home",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "A few expat families here homeschool.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0319",
+      "freq": 319
+    },
+    {
+      "term": "cost of living",
+      "trans": "how expensive daily life is",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The cost of living crept up with the digital nomads.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "money"
+      ],
+      "unit": "life",
+      "id": "en0320",
+      "freq": 320
+    },
+    {
+      "term": "word of mouth",
+      "trans": "information spread person to person",
+      "pos": "noun",
+      "note": "'by word of mouth'",
+      "ex_t": "The best mechanics are found by word of mouth.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "social"
+      ],
+      "unit": "life",
+      "id": "en0321",
+      "freq": 321
+    },
+    {
+      "term": "a stakeholder",
+      "trans": "anyone with an interest in the outcome",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Map the stakeholders before you propose anything.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0322",
+      "freq": 322
+    },
+    {
+      "term": "a deliverable",
+      "trans": "a concrete thing you promised to produce",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The deliverable is a dashboard, not a promise.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0323",
+      "freq": 323
+    },
+    {
+      "term": "a bottleneck",
+      "trans": "the single point that slows everything",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Review is the bottleneck, not development.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "data"
+      ],
+      "unit": "work",
+      "id": "en0324",
+      "freq": 324
+    },
+    {
+      "term": "to delegate",
+      "trans": "to hand a task to someone else with authority",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Learn to delegate or drown — there's no third option.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0325",
+      "freq": 325
+    },
+    {
+      "term": "to onboard",
+      "trans": "to bring a new person or client up to speed",
+      "pos": "verb",
+      "note": "onboarding — the noun",
+      "ex_t": "We onboard new analysts with a week of shadowing.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0326",
+      "freq": 326
+    },
+    {
+      "term": "a handover",
+      "trans": "the transfer of work and knowledge to someone else",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Write the handover as if you'll be unreachable — you will.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "writing"
+      ],
+      "unit": "work",
+      "id": "en0327",
+      "freq": 327
+    },
+    {
+      "term": "to streamline",
+      "trans": "to make a process simpler and faster",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "We streamlined reporting from five tools to one.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0328",
+      "freq": 328
+    },
+    {
+      "term": "redundant",
+      "trans": "no longer needed; (UK) laid off",
+      "pos": "adj",
+      "note": "'made redundant' — the British layoff phrase",
+      "ex_t": "Half the steps in that process are redundant.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0329",
+      "freq": 329
+    },
+    {
+      "term": "a milestone",
+      "trans": "a significant point of progress",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "First paying user — a real milestone.",
+      "ex_trans": "",
+      "tags": [
+        "work"
+      ],
+      "unit": "work",
+      "id": "en0330",
+      "freq": 330
+    },
+    {
+      "term": "due diligence",
+      "trans": "careful checking before a decision",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Do your due diligence before signing with an agency.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "money"
+      ],
+      "unit": "work",
+      "id": "en0331",
+      "freq": 331
+    },
+    {
+      "term": "to run over",
+      "trans": "to exceed the scheduled time",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Sorry, the previous call ran over.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0332",
+      "freq": 332
+    },
+    {
+      "term": "to reschedule",
+      "trans": "to move to another time",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Can we reschedule Thursday's sync to Friday?",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0333",
+      "freq": 333
+    },
+    {
+      "term": "an agenda",
+      "trans": "the list of topics for a meeting",
+      "pos": "noun",
+      "note": "'what's on the agenda?'",
+      "ex_t": "No agenda, no meeting — house rule.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0334",
+      "freq": 334
+    },
+    {
+      "term": "minutes",
+      "trans": "the written record of a meeting",
+      "pos": "noun",
+      "note": "'to take minutes'",
+      "ex_t": "Who's taking minutes today?",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "writing"
+      ],
+      "unit": "meetings",
+      "id": "en0335",
+      "freq": 335
+    },
+    {
+      "term": "an action item",
+      "trans": "a task assigned in a meeting",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Three action items, all mine. Typical.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "work"
+      ],
+      "unit": "meetings",
+      "id": "en0336",
+      "freq": 336
+    },
+    {
+      "term": "to wrap up",
+      "trans": "to finish",
+      "pos": "verb",
+      "note": "'wrapping up' — the five-minute warning",
+      "ex_t": "Let's wrap up — final thoughts?",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0337",
+      "freq": 337
+    },
+    {
+      "term": "to chime in",
+      "trans": "to join a conversation with a comment",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Feel free to chime in if I miss anything.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0338",
+      "freq": 338
+    },
+    {
+      "term": "you're on mute",
+      "trans": "the sentence of the decade",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Sofia — you're on mute.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0339",
+      "freq": 339
+    },
+    {
+      "term": "to share one's screen",
+      "trans": "to show your screen on a call",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Give me a second to share my screen.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0340",
+      "freq": 340
+    },
+    {
+      "term": "a recap",
+      "trans": "a short summary of what happened",
+      "pos": "noun",
+      "note": "to recap",
+      "ex_t": "Quick recap before we split into groups.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "presenting"
+      ],
+      "unit": "meetings",
+      "id": "en0341",
+      "freq": 341
+    },
+    {
+      "term": "How's it going?",
+      "trans": "casual greeting — not a real question",
+      "pos": "phrase",
+      "note": "answer briefly: 'good, you?'",
+      "ex_t": "How's it going? — Good, busy week. You?",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0342",
+      "freq": 342
+    },
+    {
+      "term": "to grab a coffee",
+      "trans": "to meet informally over coffee",
+      "pos": "phrase",
+      "note": "'grab lunch' works too",
+      "ex_t": "Let's grab a coffee while you're in town.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0343",
+      "freq": 343
+    },
+    {
+      "term": "my treat",
+      "trans": "I'm paying",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Put your wallet away — my treat.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0344",
+      "freq": 344
+    },
+    {
+      "term": "to make it",
+      "trans": "to manage to attend; to succeed",
+      "pos": "verb",
+      "note": "'can't make it' — the polite decline",
+      "ex_t": "I can't make it on Friday, I'm afraid.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0345",
+      "freq": 345
+    },
+    {
+      "term": "long time no see",
+      "trans": "greeting after a long gap",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Long time no see! How was the winter?",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0346",
+      "freq": 346
+    },
+    {
+      "term": "to catch up",
+      "trans": "to exchange news after time apart",
+      "pos": "verb",
+      "note": "'a catch-up' — the noun",
+      "ex_t": "We should catch up properly over dinner.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0347",
+      "freq": 347
+    },
+    {
+      "term": "no worries",
+      "trans": "it's fine, don't apologise",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "— Sorry for the late reply. — No worries.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0348",
+      "freq": 348
+    },
+    {
+      "term": "it's up to you",
+      "trans": "you decide",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Beach or levada — it's up to you.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0349",
+      "freq": 349
+    },
+    {
+      "term": "to keep in touch",
+      "trans": "to stay in contact",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Keep in touch — you have my number.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0350",
+      "freq": 350
+    },
+    {
+      "term": "to get the hang of",
+      "trans": "to learn how something works through practice",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "You'll get the hang of the roundabouts quickly.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "life"
+      ],
+      "unit": "social",
+      "id": "en0351",
+      "freq": 351
+    }
+  ]
+}
