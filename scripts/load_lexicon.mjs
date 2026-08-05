@@ -39,6 +39,9 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
       // Credit travels with the data, not just with the page that shows it.
       grammar: '',
       conj: {},
+      // Real sentences from the source's quotations. `tag` marks the ones a
+      // learner should not copy blindly: pre-reform spelling, Brazilian usage.
+      corpus: (w.corpus ?? []).slice(0, 4),
       source: 'Wiktionary (CC BY-SA 4.0)',
     };
     lines.push(

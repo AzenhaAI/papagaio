@@ -36,7 +36,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "henry",
@@ -49,7 +50,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "belo",
@@ -61,6 +63,12 @@
      "trans": "beautiful; attractive (having beauty)",
      "tags": [],
      "ex": "Um poeta pode acordar no meio da noite e escrever belo poema — basta inspiração! Um pintor pintar um quadro em minutos ou anos, como sentir melhor. Mas artistas de artes coletivas não podem convocar espectadores às três da madrugada, alegando que só nesse momento sentem que baixou o santo."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Sabes quem são os meus mestres do bom e do bello?",
+     "tag": "pre-reform"
     }
    ]
   },
@@ -74,6 +82,14 @@
      "trans": "to forget",
      "tags": [],
      "ex": "Esqueci-me das chaves!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Esqueci-me das chaves!"
+    },
+    {
+     "t": "Nunca me esquecerei de ti."
     }
    ]
   },
@@ -93,7 +109,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cerveja",
@@ -106,7 +123,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "experiência",
@@ -129,6 +147,11 @@
      "tags": [],
      "ex": "Experiência científica"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Experiência científica"
+    }
    ]
   },
   {
@@ -147,7 +170,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "humano",
@@ -165,7 +189,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "humano",
@@ -178,7 +203,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "branco",
@@ -201,7 +227,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "branco",
@@ -231,6 +258,11 @@
      "trans": "a white person",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Me deu um branco na prova!"
     }
    ]
   },
@@ -264,6 +296,11 @@
      "trans": "chastity (of a woman)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Porque é que a honra do nosso paiz se acha envolvida nesta contenda ?"
     }
    ]
   },
@@ -303,6 +340,20 @@
      "tags": [],
      "ex": "Sou eu quem manda aqui!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ninguém manda em mim."
+    },
+    {
+     "t": "Você sabe quem mandou estas flores?"
+    },
+    {
+     "t": "Sou eu quem manda aqui!"
+    },
+    {
+     "t": "Ele se mandou daqui"
+    }
    ]
   },
   {
@@ -323,6 +374,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu estava na esperança de encontrá-lo antes do jantar!"
+    },
+    {
+     "t": "Internou-se na clínica com a vaga esperança de que a Morte, que vem ali buscar tanta gente, um dia o leve por distração."
+    }
    ]
   },
   {
@@ -336,7 +395,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acaso",
@@ -354,7 +414,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acaso",
@@ -366,6 +427,11 @@
      "trans": "chance; luck",
      "tags": [],
      "ex": "um acaso feliz"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "um acaso feliz"
     }
    ]
   },
@@ -380,7 +446,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "saúde",
@@ -398,7 +465,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perigoso",
@@ -411,7 +479,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inteligente",
@@ -424,7 +493,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "paul",
@@ -437,7 +507,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "público",
@@ -460,7 +531,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "público",
@@ -478,7 +550,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "teste",
@@ -496,7 +569,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bola",
@@ -538,7 +612,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cliente",
@@ -551,7 +626,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "roubar",
@@ -584,6 +660,21 @@
      "tags": [],
      "ex": "O tempo roubara sua beleza."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ele roubou uma carteira do bolso de um pedestre."
+    },
+    {
+     "t": "Chegamos de viagem e vimos que roubaram nossa casa."
+    },
+    {
+     "t": "O cassino expulsou o jogador que estava roubando no pôquer.",
+     "tag": "br"
+    },
+    {
+     "t": "Esse cara quer roubar minha mulher."
+    }
    ]
   },
   {
@@ -606,6 +697,11 @@
      "trans": "a multitude; a great amount or number of things",
      "tags": [],
      "ex": "Há um mar de possibilidades."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Há um mar de possibilidades."
     }
    ]
   },
@@ -633,7 +729,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "suspeito",
@@ -646,7 +743,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "suspeito",
@@ -659,7 +757,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "suposto",
@@ -677,7 +776,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "suposto",
@@ -700,7 +800,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "risco",
@@ -733,7 +834,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bater",
@@ -771,6 +873,20 @@
      "tags": [],
      "ex": "Eu bato tambor em todos os eventos do nosso clube."
     }
+   ],
+   "corpus": [
+    {
+     "t": "O valentão gosta de bater nos colegas mais fracos."
+    },
+    {
+     "t": "O pássaro bateu no vidro e morreu."
+    },
+    {
+     "t": "As pedras de gelo batiam contra o telhado."
+    },
+    {
+     "t": "Os aviões se bateram no ar."
+    }
    ]
   },
   {
@@ -788,6 +904,17 @@
      "trans": "to have a good or satisfactory relationship (with someone)",
      "tags": [],
      "ex": "Márcia e eu nos entendemos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não entendi este livro."
+    },
+    {
+     "t": "Fico feliz que você me entenda."
+    },
+    {
+     "t": "Márcia e eu nos entendemos."
     }
    ]
   },
@@ -812,7 +939,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rainha",
@@ -835,7 +963,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aceitar",
@@ -853,6 +982,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "— Mas que havia elle de fazer, senão acceitar o offerecimento do marquez, visto não o deixarem voltar para o seu governo?",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -866,7 +1001,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pobre",
@@ -879,7 +1015,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pobre",
@@ -892,7 +1029,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mestre",
@@ -925,6 +1063,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sabes quem são os meus mestres do bom e do bello?",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -943,6 +1087,17 @@
      "tags": [],
      "ex": "Eles são membros do conselho da cidade."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ela me pediu um conselho."
+    },
+    {
+     "t": "Um conselho me seria muito útil."
+    },
+    {
+     "t": "Eles são membros do conselho da cidade."
+    }
    ]
   },
   {
@@ -959,7 +1114,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "serão",
@@ -977,7 +1133,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "apesar",
@@ -990,7 +1147,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "computador",
@@ -1003,7 +1161,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "computador",
@@ -1016,7 +1175,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alvo",
@@ -1038,7 +1198,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alvo",
@@ -1068,6 +1229,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "A flecha acertou no alvo."
+    },
+    {
+     "t": "Ela foi alvo de críticas."
+    }
    ]
   },
   {
@@ -1085,6 +1254,18 @@
      "trans": "to attend; to show up (at)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Mas às vezes a coisa assim acontece / Aparece, parece, para, aparece"
+    },
+    {
+     "t": "— Hoje eu pago o almoço! — Mariel aparecera de supetão, me tirara de minhas divagações e me fizera perceber que eu estava offline, ao invés de trabalhar.",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "O problema é que nestas horas sempre aparece aquele amigo da onça que só quer ver a desgraça alheia."
     }
    ]
   },
@@ -1104,7 +1285,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entrada",
@@ -1142,7 +1324,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "janela",
@@ -1154,6 +1337,14 @@
      "trans": "window",
      "tags": [],
      "ex": "Começou a chover! Fecha as janelas!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Começou a chover! Fecha as janelas!"
+    },
+    {
+     "t": "Quando eu me sento à janela / P'los vidros qu'a neve embaça / Vejo a doce imagem d'ela / Quando passa… passa… passa…"
     }
    ]
   },
@@ -1173,6 +1364,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Estou em dúvida."
+    },
+    {
+     "t": "Em caso de dúvidas, pergunta."
+    },
+    {
+     "t": "Quando tiver uma dúvida, vá à biblioteca."
+    }
    ]
   },
   {
@@ -1185,6 +1387,11 @@
      "trans": "nick; nickname",
      "tags": [],
      "ex": "Meu nick é Ícaro. Nick igual ao meu nome de verdade. Não invento apelidos na web, acho nada a ver ficar se escondendo atrás de outros nomes que não sejam o meu mesmo."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Meu nick é Ícaro. Nick igual ao meu nome de verdade. Não invento apelidos na web, acho nada a ver ficar se escondendo atrás de outros nomes que não sejam o meu mesmo."
     }
    ]
   },
@@ -1214,6 +1421,11 @@
      "tags": [],
      "ex": "Peter Wright e Paul Elam são dois dos nomes que atualmente referem este ginocentrismo como sendo uma realidade social."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Peter Wright e Paul Elam são dois dos nomes que atualmente referem este ginocentrismo como sendo uma realidade social."
+    }
    ]
   },
   {
@@ -1227,7 +1439,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "zona",
@@ -1261,6 +1474,17 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ela mora nesta zona."
+    },
+    {
+     "t": "A cozinha está uma zona!"
+    },
+    {
+     "t": "A bolsonarista também afirmou que o municipo estava uma “zona” e que do tema ela entende."
+    }
    ]
   },
   {
@@ -1274,7 +1498,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "totalmente",
@@ -1287,7 +1512,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "propósito",
@@ -1305,7 +1531,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "provar",
@@ -1338,7 +1565,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "avô",
@@ -1350,6 +1578,11 @@
      "trans": "grandfather, male grandparent",
      "tags": [],
      "ex": "Coordinate term: avó"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Coordinate term: avó"
     }
    ]
   },
@@ -1384,7 +1617,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "meia",
@@ -1421,7 +1655,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "meia",
@@ -1441,6 +1676,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O evento termina às três e meia."
+    }
    ]
   },
   {
@@ -1453,6 +1693,11 @@
      "trans": "enough",
      "tags": [],
      "ex": "Basta! Saia daqui agora!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Basta! Saia daqui agora!"
     }
    ]
   },
@@ -1472,7 +1717,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "seguinte",
@@ -1490,7 +1736,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "menino",
@@ -1502,6 +1749,14 @@
      "trans": "boy (a young male)",
      "tags": [],
      "ex": "Aquele menino só me aporrinha."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Aquele menino só me aporrinha."
+    },
+    {
+     "t": "Os meninos têm fome."
     }
    ]
   },
@@ -1516,7 +1771,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "criar",
@@ -1544,6 +1800,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fui criado dessa maneira."
+    }
    ]
   },
   {
@@ -1557,7 +1818,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "colocar",
@@ -1595,6 +1857,22 @@
      "tags": [],
      "ex": "A entrevistadora colocou uma pergunta interessante."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Coloca as chaves em cima da mesa, faz favor."
+    },
+    {
+     "t": "Fui collocar a chicara na bandeja.",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "Não reclame, pois foi você mesmo que se colocou nessa situação."
+    },
+    {
+     "t": "O pobre rapaz, que conhecia a falsa posição em que se collocara com a sua phrase, sentia-se humilhado e como que vendido n’aquelle meio.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -1608,7 +1886,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "calhar",
@@ -1641,6 +1920,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Está tudo arranjado, meu senhor! Vêm ahi os bichos!... Só o que não calhou foi um selimsinho para a jumenta!"
+    },
+    {
+     "t": "O dia de natal calha a um domingo."
+    },
+    {
+     "t": "Essa camisa não calha com o teu estilo."
+    }
    ]
   },
   {
@@ -1659,7 +1949,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sargento",
@@ -1684,7 +1975,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "foto",
@@ -1697,7 +1989,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tira",
@@ -1722,7 +2015,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "verificar",
@@ -1740,7 +2034,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terrível",
@@ -1752,6 +2047,11 @@
      "trans": "terrible",
      "tags": [],
      "ex": "Harry passou por uma provação terrível esta noite."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Harry passou por uma provação terrível esta noite."
     }
    ]
   },
@@ -1786,6 +2086,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu conheco um monte de gente."
+    }
    ]
   },
   {
@@ -1799,7 +2104,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pedido",
@@ -1826,6 +2132,14 @@
      "trans": "wish (a will for something to happen)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "pedido de demissão"
+    },
+    {
+     "t": "pedido de casamento"
     }
    ]
   },
@@ -1869,6 +2183,20 @@
      "tags": [],
      "ex": "Não vou chorar pelos famintos."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ela passou a noite chorando por causa da morte do pai."
+    },
+    {
+     "t": "O Vaticano investigou o santo que chorava sangue."
+    },
+    {
+     "t": "Nós choramos que não tínhamos dinheiro, mas eles não se importaram."
+    },
+    {
+     "t": "Chorei, chorei, até que o vendedor baixou o preço."
+    }
    ]
   },
   {
@@ -1882,7 +2210,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preocupado",
@@ -1904,6 +2233,11 @@
      "trans": "thoughtful (absorbed in problems)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você não precisa ficar preocupado comigo, eu já sou um adulto."
     }
    ]
   },
@@ -1927,6 +2261,17 @@
      ],
      "ex": "Deus, vós sois a minha força."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Vós deveis fugir."
+    },
+    {
+     "t": "Aonde ides vós?"
+    },
+    {
+     "t": "Deus, vós sois a minha força."
+    }
    ]
   },
   {
@@ -1945,7 +2290,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rio",
@@ -1962,6 +2308,15 @@
      "trans": "a large amount of anything",
      "tags": [],
      "ex": "Ganhamos um rio de dinheiro."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O Tejo é mais bello que o rio que corre pela minha aldeia",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "Ganhamos um rio de dinheiro."
     }
    ]
   },
@@ -1996,7 +2351,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "jeito",
@@ -2036,6 +2392,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "De jeito nenhum!"
+    },
+    {
+     "t": "Faça-o desse jeito."
+    },
+    {
+     "t": "Nosso país tem jeito"
+    }
    ]
   },
   {
@@ -2049,7 +2416,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "oficial",
@@ -2077,6 +2445,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O meu pai era o oficial de sapateiro da aldeia até eu assumir o negócio."
+    }
    ]
   },
   {
@@ -2089,6 +2462,12 @@
      "trans": "beginning (initial portion of some extended thing)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Com a presença de avultadissimo numero de membros de quasi todas as egrejas evangelicas desta capital e de Nictheroy, o programma do culto teve inicio pouco depois das 4 horas […]",
+     "tag": "pre-reform"
     }
    ]
   },
@@ -2103,7 +2482,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "televisão",
@@ -2126,6 +2506,11 @@
      "tags": [],
      "ex": "[…]e na televisão, ao contrário do que se pode imaginar,[…]você não tem direção, né? O que você fizer, se não tiver muito fora, tá valendo."
     }
+   ],
+   "corpus": [
+    {
+     "t": "[…]e na televisão, ao contrário do que se pode imaginar,[…]você não tem direção, né? O que você fizer, se não tiver muito fora, tá valendo."
+    }
    ]
   },
   {
@@ -2139,7 +2524,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "socorro",
@@ -2157,7 +2543,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "responsável",
@@ -2174,6 +2561,11 @@
      "trans": "liable, accountable, answerable",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "ser responsável por"
     }
    ]
   },
@@ -2192,6 +2584,11 @@
      "trans": "a legal guardian; a person who holds custody over and/or otherwise takes care of a minor or handicapped individual",
      "tags": [],
      "ex": "Você é o responsável dela?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você é o responsável dela?"
     }
    ]
   },
@@ -2218,7 +2615,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acima",
@@ -2236,7 +2634,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "foda-se",
@@ -2259,6 +2658,14 @@
      ],
      "ex": "Perdi o ônibus. Bom, foda-se. Vou ficar em casa então."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Foda-se, perdi o autocarro!"
+    },
+    {
+     "t": "Perdi o ônibus. Bom, foda-se. Vou ficar em casa então."
+    }
    ]
   },
   {
@@ -2279,7 +2686,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "xerife",
@@ -2307,7 +2715,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cartão",
@@ -2325,7 +2734,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cozinha",
@@ -2343,7 +2753,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "negro",
@@ -2360,6 +2771,11 @@
      "trans": "black; negro (dark-skinned person)",
      "tags": [],
      "ex": "Pisando no céu enquanto eles se perguntam\nComo esse negro não cai\nDizem que o céu é o limite\nEles se perguntam\nPor que esse negro não cai"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Pisando no céu enquanto eles se perguntam\nComo esse negro não cai\nDizem que o céu é o limite\nEles se perguntam\nPor que esse negro não cai"
     }
    ]
   },
@@ -2384,6 +2800,14 @@
      "tags": [],
      "ex": "Cavaleiro negro."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Cavaleiro negro."
+    },
+    {
+     "t": "Matéria negra."
+    }
    ]
   },
   {
@@ -2397,7 +2821,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preço",
@@ -2415,7 +2840,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pele",
@@ -2438,7 +2864,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "diabos",
@@ -2451,7 +2878,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "principal",
@@ -2479,6 +2907,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sake, vinho de arroz, é a principal bebida alcoólica do país. A palavras^([sic]) sake é abreviação de sakae, ou seja, prosperidade. Na verdade sake se assemelha mais à cerveja sem gás do que ao vinho."
+    }
    ]
   },
   {
@@ -2492,7 +2925,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "justo",
@@ -2520,7 +2954,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chá",
@@ -2557,6 +2992,11 @@
      ],
      "ex": "chá de bebê"
     }
+   ],
+   "corpus": [
+    {
+     "t": "chá de bebê"
+    }
    ]
   },
   {
@@ -2570,7 +3010,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lixo",
@@ -2600,6 +3041,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fiquei muito chocada na França quando não tinha lixo no banheiro."
+    }
    ]
   },
   {
@@ -2613,7 +3059,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "necessário",
@@ -2626,7 +3073,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alta",
@@ -2645,6 +3093,14 @@
       "Brazil"
      ],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "dar alta a"
+    },
+    {
+     "t": "ter alta"
     }
    ]
   },
@@ -2679,7 +3135,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "par",
@@ -2692,7 +3149,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perdido",
@@ -2720,7 +3178,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "dado",
@@ -2737,6 +3196,11 @@
      "trans": "data; datum (item of information)",
      "tags": [],
      "ex": "Não encontrei nenhum dado no sistema."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O dado mais comum tem seis lados."
     }
    ]
   },
@@ -2771,6 +3235,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "em um dado momento"
+    },
+    {
+     "t": "Eles são muito dados."
+    }
    ]
   },
   {
@@ -2783,6 +3255,11 @@
      "trans": "a given; a particular; a specific",
      "tags": [],
      "ex": "A família mora em uma dada localidade no vale."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A família mora em uma dada localidade no vale."
     }
    ]
   },
@@ -2797,7 +3274,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "imenso",
@@ -2812,7 +3290,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "defesa",
@@ -2850,7 +3329,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "laboratório",
@@ -2863,7 +3343,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "comando",
@@ -2901,7 +3382,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tia",
@@ -2936,6 +3418,11 @@
      ],
      "ex": "tia da limpeza"
     }
+   ],
+   "corpus": [
+    {
+     "t": "tia da limpeza"
+    }
    ]
   },
   {
@@ -2949,7 +3436,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fotografia",
@@ -2972,7 +3460,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ilha",
@@ -2997,7 +3486,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "subir",
@@ -3020,7 +3510,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "opinião",
@@ -3033,7 +3524,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terminar",
@@ -3071,6 +3563,20 @@
      "tags": [],
      "ex": "Muitas palavras terminam no sufixo -ação."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Demorou horas para terminarmos a construção."
+    },
+    {
+     "t": "O filme já terminou."
+    },
+    {
+     "t": "O bolo já terminou de assar?"
+    },
+    {
+     "t": "Terminarei com a Maria hoje mesmo."
+    }
    ]
   },
   {
@@ -3084,7 +3590,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fato",
@@ -3115,6 +3622,11 @@
      "trans": "a small goatherd; a flock",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "E, durante muito tempo, fez-se um vaivém de mercadores. Apareceram os tabuleiros de carne fresca e outros de tripas e fatos de boi; só não vinham hortaliças, porque havia muitas roças no cortiço."
     }
    ]
   },
@@ -3154,6 +3666,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Hermione beliscou o braço do amigo com força."
+    }
    ]
   },
   {
@@ -3191,6 +3708,20 @@
      ],
      "ex": "Esta aula está um saco."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Coloque os pães no saco."
+    },
+    {
+     "t": "Chutaram meu saco."
+    },
+    {
+     "t": "Não tenho saco para isso."
+    },
+    {
+     "t": "Esta aula está um saco."
+    }
    ]
   },
   {
@@ -3219,6 +3750,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu lembro-me do que ele disse."
+    },
+    {
+     "t": "Lembra-se de mim?"
+    },
+    {
+     "t": "Lembre de comprar verduras."
+    },
+    {
+     "t": "Convém, aqui, lembrar o ditado popular: amigos, amigos; negócios à parte. Caso o empreendedor saiba separar a amizade dos negócios, certamente estará em melhores condições para o sucesso."
+    }
    ]
   },
   {
@@ -3244,6 +3789,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Vem morrer nesse beijo que eu vou te dar / Por você meu desejo aumentou e pode me matar"
+    }
    ]
   },
   {
@@ -3257,7 +3807,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "senão",
@@ -3269,6 +3820,11 @@
      "trans": "caveat",
      "tags": [],
      "ex": "O trabalho em geral é bom, mas tem alguns senãos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O trabalho em geral é bom, mas tem alguns senãos."
     }
    ]
   },
@@ -3308,7 +3864,8 @@
      ],
      "ex": "Estás bom, pá?"
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pá",
@@ -3329,6 +3886,11 @@
      "tags": [],
      "ex": "Resolvemos uns assuntos e pá!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ena, pá!"
+    }
    ]
   },
   {
@@ -3346,7 +3908,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "série",
@@ -3386,7 +3949,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "comboio",
@@ -3411,7 +3975,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cabra",
@@ -3443,7 +4008,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "junto",
@@ -3456,7 +4022,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "junto",
@@ -3474,6 +4041,11 @@
      "tags": [],
      "ex": "Contrariando a tendência moderna de tornar a mensagem menos pesada e mais atraente, Jesus não baixou o nível. O Senhor não massageava o ego das pessoas só para conservá-las junto a si."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Contrariando a tendência moderna de tornar a mensagem menos pesada e mais atraente, Jesus não baixou o nível. O Senhor não massageava o ego das pessoas só para conservá-las junto a si."
+    }
    ]
   },
   {
@@ -3487,7 +4059,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "discutir",
@@ -3504,6 +4077,14 @@
      "trans": "to argue, to quarrel",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tenho coisas mais importantes a discutir com você hoje à noite."
+    },
+    {
+     "t": "Se você sentir que a acupuntura incomoda, discuta o assunto com o seu acupunturista. Se não ficar satisfeito com o que ele lhe disser, procure outro acupunturista que use agulhas mais finas."
     }
    ]
   },
@@ -3543,7 +4124,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "destruir",
@@ -3581,7 +4163,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "silêncio",
@@ -3594,7 +4177,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "peça",
@@ -3635,6 +4219,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "peça de fruta"
+    },
+    {
+     "t": "peça de roupa"
+    }
    ]
   },
   {
@@ -3653,7 +4245,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "escolher",
@@ -3666,7 +4259,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "maldito",
@@ -3694,7 +4288,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cheia",
@@ -3707,7 +4302,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "limpar",
@@ -3740,6 +4336,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Cada criança aprende a se limpar com uma idade diferente. Até então, os pais que as limpam."
+    },
+    {
+     "t": "Ele limpou o prato."
+    },
+    {
+     "t": "Os ladrões limparam a casa."
+    }
    ]
   },
   {
@@ -3763,7 +4370,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "caramba",
@@ -3778,7 +4386,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "nove",
@@ -3791,7 +4400,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "nove",
@@ -3804,7 +4414,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "carrinha",
@@ -3818,6 +4429,11 @@
       "Portugal"
      ],
      "ex": "carrinha funerária"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "carrinha funerária"
     }
    ]
   },
@@ -3852,7 +4468,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "evitar",
@@ -3865,7 +4482,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pista",
@@ -3898,7 +4516,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "departamento",
@@ -3916,7 +4535,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "verão",
@@ -3928,6 +4548,11 @@
      "trans": "summer",
      "tags": [],
      "ex": "A segurança está cem vezes mais rigorosa este verão."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A segurança está cem vezes mais rigorosa este verão."
     }
    ]
   },
@@ -3947,7 +4572,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mala",
@@ -3984,7 +4610,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "foder",
@@ -4013,6 +4640,20 @@
      ],
      "ex": "Você fodeu minha reputação!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu não a foderia com o caralho dum réptil."
+    },
+    {
+     "t": "Fodemos a noite toda."
+    },
+    {
+     "t": "Bebendo vinho / Quebrando as taças / Fudendo por toda casa / Se eu divido o maço, eu te amo, desgraça"
+    },
+    {
+     "t": "Você fodeu minha reputação!"
+    }
    ]
   },
   {
@@ -4031,7 +4672,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "memória",
@@ -4048,6 +4690,17 @@
      "trans": "memoir, dissertation",
      "tags": [],
      "ex": "Memória sobre o Estabelecimento de Macau"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "memória de passarinho"
+    },
+    {
+     "t": "Memória sobre o Estabelecimento de Macau"
+    },
+    {
+     "t": "“Memórias Póstumas de Brás Cubas” é um obra literária de Machado de Assis"
     }
    ]
   },
@@ -4069,7 +4722,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "azul",
@@ -4082,7 +4736,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "azul",
@@ -4095,7 +4750,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "calças",
@@ -4108,7 +4764,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "graça",
@@ -4146,6 +4803,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Com licença, senhora; qual a sua graça?"
+    }
    ]
   },
   {
@@ -4159,7 +4821,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "comum",
@@ -4182,7 +4845,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "confiança",
@@ -4195,7 +4859,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "estação",
@@ -4218,7 +4883,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vídeo",
@@ -4230,6 +4896,12 @@
      "trans": "video",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "The iRiver Spinn was a stylish credit-card-sized audio and video player that had a 3.3 inch LCD display.",
+     "tag": "pre-reform"
     }
    ]
   },
@@ -4244,7 +4916,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inimigo",
@@ -4257,7 +4930,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preparar",
@@ -4280,7 +4954,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ocupado",
@@ -4293,7 +4968,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "duro",
@@ -4331,6 +5007,20 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "No mais duro pau d'espinho / Nasce uma rosa fragrante, / Quem não tem peito valoroso / Não conquista a lei de amante."
+    },
+    {
+     "t": "Era muito duro subir uma ladeira de joelhos; devia feril-os por força. A Terra-Santa ficava muito longe. As missas eram numerosas, podiam empenhar-me outra vez a alma...."
+    },
+    {
+     "t": "— Ah, meu senhor grande, — lamentava-se o mísero, — como é duro ser escravo!"
+    },
+    {
+     "t": "Proprietário e estabelecido por sua conta, o rapaz atirou-se à labutação ainda com mais ardor, possuindo-se de tal delírio de enriquecer, que afrontava resignado as mais duras provações."
+    }
    ]
   },
   {
@@ -4343,6 +5033,11 @@
      "trans": "hard",
      "tags": [],
      "ex": "Ele trabalha duro."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele trabalha duro."
     }
    ]
   },
@@ -4367,7 +5062,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "igual",
@@ -4380,7 +5076,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "igual",
@@ -4392,6 +5089,11 @@
      "trans": "like; just alike; similarly to",
      "tags": [],
      "ex": "Ele entrou no local furtivamente, igual a uma raposa."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele entrou no local furtivamente, igual a uma raposa."
     }
    ]
   },
@@ -4406,7 +5108,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "prestes",
@@ -4429,7 +5132,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corre",
@@ -4461,6 +5165,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Todo mundo tem o seu corre diário."
+    }
    ]
   },
   {
@@ -4489,6 +5198,20 @@
      "tags": [],
      "ex": "Número inteiro."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Dormimos o dia inteiro."
+    },
+    {
+     "t": "Ela escreveu o livro inteiro sozinha."
+    },
+    {
+     "t": "O carro ainda está inteiro, apesar do acidente."
+    },
+    {
+     "t": "Ela tem minha inteira confiança."
+    }
    ]
   },
   {
@@ -4502,7 +5225,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "branca",
@@ -4515,7 +5239,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gelo",
@@ -4555,7 +5280,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gelo",
@@ -4568,7 +5294,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "maluco",
@@ -4580,6 +5307,11 @@
      "trans": "crazy, mad",
      "tags": [],
      "ex": "O Tom ficou maluco?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O Tom ficou maluco?"
     }
    ]
   },
@@ -4597,7 +5329,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bem-vindo",
@@ -4610,7 +5343,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bem-vindo",
@@ -4623,7 +5357,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cuidar",
@@ -4663,6 +5398,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "A mãe cuida das crianças."
+    },
+    {
+     "t": "Não te preocupes, cuidarei deste problema."
+    },
+    {
+     "t": "Cuida da tua vida!"
+    }
    ]
   },
   {
@@ -4686,6 +5432,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O senhor realizou extraordinária magia com essa varinha."
+    },
+    {
+     "t": "Estou a praticar truques de magia para poder trabalhar como mágico num circo."
+    }
    ]
   },
   {
@@ -4699,7 +5453,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "processo",
@@ -4737,7 +5492,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "porcaria",
@@ -4760,7 +5516,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "copo",
@@ -4773,7 +5530,8 @@
      "tags": [],
      "ex": "Alda contou para o grupo que a tia Belinha tinha ido sozinha a Paris e lá conhecera um conde francês, ligeiramente arruinado e ligeiramente maluco, com quem tivera um tórrido caso de verão. Numa noite quente, dançando numa margem do Sena, depois de muitos copos de champanhe, os dois tinham tropeçado e..."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vermelho",
@@ -4791,7 +5549,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vermelho",
@@ -4814,7 +5573,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "responder",
@@ -4852,7 +5612,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "apoio",
@@ -4875,7 +5636,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "parque",
@@ -4888,7 +5650,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "paciente",
@@ -4906,7 +5669,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "paciente",
@@ -4919,7 +5683,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "quão",
@@ -4931,6 +5696,11 @@
      "trans": "how (to what degree)",
      "tags": [],
      "ex": "quão grande"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "quão grande"
     }
    ]
   },
@@ -4944,6 +5714,11 @@
      "trans": "as (to the same extent or degree that)",
      "tags": [],
      "ex": "Ela é tão bonita quão inteligente."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ela é tão bonita quão inteligente."
     }
    ]
   },
@@ -4978,6 +5753,20 @@
      "tags": [],
      "ex": "Ele tornou a roubar depois que saiu da cadeia."
     }
+   ],
+   "corpus": [
+    {
+     "t": "A recessão tornou tudo caro."
+    },
+    {
+     "t": "De novo, através da investigação, torna-se claro."
+    },
+    {
+     "t": "O príncipe tornou-se um sapo."
+    },
+    {
+     "t": "Precisamos tornar imediatamente!"
+    }
    ]
   },
   {
@@ -4991,7 +5780,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "arte",
@@ -5004,7 +5794,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "visita",
@@ -5022,7 +5813,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "buraco",
@@ -5060,7 +5852,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cantar",
@@ -5091,6 +5884,20 @@
      ],
      "ex": "As únicas coisas que ele faz o dia todo são comer, dormir, e cantar meninas."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Enquanto passeava pelo jardim, ouvi um pássaro cantar."
+    },
+    {
+     "t": "Ela cantou a sua melhor música."
+    },
+    {
+     "t": "Enquanto tomava minhas medidas, ele cantava baixinho para si mesmo os números."
+    },
+    {
+     "t": "As únicas coisas que ele faz o dia todo são comer, dormir, e cantar meninas."
+    }
    ]
   },
   {
@@ -5103,6 +5910,14 @@
      "trans": "singing; song (the act of using the voice to produce musical sounds; vocalizing)",
      "tags": [],
      "ex": "É belíssimo, o cantar deste pássaro!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "É belíssimo, o cantar deste pássaro!"
+    },
+    {
+     "t": "No confuso rumor que se formava, destacavam-se risos, sons de vozes que altercavam, sem se saber de onde, grasnar de marrecos, cantar de galos, cacarejar de galinhas."
     }
    ]
   },
@@ -5121,6 +5936,11 @@
      "trans": "event; happening",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Convém, aqui, lembrar o ditado popular: amigos, amigos; negócios à parte. Caso o empreendedor saiba separar a amizade dos negócios, certamente estará em melhores condições para o sucesso."
     }
    ]
   },
@@ -5170,6 +5990,20 @@
      ],
      "ex": "Nossa, esse exercício me pegou agora."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu vou te pegar na porrada!"
+    },
+    {
+     "t": "Nossa, esse exercício me pegou agora."
+    },
+    {
+     "t": "Resposta errada, te peguei, rá!"
+    },
+    {
+     "t": "Fernando Tordo (1973), “Tourada”, (in Portuguese): “E só ficam os peões de brega / Cuja profissão não pega ― And only the peões de brega are left / whose profession doesn't stick”"
+    }
    ]
   },
   {
@@ -5187,6 +6021,11 @@
      "trans": "unhappily",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "É verdade, infelizmente."
     }
    ]
   },
@@ -5211,7 +6050,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "parede",
@@ -5224,7 +6064,8 @@
      "tags": [],
      "ex": "Fui devagar, mas o pé ou o espelho traiu-me. Este pode ser que não fosse; era um espelhinho de pataca (perdoai a barateza), comprado a um mascate italiano, moldura tosca, argolinha de latão, pendente da parede, entre as duas janelas."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cheiro",
@@ -5242,7 +6083,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "herói",
@@ -5270,7 +6112,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inglês",
@@ -5295,7 +6138,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inglês",
@@ -5315,7 +6159,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "devagar",
@@ -5328,7 +6173,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "troca",
@@ -5341,7 +6187,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "batalha",
@@ -5354,7 +6201,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bala",
@@ -5382,6 +6230,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Kenji Narukami: Ih, eu não tenho mais balas...\nJushiro Fudo: Não é bala que se fala, é munição!"
+    }
    ]
   },
   {
@@ -5395,7 +6248,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mentira",
@@ -5410,6 +6264,11 @@
      ],
      "ex": "Eu comprei trinta... mentira, vinte, tomates."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu comprei trinta... mentira, vinte, tomates."
+    }
    ]
   },
   {
@@ -5423,7 +6282,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "emergência",
@@ -5441,7 +6301,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "toca",
@@ -5475,6 +6336,11 @@
      "trans": "tag (children's chasing game)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Sua casa de sapé e lama faz rir aos bichos que moram em toca e gargalhar ao joão de barro."
     }
    ]
   },
@@ -5513,7 +6379,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "americano",
@@ -5555,6 +6422,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "— Espera! — exclamou Ega. — Lá vem um americano, ainda o apanhamos."
+    }
    ]
   },
   {
@@ -5578,7 +6450,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "encontrado",
@@ -5601,7 +6474,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vergonha",
@@ -5614,7 +6488,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "longa",
@@ -5632,7 +6507,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "estrela",
@@ -5670,6 +6546,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Saciado, cahiu de papo para cima, olhando as estrellas, que vinham nascendo.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -5695,6 +6577,14 @@
       "colloquial"
      ],
      "ex": "É, tava animal mesmo — Bia mal consegue falar."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Em anatomia animal o termo é de uso muito comum, […]"
+    },
+    {
+     "t": "É, tava animal mesmo — Bia mal consegue falar."
     }
    ]
   },
@@ -5727,6 +6617,20 @@
       "colloquial"
      ],
      "ex": "Josuel é um animal repulsivo, uma besta humana."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Quando a flor do abacateiro recebe o pólen de outra flor de abacateiro trazido pelas abelhas, beija-flores, borboletas e outros animais, ela fica polinizada e começa a gerar um fruto, que é o abacate."
+    },
+    {
+     "t": "Primatas — Animais mamíferos, da ordem Primata, que compreende os macacos, antropóides e o homem."
+    },
+    {
+     "t": "Separar os dois grupos — humanos e animais requereria, dentro dos limites da teoria relativa à dor e ao sofrimento, […]"
+    },
+    {
+     "t": "Escute aqui, seu animal, então você brigou com o companheiro?"
     }
    ]
   },
@@ -5766,6 +6670,20 @@
      "tags": [],
      "ex": "O livro se acha aberto."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Preciso de achar as chaves da minha casa."
+    },
+    {
+     "t": "Nenhum dos estudantes achou a resposta correta."
+    },
+    {
+     "t": "Acho essa casa muito feia."
+    },
+    {
+     "t": "Acharam o filme interessante."
+    }
    ]
   },
   {
@@ -5779,7 +6697,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "certamente",
@@ -5791,6 +6710,11 @@
      "trans": "certainly",
      "tags": [],
      "ex": "Convém, aqui, lembrar o ditado popular: amigos, amigos; negócios à parte. Caso o empreendedor saiba separar a amizade dos negócios, certamente estará em melhores condições para o sucesso."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Convém, aqui, lembrar o ditado popular: amigos, amigos; negócios à parte. Caso o empreendedor saiba separar a amizade dos negócios, certamente estará em melhores condições para o sucesso."
     }
    ]
   },
@@ -5815,7 +6739,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perna",
@@ -5837,6 +6762,11 @@
      "trans": "leg (part of garment)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As pernas de uma cadeira."
     }
    ]
   },
@@ -5865,6 +6795,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "No confuso rumor que se formava, destacavam-se risos, sons de vozes que altercavam, sem se saber de onde, grasnar de marrecos, cantar de galos, cacarejar de galinhas."
+    }
    ]
   },
   {
@@ -5877,6 +6812,11 @@
      "trans": "building, edifice",
      "tags": [],
      "ex": "É um edifício bonito."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "É um edifício bonito."
     }
    ]
   },
@@ -5896,7 +6836,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pescoço",
@@ -5909,7 +6850,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lua",
@@ -5932,6 +6874,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Que bela vista da cidade sob a lua."
+    },
+    {
+     "t": "Mas a lua, furando o nosso zinco / Salpicava de estrelas nosso chão"
+    },
+    {
+     "t": "Marte tem duas luas, Fobos e Deimos."
+    }
    ]
   },
   {
@@ -5945,7 +6898,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "monstro",
@@ -5974,6 +6928,14 @@
       "slang"
      ],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vi um filme de monstro hoje."
+    },
+    {
+     "t": "Esses assassinos são uns monstros!"
     }
    ]
   },
@@ -6004,6 +6966,17 @@
      ],
      "ex": "Você é monstro no basquete!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Jogada monstra!"
+    },
+    {
+     "t": "Depois de muito treino, fiquei monstro!"
+    },
+    {
+     "t": "Você é monstro no basquete!"
+    }
    ]
   },
   {
@@ -6021,6 +6994,17 @@
      "trans": "beginning; start (the initial stages of something)",
      "tags": [],
      "ex": "Meu personagem favorito morreu logo no começo do livro."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O rei celebrou o começo de seu reino."
+    },
+    {
+     "t": "Todos ocuparam suas posições e ficaram esperando pelo comêço do tiroteio."
+    },
+    {
+     "t": "Meu personagem favorito morreu logo no começo do livro."
     }
    ]
   },
@@ -6047,7 +7031,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "imaginar",
@@ -6060,7 +7045,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "recuperar",
@@ -6078,7 +7064,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "normalmente",
@@ -6091,7 +7078,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "simpático",
@@ -6119,7 +7107,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "valor",
@@ -6152,6 +7141,14 @@
      "tags": [],
      "ex": "O valor será depositado em sua conta ainda hoje."
     }
+   ],
+   "corpus": [
+    {
+     "t": "O valor do pi é 3,14."
+    },
+    {
+     "t": "O valor será depositado em sua conta ainda hoje."
+    }
    ]
   },
   {
@@ -6175,7 +7172,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "i",
@@ -6188,7 +7186,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "devido",
@@ -6201,7 +7200,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "soldado",
@@ -6219,7 +7219,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "soldado",
@@ -6232,7 +7233,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "encontraram",
@@ -6245,7 +7247,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "especialmente",
@@ -6258,7 +7261,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "doce",
@@ -6285,6 +7289,15 @@
      "trans": "agreeable, pleasant",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Quando eu me sento à janela\nP'los vidros qu'a neve embaça\nVejo a doce imagem d'ela"
+    },
+    {
+     "t": "Enquanto isso vai tomando o doce saqué, em minúsculas tijelinhas^([sic]) brancas, quase do tamanho de um dedal.",
+     "tag": "br"
     }
    ]
   },
@@ -6322,7 +7335,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "natureza",
@@ -6340,6 +7354,14 @@
      "tags": [],
      "ex": "Ele não se consegue controlar; é a sua natureza."
     }
+   ],
+   "corpus": [
+    {
+     "t": "O Homem pertence à natureza."
+    },
+    {
+     "t": "Ele não se consegue controlar; é a sua natureza."
+    }
    ]
   },
   {
@@ -6353,7 +7375,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chamo-me",
@@ -6365,6 +7388,11 @@
      "trans": "my name is…",
      "tags": [],
      "ex": "Chamo-me José."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Chamo-me José."
     }
    ]
   },
@@ -6379,7 +7407,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "máximo",
@@ -6392,7 +7421,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "máximo",
@@ -6415,7 +7445,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inocente",
@@ -6438,7 +7469,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inocente",
@@ -6451,7 +7483,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "autocarro",
@@ -6466,7 +7499,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gabinete",
@@ -6489,7 +7523,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "faca",
@@ -6502,7 +7537,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "grávida",
@@ -6515,7 +7551,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "desistir",
@@ -6546,7 +7583,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fé",
@@ -6564,7 +7602,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "salvo",
@@ -6577,7 +7616,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "salvo",
@@ -6590,7 +7630,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "exatamente",
@@ -6603,7 +7644,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tamanho",
@@ -6616,7 +7658,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tamanho",
@@ -6628,6 +7671,11 @@
      "trans": "size",
      "tags": [],
      "ex": "Qual tamanho você veste?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Qual tamanho você veste?"
     }
    ]
   },
@@ -6642,7 +7690,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "carreira",
@@ -6683,7 +7732,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "limpo",
@@ -6701,7 +7751,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "porreiro",
@@ -6733,7 +7784,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "árvore",
@@ -6750,6 +7802,11 @@
      "trans": "tree",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As árvores melhoram a qualidade do ar."
     }
    ]
   },
@@ -6769,7 +7826,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preparado",
@@ -6782,7 +7840,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "demorar",
@@ -6800,7 +7859,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "disparar",
@@ -6822,6 +7882,11 @@
      "trans": "to go off (an alarm), to trip (a circuit breaker)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A alteração à lei do arrendamento fez disparar o preço das rendas para valores históricos, conduzindo muitos estabelecimentos comerciais a fechar portas em Lisboa."
     }
    ]
   },
@@ -6856,6 +7921,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "[...] a poucos metros de distância [...]"
+    }
    ]
   },
   {
@@ -6879,6 +7949,17 @@
      "tags": [],
      "ex": "o antigo dono"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Grécia Antiga"
+    },
+    {
+     "t": "um filme antigo"
+    },
+    {
+     "t": "o antigo dono"
+    }
    ]
   },
   {
@@ -6897,7 +7978,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "dança",
@@ -6910,7 +7992,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pedra",
@@ -6948,7 +8031,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "faculdade",
@@ -6975,6 +8059,11 @@
      "trans": "right",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Estou no meu segundo ano da faculdade"
     }
    ]
   },
@@ -7014,6 +8103,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "1902, Fernando Pessoa, Quando ela passa"
+    },
+    {
+     "t": "Coordinate term: contradomínio"
+    }
    ]
   },
   {
@@ -7027,7 +8124,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "caralho",
@@ -7056,7 +8154,8 @@
      ],
      "ex": "Sinta-se bem\nNão seja escravo de um espelho\nEm um mundo de vaidades\nQuem decide o que é feio?\nImportante perceber\nE também se aceitar\nNinguém é igual a ninguém\nSempre válido lembrar que\nPadrão é o caralho"
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "caralho",
@@ -7072,7 +8171,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "malta",
@@ -7095,7 +8195,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "conhecido",
@@ -7113,7 +8214,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "conhecido",
@@ -7126,7 +8228,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "doença",
@@ -7149,7 +8252,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "julgamento",
@@ -7172,7 +8276,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "nariz",
@@ -7185,7 +8290,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cortar",
@@ -7223,6 +8329,20 @@
      "tags": [],
      "ex": "O rio Tejo corta Portugal."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu me cortei no espinhal."
+    },
+    {
+     "t": "Corte a torta em sete pedaços."
+    },
+    {
+     "t": "A cabeleireira cortou meu cabelo mal."
+    },
+    {
+     "t": "Preciso de uma licença para cortar essa imbuia."
+    }
    ]
   },
   {
@@ -7246,7 +8366,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preto",
@@ -7274,6 +8395,20 @@
      "tags": [],
      "ex": "A coisa está preta."
     }
+   ],
+   "corpus": [
+    {
+     "t": "O tecido preto aquece/esquenta mais rapidamente."
+    },
+    {
+     "t": "pão preto"
+    },
+    {
+     "t": "peças pretas de xadrez"
+    },
+    {
+     "t": "nuvem preta"
+    }
    ]
   },
   {
@@ -7299,6 +8434,11 @@
       "colloquial"
      ],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O preto é a mais escura das cores."
     }
    ]
   },
@@ -7335,6 +8475,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "cadeira presidencial"
+    }
    ]
   },
   {
@@ -7347,6 +8492,11 @@
      "trans": "fish (cold-blooded vertebrate animal that lives in water, moving with the help of fins and breathing with gills)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "peixe-boi"
     }
    ]
   },
@@ -7386,6 +8536,20 @@
      "tags": [],
      "ex": "Estou a gozar contigo."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Gozas de uma boa saúde."
+    },
+    {
+     "t": "Vocês estão me gozando?"
+    },
+    {
+     "t": "Estou a gozar contigo."
+    },
+    {
+     "t": "Goza pra mim, seu safado."
+    }
    ]
   },
   {
@@ -7404,7 +8568,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "partido",
@@ -7422,7 +8587,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "voo",
@@ -7434,6 +8600,19 @@
      "trans": "flight",
      "tags": [],
      "ex": "O voo foi cancelado."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O voo foi cancelado."
+    },
+    {
+     "t": "Em 22 de janeiro de 1968, ocorreu o vôo da Apollo 5.",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "O astronauta Jim Bagian, um chocólatra inveterado, conseguiu levar para dentro da Space Shuttle, durante o seu primeiro voo, uma barra de chocolate Mars.",
+     "tag": "pre-reform"
     }
    ]
   },
@@ -7473,6 +8652,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ele podia ouvi-la se deslocando para a direita, para obter uma visão desimpedida dele."
+    }
    ]
   },
   {
@@ -7506,6 +8690,20 @@
      "tags": [],
      "ex": "Conseguimos controlar a inflação."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Este dispositivo controla o motor."
+    },
+    {
+     "t": "Ele controla seus adversários."
+    },
+    {
+     "t": "A polícia conseguiu controlar os hooligans."
+    },
+    {
+     "t": "O partido nazista controlou a Alemanha por uma década."
+    }
    ]
   },
   {
@@ -7523,6 +8721,11 @@
      "trans": "witness (someone called to give evidence in a court)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele era a única testemunha do acidente."
     }
    ]
   },
@@ -7565,6 +8768,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Devíamos fechar os olhos dele."
+    }
    ]
   },
   {
@@ -7577,6 +8785,11 @@
      "trans": "to shout, to scream, to yell",
      "tags": [],
      "ex": "Começavam a fazer compras na venda; ensarilhavam-se discussões e resingas; ouviam-se gargalhadas e pragas; já se não falava, gritava-se."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Começavam a fazer compras na venda; ensarilhavam-se discussões e resingas; ouviam-se gargalhadas e pragas; já se não falava, gritava-se."
     }
    ]
   },
@@ -7621,6 +8834,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "[...] o gato ronronava feliz nos braços de Hermione."
+    }
    ]
   },
   {
@@ -7637,6 +8855,11 @@
      ],
      "ex": "Ela é muito gata."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ela é muito gata."
+    }
    ]
   },
   {
@@ -7650,7 +8873,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corrida",
@@ -7673,7 +8897,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "deixado",
@@ -7691,7 +8916,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "central",
@@ -7704,7 +8930,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "central",
@@ -7729,7 +8956,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "notícia",
@@ -7752,6 +8980,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Esta é uma boa notícia!"
+    }
    ]
   },
   {
@@ -7765,7 +8998,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perdão",
@@ -7783,7 +9017,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "interior",
@@ -7795,6 +9030,11 @@
      "trans": "inner; interior (located in the inside)",
      "tags": [],
      "ex": "Não comemos os olhos nem os órgãos interiores."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não comemos os olhos nem os órgãos interiores."
     }
    ]
   },
@@ -7813,6 +9053,14 @@
      "trans": "country; countryside; interior (regions outside major cities)",
      "tags": [],
      "ex": "Esses fazendeiros moraram sempre no interior."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tirei uma bola do interior da caixa."
+    },
+    {
+     "t": "Esses fazendeiros moraram sempre no interior."
     }
    ]
   },
@@ -7851,6 +9099,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Vou participar na prova de 100m estilos."
+    }
    ]
   },
   {
@@ -7887,7 +9140,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "barulho",
@@ -7900,7 +9154,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "obviamente",
@@ -7913,7 +9168,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "velocidade",
@@ -7931,7 +9187,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ameaça",
@@ -7953,6 +9210,17 @@
      "trans": "an indication that something bad may occur",
      "tags": [],
      "ex": "O trovão foi uma ameaça de tempestade."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "ameaça de morte"
+    },
+    {
+     "t": "Suas ameaças não me dão medo!"
+    },
+    {
+     "t": "O trovão foi uma ameaça de tempestade."
     }
    ]
   },
@@ -7982,7 +9250,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ligado",
@@ -8021,6 +9290,20 @@
      ],
      "ex": "Cê tá ligado que é perigoso andar por aqui de noite?"
     }
+   ],
+   "corpus": [
+    {
+     "t": "De acordo com o documento, o governador está ligado ao esquema de corrupção."
+    },
+    {
+     "t": "A TV não está ligada na tomada."
+    },
+    {
+     "t": "O computador está ligado."
+    },
+    {
+     "t": "Fique ligado na curva."
+    }
    ]
   },
   {
@@ -8039,7 +9322,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entanto",
@@ -8052,7 +9336,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "unidade",
@@ -8070,7 +9355,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "marca",
@@ -8108,7 +9394,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "regressar",
@@ -8121,7 +9408,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "baixa",
@@ -8149,7 +9437,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "verde",
@@ -8177,7 +9466,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "verde",
@@ -8195,7 +9485,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pega",
@@ -8237,7 +9528,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "floresta",
@@ -8250,7 +9542,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "total",
@@ -8268,6 +9561,14 @@
      "tags": [],
      "ex": "A quantidade total de livros nesta biblioteca é mais de um milhão."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Quero conversar com os senhores e exijo sua total e absoluta atenção."
+    },
+    {
+     "t": "A quantidade total de livros nesta biblioteca é mais de um milhão."
+    }
    ]
   },
   {
@@ -8280,6 +9581,11 @@
      "trans": "total (amount obtained by the addition of smaller amounts)",
      "tags": [],
      "ex": "O total de livros nesta biblioteca é mais de um milhão."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O total de livros nesta biblioteca é mais de um milhão."
     }
    ]
   },
@@ -8311,7 +9617,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "confusão",
@@ -8344,7 +9651,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "culpado",
@@ -8357,7 +9665,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "praia",
@@ -8378,6 +9687,20 @@
      ],
      "ex": "Matemática não é minha praia."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Near-synonyms: areal, beira-mar, margem"
+    },
+    {
+     "t": "O Brasil é conhecido pelas suas praias arenosas."
+    },
+    {
+     "t": "Mas os Mouros que andauão pela praya, / Por lhe defender a agoa deſejada, / Hum de eſcudo embarcado, & de azagaya, / Outro de arco encuruado, & ſeta eruada:[…]"
+    },
+    {
+     "t": "Matemática não é minha praia."
+    }
    ]
   },
   {
@@ -8391,7 +9714,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tiveram",
@@ -8408,6 +9732,11 @@
      "trans": "third-person plural preterite/pluperfect indicative of tar",
      "tags": [],
      "ex": "Creio que já tiveram cinco professores nesta matéria."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Creio que já tiveram cinco professores nesta matéria."
     }
    ]
   },
@@ -8434,6 +9763,17 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Língua portuguesa"
+    },
+    {
+     "t": "O inglês é a minha segunda língua."
+    },
+    {
+     "t": "— E que língua se falava na Bélgica, afinal?"
+    }
    ]
   },
   {
@@ -8447,7 +9787,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "presa",
@@ -8485,7 +9826,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "investigar",
@@ -8503,7 +9845,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "meter",
@@ -8538,6 +9881,15 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Meti o livro na mochila e fui embora."
+    },
+    {
+     "t": "Descalçou-se, metteu as meias no bolso, tirou o paletot, a gravata e o collarinho, roncou alliviado.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -8559,6 +9911,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Oi, Maria!"
+    }
    ]
   },
   {
@@ -8577,7 +9934,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "banda",
@@ -8610,7 +9968,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rapidamente",
@@ -8622,6 +9981,11 @@
      "trans": "rapidly, quickly",
      "tags": [],
      "ex": "Vamos arrumar a casa rapidamente antes que nossos pais cheguem!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vamos arrumar a casa rapidamente antes que nossos pais cheguem!"
     }
    ]
   },
@@ -8649,7 +10013,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "busca",
@@ -8677,7 +10042,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ouvido",
@@ -8695,7 +10061,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "receio",
@@ -8712,6 +10079,11 @@
      "trans": "concern, apprehension, trepidation",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Eu tenho receio de tentar coisas novas."
     }
    ]
   },
@@ -8731,7 +10103,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fingir",
@@ -8744,7 +10117,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "respirar",
@@ -8757,7 +10131,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rosto",
@@ -8769,6 +10144,14 @@
      "trans": "face (part of head)",
      "tags": [],
      "ex": "Era difícil dizer se a professora os ouvira, pois seu rosto estava oculto pelas sombras."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Era difícil dizer se a professora os ouvira, pois seu rosto estava oculto pelas sombras."
+    },
+    {
+     "t": "Então o sorriso reapareceu em seu rosto [...]"
     }
    ]
   },
@@ -8783,7 +10166,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ridículo",
@@ -8796,7 +10180,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mudança",
@@ -8824,7 +10209,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "época",
@@ -8842,6 +10228,11 @@
      "tags": [],
      "ex": "Havia formas já selecionadas de abacaxi ou ananás na época pré-colombiana. É considerado o fruto mais saboroso da América e os primeiros indícios de seu cultivo são do México."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Havia formas já selecionadas de abacaxi ou ananás na época pré-colombiana. É considerado o fruto mais saboroso da América e os primeiros indícios de seu cultivo são do México."
+    }
    ]
   },
   {
@@ -8855,7 +10246,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fonte",
@@ -8893,7 +10285,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "major",
@@ -8921,7 +10314,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "major",
@@ -8934,7 +10328,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "navio",
@@ -8947,7 +10342,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "escapar",
@@ -8960,7 +10356,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cansado",
@@ -8978,7 +10375,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aula",
@@ -8996,7 +10394,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rico",
@@ -9023,6 +10422,17 @@
      "trans": "cute",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele é muito rico, mas não é muito feliz."
+    },
+    {
+     "t": "O palácio era famoso pela sua rica decoração."
+    },
+    {
+     "t": "Mas que rica sobremesa!"
     }
    ]
   },
@@ -9062,6 +10472,20 @@
      "tags": [],
      "ex": "Os eventos acordaram a raiva dos franceses."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Acordei às sete da manhã."
+    },
+    {
+     "t": "Não faça barulho, senão pode acordar os vizinhos."
+    },
+    {
+     "t": "Francamente, vão acordar todo mundo!"
+    },
+    {
+     "t": "O país inteiro acorda para o terrorismo."
+    }
    ]
   },
   {
@@ -9075,7 +10499,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "charles",
@@ -9090,7 +10515,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "preocupar",
@@ -9118,6 +10544,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "As taxas de homicídio daqui preocupam."
+    },
+    {
+     "t": "Não se preocupe com o que seus inimigos dizem."
+    }
    ]
   },
   {
@@ -9135,6 +10569,11 @@
      "trans": "beauty (a beautiful thing or person)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ah, a beleza que existe / A beleza que não é só minha / Que também passa sozinha"
     }
    ]
   },
@@ -9160,7 +10599,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "atrasado",
@@ -9188,6 +10628,17 @@
      "tags": [],
      "ex": "Este relógio está cinco minutos atrasado."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Feliz aniversário atrasado."
+    },
+    {
+     "t": "Um país atrasado"
+    },
+    {
+     "t": "Este relógio está cinco minutos atrasado."
+    }
    ]
   },
   {
@@ -9206,7 +10657,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "agir",
@@ -9224,7 +10676,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rir",
@@ -9246,6 +10699,20 @@
      "trans": "to laugh (to be or appear mirthful)",
      "tags": [],
      "ex": "O dia ri."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Passei horas rindo."
+    },
+    {
+     "t": "Rimo-nos muito daquele filme."
+    },
+    {
+     "t": "As pessoas apontam e riem-se de mim."
+    },
+    {
+     "t": "O dia ri."
     }
    ]
   },
@@ -9270,6 +10737,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sou o dono deste livro."
+    }
    ]
   },
   {
@@ -9292,6 +10764,14 @@
      "trans": "place",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "posto de trabalho"
+    },
+    {
+     "t": "posto de gasolina"
     }
    ]
   },
@@ -9323,7 +10803,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "nervoso",
@@ -9350,7 +10831,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bordo",
@@ -9383,7 +10865,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "magoar",
@@ -9401,7 +10884,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entregar",
@@ -9443,6 +10927,20 @@
      "tags": [],
      "ex": "O suspeito negava as acusações, mas os interrogadores fizeram-no se entregar."
     }
+   ],
+   "corpus": [
+    {
+     "t": "O carteiro entregou-me uma carta de minha mãe."
+    },
+    {
+     "t": "O general teve que entregar a cidade após meses de cerco."
+    },
+    {
+     "t": "A vermelhidão do rosto entregava seu constrangimento."
+    },
+    {
+     "t": "Judas entregou Jesus aos romanos."
+    }
    ]
   },
   {
@@ -9455,6 +10953,11 @@
      "trans": "pleasant, agreeable, nice",
      "tags": [],
      "ex": "Que surpresa agradável!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Que surpresa agradável!"
     }
    ]
   },
@@ -9483,6 +10986,18 @@
      ],
      "ex": "Oi, princesa!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ninguem fallava em torno d’ella senão em dinheiro, e no entanto ella, que vivia n’um voluptuoso ninho de princeza de conto de fadas, tinha pelo dinheiro em si o mais soberano desdem.",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "Você é uma princesa"
+    },
+    {
+     "t": "Oi, princesa!"
+    }
    ]
   },
   {
@@ -9506,7 +11021,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "calor",
@@ -9518,6 +11034,11 @@
      "trans": "hot",
      "tags": [],
      "ex": "Hoje está muito calor!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Hoje está muito calor!"
     }
    ]
   },
@@ -9546,7 +11067,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gay",
@@ -9566,7 +11088,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "óbvio",
@@ -9579,7 +11102,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "óbvio",
@@ -9591,6 +11115,11 @@
      "trans": "something that is obvious",
      "tags": [],
      "ex": "Às vezes é preciso dizer o óbvio."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Às vezes é preciso dizer o óbvio."
     }
    ]
   },
@@ -9615,6 +11144,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Reconheceu somente que era um pouco mais bonita que a generalidade das suas collegas.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -9638,7 +11173,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "interesse",
@@ -9655,6 +11191,14 @@
      "trans": "self-interest, especially when pretending to like someone to attain some benefit for oneself",
      "tags": [],
      "ex": "Ela só está consigo por interesse, pois você é rico."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tenho um interesse em música."
+    },
+    {
+     "t": "Ela só está consigo por interesse, pois você é rico."
     }
    ]
   },
@@ -9679,7 +11223,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "atacar",
@@ -9717,6 +11262,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fui atacado por um cão."
+    },
+    {
+     "t": "Este artigo ataca a nova teoria."
+    },
+    {
+     "t": "O prefeito prometeu atacar a pobreza."
+    },
+    {
+     "t": "Perdendo no final do jogo, até a zaga teve que atacar."
+    }
    ]
   },
   {
@@ -9730,7 +11289,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "profissional",
@@ -9743,7 +11303,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "decidir",
@@ -9771,7 +11332,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "anel",
@@ -9802,6 +11364,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "— Peço que me escutem! como sou o unico pobre que aqui está, e como todas as circumstancias são em meu desfavor, podem julgar que fui eu que roubei esse annel.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -9815,7 +11383,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pago",
@@ -9828,7 +11397,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "esperto",
@@ -9846,7 +11416,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "espada",
@@ -9864,7 +11435,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sentado",
@@ -9882,7 +11454,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "descer",
@@ -9895,7 +11468,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "classe",
@@ -9933,7 +11507,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "casado",
@@ -9946,7 +11521,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "casado",
@@ -9959,7 +11535,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aberta",
@@ -9977,7 +11554,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "caro",
@@ -9995,7 +11573,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "leite",
@@ -10026,6 +11605,17 @@
       "colloquial"
      ],
      "ex": "Dá-me o teu leite."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Eu gosto de café com leite e açúcar."
+    },
+    {
+     "t": "Leite integral, leite desnatado."
+    },
+    {
+     "t": "Dá-me o teu leite."
     }
    ]
   },
@@ -10065,7 +11655,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "política",
@@ -10083,7 +11674,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "milhão",
@@ -10101,7 +11693,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "género",
@@ -10134,7 +11727,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "oferta",
@@ -10162,7 +11756,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "teoria",
@@ -10190,7 +11785,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "escuro",
@@ -10202,6 +11798,11 @@
      "trans": "dark",
      "tags": [],
      "ex": "Então continuaram a estudar enquanto o céu lá fora se tornava gradualmente mais escuro."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Então continuaram a estudar enquanto o céu lá fora se tornava gradualmente mais escuro."
     }
    ]
   },
@@ -10215,6 +11816,11 @@
      "trans": "dark",
      "tags": [],
      "ex": "Eu tenho medo do escuro."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Eu tenho medo do escuro."
     }
    ]
   },
@@ -10234,7 +11840,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cadeia",
@@ -10266,6 +11873,14 @@
      "trans": "chain (number of atoms in a series, which combine to form a molecule)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Então, veja, para ficar muito claro, eu acho que se alguém roubar deve ir para a cadeia sendo do PT ou não sendo do PT, sendo católico ou evangélico, sabe?"
+    },
+    {
+     "t": "cadeia montanhosa"
     }
    ]
   },
@@ -10305,6 +11920,20 @@
      "tags": [],
      "ex": "Nunca nos levantamos do fracasso da empresa."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Levante-se do chão!"
+    },
+    {
+     "t": "Vi um homem levantar seu filho que tropeçara."
+    },
+    {
+     "t": "Acordei cedo mas estava tão triste que não levantei."
+    },
+    {
+     "t": "Naquela manhã levantara-se ainda um pouco mais lânguido que do costume, porque passara mal a noite."
+    }
    ]
   },
   {
@@ -10332,6 +11961,20 @@
      "trans": "to become more important (within a group or context)",
      "tags": [],
      "ex": "Seus comentários fizeram-na crescer na política internacional."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Infelizmente, o tumor cresceu bastante."
+    },
+    {
+     "t": "A criança crescerá e tornar-se-á um adulto."
+    },
+    {
+     "t": "A população romana cresceu durante o império."
+    },
+    {
+     "t": "Seus comentários fizeram-na crescer na política internacional."
     }
    ]
   },
@@ -10366,7 +12009,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "via",
@@ -10384,7 +12028,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "imprensa",
@@ -10412,7 +12057,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "uso",
@@ -10435,7 +12081,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "santo",
@@ -10473,7 +12120,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "santo",
@@ -10501,7 +12149,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "Santo",
@@ -10514,7 +12163,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "treta",
@@ -10549,7 +12199,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "noiva",
@@ -10567,7 +12218,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "servir",
@@ -10605,6 +12257,17 @@
      "tags": [],
      "ex": "Martelos servem para as pessoas baterem pregos."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Servi dois anos na Legião Estrangeira."
+    },
+    {
+     "t": "Esse martelo é ruim mas serve."
+    },
+    {
+     "t": "Martelos servem para as pessoas baterem pregos."
+    }
    ]
   },
   {
@@ -10618,7 +12281,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perda",
@@ -10636,7 +12300,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "resultado",
@@ -10648,6 +12313,11 @@
      "trans": "result",
      "tags": [],
      "ex": "Seguindo o conceito de fração, calculamos 1/3 de 900, tendo como resultado a quantidade de 300 livros."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Seguindo o conceito de fração, calculamos 1/3 de 900, tendo como resultado a quantidade de 300 livros."
     }
    ]
   },
@@ -10662,7 +12332,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "militar",
@@ -10675,7 +12346,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "militar",
@@ -10695,7 +12367,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "material",
@@ -10723,6 +12396,14 @@
      "tags": [],
      "ex": "material escolar"
     }
+   ],
+   "corpus": [
+    {
+     "t": "material escolar"
+    },
+    {
+     "t": "material de pesca"
+    }
    ]
   },
   {
@@ -10746,7 +12427,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rede",
@@ -10784,6 +12466,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "A rede de esgotos."
+    }
    ]
   },
   {
@@ -10797,7 +12484,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fantasma",
@@ -10810,7 +12498,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "solução",
@@ -10823,7 +12512,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "beijo",
@@ -10841,7 +12531,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "impedir",
@@ -10864,7 +12555,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pessoalmente",
@@ -10882,7 +12574,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "data",
@@ -10909,6 +12602,17 @@
      ],
      "ex": "Quero comprar esta data."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Qual é sua data de nascimento?"
+    },
+    {
+     "t": "Uma data de coisas."
+    },
+    {
+     "t": "Quero comprar esta data."
+    }
    ]
   },
   {
@@ -10922,7 +12626,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "garrafa",
@@ -10935,7 +12640,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "orgulho",
@@ -10948,7 +12654,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bolo",
@@ -10990,6 +12697,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "a bunch of money"
+    }
    ]
   },
   {
@@ -11018,7 +12730,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fuga",
@@ -11046,6 +12759,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sua fuga da prisão foi bem planejada."
+    }
    ]
   },
   {
@@ -11059,7 +12777,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tecnologia",
@@ -11072,7 +12791,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "peito",
@@ -11102,7 +12822,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "futebol",
@@ -11115,7 +12836,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vinte",
@@ -11128,7 +12850,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vinte",
@@ -11141,7 +12864,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terceiro",
@@ -11154,7 +12878,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terceiro",
@@ -11167,7 +12892,8 @@
      "tags": [],
      "ex": "A dificuldade dos alunos em reconhecer a influência de terceiros no processo de decisão por uma profissão pode ser compreendida por meio da literatura que trata do papel dos genitores na escolha profissional dos filhos."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bilhete",
@@ -11185,7 +12911,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cinema",
@@ -11208,7 +12935,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vento",
@@ -11233,6 +12961,11 @@
      ],
      "ex": "Coloquei a mão no bolso para pegar a carteira, mas só encontrei vento."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Coloquei a mão no bolso para pegar a carteira, mas só encontrei vento."
+    }
    ]
   },
   {
@@ -11246,7 +12979,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "boleia",
@@ -11268,7 +13002,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "quinta",
@@ -11301,7 +13036,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chapéu",
@@ -11338,7 +13074,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chapéu",
@@ -11352,6 +13089,14 @@
       "colloquial"
      ],
      "ex": "Combinei com ele às 16h e chapéu! Não apareceu."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Combinei com ele às 16h e chapéu! Não apareceu."
+    },
+    {
+     "t": "Procurei as chaves por todo o lado. Chapéu!"
     }
    ]
   },
@@ -11383,6 +13128,17 @@
      "tags": [],
      "ex": "Coloque um dedo de açúcar."
     }
+   ],
+   "corpus": [
+    {
+     "t": "adicione quatro dedos de leite"
+    },
+    {
+     "t": "Coloque um dedo de açúcar."
+    },
+    {
+     "t": "Há um dedo de psicologia no atendimento ao cliente."
+    }
    ]
   },
   {
@@ -11405,6 +13161,11 @@
      ],
      "ex": "Esse cara aí é o meu mano"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Esse cara aí é o meu mano"
+    }
    ]
   },
   {
@@ -11419,6 +13180,11 @@
       "informal"
      ],
      "ex": "Mano, assiste esse vídeo que eu te mandei!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Mano, assiste esse vídeo que eu te mandei!"
     }
    ]
   },
@@ -11443,6 +13209,21 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Não mexas nas minhas coisas."
+    },
+    {
+     "t": "Esse filme mexeu comigo."
+    },
+    {
+     "t": "Para de te mexer!"
+    },
+    {
+     "t": "Estava mexendo no meu celular.",
+     "tag": "br"
+    }
    ]
   },
   {
@@ -11464,7 +13245,8 @@
      ],
      "ex": "Hoje em dia pegam um mané qualquer que seja bonitinho, colocam nele um nome qualquer de qualquer artista do passado que ninguém mais se lembra quem é, um nome que tenha uma sonoridade legal, tipo Tony Curtis (o original era Curtis), tascam um repertório popinho estudado minuciosamente em função das preferências de um determinado público em cima do cara, faturam bilhões e depois de uns cinco ou seis anos sucateiam o mané que já tá podre de rico, inchado de tanta bomba e droga, e arrumam outro."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vingança",
@@ -11477,7 +13259,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "dever",
@@ -11505,6 +13288,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Deve chover."
+    }
    ]
   },
   {
@@ -11522,6 +13310,11 @@
      "trans": "homework",
      "tags": [],
      "ex": "Já fizeste os teus deveres?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Já fizeste os teus deveres?"
     }
    ]
   },
@@ -11553,7 +13346,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "porco",
@@ -11578,7 +13372,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "doido",
@@ -11591,7 +13386,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "doido",
@@ -11604,7 +13400,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "raiva",
@@ -11622,7 +13419,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "peso",
@@ -11660,7 +13458,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "treino",
@@ -11680,7 +13479,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "algures",
@@ -11693,7 +13493,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "natural",
@@ -11716,6 +13517,14 @@
      "tags": [],
      "ex": "Água natural"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sou natural de Lisboa."
+    },
+    {
+     "t": "Água natural"
+    }
    ]
   },
   {
@@ -11728,6 +13537,11 @@
      "trans": "to study",
      "tags": [],
      "ex": "Harry estudou-o por um momento."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Harry estudou-o por um momento."
     }
    ]
   },
@@ -11742,7 +13556,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "assistente",
@@ -11755,7 +13570,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "partida",
@@ -11790,6 +13606,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "(obsolete)"
+    }
    ]
   },
   {
@@ -11813,7 +13634,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "maldição",
@@ -11826,7 +13648,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "oeste",
@@ -11839,7 +13662,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corte",
@@ -11877,6 +13701,20 @@
      "tags": [],
      "ex": "corte inglês"
     }
+   ],
+   "corpus": [
+    {
+     "t": "O corte tem de ser preciso."
+    },
+    {
+     "t": "Tenho um corte no meu dedo!"
+    },
+    {
+     "t": "Esse é um corte elegante."
+    },
+    {
+     "t": "Cortes serão necessários para evitar prejuízo."
+    }
    ]
   },
   {
@@ -11895,7 +13733,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sir",
@@ -11908,7 +13747,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aparentemente",
@@ -11926,7 +13766,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "apanhado",
@@ -11949,6 +13790,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ela tem o cabelo apanhado."
+    }
    ]
   },
   {
@@ -11962,7 +13808,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "toque",
@@ -12000,7 +13847,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chegaram",
@@ -12013,7 +13861,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "baile",
@@ -12041,7 +13890,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aeroporto",
@@ -12054,7 +13904,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "poucos",
@@ -12066,6 +13917,14 @@
      "trans": "few (not many things or people)",
      "tags": [],
      "ex": "Sobraram poucos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Sobraram poucos."
+    },
+    {
+     "t": "Poucos ficaram."
     }
    ]
   },
@@ -12080,7 +13939,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mostra",
@@ -12103,6 +13963,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fui a uma mostra de quadros neoclássicos."
+    },
+    {
+     "t": "Sua expressão era uma mostra de sua tristeza."
+    }
    ]
   },
   {
@@ -12115,6 +13983,11 @@
      "trans": "with you (plural)",
      "tags": [],
      "ex": "Convosco meu ser se abraça, e não pareçam delírios procurar cândidos lírios da vossa divina graça."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Convosco meu ser se abraça, e não pareçam delírios procurar cândidos lírios da vossa divina graça."
     }
    ]
   },
@@ -12154,6 +14027,20 @@
      "tags": [],
      "ex": "Há rumores de que ela apresentará o novo reality show."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fui eu que apresentei os noivos."
+    },
+    {
+     "t": "Alguém deve apresentar o enviado ao rei."
+    },
+    {
+     "t": "Ela chegou e logo se apresentou."
+    },
+    {
+     "t": "Apresentamos o novo produto ao mercado."
+    }
    ]
   },
   {
@@ -12186,6 +14073,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ainda falta lixar o batente."
+    }
    ]
   },
   {
@@ -12199,7 +14091,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bocadinho",
@@ -12217,7 +14110,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sacana",
@@ -12246,7 +14140,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sacana",
@@ -12268,7 +14163,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "agradecer",
@@ -12286,7 +14182,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "secretária",
@@ -12304,7 +14201,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "morada",
@@ -12322,6 +14220,11 @@
      "tags": [],
      "ex": "Escreva o seu nome e morada, por favor."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Escreva o seu nome e morada, por favor."
+    }
    ]
   },
   {
@@ -12334,6 +14237,11 @@
      "trans": "internet (an internet connection, internet connectivity, access to the internet.)",
      "tags": [],
      "ex": "Estou sem internet. Ultimamente a minha internet tem estado sempre em baixo."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Estou sem internet. Ultimamente a minha internet tem estado sempre em baixo."
     }
    ]
   },
@@ -12358,6 +14266,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Talvez fosse effeito da cachaça.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -12373,6 +14287,11 @@
      ],
      "ex": "super fixe"
     }
+   ],
+   "corpus": [
+    {
+     "t": "super fixe"
+    }
    ]
   },
   {
@@ -12386,7 +14305,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "patrão",
@@ -12422,7 +14342,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corredor",
@@ -12435,7 +14356,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corredor",
@@ -12452,6 +14374,11 @@
      "trans": "corridor, gallery, aisle",
      "tags": [],
      "ex": "Desobstruam o corredor!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Eu sou corredor."
     }
    ]
   },
@@ -12481,6 +14408,17 @@
      "tags": [],
      "ex": "Eu tenho muitos conhecimentos."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu tenho conhecimento dessa coisa."
+    },
+    {
+     "t": "Eu perdi o conhecimento."
+    },
+    {
+     "t": "Eu tenho muitos conhecimentos."
+    }
    ]
   },
   {
@@ -12494,7 +14432,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ás",
@@ -12517,7 +14456,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aguentar",
@@ -12545,6 +14485,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Não aguento mais!"
+    },
+    {
+     "t": "Ele não aguenta uma piada."
+    },
+    {
+     "t": "Tocou o braço da mulher, apontou o ceo, ficaram os dois algum tempo aguentando a claridade do sol."
+    },
+    {
+     "t": "Temos de aguentar até ao fim."
+    }
    ]
   },
   {
@@ -12558,7 +14512,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aldeia",
@@ -12578,6 +14533,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ó sino da minha aldeia, / Dolente na tarde calma, / Cada tua badalada / Soa dentro da minha alma."
+    }
    ]
   },
   {
@@ -12591,7 +14551,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aberto",
@@ -12604,7 +14565,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aberto",
@@ -12617,7 +14579,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "contrato",
@@ -12630,7 +14593,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gás",
@@ -12663,7 +14627,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sociedade",
@@ -12691,7 +14656,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mata",
@@ -12711,7 +14677,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lar",
@@ -12733,6 +14700,11 @@
      "trans": "the surface of a baking oven",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não há lugar como o nosso lar."
     }
    ]
   },
@@ -12757,7 +14729,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "instante",
@@ -12775,7 +14748,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "leste",
@@ -12788,7 +14762,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "usado",
@@ -12806,7 +14781,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "original",
@@ -12829,7 +14805,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "original",
@@ -12842,7 +14819,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "zangado",
@@ -12855,7 +14833,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vinha",
@@ -12878,7 +14857,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "familiar",
@@ -12896,7 +14876,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "familiar",
@@ -12914,7 +14895,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "parecido",
@@ -12927,7 +14909,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pressa",
@@ -12939,6 +14922,11 @@
      "trans": "hurry; rush; haste",
      "tags": [],
      "ex": "Não tenho nenhuma pressa."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não tenho nenhuma pressa."
     }
    ]
   },
@@ -12968,7 +14956,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ferido",
@@ -12981,7 +14970,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "passaram",
@@ -12994,7 +14984,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "treinador",
@@ -13007,7 +14998,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "anteriormente",
@@ -13025,7 +15017,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cu",
@@ -13055,6 +15048,11 @@
      ],
      "ex": "Essa música é um cu"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Essa música é um cu"
+    }
    ]
   },
   {
@@ -13083,6 +15081,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Near-synonym: reconhecimento"
+    }
    ]
   },
   {
@@ -13106,7 +15109,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "costa",
@@ -13119,7 +15123,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cancro",
@@ -13141,7 +15146,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "obter",
@@ -13153,6 +15159,14 @@
      "trans": "to obtain, get",
      "tags": [],
      "ex": "Ele podia ouvi-la se deslocando para a direita, para obter uma visão desimpedida dele."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele podia ouvi-la se deslocando para a direita, para obter uma visão desimpedida dele."
+    },
+    {
+     "t": "Seguindo o conceito de fração, calculamos 1/3 de 900, tendo como resultado a quantidade de 300 livros. Logo depois, calculamos 1/5 de 300 e obtemos a resposta final, de 60 livros."
     }
    ]
   },
@@ -13172,7 +15186,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "credo",
@@ -13184,6 +15199,11 @@
      "trans": "creed; credo (a religious belief system)",
      "tags": [],
      "ex": "O credo cristão."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O credo cristão."
     }
    ]
   },
@@ -13203,7 +15223,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perfeitamente",
@@ -13216,7 +15237,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "partes",
@@ -13228,6 +15250,11 @@
      "trans": "male genitals; parts",
      "tags": [],
      "ex": "Gosto de sentir uma brisa saudável nas minhas partes, obrigado."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Gosto de sentir uma brisa saudável nas minhas partes, obrigado."
     }
    ]
   },
@@ -13242,7 +15269,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pedaço",
@@ -13267,6 +15295,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Encontrei um pedaço de papel no quarto."
+    }
    ]
   },
   {
@@ -13280,7 +15313,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "opção",
@@ -13293,7 +15327,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sexual",
@@ -13306,7 +15341,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "reino",
@@ -13323,6 +15359,14 @@
      "trans": "kingdom",
      "tags": [],
      "ex": "Os seres humanos pertencem ao reino animal."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Era uma vez uma princesa que vivia num reino longínquo."
+    },
+    {
+     "t": "Os seres humanos pertencem ao reino animal."
     }
    ]
   },
@@ -13346,6 +15390,11 @@
      "trans": "ahead (in time)",
      "tags": [],
      "ex": "daqui em diante"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "daqui em diante"
     }
    ]
   },
@@ -13375,6 +15424,20 @@
      "tags": [],
      "ex": "O balão não é um corpo grave."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sofria de uma doença grave."
+    },
+    {
+     "t": "O som da tuba é mais grave do que o do trombone."
+    },
+    {
+     "t": "O programa tinha um tom grave."
+    },
+    {
+     "t": "O balão não é um corpo grave."
+    }
    ]
   },
   {
@@ -13393,7 +15456,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aspecto",
@@ -13411,7 +15475,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lago",
@@ -13424,7 +15489,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fumar",
@@ -13442,7 +15508,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "crer",
@@ -13455,7 +15522,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pequeno-almoço",
@@ -13477,7 +15545,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "presença",
@@ -13490,7 +15559,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "melhorar",
@@ -13503,7 +15573,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vitória",
@@ -13516,7 +15587,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pesquisa",
@@ -13534,7 +15606,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pertence",
@@ -13546,6 +15619,11 @@
      "trans": "belonging (something physical that is owned)",
      "tags": [],
      "ex": "Não esqueçam de pegar seus pertences após saírem do avião."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não esqueçam de pegar seus pertences após saírem do avião."
     }
    ]
   },
@@ -13582,7 +15660,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "camisa",
@@ -13607,7 +15686,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ficaram",
@@ -13620,7 +15700,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "viajar",
@@ -13656,6 +15737,11 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O aluno viaja quando o professor lhe fala."
+    }
    ]
   },
   {
@@ -13669,7 +15755,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "giro",
@@ -13681,6 +15768,11 @@
      "trans": "rotation, turn (the act of turning around a centre or an axis)",
      "tags": [],
      "ex": "Ele fez um giro de 180 graus."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele fez um giro de 180 graus."
     }
    ]
   },
@@ -13711,6 +15803,20 @@
      "tags": [],
      "ex": "ângulo giro"
     }
+   ],
+   "corpus": [
+    {
+     "t": "O papel de parede é muito giro."
+    },
+    {
+     "t": "Sim, ela é gira."
+    },
+    {
+     "t": "Acho que é uma ideia gira."
+    },
+    {
+     "t": "ângulo giro"
+    }
    ]
   },
   {
@@ -13739,6 +15845,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Em que lhe posso ser útil?"
+    },
+    {
+     "t": "Meu dicionário é muito útil."
+    }
    ]
   },
   {
@@ -13752,7 +15866,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ó",
@@ -13765,7 +15880,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ó",
@@ -13784,6 +15900,11 @@
       "colloquial"
      ],
      "ex": "Ó lá o bugio!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ó Senhor, dai-me forças!"
     }
    ]
   },
@@ -13823,6 +15944,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "massa de pão"
+    },
+    {
+     "t": "massa de bolo"
+    }
    ]
   },
   {
@@ -13847,6 +15976,11 @@
      ],
      "ex": "Aprender línguas é muito massa!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Aprender línguas é muito massa!"
+    }
    ]
   },
   {
@@ -13860,7 +15994,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sofrer",
@@ -13878,7 +16013,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "jamais",
@@ -13890,6 +16026,11 @@
      "trans": "never",
      "tags": [],
      "ex": "Jamais estive na Inglaterra."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Jamais estive na Inglaterra."
     }
    ]
   },
@@ -13919,7 +16060,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vencer",
@@ -13947,6 +16089,20 @@
      "tags": [],
      "ex": "A nossa dívida vence amanhã."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Precisamos vencer a competição."
+    },
+    {
+     "t": "Vencer não é importante."
+    },
+    {
+     "t": "vencer o inimigo"
+    },
+    {
+     "t": "vencer medos"
+    }
    ]
   },
   {
@@ -13960,7 +16116,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "neve",
@@ -13972,6 +16129,11 @@
      "trans": "snow",
      "tags": [],
      "ex": "1902, Fernando Pessoa, Quando ela passa"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "1902, Fernando Pessoa, Quando ela passa"
     }
    ]
   },
@@ -13991,7 +16153,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "escrito",
@@ -14003,6 +16166,14 @@
      "trans": "written",
      "tags": [],
      "ex": "O ábaco foi usado por diversos povos e, até por volta de 1700, foram muito comuns na Europa, quando o cálculo escrito em papel passou a prevalecer."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O ábaco foi usado por diversos povos e, até por volta de 1700, foram muito comuns na Europa, quando o cálculo escrito em papel passou a prevalecer."
+    },
+    {
+     "t": "No portão de entrada está escrito \"Entrance\" em vez de \"Entrada\" e todas as ruas têm nomes em inglês, como \"Flower Lane\" e \"Sunshine Street\"."
     }
    ]
   },
@@ -14032,7 +16203,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "negra",
@@ -14045,7 +16217,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "assalto",
@@ -14068,7 +16241,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alerta",
@@ -14081,7 +16255,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alerta",
@@ -14094,7 +16269,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alerta",
@@ -14107,7 +16283,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sábado",
@@ -14125,7 +16302,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sábado",
@@ -14138,7 +16316,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bairro",
@@ -14151,7 +16330,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "roma",
@@ -14164,7 +16344,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "completo",
@@ -14182,7 +16363,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tratamento",
@@ -14210,7 +16392,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "esquadra",
@@ -14228,7 +16411,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "saí",
@@ -14241,7 +16425,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "farto",
@@ -14264,6 +16449,14 @@
      "tags": [],
      "ex": "Estou farto de isto tudo."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Há um café da manhã farto."
+    },
+    {
+     "t": "Estou farto de isto tudo."
+    }
    ]
   },
   {
@@ -14282,7 +16475,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vazio",
@@ -14320,7 +16514,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "resultar",
@@ -14332,6 +16527,11 @@
      "trans": "to result",
      "tags": [],
      "ex": "A variedade de paisagens, a cultura, a literatura, a arte e a arquitetura, somadas à rica história, resultam em um equilíbrio entre passado e presente."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A variedade de paisagens, a cultura, a literatura, a arte e a arquitetura, somadas à rica história, resultam em um equilíbrio entre passado e presente."
     }
    ]
   },
@@ -14346,6 +16546,14 @@
      "tags": [],
      "ex": "Eis o seu presente. Aproveite."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eis o seu presente. Aproveite."
+    },
+    {
+     "t": "Eis-me aqui!"
+    }
    ]
   },
   {
@@ -14359,7 +16567,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "avançar",
@@ -14382,6 +16591,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Estava andando pela praça e de repente um cachorro avançou em mim",
+     "tag": "br"
+    }
    ]
   },
   {
@@ -14395,7 +16610,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "funeral",
@@ -14413,7 +16629,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "companheiro",
@@ -14431,7 +16648,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "enfrentar",
@@ -14449,7 +16667,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "quieto",
@@ -14472,7 +16691,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "discurso",
@@ -14490,7 +16710,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "liceu",
@@ -14505,7 +16726,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chocolate",
@@ -14523,6 +16745,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O astronauta Jim Bagian, um chocólatra inveterado, conseguiu levar para dentro da Space Shuttle, durante o seu primeiro voo, uma barra de chocolate Mars.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -14535,6 +16763,11 @@
      "trans": "attempt, trial, experiment",
      "tags": [],
      "ex": "tentativa de delito"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "tentativa de delito"
     }
    ]
   },
@@ -14553,6 +16786,11 @@
      "trans": "a large, multi-story building with rooms or floor belonging to different people or used for different purposes, such as an apartment block or skyscraper",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vi os prédios subindo, a mata acabando / Aproveitei e arranhei o céu"
     }
    ]
   },
@@ -14582,7 +16820,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "saltar",
@@ -14612,7 +16851,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "equipamento",
@@ -14640,7 +16880,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bolsa",
@@ -14668,7 +16909,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "génio",
@@ -14701,7 +16943,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "começaram",
@@ -14714,7 +16957,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "caraças",
@@ -14727,7 +16971,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "explodir",
@@ -14755,7 +17000,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "amar",
@@ -14773,6 +17019,14 @@
      "tags": [],
      "ex": "Pobre homem, em todos esses oitenta anos nunca amou de verdade."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Graças a você, agora nos conhecemos, nos casamos e nos amamos."
+    },
+    {
+     "t": "Pobre homem, em todos esses oitenta anos nunca amou de verdade."
+    }
    ]
   },
   {
@@ -14786,7 +17040,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "muda",
@@ -14804,7 +17059,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "violência",
@@ -14822,7 +17078,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "guardar",
@@ -14850,7 +17107,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "desaparecido",
@@ -14863,7 +17121,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "montanha",
@@ -14876,7 +17135,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fraco",
@@ -14901,6 +17161,11 @@
      ],
      "ex": "Minha irmã é fraca para bebida. Ela ficou bêbada com duas latas de cerveja."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Minha irmã é fraca para bebida. Ela ficou bêbada com duas latas de cerveja."
+    }
    ]
   },
   {
@@ -14919,7 +17184,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "topo",
@@ -14942,7 +17208,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "prémio",
@@ -14960,7 +17227,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "anjo",
@@ -14978,6 +17246,14 @@
      "tags": [],
      "ex": "A Luiza é um anjo"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Entonces o Anjo lhe diſſe: Maria, naõ temas […]"
+    },
+    {
+     "t": "A Luiza é um anjo"
+    }
    ]
   },
   {
@@ -14990,6 +17266,12 @@
      "trans": "rain",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A chuva cai lá fora / Você vai se molhar / Já lhe pedi, não vai embora / Espere o tempo melhorar / Até a própria natureza, / Está pedindo pra você ficar",
+     "tag": "br"
     }
    ]
   },
@@ -15009,7 +17291,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bêbado",
@@ -15027,7 +17310,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "venda",
@@ -15050,7 +17334,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "apaixonado",
@@ -15068,7 +17353,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ladrão",
@@ -15086,7 +17372,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ladrão",
@@ -15101,7 +17388,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ciência",
@@ -15124,7 +17412,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "deitar",
@@ -15162,6 +17451,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "deitar fora"
+    }
    ]
   },
   {
@@ -15195,6 +17489,14 @@
      ],
      "ex": "Tem cuidado, ou levas já um pão"
     }
+   ],
+   "corpus": [
+    {
+     "t": "O Amor, meu amigo, é o pão divino das almas, o pábulo sublime dos corações."
+    },
+    {
+     "t": "Tem cuidado, ou levas já um pão"
+    }
    ]
   },
   {
@@ -15208,7 +17510,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "comunidade",
@@ -15238,7 +17541,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pânico",
@@ -15253,7 +17557,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pânico",
@@ -15266,7 +17571,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "social",
@@ -15306,6 +17612,11 @@
      ],
      "ex": "Elevador social."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Elevador social."
+    }
    ]
   },
   {
@@ -15322,7 +17633,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "casal",
@@ -15361,6 +17673,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O casal perfeito não existe."
+    },
+    {
+     "t": "Tenho um casal de gêmeos, de 12 anos, e meu garoto viveu a mesma situação."
+    }
    ]
   },
   {
@@ -15379,7 +17699,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "orgulhoso",
@@ -15392,7 +17713,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "consciência",
@@ -15430,6 +17752,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Cumprida a obrigação, Fabiano levantou-se com a consciencia tranquilla e marchou para casa.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -15458,7 +17786,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "comportamento",
@@ -15476,7 +17805,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "arriscar",
@@ -15504,7 +17834,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "exame",
@@ -15522,6 +17853,11 @@
      "tags": [],
      "ex": "fazer exame de sangue"
     }
+   ],
+   "corpus": [
+    {
+     "t": "fazer exame de sangue"
+    }
    ]
   },
   {
@@ -15535,7 +17871,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "autorização",
@@ -15553,7 +17890,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "castelo",
@@ -15566,7 +17904,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lavar",
@@ -15579,7 +17918,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "disposto",
@@ -15602,6 +17942,17 @@
      "tags": [],
      "ex": "Os livros estão dispostos em ordem alfabética."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Você está disposto a ir à praia?"
+    },
+    {
+     "t": "Desculpe mas não estou muito bem disposto."
+    },
+    {
+     "t": "Os livros estão dispostos em ordem alfabética."
+    }
    ]
   },
   {
@@ -15614,6 +17965,11 @@
      "trans": "zero",
      "tags": [],
      "ex": "Vieram zero pessoas."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vieram zero pessoas."
     }
    ]
   },
@@ -15643,7 +17999,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "digamos",
@@ -15655,6 +18012,11 @@
      "trans": "let's say (used to introduce an example, supposition or hypothesis)",
      "tags": [],
      "ex": "Digamos que ele aceite seu pedido... Isso te faria feliz?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Digamos que ele aceite seu pedido... Isso te faria feliz?"
     }
    ]
   },
@@ -15674,6 +18036,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Você nunca me deu a impressão de gostar tanto assim da matéria."
+    }
    ]
   },
   {
@@ -15687,7 +18054,8 @@
      "tags": [],
      "ex": "A música é tão importante que existe até categoria de premiação no Oscar, pois a mesma ajuda a criar todo o clima que vemos nos filmes[,] seja este um filme divertido e infantil, ou seja,^([sic]) aquele terror super hiper mega blaster assustador."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "assustador",
@@ -15700,7 +18068,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "piloto",
@@ -15738,7 +18107,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "princípio",
@@ -15756,7 +18126,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vírus",
@@ -15774,7 +18145,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "passeio",
@@ -15802,6 +18174,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Vamos dar um passeio?"
+    }
    ]
   },
   {
@@ -15815,7 +18192,8 @@
      "tags": [],
      "ex": "Com sua parte do dinheiro, resolveu contar a sua mãe que estaria de mudança para Nova Iorque. Lá estudaria, trabalharia com os produtores de filmes. Sempre desejara viver numa grande metrópole mundial."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mundial",
@@ -15828,7 +18206,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "intenção",
@@ -15841,7 +18220,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "curso",
@@ -15864,7 +18244,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "domingo",
@@ -15877,7 +18258,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "domingo",
@@ -15890,7 +18272,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "avisar",
@@ -15913,6 +18296,18 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Aquele carro está pegando fogo! Alguém avisa o motorista!",
+     "tag": "br"
+    },
+    {
+     "t": "Se ela chegar, avise o diretor, por favor."
+    },
+    {
+     "t": "Se precisar de mais papel verde, me avisa."
+    }
    ]
   },
   {
@@ -15926,7 +18321,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "golpe",
@@ -15961,6 +18357,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O pivete lhe deu um golpe no rosto."
+    },
+    {
+     "t": "A derrota foi um golpe."
+    },
+    {
+     "t": "A vitória foi um golpe de sorte."
+    },
+    {
+     "t": "O empresário deu um golpe na própria empresa."
+    }
    ]
   },
   {
@@ -15989,7 +18399,8 @@
      "tags": [],
      "ex": "Quando eu digitei as notas percebi que tem coisas muito incoerentes. Alunos frequentes que ficaram com muitas faltas em uma única matéria. Aluno com o boletim inteiro de notas vermelhas, mas com uma nota dez em uma matéria. Professor que deu nota oito para sala inteira, até para os alunos que não frequentaram as aulas. Tem cada coisa absurda que a gente vai ter que consertar agora."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entrevista",
@@ -16007,7 +18418,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "armadilha",
@@ -16025,7 +18437,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "recentemente",
@@ -16038,7 +18451,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entretanto",
@@ -16051,7 +18465,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entretanto",
@@ -16063,6 +18478,11 @@
      "trans": "meantime",
      "tags": [],
      "ex": "no entretanto"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "no entretanto"
     }
    ]
   },
@@ -16077,7 +18497,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "queijo",
@@ -16090,7 +18511,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "truque",
@@ -16113,7 +18535,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "roubo",
@@ -16141,7 +18564,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "juntar",
@@ -16164,7 +18588,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "francês",
@@ -16176,6 +18601,14 @@
      "trans": "French (of or relating to France)",
      "tags": [],
      "ex": "Luiza lia um romance francez; ou tocava piano; ou pensava indignada nos beijos que lhe dei no pescoço."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Luiza lia um romance francez; ou tocava piano; ou pensava indignada nos beijos que lhe dei no pescoço."
+    },
+    {
+     "t": "Alda contou para o grupo que a tia Belinha tinha ido sozinha a Paris e lá conhecera um conde francês, ligeiramente arruinado e ligeiramente maluco, com quem tivera um tórrido caso de verão."
     }
    ]
   },
@@ -16195,7 +18628,8 @@
      "tags": [],
      "ex": "O moço estudante de medicina dava lições de francez e inglez nas horas vagas, para augmentar os minguados recursos da familia."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "imbecil",
@@ -16208,7 +18642,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "compreender",
@@ -16231,6 +18666,21 @@
      "tags": [],
      "ex": "Esta lista compreende todos os ingredientes para o bolo de aniversário."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu compreendo seus motivos, mas eles não justificam seus atos."
+    },
+    {
+     "t": "A Cigana, parecendo comprehender aquellas palavras, endireitou-se, e pousando as patas no collo da menina, beijou-lhe carinhosamente as mãos...",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "Meus pais nunca me compreenderam."
+    },
+    {
+     "t": "Esta lista compreende todos os ingredientes para o bolo de aniversário."
+    }
    ]
   },
   {
@@ -16244,7 +18694,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "necessidade",
@@ -16257,7 +18708,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "particular",
@@ -16284,6 +18736,11 @@
      "trans": "particular; distinguished; exceptional",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não devia estar num quarto particular?"
     }
    ]
   },
@@ -16318,6 +18775,17 @@
      "tags": [],
      "ex": "Londres foi a sede dos Jogos Olímpicos de 2012."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Não tenho sede."
+    },
+    {
+     "t": "Traga-me um copo d’água / Tenho sede"
+    },
+    {
+     "t": "Sede de vingança."
+    }
    ]
   },
   {
@@ -16340,6 +18808,11 @@
      "trans": "skyscraper",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A torre oferece uma vista panorâmica da cidade."
     }
    ]
   },
@@ -16369,7 +18842,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "palco",
@@ -16387,7 +18861,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gelado",
@@ -16410,7 +18885,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gelado",
@@ -16425,7 +18901,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "quadro",
@@ -16463,7 +18940,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mataram",
@@ -16476,7 +18954,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cem",
@@ -16488,6 +18967,11 @@
      "trans": "one hundred (100)",
      "tags": [],
      "ex": "Vieram cem pessoas."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vieram cem pessoas."
     }
    ]
   },
@@ -16507,6 +18991,15 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Tirei um cem na prova."
+    },
+    {
+     "t": "Está vendo aquele cem?",
+     "tag": "br"
+    }
    ]
   },
   {
@@ -16520,7 +19013,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "extra",
@@ -16543,7 +19037,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "carga",
@@ -16571,6 +19066,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "A bateria tem carga suficiente."
+    }
    ]
   },
   {
@@ -16584,7 +19084,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "lição",
@@ -16612,7 +19113,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vigilância",
@@ -16635,7 +19137,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chance",
@@ -16653,7 +19156,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fila",
@@ -16676,7 +19180,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "vestir",
@@ -16709,6 +19214,20 @@
      "tags": [],
      "ex": "A empresária precisa estar vestida de seda."
     }
+   ],
+   "corpus": [
+    {
+     "t": "A testemunha disse que o ladrão vestia um boné e uma camisa comprida."
+    },
+    {
+     "t": "Vesti uma camiseta antes de sair."
+    },
+    {
+     "t": "Vista-se logo senão nos atrasaremos."
+    },
+    {
+     "t": "Ela vestiu o filho para que ele não passasse frio."
+    }
    ]
   },
   {
@@ -16727,7 +19246,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "claramente",
@@ -16740,7 +19260,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "escondido",
@@ -16758,7 +19279,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "parvo",
@@ -16778,6 +19300,14 @@
      ],
      "ex": "Como é que consegues ser tão parvo?"
     }
+   ],
+   "corpus": [
+    {
+     "t": "veia safena parva"
+    },
+    {
+     "t": "Como é que consegues ser tão parvo?"
+    }
    ]
   },
   {
@@ -16791,7 +19321,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "garota",
@@ -16804,7 +19335,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "humanidade",
@@ -16827,7 +19359,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "superior",
@@ -16850,7 +19383,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "superior",
@@ -16868,7 +19402,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "geral",
@@ -16890,6 +19425,11 @@
      "trans": "having supreme rank",
      "tags": [],
      "ex": "governador-geral"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "governador-geral"
     }
    ]
   },
@@ -16914,7 +19454,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "geral",
@@ -16929,6 +19470,11 @@
       "slang"
      ],
      "ex": "Geral tá contra isso."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Geral tá contra isso."
     }
    ]
   },
@@ -16945,6 +19491,11 @@
       "slang"
      ],
      "ex": "Tem gente morrendo geral!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tem gente morrendo geral!"
     }
    ]
   },
@@ -16974,7 +19525,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "piscina",
@@ -16999,7 +19551,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "oferecer",
@@ -17022,7 +19575,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "federal",
@@ -17050,6 +19604,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "República Federal da Alemanha"
+    },
+    {
+     "t": "No Brasil, escolas públicas são geralmente geridas pelos governos estaduais e municipais, enquanto universidades públicas costumam ser geridas pelo Governo Federal."
+    }
    ]
   },
   {
@@ -17067,6 +19629,11 @@
      "trans": "a Brazilian medicinal plant of the Asteraceae family",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O caso envolveu a ação dos federais."
     }
    ]
   },
@@ -17096,7 +19663,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "óculos",
@@ -17109,7 +19677,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ensinar",
@@ -17122,7 +19691,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ferida",
@@ -17134,6 +19704,11 @@
      "trans": "wound; injury",
      "tags": [],
      "ex": "Dominado de novos pensamentos, senti que a linfa do verdadeiro amor começava a brotar das feridas benéficas que a realidade me abrira no coração."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Dominado de novos pensamentos, senti que a linfa do verdadeiro amor começava a brotar das feridas benéficas que a realidade me abrira no coração."
     }
    ]
   },
@@ -17173,6 +19748,20 @@
      "tags": [],
      "ex": "Troque-se! / Troca-te!"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Quero trocar meu carro por um novo."
+    },
+    {
+     "t": "Precisamos trocar as lâmpadas queimadas."
+    },
+    {
+     "t": "Troque de roupa."
+    },
+    {
+     "t": "Quero trocar de carro."
+    }
    ]
   },
   {
@@ -17186,7 +19775,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "inútil",
@@ -17199,7 +19789,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "basicamente",
@@ -17211,6 +19802,11 @@
      "trans": "basically",
      "tags": [],
      "ex": "Basicamente é a mesma coisa."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Basicamente é a mesma coisa."
     }
    ]
   },
@@ -17225,7 +19821,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "diversão",
@@ -17253,7 +19850,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "assinar",
@@ -17271,7 +19869,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "armário",
@@ -17301,7 +19900,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "privado",
@@ -17324,7 +19924,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "privado",
@@ -17341,6 +19942,11 @@
      "trans": "private chatroom; (collectively) private messages",
      "tags": [],
      "ex": "Discutimos no privado."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Discutimos no privado."
     }
    ]
   },
@@ -17360,6 +19966,17 @@
      "tags": [],
      "ex": "Os gregos adoravam a deusa Atena."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu adoro artes clássicas!"
+    },
+    {
+     "t": "A menina adora-o."
+    },
+    {
+     "t": "Os gregos adoravam a deusa Atena."
+    }
    ]
   },
   {
@@ -17373,7 +19990,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "deserto",
@@ -17391,7 +20009,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "possibilidade",
@@ -17404,7 +20023,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "incêndio",
@@ -17422,7 +20042,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "impressionante",
@@ -17435,7 +20056,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cumprir",
@@ -17463,6 +20085,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Você deveria cumprir com o seu dever."
+    },
+    {
+     "t": "Você cumpriu os seus objetivos?"
+    }
    ]
   },
   {
@@ -17481,6 +20111,14 @@
      "tags": [],
      "ex": "agência imobiliária"
     }
+   ],
+   "corpus": [
+    {
+     "t": "agência imobiliária"
+    },
+    {
+     "t": "agência funerária"
+    }
    ]
   },
   {
@@ -17494,7 +20132,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "felicidade",
@@ -17517,7 +20156,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "poderoso",
@@ -17530,7 +20170,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "partilhar",
@@ -17555,7 +20196,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "localização",
@@ -17578,7 +20220,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "regra",
@@ -17590,6 +20233,11 @@
      "trans": "rule (a regulation, law or guideline)",
      "tags": [],
      "ex": "Não há uma regra geral."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não há uma regra geral."
     }
    ]
   },
@@ -17604,7 +20252,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mentiroso",
@@ -17617,7 +20266,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "suicídio",
@@ -17630,7 +20280,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "corda",
@@ -17653,7 +20304,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "menor",
@@ -17671,6 +20323,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Laranjas são menores que melancias."
+    },
+    {
+     "t": "O Sergipe é o menor estado do Brasil."
+    },
+    {
+     "t": "um inimigo menor"
+    }
    ]
   },
   {
@@ -17684,7 +20347,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "choque",
@@ -17717,7 +20381,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "virar",
@@ -17755,6 +20420,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "No semáforo, vire à esquerda."
+    },
+    {
+     "t": "Cheguei a segui-la por um tempo, mas, quando ela virou para mim, eu já não sabia o que dizer."
+    },
+    {
+     "t": "E aí, vira uma dessa comigo?"
+    },
+    {
+     "t": "Ela ter aparecido na TV fez com que ela virasse uma espécie de subcelebridade entre os amigos."
+    }
    ]
   },
   {
@@ -17771,7 +20450,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "álcool",
@@ -17793,6 +20473,21 @@
      "trans": "alcohol (any of a class of organic compounds containing a hydroxyl functional group)",
      "tags": [],
      "ex": "Etanol e metanol são álcoois."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Esterilizei os instrumentos com álcool."
+    },
+    {
+     "t": "O álcool destruiu-lhe a vida."
+    },
+    {
+     "t": "Succede á esta embriaguez do amor o mesmo que á embriaguez do alcool.",
+     "tag": "pre-reform"
+    },
+    {
+     "t": "— […] Arranjou uma casa muito bonita ao pé de Richmond... Mas está muito avelhado, queixa-se muito do figado. E, desgraçadamente, carrega de mais nos alcools. É uma pena!"
     }
    ]
   },
@@ -17817,7 +20512,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fase",
@@ -17847,6 +20543,11 @@
      ],
      "ex": "Tô com dificuldade de passar essa fase."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Tô com dificuldade de passar essa fase."
+    }
    ]
   },
   {
@@ -17865,7 +20566,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "partiu",
@@ -17880,6 +20582,11 @@
       "informal"
      ],
      "ex": "Partiu cinema!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Partiu cinema!"
     }
    ]
   },
@@ -17909,6 +20616,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Tenho pouco dinheiro na carteira."
+    },
+    {
+     "t": "Você já tirou carteira?"
+    }
    ]
   },
   {
@@ -17922,7 +20637,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "famoso",
@@ -17940,6 +20656,11 @@
      "tags": [],
      "ex": "Não são famosas as finanças do PCP: entre 2012 e 2015, o “resultado financeiro decorrente da actividade e funcionamento do partido apresenta um valor médio anual negativo de cerca de 1 milhão e 82 mil euros, o que representa um agravamento que não permitiu ultrapassar a situação financeira insustentável identificada no último congresso”."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Sou excepcionalmente famoso."
+    }
    ]
   },
   {
@@ -17953,7 +20674,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "atender",
@@ -17986,7 +20708,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "rock",
@@ -17999,7 +20722,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "passagem",
@@ -18027,7 +20751,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gordo",
@@ -18052,6 +20777,11 @@
      ],
      "ex": "leio gordo"
     }
+   ],
+   "corpus": [
+    {
+     "t": "leio gordo"
+    }
    ]
   },
   {
@@ -18065,7 +20795,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cura",
@@ -18083,7 +20814,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "demónio",
@@ -18106,7 +20838,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "madame",
@@ -18124,7 +20857,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "revisão",
@@ -18137,7 +20871,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sentar",
@@ -18181,6 +20916,11 @@
      ],
      "ex": "Oi, na minha casa tu senta na pica / E tu dá uma rebolada"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Oi, na minha casa tu senta na pica / E tu dá uma rebolada"
+    }
    ]
   },
   {
@@ -18209,6 +20949,11 @@
      "tags": [],
      "ex": "Ganhei porque veio na minha mão a carta mais roubada do jogo."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Ganhei porque veio na minha mão a carta mais roubada do jogo."
+    }
    ]
   },
   {
@@ -18227,6 +20972,14 @@
      "tags": [],
      "ex": "Na minha idade, um homem deve se preocupar não com o seu corpo mas com o seu bolso."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Este casaco não tem bolsos."
+    },
+    {
+     "t": "Na minha idade, um homem deve se preocupar não com o seu corpo mas com o seu bolso."
+    }
    ]
   },
   {
@@ -18239,6 +20992,11 @@
      "trans": "sufficiently",
      "tags": [],
      "ex": "Não posso enfatizar suficientemente o perigo da presente situação [...]"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não posso enfatizar suficientemente o perigo da presente situação [...]"
     }
    ]
   },
@@ -18258,7 +21016,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "esquisito",
@@ -18270,6 +21029,11 @@
      "trans": "weirdo (strange person)",
      "tags": [],
      "ex": "Virou uma simples discussão entre crianças. Nomura é um esquisito. Foi o que eu pensei. Não adianta responder a sério para um esquisito."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Virou uma simples discussão entre crianças. Nomura é um esquisito. Foi o que eu pensei. Não adianta responder a sério para um esquisito."
     }
    ]
   },
@@ -18289,7 +21053,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "identidade",
@@ -18302,7 +21067,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "uau",
@@ -18315,7 +21081,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "uau",
@@ -18333,7 +21100,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ouviram",
@@ -18346,7 +21114,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "telhado",
@@ -18359,7 +21128,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "proposta",
@@ -18372,7 +21142,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "campanha",
@@ -18390,7 +21161,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "secreto",
@@ -18403,7 +21175,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "secreto",
@@ -18418,6 +21191,11 @@
      ],
      "ex": "secretos de porco preto com laranja"
     }
+   ],
+   "corpus": [
+    {
+     "t": "secretos de porco preto com laranja"
+    }
    ]
   },
   {
@@ -18431,7 +21209,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "página",
@@ -18454,7 +21233,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ambulância",
@@ -18467,7 +21247,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fechado",
@@ -18485,7 +21266,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fechado",
@@ -18498,7 +21280,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "fechado",
@@ -18511,7 +21294,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "século",
@@ -18523,6 +21307,12 @@
      "trans": "century (time)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "século XXI",
+     "tag": "pre-reform"
     }
    ]
   },
@@ -18542,7 +21332,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "identificação",
@@ -18555,7 +21346,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ferro",
@@ -18599,6 +21391,11 @@
      ],
      "ex": "Carregava um ferro em uma de suas mãos / Apertou o gatilho, sem dar qualquer explicação"
     }
+   ],
+   "corpus": [
+    {
+     "t": "Carregava um ferro em uma de suas mãos / Apertou o gatilho, sem dar qualquer explicação"
+    }
    ]
   },
   {
@@ -18612,7 +21409,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "motor",
@@ -18630,7 +21428,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "senador",
@@ -18643,7 +21442,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "chateado",
@@ -18656,7 +21456,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "humor",
@@ -18684,6 +21485,17 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "de bom humor"
+    },
+    {
+     "t": "de mau humor"
+    },
+    {
+     "t": "Nuno Leal Maia é um grande amigo dos amigos. Quem já conviveu ou convive com ele sabe da sua personalidade alegre e descontraída, sem estrelismo, que cativa as pessoas com o seu bom humor constante."
+    }
    ]
   },
   {
@@ -18702,6 +21514,14 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Olho-Tonto, você sabe que isso é nojento, não sabe?"
+    },
+    {
+     "t": "— O mercado da esquina era nojento. Tinha gente de pé do lado de fora comendo manga e jogando os caroços no chão."
+    }
    ]
   },
   {
@@ -18715,7 +21535,8 @@
      "tags": [],
      "ex": "Um poeta pode acordar no meio da noite e escrever belo poema — basta inspiração! Um pintor pintar um quadro em minutos ou anos, como sentir melhor. Mas artistas de artes coletivas não podem convocar espectadores às três da madrugada, alegando que só nesse momento sentem que baixou o santo."
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mínimo",
@@ -18728,7 +21549,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "mínimo",
@@ -18746,7 +21568,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "urso",
@@ -18786,7 +21609,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terreno",
@@ -18804,7 +21628,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "terreno",
@@ -18832,7 +21657,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "experimentar",
@@ -18860,7 +21686,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "permitir",
@@ -18893,6 +21720,12 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Deus não havia de permittir outra desgraça.",
+     "tag": "pre-reform"
+    }
    ]
   },
   {
@@ -18916,6 +21749,14 @@
      "tags": [],
      "ex": "Foi uma brincadeira."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Era uma brincadeira de criança."
+    },
+    {
+     "t": "Foi uma brincadeira."
+    }
    ]
   },
   {
@@ -18931,7 +21772,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "canto",
@@ -18969,7 +21811,8 @@
      "tags": [],
      "ex": "Os quatro cantos do mundo"
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "canal",
@@ -18997,7 +21840,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "van",
@@ -19012,7 +21856,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "quartos",
@@ -19027,7 +21872,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "atravessar",
@@ -19065,7 +21911,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bruxa",
@@ -19083,7 +21930,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sinceramente",
@@ -19096,7 +21944,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sofá",
@@ -19109,7 +21958,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "episódio",
@@ -19122,7 +21972,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "solo",
@@ -19140,7 +21991,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "perante",
@@ -19163,6 +22015,11 @@
      "tags": [],
      "ex": "Perante a avalanche de turistas nos últimos anos, há quem tema que as grandes cidades portuguesas estejam a ficar pequenas para tantos visitantes."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Perante a avalanche de turistas nos últimos anos, há quem tema que as grandes cidades portuguesas estejam a ficar pequenas para tantos visitantes."
+    }
    ]
   },
   {
@@ -19181,7 +22038,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "regresso",
@@ -19194,7 +22052,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "convidado",
@@ -19207,7 +22066,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "disco",
@@ -19235,7 +22095,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alegria",
@@ -19258,7 +22119,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ilegal",
@@ -19271,7 +22133,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "parado",
@@ -19289,6 +22152,11 @@
      "tags": [],
      "ex": "Não deixe a bicicleta parada."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Não deixe a bicicleta parada."
+    }
    ]
   },
   {
@@ -19302,7 +22170,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "governador",
@@ -19315,7 +22184,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "coma",
@@ -19355,7 +22225,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "permissão",
@@ -19383,7 +22254,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "criminoso",
@@ -19396,7 +22268,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "criminoso",
@@ -19409,7 +22282,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "correio",
@@ -19422,7 +22296,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gigante",
@@ -19435,7 +22310,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "gigante",
@@ -19458,7 +22334,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "confortável",
@@ -19471,7 +22348,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acordado",
@@ -19483,6 +22361,11 @@
      "trans": "awake; conscious; up; awakened; woken",
      "tags": [],
      "ex": "Não quero mais dormir do seu lado / Prefiro ficar acordado"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não quero mais dormir do seu lado / Prefiro ficar acordado"
     }
    ]
   },
@@ -19526,7 +22409,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "estragar",
@@ -19549,6 +22433,20 @@
      "tags": [],
      "ex": "Estas laranjas estragaram-se."
     }
+   ],
+   "corpus": [
+    {
+     "t": "As chuvas estragaram a colheita."
+    },
+    {
+     "t": "Você estragou o meu computador!"
+    },
+    {
+     "t": "A chuva de granizo que deu ontem estragou a porcaria do telhado."
+    },
+    {
+     "t": "Ele não estraga nada."
+    }
    ]
   },
   {
@@ -19562,7 +22460,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "facilmente",
@@ -19574,6 +22473,11 @@
      "trans": "easily",
      "tags": [],
      "ex": "Boêmio, falante, amigo do copo e das noitadas, folgazão e mulherengo, com todos convivia facilmente, mas suas presepadas por vezes pesavam demais e deixavam ressentimentos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Boêmio, falante, amigo do copo e das noitadas, folgazão e mulherengo, com todos convivia facilmente, mas suas presepadas por vezes pesavam demais e deixavam ressentimentos."
     }
    ]
   },
@@ -19613,7 +22517,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ena",
@@ -19626,7 +22531,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "tripulação",
@@ -19639,7 +22545,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "queda",
@@ -19677,6 +22584,20 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "O orgulho antecede a queda."
+    },
+    {
+     "t": "Houve uma queda de temperatura depois da chuva."
+    },
+    {
+     "t": "Como aconteceu a queda do avião?"
+    },
+    {
+     "t": "A garota não tinha queda para música."
+    }
    ]
   },
   {
@@ -19690,7 +22611,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "alarme",
@@ -19708,7 +22630,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "pó",
@@ -19733,6 +22656,14 @@
      ],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "leite em pó"
+    },
+    {
+     "t": "A velha mesa estava coberta de pó."
+    }
    ]
   },
   {
@@ -19751,7 +22682,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "Santa",
@@ -19764,7 +22696,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "milagre",
@@ -19782,7 +22715,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cheque",
@@ -19795,7 +22729,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "teatro",
@@ -19828,7 +22763,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "capacidade",
@@ -19841,7 +22777,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "entrega",
@@ -19869,7 +22806,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "período",
@@ -19899,7 +22837,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "estômago",
@@ -19911,6 +22850,11 @@
      "trans": "stomach (organ that stores food)",
      "tags": [],
      "ex": "As comidas eram optimas, respondi, mas o estomago e a cabeça não me iam bem. O Dr. Liberato indicou um remedio."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As comidas eram optimas, respondi, mas o estomago e a cabeça não me iam bem. O Dr. Liberato indicou um remedio."
     }
    ]
   },
@@ -19930,7 +22874,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "adorável",
@@ -19943,7 +22888,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acampamento",
@@ -19955,6 +22901,11 @@
      "trans": "camp",
      "tags": [],
      "ex": "O barulho no acampamento tinha mudado."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O barulho no acampamento tinha mudado."
     }
    ]
   },
@@ -19981,7 +22932,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cela",
@@ -19999,7 +22951,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "moda",
@@ -20031,6 +22984,14 @@
      "trans": "press that specializes in clothing, garments, types of fabrics and sewing, styling, art history, aesthetics, and design",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As minissaias voltaram à moda."
+    },
+    {
+     "t": "Bacalhau à moda da casa."
     }
    ]
   },
@@ -20065,6 +23026,20 @@
      "tags": [],
      "ex": "Enganaram-se."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Não o engane."
+    },
+    {
+     "t": "As aparências enganam."
+    },
+    {
+     "t": "Pensei que esse livro seria bom, mas enganei-me."
+    },
+    {
+     "t": "Enganaram-se."
+    }
    ]
   },
   {
@@ -20098,7 +23073,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "madeira",
@@ -20111,7 +23087,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "garganta",
@@ -20149,7 +23126,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "acusação",
@@ -20162,7 +23140,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ambiente",
@@ -20175,7 +23154,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "ambiente",
@@ -20192,6 +23172,11 @@
      "trans": "scenery, atmosphere",
      "tags": [],
      "ex": "Gosto do ambiente deste restaurante."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Gosto do ambiente deste restaurante."
     }
    ]
   },
@@ -20211,7 +23196,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bravo",
@@ -20249,6 +23235,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Fico bravo quando você entra sem bater."
+    }
    ]
   },
   {
@@ -20269,7 +23260,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "bravo",
@@ -20281,6 +23273,11 @@
      "trans": "bravo! well done!",
      "tags": [],
      "ex": "Bravo! Você acertou!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Bravo! Você acertou!"
     }
    ]
   },
@@ -20300,7 +23297,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "assustado",
@@ -20318,7 +23316,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "libertar",
@@ -20331,7 +23330,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "cave",
@@ -20344,7 +23344,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "aumentar",
@@ -20361,6 +23362,11 @@
      "trans": "to increase, augment (cause something to become larger)",
      "tags": [],
      "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O gado augmentava, o serviço ia bem, mas o proprietario descompunha o vaqueiro."
     }
    ]
   },
@@ -20390,7 +23396,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "casada",
@@ -20403,7 +23410,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "reserva",
@@ -20441,7 +23449,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "erva",
@@ -20478,7 +23487,8 @@
      ],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "retirar",
@@ -20516,6 +23526,11 @@
      "tags": [],
      "ex": ""
     }
+   ],
+   "corpus": [
+    {
+     "t": "Eu retiro o que disse"
+    }
    ]
   },
   {
@@ -20529,7 +23544,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "promessa",
@@ -20552,6 +23568,14 @@
      "tags": [],
      "ex": "O vento forte indicava a promessa de chuva."
     }
+   ],
+   "corpus": [
+    {
+     "t": "Os colonos foram às Américas com a promessa de uma vida nova."
+    },
+    {
+     "t": "O vento forte indicava a promessa de chuva."
+    }
    ]
   },
   {
@@ -20565,7 +23589,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "versão",
@@ -20603,7 +23628,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "T",
@@ -20616,7 +23642,8 @@
      "tags": [],
      "ex": ""
     }
-   ]
+   ],
+   "corpus": []
   },
   {
    "term": "sorriso",
@@ -20628,6 +23655,11 @@
      "trans": "smile (a happy face expression using mouth, but without producing voice)",
      "tags": [],
      "ex": "Então o sorriso reapareceu em seu rosto [...]"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Então o sorriso reapareceu em seu rosto [...]"
     }
    ]
   }

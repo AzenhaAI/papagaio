@@ -93,6 +93,30 @@ const isInflection = (sense) =>
 
 const words = new Map();
 
+// Real sentences from Wiktionary's quotations, kept even when their spelling
+// predates the 1911 reform — a learner reading Eça de Queirós will meet exactly
+// these forms, so they belong in the article as a corpus, labelled, rather
+// than in the bin. What still goes: non-Latin homoglyphs and empty strings.
+const OLD_SPELLING = /(bb|cc|dd|ff|gg|hh|jj|kk|ll|mm|nn|pp|qq|tt|vv|ww|xx|zz|ph|\bquasi\b|\belle\b|\baquelle\b)/i;
+const BR_GERUND = /\b(est(á|ou|ava|ão|amos)|anda|ficou|fica|vem|vai)\s+\w+[aei]ndo\b/i;
+
+function corpusOf(senses) {
+  const out = [];
+  for (const s of senses) {
+    for (const x of s.examples ?? []) {
+      const t = String(x.text ?? '').trim();
+      if (!t || t.length > 200) continue;
+      if (/[^\x00-\u024f\u2000-\u206f«»]/.test(t)) continue;
+      const tags = [];
+      if (OLD_SPELLING.test(t)) tags.push('pre-reform');
+      if (BR_GERUND.test(t)) tags.push('br');
+      out.push(tags.length ? { t, tag: tags.join(',') } : { t });
+      if (out.length >= 4) return out;
+    }
+  }
+  return out;
+}
+
 const rl = createInterface({ input: createReadStream(wiktFile), crlfDelay: Infinity });
 for await (const line of rl) {
   if (!line) continue;
@@ -144,7 +168,7 @@ for await (const line of rl) {
     words.get(key).senses.push(...senses);
     continue;
   }
-  words.set(key, { term, pos, gender, rank: r, senses });
+  words.set(key, { term, pos, gender, rank: r, senses, corpus: corpusOf(e.senses ?? []) });
 }
 
 const all = [...words.values()]

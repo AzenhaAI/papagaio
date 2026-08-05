@@ -178,22 +178,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Grouped the way a learner reaches for them: when did it happen?
     const TENSE_GROUPS = [
       ['Past', [
-        ['pps', 'Pretérito Perfeito', 'finished, at a point: ontem, no ano passado'],
-        ['imperfeito', 'Pretérito Imperfeito', 'ongoing or habitual back then: antigamente, sempre'],
-        ['ppc', 'Pretérito Perfeito Composto', 'repetition reaching now: ultimamente tenho falado'],
-        ['mais_que_perfeito', 'Mais-que-perfeito Composto', 'earlier than another past moment'],
-        ['imperfeito_conj', 'Imperfeito do Conjuntivo', 'after se: se eu tivesse…'],
+        ['pps', 'Pretérito Perfeito Simples do Indicativo (PPS)', 'finished, at a point: ontem, no ano passado'],
+        ['imperfeito', 'Pretérito Imperfeito do Indicativo (PII)', 'ongoing or habitual back then: antigamente, sempre'],
+        ['ppc', 'Pretérito Perfeito Composto do Indicativo (PPC)', 'repetition reaching now: ultimamente tenho falado'],
+        ['mais_que_perfeito', 'Pretérito Mais-que-Perfeito Composto (PMQP)', 'earlier than another past moment'],
+        ['imperfeito_conj', 'Pretérito Imperfeito do Conjuntivo (PIC)', 'after se: se eu tivesse…'],
       ]],
       ['Present', [
-        ['presente', 'Presente do Indicativo', 'now, and general truths: agora, hoje'],
-        ['presente_conj', 'Presente do Conjuntivo', 'after que, talvez, espero que…'],
-        ['condicional', 'Condicional', 'would: eu gostaria, seria melhor'],
-        ['imperativo', 'Imperativo', 'telling someone to do it'],
+        ['presente', 'Presente do Indicativo (PI)', 'now, and general truths: agora, hoje'],
+        ['presente_conj', 'Presente do Conjuntivo (PC)', 'after que, talvez, espero que…'],
+        ['condicional', 'Condicional Simples (COND)', 'would: eu gostaria, seria melhor'],
+        ['imperativo', 'Imperativo (IMP)', 'telling someone to do it'],
       ]],
       ['Future', [
-        ['futuro_prox', 'Futuro Próximo', 'the spoken future: vou falar amanhã'],
-        ['futuro', 'Futuro do Indicativo', 'will — mostly written and formal'],
-        ['futuro_conj', 'Futuro do Conjuntivo', 'after quando, se, assim que — very pt-PT'],
+        ['futuro_prox', 'Futuro Próximo — ir + infinitivo', 'the spoken future: vou falar amanhã'],
+        ['futuro', 'Futuro Simples do Indicativo (FS)', 'will — mostly written and formal'],
+        ['futuro_conj', 'Futuro do Conjuntivo (FC)', 'after quando, se, assim que — very pt-PT'],
       ]],
     ];
 
@@ -264,6 +264,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (e.lit?.length) ex += e.lit.map((l) =>
         `<div style="margin-top:10px; font-size:14.5px; font-style:italic;">💬 ${esc(l.text)}<br />
          <span class="muted" style="font-style:normal;">— ${esc(l.src)}</span></div>`).join('');
+      // Real sentences from the source corpus, Yandex-style. Labels warn about
+      // spelling a learner should recognise but not copy.
+      const TAGL = { 'pre-reform': 'pre-1911 spelling', br: 'Brazilian usage' };
+      if (e.corpus?.length) ex += `<div class="muted" style="margin-top:14px; font-size:12.5px;
+          letter-spacing:.08em; text-transform:uppercase;">From real texts</div>` +
+        e.corpus.map((c) => `<div style="margin-top:8px; font-size:14px;">${esc(c.t)}
+          ${c.tag ? `<span class="muted" style="font-size:12px;"> · ${esc(c.tag.split(',').map((x) => TAGL[x] ?? x).join(', '))}</span>` : ''}
+        </div>`).join('');
       if (ex) panes.push(['Examples', ex]);
 
       if (e.conj) {
