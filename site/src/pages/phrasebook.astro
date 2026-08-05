@@ -35,6 +35,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         list.innerHTML = '<p class="muted">Could not load the phrasebook — try again in a minute.</p>';
         return;
       }
+      const fado = (await (await fetch(API)).json()).cards
+        .filter((c) => (c.tags ?? '').includes('"fado"'));
       list.innerHTML = cards.map((c) => `
         <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
           <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
@@ -47,6 +49,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           ${c.ex_t ? `<div class="muted" style="font-size:13.5px; font-style:italic; margin-top:2px;">
             ${esc(c.ex_t)}${c.ex_trans ? ` — ${esc(c.ex_trans)}` : ''}</div>` : ''}
         </div>`).join('') || '<p class="muted">Nothing here yet.</p>';
+
+      // The song shelf: fado and Madeiran folk vocabulary. Words, never lyrics
+      // — songwriters own their lines; the images are everybody's.
+      if (fado.length) {
+        list.innerHTML += `<h2 style="margin-top:30px;">🎶 Fado & song words</h2>
+          <p class="muted" style="font-size:13.5px;">The vocabulary fado and the
+          bailinho are made of — saudade, o cais, o luar. Take them to the
+          <a href="../coach/">coach</a>: there's a casa-de-fados scene to try them in.</p>` +
+          fado.map((c) => `
+          <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
+            <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
+              <strong style="font-size:17.5px;">${esc(c.term)}</strong>
+              <span class="muted">— ${esc(c.trans)}</span>
+              ${c.audio ? `<button onclick="new Audio('${AUDIO}${esc(c.audio)}').play()"
+                style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
+            </div>
+            ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
+            ${c.ex_t ? `<div class="muted" style="font-size:13.5px; font-style:italic; margin-top:2px;">
+              ${esc(c.ex_t)}${c.ex_trans ? ` — ${esc(c.ex_trans)}` : ''}</div>` : ''}
+          </div>`).join('');
+      }
     })();
   </script>
 </BaseLayout>

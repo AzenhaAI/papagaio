@@ -124,6 +124,15 @@ export const SCENARIOS = {
         { pt: 'Desculpe, não fazia ideia. Não volta a acontecer.', en: 'Sorry, I had no idea. It will not happen again.' },
       ],
     },
+    fado: {
+      label: '🎶 Casa de fados', open: 'Boa noite! É a primeira vez que vem ouvir fado?',
+      gloss: 'Good evening! Is it your first time coming to hear fado?',
+      hints: [
+        { pt: 'É sim, nunca ouvi fado ao vivo.', en: 'Yes, I have never heard fado live.' },
+        { pt: 'Já ouvi Amália em disco, mas ao vivo é diferente.', en: 'I have heard Amália on record, but live is different.' },
+        { pt: 'O que significa a palavra saudade, ao certo?', en: 'What does the word saudade mean, exactly?' },
+      ],
+    },
   },
   en: {
     work: {

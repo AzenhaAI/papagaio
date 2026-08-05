@@ -1,0 +1,1335 @@
+{
+  "meta": {
+    "deck": "core_010",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Batch three toward 1000: school and language words, the health counter, roads and tolls, landlord vocabulary, clothing for a mountain island, the abstract nouns (saudade, jeito, pena) that carry real conversation, degree adverbs and a round of everyday verbs."
+  },
+  "cards": [
+    {
+      "term": "a aula",
+      "trans": "class, lesson",
+      "pos": "noun",
+      "gender": "f",
+      "note": "dar aulas — to teach",
+      "ex_t": "Tenho aula de português às terças.",
+      "ex_trans": "I have Portuguese class on Tuesdays.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0550",
+      "freq": 550
+    },
+    {
+      "term": "o exame",
+      "trans": "exam",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O exame A2 tem uma parte oral.",
+      "ex_trans": "The A2 exam has an oral part.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0551",
+      "freq": 551
+    },
+    {
+      "term": "o erro",
+      "trans": "mistake",
+      "pos": "noun",
+      "gender": "m",
+      "note": "dar erros — to make mistakes",
+      "ex_t": "Aprende-se mais com os erros.",
+      "ex_trans": "You learn more from mistakes.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0552",
+      "freq": 552
+    },
+    {
+      "term": "a pergunta",
+      "trans": "question",
+      "pos": "noun",
+      "gender": "f",
+      "note": "fazer uma pergunta — questions are made, not asked",
+      "ex_t": "Posso fazer uma pergunta parva?",
+      "ex_trans": "Can I ask a silly question?",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0553",
+      "freq": 553
+    },
+    {
+      "term": "a resposta",
+      "trans": "answer",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A resposta certa era a terceira.",
+      "ex_trans": "The right answer was the third one.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0554",
+      "freq": 554
+    },
+    {
+      "term": "o significado",
+      "trans": "meaning",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Qual é o significado desta palavra?",
+      "ex_trans": "What's the meaning of this word?",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0555",
+      "freq": 555
+    },
+    {
+      "term": "a tradução",
+      "trans": "translation",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A tradução literal não ajuda aqui.",
+      "ex_trans": "The literal translation doesn't help here.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0556",
+      "freq": 556
+    },
+    {
+      "term": "o sotaque",
+      "trans": "accent (speech)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "o sotaque madeirense — its own music",
+      "ex_t": "O teu sotaque está cada vez melhor.",
+      "ex_trans": "Your accent keeps getting better.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0557",
+      "freq": 557
+    },
+    {
+      "term": "a piada",
+      "trans": "joke",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ter piada — to be funny",
+      "ex_t": "Ainda não percebo as piadas na televisão.",
+      "ex_trans": "I still don't get the jokes on TV.",
+      "tags": [
+        "core",
+        "social"
+      ],
+      "unit": "trabalho",
+      "id": "pt0558",
+      "freq": 558
+    },
+    {
+      "term": "o costume",
+      "trans": "custom, habit",
+      "pos": "noun",
+      "gender": "m",
+      "note": "como de costume — as usual",
+      "ex_t": "Cá o costume é jantar tarde? Nem por isso.",
+      "ex_trans": "Is the custom here to dine late? Not really.",
+      "tags": [
+        "core",
+        "social"
+      ],
+      "unit": "trabalho",
+      "id": "pt0559",
+      "freq": 559
+    },
+    {
+      "term": "a receita médica",
+      "trans": "prescription",
+      "pos": "noun",
+      "gender": "f",
+      "note": "receita alone also means recipe",
+      "ex_t": "Sem receita médica não vendemos este.",
+      "ex_trans": "Without a prescription we can't sell this one.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0560",
+      "freq": 560
+    },
+    {
+      "term": "a vacina",
+      "trans": "vaccine",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A vacina da gripe é gratuita para residentes.",
+      "ex_trans": "The flu vaccine is free for residents.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0561",
+      "freq": 561
+    },
+    {
+      "term": "a análise",
+      "trans": "test (medical); analysis",
+      "pos": "noun",
+      "gender": "f",
+      "note": "análises ao sangue — blood tests",
+      "ex_t": "Tenho de fazer análises em jejum.",
+      "ex_trans": "I have to do blood tests on an empty stomach.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0562",
+      "freq": 562
+    },
+    {
+      "term": "a urgência",
+      "trans": "A&E, emergency room",
+      "pos": "noun",
+      "gender": "f",
+      "note": "as urgências — where the night goes to die",
+      "ex_t": "Esperámos cinco horas nas urgências.",
+      "ex_trans": "We waited five hours in A&E.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0563",
+      "freq": 563
+    },
+    {
+      "term": "o penso",
+      "trans": "plaster, dressing",
+      "pos": "noun",
+      "gender": "m",
+      "note": "band-aid is curativo/band-aid in Brazil",
+      "ex_t": "Tens um penso? Cortei-me no papel.",
+      "ex_trans": "Got a plaster? I cut myself on paper.",
+      "tags": [
+        "core",
+        "saude",
+        "pt-pt"
+      ],
+      "unit": "corpo",
+      "id": "pt0564",
+      "freq": 564
+    },
+    {
+      "term": "a tosse",
+      "trans": "cough",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esta tosse não me larga há duas semanas.",
+      "ex_trans": "This cough hasn't let go of me for two weeks.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0565",
+      "freq": 565
+    },
+    {
+      "term": "a constipação",
+      "trans": "a cold",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the false friend supreme — NOT constipation",
+      "ex_t": "Apanhei uma constipação na levada.",
+      "ex_trans": "I caught a cold on the levada.",
+      "tags": [
+        "core",
+        "saude",
+        "pt-pt"
+      ],
+      "unit": "corpo",
+      "id": "pt0566",
+      "freq": 566
+    },
+    {
+      "term": "magoar",
+      "trans": "to hurt (injure)",
+      "pos": "verb",
+      "gender": null,
+      "note": "magoar-se — to hurt oneself",
+      "ex_t": "Magoei-me no joelho a correr.",
+      "ex_trans": "I hurt my knee running.",
+      "tags": [
+        "core",
+        "verbo",
+        "saude"
+      ],
+      "unit": "verbos",
+      "id": "pt0567",
+      "freq": 567
+    },
+    {
+      "term": "a autoestrada",
+      "trans": "motorway",
+      "pos": "noun",
+      "gender": "f",
+      "note": "via rápida on Madeira",
+      "ex_t": "A autoestrada da Madeira é um túnel atrás do outro.",
+      "ex_trans": "Madeira's motorway is one tunnel after another.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0568",
+      "freq": 568
+    },
+    {
+      "term": "o túnel",
+      "trans": "tunnel",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Depois do túnel, primeira saída.",
+      "ex_trans": "After the tunnel, first exit.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0569",
+      "freq": 569
+    },
+    {
+      "term": "a rotunda",
+      "trans": "roundabout",
+      "pos": "noun",
+      "gender": "f",
+      "note": "directions are counted in rotundas here",
+      "ex_t": "Na segunda rotunda, sai à direita.",
+      "ex_trans": "At the second roundabout, exit right.",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0570",
+      "freq": 570
+    },
+    {
+      "term": "a portagem",
+      "trans": "toll",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Via Verde — the toll gadget",
+      "ex_t": "Esta estrada tem portagens?",
+      "ex_trans": "Does this road have tolls?",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0571",
+      "freq": 571
+    },
+    {
+      "term": "o estacionamento",
+      "trans": "car park; parking",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O estacionamento do centro está sempre cheio.",
+      "ex_trans": "The downtown car park is always full.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0572",
+      "freq": 572
+    },
+    {
+      "term": "a multa",
+      "trans": "fine",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Apanhei uma multa por estacionar mal.",
+      "ex_trans": "I got a fine for bad parking.",
+      "tags": [
+        "core",
+        "transporte",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0573",
+      "freq": 573
+    },
+    {
+      "term": "a gasolineira",
+      "trans": "petrol station",
+      "pos": "noun",
+      "gender": "f",
+      "note": "posto de gasolina in Brazil",
+      "ex_t": "Há uma gasolineira antes da subida.",
+      "ex_trans": "There's a petrol station before the climb.",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0574",
+      "freq": 574
+    },
+    {
+      "term": "o semáforo",
+      "trans": "traffic light",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Vira à esquerda no semáforo.",
+      "ex_trans": "Turn left at the traffic light.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0575",
+      "freq": 575
+    },
+    {
+      "term": "a curva",
+      "trans": "bend, curve",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira's roads are made of them",
+      "ex_t": "Cuidado, esta estrada tem curvas apertadas.",
+      "ex_trans": "Careful, this road has tight bends.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0576",
+      "freq": 576
+    },
+    {
+      "term": "a subida",
+      "trans": "climb, uphill",
+      "pos": "noun",
+      "gender": "f",
+      "note": "a descida — the way down",
+      "ex_t": "A subida para o Monte é a pé só para corajosos.",
+      "ex_trans": "The climb to Monte on foot is for the brave.",
+      "tags": [
+        "core",
+        "lugar",
+        "madeira"
+      ],
+      "unit": "lugar",
+      "id": "pt0577",
+      "freq": 577
+    },
+    {
+      "term": "o inquilino",
+      "trans": "tenant",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O inquilino anterior deixou a casa impecável.",
+      "ex_trans": "The previous tenant left the place immaculate.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0578",
+      "freq": 578
+    },
+    {
+      "term": "o esquentador",
+      "trans": "water heater",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the gas one on the wall — a Portuguese institution",
+      "ex_t": "O esquentador desliga-se sozinho, é da pilha.",
+      "ex_trans": "The heater turns itself off — it's the battery.",
+      "tags": [
+        "core",
+        "casa",
+        "pt-pt"
+      ],
+      "unit": "casa",
+      "id": "pt0579",
+      "freq": 579
+    },
+    {
+      "term": "o aquecimento",
+      "trans": "heating",
+      "pos": "noun",
+      "gender": "m",
+      "note": "casas portuguesas e o aquecimento — uma tragédia",
+      "ex_t": "A casa não tem aquecimento, só um aquecedor.",
+      "ex_trans": "The house has no heating, just a space heater.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0580",
+      "freq": 580
+    },
+    {
+      "term": "a humidade",
+      "trans": "damp, humidity",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the island tenant's nemesis",
+      "ex_t": "Há humidade na parede do quarto.",
+      "ex_trans": "There's damp on the bedroom wall.",
+      "tags": [
+        "core",
+        "casa",
+        "madeira"
+      ],
+      "unit": "casa",
+      "id": "pt0581",
+      "freq": 581
+    },
+    {
+      "term": "o canalizador",
+      "trans": "plumber",
+      "pos": "noun",
+      "gender": "m",
+      "note": "encanador is Brazilian",
+      "ex_t": "O canalizador só pode vir para a semana.",
+      "ex_trans": "The plumber can only come next week.",
+      "tags": [
+        "core",
+        "casa",
+        "pt-pt"
+      ],
+      "unit": "casa",
+      "id": "pt0582",
+      "freq": 582
+    },
+    {
+      "term": "o eletricista",
+      "trans": "electrician",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O eletricista trocou o quadro todo.",
+      "ex_trans": "The electrician replaced the whole fuse box.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0583",
+      "freq": 583
+    },
+    {
+      "term": "avariado",
+      "trans": "broken (machine)",
+      "pos": "adj",
+      "gender": null,
+      "note": "partido is for things that snap; avariado for machines",
+      "ex_t": "A máquina de lavar está avariada.",
+      "ex_trans": "The washing machine is broken.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0584",
+      "freq": 584
+    },
+    {
+      "term": "arranjar",
+      "trans": "to fix; to get hold of",
+      "pos": "verb",
+      "gender": null,
+      "note": "the do-everything verb of pt-PT",
+      "ex_t": "Consegues arranjar-me isso até sexta?",
+      "ex_trans": "Can you get that for me by Friday?",
+      "tags": [
+        "core",
+        "verbo",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "id": "pt0585",
+      "freq": 585
+    },
+    {
+      "term": "o fato",
+      "trans": "suit",
+      "pos": "noun",
+      "gender": "m",
+      "note": "terno is Brazilian; fato de banho — swimsuit",
+      "ex_t": "Só uso fato em casamentos.",
+      "ex_trans": "I only wear a suit at weddings.",
+      "tags": [
+        "core",
+        "roupa",
+        "pt-pt"
+      ],
+      "unit": "roupa",
+      "id": "pt0586",
+      "freq": 586
+    },
+    {
+      "term": "o fato de banho",
+      "trans": "swimsuit",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Esqueci-me do fato de banho, claro.",
+      "ex_trans": "I forgot my swimsuit, of course.",
+      "tags": [
+        "core",
+        "roupa",
+        "pt-pt"
+      ],
+      "unit": "roupa",
+      "id": "pt0587",
+      "freq": 587
+    },
+    {
+      "term": "as sapatilhas",
+      "trans": "trainers",
+      "pos": "noun",
+      "gender": "f",
+      "note": "tênis is the Brazilian word",
+      "ex_t": "Para a levada leva sapatilhas com bom piso.",
+      "ex_trans": "For the levada take trainers with good grip.",
+      "tags": [
+        "core",
+        "roupa",
+        "pt-pt"
+      ],
+      "unit": "roupa",
+      "id": "pt0588",
+      "freq": 588
+    },
+    {
+      "term": "o chapéu",
+      "trans": "hat",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Sem chapéu não vás ao Pico do Areeiro.",
+      "ex_trans": "Don't go to Pico do Areeiro without a hat.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0589",
+      "freq": 589
+    },
+    {
+      "term": "o cachecol",
+      "trans": "scarf",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "No planalto até um cachecol faz jeito.",
+      "ex_trans": "On the plateau even a scarf comes in handy.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0590",
+      "freq": 590
+    },
+    {
+      "term": "as luvas",
+      "trans": "gloves",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Luvas na Madeira? Só na serra, em janeiro.",
+      "ex_trans": "Gloves on Madeira? Only in the mountains, in January.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0591",
+      "freq": 591
+    },
+    {
+      "term": "o bolso",
+      "trans": "pocket",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Tenho o telemóvel no bolso do casaco.",
+      "ex_trans": "My phone's in my jacket pocket.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0592",
+      "freq": 592
+    },
+    {
+      "term": "a mochila",
+      "trans": "backpack",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A mochila leva água, casaco e bolo do caco.",
+      "ex_trans": "The backpack carries water, a jacket and bolo do caco.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0593",
+      "freq": 593
+    },
+    {
+      "term": "vestir",
+      "trans": "to put on, dress",
+      "pos": "verb",
+      "gender": null,
+      "note": "vestir-se — to get dressed",
+      "ex_t": "Veste algo quente, vamos para a serra.",
+      "ex_trans": "Put on something warm, we're going to the mountains.",
+      "tags": [
+        "core",
+        "verbo",
+        "roupa"
+      ],
+      "unit": "verbos",
+      "id": "pt0594",
+      "freq": 594
+    },
+    {
+      "term": "experimentar",
+      "trans": "to try, try on",
+      "pos": "verb",
+      "gender": null,
+      "note": "clothes, food, and life alike",
+      "ex_t": "Experimenta a poncha de tangerina.",
+      "ex_trans": "Try the tangerine poncha.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0595",
+      "freq": 595
+    },
+    {
+      "term": "a escolha",
+      "trans": "choice",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Foi uma boa escolha vir para cá.",
+      "ex_trans": "Coming here was a good choice.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0596",
+      "freq": 596
+    },
+    {
+      "term": "a razão",
+      "trans": "reason; being right",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ter razão — to be right",
+      "ex_t": "Tens razão, desculpa.",
+      "ex_trans": "You're right, sorry.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0597",
+      "freq": 597
+    },
+    {
+      "term": "a opinião",
+      "trans": "opinion",
+      "pos": "noun",
+      "gender": "f",
+      "note": "na minha opinião — hedge like a local",
+      "ex_t": "Na minha opinião, o norte é mais bonito.",
+      "ex_trans": "In my opinion, the north is prettier.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0598",
+      "freq": 598
+    },
+    {
+      "term": "a sorte",
+      "trans": "luck",
+      "pos": "noun",
+      "gender": "f",
+      "note": "que sorte! / boa sorte!",
+      "ex_t": "Tivemos sorte com o tempo.",
+      "ex_trans": "We were lucky with the weather.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0599",
+      "freq": 599
+    },
+    {
+      "term": "o azar",
+      "trans": "bad luck",
+      "pos": "noun",
+      "gender": "m",
+      "note": "que azar! — the sympathetic wince",
+      "ex_t": "Que azar, logo hoje que há greve.",
+      "ex_trans": "What bad luck — a strike, today of all days.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0600",
+      "freq": 600
+    },
+    {
+      "term": "a saudade",
+      "trans": "longing, missing",
+      "pos": "noun",
+      "gender": "f",
+      "note": "THE Portuguese word; tenho saudades tuas",
+      "ex_t": "Já tenho saudades do verão.",
+      "ex_trans": "I already miss summer.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0601",
+      "freq": 601
+    },
+    {
+      "term": "o jeito",
+      "trans": "knack, way",
+      "pos": "noun",
+      "gender": "m",
+      "note": "fazer jeito — to come in handy; ter jeito — to be good at",
+      "ex_t": "Não tenho jeito nenhum para desenhar.",
+      "ex_trans": "I have no knack for drawing at all.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0602",
+      "freq": 602
+    },
+    {
+      "term": "a vontade",
+      "trans": "will, desire",
+      "pos": "noun",
+      "gender": "f",
+      "note": "estar à vontade — make yourself at home",
+      "ex_t": "Não tenho vontade nenhuma de sair hoje.",
+      "ex_trans": "I have zero desire to go out today.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0603",
+      "freq": 603
+    },
+    {
+      "term": "o cuidado",
+      "trans": "care",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cuidado! — watch out!",
+      "ex_t": "Cuidado com o degrau à saída.",
+      "ex_trans": "Mind the step on the way out.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0604",
+      "freq": 604
+    },
+    {
+      "term": "a paciência",
+      "trans": "patience",
+      "pos": "noun",
+      "gender": "f",
+      "note": "paciência… — also 'oh well' with a sigh",
+      "ex_t": "Com a burocracia é preciso paciência.",
+      "ex_trans": "With bureaucracy you need patience.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0605",
+      "freq": 605
+    },
+    {
+      "term": "a pena",
+      "trans": "pity; feather",
+      "pos": "noun",
+      "gender": "f",
+      "note": "que pena! — what a shame; vale a pena — worth it",
+      "ex_t": "Que pena não teres vindo ontem!",
+      "ex_trans": "What a shame you didn't come yesterday!",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0606",
+      "freq": 606
+    },
+    {
+      "term": "apenas um bocadinho",
+      "trans": "just a little bit",
+      "pos": "phrase",
+      "gender": null,
+      "note": "bocadinho — the pt-PT diminutive of bocado",
+      "ex_t": "Só um bocadinho de arroz, obrigado.",
+      "ex_trans": "Just a little rice, thanks.",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "adverbios",
+      "id": "pt0607",
+      "freq": 607
+    },
+    {
+      "term": "mais ou menos",
+      "trans": "more or less, so-so",
+      "pos": "phrase",
+      "gender": null,
+      "note": "the answer to 'tudo bem?' on a Monday",
+      "ex_t": "— Como vai isso? — Mais ou menos.",
+      "ex_trans": "— How's it going? — So-so.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0608",
+      "freq": 608
+    },
+    {
+      "term": "pelo menos",
+      "trans": "at least",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Pelo menos não choveu.",
+      "ex_trans": "At least it didn't rain.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0609",
+      "freq": 609
+    },
+    {
+      "term": "cada vez mais",
+      "trans": "more and more",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Há cada vez mais turistas no Funchal.",
+      "ex_trans": "There are more and more tourists in Funchal.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0610",
+      "freq": 610
+    },
+    {
+      "term": "de repente",
+      "trans": "suddenly",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "De repente o nevoeiro cobriu tudo.",
+      "ex_trans": "Suddenly the fog covered everything.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0611",
+      "freq": 611
+    },
+    {
+      "term": "ao mesmo tempo",
+      "trans": "at the same time",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Não consigo ouvir e escrever ao mesmo tempo.",
+      "ex_trans": "I can't listen and write at the same time.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0612",
+      "freq": 612
+    },
+    {
+      "term": "em vez de",
+      "trans": "instead of",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Em vez de autocarro, vamos a pé?",
+      "ex_trans": "Instead of the bus, shall we walk?",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0613",
+      "freq": 613
+    },
+    {
+      "term": "por causa de",
+      "trans": "because of",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "O voo atrasou por causa do vento.",
+      "ex_trans": "The flight was delayed because of the wind.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "adverbios",
+      "id": "pt0614",
+      "freq": 614
+    },
+    {
+      "term": "o casal",
+      "trans": "couple",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O casal do terceiro teve um bebé.",
+      "ex_trans": "The couple on the third floor had a baby.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0615",
+      "freq": 615
+    },
+    {
+      "term": "o bebé",
+      "trans": "baby",
+      "pos": "noun",
+      "gender": "m",
+      "note": "bebê is the Brazilian spelling",
+      "ex_t": "O bebé dorme finalmente a noite toda.",
+      "ex_trans": "The baby finally sleeps through the night.",
+      "tags": [
+        "core",
+        "familia",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0616",
+      "freq": 616
+    },
+    {
+      "term": "o miúdo",
+      "trans": "kid",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the pt-PT word — moleque/garoto are Brazilian",
+      "ex_t": "Os miúdos jogam à bola no largo.",
+      "ex_trans": "The kids play football in the square.",
+      "tags": [
+        "core",
+        "familia",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0617",
+      "freq": 617
+    },
+    {
+      "term": "o idoso",
+      "trans": "elderly person",
+      "pos": "noun",
+      "gender": "m",
+      "note": "politer than velho",
+      "ex_t": "Há desconto para idosos no teleférico.",
+      "ex_trans": "There's a senior discount on the cable car.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0618",
+      "freq": 618
+    },
+    {
+      "term": "o convidado",
+      "trans": "guest",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Quantos convidados vêm ao jantar?",
+      "ex_trans": "How many guests are coming to dinner?",
+      "tags": [
+        "core",
+        "social"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0619",
+      "freq": 619
+    },
+    {
+      "term": "a prima",
+      "trans": "cousin (f)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "o primo — male cousin",
+      "ex_t": "A minha prima vem passar o Natal cá.",
+      "ex_trans": "My cousin is coming to spend Christmas here.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0620",
+      "freq": 620
+    },
+    {
+      "term": "o sogro",
+      "trans": "father-in-law",
+      "pos": "noun",
+      "gender": "m",
+      "note": "os sogros — the in-laws, collectively",
+      "ex_t": "Os sogros chegam sábado. Calma.",
+      "ex_trans": "The in-laws arrive Saturday. Stay calm.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0621",
+      "freq": 621
+    },
+    {
+      "term": "o vizinho de cima",
+      "trans": "upstairs neighbour",
+      "pos": "phrase",
+      "gender": null,
+      "note": "de baixo — downstairs; the eternal saga",
+      "ex_t": "O vizinho de cima decidiu aprender bateria.",
+      "ex_trans": "The upstairs neighbour decided to learn drums.",
+      "tags": [
+        "core",
+        "frase",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0622",
+      "freq": 622
+    },
+    {
+      "term": "emprestar",
+      "trans": "to lend",
+      "pos": "verb",
+      "gender": null,
+      "note": "pedir emprestado — to borrow",
+      "ex_t": "Emprestas-me o guarda-chuva até logo?",
+      "ex_trans": "Will you lend me the umbrella till later?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0623",
+      "freq": 623
+    },
+    {
+      "term": "devolver",
+      "trans": "to give back",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Devolvo-te o livro para a semana.",
+      "ex_trans": "I'll give the book back next week.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0624",
+      "freq": 624
+    },
+    {
+      "term": "prometer",
+      "trans": "to promise",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Prometo não me atrasar desta vez.",
+      "ex_trans": "I promise not to be late this time.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0625",
+      "freq": 625
+    },
+    {
+      "term": "convidar",
+      "trans": "to invite",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Convidámos os vizinhos para um jantar.",
+      "ex_trans": "We invited the neighbours over for dinner.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0626",
+      "freq": 626
+    },
+    {
+      "term": "cumprimentar",
+      "trans": "to greet",
+      "pos": "verb",
+      "gender": null,
+      "note": "two kisses, or a handshake — read the room",
+      "ex_t": "Cá cumprimenta-se toda a gente na rua.",
+      "ex_trans": "Here you greet everyone in the street.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0627",
+      "freq": 627
+    },
+    {
+      "term": "agradecer",
+      "trans": "to thank",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Queria agradecer a vossa ajuda.",
+      "ex_trans": "I'd like to thank you for your help.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0628",
+      "freq": 628
+    },
+    {
+      "term": "desistir",
+      "trans": "to give up",
+      "pos": "verb",
+      "gender": null,
+      "note": "desistir de + infinitive",
+      "ex_t": "Não desistas, o pior já passou.",
+      "ex_trans": "Don't give up, the worst is over.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0629",
+      "freq": 629
+    },
+    {
+      "term": "demorar",
+      "trans": "to take time",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O comboio? Não há. O autocarro demora uma hora.",
+      "ex_trans": "The train? There isn't one. The bus takes an hour.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0630",
+      "freq": 630
+    },
+    {
+      "term": "combinar",
+      "trans": "to arrange, agree on",
+      "pos": "verb",
+      "gender": null,
+      "note": "combinamos assim — so it's agreed",
+      "ex_t": "Combinamos para as sete, então?",
+      "ex_trans": "Seven o'clock then, agreed?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0631",
+      "freq": 631
+    }
+  ]
+}
