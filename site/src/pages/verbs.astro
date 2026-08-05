@@ -35,6 +35,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
 
+    // [start%, end%, unreal] — position of the action on a past→future line
+    // with "now" at 50. Faded bands are moods, not facts.
+    const TL = {
+      presente: [42, 58, 0],
+      pps: [16, 26, 0],
+      imperfeito: [6, 38, 0],
+      ppc: [14, 50, 0],
+      mais_que_perfeito: [2, 10, 0],
+      imperfeito_conj: [6, 38, 1],
+      futuro: [70, 92, 0],
+      futuro_prox: [54, 68, 0],
+      futuro_conj: [62, 88, 1],
+      condicional: [56, 84, 1],
+      imperativo: [50, 64, 1],
+    };
+
+    const timeline = (k) => {
+      const t = TL[k];
+      if (!t) return '';
+      return `<div class="tl">
+        <div class="tl-seg${t[2] ? ' unreal' : ''}" style="left:${t[0]}%; width:${t[1] - t[0]}%"></div>
+        <div class="tl-now"><span>now</span></div>
+      </div>`;
+    };
+
     // Grouped the way a learner reaches for a form: first *when* did it happen,
     // then which mood. You know you mean yesterday long before you know whether
     // you need the conjuntivo, so time is the outer question.
@@ -107,7 +132,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           if (!c[k]?.length) continue;
           html += `<div style="margin-bottom:16px;">
             <strong style="font-size:14.5px;">${name}</strong>
-            <div class="muted" style="font-size:13px; margin-bottom:6px;">${when}</div>
+            <div class="muted" style="font-size:13px;">${when}</div>
+            ${timeline(k)}
             <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
                  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:3px 16px;">` +
             c[k].map((f, n) => f
@@ -146,13 +172,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       out.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    const ESSENTIALS = ['ser', 'ter', 'estar', 'ir', 'fazer', 'poder', 'dizer',
+      'dar', 'ver', 'saber', 'querer', 'ficar', 'vir', 'falar', 'gostar', 'pôr'];
+
     function renderIndex(filter) {
       const q = fold(filter ?? '');
       const shown = q ? verbs.filter((v) => fold(v.inf).startsWith(q) || fold(v.gloss).includes(q)) : verbs;
+
+      const ess = q ? [] : ESSENTIALS
+        .map((e) => verbs.find((v) => v.inf === e)).filter(Boolean);
       const byLetter = {};
       for (const v of shown) (byLetter[fold(v.inf)[0].toUpperCase()] ??= []).push(v);
 
-      index.innerHTML = `<h2>All verbs <span class="muted" style="font-weight:400; font-size:15px;">
+      index.innerHTML = (ess.length ? `<h2>The essentials</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:2px 18px; margin-bottom:8px;">` +
+        ess.map((v) => `<button class="vrow" data-v="${esc(v.inf)}">
+            <span><strong>${esc(v.inf)}</strong></span>
+            <span class="muted">${esc(v.gloss)}</span>
+          </button>`).join('') + '</div>' : '') +
+        `<h2>All verbs <span class="muted" style="font-weight:400; font-size:15px;">
           · ${shown.length}</span></h2>` +
         Object.keys(byLetter).sort().map((L) => `
           <div style="margin-bottom:18px;">
@@ -197,6 +235,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 7px 4px; cursor: pointer; width: 100%;
     }
     .vrow:hover { background: var(--panel2); }
+    .tl {
+      position: relative; height: 16px; margin: 6px 0 8px; max-width: 340px;
+    }
+    .tl::before {
+      content: ''; position: absolute; top: 7px; left: 0; right: 0; height: 2px;
+      background: var(--panel2); border-radius: 1px;
+    }
+    .tl-seg {
+      position: absolute; top: 5px; height: 6px; border-radius: 3px;
+      background: var(--accent);
+    }
+    .tl-seg.unreal { opacity: .38; }
+    .tl-now {
+      position: absolute; left: 50%; top: 2px; width: 2px; height: 12px;
+      background: var(--accent2);
+    }
+    .tl-now span {
+      position: absolute; top: 13px; left: -12px; font-size: 9.5px;
+      color: var(--muted); letter-spacing: .04em;
+    }
     .vrow .muted { font-size: 13.5px; text-align: right; }
   </style>
 </BaseLayout>
