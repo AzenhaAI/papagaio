@@ -360,7 +360,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     document.getElementById('btn-en').onclick = () => load('en');
     load('pt');
   </script>
-  <style>
+  <style is:global>
     .histchip {
       display: flex; flex-direction: column; align-items: flex-start; gap: 1px;
       background: var(--panel); border: 1px solid var(--panel2); border-radius: 12px;

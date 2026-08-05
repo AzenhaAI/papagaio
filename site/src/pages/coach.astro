@@ -74,7 +74,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div id="recap" class="panel" style="display:none; margin-top:16px;"></div>
 
-  <style>
+  <style is:global>
     .cbtn { background:var(--panel2); color:var(--text); border:1px solid #2a4433;
       border-radius:10px; padding:8px 16px; font:inherit; cursor:pointer; }
     .cbtn.active { background:var(--accent); color:#08130c; font-weight:600; border-color:var(--accent); }

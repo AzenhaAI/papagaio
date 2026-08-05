@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         style="background:var(--panel2); color:var(--text);">🎙 Voice version in Telegram</a>
     </div>
   </section>
-  <style>
+  <style is:global>
     .hero-chip { background:var(--panel2); border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
       border-radius:20px; padding:5px 13px; font-size:13.5px; color:var(--text); }
   </style>
@@ -93,7 +93,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       Telegram, and a voice coach that plays the barista.</div>
   </div>
 
-  <style>
+  <style is:global>
     .tilegrid {
       display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
       gap:12px; margin-bottom:8px;
@@ -195,7 +195,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <span class="muted" id="status"></span>
       <span class="muted" id="dirhint" style="font-size:13.5px;">Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.</span>
     </div>
-    <style>
+    <style is:global>
       .dirbtn {
         background: var(--panel2); color: var(--muted); border: 1px solid #2a4433;
         border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
