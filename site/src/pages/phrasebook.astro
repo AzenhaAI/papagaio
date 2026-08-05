@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Portuguese phrasebook — PapaGaio"
+  desc="The European Portuguese phrases people actually say — se calhar, pois é, está bem — with native audio and the literal story behind each one.">
+  <h1>Phrasebook</h1>
+  <p class="muted">
+    The phrases that carry real conversations in Portugal — the ones textbooks
+    save for chapter twelve and Lisbon uses before breakfast. Native audio on
+    every line. Tap a phrase for its full article.
+  </p>
+
+  <div id="list" style="margin-top:18px;"><p class="muted">loading…</p></div>
+
+  <p class="muted" style="margin-top:22px; font-size:13.5px;">
+    These are cards from <a href="./dictionary/">the deck</a> — the bot drills
+    them with spaced repetition, and the
+    <a href="./coach/">AI coach</a> makes you use them in scenes.
+  </p>
+
+  <script>
+    const AUDIO = 'https://shpara.com/papagaio/audio/';
+    const API = 'https://papagaio.kirshp.workers.dev/api/deck?course=pt&limit=500';
+    const list = document.getElementById('list');
+    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    (async () => {
+      let cards = [];
+      try {
+        cards = (await (await fetch(API)).json()).cards
+          .filter((c) => (c.tags ?? '').includes('"frase"'));
+      } catch {
+        list.innerHTML = '<p class="muted">Could not load the phrasebook — try again in a minute.</p>';
+        return;
+      }
+      list.innerHTML = cards.map((c) => `
+        <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
+          <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
+            <strong style="font-size:17.5px;">${esc(c.term)}</strong>
+            <span class="muted">— ${esc(c.trans)}</span>
+            ${c.audio ? `<button onclick="new Audio('${AUDIO}${esc(c.audio)}').play()"
+              style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
+          </div>
+          ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
+          ${c.ex_t ? `<div class="muted" style="font-size:13.5px; font-style:italic; margin-top:2px;">
+            ${esc(c.ex_t)}${c.ex_trans ? ` — ${esc(c.ex_trans)}` : ''}</div>` : ''}
+        </div>`).join('') || '<p class="muted">Nothing here yet.</p>';
+    })();
+  </script>
+</BaseLayout>

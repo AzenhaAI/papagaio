@@ -97,7 +97,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       header.site nav { display: none; }
       header.site #burger { margin-left: auto; }
     }
-    @media (min-width: 861px) { header.site #burger { display: none; } }
+    header.site #burger { margin-left: 4px; }
     main { max-width: var(--max); margin: 0 auto; padding: 28px 20px 60px; }
     footer.site {
       max-width: var(--max); margin: 0 auto; padding: 24px 20px 40px;
@@ -123,6 +123,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       <a href={`${base}/practice/`}>Cards</a>
       <a href={`${base}/`}>Translate</a>
       <a href={`${base}/dictionary/`}>Dictionary</a>
+      <a href={`${base}/phrasebook/`}>Phrasebook</a>
       <a href={`${base}/verbs/`}>Verbs</a>
       <a href={`${base}/progress/`}>Progress</a>
       <a href="https://t.me/papagaio_bot">Telegram bot</a>
@@ -142,6 +143,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <a class="drawer-link" href={`${base}/coach/`}>🎭 AI coach</a>
     <a class="drawer-link" href={`${base}/read/`}>📰 Reader</a>
     <a class="drawer-link" href={`${base}/dictionary/`}>📖 Dictionary</a>
+    <a class="drawer-link" href={`${base}/phrasebook/`}>💬 Phrasebook</a>
     <a class="drawer-link" href={`${base}/verbs/`}>🔀 Verbs</a>
     <a class="drawer-link" href={`${base}/progress/`}>📊 Progress</a>
     <a class="drawer-link" href={`${base}/about/`}>ℹ️ About</a>
@@ -152,8 +154,8 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <a class="drawer-link" href="https://github.com/kirshp/papagaio">⭐ GitHub</a>
     <a class="drawer-link" href="mailto:aurapark888@gmail.com">✉️ Contact</a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <span class="drawer-link muted" style="cursor:default;">🤖 Android app — soon</span>
-    <span class="drawer-link muted" style="cursor:default;">🍎 iOS app — soon</span>
+    <a class="drawer-link" href="https://github.com/kirshp/papagaio/releases/download/android-v1.0.0/PapaGaio-1.0.0.apk">🤖 Android app (APK, 55 MB)</a>
+    <a class="drawer-link" href="mailto:aurapark888@gmail.com?subject=PapaGaio%20for%20iOS">🍎 iOS app — request by email</a>
   </aside>
   <main><slot /></main>
 
