@@ -1,0 +1,1467 @@
+{
+  "meta": {
+    "deck": "core_009",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Batch two of the push to 1000: food and the shop counters that sell it, colours, animals, money and post, daily routine, work vocabulary, weather — plus the multiword verbs (fazer compras, marcar uma consulta) that glue A2 speech together."
+  },
+  "cards": [
+    {
+      "term": "a maçã",
+      "trans": "apple",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Como uma maçã todos os dias.",
+      "ex_trans": "I eat an apple every day.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0461",
+      "freq": 461
+    },
+    {
+      "term": "a laranja",
+      "trans": "orange",
+      "pos": "noun",
+      "gender": "f",
+      "note": "also the colour: cor de laranja",
+      "ex_t": "O sumo de laranja natural é outra coisa.",
+      "ex_trans": "Fresh orange juice is something else.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0462",
+      "freq": 462
+    },
+    {
+      "term": "a banana",
+      "trans": "banana",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira's own, small and sweet",
+      "ex_t": "As bananas da Madeira são pequenas e doces.",
+      "ex_trans": "Madeiran bananas are small and sweet.",
+      "tags": [
+        "core",
+        "comida",
+        "madeira"
+      ],
+      "unit": "comida",
+      "id": "pt0463",
+      "freq": 463
+    },
+    {
+      "term": "o limão",
+      "trans": "lemon",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Põe umas gotas de limão no peixe.",
+      "ex_trans": "Put a few drops of lemon on the fish.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0464",
+      "freq": 464
+    },
+    {
+      "term": "a uva",
+      "trans": "grape",
+      "pos": "noun",
+      "gender": "f",
+      "note": "as passas — raisins",
+      "ex_t": "No fim do verão há uvas no mercado.",
+      "ex_trans": "At the end of summer there are grapes at the market.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0465",
+      "freq": 465
+    },
+    {
+      "term": "o morango",
+      "trans": "strawberry",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Os morangos estão em promoção.",
+      "ex_trans": "Strawberries are on offer.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0466",
+      "freq": 466
+    },
+    {
+      "term": "a cebola",
+      "trans": "onion",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Refoga a cebola primeiro.",
+      "ex_trans": "Sauté the onion first.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0467",
+      "freq": 467
+    },
+    {
+      "term": "o alho",
+      "trans": "garlic",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pão com alho — the espetada sidekick",
+      "ex_t": "Falta alho para a receita.",
+      "ex_trans": "We're missing garlic for the recipe.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0468",
+      "freq": 468
+    },
+    {
+      "term": "a cenoura",
+      "trans": "carrot",
+      "pos": "noun",
+      "gender": "f",
+      "note": "bolo de cenoura — a lanche classic",
+      "ex_t": "As cenouras estão baratas esta semana.",
+      "ex_trans": "Carrots are cheap this week.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0469",
+      "freq": 469
+    },
+    {
+      "term": "a alface",
+      "trans": "lettuce",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Uma salada de alface e tomate, simples.",
+      "ex_trans": "A simple lettuce and tomato salad.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0470",
+      "freq": 470
+    },
+    {
+      "term": "o cogumelo",
+      "trans": "mushroom",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Não como cogumelos, desculpa.",
+      "ex_trans": "I don't eat mushrooms, sorry.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0471",
+      "freq": 471
+    },
+    {
+      "term": "o frango",
+      "trans": "chicken",
+      "pos": "noun",
+      "gender": "m",
+      "note": "frango assado — Sunday's answer everywhere",
+      "ex_t": "Meio frango assado com piri-piri, se faz favor.",
+      "ex_trans": "Half a roast chicken with piri-piri, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0472",
+      "freq": 472
+    },
+    {
+      "term": "o bacalhau",
+      "trans": "salt cod",
+      "pos": "noun",
+      "gender": "m",
+      "note": "a thousand recipes, allegedly",
+      "ex_t": "À sexta há bacalhau com natas na cantina.",
+      "ex_trans": "On Fridays the canteen does bacalhau com natas.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0473",
+      "freq": 473
+    },
+    {
+      "term": "o atum",
+      "trans": "tuna",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Madeira classic: bife de atum",
+      "ex_t": "O bife de atum com milho frito é típico daqui.",
+      "ex_trans": "Tuna steak with fried cornmeal is typical here.",
+      "tags": [
+        "core",
+        "comida",
+        "madeira"
+      ],
+      "unit": "comida",
+      "id": "pt0474",
+      "freq": 474
+    },
+    {
+      "term": "a espada",
+      "trans": "scabbardfish; sword",
+      "pos": "noun",
+      "gender": "f",
+      "note": "peixe-espada preto — the Madeira fish, com banana",
+      "ex_t": "Espada com banana é o prato mais madeirense que há.",
+      "ex_trans": "Scabbardfish with banana is the most Madeiran dish there is.",
+      "tags": [
+        "core",
+        "comida",
+        "madeira"
+      ],
+      "unit": "comida",
+      "id": "pt0475",
+      "freq": 475
+    },
+    {
+      "term": "o marisco",
+      "trans": "shellfish, seafood",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Sou alérgico a marisco, infelizmente.",
+      "ex_trans": "I'm allergic to shellfish, unfortunately.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0476",
+      "freq": 476
+    },
+    {
+      "term": "a padaria",
+      "trans": "bakery",
+      "pos": "noun",
+      "gender": "f",
+      "note": "where the morning starts",
+      "ex_t": "Passo na padaria antes do trabalho.",
+      "ex_trans": "I stop by the bakery before work.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0477",
+      "freq": 477
+    },
+    {
+      "term": "o talho",
+      "trans": "butcher's",
+      "pos": "noun",
+      "gender": "m",
+      "note": "açougue is the Brazilian word",
+      "ex_t": "O talho da esquina tem boa carne.",
+      "ex_trans": "The corner butcher has good meat.",
+      "tags": [
+        "core",
+        "compras",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0478",
+      "freq": 478
+    },
+    {
+      "term": "a peixaria",
+      "trans": "fishmonger's",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Na peixaria diz-se cedo: o bom peixe voa.",
+      "ex_trans": "At the fishmonger's, go early: the good fish flies.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0479",
+      "freq": 479
+    },
+    {
+      "term": "a mercearia",
+      "trans": "grocery shop",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the small old-school one",
+      "ex_t": "A mercearia do bairro ainda fia.",
+      "ex_trans": "The neighbourhood grocery still sells on credit.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0480",
+      "freq": 480
+    },
+    {
+      "term": "a imperial",
+      "trans": "draught beer (small)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "in Madeira and the south you may hear 'fino'",
+      "ex_t": "Duas imperiais bem geladas!",
+      "ex_trans": "Two well-chilled draught beers!",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0481",
+      "freq": 481
+    },
+    {
+      "term": "o gelado",
+      "trans": "ice cream",
+      "pos": "noun",
+      "gender": "m",
+      "note": "sorvete is Brazilian",
+      "ex_t": "Um gelado de dois sabores, por favor.",
+      "ex_trans": "A two-flavour ice cream, please.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0482",
+      "freq": 482
+    },
+    {
+      "term": "a dose",
+      "trans": "portion",
+      "pos": "noun",
+      "gender": "f",
+      "note": "meia dose feeds one; uma dose feeds two honest people",
+      "ex_t": "Meia dose chega bem para mim.",
+      "ex_trans": "Half a portion is plenty for me.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0483",
+      "freq": 483
+    },
+    {
+      "term": "a gorjeta",
+      "trans": "tip",
+      "pos": "noun",
+      "gender": "f",
+      "note": "modest in Portugal — round up and everyone's happy",
+      "ex_t": "Deixámos uma pequena gorjeta.",
+      "ex_trans": "We left a small tip.",
+      "tags": [
+        "core",
+        "comida",
+        "financas"
+      ],
+      "unit": "comida",
+      "id": "pt0484",
+      "freq": 484
+    },
+    {
+      "term": "branco",
+      "trans": "white",
+      "pos": "adj",
+      "gender": null,
+      "note": "vinho branco — the one that matters at lunch",
+      "ex_t": "A casa é branca com portadas verdes.",
+      "ex_trans": "The house is white with green shutters.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0485",
+      "freq": 485
+    },
+    {
+      "term": "preto",
+      "trans": "black",
+      "pos": "adj",
+      "gender": null,
+      "note": "negro in some fixed phrases",
+      "ex_t": "O gato preto do vizinho dorme no meu carro.",
+      "ex_trans": "The neighbour's black cat sleeps on my car.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0486",
+      "freq": 486
+    },
+    {
+      "term": "vermelho",
+      "trans": "red",
+      "pos": "adj",
+      "gender": null,
+      "note": "encarnado is the older pt-PT word — Benfica's colour",
+      "ex_t": "O semáforo está vermelho.",
+      "ex_trans": "The light is red.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0487",
+      "freq": 487
+    },
+    {
+      "term": "verde",
+      "trans": "green",
+      "pos": "adj",
+      "gender": null,
+      "note": "also unripe: a banana ainda está verde",
+      "ex_t": "A bandeira é verde e vermelha.",
+      "ex_trans": "The flag is green and red.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0488",
+      "freq": 488
+    },
+    {
+      "term": "azul",
+      "trans": "blue",
+      "pos": "adj",
+      "gender": null,
+      "note": "plural azuis",
+      "ex_t": "O mar hoje está muito azul.",
+      "ex_trans": "The sea is very blue today.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0489",
+      "freq": 489
+    },
+    {
+      "term": "amarelo",
+      "trans": "yellow",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O autocarro amarelo vai para o Monte.",
+      "ex_trans": "The yellow bus goes to Monte.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0490",
+      "freq": 490
+    },
+    {
+      "term": "castanho",
+      "trans": "brown",
+      "pos": "adj",
+      "gender": null,
+      "note": "marrom is Brazilian; castanha is also the chestnut",
+      "ex_t": "Tem os olhos castanhos.",
+      "ex_trans": "She has brown eyes.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0491",
+      "freq": 491
+    },
+    {
+      "term": "cinzento",
+      "trans": "grey",
+      "pos": "adj",
+      "gender": null,
+      "note": "cinza is the Brazilian word",
+      "ex_t": "O céu está cinzento, vem chuva.",
+      "ex_trans": "The sky is grey, rain is coming.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0492",
+      "freq": 492
+    },
+    {
+      "term": "cor de rosa",
+      "trans": "pink",
+      "pos": "adj",
+      "gender": null,
+      "note": "invariable",
+      "ex_t": "As buganvílias cor de rosa estão em flor.",
+      "ex_trans": "The pink bougainvillea is in bloom.",
+      "tags": [
+        "core",
+        "cor",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0493",
+      "freq": 493
+    },
+    {
+      "term": "a cor",
+      "trans": "colour",
+      "pos": "noun",
+      "gender": "f",
+      "note": "de que cor é? — what colour is it?",
+      "ex_t": "De que cor é o teu carro novo?",
+      "ex_trans": "What colour is your new car?",
+      "tags": [
+        "core",
+        "cor"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0494",
+      "freq": 494
+    },
+    {
+      "term": "o gato",
+      "trans": "cat",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O gato da vizinha entra cá em casa como se fosse dele.",
+      "ex_trans": "The neighbour's cat comes in as if the house were his.",
+      "tags": [
+        "core",
+        "animal"
+      ],
+      "unit": "natureza",
+      "id": "pt0495",
+      "freq": 495
+    },
+    {
+      "term": "o cão",
+      "trans": "dog",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cachorro in Portugal is a puppy — or a hot dog",
+      "ex_t": "O cão quer passear, chova ou não chova.",
+      "ex_trans": "The dog wants his walk, rain or no rain.",
+      "tags": [
+        "core",
+        "animal",
+        "pt-pt"
+      ],
+      "unit": "natureza",
+      "id": "pt0496",
+      "freq": 496
+    },
+    {
+      "term": "o pássaro",
+      "trans": "bird",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ave is the formal word",
+      "ex_t": "Os pássaros acordam-me às seis.",
+      "ex_trans": "The birds wake me at six.",
+      "tags": [
+        "core",
+        "animal"
+      ],
+      "unit": "natureza",
+      "id": "pt0497",
+      "freq": 497
+    },
+    {
+      "term": "a vaca",
+      "trans": "cow",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Há vacas no caminho para o Paul da Serra.",
+      "ex_trans": "There are cows on the way to Paul da Serra.",
+      "tags": [
+        "core",
+        "animal"
+      ],
+      "unit": "natureza",
+      "id": "pt0498",
+      "freq": 498
+    },
+    {
+      "term": "o cavalo",
+      "trans": "horse",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Nunca andei a cavalo.",
+      "ex_trans": "I've never ridden a horse.",
+      "tags": [
+        "core",
+        "animal"
+      ],
+      "unit": "natureza",
+      "id": "pt0499",
+      "freq": 499
+    },
+    {
+      "term": "a lagartixa",
+      "trans": "wall lizard",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira's sunbathing local",
+      "ex_t": "As lagartixas apanham sol no muro.",
+      "ex_trans": "The lizards sunbathe on the wall.",
+      "tags": [
+        "core",
+        "animal",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0500",
+      "freq": 500
+    },
+    {
+      "term": "a abelha",
+      "trans": "bee",
+      "pos": "noun",
+      "gender": "f",
+      "note": "mel de abelha da serra — mountain honey",
+      "ex_t": "As abelhas da serra fazem o melhor mel.",
+      "ex_trans": "The mountain bees make the best honey.",
+      "tags": [
+        "core",
+        "animal"
+      ],
+      "unit": "natureza",
+      "id": "pt0501",
+      "freq": 501
+    },
+    {
+      "term": "o peixe-espada",
+      "trans": "black scabbardfish",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the deep-sea Madeira special",
+      "ex_t": "O peixe-espada vive a mil metros de profundidade.",
+      "ex_trans": "The scabbardfish lives a thousand metres down.",
+      "tags": [
+        "core",
+        "animal",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0502",
+      "freq": 502
+    },
+    {
+      "term": "o trocado",
+      "trans": "small change",
+      "pos": "noun",
+      "gender": "m",
+      "note": "tens trocado? — the parking-machine question",
+      "ex_t": "Não tenho trocado para a máquina.",
+      "ex_trans": "I don't have change for the machine.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "lugar",
+      "id": "pt0503",
+      "freq": 503
+    },
+    {
+      "term": "a moeda",
+      "trans": "coin; currency",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Preciso de moedas para o carrinho do supermercado.",
+      "ex_trans": "I need coins for the supermarket trolley.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "lugar",
+      "id": "pt0504",
+      "freq": 504
+    },
+    {
+      "term": "a nota",
+      "trans": "banknote; grade",
+      "pos": "noun",
+      "gender": "f",
+      "note": "both the €20 and the exam result",
+      "ex_t": "O multibanco só dá notas de vinte.",
+      "ex_trans": "The ATM only gives twenties.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "unit": "lugar",
+      "id": "pt0505",
+      "freq": 505
+    },
+    {
+      "term": "a carta",
+      "trans": "letter; driving licence",
+      "pos": "noun",
+      "gender": "f",
+      "note": "carta de condução — the licence",
+      "ex_t": "Já tirei a carta há dez anos.",
+      "ex_trans": "I got my licence ten years ago.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0506",
+      "freq": 506
+    },
+    {
+      "term": "a assinatura",
+      "trans": "signature; subscription",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Falta a sua assinatura aqui em baixo.",
+      "ex_trans": "Your signature is missing down here.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0507",
+      "freq": 507
+    },
+    {
+      "term": "o banho",
+      "trans": "bath",
+      "pos": "noun",
+      "gender": "m",
+      "note": "tomar banho covers showering too",
+      "ex_t": "Vou tomar banho antes do jantar.",
+      "ex_trans": "I'll take a shower before dinner.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0508",
+      "freq": 508
+    },
+    {
+      "term": "o duche",
+      "trans": "shower",
+      "pos": "noun",
+      "gender": "m",
+      "note": "chuveiro is the fixture, duche the act — banho covers both",
+      "ex_t": "Um duche rápido e saio.",
+      "ex_trans": "A quick shower and I'm off.",
+      "tags": [
+        "core",
+        "casa",
+        "pt-pt"
+      ],
+      "unit": "casa",
+      "id": "pt0509",
+      "freq": 509
+    },
+    {
+      "term": "o pente",
+      "trans": "comb",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Perdi o pente na mochila.",
+      "ex_trans": "I lost my comb in the backpack.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0510",
+      "freq": 510
+    },
+    {
+      "term": "a escova de dentes",
+      "trans": "toothbrush",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esqueci-me da escova de dentes no hotel.",
+      "ex_trans": "I forgot my toothbrush at the hotel.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0511",
+      "freq": 511
+    },
+    {
+      "term": "o sabonete",
+      "trans": "bar of soap",
+      "pos": "noun",
+      "gender": "m",
+      "note": "sabão is laundry soap — different thing",
+      "ex_t": "Este sabonete cheira a alfazema.",
+      "ex_trans": "This soap smells of lavender.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0512",
+      "freq": 512
+    },
+    {
+      "term": "a chávena",
+      "trans": "cup",
+      "pos": "noun",
+      "gender": "f",
+      "note": "xícara is Brazilian — chávena is a pt-PT shibboleth",
+      "ex_t": "Uma chávena de chá e fico nova.",
+      "ex_trans": "A cup of tea and I'm a new person.",
+      "tags": [
+        "core",
+        "cozinha",
+        "pt-pt"
+      ],
+      "unit": "casa",
+      "id": "pt0513",
+      "freq": 513
+    },
+    {
+      "term": "o guardanapo",
+      "trans": "napkin",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Pode trazer mais guardanapos?",
+      "ex_trans": "Could you bring more napkins?",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "id": "pt0514",
+      "freq": 514
+    },
+    {
+      "term": "a panela",
+      "trans": "pot, saucepan",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A sopa está na panela, é só aquecer.",
+      "ex_trans": "The soup's in the pot, just heat it up.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "id": "pt0515",
+      "freq": 515
+    },
+    {
+      "term": "a frigideira",
+      "trans": "frying pan",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esta frigideira já não larga nada.",
+      "ex_trans": "This pan doesn't release anything any more.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "id": "pt0516",
+      "freq": 516
+    },
+    {
+      "term": "o forno",
+      "trans": "oven",
+      "pos": "noun",
+      "gender": "m",
+      "note": "no forno — roasted, the menu word",
+      "ex_t": "O bacalhau está no forno.",
+      "ex_trans": "The cod is in the oven.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "id": "pt0517",
+      "freq": 517
+    },
+    {
+      "term": "o micro-ondas",
+      "trans": "microwave",
+      "pos": "noun",
+      "gender": "m",
+      "note": "invariable in the plural",
+      "ex_t": "Aquece a sopa no micro-ondas.",
+      "ex_trans": "Heat the soup in the microwave.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "id": "pt0518",
+      "freq": 518
+    },
+    {
+      "term": "a chamada",
+      "trans": "phone call",
+      "pos": "noun",
+      "gender": "f",
+      "note": "chamada perdida — missed call",
+      "ex_t": "Tens uma chamada perdida da senhoria.",
+      "ex_trans": "You have a missed call from the landlady.",
+      "tags": [
+        "core",
+        "tecnologia"
+      ],
+      "unit": "trabalho",
+      "id": "pt0519",
+      "freq": 519
+    },
+    {
+      "term": "a mensagem",
+      "trans": "message",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Manda-me mensagem quando chegares.",
+      "ex_trans": "Text me when you arrive.",
+      "tags": [
+        "core",
+        "tecnologia"
+      ],
+      "unit": "trabalho",
+      "id": "pt0520",
+      "freq": 520
+    },
+    {
+      "term": "o carregador",
+      "trans": "charger",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also the person who carries",
+      "ex_t": "Alguém tem um carregador de iPhone?",
+      "ex_trans": "Does anyone have an iPhone charger?",
+      "tags": [
+        "core",
+        "tecnologia"
+      ],
+      "unit": "trabalho",
+      "id": "pt0521",
+      "freq": 521
+    },
+    {
+      "term": "a bateria",
+      "trans": "battery",
+      "pos": "noun",
+      "gender": "f",
+      "note": "estou sem bateria — the universal excuse",
+      "ex_t": "Estou quase sem bateria, ligo-te depois.",
+      "ex_trans": "I'm almost out of battery, I'll call you later.",
+      "tags": [
+        "core",
+        "tecnologia"
+      ],
+      "unit": "trabalho",
+      "id": "pt0522",
+      "freq": 522
+    },
+    {
+      "term": "a impressora",
+      "trans": "printer",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A impressora encravou outra vez.",
+      "ex_trans": "The printer jammed again.",
+      "tags": [
+        "core",
+        "tecnologia"
+      ],
+      "unit": "trabalho",
+      "id": "pt0523",
+      "freq": 523
+    },
+    {
+      "term": "a reunião de equipa",
+      "trans": "team meeting",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A reunião de equipa passou para as três.",
+      "ex_trans": "The team meeting moved to three.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "id": "pt0524",
+      "freq": 524
+    },
+    {
+      "term": "o salário",
+      "trans": "salary",
+      "pos": "noun",
+      "gender": "m",
+      "note": "o ordenado is the everyday word too",
+      "ex_t": "O salário cai no dia vinte e três.",
+      "ex_trans": "The salary lands on the twenty-third.",
+      "tags": [
+        "core",
+        "trabalho",
+        "financas"
+      ],
+      "unit": "trabalho",
+      "id": "pt0525",
+      "freq": 525
+    },
+    {
+      "term": "descansar",
+      "trans": "to rest",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ao domingo gosto de descansar.",
+      "ex_trans": "On Sundays I like to rest.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0526",
+      "freq": 526
+    },
+    {
+      "term": "acordar cedo",
+      "trans": "to wake up early",
+      "pos": "phrase",
+      "gender": null,
+      "note": "acordar is the verb; cedo the pain",
+      "ex_t": "Odeio acordar cedo no inverno.",
+      "ex_trans": "I hate waking up early in winter.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "verbos",
+      "id": "pt0527",
+      "freq": 527
+    },
+    {
+      "term": "fazer compras",
+      "trans": "to do the shopping",
+      "pos": "phrase",
+      "gender": null,
+      "note": "ir às compras — to go shopping",
+      "ex_t": "Faço compras ao sábado de manhã.",
+      "ex_trans": "I do the shopping on Saturday mornings.",
+      "tags": [
+        "core",
+        "frase",
+        "compras"
+      ],
+      "unit": "verbos",
+      "id": "pt0528",
+      "freq": 528
+    },
+    {
+      "term": "pôr a mesa",
+      "trans": "to set the table",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Pões a mesa enquanto acabo a sopa?",
+      "ex_trans": "Will you set the table while I finish the soup?",
+      "tags": [
+        "core",
+        "frase",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0529",
+      "freq": 529
+    },
+    {
+      "term": "tirar fotografias",
+      "trans": "to take photos",
+      "pos": "phrase",
+      "gender": null,
+      "note": "tirar, not fazer",
+      "ex_t": "Os turistas param para tirar fotografias.",
+      "ex_trans": "Tourists stop to take photos.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "verbos",
+      "id": "pt0530",
+      "freq": 530
+    },
+    {
+      "term": "marcar uma consulta",
+      "trans": "to book an appointment",
+      "pos": "phrase",
+      "gender": null,
+      "note": "marcar is the booking verb for everything",
+      "ex_t": "Preciso de marcar uma consulta no dentista.",
+      "ex_trans": "I need to book a dental appointment.",
+      "tags": [
+        "core",
+        "frase",
+        "saude"
+      ],
+      "unit": "verbos",
+      "id": "pt0531",
+      "freq": 531
+    },
+    {
+      "term": "apanhar sol",
+      "trans": "to sunbathe",
+      "pos": "phrase",
+      "gender": null,
+      "note": "apanhar catches buses, sun and colds alike",
+      "ex_t": "Fomos apanhar sol para o calhau.",
+      "ex_trans": "We went to catch some sun on the pebble beach.",
+      "tags": [
+        "core",
+        "frase",
+        "madeira"
+      ],
+      "unit": "verbos",
+      "id": "pt0532",
+      "freq": 532
+    },
+    {
+      "term": "dar um passeio",
+      "trans": "to take a stroll",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Vamos dar um passeio pela marginal?",
+      "ex_trans": "Shall we take a stroll along the seafront?",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "verbos",
+      "id": "pt0533",
+      "freq": 533
+    },
+    {
+      "term": "fazer anos",
+      "trans": "to have a birthday",
+      "pos": "phrase",
+      "gender": null,
+      "note": "quando fazes anos? — when's your birthday?",
+      "ex_t": "A minha filha faz anos em março.",
+      "ex_trans": "My daughter's birthday is in March.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "verbos",
+      "id": "pt0534",
+      "freq": 534
+    },
+    {
+      "term": "estar atrasado",
+      "trans": "to be late",
+      "pos": "phrase",
+      "gender": null,
+      "note": "atrasada for a woman",
+      "ex_t": "Despacha-te, estamos atrasados!",
+      "ex_trans": "Hurry up, we're late!",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "verbos",
+      "id": "pt0535",
+      "freq": 535
+    },
+    {
+      "term": "a maré",
+      "trans": "tide",
+      "pos": "noun",
+      "gender": "f",
+      "note": "maré alta / maré baixa",
+      "ex_t": "Com a maré baixa aparecem as poças.",
+      "ex_trans": "At low tide the rock pools appear.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0536",
+      "freq": 536
+    },
+    {
+      "term": "a ondulação",
+      "trans": "swell",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the surf-forecast word",
+      "ex_t": "A ondulação está forte demais para o barco.",
+      "ex_trans": "The swell is too strong for the boat.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0537",
+      "freq": 537
+    },
+    {
+      "term": "o trovão",
+      "trans": "thunder",
+      "pos": "noun",
+      "gender": "m",
+      "note": "relâmpago is the flash",
+      "ex_t": "O cão esconde-se quando há trovões.",
+      "ex_trans": "The dog hides when it thunders.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0538",
+      "freq": 538
+    },
+    {
+      "term": "o granizo",
+      "trans": "hail",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Caiu granizo na serra esta noite.",
+      "ex_trans": "It hailed in the mountains last night.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0539",
+      "freq": 539
+    },
+    {
+      "term": "o orvalho",
+      "trans": "dew",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "De manhã a erva está molhada do orvalho.",
+      "ex_trans": "In the morning the grass is wet with dew.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0540",
+      "freq": 540
+    },
+    {
+      "term": "húmido",
+      "trans": "humid, damp",
+      "pos": "adj",
+      "gender": null,
+      "note": "úmido is the Brazilian spelling — pt-PT keeps the h",
+      "ex_t": "O norte da ilha é mais húmido.",
+      "ex_trans": "The north of the island is damper.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0541",
+      "freq": 541
+    },
+    {
+      "term": "seco",
+      "trans": "dry",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O sul é mais seco e mais quente.",
+      "ex_trans": "The south is drier and hotter.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0542",
+      "freq": 542
+    },
+    {
+      "term": "a fila",
+      "trans": "queue",
+      "pos": "noun",
+      "gender": "f",
+      "note": "in Portugal also 'bicha' from older folks — don't be startled",
+      "ex_t": "Há fila até à porta na finanças.",
+      "ex_trans": "There's a queue to the door at the tax office.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0543",
+      "freq": 543
+    },
+    {
+      "term": "o balcão",
+      "trans": "counter, desk",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ao balcão — at the counter, where coffee is cheaper",
+      "ex_t": "Ao balcão o café é mais barato.",
+      "ex_trans": "At the counter the coffee is cheaper.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt0544",
+      "freq": 544
+    },
+    {
+      "term": "o andar",
+      "trans": "floor, storey",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also the verb 'to walk' — context decides",
+      "ex_t": "Moro no terceiro andar, sem elevador.",
+      "ex_trans": "I live on the third floor, no lift.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "lugar",
+      "id": "pt0545",
+      "freq": 545
+    },
+    {
+      "term": "a obra",
+      "trans": "construction work; work of art",
+      "pos": "noun",
+      "gender": "f",
+      "note": "as obras — the roadworks eternal",
+      "ex_t": "As obras na estrada acabam para o mês.",
+      "ex_trans": "The roadworks finish next month.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt0546",
+      "freq": 546
+    },
+    {
+      "term": "o barco",
+      "trans": "boat",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O barco para o Porto Santo sai às oito.",
+      "ex_trans": "The Porto Santo boat leaves at eight.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0547",
+      "freq": 547
+    },
+    {
+      "term": "a bagagem",
+      "trans": "luggage",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A bagagem de mão tem limite de dez quilos.",
+      "ex_trans": "Hand luggage has a ten-kilo limit.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0548",
+      "freq": 548
+    },
+    {
+      "term": "a paisagem",
+      "trans": "landscape, scenery",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A paisagem do miradouro corta a respiração.",
+      "ex_trans": "The view from the lookout takes your breath away.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0549",
+      "freq": 549
+    }
+  ]
+}
