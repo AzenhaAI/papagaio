@@ -59,7 +59,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
     <div class="panel" id="log" style="max-height:55vh; overflow-y:auto;"></div>
     <div style="display:flex; gap:8px; margin-top:10px;">
-      <input id="say" placeholder="responde em português…" autocomplete="off"
+      <input id="say" placeholder="type in Portuguese — or tap 🎙 and speak" autocomplete="off"
         style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:12px 14px; font:inherit; font-size:16px;" />
       <button id="mic" title="Speak your reply"
@@ -197,9 +197,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     // ---- microphone ----
     let rec = null, chunks = [], recording = false;
+    const HINT = '🎙 speak instead of typing — the coach will answer out loud';
 
     async function micToggle() {
-      if (recording) { rec.stop(); return; }
+      if (recording) {
+        // stop() throws InvalidStateError when the system already killed the
+        // recording (a call, tab switch, screen sleep). Without the catch the
+        // red state stuck forever and every next tap died on the same line.
+        try { rec.stop(); } catch {
+          recording = false;
+          $('mic').style.background = 'var(--panel2)';
+          $('micstate').textContent = HINT;
+        }
+        return;
+      }
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         const mime = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4']
@@ -217,13 +228,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           const fd = new FormData();
           fd.append('audio', blob, `say.${ext}`);
           fd.append('language', course);
-          const r = await fetch(`${API}/api/transcribe`, {
-            method: 'POST', headers: { 'x-device-token': localStorage.getItem(TOKKEY) }, body: fd,
-          });
-          const d = await r.json();
-          $('micstate').textContent = '🎙 speak instead of typing — the coach will answer out loud';
-          if (d.text) { $('say').value = d.text; send(true); }
-          else $('micstate').textContent = '🎙 ' + (d.error ?? 'did not catch that — try again');
+          // Network can vanish mid-hike; without a timeout this stuck on
+          // "a ouvir…" forever and read as a hang.
+          try {
+            const r = await fetch(`${API}/api/transcribe`, {
+              method: 'POST',
+              headers: { 'x-device-token': localStorage.getItem(TOKKEY) },
+              body: fd,
+              signal: AbortSignal.timeout(30000),
+            });
+            const d = await r.json();
+            $('micstate').textContent = HINT;
+            if (d.text) { $('say').value = d.text; send(true); }
+            else $('micstate').textContent = '🎙 ' + (d.error ?? 'did not catch that — try again');
+          } catch {
+            $('micstate').textContent = '🎙 lost the connection — check the network and try again';
+          }
         };
         rec.start();
         recording = true;
