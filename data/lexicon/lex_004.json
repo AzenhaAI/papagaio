@@ -6,3850 +6,6 @@
  },
  "words": [
   {
-   "term": "inconsciente",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4119,
-   "senses": [
-    {
-     "trans": "unconscious (not awake)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "unconscious (without directed thought or awareness)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "having no consciousness",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "inconsciente",
-   "pos": "noun",
-   "gender": "m/f",
-   "rank": 4119,
-   "senses": [
-    {
-     "trans": "one that is unconscious",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "one that is unaware",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the unconscious mind",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "protocolo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4122,
-   "senses": [
-    {
-     "trans": "protocol (system of procedures for doing something)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "puxa",
-   "pos": "interj",
-   "gender": null,
-   "rank": 4124,
-   "senses": [
-    {
-     "trans": "expresses surprise or admiration",
-     "tags": [
-      "Brazil",
-      "colloquial"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "expresses disappointment",
-     "tags": [
-      "Brazil",
-      "colloquial"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "anormal",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4127,
-   "senses": [
-    {
-     "trans": "abnormal, unnatural",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "irregular",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "dumb, fool, stupid",
-     "tags": [
-      "informal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "amável",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4131,
-   "senses": [
-    {
-     "trans": "amiable, lovable, lovely",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "friendly, kind",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "courteous, engaging",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "curar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4134,
-   "senses": [
-    {
-     "trans": "to cure; to heal (restore to health)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "decidido",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4137,
-   "senses": [
-    {
-     "trans": "brave",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "resolute",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "fascinante",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4138,
-   "senses": [
-    {
-     "trans": "fascinating",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "aparência",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4141,
-   "senses": [
-    {
-     "trans": "appearance (semblance)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "personalidade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4144,
-   "senses": [
-    {
-     "trans": "personality (set of qualities that make a person distinct from another)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "personality (set of qualities that make something distinctive or interesting)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "personality; celebrity (famous person)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "personality (qualities that make a person stand out from the crowd)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "julho",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4149,
-   "senses": [
-    {
-     "trans": "July",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Julho",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4149,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of julho; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "curta",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4151,
-   "senses": [
-    {
-     "trans": "short (film of length shorter than a feature film)",
-     "tags": [
-      "Brazil",
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cobarde",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4153,
-   "senses": [
-    {
-     "trans": "alternative form of covarde",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cobarde",
-   "pos": "noun",
-   "gender": "m/f",
-   "rank": 4153,
-   "senses": [
-    {
-     "trans": "alternative form of covarde",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "reconhecimento",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4154,
-   "senses": [
-    {
-     "trans": "acknowledgement (act of acknowledging)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "recognition (the act of recognising or the condition of being recognized)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "(the act of a man admitting a child as his own)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "thankfulness",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "reconnaissance",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "progresso",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4155,
-   "senses": [
-    {
-     "trans": "progress (a moving forward)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "radiação",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4156,
-   "senses": [
-    {
-     "trans": "radiation",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "radiancy",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "ray",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "dólar",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4158,
-   "senses": [
-    {
-     "trans": "dollar (designation for specific currency)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "estrangeiro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4159,
-   "senses": [
-    {
-     "trans": "foreigner",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "exterior, foreign lands",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "estrangeiro",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4159,
-   "senses": [
-    {
-     "trans": "from a different country; foreign",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "belonging to a different culture; foreign",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "traficante",
-   "pos": "noun",
-   "gender": "m/f",
-   "rank": 4161,
-   "senses": [
-    {
-     "trans": "trafficker (someone who transports and/or commercial illegal goods)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "dealer (one who peddles illicit drugs)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "reconhecer",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4162,
-   "senses": [
-    {
-     "trans": "to recognize",
-     "tags": [],
-     "ex": "Reconheceu-a imediatamente pelas belas luzes que dançavam e cintilavam como diamantes."
-    },
-    {
-     "trans": "to acknowledge",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "receita",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4169,
-   "senses": [
-    {
-     "trans": "recipe (instructions for making or preparing food dishes)",
-     "tags": [],
-     "ex": "O erro estava na receita, pois l é símbolo de litro e não abreviatura de lata, palavra que não pode ser abreviada, por questões de clareza."
-    },
-    {
-     "trans": "prescription (written order for the administration of a medicine)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "formula for a medicine",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "income (money one or an organisation earns)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "arranjo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4170,
-   "senses": [
-    {
-     "trans": "arrangement",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "adjustment",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Reverendo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4174,
-   "senses": [
-    {
-     "trans": "Reverend (an honorary title added to the names of Christian clergy)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "transmissão",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4175,
-   "senses": [
-    {
-     "trans": "transmission (all senses)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "transfer, transference",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "privacidade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4178,
-   "senses": [
-    {
-     "trans": "privacy",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "actividade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4180,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of atividade; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ensaio",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4182,
-   "senses": [
-    {
-     "trans": "essay (written composition)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "an instance of practicing, rehearsal",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a trial or test",
-     "tags": [],
-     "ex": "um balão de ensaio"
-    }
-   ]
-  },
-  {
-   "term": "prioridade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4183,
-   "senses": [
-    {
-     "trans": "priority",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "salada",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4185,
-   "senses": [
-    {
-     "trans": "salad (a food made primarily of a mixture of raw ingredients, typically vegetables)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "vegetables collectively",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "mess (confusion of things)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "lettuce (Lactuca sativa)",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cachorro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4190,
-   "senses": [
-    {
-     "trans": "puppy (a young dog)",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": "O canil da Quinta de São Fernando possui atualmente 14 cães adultos (sendo três machos), um cachorro com dois meses e meio e duas ninhadas de 11 crias, que nasceram no dia 25 de janeiro."
-    },
-    {
-     "trans": "dog (of any age)",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": "Por favor, cuide do cachorro enquanto estivermos fora."
-    },
-    {
-     "trans": "a promiscuous man",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": "Eu não sou cachorro, não / Pra viver tão humilhado / Eu não sou cachorro, não / Pra ser tão desprezado."
-    },
-    {
-     "trans": "an unfaithful man",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "ellipsis of cachorro-quente: hot dog",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "modillion",
-     "tags": [],
-     "ex": "A referência à tradição se dava novamente no detalhe, ou seja, no uso da telha capa e canal, das \"bicas levantadas à moda chinesa\" no arremate das esquinas, nas amplas beiras com telha invertida, cornija, friso, cachorro e/ou forro de madeira."
-    }
-   ]
-  },
-  {
-   "term": "sobrevivência",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4191,
-   "senses": [
-    {
-     "trans": "survival (quality or state of survivor)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "continuity (quality of what resists the passage of time)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "subsistence",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "conservation of cellular life for some time after the death of the organism",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "condução",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4193,
-   "senses": [
-    {
-     "trans": "conduction",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "leading, driving, conducting",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "government",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "escada",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4196,
-   "senses": [
-    {
-     "trans": "ladder",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "stairs",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "dificuldade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4198,
-   "senses": [
-    {
-     "trans": "difficulty (state of being difficult)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a difficult situation; a hardship",
-     "tags": [],
-     "ex": "Sim senhor, um bicho, capaz de vencer difficuldades."
-    }
-   ]
-  },
-  {
-   "term": "organizar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4200,
-   "senses": [
-    {
-     "trans": "to organize",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "luto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4204,
-   "senses": [
-    {
-     "trans": "mourning",
-     "tags": [],
-     "ex": "estar de luto"
-    }
-   ]
-  },
-  {
-   "term": "actor",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4206,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of ator; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "roda",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4208,
-   "senses": [
-    {
-     "trans": "wheel",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "cartwheel (a gymnastic maneuver)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "foundling wheel",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "circle (of people)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ignorar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4211,
-   "senses": [
-    {
-     "trans": "to ignore (to deliberately pay no attention to)",
-     "tags": [],
-     "ex": "O professor ignorava as perguntas dos alunos."
-    },
-    {
-     "trans": "to ignore (not to know; to be ignorant about)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to lack an important quality",
-     "tags": [],
-     "ex": "Essa resposta ignora o bom senso."
-    }
-   ]
-  },
-  {
-   "term": "dona",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4212,
-   "senses": [
-    {
-     "trans": "proprietress; female owner",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "female housekeeper; governess; housewife",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "married woman; wife",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "lady (adult female human, especially one old enough to be a mother)",
-     "tags": [
-      "colloquial"
-     ],
-     "ex": "Ei, dona, a senhora poderia por favor tirar seu carro?"
-    }
-   ]
-  },
-  {
-   "term": "aço",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4218,
-   "senses": [
-    {
-     "trans": "steel (alloy of iron and carbon)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "very strong, very resistent",
-     "tags": [],
-     "ex": "nervos de aço"
-    },
-    {
-     "trans": "cachaça",
-     "tags": [
-      "colloquial"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "will, disposition, patience",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "aço",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4218,
-   "senses": [
-    {
-     "trans": "albino (congenitally lacking melanin)",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "solar",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4219,
-   "senses": [
-    {
-     "trans": "solar (relating to the Sun)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "solar (relating to sunlight or solar energy)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "radiant (beaming with vivacity and happiness)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "solar",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4219,
-   "senses": [
-    {
-     "trans": "mansion (large, luxurious house)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "solar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4219,
-   "senses": [
-    {
-     "trans": "to solo (to play a solo)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to face an enemy alone; to take a solo fight",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to hit someone with the sole of the shoe",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to sole (to put a sole on a shoe)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "leitura",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4226,
-   "senses": [
-    {
-     "trans": "reading",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "medication package insert (document that provides information about a drug and its use)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "eliminar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4227,
-   "senses": [
-    {
-     "trans": "to eliminate (completely destroy something)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "depoimento",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4228,
-   "senses": [
-    {
-     "trans": "testimony, evidence",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "maya",
-   "pos": "noun",
-   "gender": "m/f",
-   "rank": 4230,
-   "senses": [
-    {
-     "trans": "obsolete spelling of maia",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "maya",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4230,
-   "senses": [
-    {
-     "trans": "obsolete spelling of maia",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "estrutura",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4232,
-   "senses": [
-    {
-     "trans": "structure (a cohesive whole built up of distinct parts)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "structure (underlying shape of a solid)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "structure (overall form or organization of something)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "framework (arrangement of support beams)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "palpite",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4235,
-   "senses": [
-    {
-     "trans": "heartbeat",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "hunch, guess, opinion",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "alcançar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4237,
-   "senses": [
-    {
-     "trans": "to reach",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "segunda-feira",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4242,
-   "senses": [
-    {
-     "trans": "Monday (day of the week)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "italiano",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4245,
-   "senses": [
-    {
-     "trans": "Italian (of or relating to Italy)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "Italian (relating to the Italian language)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "italiano",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4245,
-   "senses": [
-    {
-     "trans": "Italian (person from Italy or of Italian descent)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "Italian (Romance language spoken in Italy)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the Venetan dialect spoken in Brazil",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "tais",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4247,
-   "senses": [
-    {
-     "trans": "tais (a traditional woven textile of East Timor)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "tais",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4247,
-   "senses": [
-    {
-     "trans": "eye dialect spelling of estais",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "interrogatório",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4248,
-   "senses": [
-    {
-     "trans": "interrogation, questioning",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "adiante",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4252,
-   "senses": [
-    {
-     "trans": "ahead, forward (toward the front of something)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "ahead (in the future)",
-     "tags": [],
-     "ex": "Não vamos dar o resumo da opera porque custa quatrocentos réis e o jornal só um tostão. Deixemos isso para o Imbassahy e o Guanabarino. E passemos adeante."
-    }
-   ]
-  },
-  {
-   "term": "hemorragia",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4254,
-   "senses": [
-    {
-     "trans": "hemorrhage (release of blood; bleeding)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "conde",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4256,
-   "senses": [
-    {
-     "trans": "count (the male ruler of a county)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "earl (the male holder of a earldom)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "letras",
-   "pos": "noun",
-   "gender": null,
-   "rank": 4257,
-   "senses": [
-    {
-     "trans": "lyrics",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "embaixador",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4261,
-   "senses": [
-    {
-     "trans": "ambassador",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "termo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4262,
-   "senses": [
-    {
-     "trans": "surroundings (area surrounding something)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "end (final point of something in space or time)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "term (duration of a set length)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "condition; state",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "term (limitation, restriction or regulation)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "term; word (especially one from a specialised area)",
-     "tags": [],
-     "ex": "Os otakus não só incorporam diversos termos japoneses a sua fala como também se inspiram e são influenciados por características orientais em outras atividades, como o cosplay."
-    }
-   ]
-  },
-  {
-   "term": "circo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4263,
-   "senses": [
-    {
-     "trans": "circus",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "gloria",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4265,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1911 in Portugal) of glória",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "secretário",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4267,
-   "senses": [
-    {
-     "trans": "secretary (a person keeping records and handling clerical work)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "secretary (head of a department of government)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "secretary bird (Sagittarius serpentarius)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "separar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4271,
-   "senses": [
-    {
-     "trans": "to separate",
-     "tags": [],
-     "ex": "Convém, aqui, lembrar o ditado popular: amigos, amigos; negócios à parte. Caso o empreendedor saiba separar a amizade dos negócios, certamente estará em melhores condições para o sucesso."
-    },
-    {
-     "trans": "to divorce (to dissolve a marriage)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "trono",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4272,
-   "senses": [
-    {
-     "trans": "throne (ornate seat)",
-     "tags": [],
-     "ex": "O rei sentou-se no seu trono dourado."
-    },
-    {
-     "trans": "throne (the formal position of a sovereign)",
-     "tags": [],
-     "ex": "Ele é o herdeiro aparente do trono."
-    },
-    {
-     "trans": "throne, toilet (ceramic bowl)",
-     "tags": [
-      "colloquial"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "excitante",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4274,
-   "senses": [
-    {
-     "trans": "sexually arousing",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "exciting (causing excitement)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "fígado",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4277,
-   "senses": [
-    {
-     "trans": "liver (organ of human or animal)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "liver (organ of animal used as food)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "almirante",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4278,
-   "senses": [
-    {
-     "trans": "admiral (all senses)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "flag officer",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "A term of address for someone",
-     "tags": [
-      "Brazil",
-      "colloquial"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "leão",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4281,
-   "senses": [
-    {
-     "trans": "lion (mammal)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "lion",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "político",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4282,
-   "senses": [
-    {
-     "trans": "political",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "político",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4282,
-   "senses": [
-    {
-     "trans": "politician",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "mínima",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4287,
-   "senses": [
-    {
-     "trans": "minim (a half note, drawn as a semibreve with a stem)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "combinação",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4290,
-   "senses": [
-    {
-     "trans": "combination",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "namorar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4291,
-   "senses": [
-    {
-     "trans": "to endeavor to gain (someone's) affection; to woo; to court",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to be in a romantic relationship (with); to be dating",
-     "tags": [],
-     "ex": "Eu namoro com um ator."
-    },
-    {
-     "trans": "to treat (someone) as expected between lovers: to kiss him or her, to hug him or her, and so on",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to look (something) upon with pleasure; to admire",
-     "tags": [],
-     "ex": "Tô namorando aquela mina\nMas não sei se ela me namora"
-    }
-   ]
-  },
-  {
-   "term": "bebo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4293,
-   "senses": [
-    {
-     "trans": "eye dialect spelling of bêbado",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "bebo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4293,
-   "senses": [
-    {
-     "trans": "eye dialect spelling of bêbado",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "chip",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4294,
-   "senses": [
-    {
-     "trans": "alternative form of chipe",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "função",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4296,
-   "senses": [
-    {
-     "trans": "function",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "important meal held with friends and family during the Feast of the Holy Spirit",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "suportar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4297,
-   "senses": [
-    {
-     "trans": "to tolerate; to put up with; to take",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "visual",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4299,
-   "senses": [
-    {
-     "trans": "visual",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "visual",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4299,
-   "senses": [
-    {
-     "trans": "look, style",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "pintura",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4300,
-   "senses": [
-    {
-     "trans": "a painting",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "painting",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "desenho",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4301,
-   "senses": [
-    {
-     "trans": "drawing",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "design",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "ellipsis of desenho animado; cartoon",
-     "tags": [
-      "colloquial"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "alfa",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4308,
-   "senses": [
-    {
-     "trans": "alpha (the name of the first letter of the Greek alphabet , followed by beta)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the beginning; the origin of something",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "rapto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4311,
-   "senses": [
-    {
-     "trans": "abduction, kidnap",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "theft",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "miserável",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4319,
-   "senses": [
-    {
-     "trans": "miserable",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "wretched",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "miserly",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "diretor",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4320,
-   "senses": [
-    {
-     "trans": "governing",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "guiding",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "diretor",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4320,
-   "senses": [
-    {
-     "trans": "director",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "school principal",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "administrator",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "relacionamento",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4321,
-   "senses": [
-    {
-     "trans": "relationship (connection or association)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the act of relating (making a connection)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "relationship (a romantic or sexual involvement)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "dividir",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4325,
-   "senses": [
-    {
-     "trans": "to divide, separate",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to share",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to divide",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "gado",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4327,
-   "senses": [
-    {
-     "trans": "cattle",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "minion, simp",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the manipulated masses, sheeple",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "cuckold, in allusion to corno",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "political supporter of former president Jair Messias Bolsonaro",
-     "tags": [
-      "Brazil",
-      "slang"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "gado",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4327,
-   "senses": [
-    {
-     "trans": "easily led by others or by the common sense; manipulable",
-     "tags": [
-      "Brazil",
-      "informal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "nora",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4332,
-   "senses": [
-    {
-     "trans": "daughter-in-law",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "noria (waterwheel with buckets, used to raise water)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "complexo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4335,
-   "senses": [
-    {
-     "trans": "complex; intricate (having a great deal of fine detail or complexity)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "complex; complicated (not simple or straightforward)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "complex (of a number, involving the square root of -1)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "compound (composed of elements)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "complexo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4335,
-   "senses": [
-    {
-     "trans": "compound (group of buildings situated close together)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "complex (mental factors unconsciously associated with a subject)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "solitário",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4342,
-   "senses": [
-    {
-     "trans": "solitary, lone",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "solitário",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4342,
-   "senses": [
-    {
-     "trans": "loner",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "solitaire (single gem)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "infantil",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4343,
-   "senses": [
-    {
-     "trans": "child (relating to a child, suitable for a child)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "immature, childish (behaving immaturely)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "dobro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4345,
-   "senses": [
-    {
-     "trans": "double",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "gravata",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4348,
-   "senses": [
-    {
-     "trans": "tie; necktie (strip of cloth tied around the neck)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "choke; chokehold; stranglehold",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "valer",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4349,
-   "senses": [
-    {
-     "trans": "to be worth, valid or acceptable",
-     "tags": [],
-     "ex": "Quanto é que isto vale?"
-    },
-    {
-     "trans": "to show bravery",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to make use",
-     "tags": [],
-     "ex": "Ele se valeu de mentiras para ganhar esse prêmio."
-    },
-    {
-     "trans": "to earn, to draw",
-     "tags": [],
-     "ex": "O ator valeu um prémio pelo seu desempenho."
-    }
-   ]
-  },
-  {
-   "term": "apresentação",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4353,
-   "senses": [
-    {
-     "trans": "presentation, introduction",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "bastardo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4355,
-   "senses": [
-    {
-     "trans": "bastard",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "bastardo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4355,
-   "senses": [
-    {
-     "trans": "bastard",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "vice-presidente",
-   "pos": "noun",
-   "gender": "m/f",
-   "rank": 4358,
-   "senses": [
-    {
-     "trans": "vice president (deputy to a president)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "amarelo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4362,
-   "senses": [
-    {
-     "trans": "yellow in colour",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "Oriental (of East Asian descent)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "wry; forced; unnatural",
-     "tags": [],
-     "ex": "Uma pessoa me tocou sem eu querer / E ainda me convenceu que eu gostava / Molhou com seu suor minha pele infantil / E secou minhas lágrimas sempre que eu chorava / É, numa tarde chuvosa tudo começou / Um sorriso amarelo sempre que acabava"
-    }
-   ]
-  },
-  {
-   "term": "amarelo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4362,
-   "senses": [
-    {
-     "trans": "yellow (the colour)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "Oriental (a person of East Asian descent)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a member of syndicalist movements that sought government assistance",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "egg yolk (the yellow part of the egg)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "or",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "agarrar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4363,
-   "senses": [
-    {
-     "trans": "to grab; to grip; to grasp (hold, or take hold of, forcefully)",
-     "tags": [],
-     "ex": "Alguém me agarrou por trás."
-    },
-    {
-     "trans": "to claw",
-     "tags": [],
-     "ex": "A águia agarrou o peixe."
-    },
-    {
-     "trans": "to hold on; to cling (hold very tightly)",
-     "tags": [],
-     "ex": "Se a escada estiver muito lisa, se agarre no corrimão."
-    },
-    {
-     "trans": "to cling to; to love (be very fond of; to feel strongly about)",
-     "tags": [],
-     "ex": "Eu me agarro em leitura."
-    },
-    {
-     "trans": "to have a go at; to brawl (with); to get physical (with) (engage in a physical fight)",
-     "tags": [],
-     "ex": "Os bêbados começaram a se agarrar."
-    },
-    {
-     "trans": "to get physical with (make physical contact sexually)",
-     "tags": [],
-     "ex": "Os estudantes foram pegos se agarrando."
-    }
-   ]
-  },
-  {
-   "term": "rotina",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4368,
-   "senses": [
-    {
-     "trans": "routine (all senses)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "habit",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "quarta",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4369,
-   "senses": [
-    {
-     "trans": "quarter, fourth",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "fourth gear",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "quarte",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "ellipsis of quarta-feira",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "quarta, Portuguese quart, a traditional unit of dry volume equal to 3.2–4.8 L in different 19th-century contexts",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "quarta, Portuguese quarter-pound, a traditional unit of mass, usually equivalent to 115 g",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "quarta",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4369,
-   "senses": [
-    {
-     "trans": "ellipsis of quarta-feira",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "revelar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4371,
-   "senses": [
-    {
-     "trans": "to reveal, disclose",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to develop (to bring out images latent in photographic film)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "laranja",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4374,
-   "senses": [
-    {
-     "trans": "orange (having orange as its color)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "laranja",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4374,
-   "senses": [
-    {
-     "trans": "orange (fruit)",
-     "tags": [],
-     "ex": "As ſobre-mãos ſe manifeſtaõ de principio, como hũa fava; porèm depois vem a creçer, & a fazerſe algũas vezes, como meya laranja."
-    },
-    {
-     "trans": "orange (color)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a front man (one who knowingly allows himself or herself to be used for another's profit, especially in political schemes), a straw man",
-     "tags": [
-      "Brazil",
-      "colloquial"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "beira",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4375,
-   "senses": [
-    {
-     "trans": "edge, margin, border",
-     "tags": [],
-     "ex": "Entre o que era e o que seria, o primeiro pensamento que ocorreu ao homem foi: alguém, amigo do alheio, ao encontrar o veículo parado na beira da estrada, sem dono e disponível, achou por bem aliviar o seu proprietário do seu fardo."
-    }
-   ]
-  },
-  {
-   "term": "cinzas",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4376,
-   "senses": [
-    {
-     "trans": "ash, ashes",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "cremated remains",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "grátis",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4382,
-   "senses": [
-    {
-     "trans": "for free, free of charge",
-     "tags": [],
-     "ex": "Podemos estacionar grátis no shopping."
-    }
-   ]
-  },
-  {
-   "term": "grátis",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4382,
-   "senses": [
-    {
-     "trans": "free, gratis, without charge",
-     "tags": [],
-     "ex": "O shopping oferece estacionamento grátis."
-    }
-   ]
-  },
-  {
-   "term": "crânio",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4383,
-   "senses": [
-    {
-     "trans": "skull",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "genius (intelligent person)",
-     "tags": [
-      "informal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "escala",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4385,
-   "senses": [
-    {
-     "trans": "scale, measure",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "stopover",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "economia",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4387,
-   "senses": [
-    {
-     "trans": "economics (study)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "economy (management of resources)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "economy, frugality",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "nest egg (savings)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "importar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4388,
-   "senses": [
-    {
-     "trans": "to import",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to matter (be important)",
-     "tags": [],
-     "ex": "Não importa."
-    },
-    {
-     "trans": "to mind, to care",
-     "tags": [],
-     "ex": "Se não se importa."
-    },
-    {
-     "trans": "to mind",
-     "tags": [],
-     "ex": "Importa-se de abrir a janela?"
-    }
-   ]
-  },
-  {
-   "term": "audição",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4393,
-   "senses": [
-    {
-     "trans": "hearing",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "audition (performance)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "tapete",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4394,
-   "senses": [
-    {
-     "trans": "carpet, rug (a fabric used as a floor covering)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "arrancar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4395,
-   "senses": [
-    {
-     "trans": "to pull, pluck, rip (something)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to yank, jerk",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to pull down, tear down",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to start (a vehicle)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to start",
-     "tags": [],
-     "ex": "Arrancámos com o projeto."
-    },
-    {
-     "trans": "to boot",
-     "tags": [],
-     "ex": "O computador não arranca."
-    }
-   ]
-  },
-  {
-   "term": "prática",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4401,
-   "senses": [
-    {
-     "trans": "practice",
-     "tags": [],
-     "ex": "A prática leva à perfeição."
-    },
-    {
-     "trans": "use",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "experience",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "gravidade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4403,
-   "senses": [
-    {
-     "trans": "gravitation",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "gravity (force on Earth's surface)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "gravity; graveness",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "composure",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "the quality of having low pitch or tone",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "mando",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4404,
-   "senses": [
-    {
-     "trans": "command; order (demand for someone to do something)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "command (right or authority to order)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "consulta",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4405,
-   "senses": [
-    {
-     "trans": "consultation",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "opinion",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "recepção",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4407,
-   "senses": [
-    {
-     "trans": "reception (act of receiving)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "reception, front desk (the desk of a hotel, office etc. where guests are received)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "matéria",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4410,
-   "senses": [
-    {
-     "trans": "matter",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "subject",
-     "tags": [],
-     "ex": "Creio que já tiveram cinco professores nesta matéria."
-    },
-    {
-     "trans": "a specific subject within an educational subject",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a reportage, a journalistic article; a text communicating news",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "descrição",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4412,
-   "senses": [
-    {
-     "trans": "description",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "site",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4416,
-   "senses": [
-    {
-     "trans": "site; web site (a collection of pages on the World Wide Web)",
-     "tags": [],
-     "ex": "Digamos que eu queira colocar um home theater na sala de minha casa. Posso comprar a televisão em um lugar porque é mais barato, comprar as caixas em outro porque um amigo me indicou, comprar o resto do equipamento num site da internet e receber em casa, e depois tentar montar tudo sozinho."
-    }
-   ]
-  },
-  {
-   "term": "curiosidade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4419,
-   "senses": [
-    {
-     "trans": "curiosity; inquisitiveness (the tendency to want to investigate things)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "curiosity (an interesting object or piece of information)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "indiscretion",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "permanecer",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4420,
-   "senses": [
-    {
-     "trans": "to remain, stay, persist",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to abide, reside",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "coluna",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4421,
-   "senses": [
-    {
-     "trans": "column (a vertical line of entries in a table)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "column; pillar",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "spine; backbone",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a military column (a long body of troops)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a text column (body of text meant to be read line by line)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a periodical's column (a recurring feature in a periodical, especially an opinion piece)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ocasião",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4423,
-   "senses": [
-    {
-     "trans": "occasion (favorable opportunity)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "procurador",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4425,
-   "senses": [
-    {
-     "trans": "proxy (agent or substitute authorised to act for another person)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "prosecutor (prosecuting attorney)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "procurator (governor of a small imperial province)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "an official of the Brazilian government responsible for protecting the interests of the people",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "inveja",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4426,
-   "senses": [
-    {
-     "trans": "envy",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "francamente",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4427,
-   "senses": [
-    {
-     "trans": "frankly (in a frank, open or (too) honest manner)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "frankly (in truth, to tell the truth)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "procedimento",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4429,
-   "senses": [
-    {
-     "trans": "proceeding (the act of proceeding)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "procedure (series of small tasks or steps taken to accomplish an end)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "procedure (particular method for performing a task)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "conduct; behaviour",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "proceedings",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "method; function",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "criminal",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4430,
-   "senses": [
-    {
-     "trans": "criminal (of or relating to crime or penal law)",
-     "tags": [],
-     "ex": "Antecedente criminal."
-    }
-   ]
-  },
-  {
-   "term": "enterrado",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4431,
-   "senses": [
-    {
-     "trans": "buried",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "lentamente",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4432,
-   "senses": [
-    {
-     "trans": "slowly",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "remédio",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4433,
-   "senses": [
-    {
-     "trans": "medicine (substance which promotes healing)",
-     "tags": [],
-     "ex": "As comidas eram optimas, respondi, mas o estomago e a cabeça não me iam bem. O Dr. Liberato indicou um remedio."
-    },
-    {
-     "trans": "remedy (something that corrects or counteracts)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "alcoholic beverages",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "esquadrão",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4436,
-   "senses": [
-    {
-     "trans": "squadron",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "squad",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "banheira",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4439,
-   "senses": [
-    {
-     "trans": "bathtub (a large container for holding water in which a person may bathe)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "synonym of abatanado",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "instinto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4440,
-   "senses": [
-    {
-     "trans": "instinct (a natural or inherent impulse or behaviour)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "descobriram",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4442,
-   "senses": [
-    {
-     "trans": "third-person plural preterite/pluperfect indicative of descobrir",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "casino",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4444,
-   "senses": [
-    {
-     "trans": "European Portuguese standard form of cassino",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "tigre",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4449,
-   "senses": [
-    {
-     "trans": "tiger",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "campeonato",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4450,
-   "senses": [
-    {
-     "trans": "championship",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "explorar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4456,
-   "senses": [
-    {
-     "trans": "to explore",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to exploit",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to discover",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to research",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "encher",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4457,
-   "senses": [
-    {
-     "trans": "to fill, fill up",
-     "tags": [],
-     "ex": "Logo após, suave música encheu o recinto de cariciosas melodias."
-    },
-    {
-     "trans": "to inflate (e.g. a balloon or a tyre)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "estelar",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4458,
-   "senses": [
-    {
-     "trans": "stellar (of, pertaining to, or characteristic of stars)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "quinze",
-   "pos": "num",
-   "gender": null,
-   "rank": 4460,
-   "senses": [
-    {
-     "trans": "fifteen",
-     "tags": [],
-     "ex": "[…] e voltou, quinze minutos depois, […]"
-    }
-   ]
-  },
-  {
-   "term": "quinze",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4460,
-   "senses": [
-    {
-     "trans": "fifteen",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "comunicar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4463,
-   "senses": [
-    {
-     "trans": "to communicate (impart or transmit)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to communicate (impart information or knowledge of; to make known)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to communicate (express or convey ideas)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "arrumar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4464,
-   "senses": [
-    {
-     "trans": "to fix",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to set up",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to set",
-     "tags": [],
-     "ex": "arrumar a mesa"
-    },
-    {
-     "trans": "to tidy",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to stow, guard, save",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to organize",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "passaporte",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4465,
-   "senses": [
-    {
-     "trans": "passport",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "a type of hot dog",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ténis",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4467,
-   "senses": [
-    {
-     "trans": "tennis",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "a trainer, sneaker",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cria",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4468,
-   "senses": [
-    {
-     "trans": "young; offspring (a young animal, especially one that still depends on its mother)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "kid; young'un",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "someone who is raised by a family but is not their biological child; a ward or an adoptee",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "livestock (farm animals being raised)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "homeboy; homie; a person from the hood or the ghetto",
-     "tags": [
-      "Brazil",
-      "slang"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "victoria",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4470,
-   "senses": [
-    {
-     "trans": "obsolete form of vitória",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "lixado",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4473,
-   "senses": [
-    {
-     "trans": "screwed, fucked (beset with unfortunate circumstances)",
-     "tags": [
-      "Portugal",
-      "informal"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "said of someone who is bad-tempered",
-     "tags": [
-      "Portugal",
-      "informal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "actual",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4474,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of atual; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "álibi",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4480,
-   "senses": [
-    {
-     "trans": "alibi",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "máxima",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4483,
-   "senses": [
-    {
-     "trans": "maxim",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "high (maximum atmospheric temperature)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "abertura",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4485,
-   "senses": [
-    {
-     "trans": "opening, orifice",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "aperture",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "overture",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "habitual",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4487,
-   "senses": [
-    {
-     "trans": "habitual (behaving in a regular manner, as a habit)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "habitual (recurring, or that is performed over and over again)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cenário",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4490,
-   "senses": [
-    {
-     "trans": "scenario",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "scenery",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "set (scenery for a film or play)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "eventualmente",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4491,
-   "senses": [
-    {
-     "trans": "casually; occasionally",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "global",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4496,
-   "senses": [
-    {
-     "trans": "global (concerning all parts of the world)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "global (accessible by all parts of a program)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "working, having worked, or with potential to work, with Globo (Brazilian television network)",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": "uma atriz global"
-    },
-    {
-     "trans": "of or relating to Globo",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "lógica",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4498,
-   "senses": [
-    {
-     "trans": "logic",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "digital",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4499,
-   "senses": [
-    {
-     "trans": "digital; having to do with the fingers or toes",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "dealing with discrete values rather than a continuous spectrum of values",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "dealing with the display of numerical values",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "digital",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4499,
-   "senses": [
-    {
-     "trans": "ellipsis of impressão digital",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "sensual",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4500,
-   "senses": [
-    {
-     "trans": "sexually attractive; sexy",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "papelada",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4502,
-   "senses": [
-    {
-     "trans": "paperwork",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "heap of papers",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "tarte",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4506,
-   "senses": [
-    {
-     "trans": "tart",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "mágica",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4508,
-   "senses": [
-    {
-     "trans": "magic (ritual or procedure associated with supernatural powers)",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "magic (trick or illusion performed to give the appearance of supernatural phenomena)",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "derrotar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4510,
-   "senses": [
-    {
-     "trans": "to defeat",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to ruin oneself",
-     "tags": [],
-     "ex": "Que aconteceu, meu rapaz? Derrotei-me a mim próprio e até, para não expor a minha miséria às gerações que devem ser educadas no respeito pelos corajosos, levei as minhas cinzas para a catedral por um caminho esconso! Que me ficou ..."
-    }
-   ]
-  },
-  {
-   "term": "desperdiçar",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4512,
-   "senses": [
-    {
-     "trans": "to waste, squander",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "contagem",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4513,
-   "senses": [
-    {
-     "trans": "count, counting",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "score",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "química",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4515,
-   "senses": [
-    {
-     "trans": "chemistry",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "rever",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4517,
-   "senses": [
-    {
-     "trans": "to see again",
-     "tags": [],
-     "ex": "De qualquer jeito, ainda vou rever minha mãe um dia, não é?"
-    }
-   ]
-  },
-  {
-   "term": "bestial",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4520,
-   "senses": [
-    {
-     "trans": "bestial; brutish",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "beastly",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "cool",
-     "tags": [
-      "informal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "correto",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4521,
-   "senses": [
-    {
-     "trans": "correct",
-     "tags": [],
-     "ex": "Achava-o superior, correcto, distincto, de uma aristrocracia innata que a encantava."
-    },
-    {
-     "trans": "corrected, amended",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "razoável",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4522,
-   "senses": [
-    {
-     "trans": "reasonable (all senses)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "sensible",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "moderate",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "esclarecer",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4523,
-   "senses": [
-    {
-     "trans": "to clarify",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to explain",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "to enlighten",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "pesca",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4524,
-   "senses": [
-    {
-     "trans": "fishing (the business or sport of catching fishes)",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "catch (the amount of fish caught)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ira",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4525,
-   "senses": [
-    {
-     "trans": "anger, rage (a strong feeling of displeasure, hostility or antagonism towards someone or something)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "IRA",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4525,
-   "senses": [
-    {
-     "trans": "abbreviation of insuficiência renal aguda : ARF",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "sandes",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4526,
-   "senses": [
-    {
-     "trans": "sandwich (snack consisting of ingredients between slices of bread)",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "elegante",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4527,
-   "senses": [
-    {
-     "trans": "elegant",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "autópsia",
    "pos": "noun",
    "gender": "f",
@@ -4116,19 +272,6 @@
    ]
   },
   {
-   "term": "há-de",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4554,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1990) of há de; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "eternidade",
    "pos": "noun",
    "gender": "f",
@@ -4150,7 +293,7 @@
     {
      "trans": "insult; offense (act of offending)",
      "tags": [],
-     "ex": "Era, sem contestação, uma offensa mortal. Pois não tornava a pisar ali. Fosse tudo para o diabo."
+     "ex": ""
     },
     {
      "trans": "something which causes physical harm",
@@ -4285,19 +428,6 @@
      "tags": [
       "archaic"
      ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ámen",
-   "pos": "interj",
-   "gender": null,
-   "rank": 4588,
-   "senses": [
-    {
-     "trans": "alternative form of amém",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -4561,19 +691,6 @@
    "senses": [
     {
      "trans": "May",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Maio",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4620,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of maio; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -5142,19 +1259,6 @@
    ]
   },
   {
-   "term": "colecção",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 4692,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of coleção; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "leu",
    "pos": "noun",
    "gender": "m",
@@ -5443,19 +1547,6 @@
    ]
   },
   {
-   "term": "Abril",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4715,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of abril; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "raro",
    "pos": "adj",
    "gender": null,
@@ -5687,19 +1778,6 @@
    ]
   },
   {
-   "term": "objecto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4752,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of objeto; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "outubro",
    "pos": "noun",
    "gender": "m",
@@ -5707,19 +1785,6 @@
    "senses": [
     {
      "trans": "October (month)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Outubro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4753,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of outubro; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -5968,19 +2033,6 @@
    ]
   },
   {
-   "term": "Junho",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4776,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of junho; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "tara",
    "pos": "noun",
    "gender": "f",
@@ -6022,45 +2074,6 @@
    "senses": [
     {
      "trans": "welcome (the act of greeting, of bidding someone welcome)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "bêbedo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 4782,
-   "senses": [
-    {
-     "trans": "alternative form of bêbado",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "bêbedo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4782,
-   "senses": [
-    {
-     "trans": "alternative form of bêbado",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "BO",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4783,
-   "senses": [
-    {
-     "trans": "alternative form of B.O.",
      "tags": [],
      "ex": ""
     }
@@ -6833,14 +2846,6 @@
      "ex": ""
     },
     {
-     "trans": "clipping of lança-perfume",
-     "tags": [
-      "Brazil",
-      "slang"
-     ],
-     "ex": ""
-    },
-    {
      "trans": "langsat (fruit of the tree Lansium domesticum)",
      "tags": [],
      "ex": ""
@@ -6943,7 +2948,7 @@
     {
      "trans": "to be difficult",
      "tags": [],
-     "ex": "Custa muito accreditar nisso."
+     "ex": ""
     },
     {
      "trans": "to be tiresome, exhausting",
@@ -7566,19 +3571,6 @@
    ]
   },
   {
-   "term": "reis",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4922,
-   "senses": [
-    {
-     "trans": "obsolete spelling of réis",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "atacado",
    "pos": "adj",
    "gender": null,
@@ -7642,19 +3634,6 @@
    "senses": [
     {
      "trans": "medication",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ja",
-   "pos": "adv",
-   "gender": null,
-   "rank": 4939,
-   "senses": [
-    {
-     "trans": "obsolete spelling of já",
      "tags": [],
      "ex": ""
     }
@@ -7749,19 +3728,6 @@
     },
     {
      "trans": "a percentage or ratio of a value",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "star",
-   "pos": "verb",
-   "gender": null,
-   "rank": 4956,
-   "senses": [
-    {
-     "trans": "obsolete spelling of estar",
      "tags": [],
      "ex": ""
     }
@@ -8023,21 +3989,6 @@
    ]
   },
   {
-   "term": "sector",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 4986,
-   "senses": [
-    {
-     "trans": "alternative form of setor",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "prometer",
    "pos": "verb",
    "gender": null,
@@ -8056,7 +4007,7 @@
     {
      "trans": "to be promising (likely to develop in a desirable fashion)",
      "tags": [],
-     "ex": "Queria. Na segunda-feira do carnaval, defronte do cinema, fôra muito amavel commigo. Olhadelas, sorrisos, um proverbio embaraçado, em francez... Aquillo promettia."
+     "ex": ""
     }
    ]
   },
@@ -8231,14 +4182,6 @@
      "trans": "home",
      "tags": [],
      "ex": ""
-    },
-    {
-     "trans": "ellipsis of leite ninho",
-     "tags": [
-      "Brazil",
-      "colloquial"
-     ],
-     "ex": "“Os que mais saem são o brigadeiro tradicional, de ninho com nutella, de churros e beijinho”, lembrou."
     }
    ]
   },
@@ -8280,11 +4223,6 @@
    "rank": 5009,
    "senses": [
     {
-     "trans": "clipping of computador portátil (laptop computer)",
-     "tags": [],
-     "ex": ""
-    },
-    {
      "trans": "mobile phone",
      "tags": [
       "Portugal"
@@ -8321,19 +4259,6 @@
     },
     {
      "trans": "taco (a Mexican snack food)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "electricidade",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5013,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of eletricidade; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -8412,22 +4337,6 @@
     {
      "trans": "subordinate",
      "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "secundário",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5019,
-   "senses": [
-    {
-     "trans": "clipping of ensino secundário",
-     "tags": [
-      "Portugal",
-      "colloquial"
-     ],
      "ex": ""
     }
    ]
@@ -8595,37 +4504,6 @@
     },
     {
      "trans": "enforcement",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "d.",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5042,
-   "senses": [
-    {
-     "trans": "alternative letter-case form of D.",
-     "tags": [],
-     "ex": "A comunidade benedictina reuniu-se hontem para eleger o novo abbade, na vaga de d. Ruperto Rudolf, fallecido em São Paulo.\nFoi eleito dom Placido Etaeb."
-    }
-   ]
-  },
-  {
-   "term": "D.",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5042,
-   "senses": [
-    {
-     "trans": "abbreviation of Dom",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "abbreviation of Dona",
      "tags": [],
      "ex": ""
     }
@@ -8879,7 +4757,7 @@
     {
      "trans": "to attract",
      "tags": [],
-     "ex": "A solteirona é pretenciosa, presumida, avida de attrahir a attenção."
+     "ex": ""
     },
     {
      "trans": "to amaze",
@@ -8977,19 +4855,6 @@
      "tags": [
       "informal"
      ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "SO",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5074,
-   "senses": [
-    {
-     "trans": "acronym of sistema operacional",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -9586,19 +5451,6 @@
    ]
   },
   {
-   "term": "Agosto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5137,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of agosto; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "manual",
    "pos": "adj",
    "gender": null,
@@ -9632,19 +5484,6 @@
    "senses": [
     {
      "trans": "November",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Novembro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5143,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of novembro; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -9783,11 +5622,6 @@
      "trans": "generous (willing to give and share unsparingly)",
      "tags": [],
      "ex": ""
-    },
-    {
-     "trans": "generous (of noble birth)",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -9824,11 +5658,6 @@
      "trans": "candle",
      "tags": [],
      "ex": "Acendi uma vela para iluminar a sala."
-    },
-    {
-     "trans": "clipping of vela de ignição",
-     "tags": [],
-     "ex": ""
     },
     {
      "trans": "third wheel",
@@ -9870,19 +5699,6 @@
      "tags": [
       "colloquial"
      ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "cowboy",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5161,
-   "senses": [
-    {
-     "trans": "alternative spelling of caubói /cobói",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -10002,13 +5818,6 @@
      "trans": "GPS receiver",
      "tags": [],
      "ex": "Para o resgate, os bombeiros utilizaram técnicas de rapel e contaram com a ajuda de um GPS, instalado na coleira do animal."
-    },
-    {
-     "trans": "initialism of guia de previdência social",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": "A guia da Previdência Social, também conhecida pela sigla GPS, é um velho conhecido do contribuinte brasileiro. O documento serve para o recolhimento das quantias referentes aos beneficiários do INSS."
     }
    ]
   },
@@ -10045,21 +5854,6 @@
      "trans": "technician",
      "tags": [],
      "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Oscar",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5178,
-   "senses": [
-    {
-     "trans": "alternative form of óscar",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": "A música é tão importante que existe até categoria de premiação no Oscar, pois a mesma ajuda a criar todo o clima que vemos nos filmes[,] seja este um filme divertido e infantil, ou seja,^([sic]) aquele terror super hiper mega blaster assustador."
     }
    ]
   },
@@ -10302,7 +6096,7 @@
     {
      "trans": "makeup",
      "tags": [],
-     "ex": "Ela está usando muita maquilhagem."
+     "ex": ""
     },
     {
      "trans": "cosmetics",
@@ -10528,19 +6322,6 @@
    ]
   },
   {
-   "term": "tecto",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5248,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of teto; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "grato",
    "pos": "adj",
    "gender": null,
@@ -10576,11 +6357,6 @@
      "tags": [
       "Brazil"
      ],
-     "ex": ""
-    },
-    {
-     "trans": "proper noun; name; designation",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -10745,19 +6521,6 @@
    ]
   },
   {
-   "term": "grey",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5275,
-   "senses": [
-    {
-     "trans": "alternative form of gray (race of extraterrestrials)",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "valeu",
    "pos": "interj",
    "gender": null,
@@ -10871,7 +6634,7 @@
     {
      "trans": "fame",
      "tags": [],
-     "ex": "Ele entrou para o hall da fama."
+     "ex": ""
     },
     {
      "trans": "reputation",
@@ -11278,19 +7041,6 @@
    ]
   },
   {
-   "term": "cabine",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5340,
-   "senses": [
-    {
-     "trans": "alternative form of cabina",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "determinar",
    "pos": "verb",
    "gender": null,
@@ -11502,19 +7252,6 @@
    ]
   },
   {
-   "term": "Março",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5370,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of março; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "escudo",
    "pos": "noun",
    "gender": "m",
@@ -11630,32 +7367,6 @@
    "senses": [
     {
      "trans": "knee",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "virão",
-   "pos": "verb",
-   "gender": null,
-   "rank": 5381,
-   "senses": [
-    {
-     "trans": "obsolete spelling of viram",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "ficarão",
-   "pos": "verb",
-   "gender": null,
-   "rank": 5385,
-   "senses": [
-    {
-     "trans": "obsolete spelling of ficaram",
      "tags": [],
      "ex": ""
     }
@@ -11851,11 +7562,6 @@
      "trans": "radar (radio device for detecting distant objects)",
      "tags": [],
      "ex": ""
-    },
-    {
-     "trans": "ellipsis of radar de velocidade",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -11867,19 +7573,6 @@
    "senses": [
     {
      "trans": "January",
-     "tags": [],
-     "ex": "Em 22 de janeiro de 1968, ocorreu o vôo da Apollo 5."
-    }
-   ]
-  },
-  {
-   "term": "Janeiro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5414,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of janeiro; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -11917,34 +7610,6 @@
     {
      "trans": "wound",
      "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "khan",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5421,
-   "senses": [
-    {
-     "trans": "alternative spelling of cã",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "media",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5422,
-   "senses": [
-    {
-     "trans": "alternative spelling of média",
-     "tags": [
-      "Portugal"
-     ],
      "ex": ""
     }
    ]
@@ -12447,19 +8112,6 @@
    ]
   },
   {
-   "term": "hmm",
-   "pos": "interj",
-   "gender": null,
-   "rank": 5469,
-   "senses": [
-    {
-     "trans": "alternative form of hm",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "específico",
    "pos": "adj",
    "gender": null,
@@ -12558,19 +8210,6 @@
    ]
   },
   {
-   "term": "whisky",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5480,
-   "senses": [
-    {
-     "trans": "alternative form of uísque",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "dezembro",
    "pos": "noun",
    "gender": "m",
@@ -12578,19 +8217,6 @@
    "senses": [
     {
      "trans": "December",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "Dezembro",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5482,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of dezembro; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -12610,7 +8236,7 @@
     {
      "trans": "yard (a small area adjoining the precincts of a house or other building)",
      "tags": [],
-     "ex": "Estavam no pateo duma fazenda sem vida. O curral deserto, o chiqueiro das cabras arruinado e tambem deserto, a casa do vaqueiro fechada, tudo annunciava abandono. Certamente o gado se finara e os moradores tinham fugido."
+     "ex": ""
     },
     {
      "trans": "vestibule (passage, hall or room between the outer door and the interior of a building)",
@@ -12711,11 +8337,6 @@
      "trans": "towel (cloth used for drying something wet)",
      "tags": [],
      "ex": "Acabei de sair da piscina. Alguém me arranja uma toalha?"
-    },
-    {
-     "trans": "ellipsis of toalha de mesa",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -12790,19 +8411,6 @@
    ]
   },
   {
-   "term": "actriz",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5505,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of atriz; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "misterioso",
    "pos": "adj",
    "gender": null,
@@ -12866,13 +8474,6 @@
      "trans": "acid (any corrosive liquid)",
      "tags": [
       "informal"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "clipping of ácido lisérgico; acid (LSD)",
-     "tags": [
-      "slang"
      ],
      "ex": ""
     }
@@ -13020,7 +8621,7 @@
     {
      "trans": "out of place, exposed; humiliated, embarrassed",
      "tags": [],
-     "ex": "O pobre rapaz, que conhecia a falsa posição em que se collocara com a sua phrase, sentia-se humilhado e como que vendido n’aquelle meio."
+     "ex": ""
     }
    ]
   },
@@ -13201,19 +8802,6 @@
      "trans": "a born leader",
      "tags": [],
      "ex": "Seu filho é uma águia, Sra. Coelho!"
-    }
-   ]
-  },
-  {
-   "term": "my",
-   "pos": "pron",
-   "gender": null,
-   "rank": 5559,
-   "senses": [
-    {
-     "trans": "obsolete form of mim",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -13957,19 +9545,6 @@
    ]
   },
   {
-   "term": "oxalá",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5631,
-   "senses": [
-    {
-     "trans": "alternative letter-case form of Oxalá",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "pato",
    "pos": "noun",
    "gender": "m",
@@ -14169,11 +9744,6 @@
      "trans": "solitary confinement",
      "tags": [],
      "ex": ""
-    },
-    {
-     "trans": "ellipsis of bicha-solitária",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -14279,19 +9849,6 @@
    ]
   },
   {
-   "term": "excepção",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5663,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of exceção; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "cauda",
    "pos": "noun",
    "gender": "f",
@@ -14345,19 +9902,6 @@
    ]
   },
   {
-   "term": "actualmente",
-   "pos": "adv",
-   "gender": null,
-   "rank": 5667,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of atualmente; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "autor",
    "pos": "noun",
    "gender": "m",
@@ -14388,19 +9932,6 @@
      "tags": [
       "archaic"
      ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "colónia",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5671,
-   "senses": [
-    {
-     "trans": "European Portuguese standard spelling of colônia",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -14791,7 +10322,7 @@
     {
      "trans": "autumn",
      "tags": [],
-     "ex": "Não imaginas, querida amiga, como hoje é doce e tranquillo o meu outomno!"
+     "ex": ""
     }
    ]
   },
@@ -15167,13 +10698,6 @@
       "Brazil"
      ],
      "ex": ""
-    },
-    {
-     "trans": "alternative form of cobarde",
-     "tags": [
-      "Portugal"
-     ],
-     "ex": ""
     }
    ]
   },
@@ -15187,13 +10711,6 @@
      "trans": "coward",
      "tags": [
       "Brazil"
-     ],
-     "ex": ""
-    },
-    {
-     "trans": "alternative form of cobarde",
-     "tags": [
-      "Portugal"
      ],
      "ex": ""
     }
@@ -15372,7 +10889,7 @@
     {
      "trans": "lap (upper legs of a seated person)",
      "tags": [],
-     "ex": "A Cigana, parecendo comprehender aquellas palavras, endireitou-se, e pousando as patas no collo da menina, beijou-lhe carinhosamente as mãos..."
+     "ex": ""
     },
     {
      "trans": "neck; collum (part of body connecting the head and the trunk)",
@@ -16162,19 +11679,6 @@
    ]
   },
   {
-   "term": "DNA",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5859,
-   "senses": [
-    {
-     "trans": "alternative form of ADN",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "forçar",
    "pos": "verb",
    "gender": null,
@@ -16250,24 +11754,6 @@
       "Brazil",
       "slang"
      ],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "câmera",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 5869,
-   "senses": [
-    {
-     "trans": "alternative form of câmara",
-     "tags": [],
-     "ex": ""
-    },
-    {
-     "trans": "alternative form of câmara",
-     "tags": [],
      "ex": ""
     }
    ]
@@ -16664,13 +12150,6 @@
      "trans": "plaza (a public square or open area in front of a building or a place)",
      "tags": [],
      "ex": "A Praça do Comércio é uma das maiores praças da Europa."
-    },
-    {
-     "trans": "ellipsis of praça de pré",
-     "tags": [
-      "Brazil"
-     ],
-     "ex": ""
     }
    ]
   },
@@ -16692,32 +12171,6 @@
     },
     {
      "trans": "connection",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "activo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 5936,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of ativo; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "activo",
-   "pos": "adj",
-   "gender": null,
-   "rank": 5936,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1943 in Brazil and 1990 in Portugal) of ativo; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
      "tags": [],
      "ex": ""
     }
@@ -16794,11 +12247,6 @@
      "trans": "hail (introduces a formal greeting)",
      "tags": [],
      "ex": "Ave César!"
-    },
-    {
-     "trans": "clipping of ave Maria",
-     "tags": [],
-     "ex": ""
     }
    ]
   },
@@ -17178,7 +12626,7 @@
      "tags": [
       "informal"
      ],
-     "ex": "Hoje a 1 hora da tarde foi tambem conduzido áquelle posto o creoulo Manoel Oliveira, por estar cahido com forte «mona» na rua 15 de Novembro, na porta do estabelecimento funerário do Sr. Miguel Dellelis."
+     "ex": ""
     },
     {
      "trans": "the state of being upset, bothered or annoyed",
@@ -17921,19 +13369,6 @@
    ]
   },
   {
-   "term": "auto-estrada",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 6069,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1990) of autoestrada; still used where the agreement hasn’t come into effect and may occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "aterragem",
    "pos": "noun",
    "gender": "f",
@@ -18054,32 +13489,6 @@
    ]
   },
   {
-   "term": "vôo",
-   "pos": "noun",
-   "gender": "m",
-   "rank": 6085,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1990) of voo; may still occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "vôo",
-   "pos": "verb",
-   "gender": null,
-   "rank": 6085,
-   "senses": [
-    {
-     "trans": "pre-reform spelling (used until 1990) of voo; may still occur as a sporadic misspelling",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "interrogar",
    "pos": "verb",
    "gender": null,
@@ -18101,7 +13510,7 @@
     {
      "trans": "to push (apply a force to an object so that it moves away)",
      "tags": [],
-     "ex": "[…] o empurrou tão rijo que deu com elle da eſcotilha abaixo […]"
+     "ex": "Ele se aproximou e experimentou empurrá-la."
     },
     {
      "trans": "to push (continually promote a point of view, product, etc.)",
@@ -18141,19 +13550,6 @@
    "senses": [
     {
      "trans": "comedy",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
-   "term": "parti",
-   "pos": "verb",
-   "gender": null,
-   "rank": 6095,
-   "senses": [
-    {
-     "trans": "eye dialect spelling of partir, representing Brazil Portuguese",
      "tags": [],
      "ex": ""
     }
@@ -18853,19 +14249,6 @@
    ]
   },
   {
-   "term": "Srª",
-   "pos": "noun",
-   "gender": "f",
-   "rank": 6178,
-   "senses": [
-    {
-     "trans": "abbreviation of senhora as a title; Mrs",
-     "tags": [],
-     "ex": ""
-    }
-   ]
-  },
-  {
    "term": "urgência",
    "pos": "noun",
    "gender": "f",
@@ -18901,6 +14284,4719 @@
    "senses": [
     {
      "trans": "Australian blackwood (Acacia melanoxylon)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "porrada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6184,
+   "senses": [
+    {
+     "trans": "punch, slap",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "fight",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "shedload (large quantity)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "otário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6188,
+   "senses": [
+    {
+     "trans": "sucker (person who is easily fooled)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "arsehole, douchebag (generic term of abuse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "otário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6188,
+   "senses": [
+    {
+     "trans": "easily fooled",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pediram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6189,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of pedir",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desespero",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6197,
+   "senses": [
+    {
+     "trans": "despair (loss of hope)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "feminino",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6198,
+   "senses": [
+    {
+     "trans": "having womanly qualities; womanly; feminine",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "of feminine gender; feminine",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encantado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6199,
+   "senses": [
+    {
+     "trans": "enchanted, bewitched",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "delighted, pleased",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encantado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6199,
+   "senses": [
+    {
+     "trans": "a supernatural entity from Brazilian folklore, especially of the type worshipped in encantaria",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "gripe",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6200,
+   "senses": [
+    {
+     "trans": "the flu, influenza",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lésbica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6211,
+   "senses": [
+    {
+     "trans": "a lesbian woman",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amigável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6212,
+   "senses": [
+    {
+     "trans": "amicable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amigável",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6212,
+   "senses": [
+    {
+     "trans": "friendly (game not part of a competition)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "funcionário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6213,
+   "senses": [
+    {
+     "trans": "official, functionary",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "employee, staff member",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "proprietário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6215,
+   "senses": [
+    {
+     "trans": "owner (one who owns)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "landlord (person who owns and rents land)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "proprietário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6215,
+   "senses": [
+    {
+     "trans": "proprietary",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "boy",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6216,
+   "senses": [
+    {
+     "trans": "office boy",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "boyfriend (male partner)",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Estou com meu boy."
+    },
+    {
+     "trans": "a young, upper-class man",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "young man",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Me declarei pro boy."
+    }
+   ]
+  },
+  {
+   "term": "obrigar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6217,
+   "senses": [
+    {
+     "trans": "to oblige; to force; to compel; to coerce (tell someone to do something against their wills, often by using threats of violence)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to induce an action by leaving no other choices",
+     "tags": [],
+     "ex": "A situação nos obriga a abandonar este local."
+    }
+   ]
+  },
+  {
+   "term": "abuso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6223,
+   "senses": [
+    {
+     "trans": "abuse",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "separação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6225,
+   "senses": [
+    {
+     "trans": "separation",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "segregation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mancha",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6226,
+   "senses": [
+    {
+     "trans": "stain, blemish, mark, spot (discoloured spot or visible impression)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a disgrace, discredit in one’s reputation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "disciplina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6227,
+   "senses": [
+    {
+     "trans": "discipline",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "subject (in school)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "guião",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6229,
+   "senses": [
+    {
+     "trans": "banner",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "handlebar",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "script",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "educado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6230,
+   "senses": [
+    {
+     "trans": "well-mannered, polite",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "educated",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ficção",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6232,
+   "senses": [
+    {
+     "trans": "fiction",
+     "tags": [],
+     "ex": "Ao terceiro argumento, de que ſe tratou ſupra n.47. ſe reſponde, confeſſando, que o beneficio da representação he priuilegio, & ficção da ley, induzida contra as regras geraes de direito; & que como tal, não pode hauer lugar ſenaõ nos caſos em que for expreſſamente concedido, nem ſe pode extender a outros."
+    }
+   ]
+  },
+  {
+   "term": "delegado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6233,
+   "senses": [
+    {
+     "trans": "delegate",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "machado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6234,
+   "senses": [
+    {
+     "trans": "axe (tool and weapon consisting of a heavy blade on the end of a shaft)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "oração",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6236,
+   "senses": [
+    {
+     "trans": "prayer (practice of communicating with one's God)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clause",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "comprado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6238,
+   "senses": [
+    {
+     "trans": "which has been obtained in exchange for money; bought",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fluxo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6240,
+   "senses": [
+    {
+     "trans": "flow",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "baile funk",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "boxe",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6241,
+   "senses": [
+    {
+     "trans": "boxing",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "valia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6243,
+   "senses": [
+    {
+     "trans": "worth (the inherent quality that makes something desirable)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "boneco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6245,
+   "senses": [
+    {
+     "trans": "doll (of a male human character or animal)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dummy",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "stick figure",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "puppet (small model of a person or animal able to be moved by strings or rods)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "puppet (manipulable person)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cartoons",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jornada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6248,
+   "senses": [
+    {
+     "trans": "journey; voyage (a long trip)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a day’s travelling",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a day’s work",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cavar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6250,
+   "senses": [
+    {
+     "trans": "to dig, excavate, burrow, scoop",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "avanço",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6251,
+   "senses": [
+    {
+     "trans": "advance, advancement",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "advantage",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "calibre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6252,
+   "senses": [
+    {
+     "trans": "caliber / calibre (dimension)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gauge (mathematics, physics)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pelotão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6257,
+   "senses": [
+    {
+     "trans": "platoon, squad",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "peloton",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pólvora",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6259,
+   "senses": [
+    {
+     "trans": "gunpowder, powder",
+     "tags": [],
+     "ex": "Éramos milhões, até que vieram vilões / O ataque nosso não bastou / Fui de bastão, eles tinham a pólvora / Vi meu povo se apavorar"
+    },
+    {
+     "trans": "gunpowder tea",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "especificamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 6261,
+   "senses": [
+    {
+     "trans": "specifically",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "instável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6262,
+   "senses": [
+    {
+     "trans": "unstable; unsteady (tending to change)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unstable; unsteady (tending to collapse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "massagem",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6264,
+   "senses": [
+    {
+     "trans": "massage",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ameaçar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6268,
+   "senses": [
+    {
+     "trans": "to threaten (to make a threat against someone; to use threats)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to endanger, menace",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to portend, threaten",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "quantia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6269,
+   "senses": [
+    {
+     "trans": "sum (portion of money)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "amount",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ensino",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6271,
+   "senses": [
+    {
+     "trans": "teaching (the profession of teaching)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "banana",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6273,
+   "senses": [
+    {
+     "trans": "banana (fruit)",
+     "tags": [],
+     "ex": "As bananas são ricas em potássio"
+    },
+    {
+     "trans": "banana (plant)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "penis",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "bras d'honneur (obscene gesture)",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "wimp (a weak or unconfident person)",
+     "tags": [
+      "slang"
+     ],
+     "ex": "Aquele rapaz é um banana!"
+    }
+   ]
+  },
+  {
+   "term": "banana",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6273,
+   "senses": [
+    {
+     "trans": "crazy, nuts, loco",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "realização",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6275,
+   "senses": [
+    {
+     "trans": "realization",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "performance",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "achievement",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fúria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6276,
+   "senses": [
+    {
+     "trans": "rage",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "alugar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6277,
+   "senses": [
+    {
+     "trans": "to rent, to hire",
+     "tags": [],
+     "ex": "Quero alugar um carro."
+    },
+    {
+     "trans": "to let",
+     "tags": [],
+     "ex": "Queria alugar este quarto a um estudante."
+    }
+   ]
+  },
+  {
+   "term": "colete",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6278,
+   "senses": [
+    {
+     "trans": "waistcoat",
+     "tags": [],
+     "ex": "[…] abriu a gaveta do armário, pegou um alfinete de segurança, parou diante de mim, tirou a medalha da minha mão e se curvou e a pôs no meu colete, […]"
+    }
+   ]
+  },
+  {
+   "term": "terapeuta",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6279,
+   "senses": [
+    {
+     "trans": "therapist (one who provides therapy)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "susto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6280,
+   "senses": [
+    {
+     "trans": "fright, scare",
+     "tags": [],
+     "ex": "Ai que susto!"
+    },
+    {
+     "trans": "fear, terror",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "balde",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6282,
+   "senses": [
+    {
+     "trans": "bucket (container)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desculpar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6287,
+   "senses": [
+    {
+     "trans": "to forgive",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to justify",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to apologise (to make an apology or excuse)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bata",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6288,
+   "senses": [
+    {
+     "trans": "white coat",
+     "tags": [],
+     "ex": "[…] depois levantou-se, despiu a bata em movimentos cansados, lentos."
+    }
+   ]
+  },
+  {
+   "term": "ópera",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6292,
+   "senses": [
+    {
+     "trans": "opera",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "opera house",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "coreia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6294,
+   "senses": [
+    {
+     "trans": "dance, ball",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chorea",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "congressista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6296,
+   "senses": [
+    {
+     "trans": "congressman (member of a congress)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sanduíche",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6300,
+   "senses": [
+    {
+     "trans": "sandwich (snack)",
+     "tags": [
+      "Brazil",
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a situation where there are too many people or objects packed together",
+     "tags": [
+      "Brazil",
+      "Portugal",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ajudante",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6303,
+   "senses": [
+    {
+     "trans": "helper, assistant",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "aide, adjutant",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mercadoria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6309,
+   "senses": [
+    {
+     "trans": "merchandise",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "commodity",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "goods offered for sale",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sabrina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6311,
+   "senses": [
+    {
+     "trans": "ballet flat, flat, dolly shoe, ballet pump, ballerina, ballerina shoes",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "volume",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6312,
+   "senses": [
+    {
+     "trans": "volume (unit of three-dimensional measure)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volume; loudness (strength of sound)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volume (issues of a periodical over a period of one year)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volume (individual book of a publication issued as a set of books)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volume (bound book)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volume; quantity",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "adiar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6313,
+   "senses": [
+    {
+     "trans": "to postpone, delay, adjourn, defer",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "véspera",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6317,
+   "senses": [
+    {
+     "trans": "day before; eve",
+     "tags": [],
+     "ex": "na véspera do exame"
+    },
+    {
+     "trans": "afternoon",
+     "tags": [
+      "archaic"
+     ],
+     "ex": "Em huma Sexta feira no primeiro de Abril de mil quinhentos e dous a horas de Vespera […]"
+    },
+    {
+     "trans": "days preceding a certain event",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "canonical hour of the divine office that follows the ninth, traditionally at eighteen o'clock",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "amoroso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6318,
+   "senses": [
+    {
+     "trans": "loving",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "soco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6319,
+   "senses": [
+    {
+     "trans": "punch, sock (hit with one's hand)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "souq (a street market in Arabic-speaking countries)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "any market, fair or mall",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clog (shoe with wooden sole)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "soccus (slipper worn by Ancient Greek comedic actors)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "plinth (block or slab upon which a column or other structure stands)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dourado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6320,
+   "senses": [
+    {
+     "trans": "gold (colour)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dorado",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dourado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6320,
+   "senses": [
+    {
+     "trans": "gilded",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "golden",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "prosseguir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6321,
+   "senses": [
+    {
+     "trans": "to continue",
+     "tags": [],
+     "ex": "Junto aos poderes competentes chegavam insistentes súplicas de ajuda e proteção. Finalmente, após reiterados pedidos dos imigrantes, o Governo enviou alguns soldados. Mas a emenda saiu pior que o soneto. A presença dos policiais, durante três anos, não afastou os bugres que prosseguiram no seu furor vandálico e sanguinário."
+    }
+   ]
+  },
+  {
+   "term": "inevitável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6322,
+   "senses": [
+    {
+     "trans": "inevitable; unavoidable (that cannot be avoided)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vulgar",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6325,
+   "senses": [
+    {
+     "trans": "common to the people, vulgar",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ordinary, undistinguished",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "popular, commonly understood, as opposed to scientific or technical",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "simple, unintelligent",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "acharam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6326,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of achar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6328,
+   "senses": [
+    {
+     "trans": "fairy",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "particularmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 6329,
+   "senses": [
+    {
+     "trans": "particularly",
+     "tags": [],
+     "ex": "Rony ralhou com um aluno do primeiro ano particularmente pequeno [...]"
+    }
+   ]
+  },
+  {
+   "term": "tiraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6331,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of tirar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "colapso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6335,
+   "senses": [
+    {
+     "trans": "collapse (act of collapsing)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "faint (act of losing consciousness)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "frágil",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6344,
+   "senses": [
+    {
+     "trans": "fragile",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "insecure (not confident in oneself)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unstable, changeable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "executar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6345,
+   "senses": [
+    {
+     "trans": "to carry out",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to execute (kill as punishment)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to run a software",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to play music",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "avisado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6347,
+   "senses": [
+    {
+     "trans": "warned; cautioned",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "prudent; wise",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "discrete",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sensible; reasonable",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "especialidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6351,
+   "senses": [
+    {
+     "trans": "speciality, specialism",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "expertise",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "evolução",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6354,
+   "senses": [
+    {
+     "trans": "evolution",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "progress",
+     "tags": [],
+     "ex": "A evolução que foi feita no regulamento dos mercados financeiros vai ajudar investidores."
+    },
+    {
+     "trans": "development",
+     "tags": [],
+     "ex": "Precisamos de acompanhar a evolução da sociedade."
+    }
+   ]
+  },
+  {
+   "term": "usaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6355,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of usar",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fevereiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6358,
+   "senses": [
+    {
+     "trans": "February",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "implorar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6361,
+   "senses": [
+    {
+     "trans": "to implore (to beg for)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fechadura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6363,
+   "senses": [
+    {
+     "trans": "lock (of a door)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "democracia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6364,
+   "senses": [
+    {
+     "trans": "democracy (rule by the people)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "democracy (government under the rule of its people)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "leilão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6366,
+   "senses": [
+    {
+     "trans": "auction",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "envelope",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6367,
+   "senses": [
+    {
+     "trans": "envelope",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encarar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6373,
+   "senses": [
+    {
+     "trans": "to face (position oneself/itself towards)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to face (deal with)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to stare at",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "herança",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6376,
+   "senses": [
+    {
+     "trans": "heritage, inheritance, legacy",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "parente",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6377,
+   "senses": [
+    {
+     "trans": "relative (someone in the same family; someone connected by blood, marriage, or adoption)",
+     "tags": [],
+     "ex": "A conversa era sobre parentes, os parentes estranhos, interessantes ou, por qualquer razão, notáveis de cada um. Alguém já tinha contado que um parente comia favo de mel com abelha dentro."
+    }
+   ]
+  },
+  {
+   "term": "parente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6377,
+   "senses": [
+    {
+     "trans": "related (in the same family)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "related (standing in relation)",
+     "tags": [],
+     "ex": "O português é um idioma parente do espanhol."
+    }
+   ]
+  },
+  {
+   "term": "perceberam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6381,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of perceber",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "clã",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6382,
+   "senses": [
+    {
+     "trans": "clan (group of closely interrelated families, especially among Gaelic-speaking peoples)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clan (intermediate group between family and tribe, whose members consider themselves descendants of the same ancestor, often of a mythical nature and symbolized by a totem)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clan, family (family group united by a strong spirit of solidarity)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clan, family (group with an exclusivist tendency, united by strong bonds and/or common interests)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "faction, party",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "chatice",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6383,
+   "senses": [
+    {
+     "trans": "nuisance",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bore",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cadastro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6384,
+   "senses": [
+    {
+     "trans": "registration, record",
+     "tags": [],
+     "ex": "Atualize seu cadastro com o endereço correto."
+    },
+    {
+     "trans": "registry",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cadastre",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "census",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "criminal record",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "account",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "precioso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6385,
+   "senses": [
+    {
+     "trans": "precious (of high value or worth)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "precioso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6385,
+   "senses": [
+    {
+     "trans": "precious (someone (or something) who is loved)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "jazz",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6386,
+   "senses": [
+    {
+     "trans": "jazz (musical genre that emerged in the early 20th century in the United States of America, resulting from the fusion of elements from different musical traditions)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aluguer",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6392,
+   "senses": [
+    {
+     "trans": "rent, rental",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "income",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "hire, hiring",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "determinado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6394,
+   "senses": [
+    {
+     "trans": "determinate; ascertained",
+     "tags": [],
+     "ex": "Isso já é um facto determinado."
+    },
+    {
+     "trans": "determined; resolute; unyielding in the pursuit of something",
+     "tags": [],
+     "ex": "Estou determinado a ler este livro."
+    },
+    {
+     "trans": "set; fixed; scheduled",
+     "tags": [],
+     "ex": "Encontramo-nos no dia e local determinados."
+    },
+    {
+     "trans": "particular; specific",
+     "tags": [],
+     "ex": "Adquirir uma entidade que tem capacidade de operar num determinado mercado tem valor."
+    }
+   ]
+  },
+  {
+   "term": "determinado",
+   "pos": "det",
+   "gender": null,
+   "rank": 6394,
+   "senses": [
+    {
+     "trans": "certain (having been determined but unspecified)",
+     "tags": [],
+     "ex": "Determinadas pessoas nunca leem."
+    }
+   ]
+  },
+  {
+   "term": "determinado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6394,
+   "senses": [
+    {
+     "trans": "determiner (dependent function in a noun phrase)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "homossexual",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6395,
+   "senses": [
+    {
+     "trans": "homosexual",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "homossexual",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6395,
+   "senses": [
+    {
+     "trans": "homosexual",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cobrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6396,
+   "senses": [
+    {
+     "trans": "to charge (ask for a certain amount of money for something)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to demand payment",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to demand that something be done",
+     "tags": [],
+     "ex": "Ele cobrou freio ao magistrado e repetiu pedidos de anistia a presos pelo 8 de janeiro de 2023."
+    },
+    {
+     "trans": "to take",
+     "tags": [],
+     "ex": "cobrar falta"
+    }
+   ]
+  },
+  {
+   "term": "gangue",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6397,
+   "senses": [
+    {
+     "trans": "gang; street gang (criminal group, especially one that practices petty crime)",
+     "tags": [
+      "Brazil",
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "gang (a group of friends who do things together regularly, especially mischievous children)",
+     "tags": [
+      "Brazil",
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "DJ",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6400,
+   "senses": [
+    {
+     "trans": "DJ, deejay, disk jockey (person who plays or mixes recorded music at nightclubs)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "suporte",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6401,
+   "senses": [
+    {
+     "trans": "something which supports, either physically or figuratively",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "help; aid",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "answers and resolution of problems",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "supporter",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dimensão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6403,
+   "senses": [
+    {
+     "trans": "dimension (measure of spatial extent in a particular direction)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dimension; aspect (any specific feature, part or element of something)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "size; extent; scope (how big or extensive something is)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "importance; significance; prominence",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dimension (number of elements of any basis of a vector space)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dimension (a parallel plane of existence)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "júnior",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6404,
+   "senses": [
+    {
+     "trans": "junior (especially a junior sportsman)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "penis",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "careca",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6410,
+   "senses": [
+    {
+     "trans": "bald (having no hair on the head)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "careca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6410,
+   "senses": [
+    {
+     "trans": "bald patch",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a shaved head",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "baldie, a bald person",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "forense",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6411,
+   "senses": [
+    {
+     "trans": "forensic (relating to the scientific investigation of evidence for a court of law)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ataca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6419,
+   "senses": [
+    {
+     "trans": "shoelace",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "couro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6421,
+   "senses": [
+    {
+     "trans": "leather (material produced by tanning animal skin)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hide (skin of an animal)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "terrorismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6425,
+   "senses": [
+    {
+     "trans": "terrorism (use of terror as a means of coercion)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "diretamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 6427,
+   "senses": [
+    {
+     "trans": "directly; straight (without pause or delay)",
+     "tags": [],
+     "ex": "Fomos diretamente para casa."
+    },
+    {
+     "trans": "directly; straight (as if in a straight line)",
+     "tags": [],
+     "ex": "A lâmpada está diretamente à sua frente."
+    },
+    {
+     "trans": "directly (by direct means; without intermediaries)",
+     "tags": [],
+     "ex": "Ele precisa falar diretamente com o diretor."
+    },
+    {
+     "trans": "directly; straightforwardly; plainly (without sugarcoating or beating around the bush)",
+     "tags": [],
+     "ex": "Vou falar diretamente: não temos mais dinheiro."
+    },
+    {
+     "trans": "diametrically (absolutely [in opposition])",
+     "tags": [],
+     "ex": "Suas ideologias são diretamente opostas às nossas."
+    }
+   ]
+  },
+  {
+   "term": "instrumento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6428,
+   "senses": [
+    {
+     "trans": "tool (mechanical device intended to make a task easier)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "musical instrument (device used to produce music)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "crítica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6432,
+   "senses": [
+    {
+     "trans": "criticism",
+     "tags": [],
+     "ex": "Você já ouviu a expressão “amigo do rei”? Quase sempre é utilizada em sentido negativo, como crítica a pessoas que se aproveitam de sua amizade com governantes e líderes políticos para se enriquecerem ilicitamente.\n Mas nem toda amizade com o rei, ou qualquer outro dirigente, é marcada pela corrupção."
+    },
+    {
+     "trans": "review, critique",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cortado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6435,
+   "senses": [
+    {
+     "trans": "cut",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chopped",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "soro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6436,
+   "senses": [
+    {
+     "trans": "serum (blood plasma from which the clotting proteins have been removed)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "whey (liquid remaining after milk has been curdled)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a solution of water, salt and sugar used to prevent dehydration from diarrhoea or vomiting",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sorus (cluster of sporangia)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fórmula",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6437,
+   "senses": [
+    {
+     "trans": "formula (in all senses)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "formula",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "finanças",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6438,
+   "senses": [
+    {
+     "trans": "finance (management of money and other assets)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "finances (monetary resources or a person or organisation)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "top",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6440,
+   "senses": [
+    {
+     "trans": "cool, awesome",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "top, excellent, high-quality",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "top",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6440,
+   "senses": [
+    {
+     "trans": "top (garment worn to cover the torso)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "junta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6442,
+   "senses": [
+    {
+     "trans": "joint (part of the body where two bones join)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "task force (group of people working towards a particular task, project, or activity)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "council (committee that leads or governs)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "team (set of yoked draught animals)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "the gap between floor bricks or tiles",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "material used to fill the gap between floor tiles",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "necessariamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 6446,
+   "senses": [
+    {
+     "trans": "necessarily (such that it must happen or definitely happens)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "avaliar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6448,
+   "senses": [
+    {
+     "trans": "to evaluate, assess, appraise",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "postal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6452,
+   "senses": [
+    {
+     "trans": "postal (relating to mail)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "postal",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6452,
+   "senses": [
+    {
+     "trans": "postcard",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "conforme",
+   "pos": "conj",
+   "gender": null,
+   "rank": 6455,
+   "senses": [
+    {
+     "trans": "as (varying through time to the same proportion that)",
+     "tags": [],
+     "ex": "A enchente baixava conforme as chuvas paravam."
+    }
+   ]
+  },
+  {
+   "term": "conforme",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6455,
+   "senses": [
+    {
+     "trans": "conformable (having the same shape)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "PT",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6456,
+   "senses": [
+    {
+     "trans": "the vomit of a drunk person",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Numa dessas festas, ela ficou tão bêbada que eu tive que catar o PT dela."
+    },
+    {
+     "trans": "PT (personal trainer)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "surdo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6457,
+   "senses": [
+    {
+     "trans": "deaf (unable to hear)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "faint, muffled",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "deaf (unwilling to listen or be persuaded)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "voiceless, unvoiced (spoken without vibration of the vocal cords)",
+     "tags": [],
+     "ex": "Os fonemas /t/ e /f/ são surdos."
+    }
+   ]
+  },
+  {
+   "term": "surdo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6457,
+   "senses": [
+    {
+     "trans": "deaf person",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "floor tom, low tom (a type of drum, traditionally used in samba)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "acelerar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6460,
+   "senses": [
+    {
+     "trans": "to accelerate (to increase speed or acquire speed, become swift)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to hurry up",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to advance",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to shorten (to reduce the time of)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "evidente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6462,
+   "senses": [
+    {
+     "trans": "evident; obvious; self-explanatory",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "atento",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6463,
+   "senses": [
+    {
+     "trans": "attentive",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "eleição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6464,
+   "senses": [
+    {
+     "trans": "election",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dragões",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6465,
+   "senses": [
+    {
+     "trans": "Futebol Clube do Porto",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "time",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6466,
+   "senses": [
+    {
+     "trans": "a team",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a corporate team",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "sexual orientation",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "conveniente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6467,
+   "senses": [
+    {
+     "trans": "convenient; expedient (quick or easy to use)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "entusiasmado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6470,
+   "senses": [
+    {
+     "trans": "excited (having great enthusiasm)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6474,
+   "senses": [
+    {
+     "trans": "arc",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "arc, curve",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "arch",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bow (weapon)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bow (rod used to play stringed instruments)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "archwire (orthodontic wire conforming to the alveolar or dental arch)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "discoteca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6476,
+   "senses": [
+    {
+     "trans": "discotheque; nightclub",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lava",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6478,
+   "senses": [
+    {
+     "trans": "lava (melted rock)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cesto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6479,
+   "senses": [
+    {
+     "trans": "basket (container)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "basket",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cestus (leather fighting glove)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "cestus (girdle)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "guardião",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6480,
+   "senses": [
+    {
+     "trans": "guardian, guard, defender",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "superior of a convent",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "A particularly challenging enemy that must be beaten in order to progress and is often at the end of a level; a boss.",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "temer",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6485,
+   "senses": [
+    {
+     "trans": "to fear (to feel fear about something)",
+     "tags": [],
+     "ex": "Não tema!"
+    },
+    {
+     "trans": "to fear (to feel awe towards)",
+     "tags": [],
+     "ex": "Todo bom cristão teme a Deus."
+    },
+    {
+     "trans": "to be afraid (used to express sympathy)",
+     "tags": [],
+     "ex": "Temo que não posso ajudar."
+    },
+    {
+     "trans": "to fear (for), to worry (about) (to be concerned about)",
+     "tags": [],
+     "ex": "Os médicos temem pela saúde do meu coração."
+    }
+   ]
+  },
+  {
+   "term": "mensageiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6490,
+   "senses": [
+    {
+     "trans": "messenger (one who brings messages)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "mailman (one who delivers and collects mail and packages)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "herald; harbinger",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "invés",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6492,
+   "senses": [
+    {
+     "trans": "opposite, reverse",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cais",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6494,
+   "senses": [
+    {
+     "trans": "quay, wharf, pier",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "platform",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desfazer",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6496,
+   "senses": [
+    {
+     "trans": "to undo; to unfasten",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to unpack",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to destroy",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to dissolve",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to depreciate",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to come undone",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "estragado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6499,
+   "senses": [
+    {
+     "trans": "spoiled, rotten, deteriorated",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "broken, damaged",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ego",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6500,
+   "senses": [
+    {
+     "trans": "ego (the self)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ego (most central part of the mind)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cuba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6501,
+   "senses": [
+    {
+     "trans": "cask (large barrel for the storage of liquid, especially of alcoholic drinks)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "industrial vat (large tub)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "privilégio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6504,
+   "senses": [
+    {
+     "trans": "privilege (a peculiar benefit, advantage, or favor)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "diploma that confers this advantage",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "perk",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "prerogative; immunity",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "synonym of condão",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "acender",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6511,
+   "senses": [
+    {
+     "trans": "to light (to set fire to)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to light up; to catch fire",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to turn on (to activate a source of light)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to be turned on",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to give birth to",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "pesquisar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6516,
+   "senses": [
+    {
+     "trans": "to look for",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "torno",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6517,
+   "senses": [
+    {
+     "trans": "lathe",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sábio",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6518,
+   "senses": [
+    {
+     "trans": "wise; sage",
+     "tags": [],
+     "ex": "Nunca pensei que ele pudesse ser tão sábio."
+    }
+   ]
+  },
+  {
+   "term": "sábio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6518,
+   "senses": [
+    {
+     "trans": "sage (wise man)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "desfile",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6521,
+   "senses": [
+    {
+     "trans": "parade (organized procession)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "injusto",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6522,
+   "senses": [
+    {
+     "trans": "unfair",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "unjust",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "recurso",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6523,
+   "senses": [
+    {
+     "trans": "option; choice; resort; means",
+     "tags": [],
+     "ex": "É o último recurso para casos extremos."
+    },
+    {
+     "trans": "resources",
+     "tags": [],
+     "ex": "Temos recursos limitados."
+    },
+    {
+     "trans": "appeal",
+     "tags": [],
+     "ex": "Um recurso foi concedido a favor do réu."
+    },
+    {
+     "trans": "a retake or resit",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": "Em recurso é quando se faz o curso!"
+    }
+   ]
+  },
+  {
+   "term": "capturar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6530,
+   "senses": [
+    {
+     "trans": "to capture, catch",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to arrest, apprehend",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to seize",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to make a screen capture",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "coca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6532,
+   "senses": [
+    {
+     "trans": "coca (cultivated plant of the family Erythroxylaceae)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "coca (dried leaf of Erythroxylum coca)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "coke (cocaine)",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Coke (cola-based soft drink)",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "romano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6534,
+   "senses": [
+    {
+     "trans": "Roman (of or relating to the city of Rome)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Roman (of or relating to the Ancient Roman civilisation)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Roman (relating to the Roman Catholic Church)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "romano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6534,
+   "senses": [
+    {
+     "trans": "Roman (a person from the city of Rome)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Roman (a citizen of ancient Rome)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "aguardar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6536,
+   "senses": [
+    {
+     "trans": "to await",
+     "tags": [],
+     "ex": "Aguardo notícias ansiosamente."
+    },
+    {
+     "trans": "to expect",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to obey",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to wait",
+     "tags": [],
+     "ex": "Por favor, aguarde um momento."
+    }
+   ]
+  },
+  {
+   "term": "fugitivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6540,
+   "senses": [
+    {
+     "trans": "fugitive (fleeing or running away, especially from the police)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fugitivo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6540,
+   "senses": [
+    {
+     "trans": "fugitive (a person who is fleeing or escaping from something, especially from the police)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "representante",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 6541,
+   "senses": [
+    {
+     "trans": "someone or something which represents",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "representative (someone who may speak for another in a particular capacity)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "representative (someone or something that is taken as typical of its class)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "representante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6541,
+   "senses": [
+    {
+     "trans": "which represents",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arrepender",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6542,
+   "senses": [
+    {
+     "trans": "to repent",
+     "tags": [],
+     "ex": "Nunca me arrependerei."
+    },
+    {
+     "trans": "to regret (to feel bad about about having done something)",
+     "tags": [],
+     "ex": "Os terroristas se arrependeram do ataque."
+    }
+   ]
+  },
+  {
+   "term": "tabaco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6545,
+   "senses": [
+    {
+     "trans": "Nicotiana tabacum",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "common name, extended to other plants of the genus Nicotiana, whose leaves are used in the production of cigarettes, cigars, etc.",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vagina, vulva",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mexicano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6549,
+   "senses": [
+    {
+     "trans": "Mexican",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mexicano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6549,
+   "senses": [
+    {
+     "trans": "Mexican",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "solidão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6550,
+   "senses": [
+    {
+     "trans": "loneliness (quality of being lonely)",
+     "tags": [],
+     "ex": "Salva-me da solidão."
+    },
+    {
+     "trans": "an empty, unpopulated place",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "quarteirão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6551,
+   "senses": [
+    {
+     "trans": "block (in a city)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "quarter (part of a city)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "balão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6552,
+   "senses": [
+    {
+     "trans": "balloon",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "retort (flask used for distillation)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "roundabout (road junction)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "breathalyzer",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "speech bubble",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "lob",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fazenda",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6558,
+   "senses": [
+    {
+     "trans": "farm (a place where agricultural activities take place)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "public finances",
+     "tags": [],
+     "ex": "Ministério da Fazenda"
+    },
+    {
+     "trans": "a cloth",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "texto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6563,
+   "senses": [
+    {
+     "trans": "writing (written letters or symbols that express some meaning)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "text (a written passage)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "script (text of the dialogue and action for a drama)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "essay (written composition)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "painel",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6564,
+   "senses": [
+    {
+     "trans": "panel (rectangular section of a surface)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "panel (a group of people gathered to judge, interview, discuss etc)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dashboard (of a vehicle)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "consultório",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6565,
+   "senses": [
+    {
+     "trans": "office",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "clinic",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "consulting room",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "federação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6571,
+   "senses": [
+    {
+     "trans": "federation",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "convés",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6573,
+   "senses": [
+    {
+     "trans": "deck (floorlike covering on a ship)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "terminal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6574,
+   "senses": [
+    {
+     "trans": "of or occurring during the conclusion or end of something",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "terminal (resulting in death)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "terminal",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6574,
+   "senses": [
+    {
+     "trans": "terminal (section of a station or airport where passengers board the vehicle or craft)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "terminal (the end of a line where signals are transmitted or received)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "terminal (device for entering and displaying data)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "terminal (computer program that emulates a terminal)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "caminhada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6575,
+   "senses": [
+    {
+     "trans": "walk, hike (trip made by walking)",
+     "tags": [],
+     "ex": "Eu dei uma caminhada."
+    }
+   ]
+  },
+  {
+   "term": "carbono",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6577,
+   "senses": [
+    {
+     "trans": "carbon (chemical element)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "carbon (a carbon atom)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cartel",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6581,
+   "senses": [
+    {
+     "trans": "cartel (a group of businesses or nations that collude to limit competition within an industry or market)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "transferido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6584,
+   "senses": [
+    {
+     "trans": "transferred",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "crítico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6587,
+   "senses": [
+    {
+     "trans": "critical (extremely important)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "critical (inclined to criticize; censorious; exacting)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "critical (relating to critique)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "critical (pertaining to, or indicating a crisis or turning point)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "crítico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6587,
+   "senses": [
+    {
+     "trans": "critic (a person who appraises the works of others)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "suba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6590,
+   "senses": [
+    {
+     "trans": "an increase in price",
+     "tags": [],
+     "ex": "1963, Congresso Nacional do Brasil, Anais da câmara dos deputados, Volume 4, Imprensa Nacional, page 55"
+    }
+   ]
+  },
+  {
+   "term": "emboscada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6591,
+   "senses": [
+    {
+     "trans": "ambush, ambuscade (a disposition or arrangement of troops for attacking an enemy unexpectedly from a concealed station)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "t-shirt",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6594,
+   "senses": [
+    {
+     "trans": "T-shirt",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "editor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6599,
+   "senses": [
+    {
+     "trans": "editor (person who edits)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "publisher (person who publishes printed media)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "editor (program for modifying files, especially text files)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "multa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6607,
+   "senses": [
+    {
+     "trans": "fine; ticket (monetary punishment for a violation)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "cozinheiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6609,
+   "senses": [
+    {
+     "trans": "cook (a person who prepares food for a living)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "convenção",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6611,
+   "senses": [
+    {
+     "trans": "convention (all senses)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "assembly",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "agreement, contract",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "custom (normal practice)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "forçado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6614,
+   "senses": [
+    {
+     "trans": "forced, coercive, compulsory",
+     "tags": [],
+     "ex": "trabalho forçado"
+    },
+    {
+     "trans": "insincere, artificial, false, not occurring naturally",
+     "tags": [],
+     "ex": "risada forçada"
+    },
+    {
+     "trans": "unlikely, far-fetched, exaggerated",
+     "tags": [],
+     "ex": "filme forçado"
+    }
+   ]
+  },
+  {
+   "term": "pulseira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6615,
+   "senses": [
+    {
+     "trans": "bracelet",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "armadura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6616,
+   "senses": [
+    {
+     "trans": "armor (body protection)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "armature (the rotating part of an electric motor or dynamo)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "structure; framework",
+     "tags": [],
+     "ex": "A FN permanece amarrada aos fundamentos nacionalistas de extrema-direita. \"A armadura da sua doutrina permanece uma concepção determinista e étnica da identidade, impermeável aos valores universalistas dos Direitos do Homem e da cidadania republicana. (...)\""
+    }
+   ]
+  },
+  {
+   "term": "bruno",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6617,
+   "senses": [
+    {
+     "trans": "brown",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bruno",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6617,
+   "senses": [
+    {
+     "trans": "a dark-haired male or female",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a dark man or a brunette",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "lesão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6620,
+   "senses": [
+    {
+     "trans": "lesion, wound",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bloquear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6624,
+   "senses": [
+    {
+     "trans": "to block",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mecânico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6626,
+   "senses": [
+    {
+     "trans": "mechanical",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mecânico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6626,
+   "senses": [
+    {
+     "trans": "mechanic (skilled worker capable of building or repairing machinery)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "castanho",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6629,
+   "senses": [
+    {
+     "trans": "brown (having brown color)",
+     "tags": [],
+     "ex": "Gostava de ter um carro castanho."
+    },
+    {
+     "trans": "brown (hair or eye color)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chestnut (having a dark brown colour)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "castanho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6629,
+   "senses": [
+    {
+     "trans": "brown (color)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chestnut (a dark brown colour)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "chestnut (wood of the chestnut tree)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "dobrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6631,
+   "senses": [
+    {
+     "trans": "to double, multiply by two",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to fold, bend over",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to increase, make larger",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to subdue, overcome, bring under control",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to dub (replace a soundtrack with a synchronized translation)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to turn (left or right)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Por favor, dobre à direita."
+    }
+   ]
+  },
+  {
+   "term": "espadas",
+   "pos": "noun",
+   "gender": null,
+   "rank": 6633,
+   "senses": [
+    {
+     "trans": "spades",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "perturbado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6635,
+   "senses": [
+    {
+     "trans": "disturbed (person)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "filosofia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6643,
+   "senses": [
+    {
+     "trans": "philosophy",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "podre",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6645,
+   "senses": [
+    {
+     "trans": "rotten (in a state of decay)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "rotten, rancid (overridden by bacteria and other infectious agents)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bad, horrible",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": "Que filme podre."
+    }
+   ]
+  },
+  {
+   "term": "podre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6645,
+   "senses": [
+    {
+     "trans": "an embarrassing or compromising piece of information about someone or something; dirt",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": "Fiquei sabendo de podres dele."
+    }
+   ]
+  },
+  {
+   "term": "encosta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6647,
+   "senses": [
+    {
+     "trans": "slope, gradient",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hill",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "carroça",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6652,
+   "senses": [
+    {
+     "trans": "cart (small, open, wheeled vehicle, drawn or pushed by a person or animal)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a slow, old or low-quality car",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "supermercado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6653,
+   "senses": [
+    {
+     "trans": "supermarket (large self-service store)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "secundária",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6662,
+   "senses": [
+    {
+     "trans": "secondary school, high school",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "conheceram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6667,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of conhecer",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "canhão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6670,
+   "senses": [
+    {
+     "trans": "cannon (artillery piece)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "canyon",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "ugly woman, hag",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "woman of the night",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "massacre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6672,
+   "senses": [
+    {
+     "trans": "massacre",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "primeiro-ministro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6677,
+   "senses": [
+    {
+     "trans": "prime minister (chief member of the cabinet and head of the government)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "arranjado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6682,
+   "senses": [
+    {
+     "trans": "arranged; prearranged",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "fechou",
+   "pos": "interj",
+   "gender": null,
+   "rank": 6685,
+   "senses": [
+    {
+     "trans": "OK, all right (indicates acknowledgement or acceptance)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "barreira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6686,
+   "senses": [
+    {
+     "trans": "barrier",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hurdle",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "wall (line of players standing side-by-side to block a free kick)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "ronda",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6687,
+   "senses": [
+    {
+     "trans": "round (circular or repetitious route)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "patrol (the monitoring of an area)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "round (song that is sung by groups of people with each subset of people starting at a different time)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "referência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6690,
+   "senses": [
+    {
+     "trans": "reference",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "legista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6691,
+   "senses": [
+    {
+     "trans": "skilled in law",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "inocência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6692,
+   "senses": [
+    {
+     "trans": "innocence",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "mito",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6694,
+   "senses": [
+    {
+     "trans": "traditional story",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "commonly-held but false belief",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "person or thing held in excessive or quasi-religious awe, legend",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "municipal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6695,
+   "senses": [
+    {
+     "trans": "municipal",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "town",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "civic",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "brasa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6696,
+   "senses": [
+    {
+     "trans": "ember (a glowing piece of coal or wood)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "heat, hotness",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "hottie (attractive person)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "circuito",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6698,
+   "senses": [
+    {
+     "trans": "circuit (all senses)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "bispo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6702,
+   "senses": [
+    {
+     "trans": "bishop (an overseer of congregations)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bishop (a game piece)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "vapor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6703,
+   "senses": [
+    {
+     "trans": "steam (the condensate cloud formed by water vapor)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "steamboat",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a steam locomotive",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "marinheiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6704,
+   "senses": [
+    {
+     "trans": "sailor, seaman",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "intenso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6707,
+   "senses": [
+    {
+     "trans": "intense, strong",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "intensive, concentrated",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "grita",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6714,
+   "senses": [
+    {
+     "trans": "the act of many people shouting",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "sóbrio",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6716,
+   "senses": [
+    {
+     "trans": "sober (not drunk)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "moderate (not excessive; acting in moderation)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "escolar",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6720,
+   "senses": [
+    {
+     "trans": "scholar; school",
+     "tags": [],
+     "ex": "calendário escolar"
+    }
+   ]
+  },
+  {
+   "term": "temporário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 6721,
+   "senses": [
+    {
+     "trans": "temporary",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "barão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6724,
+   "senses": [
+    {
+     "trans": "baron",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a wealthy man",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": "Essa casa é muito cara, só barão pode comprar."
+    }
+   ]
+  },
+  {
+   "term": "greve",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 6728,
+   "senses": [
+    {
+     "trans": "strike (work stoppage)",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "encobrir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6738,
+   "senses": [
+    {
+     "trans": "to hide, cover up, mask",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "esperma",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 6743,
+   "senses": [
+    {
+     "trans": "sperm (semen (fluid))",
+     "tags": [],
+     "ex": ""
+    }
+   ]
+  },
+  {
+   "term": "demonstrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 6746,
+   "senses": [
+    {
+     "trans": "to demonstrate (all senses)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to show, prove",
      "tags": [],
      "ex": ""
     }

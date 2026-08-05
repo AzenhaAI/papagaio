@@ -79,9 +79,17 @@ const stripOther = (t) => t
 // Wiktionary marks inflections with form_of; the conjugator owns those. Note
 // that "feminine" and "plural" on a *sense* are gender marking, not inflection
 // — dropping those took half the feminine nouns out, saudade included.
+//
+// Also dropped: obsolete pre-reform spellings ("saude", "tambem", "policia").
+// Wiktionary dutifully records them, subtitle typos rank them, and a learner
+// who sees "saude" as a headword learns to write Portuguese without accents.
 const isInflection = (sense) =>
   (sense.form_of?.length ?? 0) > 0 ||
-  (sense.tags ?? []).some((t) => ['form-of', 'participle'].includes(t));
+  (sense.alt_of?.length ?? 0) > 0 ||
+  (sense.tags ?? []).some((t) =>
+    ['form-of', 'alt-of', 'participle', 'obsolete', 'superseded', 'misspelling'].includes(t)) ||
+  (sense.glosses ?? []).some((g) =>
+    /\b(spelling of|spelling \(|pre-reform|form of|abbreviation of|misspelling)\b/i.test(g));
 
 const words = new Map();
 
@@ -108,11 +116,14 @@ for await (const line of rl) {
       // is how a pt-PT learner is told a sense is Brazilian.
       tags: (s.tags ?? []).filter((t) =>
         ['Brazil', 'Portugal', 'colloquial', 'slang', 'archaic', 'informal', 'vulgar'].includes(t)),
-      // Examples are dropped whole if they contain a character outside Latin —
-      // usually a Cyrillic homoglyph typo'd into the Wiktionary source, which
-      // would look like Portuguese and be unsearchable.
+      // Examples are dropped whole when they would teach the wrong thing:
+      // non-Latin homoglyphs, pre-1911 orthography (modern Portuguese doubles
+      // only r and s — "attribuições" and "columna" give old books away), or
+      // the Brazilian gerund progressive ("está fazendo").
       ex: (s.examples ?? []).map((x) => x.text).filter(Boolean)
         .filter((t) => !/[^\x00-\u024f\u2000-\u206f]/.test(t))
+        .filter((t) => !/(bb|cc|dd|ff|gg|hh|jj|kk|ll|mm|nn|pp|qq|tt|vv|ww|xx|zz|ph|\bquasi\b)/i.test(t))
+        .filter((t) => !/\b(est(á|ou|ava|ão|amos)|anda|ficou|fica|vem|vai)\s+\w+[aei]ndo\b/i.test(t))
         .slice(0, 1)[0] ?? '',
     }))
     .slice(0, 6);
