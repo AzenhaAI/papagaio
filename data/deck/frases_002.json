@@ -1,0 +1,1521 @@
+{
+  "meta": {
+    "deck": "frases_002",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A1-B1",
+    "note": "The phrasebook grown into a real one: situational chunks for the places a resident of Madeira actually stands in — the café counter, AIMA, the pharmacy, a rented flat, the mechanic. Whole constructions with the social wrapping included, because 'queria' opens more doors than 'quero'."
+  },
+  "cards": [
+    {
+      "id": "fr0041",
+      "term": "queria um café, se faz favor",
+      "trans": "I'd like an espresso, please",
+      "pos": "phrase",
+      "note": "queria (not quero) is the polite ask; um café alone means espresso",
+      "ex_t": "Bom dia, queria um café e um pastel de nata, se faz favor.",
+      "ex_trans": "Good morning, I'd like an espresso and a pastel de nata, please.",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 341
+    },
+    {
+      "id": "fr0042",
+      "term": "é para levar",
+      "trans": "it's to take away",
+      "pos": "phrase",
+      "note": "the counter question is 'é para aqui ou para levar?'",
+      "ex_t": "É para levar, se faz favor.",
+      "ex_trans": "To take away, please.",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 342
+    },
+    {
+      "id": "fr0043",
+      "term": "a conta, se faz favor",
+      "trans": "the bill, please",
+      "pos": "phrase",
+      "note": "in Portugal you ask for the bill — it does not arrive on its own",
+      "ex_t": "Quando puder, a conta, se faz favor.",
+      "ex_trans": "When you have a moment, the bill please.",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 343
+    },
+    {
+      "id": "fr0044",
+      "term": "o que é que me recomenda?",
+      "trans": "what do you recommend?",
+      "pos": "phrase",
+      "note": "the 'é que' is pure spoken pt-PT — questions sound bare without it",
+      "ex_t": "Nunca cá vim — o que é que me recomenda?",
+      "ex_trans": "I've never been here — what do you recommend?",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 344
+    },
+    {
+      "id": "fr0045",
+      "term": "tem mesa para dois?",
+      "trans": "do you have a table for two?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Boa noite, tem mesa para dois?",
+      "ex_trans": "Good evening, do you have a table for two?",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 345
+    },
+    {
+      "id": "fr0046",
+      "term": "está incluído o serviço?",
+      "trans": "is service included?",
+      "pos": "phrase",
+      "note": "tipping is modest in Portugal — rounding up is plenty",
+      "ex_t": "Está incluído o serviço, ou deixo alguma coisa?",
+      "ex_trans": "Is service included, or shall I leave something?",
+      "tags": [
+        "frase",
+        "comida"
+      ],
+      "unit": "frases",
+      "freq": 346
+    },
+    {
+      "id": "fr0047",
+      "term": "sou alérgico a...",
+      "trans": "I'm allergic to...",
+      "pos": "phrase",
+      "note": "alérgica if you're a woman",
+      "ex_t": "Sou alérgico a marisco.",
+      "ex_trans": "I'm allergic to shellfish.",
+      "tags": [
+        "frase",
+        "comida",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 347
+    },
+    {
+      "id": "fr0048",
+      "term": "meia de leite",
+      "trans": "coffee with milk (large cup)",
+      "pos": "phrase",
+      "note": "Madeira's own order is a chinesa; garoto is the small one",
+      "ex_t": "Uma meia de leite e uma torrada, se faz favor.",
+      "ex_trans": "A coffee with milk and toast, please.",
+      "tags": [
+        "frase",
+        "comida",
+        "madeira"
+      ],
+      "unit": "frases",
+      "freq": 348
+    },
+    {
+      "id": "fr0049",
+      "term": "pode ser",
+      "trans": "that works / alright",
+      "pos": "phrase",
+      "note": "the universal soft yes — to suggestions, times, substitutions",
+      "ex_t": "— Só temos de cerveja. — Pode ser.",
+      "ex_trans": "— We only have beer. — That works.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 349
+    },
+    {
+      "id": "fr0050",
+      "term": "estou a ver",
+      "trans": "I see (I follow you)",
+      "pos": "phrase",
+      "note": "estar a + infinitive — the pt-PT progressive, never 'estou vendo'",
+      "ex_t": "Ah, estou a ver, é já depois da rotunda.",
+      "ex_trans": "Ah I see, it's just after the roundabout.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 350
+    },
+    {
+      "id": "fr0051",
+      "term": "não percebi",
+      "trans": "I didn't understand / didn't catch that",
+      "pos": "phrase",
+      "note": "perceber, not entender — the pt-PT verb for understanding",
+      "ex_t": "Desculpe, não percebi — pode repetir?",
+      "ex_trans": "Sorry, I didn't catch that — can you repeat?",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 351
+    },
+    {
+      "id": "fr0052",
+      "term": "pode falar mais devagar?",
+      "trans": "can you speak more slowly?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Ainda estou a aprender — pode falar mais devagar?",
+      "ex_trans": "I'm still learning — can you speak more slowly?",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 352
+    },
+    {
+      "id": "fr0053",
+      "term": "como é que se diz...?",
+      "trans": "how do you say...?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Como é que se diz 'receipt' em português?",
+      "ex_trans": "How do you say 'receipt' in Portuguese?",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 353
+    },
+    {
+      "id": "fr0054",
+      "term": "estou cá há dois anos",
+      "trans": "I've been here two years",
+      "pos": "phrase",
+      "note": "há for elapsed time — the mistake the coach corrects most",
+      "ex_t": "Estou cá há dois anos e ainda dou erros.",
+      "ex_trans": "I've been here two years and I still make mistakes.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 354
+    },
+    {
+      "id": "fr0055",
+      "term": "força!",
+      "trans": "go ahead! / good luck with it!",
+      "pos": "phrase",
+      "note": "encouragement, permission, sympathy — all in one word",
+      "ex_t": "— Posso passar? — Força!",
+      "ex_trans": "— May I get past? — Go ahead!",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 355
+    },
+    {
+      "id": "fr0056",
+      "term": "é só isso",
+      "trans": "that's all",
+      "pos": "phrase",
+      "note": "closes any counter transaction",
+      "ex_t": "— Mais alguma coisa? — Não, é só isso.",
+      "ex_trans": "— Anything else? — No, that's all.",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 356
+    },
+    {
+      "id": "fr0057",
+      "term": "quanto é que custa?",
+      "trans": "how much does it cost?",
+      "pos": "phrase",
+      "note": "or just 'quanto é?' at the till",
+      "ex_t": "Quanto é que custa o quilo das cerejas?",
+      "ex_trans": "How much is a kilo of cherries?",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 357
+    },
+    {
+      "id": "fr0058",
+      "term": "aceita multibanco?",
+      "trans": "do you take card?",
+      "pos": "phrase",
+      "note": "multibanco is the national card network — everyone says it, nobody says 'cartão de crédito'",
+      "ex_t": "Aceita multibanco ou é só dinheiro?",
+      "ex_trans": "Do you take card or cash only?",
+      "tags": [
+        "frase",
+        "compras",
+        "financas"
+      ],
+      "unit": "frases",
+      "freq": 358
+    },
+    {
+      "id": "fr0059",
+      "term": "pode-me dar um saco?",
+      "trans": "can you give me a bag?",
+      "pos": "phrase",
+      "note": "bags cost a few cents — you will be asked 'quer saco?'",
+      "ex_t": "Pode-me dar um saco pequeno, se faz favor?",
+      "ex_trans": "Can you give me a small bag, please?",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 359
+    },
+    {
+      "id": "fr0060",
+      "term": "estou só a ver, obrigado",
+      "trans": "I'm just looking, thanks",
+      "pos": "phrase",
+      "note": "obrigada if you're a woman — it agrees with the speaker",
+      "ex_t": "— Posso ajudar? — Estou só a ver, obrigado.",
+      "ex_trans": "— Can I help? — Just looking, thanks.",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 360
+    },
+    {
+      "id": "fr0061",
+      "term": "tem em tamanho maior?",
+      "trans": "do you have it in a bigger size?",
+      "pos": "phrase",
+      "note": "menor for smaller; número for shoes",
+      "ex_t": "Gosto destes — tem em tamanho maior?",
+      "ex_trans": "I like these — do you have a bigger size?",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 361
+    },
+    {
+      "id": "fr0062",
+      "term": "posso experimentar?",
+      "trans": "can I try it on?",
+      "pos": "phrase",
+      "note": "also for food samples at the market",
+      "ex_t": "Posso experimentar estas calças?",
+      "ex_trans": "Can I try these trousers on?",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 362
+    },
+    {
+      "id": "fr0063",
+      "term": "queria devolver isto",
+      "trans": "I'd like to return this",
+      "pos": "phrase",
+      "note": "keep o talão — the receipt",
+      "ex_t": "Queria devolver isto, tenho aqui o talão.",
+      "ex_trans": "I'd like to return this, I have the receipt here.",
+      "tags": [
+        "frase",
+        "compras"
+      ],
+      "unit": "frases",
+      "freq": 363
+    },
+    {
+      "id": "fr0064",
+      "term": "onde fica a paragem?",
+      "trans": "where is the (bus) stop?",
+      "pos": "phrase",
+      "note": "paragem, not 'ponto de ônibus' — that's Brazil",
+      "ex_t": "Onde fica a paragem para o Funchal?",
+      "ex_trans": "Where is the stop for Funchal?",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 364
+    },
+    {
+      "id": "fr0065",
+      "term": "este autocarro vai para...?",
+      "trans": "does this bus go to...?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Este autocarro vai para o aeroporto?",
+      "ex_trans": "Does this bus go to the airport?",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 365
+    },
+    {
+      "id": "fr0066",
+      "term": "a que horas parte?",
+      "trans": "what time does it leave?",
+      "pos": "phrase",
+      "note": "chega for arrivals",
+      "ex_t": "A que horas parte o próximo barco para o Porto Santo?",
+      "ex_trans": "What time does the next boat to Porto Santo leave?",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 366
+    },
+    {
+      "id": "fr0067",
+      "term": "pode parar aqui, se faz favor",
+      "trans": "you can stop here, please",
+      "pos": "phrase",
+      "note": "to the taxi driver",
+      "ex_t": "Pode parar aqui ao pé da igreja, se faz favor.",
+      "ex_trans": "You can stop here by the church, please.",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 367
+    },
+    {
+      "id": "fr0068",
+      "term": "estou perdido",
+      "trans": "I'm lost",
+      "pos": "phrase",
+      "note": "perdida if you're a woman",
+      "ex_t": "Desculpe, estou perdido — sabe onde fica o centro?",
+      "ex_trans": "Excuse me, I'm lost — do you know where the centre is?",
+      "tags": [
+        "frase",
+        "direcoes"
+      ],
+      "unit": "frases",
+      "freq": 368
+    },
+    {
+      "id": "fr0069",
+      "term": "é longe daqui?",
+      "trans": "is it far from here?",
+      "pos": "phrase",
+      "note": "the hopeful follow-up: dá para ir a pé? — can I walk it?",
+      "ex_t": "O miradouro é longe daqui?",
+      "ex_trans": "Is the viewpoint far from here?",
+      "tags": [
+        "frase",
+        "direcoes"
+      ],
+      "unit": "frases",
+      "freq": 369
+    },
+    {
+      "id": "fr0070",
+      "term": "sempre em frente",
+      "trans": "straight ahead",
+      "pos": "phrase",
+      "note": "the answer to every direction question in Portugal",
+      "ex_t": "É sempre em frente até à rotunda.",
+      "ex_trans": "Straight ahead until the roundabout.",
+      "tags": [
+        "frase",
+        "direcoes"
+      ],
+      "unit": "frases",
+      "freq": 370
+    },
+    {
+      "id": "fr0071",
+      "term": "tenho consulta marcada",
+      "trans": "I have an appointment booked",
+      "pos": "phrase",
+      "note": "consulta is a medical appointment; marcação is the booking",
+      "ex_t": "Bom dia, tenho consulta marcada para as dez.",
+      "ex_trans": "Good morning, I have an appointment booked for ten.",
+      "tags": [
+        "frase",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 371
+    },
+    {
+      "id": "fr0072",
+      "term": "não me sinto bem",
+      "trans": "I don't feel well",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Não me sinto bem desde ontem à noite.",
+      "ex_trans": "I haven't felt well since last night.",
+      "tags": [
+        "frase",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 372
+    },
+    {
+      "id": "fr0073",
+      "term": "estou com febre",
+      "trans": "I have a fever",
+      "pos": "phrase",
+      "note": "estar com — the state you're in: com febre, com fome, com sono",
+      "ex_t": "Acho que estou com febre, vou medir.",
+      "ex_trans": "I think I have a fever, I'll check.",
+      "tags": [
+        "frase",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 373
+    },
+    {
+      "id": "fr0074",
+      "term": "tem alguma coisa para a tosse?",
+      "trans": "do you have anything for a cough?",
+      "pos": "phrase",
+      "note": "the pharmacy formula: para a dor, para a febre, para a garganta",
+      "ex_t": "Tem alguma coisa para a tosse seca?",
+      "ex_trans": "Do you have anything for a dry cough?",
+      "tags": [
+        "frase",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 374
+    },
+    {
+      "id": "fr0075",
+      "term": "é preciso receita?",
+      "trans": "do I need a prescription?",
+      "pos": "phrase",
+      "note": "receita is both prescription and recipe",
+      "ex_t": "Este é preciso receita, ou vende-se assim?",
+      "ex_trans": "Does this need a prescription, or is it sold as is?",
+      "tags": [
+        "frase",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 375
+    },
+    {
+      "id": "fr0076",
+      "term": "tenho seguro de saúde",
+      "trans": "I have health insurance",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Tenho seguro de saúde — precisa do cartão?",
+      "ex_trans": "I have health insurance — do you need the card?",
+      "tags": [
+        "frase",
+        "saude",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 376
+    },
+    {
+      "id": "fr0077",
+      "term": "venho tratar do meu processo",
+      "trans": "I've come about my application",
+      "pos": "phrase",
+      "note": "tratar de — to deal with; processo is your file at AIMA",
+      "ex_t": "Bom dia, venho tratar do meu processo de residência.",
+      "ex_trans": "Good morning, I've come about my residence application.",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 377
+    },
+    {
+      "id": "fr0078",
+      "term": "tenho marcação para as dez",
+      "trans": "I have a booking for ten",
+      "pos": "phrase",
+      "note": "no appointment, no entry — the AIMA rule",
+      "ex_t": "Tenho marcação para as dez, em nome de Kirill.",
+      "ex_trans": "I have a booking for ten, under the name Kirill.",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 378
+    },
+    {
+      "id": "fr0079",
+      "term": "que documentos são precisos?",
+      "trans": "which documents are needed?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Para renovar, que documentos são precisos?",
+      "ex_trans": "To renew, which documents are needed?",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 379
+    },
+    {
+      "id": "fr0080",
+      "term": "falta-me algum documento?",
+      "trans": "am I missing any document?",
+      "pos": "phrase",
+      "note": "faltar works backwards like doer: falta-me — it is lacking to me",
+      "ex_t": "Está tudo, ou falta-me algum documento?",
+      "ex_trans": "Is everything there, or am I missing a document?",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 380
+    },
+    {
+      "id": "fr0081",
+      "term": "o sistema está em baixo",
+      "trans": "the system is down",
+      "pos": "phrase",
+      "note": "what the clerk says right before 'volte amanhã'",
+      "ex_t": "Hoje não dá — o sistema está em baixo.",
+      "ex_trans": "Not today — the system is down.",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 381
+    },
+    {
+      "id": "fr0082",
+      "term": "já tem resposta?",
+      "trans": "is there an answer yet?",
+      "pos": "phrase",
+      "note": "já + present — the polite way to chase anything",
+      "ex_t": "Enviei os papéis em maio — já tem resposta?",
+      "ex_trans": "I sent the papers in May — is there an answer yet?",
+      "tags": [
+        "frase",
+        "burocracia"
+      ],
+      "unit": "frases",
+      "freq": 382
+    },
+    {
+      "id": "fr0083",
+      "term": "preciso de um comprovativo de morada",
+      "trans": "I need a proof of address",
+      "pos": "phrase",
+      "note": "the document every Portuguese process asks for",
+      "ex_t": "Para abrir conta preciso de um comprovativo de morada.",
+      "ex_trans": "To open an account I need a proof of address.",
+      "tags": [
+        "frase",
+        "burocracia",
+        "financas"
+      ],
+      "unit": "frases",
+      "freq": 383
+    },
+    {
+      "id": "fr0084",
+      "term": "queria abrir uma conta",
+      "trans": "I'd like to open an account",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Queria abrir uma conta à ordem.",
+      "ex_trans": "I'd like to open a current account.",
+      "tags": [
+        "frase",
+        "financas"
+      ],
+      "unit": "frases",
+      "freq": 384
+    },
+    {
+      "id": "fr0085",
+      "term": "o multibanco engoliu-me o cartão",
+      "trans": "the ATM swallowed my card",
+      "pos": "phrase",
+      "note": "engolir — to swallow; the clitic sits after the verb in pt-PT",
+      "ex_t": "O multibanco engoliu-me o cartão, o que faço?",
+      "ex_trans": "The ATM swallowed my card, what do I do?",
+      "tags": [
+        "frase",
+        "financas"
+      ],
+      "unit": "frases",
+      "freq": 385
+    },
+    {
+      "id": "fr0086",
+      "term": "procuro casa para arrendar",
+      "trans": "I'm looking for a place to rent",
+      "pos": "phrase",
+      "note": "arrendar for property; alugar for cars and boards",
+      "ex_t": "Procuro casa para arrendar perto do centro.",
+      "ex_trans": "I'm looking for a place to rent near the centre.",
+      "tags": [
+        "frase",
+        "casa"
+      ],
+      "unit": "frases",
+      "freq": 386
+    },
+    {
+      "id": "fr0087",
+      "term": "as despesas estão incluídas?",
+      "trans": "are utilities included?",
+      "pos": "phrase",
+      "note": "despesas covers water, light, internet — ask before signing",
+      "ex_t": "A renda é 800 — as despesas estão incluídas?",
+      "ex_trans": "The rent is 800 — are utilities included?",
+      "tags": [
+        "frase",
+        "casa"
+      ],
+      "unit": "frases",
+      "freq": 387
+    },
+    {
+      "id": "fr0088",
+      "term": "quando posso ver a casa?",
+      "trans": "when can I view the place?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Ainda está disponível? Quando posso ver a casa?",
+      "ex_trans": "Is it still available? When can I view it?",
+      "tags": [
+        "frase",
+        "casa"
+      ],
+      "unit": "frases",
+      "freq": 388
+    },
+    {
+      "id": "fr0089",
+      "term": "a torneira está a pingar",
+      "trans": "the tap is dripping",
+      "pos": "phrase",
+      "note": "estar a + infinitive again — report problems in the progressive",
+      "ex_t": "A torneira da cozinha está a pingar há uma semana.",
+      "ex_trans": "The kitchen tap has been dripping for a week.",
+      "tags": [
+        "frase",
+        "casa"
+      ],
+      "unit": "frases",
+      "freq": 389
+    },
+    {
+      "id": "fr0090",
+      "term": "ficou sem luz",
+      "trans": "the power went out",
+      "pos": "phrase",
+      "note": "ficar sem — to be left without; also ficou sem água, sem rede",
+      "ex_t": "O prédio inteiro ficou sem luz.",
+      "ex_trans": "The whole building lost power.",
+      "tags": [
+        "frase",
+        "casa"
+      ],
+      "unit": "frases",
+      "freq": 390
+    },
+    {
+      "id": "fr0091",
+      "term": "a que horas nos encontramos?",
+      "trans": "what time shall we meet?",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "A que horas nos encontramos amanhã?",
+      "ex_trans": "What time shall we meet tomorrow?",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 391
+    },
+    {
+      "id": "fr0092",
+      "term": "fica para a próxima",
+      "trans": "let's leave it for next time",
+      "pos": "phrase",
+      "note": "the graceful way to decline or postpone",
+      "ex_t": "Hoje não consigo — fica para a próxima!",
+      "ex_trans": "I can't today — next time!",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 392
+    },
+    {
+      "id": "fr0093",
+      "term": "combinado!",
+      "trans": "it's a deal! / agreed!",
+      "pos": "phrase",
+      "note": "seals any plan",
+      "ex_t": "— Sexta às oito? — Combinado!",
+      "ex_trans": "— Friday at eight? — Deal!",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 393
+    },
+    {
+      "id": "fr0094",
+      "term": "desculpa o atraso",
+      "trans": "sorry I'm late",
+      "pos": "phrase",
+      "note": "desculpe with strangers; desculpa with friends",
+      "ex_t": "Desculpa o atraso, o trânsito estava impossível.",
+      "ex_trans": "Sorry I'm late, the traffic was impossible.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 394
+    },
+    {
+      "id": "fr0095",
+      "term": "não faço ideia",
+      "trans": "I have no idea",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "— Quem ganhou ontem? — Não faço ideia.",
+      "ex_trans": "— Who won yesterday? — No idea.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 395
+    },
+    {
+      "id": "fr0096",
+      "term": "que giro!",
+      "trans": "how nice! / how cool!",
+      "pos": "phrase",
+      "note": "giro is the pt-PT word Brazil doesn't use — instant local points",
+      "ex_t": "Que giro, este miradouro!",
+      "ex_trans": "How lovely, this viewpoint!",
+      "tags": [
+        "frase",
+        "social",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "freq": 396
+    },
+    {
+      "id": "fr0097",
+      "term": "está imenso calor",
+      "trans": "it's really hot",
+      "pos": "phrase",
+      "note": "imenso as an intensifier is very pt-PT",
+      "ex_t": "Está imenso calor hoje no Funchal.",
+      "ex_trans": "It's really hot in Funchal today.",
+      "tags": [
+        "frase",
+        "tempo-meteo"
+      ],
+      "unit": "frases",
+      "freq": 397
+    },
+    {
+      "id": "fr0098",
+      "term": "parece que vem aí chuva",
+      "trans": "looks like rain is coming",
+      "pos": "phrase",
+      "note": "vem aí — is on its way; also vem aí o autocarro",
+      "ex_t": "Leva o casaco, parece que vem aí chuva.",
+      "ex_trans": "Take your jacket, looks like rain is coming.",
+      "tags": [
+        "frase",
+        "tempo-meteo"
+      ],
+      "unit": "frases",
+      "freq": 398
+    },
+    {
+      "id": "fr0099",
+      "term": "a rede aqui é fraca",
+      "trans": "the signal here is weak",
+      "pos": "phrase",
+      "note": "rede — network, both phone and wifi",
+      "ex_t": "Ligo-te mais tarde, a rede aqui é fraca.",
+      "ex_trans": "I'll call you later, the signal here is weak.",
+      "tags": [
+        "frase",
+        "tecnologia"
+      ],
+      "unit": "frases",
+      "freq": 399
+    },
+    {
+      "id": "fr0100",
+      "term": "qual é a palavra-passe do wi-fi?",
+      "trans": "what's the wifi password?",
+      "pos": "phrase",
+      "note": "palavra-passe, not 'senha' — that's the Brazilian word",
+      "ex_t": "Desculpe, qual é a palavra-passe do wi-fi?",
+      "ex_trans": "Excuse me, what's the wifi password?",
+      "tags": [
+        "frase",
+        "tecnologia",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "freq": 400
+    },
+    {
+      "id": "fr0101",
+      "term": "ligo-te mais tarde",
+      "trans": "I'll call you later",
+      "pos": "phrase",
+      "note": "ligar — to call; present tense does the future's job in speech",
+      "ex_t": "Estou numa reunião, ligo-te mais tarde.",
+      "ex_trans": "I'm in a meeting, I'll call you later.",
+      "tags": [
+        "frase",
+        "tecnologia"
+      ],
+      "unit": "frases",
+      "freq": 401
+    },
+    {
+      "id": "fr0102",
+      "term": "manda-me mensagem",
+      "trans": "text me",
+      "pos": "phrase",
+      "note": "clitic after the verb — 'me manda' sounds Brazilian",
+      "ex_t": "Quando chegares, manda-me mensagem.",
+      "ex_trans": "When you arrive, text me.",
+      "tags": [
+        "frase",
+        "tecnologia"
+      ],
+      "unit": "frases",
+      "freq": 402
+    },
+    {
+      "id": "fr0103",
+      "term": "o carro não pega",
+      "trans": "the car won't start",
+      "pos": "phrase",
+      "note": "pegar — to catch/start; at the mechanic's this is the opening line",
+      "ex_t": "De manhã o carro não pega à primeira.",
+      "ex_trans": "In the morning the car won't start first try.",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 403
+    },
+    {
+      "id": "fr0104",
+      "term": "furou-se um pneu",
+      "trans": "I got a flat tyre",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Furou-se um pneu na estrada para o Paul da Serra.",
+      "ex_trans": "I got a flat on the road to Paul da Serra.",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 404
+    },
+    {
+      "id": "fr0105",
+      "term": "onde é que se apanha táxi?",
+      "trans": "where do you catch a taxi?",
+      "pos": "phrase",
+      "note": "apanhar — to catch (taxi, bus, sun, a cold)",
+      "ex_t": "Onde é que se apanha táxi a esta hora?",
+      "ex_trans": "Where do you catch a taxi at this hour?",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 405
+    },
+    {
+      "id": "fr0106",
+      "term": "socorro!",
+      "trans": "help!",
+      "pos": "phrase",
+      "note": "the emergency shout; 112 is the number",
+      "ex_t": "Socorro! Chamem uma ambulância!",
+      "ex_trans": "Help! Call an ambulance!",
+      "tags": [
+        "frase",
+        "emergencia"
+      ],
+      "unit": "frases",
+      "freq": 406
+    },
+    {
+      "id": "fr0107",
+      "term": "chame a polícia, se faz favor",
+      "trans": "call the police, please",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Houve um acidente — chame a polícia, se faz favor.",
+      "ex_trans": "There's been an accident — call the police, please.",
+      "tags": [
+        "frase",
+        "emergencia"
+      ],
+      "unit": "frases",
+      "freq": 407
+    },
+    {
+      "id": "fr0108",
+      "term": "roubaram-me a carteira",
+      "trans": "my wallet was stolen",
+      "pos": "phrase",
+      "note": "roubaram-me — they robbed me of; no passive needed",
+      "ex_t": "Roubaram-me a carteira no mercado.",
+      "ex_trans": "My wallet was stolen at the market.",
+      "tags": [
+        "frase",
+        "emergencia"
+      ],
+      "unit": "frases",
+      "freq": 408
+    },
+    {
+      "id": "fr0109",
+      "term": "perdi o telemóvel",
+      "trans": "I lost my phone",
+      "pos": "phrase",
+      "note": "telemóvel — the pt-PT word; celular is Brazilian",
+      "ex_t": "Perdi o telemóvel algures na baixa.",
+      "ex_trans": "I lost my phone somewhere downtown.",
+      "tags": [
+        "frase",
+        "emergencia",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "freq": 409
+    },
+    {
+      "id": "fr0110",
+      "term": "trabalho por conta própria",
+      "trans": "I'm self-employed",
+      "pos": "phrase",
+      "note": "the freelancer's phrase for every form and small talk",
+      "ex_t": "Trabalho por conta própria, na área de dados.",
+      "ex_trans": "I'm self-employed, in data.",
+      "tags": [
+        "frase",
+        "trabalho"
+      ],
+      "unit": "frases",
+      "freq": 410
+    },
+    {
+      "id": "fr0111",
+      "term": "estou de férias",
+      "trans": "I'm on holiday",
+      "pos": "phrase",
+      "note": "estar de — the state you're in: de férias, de folga, de baixa",
+      "ex_t": "Esta semana estou de férias, respondo para a semana.",
+      "ex_trans": "I'm on holiday this week, I'll reply next week.",
+      "tags": [
+        "frase",
+        "trabalho"
+      ],
+      "unit": "frases",
+      "freq": 411
+    },
+    {
+      "id": "fr0112",
+      "term": "para a semana",
+      "trans": "next week",
+      "pos": "phrase",
+      "note": "pt-PT says para a semana where Brazil says semana que vem",
+      "ex_t": "Falamos para a semana, pode ser?",
+      "ex_trans": "Let's talk next week, alright?",
+      "tags": [
+        "frase",
+        "tempo",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "freq": 412
+    },
+    {
+      "id": "fr0113",
+      "term": "daqui a bocado",
+      "trans": "in a little while",
+      "pos": "phrase",
+      "note": "daqui a — from now: daqui a uma hora, daqui a nada",
+      "ex_t": "Saio daqui a bocado, espera por mim.",
+      "ex_trans": "I'm leaving in a bit, wait for me.",
+      "tags": [
+        "frase",
+        "tempo"
+      ],
+      "unit": "frases",
+      "freq": 413
+    },
+    {
+      "id": "fr0114",
+      "term": "cheguei agora mesmo",
+      "trans": "I just arrived",
+      "pos": "phrase",
+      "note": "agora mesmo — right now/just; no compound tense needed",
+      "ex_t": "Cheguei agora mesmo, ainda nem tirei o casaco.",
+      "ex_trans": "I just arrived, haven't even taken my coat off.",
+      "tags": [
+        "frase",
+        "tempo"
+      ],
+      "unit": "frases",
+      "freq": 414
+    },
+    {
+      "id": "fr0115",
+      "term": "vale a pena?",
+      "trans": "is it worth it?",
+      "pos": "phrase",
+      "note": "valer a pena — to be worth the trouble",
+      "ex_t": "O teleférico é caro — vale a pena?",
+      "ex_trans": "The cable car is pricey — is it worth it?",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 415
+    },
+    {
+      "id": "fr0116",
+      "term": "depende",
+      "trans": "it depends",
+      "pos": "phrase",
+      "note": "the most Portuguese answer to any question",
+      "ex_t": "— Chove lá em cima? — Depende do dia.",
+      "ex_trans": "— Does it rain up there? — Depends on the day.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 416
+    },
+    {
+      "id": "fr0117",
+      "term": "calma",
+      "trans": "easy / take it easy",
+      "pos": "phrase",
+      "note": "half instruction, half comfort",
+      "ex_t": "Calma, ainda temos tempo.",
+      "ex_trans": "Easy, we still have time.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 417
+    },
+    {
+      "id": "fr0118",
+      "term": "deixa lá",
+      "trans": "let it go / never mind",
+      "pos": "phrase",
+      "note": "softer than 'esquece'; the lá carries the shrug",
+      "ex_t": "Deixa lá, não vale a pena discutir.",
+      "ex_trans": "Let it go, it's not worth arguing.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 418
+    },
+    {
+      "id": "fr0119",
+      "term": "se não for pedir muito",
+      "trans": "if it's not too much to ask",
+      "pos": "phrase",
+      "note": "futuro do conjuntivo in the wild — se for",
+      "ex_t": "Se não for pedir muito, pode verificar outra vez?",
+      "ex_trans": "If it's not too much to ask, could you check again?",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 419
+    },
+    {
+      "id": "fr0120",
+      "term": "diga",
+      "trans": "yes? (how can I help)",
+      "pos": "phrase",
+      "note": "what the clerk says when it's your turn; also answers the phone",
+      "ex_t": "— Diga. — Bom dia, queria uma informação.",
+      "ex_trans": "— Yes? — Good morning, I'd like some information.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 420
+    },
+    {
+      "id": "fr0121",
+      "term": "é já ali",
+      "trans": "it's just over there",
+      "pos": "phrase",
+      "note": "the já makes it reassuringly close, whatever the truth",
+      "ex_t": "A farmácia? É já ali, ao virar da esquina.",
+      "ex_trans": "The pharmacy? Just over there, around the corner.",
+      "tags": [
+        "frase",
+        "direcoes"
+      ],
+      "unit": "frases",
+      "freq": 421
+    },
+    {
+      "id": "fr0122",
+      "term": "ao virar da esquina",
+      "trans": "around the corner",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Há um café ao virar da esquina.",
+      "ex_trans": "There's a café around the corner.",
+      "tags": [
+        "frase",
+        "direcoes"
+      ],
+      "unit": "frases",
+      "freq": 422
+    },
+    {
+      "id": "fr0123",
+      "term": "encha o depósito, se faz favor",
+      "trans": "fill the tank, please",
+      "pos": "phrase",
+      "note": "at the petrol station; gasóleo is diesel, gasolina is petrol",
+      "ex_t": "Encha o depósito com gasóleo, se faz favor.",
+      "ex_trans": "Fill it up with diesel, please.",
+      "tags": [
+        "frase",
+        "transporte"
+      ],
+      "unit": "frases",
+      "freq": 423
+    },
+    {
+      "id": "fr0124",
+      "term": "está fechado para obras",
+      "trans": "closed for works",
+      "pos": "phrase",
+      "note": "obras — the eternal Portuguese roadworks",
+      "ex_t": "O trilho está fechado para obras.",
+      "ex_trans": "The trail is closed for works.",
+      "tags": [
+        "frase",
+        "madeira"
+      ],
+      "unit": "frases",
+      "freq": 424
+    },
+    {
+      "id": "fr0125",
+      "term": "dá para fazer a levada hoje?",
+      "trans": "can the levada be done today?",
+      "pos": "phrase",
+      "note": "the Madeira question — weather decides",
+      "ex_t": "Com este tempo, dá para fazer a levada hoje?",
+      "ex_trans": "With this weather, can we do the levada today?",
+      "tags": [
+        "frase",
+        "madeira"
+      ],
+      "unit": "frases",
+      "freq": 425
+    },
+    {
+      "id": "fr0126",
+      "term": "há quanto tempo!",
+      "trans": "long time no see!",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Olá! Há quanto tempo!",
+      "ex_trans": "Hi! Long time no see!",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 426
+    },
+    {
+      "id": "fr0127",
+      "term": "cumprimentos à família",
+      "trans": "regards to the family",
+      "pos": "phrase",
+      "note": "the warm goodbye between acquaintances",
+      "ex_t": "Até amanhã, e cumprimentos à família!",
+      "ex_trans": "See you tomorrow, and regards to the family!",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 427
+    },
+    {
+      "id": "fr0128",
+      "term": "as melhoras!",
+      "trans": "get well soon!",
+      "pos": "phrase",
+      "note": "said to anyone unwell — or their relatives",
+      "ex_t": "Estás constipado? As melhoras!",
+      "ex_trans": "You've got a cold? Get well soon!",
+      "tags": [
+        "frase",
+        "social",
+        "saude"
+      ],
+      "unit": "frases",
+      "freq": 428
+    },
+    {
+      "id": "fr0129",
+      "term": "boa viagem!",
+      "trans": "have a good trip!",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Boa viagem, e manda fotos!",
+      "ex_trans": "Have a good trip, and send photos!",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 429
+    },
+    {
+      "id": "fr0130",
+      "term": "estou farto disto",
+      "trans": "I'm fed up with this",
+      "pos": "phrase",
+      "note": "farta if you're a woman; estar farto de — fed up with",
+      "ex_t": "Estou farto desta fila.",
+      "ex_trans": "I'm fed up with this queue.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 430
+    },
+    {
+      "id": "fr0131",
+      "term": "não tem mal nenhum",
+      "trans": "there's nothing wrong with that",
+      "pos": "phrase",
+      "note": "reassurance, stronger than não faz mal",
+      "ex_t": "Errar não tem mal nenhum — estás a aprender.",
+      "ex_trans": "Making mistakes is fine — you're learning.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 431
+    },
+    {
+      "id": "fr0132",
+      "term": "isto é canja",
+      "trans": "this is a piece of cake",
+      "pos": "phrase",
+      "note": "canja is chicken soup — easy comfort",
+      "ex_t": "O exame A2? Isto é canja para ti.",
+      "ex_trans": "The A2 exam? Piece of cake for you.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 432
+    },
+    {
+      "id": "fr0133",
+      "term": "põe-me a par",
+      "trans": "bring me up to speed",
+      "pos": "phrase",
+      "note": "estar a par — to be in the know",
+      "ex_t": "Estive fora — põe-me a par das novidades.",
+      "ex_trans": "I was away — bring me up to speed.",
+      "tags": [
+        "frase",
+        "trabalho"
+      ],
+      "unit": "frases",
+      "freq": 433
+    },
+    {
+      "id": "fr0134",
+      "term": "faz de conta",
+      "trans": "pretend / make believe",
+      "pos": "phrase",
+      "note": "faz de conta que — pretend that",
+      "ex_t": "Faz de conta que não viste nada.",
+      "ex_trans": "Pretend you didn't see anything.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 434
+    },
+    {
+      "id": "fr0135",
+      "term": "por acaso",
+      "trans": "by any chance / actually",
+      "pos": "phrase",
+      "note": "opens polite questions and honest confessions alike",
+      "ex_t": "Por acaso sabe a que horas fecha a loja?",
+      "ex_trans": "Do you happen to know what time the shop closes?",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 435
+    },
+    {
+      "id": "fr0136",
+      "term": "mesmo assim",
+      "trans": "even so",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Está caro, mas mesmo assim vou levar.",
+      "ex_trans": "It's expensive, but I'll take it anyway.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 436
+    },
+    {
+      "id": "fr0137",
+      "term": "é a vida",
+      "trans": "that's life",
+      "pos": "phrase",
+      "note": "the shrug that ends complaints",
+      "ex_t": "Perdemos o barco... enfim, é a vida.",
+      "ex_trans": "We missed the boat... oh well, that's life.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 437
+    },
+    {
+      "id": "fr0138",
+      "term": "sem dúvida",
+      "trans": "without a doubt",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "— O melhor bolo do Funchal? — Sem dúvida.",
+      "ex_trans": "— The best cake in Funchal? — Without a doubt.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 438
+    },
+    {
+      "id": "fr0139",
+      "term": "ainda bem",
+      "trans": "thank goodness / I'm glad",
+      "pos": "phrase",
+      "note": "ainda bem que vieste — good thing you came",
+      "ex_t": "Ainda bem que trouxeste o guarda-chuva.",
+      "ex_trans": "Good thing you brought the umbrella.",
+      "tags": [
+        "frase",
+        "core"
+      ],
+      "unit": "frases",
+      "freq": 439
+    },
+    {
+      "id": "fr0140",
+      "term": "era uma vez...",
+      "trans": "once upon a time...",
+      "pos": "phrase",
+      "note": "how every Portuguese story begins — imperfeito doing its job",
+      "ex_t": "Era uma vez uma ilha no meio do Atlântico.",
+      "ex_trans": "Once upon a time there was an island in the middle of the Atlantic.",
+      "tags": [
+        "frase",
+        "social"
+      ],
+      "unit": "frases",
+      "freq": 440
+    }
+  ]
+}
