@@ -177,7 +177,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     function renderIndex(filter) {
       const q = fold(filter ?? '');
-      const shown = q ? verbs.filter((v) => fold(v.inf).startsWith(q) || fold(v.gloss).includes(q)) : verbs;
+      // Infinitive matches first, and gloss matches only on word starts —
+      // "ter" must find ter, not every English word ending in -ter.
+      const wordRe = q && new RegExp('\\b' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      const shown = q
+        ? [...verbs.filter((v) => fold(v.inf).startsWith(q)),
+           ...verbs.filter((v) => !fold(v.inf).startsWith(q) && wordRe.test(fold(v.gloss)))]
+        : verbs;
 
       const ess = q ? [] : ESSENTIALS
         .map((e) => verbs.find((v) => v.inf === e)).filter(Boolean);
