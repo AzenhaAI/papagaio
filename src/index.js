@@ -156,7 +156,10 @@ async function handleUpdate(update, env) {
   if (text.startsWith('/drill')) {
     const user = await getUser(env, uid);
     if (user) {
-      const sent = await sendExercise(env, user, { unit: 'gramatica' });
+      // Two drill decks now — alternate so neither starves the other.
+      const drillUnit = Math.random() < 0.5 ? 'gramatica' : 'numeros_drill';
+      const sent = await sendExercise(env, user, { unit: drillUnit })
+        || await sendExercise(env, user, { unit: drillUnit === 'gramatica' ? 'numeros_drill' : 'gramatica' });
       if (!sent) {
         await tg(env, 'sendMessage', { chat_id: chat, text: 'No grammar drills left to practise right now 🎉' });
       }
@@ -999,7 +1002,7 @@ async function tick(env) {
 // ---------- Exercises ----------
 
 async function sendExercise(env, user, opts = {}) {
-  const course = opts.unit === 'gramatica' ? 'pt' : pickCourse(user);
+  const course = opts.unit === 'gramatica' || opts.unit === 'numeros_drill' ? 'pt' : pickCourse(user);
 
   // Due reviews come first — within the requested unit when one is forced.
   let card = await env.DB.prepare(
