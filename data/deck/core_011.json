@@ -1,0 +1,1524 @@
+{
+  "meta": {
+    "deck": "core_011",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "Batch four: prepositions of place (the closed set that unlocks descriptions), kitchen verbs and tastes, shopping units, city services, hobbies and media, materials, communication and emotion verbs, the document counter (NIF, morada, carimbo) and the last time expressions."
+  },
+  "cards": [
+    {
+      "term": "em cima de",
+      "trans": "on top of",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "As chaves estão em cima da mesa.",
+      "ex_trans": "The keys are on the table.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0800",
+      "freq": 800
+    },
+    {
+      "term": "debaixo de",
+      "trans": "under",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "O gato dorme debaixo do carro.",
+      "ex_trans": "The cat sleeps under the car.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0801",
+      "freq": 801
+    },
+    {
+      "term": "ao lado de",
+      "trans": "next to",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "A farmácia é ao lado do banco.",
+      "ex_trans": "The pharmacy is next to the bank.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0802",
+      "freq": 802
+    },
+    {
+      "term": "atrás de",
+      "trans": "behind",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "O estacionamento fica atrás do mercado.",
+      "ex_trans": "The car park is behind the market.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0803",
+      "freq": 803
+    },
+    {
+      "term": "à frente de",
+      "trans": "in front of",
+      "pos": "phrase",
+      "gender": null,
+      "note": "em frente de/a — across from; subtly different",
+      "ex_t": "Estaciona à frente do prédio.",
+      "ex_trans": "Park in front of the building.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0804",
+      "freq": 804
+    },
+    {
+      "term": "entre",
+      "trans": "between, among",
+      "pos": "prep",
+      "gender": null,
+      "note": "",
+      "ex_t": "A loja fica entre o café e o talho.",
+      "ex_trans": "The shop is between the café and the butcher's.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0805",
+      "freq": 805
+    },
+    {
+      "term": "dentro de",
+      "trans": "inside; within (time)",
+      "pos": "phrase",
+      "gender": null,
+      "note": "dentro de uma hora — in an hour's time",
+      "ex_t": "Os documentos estão dentro da pasta azul.",
+      "ex_trans": "The documents are inside the blue folder.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0806",
+      "freq": 806
+    },
+    {
+      "term": "fora de",
+      "trans": "outside of",
+      "pos": "phrase",
+      "gender": null,
+      "note": "fora de horas — after hours",
+      "ex_t": "Fora de época, tudo fecha mais cedo.",
+      "ex_trans": "Off season everything closes earlier.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0807",
+      "freq": 807
+    },
+    {
+      "term": "perto de",
+      "trans": "near",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Moro perto da câmara municipal.",
+      "ex_trans": "I live near the town hall.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0808",
+      "freq": 808
+    },
+    {
+      "term": "longe de",
+      "trans": "far from",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "A quinta fica longe de tudo — é esse o encanto.",
+      "ex_trans": "The farmhouse is far from everything — that's the charm.",
+      "tags": [
+        "core",
+        "lugar-prep"
+      ],
+      "unit": "adverbios",
+      "id": "pt0809",
+      "freq": 809
+    },
+    {
+      "term": "cozinhar",
+      "trans": "to cook",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ao domingo cozinho para a semana toda.",
+      "ex_trans": "On Sundays I cook for the whole week.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0810",
+      "freq": 810
+    },
+    {
+      "term": "cozer",
+      "trans": "to boil, cook in water",
+      "pos": "verb",
+      "gender": null,
+      "note": "batata cozida — the national side dish",
+      "ex_t": "Coze as batatas com a pele.",
+      "ex_trans": "Boil the potatoes in their skins.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0811",
+      "freq": 811
+    },
+    {
+      "term": "assar",
+      "trans": "to roast, bake",
+      "pos": "verb",
+      "gender": null,
+      "note": "no forno ou na brasa",
+      "ex_t": "A castanha assada cheira a outono.",
+      "ex_trans": "Roast chestnuts smell of autumn.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0812",
+      "freq": 812
+    },
+    {
+      "term": "fritar",
+      "trans": "to fry",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Frita o milho até ficar dourado.",
+      "ex_trans": "Fry the cornmeal until golden.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0813",
+      "freq": 813
+    },
+    {
+      "term": "grelhar",
+      "trans": "to grill",
+      "pos": "verb",
+      "gender": null,
+      "note": "grelhado — the healthy menu column",
+      "ex_t": "Aqui grelha-se o peixe com sal grosso e mais nada.",
+      "ex_trans": "Here fish is grilled with coarse salt and nothing else.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0814",
+      "freq": 814
+    },
+    {
+      "term": "temperar",
+      "trans": "to season",
+      "pos": "verb",
+      "gender": null,
+      "note": "o tempero — seasoning",
+      "ex_t": "Tempera a salada só com azeite e sal.",
+      "ex_trans": "Season the salad with just olive oil and salt.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0815",
+      "freq": 815
+    },
+    {
+      "term": "provar",
+      "trans": "to taste, try",
+      "pos": "verb",
+      "gender": null,
+      "note": "also to prove — context decides",
+      "ex_t": "Prova o molho antes de servir.",
+      "ex_trans": "Taste the sauce before serving.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0816",
+      "freq": 816
+    },
+    {
+      "term": "misturar",
+      "trans": "to mix",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Mistura tudo até ficar homogéneo.",
+      "ex_trans": "Mix everything until smooth.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0817",
+      "freq": 817
+    },
+    {
+      "term": "descascar",
+      "trans": "to peel",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Descasca as cebolas longe dos olhos.",
+      "ex_trans": "Peel the onions away from your eyes.",
+      "tags": [
+        "core",
+        "verbo",
+        "cozinha"
+      ],
+      "unit": "verbos",
+      "id": "pt0818",
+      "freq": 818
+    },
+    {
+      "term": "saboroso",
+      "trans": "tasty",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O polvo estava mesmo saboroso.",
+      "ex_trans": "The octopus was really tasty.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0819",
+      "freq": 819
+    },
+    {
+      "term": "amargo",
+      "trans": "bitter",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Este café está amargo demais.",
+      "ex_trans": "This coffee is too bitter.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0820",
+      "freq": 820
+    },
+    {
+      "term": "azedo",
+      "trans": "sour",
+      "pos": "adj",
+      "gender": null,
+      "note": "leite azedo — gone off",
+      "ex_t": "O iogurte natural é um bocado azedo.",
+      "ex_trans": "Plain yogurt is a bit sour.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0821",
+      "freq": 821
+    },
+    {
+      "term": "picante",
+      "trans": "spicy",
+      "pos": "adj",
+      "gender": null,
+      "note": "Portugal's tolerance: mild; Madeira's: piri-piri",
+      "ex_t": "O molho é picante q.b. — quanto baste.",
+      "ex_trans": "The sauce is spicy just enough.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0822",
+      "freq": 822
+    },
+    {
+      "term": "fresco",
+      "trans": "fresh; chilly",
+      "pos": "adj",
+      "gender": null,
+      "note": "está fresco — it's chilly out",
+      "ex_t": "O pão ainda está fresco da manhã.",
+      "ex_trans": "The bread is still fresh from the morning.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0823",
+      "freq": 823
+    },
+    {
+      "term": "estragado",
+      "trans": "spoiled, gone off",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O leite está estragado, cheira mal.",
+      "ex_trans": "The milk has gone off, it smells bad.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0824",
+      "freq": 824
+    },
+    {
+      "term": "maduro",
+      "trans": "ripe",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O abacate só amanhã estará maduro.",
+      "ex_trans": "The avocado will only be ripe tomorrow.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0825",
+      "freq": 825
+    },
+    {
+      "term": "a lata",
+      "trans": "tin, can",
+      "pos": "noun",
+      "gender": "f",
+      "note": "atum em lata — the pantry backbone",
+      "ex_t": "Compra duas latas de tomate pelado.",
+      "ex_trans": "Buy two tins of peeled tomatoes.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0826",
+      "freq": 826
+    },
+    {
+      "term": "o pacote",
+      "trans": "packet, carton",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Um pacote de leite meio-gordo, se faz favor.",
+      "ex_trans": "A carton of semi-skimmed milk, please.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0827",
+      "freq": 827
+    },
+    {
+      "term": "a caixa",
+      "trans": "box; checkout",
+      "pos": "noun",
+      "gender": "f",
+      "note": "na caixa — at the till",
+      "ex_t": "Paga-se na caixa ao fundo.",
+      "ex_trans": "You pay at the till at the back.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0828",
+      "freq": 828
+    },
+    {
+      "term": "a fatia",
+      "trans": "slice",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Duas fatias de queijo da ilha, fininhas.",
+      "ex_trans": "Two slices of island cheese, thin ones.",
+      "tags": [
+        "core",
+        "compras",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt0829",
+      "freq": 829
+    },
+    {
+      "term": "o quilo",
+      "trans": "kilo",
+      "pos": "noun",
+      "gender": "m",
+      "note": "meio quilo — the market unit",
+      "ex_t": "A quanto está o quilo das lapas?",
+      "ex_trans": "How much is a kilo of limpets?",
+      "tags": [
+        "core",
+        "compras",
+        "numero"
+      ],
+      "unit": "comida",
+      "id": "pt0830",
+      "freq": 830
+    },
+    {
+      "term": "a dúzia",
+      "trans": "dozen",
+      "pos": "noun",
+      "gender": "f",
+      "note": "meia dúzia de ovos",
+      "ex_t": "Uma dúzia de ovos caseiros.",
+      "ex_trans": "A dozen free-range eggs.",
+      "tags": [
+        "core",
+        "compras",
+        "numero"
+      ],
+      "unit": "comida",
+      "id": "pt0831",
+      "freq": 831
+    },
+    {
+      "term": "a promoção",
+      "trans": "special offer",
+      "pos": "noun",
+      "gender": "f",
+      "note": "em promoção — on offer",
+      "ex_t": "O azeite está em promoção esta semana.",
+      "ex_trans": "The olive oil is on offer this week.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "comida",
+      "id": "pt0832",
+      "freq": 832
+    },
+    {
+      "term": "a biblioteca",
+      "trans": "library",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A biblioteca municipal tem jornais de graça.",
+      "ex_trans": "The municipal library has free newspapers.",
+      "tags": [
+        "core",
+        "cidade"
+      ],
+      "unit": "lugar",
+      "id": "pt0833",
+      "freq": 833
+    },
+    {
+      "term": "a piscina",
+      "trans": "swimming pool",
+      "pos": "noun",
+      "gender": "f",
+      "note": "as piscinas naturais — Porto Moniz's lava pools",
+      "ex_t": "As piscinas naturais de Porto Moniz enchem no verão.",
+      "ex_trans": "The Porto Moniz natural pools fill up in summer.",
+      "tags": [
+        "core",
+        "cidade",
+        "madeira"
+      ],
+      "unit": "lugar",
+      "id": "pt0834",
+      "freq": 834
+    },
+    {
+      "term": "o ginásio",
+      "trans": "gym",
+      "pos": "noun",
+      "gender": "m",
+      "note": "academia is the Brazilian word",
+      "ex_t": "Inscrevi-me no ginásio ao pé de casa.",
+      "ex_trans": "I joined the gym near home.",
+      "tags": [
+        "core",
+        "cidade",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0835",
+      "freq": 835
+    },
+    {
+      "term": "o campo",
+      "trans": "field; countryside",
+      "pos": "noun",
+      "gender": "m",
+      "note": "campo de futebol; no campo — in the country",
+      "ex_t": "Ao domingo o campo de futebol enche-se de miúdos.",
+      "ex_trans": "On Sundays the football field fills with kids.",
+      "tags": [
+        "core",
+        "cidade"
+      ],
+      "unit": "lugar",
+      "id": "pt0836",
+      "freq": 836
+    },
+    {
+      "term": "a câmara municipal",
+      "trans": "town hall",
+      "pos": "noun",
+      "gender": "f",
+      "note": "a câmara — where half your paperwork lives",
+      "ex_t": "A licença pede-se na câmara municipal.",
+      "ex_trans": "You apply for the licence at the town hall.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0837",
+      "freq": 837
+    },
+    {
+      "term": "a esquadra",
+      "trans": "police station",
+      "pos": "noun",
+      "gender": "f",
+      "note": "delegacia is Brazilian",
+      "ex_t": "Para participar o roubo, vá à esquadra.",
+      "ex_trans": "To report the theft, go to the police station.",
+      "tags": [
+        "core",
+        "burocracia",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0838",
+      "freq": 838
+    },
+    {
+      "term": "os bombeiros",
+      "trans": "fire brigade",
+      "pos": "noun",
+      "gender": "m",
+      "note": "always plural; also the ambulance service here",
+      "ex_t": "Os bombeiros chegaram em dez minutos.",
+      "ex_trans": "The fire brigade arrived in ten minutes.",
+      "tags": [
+        "core",
+        "cidade"
+      ],
+      "unit": "lugar",
+      "id": "pt0839",
+      "freq": 839
+    },
+    {
+      "term": "o quiosque",
+      "trans": "kiosk",
+      "pos": "noun",
+      "gender": "m",
+      "note": "newspapers, coffee, tostas — the street's living room",
+      "ex_t": "Encontramo-nos no quiosque do jardim.",
+      "ex_trans": "Let's meet at the garden kiosk.",
+      "tags": [
+        "core",
+        "cidade"
+      ],
+      "unit": "lugar",
+      "id": "pt0840",
+      "freq": 840
+    },
+    {
+      "term": "o passatempo",
+      "trans": "hobby; pastime",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also a competition/giveaway in ads",
+      "ex_t": "O meu passatempo novo é a fotografia de aves.",
+      "ex_trans": "My new hobby is bird photography.",
+      "tags": [
+        "core",
+        "social"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0841",
+      "freq": 841
+    },
+    {
+      "term": "as notícias",
+      "trans": "the news",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Vi nas notícias que o ferry volta em maio.",
+      "ex_trans": "I saw on the news the ferry returns in May.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0842",
+      "freq": 842
+    },
+    {
+      "term": "o jornal",
+      "trans": "newspaper",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O jornal da região sai à sexta.",
+      "ex_trans": "The regional paper comes out on Fridays.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0843",
+      "freq": 843
+    },
+    {
+      "term": "a revista",
+      "trans": "magazine; inspection",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Comprei uma revista para a viagem de barco.",
+      "ex_trans": "I bought a magazine for the boat trip.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0844",
+      "freq": 844
+    },
+    {
+      "term": "o filme",
+      "trans": "film",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Há um filme português no cinema este mês.",
+      "ex_trans": "There's a Portuguese film at the cinema this month.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0845",
+      "freq": 845
+    },
+    {
+      "term": "a série",
+      "trans": "series",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Estamos a ver uma série portuguesa para treinar o ouvido.",
+      "ex_trans": "We're watching a Portuguese series to train our ears.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0846",
+      "freq": 846
+    },
+    {
+      "term": "as legendas",
+      "trans": "subtitles",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the learner's crutch and friend",
+      "ex_t": "Vejo tudo com legendas em português.",
+      "ex_trans": "I watch everything with Portuguese subtitles.",
+      "tags": [
+        "core",
+        "media",
+        "escola"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0847",
+      "freq": 847
+    },
+    {
+      "term": "o desenho",
+      "trans": "drawing",
+      "pos": "noun",
+      "gender": "m",
+      "note": "desenhos animados — cartoons",
+      "ex_t": "Os desenhos animados são ótimos para aprender.",
+      "ex_trans": "Cartoons are great for learning.",
+      "tags": [
+        "core",
+        "media"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0848",
+      "freq": 848
+    },
+    {
+      "term": "o jogo",
+      "trans": "game, match",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O jogo do Marítimo é sábado à noite.",
+      "ex_trans": "Marítimo's match is Saturday night.",
+      "tags": [
+        "core",
+        "social"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0849",
+      "freq": 849
+    },
+    {
+      "term": "a equipa",
+      "trans": "team",
+      "pos": "noun",
+      "gender": "f",
+      "note": "time is the Brazilian word",
+      "ex_t": "A equipa da casa jogou melhor.",
+      "ex_trans": "The home team played better.",
+      "tags": [
+        "core",
+        "social",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0850",
+      "freq": 850
+    },
+    {
+      "term": "a madeira",
+      "trans": "wood",
+      "pos": "noun",
+      "gender": "f",
+      "note": "yes — the island is named after it",
+      "ex_t": "A mesa é de madeira de castanho.",
+      "ex_trans": "The table is chestnut wood.",
+      "tags": [
+        "core",
+        "material",
+        "madeira"
+      ],
+      "unit": "casa",
+      "id": "pt0851",
+      "freq": 851
+    },
+    {
+      "term": "o vidro",
+      "trans": "glass (material)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "vidrão — the bottle bank",
+      "ex_t": "O vidro vai no vidrão verde.",
+      "ex_trans": "Glass goes in the green bottle bank.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0852",
+      "freq": 852
+    },
+    {
+      "term": "o plástico",
+      "trans": "plastic",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Menos plástico, mais saco de pano.",
+      "ex_trans": "Less plastic, more cloth bags.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0853",
+      "freq": 853
+    },
+    {
+      "term": "o papel",
+      "trans": "paper; role",
+      "pos": "noun",
+      "gender": "m",
+      "note": "papel higiénico — add it to the list before it's urgent",
+      "ex_t": "Ficámos sem papel higiénico, claro.",
+      "ex_trans": "We ran out of toilet paper, of course.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0854",
+      "freq": 854
+    },
+    {
+      "term": "o ferro",
+      "trans": "iron; iron (appliance)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "passar a ferro — to iron",
+      "ex_t": "Odeio passar a ferro camisas.",
+      "ex_trans": "I hate ironing shirts.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0855",
+      "freq": 855
+    },
+    {
+      "term": "a lã",
+      "trans": "wool",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Compra meias de lã para a serra.",
+      "ex_trans": "Buy wool socks for the mountains.",
+      "tags": [
+        "core",
+        "material",
+        "roupa"
+      ],
+      "unit": "casa",
+      "id": "pt0856",
+      "freq": 856
+    },
+    {
+      "term": "o algodão",
+      "trans": "cotton",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Prefiro camisolas de algodão.",
+      "ex_trans": "I prefer cotton jumpers.",
+      "tags": [
+        "core",
+        "material",
+        "roupa"
+      ],
+      "unit": "casa",
+      "id": "pt0857",
+      "freq": 857
+    },
+    {
+      "term": "o ouro",
+      "trans": "gold",
+      "pos": "noun",
+      "gender": "m",
+      "note": "de ouro — golden; brincos de ouro",
+      "ex_t": "O anel é de ouro da avó.",
+      "ex_trans": "The ring is grandma's gold.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0858",
+      "freq": 858
+    },
+    {
+      "term": "a prata",
+      "trans": "silver",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A pulseira é de prata portuguesa.",
+      "ex_trans": "The bracelet is Portuguese silver.",
+      "tags": [
+        "core",
+        "material"
+      ],
+      "unit": "casa",
+      "id": "pt0859",
+      "freq": 859
+    },
+    {
+      "term": "contar",
+      "trans": "to tell; to count",
+      "pos": "verb",
+      "gender": null,
+      "note": "conta-me tudo — tell me everything",
+      "ex_t": "Conta-me como foi a entrevista!",
+      "ex_trans": "Tell me how the interview went!",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0860",
+      "freq": 860
+    },
+    {
+      "term": "explicar",
+      "trans": "to explain",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Explica lá outra vez, mas devagar.",
+      "ex_trans": "Explain it again, but slowly.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0861",
+      "freq": 861
+    },
+    {
+      "term": "repetir",
+      "trans": "to repeat",
+      "pos": "verb",
+      "gender": null,
+      "note": "pode repetir? — the learner's lifeline",
+      "ex_t": "Importa-se de repetir mais devagar?",
+      "ex_trans": "Would you mind repeating more slowly?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0862",
+      "freq": 862
+    },
+    {
+      "term": "traduzir",
+      "trans": "to translate",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Traduzes-me esta carta das finanças?",
+      "ex_trans": "Will you translate this tax letter for me?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0863",
+      "freq": 863
+    },
+    {
+      "term": "significar",
+      "trans": "to mean",
+      "pos": "verb",
+      "gender": null,
+      "note": "o que significa...?",
+      "ex_t": "O que significa 'desenrascar'?",
+      "ex_trans": "What does 'desenrascar' mean?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0864",
+      "freq": 864
+    },
+    {
+      "term": "soletrar",
+      "trans": "to spell out",
+      "pos": "verb",
+      "gender": null,
+      "note": "the phone-call survival verb",
+      "ex_t": "Pode soletrar o apelido, se faz favor?",
+      "ex_trans": "Can you spell the surname, please?",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0865",
+      "freq": 865
+    },
+    {
+      "term": "mentir",
+      "trans": "to lie",
+      "pos": "verb",
+      "gender": null,
+      "note": "a mentira — the lie",
+      "ex_t": "Não vale a pena mentir ao médico.",
+      "ex_trans": "There's no point lying to the doctor.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0866",
+      "freq": 866
+    },
+    {
+      "term": "gritar",
+      "trans": "to shout",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Não é preciso gritar, eu ouço bem.",
+      "ex_trans": "No need to shout, I hear fine.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0867",
+      "freq": 867
+    },
+    {
+      "term": "sussurrar",
+      "trans": "to whisper",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Na casa de fados sussurra-se, não se fala.",
+      "ex_trans": "In a fado house you whisper, you don't talk.",
+      "tags": [
+        "core",
+        "verbo",
+        "fado"
+      ],
+      "unit": "verbos",
+      "id": "pt0868",
+      "freq": 868
+    },
+    {
+      "term": "discutir",
+      "trans": "to argue; to discuss",
+      "pos": "verb",
+      "gender": null,
+      "note": "mostly the heated sense in speech",
+      "ex_t": "Os vizinhos discutem por causa do estacionamento.",
+      "ex_trans": "The neighbours argue over parking.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0869",
+      "freq": 869
+    },
+    {
+      "term": "rir",
+      "trans": "to laugh",
+      "pos": "verb",
+      "gender": null,
+      "note": "rir-se de — to laugh at",
+      "ex_t": "Rimos até doer a barriga.",
+      "ex_trans": "We laughed till our stomachs hurt.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0870",
+      "freq": 870
+    },
+    {
+      "term": "sorrir",
+      "trans": "to smile",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "A senhora do talho sorri sempre.",
+      "ex_trans": "The butcher's lady always smiles.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0871",
+      "freq": 871
+    },
+    {
+      "term": "chorar",
+      "trans": "to cry",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Chorei no fim do filme, admito.",
+      "ex_trans": "I cried at the end of the film, I admit.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0872",
+      "freq": 872
+    },
+    {
+      "term": "assustar",
+      "trans": "to frighten",
+      "pos": "verb",
+      "gender": null,
+      "note": "assustar-se — to get a fright",
+      "ex_t": "O trovão assustou o cão.",
+      "ex_trans": "The thunder frightened the dog.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0873",
+      "freq": 873
+    },
+    {
+      "term": "acalmar",
+      "trans": "to calm down",
+      "pos": "verb",
+      "gender": null,
+      "note": "acalma-te — calm down (tu)",
+      "ex_t": "O mar acalmou ao fim da tarde.",
+      "ex_trans": "The sea calmed down by late afternoon.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0874",
+      "freq": 874
+    },
+    {
+      "term": "apaixonar-se",
+      "trans": "to fall in love",
+      "pos": "verb",
+      "gender": null,
+      "note": "apaixonado por — in love with",
+      "ex_t": "Apaixonámo-nos pela ilha à primeira levada.",
+      "ex_trans": "We fell in love with the island at first levada.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0875",
+      "freq": 875
+    },
+    {
+      "term": "odiar",
+      "trans": "to hate",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Odeio filas, mas cá aprendi a esperar.",
+      "ex_trans": "I hate queues, but here I learned to wait.",
+      "tags": [
+        "core",
+        "verbo",
+        "sentimento"
+      ],
+      "unit": "verbos",
+      "id": "pt0876",
+      "freq": 876
+    },
+    {
+      "term": "importar-se",
+      "trans": "to mind",
+      "pos": "verb",
+      "gender": null,
+      "note": "importa-se de...? — polite request opener",
+      "ex_t": "Importa-se de fechar a janela?",
+      "ex_trans": "Would you mind closing the window?",
+      "tags": [
+        "core",
+        "verbo",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "id": "pt0877",
+      "freq": 877
+    },
+    {
+      "term": "o cartão de cidadão",
+      "trans": "citizen ID card",
+      "pos": "noun",
+      "gender": "m",
+      "note": "CC — the card that opens every counter",
+      "ex_t": "Sem cartão de cidadão não há contrato.",
+      "ex_trans": "No ID card, no contract.",
+      "tags": [
+        "core",
+        "burocracia",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0878",
+      "freq": 878
+    },
+    {
+      "term": "o NIF",
+      "trans": "tax number",
+      "pos": "noun",
+      "gender": "m",
+      "note": "número de contribuinte — they ask at every till",
+      "ex_t": "Dá-me o teu NIF para a fatura.",
+      "ex_trans": "Give me your tax number for the receipt.",
+      "tags": [
+        "core",
+        "burocracia",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0879",
+      "freq": 879
+    },
+    {
+      "term": "o apelido",
+      "trans": "surname",
+      "pos": "noun",
+      "gender": "m",
+      "note": "in Brazil apelido means nickname — beware",
+      "ex_t": "O apelido escreve-se com dois L?",
+      "ex_trans": "Is the surname spelled with two Ls?",
+      "tags": [
+        "core",
+        "burocracia",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0880",
+      "freq": 880
+    },
+    {
+      "term": "a certidão",
+      "trans": "certificate (official)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "certidão de nascimento — birth certificate",
+      "ex_t": "Pediram a certidão de nascimento traduzida.",
+      "ex_trans": "They asked for the birth certificate, translated.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0881",
+      "freq": 881
+    },
+    {
+      "term": "o carimbo",
+      "trans": "stamp (official)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the sound of Portuguese bureaucracy",
+      "ex_t": "Falta o carimbo na última página.",
+      "ex_trans": "The stamp is missing on the last page.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0882",
+      "freq": 882
+    },
+    {
+      "term": "a fotocópia",
+      "trans": "photocopy",
+      "pos": "noun",
+      "gender": "f",
+      "note": "traga fotocópias — bring copies, always",
+      "ex_t": "Traga o original e duas fotocópias.",
+      "ex_trans": "Bring the original and two photocopies.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "unit": "lugar",
+      "id": "pt0883",
+      "freq": 883
+    },
+    {
+      "term": "o século",
+      "trans": "century",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "A sé do Funchal é do século quinze.",
+      "ex_trans": "Funchal's cathedral is from the fifteenth century.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0884",
+      "freq": 884
+    },
+    {
+      "term": "a década",
+      "trans": "decade",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A década de sessenta esvaziou as aldeias.",
+      "ex_trans": "The sixties emptied the villages.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0885",
+      "freq": 885
+    },
+    {
+      "term": "o prazo de validade",
+      "trans": "expiry date",
+      "pos": "noun",
+      "gender": "m",
+      "note": "fora de validade — expired",
+      "ex_t": "Vê o prazo de validade antes de comprar.",
+      "ex_trans": "Check the expiry date before buying.",
+      "tags": [
+        "core",
+        "tempo",
+        "compras"
+      ],
+      "unit": "tempo",
+      "id": "pt0886",
+      "freq": 886
+    },
+    {
+      "term": "de madrugada",
+      "trans": "in the small hours",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "O barco parte de madrugada.",
+      "ex_trans": "The boat leaves in the small hours.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0887",
+      "freq": 887
+    },
+    {
+      "term": "ao amanhecer",
+      "trans": "at dawn",
+      "pos": "phrase",
+      "gender": null,
+      "note": "o nascer do sol — the sunrise itself",
+      "ex_t": "Subimos ao Pico ao amanhecer.",
+      "ex_trans": "We climbed the Peak at dawn.",
+      "tags": [
+        "core",
+        "tempo",
+        "madeira"
+      ],
+      "unit": "tempo",
+      "id": "pt0888",
+      "freq": 888
+    },
+    {
+      "term": "ao anoitecer",
+      "trans": "at nightfall",
+      "pos": "phrase",
+      "gender": null,
+      "note": "o pôr do sol — the sunset",
+      "ex_t": "Ao anoitecer acendem-se as luzes do anfiteatro.",
+      "ex_trans": "At nightfall the amphitheatre lights come on.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0889",
+      "freq": 889
+    },
+    {
+      "term": "quinzenal",
+      "trans": "fortnightly",
+      "pos": "adj",
+      "gender": null,
+      "note": "a quinzena — two weeks",
+      "ex_t": "A feira é quinzenal, no primeiro e terceiro sábado.",
+      "ex_trans": "The market is fortnightly, first and third Saturday.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0890",
+      "freq": 890
+    },
+    {
+      "term": "diário",
+      "trans": "daily",
+      "pos": "adj",
+      "gender": null,
+      "note": "o diário — the diary",
+      "ex_t": "O voo diário para o Porto Santo enche depressa.",
+      "ex_trans": "The daily flight to Porto Santo fills fast.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0891",
+      "freq": 891
+    }
+  ]
+}
