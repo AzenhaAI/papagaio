@@ -306,6 +306,29 @@ export async function handleApi(request, env, path) {
   if (path === '/api/conjugate' && request.method === 'GET') {
     const p = new URL(request.url).searchParams;
     if (p.get('list') !== null) return json({ count: VERBS.length, verbs: VERBS });
+
+    // Reverse lookup: "era" → ser (Imperfeito, eu / ele-ela). What every real
+    // dictionary does, because the form is what you actually meet in the wild.
+    const form = p.get('form');
+    if (form) {
+      const q = fold(form).trim();
+      const matches = [];
+      outer: for (const v of VERBS) {
+        const c = conjugate(v.inf.replace(/-se$/, ''));
+        if (!c) continue;
+        for (const [tense, forms] of Object.entries(c)) {
+          if (!Array.isArray(forms)) {
+            if (fold(String(forms)) === q) matches.push({ verb: v.inf, gloss: v.gloss, tense, person: -1 });
+            continue;
+          }
+          forms.forEach((f, i) => {
+            if (f && fold(f) === q) matches.push({ verb: v.inf, gloss: v.gloss, tense, person: i });
+          });
+        }
+        if (matches.length >= 24) break outer;
+      }
+      return json({ form, matches });
+    }
     const v = p.get('v') ?? '';
     const known = findVerb(v);
     const inf = (known?.inf ?? v).replace(/-se$/, '').trim().toLowerCase();
