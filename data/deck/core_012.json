@@ -1,0 +1,1350 @@
+{
+  "meta": {
+    "deck": "core_012",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "The batch that crosses 1000: the body and family completed, school words, the movement and object verbs every sentence leans on, weather nouns, the levada shelf, question pronouns, and the last handful of counter phrases — é para já included."
+  },
+  "cards": [
+    {
+      "term": "o ombro",
+      "trans": "shoulder",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Dói-me o ombro de carregar a mochila.",
+      "ex_trans": "My shoulder aches from carrying the backpack.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0900",
+      "freq": 900
+    },
+    {
+      "term": "o pescoço",
+      "trans": "neck",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Dormi mal e agora não viro o pescoço.",
+      "ex_trans": "I slept badly and now I can't turn my neck.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0901",
+      "freq": 901
+    },
+    {
+      "term": "a barriga",
+      "trans": "belly",
+      "pos": "noun",
+      "gender": "f",
+      "note": "dor de barriga — stomach ache",
+      "ex_t": "Ri até me doer a barriga.",
+      "ex_trans": "I laughed till my belly hurt.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0902",
+      "freq": 902
+    },
+    {
+      "term": "o dedo",
+      "trans": "finger; toe",
+      "pos": "noun",
+      "gender": "m",
+      "note": "dedo do pé — toe",
+      "ex_t": "Cortei o dedo a abrir a lata.",
+      "ex_trans": "I cut my finger opening the tin.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0903",
+      "freq": 903
+    },
+    {
+      "term": "a pele",
+      "trans": "skin; leather",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Com este sol, protege a pele.",
+      "ex_trans": "With this sun, protect your skin.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0904",
+      "freq": 904
+    },
+    {
+      "term": "o cabelo",
+      "trans": "hair",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cortar o cabelo — to get a haircut",
+      "ex_t": "Preciso de cortar o cabelo antes da entrevista.",
+      "ex_trans": "I need a haircut before the interview.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0905",
+      "freq": 905
+    },
+    {
+      "term": "a orelha",
+      "trans": "ear (outer)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "o ouvido — the inner ear, the hearing",
+      "ex_t": "O cão dorme com uma orelha levantada.",
+      "ex_trans": "The dog sleeps with one ear up.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0906",
+      "freq": 906
+    },
+    {
+      "term": "o ouvido",
+      "trans": "ear (hearing)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ter bom ouvido — for music and languages",
+      "ex_t": "Para línguas, o ouvido treina-se todos os dias.",
+      "ex_trans": "For languages, the ear is trained daily.",
+      "tags": [
+        "core",
+        "corpo",
+        "escola"
+      ],
+      "unit": "corpo",
+      "id": "pt0907",
+      "freq": 907
+    },
+    {
+      "term": "a voz",
+      "trans": "voice",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Fiquei sem voz depois do arraial.",
+      "ex_trans": "I lost my voice after the festival.",
+      "tags": [
+        "core",
+        "corpo",
+        "fado"
+      ],
+      "unit": "corpo",
+      "id": "pt0908",
+      "freq": 908
+    },
+    {
+      "term": "o sangue",
+      "trans": "blood",
+      "pos": "noun",
+      "gender": "m",
+      "note": "análises ao sangue",
+      "ex_t": "É preciso estar em jejum para tirar sangue.",
+      "ex_trans": "You must fast before a blood draw.",
+      "tags": [
+        "core",
+        "corpo",
+        "saude"
+      ],
+      "unit": "corpo",
+      "id": "pt0909",
+      "freq": 909
+    },
+    {
+      "term": "o namorado",
+      "trans": "boyfriend",
+      "pos": "noun",
+      "gender": "m",
+      "note": "a namorada — girlfriend",
+      "ex_t": "A filha trouxe o namorado ao almoço de domingo.",
+      "ex_trans": "The daughter brought her boyfriend to Sunday lunch.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0910",
+      "freq": 910
+    },
+    {
+      "term": "o genro",
+      "trans": "son-in-law",
+      "pos": "noun",
+      "gender": "m",
+      "note": "a nora — daughter-in-law",
+      "ex_t": "O genro é que faz a espetada na festa.",
+      "ex_trans": "The son-in-law is the one who grills the espetada.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0911",
+      "freq": 911
+    },
+    {
+      "term": "o neto",
+      "trans": "grandson",
+      "pos": "noun",
+      "gender": "m",
+      "note": "os netos — the reason avós exist",
+      "ex_t": "Os netos passam agosto com os avós.",
+      "ex_trans": "The grandkids spend August with the grandparents.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0912",
+      "freq": 912
+    },
+    {
+      "term": "o gémeo",
+      "trans": "twin",
+      "pos": "noun",
+      "gender": "m",
+      "note": "gêmeo is the Brazilian spelling",
+      "ex_t": "Os gémeos só se distinguem pela voz.",
+      "ex_trans": "The twins can only be told apart by voice.",
+      "tags": [
+        "core",
+        "familia",
+        "pt-pt"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0913",
+      "freq": 913
+    },
+    {
+      "term": "solteiro",
+      "trans": "single (unmarried)",
+      "pos": "adj",
+      "gender": null,
+      "note": "the census word: solteiro, casado, divorciado, viúvo",
+      "ex_t": "No formulário marquei 'solteiro'.",
+      "ex_trans": "On the form I ticked 'single'.",
+      "tags": [
+        "core",
+        "familia",
+        "burocracia"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0914",
+      "freq": 914
+    },
+    {
+      "term": "grávida",
+      "trans": "pregnant",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "A vizinha está grávida do segundo.",
+      "ex_trans": "The neighbour is pregnant with her second.",
+      "tags": [
+        "core",
+        "familia",
+        "saude"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0915",
+      "freq": 915
+    },
+    {
+      "term": "a escola",
+      "trans": "school",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A escola primária fica a cinco minutos.",
+      "ex_trans": "The primary school is five minutes away.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0916",
+      "freq": 916
+    },
+    {
+      "term": "a universidade",
+      "trans": "university",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A universidade tem cursos de português para estrangeiros.",
+      "ex_trans": "The university has Portuguese courses for foreigners.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0917",
+      "freq": 917
+    },
+    {
+      "term": "o curso",
+      "trans": "course; degree",
+      "pos": "noun",
+      "gender": "m",
+      "note": "tirar um curso — to do a degree/course",
+      "ex_t": "Tirei um curso intensivo de verão.",
+      "ex_trans": "I did an intensive summer course.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0918",
+      "freq": 918
+    },
+    {
+      "term": "o caderno",
+      "trans": "notebook",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Escrevo cada palavra nova no caderno.",
+      "ex_trans": "I write every new word in the notebook.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0919",
+      "freq": 919
+    },
+    {
+      "term": "a caneta",
+      "trans": "pen",
+      "pos": "noun",
+      "gender": "f",
+      "note": "o lápis — pencil",
+      "ex_t": "Empresta-me uma caneta para o formulário?",
+      "ex_trans": "Lend me a pen for the form?",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0920",
+      "freq": 920
+    },
+    {
+      "term": "o dicionário",
+      "trans": "dictionary",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O dicionário de bolso salvou-me no talho.",
+      "ex_trans": "The pocket dictionary saved me at the butcher's.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0921",
+      "freq": 921
+    },
+    {
+      "term": "a página",
+      "trans": "page",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "O exercício está na página quarenta.",
+      "ex_trans": "The exercise is on page forty.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0922",
+      "freq": 922
+    },
+    {
+      "term": "o capítulo",
+      "trans": "chapter",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Falta um capítulo para acabar o livro.",
+      "ex_trans": "One chapter left to finish the book.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt0923",
+      "freq": 923
+    },
+    {
+      "term": "decorar",
+      "trans": "to memorise; to decorate",
+      "pos": "verb",
+      "gender": null,
+      "note": "saber de cor — to know by heart",
+      "ex_t": "Decorei os verbos irregulares a cantar.",
+      "ex_trans": "I memorised the irregular verbs by singing them.",
+      "tags": [
+        "core",
+        "verbo",
+        "escola"
+      ],
+      "unit": "verbos",
+      "id": "pt0924",
+      "freq": 924
+    },
+    {
+      "term": "treinar",
+      "trans": "to train, practise",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Treino o ouvido com rádio portuguesa.",
+      "ex_trans": "I train my ear with Portuguese radio.",
+      "tags": [
+        "core",
+        "verbo",
+        "escola"
+      ],
+      "unit": "verbos",
+      "id": "pt0925",
+      "freq": 925
+    },
+    {
+      "term": "subir",
+      "trans": "to go up",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Subimos ao miradouro antes do calor.",
+      "ex_trans": "We went up to the viewpoint before the heat.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0926",
+      "freq": 926
+    },
+    {
+      "term": "descer",
+      "trans": "to go down",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Desce na próxima paragem.",
+      "ex_trans": "Get off at the next stop.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0927",
+      "freq": 927
+    },
+    {
+      "term": "atravessar",
+      "trans": "to cross",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Atravessa na passadeira, que a estrada é traiçoeira.",
+      "ex_trans": "Cross at the zebra — the road is treacherous.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0928",
+      "freq": 928
+    },
+    {
+      "term": "seguir",
+      "trans": "to follow; to continue",
+      "pos": "verb",
+      "gender": null,
+      "note": "siga! — carry on (the bus driver's word)",
+      "ex_t": "Siga sempre em frente até ao túnel.",
+      "ex_trans": "Keep straight on until the tunnel.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0929",
+      "freq": 929
+    },
+    {
+      "term": "parar",
+      "trans": "to stop",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O autocarro não parou — estava cheio.",
+      "ex_trans": "The bus didn't stop — it was full.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0930",
+      "freq": 930
+    },
+    {
+      "term": "cair",
+      "trans": "to fall",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Caiu uma árvore na estrada com o vento.",
+      "ex_trans": "A tree fell on the road in the wind.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0931",
+      "freq": 931
+    },
+    {
+      "term": "saltar",
+      "trans": "to jump",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Os miúdos saltam do cais para o mar.",
+      "ex_trans": "The kids jump off the pier into the sea.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0932",
+      "freq": 932
+    },
+    {
+      "term": "fugir",
+      "trans": "to run away",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "O gato fugiu com o barulho dos foguetes.",
+      "ex_trans": "The cat ran off at the sound of the fireworks.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0933",
+      "freq": 933
+    },
+    {
+      "term": "chegar a tempo",
+      "trans": "to arrive on time",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Com as obras, é sorte chegar a tempo.",
+      "ex_trans": "With the roadworks, arriving on time is luck.",
+      "tags": [
+        "core",
+        "frase",
+        "tempo"
+      ],
+      "unit": "verbos",
+      "id": "pt0934",
+      "freq": 934
+    },
+    {
+      "term": "ir embora",
+      "trans": "to leave, go away",
+      "pos": "phrase",
+      "gender": null,
+      "note": "vou-me embora — I'm off",
+      "ex_t": "Já é tarde, vou-me embora.",
+      "ex_trans": "It's late, I'm off.",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "verbos",
+      "id": "pt0935",
+      "freq": 935
+    },
+    {
+      "term": "acender",
+      "trans": "to switch on, light",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Acende a luz da varanda.",
+      "ex_trans": "Turn on the balcony light.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0936",
+      "freq": 936
+    },
+    {
+      "term": "apagar",
+      "trans": "to switch off; to erase",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Apaga o fogão antes de sair!",
+      "ex_trans": "Turn off the stove before leaving!",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0937",
+      "freq": 937
+    },
+    {
+      "term": "guardar",
+      "trans": "to keep, put away",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Guarda o recibo, pode ser preciso.",
+      "ex_trans": "Keep the receipt, it may be needed.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0938",
+      "freq": 938
+    },
+    {
+      "term": "atirar",
+      "trans": "to throw",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Não atires nada ao mar, nem migalhas.",
+      "ex_trans": "Don't throw anything into the sea, not even crumbs.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0939",
+      "freq": 939
+    },
+    {
+      "term": "segurar",
+      "trans": "to hold",
+      "pos": "verb",
+      "gender": null,
+      "note": "",
+      "ex_t": "Segura o saco enquanto abro a porta.",
+      "ex_trans": "Hold the bag while I open the door.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0940",
+      "freq": 940
+    },
+    {
+      "term": "partir",
+      "trans": "to break; to depart",
+      "pos": "verb",
+      "gender": null,
+      "note": "parti um copo / o barco parte às oito",
+      "ex_t": "Parti outro copo, desculpa.",
+      "ex_trans": "I broke another glass, sorry.",
+      "tags": [
+        "core",
+        "verbo"
+      ],
+      "unit": "verbos",
+      "id": "pt0941",
+      "freq": 941
+    },
+    {
+      "term": "calçar",
+      "trans": "to put on (shoes)",
+      "pos": "verb",
+      "gender": null,
+      "note": "que número calça? — what size do you take?",
+      "ex_t": "Que número calça? Quarenta e dois?",
+      "ex_trans": "What size do you take? Forty-two?",
+      "tags": [
+        "core",
+        "verbo",
+        "roupa"
+      ],
+      "unit": "verbos",
+      "id": "pt0942",
+      "freq": 942
+    },
+    {
+      "term": "despir",
+      "trans": "to take off (clothes)",
+      "pos": "verb",
+      "gender": null,
+      "note": "despir-se — to undress",
+      "ex_t": "Despe o casaco, está calor cá dentro.",
+      "ex_trans": "Take off your coat, it's warm in here.",
+      "tags": [
+        "core",
+        "verbo",
+        "roupa"
+      ],
+      "unit": "verbos",
+      "id": "pt0943",
+      "freq": 943
+    },
+    {
+      "term": "a saia",
+      "trans": "skirt",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A saia do traje regional é às riscas.",
+      "ex_trans": "The folk costume skirt is striped.",
+      "tags": [
+        "core",
+        "roupa",
+        "madeira"
+      ],
+      "unit": "roupa",
+      "id": "pt0944",
+      "freq": 944
+    },
+    {
+      "term": "os calções",
+      "trans": "shorts",
+      "pos": "noun",
+      "gender": "m",
+      "note": "always plural; shorts also heard",
+      "ex_t": "De calções em novembro — vantagens da ilha.",
+      "ex_trans": "Shorts in November — island perks.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0945",
+      "freq": 945
+    },
+    {
+      "term": "a gravata",
+      "trans": "tie",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Cá quase ninguém usa gravata.",
+      "ex_trans": "Almost nobody wears a tie here.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0946",
+      "freq": 946
+    },
+    {
+      "term": "o cinto",
+      "trans": "belt",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cinto de segurança — seatbelt",
+      "ex_t": "Aperta o cinto, a estrada tem curvas.",
+      "ex_trans": "Buckle up, the road has bends.",
+      "tags": [
+        "core",
+        "roupa",
+        "transporte"
+      ],
+      "unit": "roupa",
+      "id": "pt0947",
+      "freq": 947
+    },
+    {
+      "term": "a carteira",
+      "trans": "wallet; purse",
+      "pos": "noun",
+      "gender": "f",
+      "note": "also a school desk, oddly",
+      "ex_t": "Deixei a carteira em casa — pagas tu?",
+      "ex_trans": "I left my wallet at home — your treat?",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0948",
+      "freq": 948
+    },
+    {
+      "term": "o relógio",
+      "trans": "watch; clock",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O relógio da sé atrasa cinco minutos.",
+      "ex_trans": "The cathedral clock runs five minutes slow.",
+      "tags": [
+        "core",
+        "roupa",
+        "tempo"
+      ],
+      "unit": "roupa",
+      "id": "pt0949",
+      "freq": 949
+    },
+    {
+      "term": "o anel",
+      "trans": "ring",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O anel era da bisavó.",
+      "ex_trans": "The ring was great-grandmother's.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0950",
+      "freq": 950
+    },
+    {
+      "term": "os brincos",
+      "trans": "earrings",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Uns brincos de filigrana portuguesa.",
+      "ex_trans": "Portuguese filigree earrings.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "id": "pt0951",
+      "freq": 951
+    },
+    {
+      "term": "a nuvem",
+      "trans": "cloud",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Uma nuvem parada em cima do Funchal, só uma.",
+      "ex_trans": "One cloud parked over Funchal, just one.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0952",
+      "freq": 952
+    },
+    {
+      "term": "a estrela",
+      "trans": "star",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "No planalto veem-se estrelas a sério.",
+      "ex_trans": "On the plateau you see real stars.",
+      "tags": [
+        "core",
+        "natureza",
+        "fado"
+      ],
+      "unit": "natureza",
+      "id": "pt0953",
+      "freq": 953
+    },
+    {
+      "term": "a lua",
+      "trans": "moon",
+      "pos": "noun",
+      "gender": "f",
+      "note": "lua cheia — full moon",
+      "ex_t": "Com lua cheia nem é preciso lanterna.",
+      "ex_trans": "With a full moon you don't even need a torch.",
+      "tags": [
+        "core",
+        "natureza",
+        "fado"
+      ],
+      "unit": "natureza",
+      "id": "pt0954",
+      "freq": 954
+    },
+    {
+      "term": "a ilha",
+      "trans": "island",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the word this whole life runs on",
+      "ex_t": "A ilha ao lado chama-se Porto Santo.",
+      "ex_trans": "The island next door is called Porto Santo.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0955",
+      "freq": 955
+    },
+    {
+      "term": "o calhau",
+      "trans": "pebble; pebble beach",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Madeira word for the stony shore",
+      "ex_t": "Levamos chinelos por causa do calhau.",
+      "ex_trans": "We take flip-flops because of the pebbles.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0956",
+      "freq": 956
+    },
+    {
+      "term": "o trilho",
+      "trans": "trail",
+      "pos": "noun",
+      "gender": "m",
+      "note": "trilha is the Brazilian word",
+      "ex_t": "O trilho do Pico Ruivo está sinalizado.",
+      "ex_trans": "The Pico Ruivo trail is signposted.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira",
+        "pt-pt"
+      ],
+      "unit": "natureza",
+      "id": "pt0957",
+      "freq": 957
+    },
+    {
+      "term": "a floresta",
+      "trans": "forest",
+      "pos": "noun",
+      "gender": "f",
+      "note": "a Laurissilva — the UNESCO laurel forest",
+      "ex_t": "A floresta Laurissilva é património mundial.",
+      "ex_trans": "The Laurissilva forest is a World Heritage site.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "id": "pt0958",
+      "freq": 958
+    },
+    {
+      "term": "possível",
+      "trans": "possible",
+      "pos": "adj",
+      "gender": null,
+      "note": "o mais cedo possível — asap",
+      "ex_t": "É possível trocar sem talão?",
+      "ex_trans": "Is it possible to exchange without the receipt?",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0959",
+      "freq": 959
+    },
+    {
+      "term": "verdadeiro",
+      "trans": "true, real",
+      "pos": "adj",
+      "gender": null,
+      "note": "a verdade — the truth",
+      "ex_t": "A história é verdadeira, juro.",
+      "ex_trans": "The story is true, I swear.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0960",
+      "freq": 960
+    },
+    {
+      "term": "falso",
+      "trans": "false, fake",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "A nota parecia falsa e era mesmo.",
+      "ex_trans": "The banknote looked fake and it was.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0961",
+      "freq": 961
+    },
+    {
+      "term": "estrangeiro",
+      "trans": "foreign; foreigner",
+      "pos": "adj",
+      "gender": null,
+      "note": "no estrangeiro — abroad",
+      "ex_t": "Cá o estrangeiro deixa de o ser depressa.",
+      "ex_trans": "Here a foreigner stops being one quickly.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0962",
+      "freq": 962
+    },
+    {
+      "term": "famoso",
+      "trans": "famous",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "O bordado da Madeira é famoso no mundo inteiro.",
+      "ex_trans": "Madeira embroidery is famous worldwide.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0963",
+      "freq": 963
+    },
+    {
+      "term": "tranquilo",
+      "trans": "calm, peaceful",
+      "pos": "adj",
+      "gender": null,
+      "note": "fica tranquilo — don't worry",
+      "ex_t": "O norte é mais tranquilo, mesmo em agosto.",
+      "ex_trans": "The north is calmer, even in August.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0964",
+      "freq": 964
+    },
+    {
+      "term": "alguém",
+      "trans": "someone",
+      "pos": "pron",
+      "gender": null,
+      "note": "ninguém — nobody",
+      "ex_t": "Alguém deixou o portão aberto.",
+      "ex_trans": "Someone left the gate open.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0965",
+      "freq": 965
+    },
+    {
+      "term": "ninguém",
+      "trans": "nobody",
+      "pos": "pron",
+      "gender": null,
+      "note": "double negative is correct: não veio ninguém",
+      "ex_t": "Ninguém atende ao sábado à tarde.",
+      "ex_trans": "Nobody answers on Saturday afternoon.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0966",
+      "freq": 966
+    },
+    {
+      "term": "algo",
+      "trans": "something",
+      "pos": "pron",
+      "gender": null,
+      "note": "alguma coisa in speech",
+      "ex_t": "Cheira-me a algo queimado.",
+      "ex_trans": "I smell something burning.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0967",
+      "freq": 967
+    },
+    {
+      "term": "nada",
+      "trans": "nothing",
+      "pos": "pron",
+      "gender": null,
+      "note": "de nada — you're welcome",
+      "ex_t": "Não falta nada na mala?",
+      "ex_trans": "Nothing missing from the suitcase?",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0968",
+      "freq": 968
+    },
+    {
+      "term": "cada",
+      "trans": "each",
+      "pos": "pron",
+      "gender": null,
+      "note": "cada um — each one",
+      "ex_t": "Cada um paga o seu, combinado?",
+      "ex_trans": "Everyone pays their own, agreed?",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0969",
+      "freq": 969
+    },
+    {
+      "term": "ambos",
+      "trans": "both",
+      "pos": "pron",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ambos os cafés são bons; um é mais barato.",
+      "ex_trans": "Both cafés are good; one is cheaper.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0970",
+      "freq": 970
+    },
+    {
+      "term": "qualquer",
+      "trans": "any (whichever)",
+      "pos": "pron",
+      "gender": null,
+      "note": "qualquer coisa — anything/whatever",
+      "ex_t": "Qualquer autocarro da linha um serve.",
+      "ex_trans": "Any bus on line one will do.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0971",
+      "freq": 971
+    },
+    {
+      "term": "próprio",
+      "trans": "own; himself/herself",
+      "pos": "adj",
+      "gender": null,
+      "note": "o próprio dono — the owner himself",
+      "ex_t": "Foi o próprio chef que trouxe o prato.",
+      "ex_trans": "The chef himself brought the dish.",
+      "tags": [
+        "core",
+        "pronome"
+      ],
+      "unit": "basics",
+      "id": "pt0972",
+      "freq": 972
+    },
+    {
+      "term": "está combinado",
+      "trans": "it's settled",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Sexta às oito, está combinado.",
+      "ex_trans": "Friday at eight — settled.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "frases",
+      "id": "pt0973",
+      "freq": 973
+    },
+    {
+      "term": "não faz sentido",
+      "trans": "it makes no sense",
+      "pos": "phrase",
+      "gender": null,
+      "note": "fazer sentido — to make sense",
+      "ex_t": "Pagar dois táxis não faz sentido.",
+      "ex_trans": "Paying for two taxis makes no sense.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "frases",
+      "id": "pt0974",
+      "freq": 974
+    },
+    {
+      "term": "quanto tempo!",
+      "trans": "it's been ages!",
+      "pos": "phrase",
+      "gender": null,
+      "note": "shorter cousin of há quanto tempo",
+      "ex_t": "Quanto tempo! Ainda moras no Caniço?",
+      "ex_trans": "It's been ages! Still living in Caniço?",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "frases",
+      "id": "pt0975",
+      "freq": 975
+    },
+    {
+      "term": "bem-vindo",
+      "trans": "welcome",
+      "pos": "interj",
+      "gender": null,
+      "note": "agrees: bem-vinda, bem-vindos",
+      "ex_t": "Bem-vindos à Madeira — cuidado com as subidas.",
+      "ex_trans": "Welcome to Madeira — mind the climbs.",
+      "tags": [
+        "core",
+        "frase"
+      ],
+      "unit": "frases",
+      "id": "pt0976",
+      "freq": 976
+    },
+    {
+      "term": "fique com o troco",
+      "trans": "keep the change",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Está certo assim, fique com o troco.",
+      "ex_trans": "That's fine, keep the change.",
+      "tags": [
+        "core",
+        "frase",
+        "financas"
+      ],
+      "unit": "frases",
+      "id": "pt0977",
+      "freq": 977
+    },
+    {
+      "term": "é para já",
+      "trans": "coming right up",
+      "pos": "phrase",
+      "gender": null,
+      "note": "what the waiter says — now you understand it",
+      "ex_t": "— Duas imperiais! — É para já.",
+      "ex_trans": "— Two beers! — Coming right up.",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "id": "pt0978",
+      "freq": 978
+    },
+    {
+      "term": "cá está",
+      "trans": "here it is",
+      "pos": "phrase",
+      "gender": null,
+      "note": "cá estamos — here we are",
+      "ex_t": "Cá está o troco, obrigado eu.",
+      "ex_trans": "Here's the change — thank YOU.",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "id": "pt0979",
+      "freq": 979
+    },
+    {
+      "term": "se calhar vou",
+      "trans": "maybe I'll go",
+      "pos": "phrase",
+      "gender": null,
+      "note": "se calhar + indicative — the spoken maybe",
+      "ex_t": "Se calhar vou à festa, logo se vê.",
+      "ex_trans": "Maybe I'll go to the festival, we'll see.",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "id": "pt0980",
+      "freq": 980
+    },
+    {
+      "term": "dá cá um abraço",
+      "trans": "give us a hug",
+      "pos": "phrase",
+      "gender": null,
+      "note": "the goodbye between friends",
+      "ex_t": "Dá cá um abraço, e aparece!",
+      "ex_trans": "Give us a hug — and don't be a stranger!",
+      "tags": [
+        "core",
+        "frase",
+        "pt-pt"
+      ],
+      "unit": "frases",
+      "id": "pt0981",
+      "freq": 981
+    }
+  ]
+}
