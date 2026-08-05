@@ -209,20 +209,23 @@ async function knownWords(env, userId, course) {
   return (results ?? []).map((k) => k.term);
 }
 
-function systemPrompt(course, scen, level, known) {
+function systemPrompt(course, scen, level, known, ui) {
   const levelPrompt = LEVELS[level]?.prompt ?? LEVELS.normal.prompt;
   const words = known.join(', ') || '—';
+  // The learner's helper language. The scene itself never changes: Portuguese
+  // is Portuguese; only the scaffolding (gloss, note, hint translations) moves.
+  const helper = ui === 'ru' ? 'Russian' : 'English';
   return course === 'pt'
     ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
       `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
       `Prefer words the learner already knows: ${words}. ` +
-      `If the learner made a mistake, put a brief correction in English in "note", else "". ` +
-      `Also give "gloss": your own line translated into plain English, and "hints": two or three ` +
+      `If the learner made a mistake, put a brief correction in ${helper} in "note", else "". ` +
+      `Also give "gloss": your own line translated into plain ${helper}, and "hints": two or three ` +
       `SHORT things the learner could plausibly say next, each as {"pt": "...", "en": "..."}. ` +
       `The hints must fit this exact moment in the scene, be usable verbatim, and stay at the ` +
       `learner's level — they are a way out of a blank page, not a vocabulary lesson. ` +
-      `Answer strictly as JSON: {"reply": "your line in Portuguese", "gloss": "your line in English", ` +
-      `"note": "correction in English or empty", "hints": [{"pt": "...", "en": "..."}]}.`
+      `Answer strictly as JSON: {"reply": "your line in Portuguese", "gloss": "your line in ${helper}", ` +
+      `"note": "correction in ${helper} or empty", "hints": [{"pt": "...", "en": "the ${helper} translation"}]}.`
     : `You are a friendly English coach (British English). Scene: ${scen.label}. Learner level B1–B2. ` +
       `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
       `Prefer words the learner already knows: ${words}. ` +
@@ -237,7 +240,7 @@ function systemPrompt(course, scen, level, known) {
  * One exchange. `history` is the running transcript; the caller owns storing it.
  * Returns { reply, note, history } with the new turn already appended.
  */
-export async function coachTurn(env, { userId, course, scenario, level, history, said }) {
+export async function coachTurn(env, { userId, course, scenario, level, history, said, ui }) {
   const scen = SCENARIOS[course]?.[scenario];
   if (!scen) throw new Error('unknown scenario');
 
@@ -247,7 +250,7 @@ export async function coachTurn(env, { userId, course, scenario, level, history,
   const raw = await chat(
     env,
     [
-      { role: 'system', content: systemPrompt(course, scen, level, known) },
+      { role: 'system', content: systemPrompt(course, scen, level, known, ui) },
       ...turns.slice(-12),
     ],
     { json: true }
@@ -287,7 +290,7 @@ export const scenarioList = (course) =>
  * as data lets them become cards: the thing you got wrong while actually
  * speaking is the single best candidate for review.
  */
-export async function coachRecap(env, history) {
+export async function coachRecap(env, history, ui) {
   const said = history.filter((m) => m.role === 'user');
   if (!said.length) return { summary: '', mistakes: [] };
 
@@ -308,7 +311,7 @@ export async function coachRecap(env, history) {
         'HARD RULES:\n' +
         '- Your "right" version must itself be flawless European Portuguese. Never hand back a ' +
         'correction that still contains a Brazilian form — fix every problem in that line at once.\n' +
-        '- Write "summary" and every "why" in ENGLISH. Only "wrong" and "right" hold Portuguese.\n' +
+        `- Write "summary" and every "why" in ${ui === 'ru' ? 'RUSSIAN' : 'ENGLISH'}. Only "wrong" and "right" hold Portuguese.\n` +
         '- One entry per distinct mistake. If two lines share the same error, keep the clearer ' +
         'one and drop the other; do not restate it with a longer quote.\n' +
         '- The learner types without a Portuguese keyboard, so missing accents are usually just ' +

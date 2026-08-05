@@ -11,22 +11,26 @@ export const PT_RULES = `Hard rules:
 - Portuguese output is ALWAYS European Portuguese. Never Brazilian.
 - Use pt-PT vocabulary: autocarro (not ônibus), comboio (not trem), telemóvel (not celular), casa de banho (not banheiro), pequeno-almoço (not café da manhã), perceber (not entender), se faz favor, fixe (not legal), casa de banho, rapariga (girl — harmless in Portugal).
 - Use pt-PT grammar: "estou a fazer" for the progressive, never "estou fazendo". Prefer clitic placement as used in Portugal (diz-me, não me digas).
-- Detect the input language and translate into the other one. If the input is neither English nor Portuguese, translate into European Portuguese.
+- Detect the input language and translate into the other one. If the input is in neither expected language, translate into European Portuguese.
 - In br_diff list every word in YOUR Portuguese output that a Brazilian would say differently. This is the learner's main value — be thorough but only include real divergences.
 - Keep register natural for the situation: a café order is not a formal letter.
 - "translation" is ONLY the translated phrase. Never commentary, never advice, never two alternatives joined by a comma, never a sentence about what you would prefer to say. If several renderings are natural, put the best one in "translation" and mention the others in "note".
 - Fixed social formulas translate to the formula the other language actually uses, not word for word: "how do you do?" is "tudo bem?", not a discussion of formality.
 - "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer.`;
 
-const SYSTEM = `You translate between English and EUROPEAN Portuguese (pt-PT) as spoken in Portugal and Madeira.
+// The second language defaults to English; a learner who set their interface
+// to another language gets the same product with that language in England's
+// place. The pt-PT guarantee does not move.
+const SYSTEM = (other) => `You translate between ${other.name} and EUROPEAN Portuguese (pt-PT) as spoken in Portugal and Madeira.
 
-${PT_RULES}
+${PT_RULES.replaceAll('English', other.name)}
 
 - If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
+- "gloss" fields, "why" explanations and "note" are written in ${'${other.name}'}.
 
 Answer strictly as JSON:
 {
-  "direction": "en->pt" or "pt->en",
+  "direction": "${'${other.code}'}->pt" or "pt->${'${other.code}'}",
   "translation": "the translation",
   "corrected_source": "the input with mistakes fixed, or empty string if the input was already correct",
   "corrections": [{"wrong": "cista", "right": "custa", "why": "verb custar — to cost"}],
@@ -38,20 +42,31 @@ Answer strictly as JSON:
 
 const MAX_LEN = 600;
 
-export async function translate(env, text, direction) {
+// Languages the translator can stand opposite Portuguese. English is the
+// default and the only one the public UI advertises.
+const OTHER = {
+  en: { code: 'en', name: 'English' },
+  ru: { code: 'ru', name: 'Russian' },
+};
+
+export async function translate(env, text, direction, ui) {
   const input = String(text ?? '').trim().slice(0, MAX_LEN);
   if (!input) throw new Error('empty input');
 
-  // Direction is normally auto-detected; the site can force it.
+  const other = OTHER[ui] ?? OTHER.en;
+
+  // Direction is normally auto-detected; the client can force it.
   const forced =
-    direction === 'en->pt' ? '\nThe user explicitly requests: translate INTO European Portuguese.'
-    : direction === 'pt->en' ? '\nThe user explicitly requests: translate INTO English.'
+    direction === `${other.code}->pt` || direction === 'en->pt'
+      ? '\nThe user explicitly requests: translate INTO European Portuguese.'
+    : direction === `pt->${other.code}` || direction === 'pt->en'
+      ? `\nThe user explicitly requests: translate INTO ${other.name}.`
     : '';
 
   const raw = await chat(
     env,
     [
-      { role: 'system', content: SYSTEM + forced },
+      { role: 'system', content: SYSTEM(other) + forced },
       { role: 'user', content: input },
     ],
     { json: true }

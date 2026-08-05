@@ -79,10 +79,13 @@ const isEmpty = (e) =>
  * Returns the card's article, writing one first if it doesn't have one.
  * Never throws for a missing model — callers fall back to showing the card bare.
  */
-export async function ensureEntry(env, card) {
-  if (card.entry) {
+export async function ensureEntry(env, card, lang = 'en') {
+  // Russian articles live in their own column: they are an overlay for one
+  // audience, and must never overwrite the English article everyone else gets.
+  const col = lang === 'ru' ? 'entry_ru' : 'entry';
+  if (card[col]) {
     try {
-      return JSON.parse(card.entry);
+      return JSON.parse(card[col]);
     } catch {
       // Corrupt row — fall through and write a fresh one.
     }
@@ -97,10 +100,14 @@ export async function ensureEntry(env, card) {
     (card.gender ? `Gender: ${card.gender}\n` : '') +
     (card.note ? `Note already on the card: ${card.note}\n` : '');
 
+  const langRule = lang === 'ru'
+    ? '\nOVERRIDE: explanations, glosses, meaning translations and grammar notes are in RUSSIAN, not English. The learner speaks Russian. Portuguese stays Portuguese.'
+    : '';
+
   const raw = await chat(
     env,
     [
-      { role: 'system', content: SYSTEM },
+      { role: 'system', content: SYSTEM + langRule },
       { role: 'user', content: ask },
     ],
     { json: true }
@@ -116,7 +123,7 @@ export async function ensureEntry(env, card) {
   const entry = clean(out, isVerb);
   if (isEmpty(entry)) return null;
 
-  await env.DB.prepare(`UPDATE cards SET entry = ? WHERE id = ?`)
+  await env.DB.prepare(`UPDATE cards SET ${col} = ? WHERE id = ?`)
     .bind(JSON.stringify(entry), card.id)
     .run();
 

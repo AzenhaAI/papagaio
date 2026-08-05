@@ -225,8 +225,11 @@ const IRREGULAR = {
   escrever: { participio: 'escrito' },
 };
 
-// ter, conjugated, is the auxiliary for the compound past.
+// ter, conjugated, is the auxiliary for the compound pasts.
 const TER_IMPERFEITO = ['tinha', 'tinhas', 'tinha', 'tínhamos', 'tinham'];
+const TER_PRESENTE = ['tenho', 'tens', 'tem', 'temos', 'têm'];
+// ir in the present is how spoken Portuguese actually says the future.
+const IR_PRESENTE = ['vou', 'vais', 'vai', 'vamos', 'vão'];
 
 /** Full conjugation for one infinitive. Returns null for non-verbs. */
 export function conjugate(infinitive) {
@@ -262,6 +265,11 @@ export function conjugate(infinitive) {
 
   const part = irr?.participio ?? stem + R.participio;
   out.mais_que_perfeito = TER_IMPERFEITO.map((t) => `${t} ${part}`);
+  // "tenho falado" — repetition reaching the present. A famous trap: it is NOT
+  // the English present perfect, and Brazilian usage differs too.
+  out.ppc = TER_PRESENTE.map((t) => `${t} ${part}`);
+  // "vou falar" — the future people actually say; futuro simples is bookish.
+  out.futuro_prox = IR_PRESENTE.map((v) => `${v} ${verb}`);
   out.participio = part;
   out.gerundio = verb === 'pôr' ? 'pondo' : stem + (kind === 'ar' ? 'ando' : kind === 'er' ? 'endo' : 'indo');
 

@@ -68,7 +68,7 @@ export async function handleApi(request, env, path) {
     }
     if (!body?.text?.trim()) return json({ error: 'text is required' }, 400);
     try {
-      return json(await translate(env, body.text, body.direction));
+      return json(await translate(env, body.text, body.direction, body.ui));
     } catch (e) {
       return json({ error: e.message }, 502);
     }
@@ -110,7 +110,7 @@ export async function handleApi(request, env, path) {
     const course = url.searchParams.get('course') ?? 'pt';
     const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 500);
     const { results } = await env.DB.prepare(
-      `SELECT id, course, term, trans, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
+      `SELECT id, course, term, trans, trans_ru, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
        FROM cards WHERE course = ? AND owner IS NULL AND pos IS NOT 'drill'
        ORDER BY freq LIMIT ?`
     ).bind(course, limit).all();
@@ -187,13 +187,14 @@ export async function handleApi(request, env, path) {
   // the cap is what stops it being a free LLM endpoint for the internet.
   if (path.startsWith('/api/entry/') && request.method === 'GET') {
     const id = decodeURIComponent(path.slice('/api/entry/'.length));
+    const ui = new URL(request.url).searchParams.get('ui') === 'ru' ? 'ru' : 'en';
     const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(id).first();
     if (!card) return json({ error: 'not found' }, 404);
-    if (!card.entry && !(await underPublicCap(env, request))) {
+    if (!card[ui === 'ru' ? 'entry_ru' : 'entry'] && !(await underPublicCap(env, request))) {
       return json({ error: 'daily limit reached' }, 429);
     }
     try {
-      return json({ id, entry: await ensureEntry(env, card) });
+      return json({ id, entry: await ensureEntry(env, card, ui) });
     } catch (e) {
       return json({ error: e.message }, 502);
     }
@@ -291,7 +292,7 @@ export async function handleApi(request, env, path) {
     if (s.length < 2) return json({ q: raw, words: [] });
     // Matching happens on the accent-blind column: "cao" must find "cão".
     const { results } = await env.DB.prepare(
-      `SELECT id, term, trans, pos, gender, freq FROM cards
+      `SELECT id, term, trans, trans_ru, pos, gender, freq FROM cards
        WHERE owner = 'lex' AND fold LIKE ?1
        ORDER BY CASE WHEN fold = ?2 THEN 0
                      WHEN fold LIKE ?3 THEN 1 ELSE 2 END, freq
@@ -430,7 +431,7 @@ export async function handleApi(request, env, path) {
       try {
         // Structured, so a client can offer the corrections as cards instead of
         // leaving them as prose to be read once and forgotten.
-        const { summary, mistakes } = await coachRecap(env, history);
+        const { summary, mistakes } = await coachRecap(env, history, body?.ui);
         const recap = [summary, ...mistakes.map((m) => `❌ ${m.wrong} → ✅ ${m.right}`)]
           .filter(Boolean).join('\n');
         return json({ recap, summary, mistakes, course: s?.course ?? 'pt' });
@@ -491,6 +492,7 @@ export async function handleApi(request, env, path) {
         level,
         history,
         said,
+        ui: body?.ui,
       });
       await env.DB.batch([
         env.DB.prepare(
