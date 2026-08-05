@@ -42,6 +42,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const LOOKUP = 'https://papagaio.kirshp.workers.dev/api/lookup';
     const SEARCH = 'https://papagaio.kirshp.workers.dev/api/search';
     const TTS = 'https://papagaio.kirshp.workers.dev/api/tts';
+    const CONJ = 'https://papagaio.kirshp.workers.dev/api/conjugate';
     const list = document.getElementById('list');
     let all = [];      // loaded cards of the current course
     let tag = null;    // active tag filter
@@ -81,12 +82,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       if (!cards.length && q) suggest(document.getElementById('q').value.trim());
 
       list.querySelectorAll('.morebtn').forEach((b) => {
-        b.onclick = () => {
+        b.onclick = async () => {
           const i = b.dataset.i;
           remember(cards[i]);
           const box = document.getElementById('e' + i);
-          if (box.style.display === 'none') { box.innerHTML = renderEntry(JSON.parse(cards[i].entry), cards[i], i); box.style.display = 'block'; wireTabs(i); }
-          else box.style.display = 'none';
+          if (box.style.display !== 'none') { box.style.display = 'none'; return; }
+          const entry = JSON.parse(cards[i].entry);
+          // The stored article carries a three-tense stub at best; the engine
+          // has all twelve, so for verbs it always wins.
+          if ((cards[i].pos ?? '').startsWith('verb')) {
+            try {
+              const d = await (await fetch(`${CONJ}?v=${encodeURIComponent(cards[i].term)}`)).json();
+              if (d?.conj) entry.conj = d.conj;
+            } catch { /* the stub is better than nothing */ }
+          }
+          box.innerHTML = renderEntry(entry, cards[i], i);
+          box.style.display = 'block';
+          wireTabs(i);
         };
       });
     }
@@ -178,24 +190,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Grouped the way a learner reaches for them: when did it happen?
     const TENSE_GROUPS = [
       ['Past', [
-        ['pps', 'Pretérito Perfeito Simples do Indicativo (PPS)', 'finished, at a point: ontem, no ano passado'],
-        ['imperfeito', 'Pretérito Imperfeito do Indicativo (PII)', 'ongoing or habitual back then: antigamente, sempre'],
-        ['ppc', 'Pretérito Perfeito Composto do Indicativo (PPC)', 'repetition reaching now: ultimamente tenho falado'],
-        ['mais_que_perfeito', 'Pretérito Mais-que-Perfeito Composto (PMQP)', 'earlier than another past moment'],
-        ['imperfeito_conj', 'Pretérito Imperfeito do Conjuntivo (PIC)', 'after se: se eu tivesse…'],
+        ['Indicative', [
+          ['pps', 'Pretérito Perfeito Simples do Indicativo (PPS)', 'finished, at a point: ontem, no ano passado'],
+          ['imperfeito', 'Pretérito Imperfeito do Indicativo (PII)', 'ongoing or habitual back then: antigamente, sempre'],
+          ['ppc', 'Pretérito Perfeito Composto do Indicativo (PPC)', 'repetition reaching now: ultimamente tenho falado'],
+          ['mais_que_perfeito', 'Pretérito Mais-que-Perfeito Composto (PMQP)', 'earlier than another past moment'],
+        ]],
+        ['Subjunctive', [
+          ['imperfeito_conj', 'Pretérito Imperfeito do Conjuntivo (PIC)', 'after se: se eu tivesse…'],
+        ]],
       ]],
       ['Present', [
-        ['presente', 'Presente do Indicativo (PI)', 'now, and general truths: agora, hoje'],
-        ['presente_conj', 'Presente do Conjuntivo (PC)', 'after que, talvez, espero que…'],
-        ['condicional', 'Condicional Simples (COND)', 'would: eu gostaria, seria melhor'],
-        ['imperativo', 'Imperativo (IMP)', 'telling someone to do it'],
+        ['Indicative', [
+          ['presente', 'Presente do Indicativo (PI)', 'now, and general truths: agora, hoje'],
+        ]],
+        ['Subjunctive', [
+          ['presente_conj', 'Presente do Conjuntivo (PC)', 'after que, talvez, espero que…'],
+        ]],
+        ['Other', [
+          ['condicional', 'Condicional Simples (COND)', 'would: eu gostaria, seria melhor'],
+          ['imperativo', 'Imperativo (IMP)', 'telling someone to do it'],
+        ]],
       ]],
       ['Future', [
-        ['futuro_prox', 'Futuro Próximo — ir + infinitivo', 'the spoken future: vou falar amanhã'],
-        ['futuro', 'Futuro Simples do Indicativo (FS)', 'will — mostly written and formal'],
-        ['futuro_conj', 'Futuro do Conjuntivo (FC)', 'after quando, se, assim que — very pt-PT'],
+        ['Indicative', [
+          ['futuro_prox', 'Futuro Próximo — ir + infinitivo', 'the spoken future: vou falar amanhã'],
+          ['futuro', 'Futuro Simples do Indicativo (FS)', 'will — mostly written and formal'],
+        ]],
+        ['Subjunctive', [
+          ['futuro_conj', 'Futuro do Conjuntivo (FC)', 'after quando, se, assim que — very pt-PT'],
+        ]],
       ]],
     ];
+
+    // Same visual as /verbs: where the action sits, "now" at 50.
+    const TL = {
+      presente: [42, 58, 0], pps: [16, 26, 0], imperfeito: [6, 38, 0],
+      ppc: [14, 50, 0], mais_que_perfeito: [2, 10, 0], imperfeito_conj: [6, 38, 1],
+      futuro: [70, 92, 0], futuro_prox: [54, 68, 0], futuro_conj: [62, 88, 1],
+      condicional: [56, 84, 1], imperativo: [50, 64, 1],
+    };
+    const timeline = (k) => {
+      const t = TL[k];
+      return t ? `<div class="tl"><div class="tl-seg${t[2] ? ' unreal' : ''}"
+        style="left:${t[0]}%; width:${t[1] - t[0]}%"></div>
+        <div class="tl-now"><span>now</span></div></div>` : '';
+    };
 
     // Looking a word up is the signal worth keeping — not merely scrolling past it.
     const HKEY = 'pg_dict_history';
@@ -276,25 +316,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       if (e.conj) {
         const groups = TENSE_GROUPS
-          .map(([label, tenses]) => [label, tenses.filter(([k]) => e.conj[k]?.length)])
-          .filter(([, tenses]) => tenses.length);
+          .map(([label, moods]) => [label, moods
+            .map(([m, tenses]) => [m, tenses.filter(([k]) => e.conj[k]?.length)])
+            .filter(([, tenses]) => tenses.length)])
+          .filter(([, moods]) => moods.length);
         if (groups.length) {
+          // Present in the middle and selected — same as everywhere else.
+          const def = Math.min(1, groups.length - 1);
           let cj = `<div class="timerow" style="display:flex; gap:4px; margin-bottom:12px;">` +
             groups.map(([label], g) =>
-              `<button class="time ${g === 0 ? 'on' : ''}" data-i="${i}" data-g="${g}">${label}</button>`).join('') +
+              `<button class="time ${g === def ? 'on' : ''}" data-i="${i}" data-g="${g}">${label}</button>`).join('') +
             '</div>';
-          groups.forEach(([, tenses], g) => {
-            cj += `<div class="timepane" data-i="${i}" data-g="${g}" style="display:${g === 0 ? 'block' : 'none'};">`;
-            for (const [k, name, when] of tenses) {
-              cj += `<div style="margin-bottom:14px;">
-                <strong style="font-size:14.5px;">${name}</strong>
-                ${when ? `<div class="muted" style="font-size:13px; margin-bottom:5px;">${when}</div>` : ''}
-                <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
-                     display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
-                e.conj[k].map((f, n) => f
-                  ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
-                  : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
-                '</div></div>';
+          groups.forEach(([, moods], g) => {
+            cj += `<div class="timepane" data-i="${i}" data-g="${g}" style="display:${g === def ? 'block' : 'none'};">`;
+            for (const [mood, tenses] of moods) {
+              cj += `<div class="moodlabel">${mood}</div>`;
+              for (const [k, name, when] of tenses) {
+                cj += `<div style="margin-bottom:14px;">
+                  <strong style="font-size:14.5px;">${name}</strong>
+                  ${when ? `<div class="muted" style="font-size:13px;">${when}</div>` : ''}
+                  ${timeline(k)}
+                  <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
+                       display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
+                  e.conj[k].map((f, n) => f
+                    ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
+                    : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
+                  '</div></div>';
+              }
             }
             cj += '</div>';
           });
@@ -386,6 +434,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       font: inherit; font-size: 13.5px; padding: 6px 14px; cursor: pointer; flex: 1;
     }
     .time.on { background: var(--accent); color: #08130c; font-weight: 600; }
+    .moodlabel {
+      color: var(--muted); font-size: 11.5px; letter-spacing: .12em;
+      text-transform: uppercase; font-weight: 600; margin: 4px 0 8px;
+    }
+    .tl { position: relative; height: 16px; margin: 6px 0 8px; max-width: 340px; }
+    .tl::before {
+      content: ''; position: absolute; top: 7px; left: 0; right: 0; height: 2px;
+      background: var(--panel2); border-radius: 1px;
+    }
+    .tl-seg {
+      position: absolute; top: 5px; height: 6px; border-radius: 3px;
+      background: var(--accent);
+    }
+    .tl-seg.unreal { opacity: .38; }
+    .tl-now {
+      position: absolute; left: 50%; top: 2px; width: 2px; height: 12px;
+      background: var(--accent2);
+    }
+    .tl-now span {
+      position: absolute; top: 13px; left: -12px; font-size: 9.5px; color: var(--muted);
+    }
     .syn {
       background: var(--panel2); border-radius: 14px; padding: 3px 11px;
       font-size: 13.5px; color: var(--accent2);
