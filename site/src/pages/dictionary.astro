@@ -396,7 +396,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       document.getElementById('btn-pt').style.cssText = course === 'pt' ? '' : 'background:var(--panel2); color:var(--text)';
       document.getElementById('btn-en').style.cssText = course === 'en' ? '' : 'background:var(--panel2); color:var(--text)';
       list.innerHTML = '<p class="muted">loading…</p>';
-      const r = await fetch(`${API}?course=${course}&limit=500`);
+      const r = await fetch(`${API}?course=${course}&limit=2000`);
       all = (await r.json()).cards;
       tag = null;
       renderTags();

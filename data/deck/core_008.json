@@ -7,116 +7,1800 @@
     "note": "The push toward a real A2 vocabulary: the house, the body, clothing, the island outdoors, feelings, and the connective tissue — adjectives and adverbs frequent enough to appear in every second sentence."
   },
   "cards": [
-    { "id": "pt0350", "term": "a cozinha", "trans": "kitchen", "pos": "noun", "gender": "f", "note": "also the cooking itself: a cozinha portuguesa", "ex_t": "A cozinha é pequena mas dá para tudo.", "ex_trans": "The kitchen is small but does everything.", "tags": ["core", "casa"], "unit": "casa", "freq": 350 },
-    { "id": "pt0351", "term": "o quarto", "trans": "bedroom; room", "pos": "noun", "gender": "m", "note": "T1, T2 in listings count the quartos", "ex_t": "O quarto dá para o mar.", "ex_trans": "The bedroom faces the sea.", "tags": ["core", "casa"], "unit": "casa", "freq": 351 },
-    { "id": "pt0352", "term": "a sala", "trans": "living room", "pos": "noun", "gender": "f", "note": "sala de estar in full; sala de aula is a classroom", "ex_t": "Estamos na sala a ver televisão.", "ex_trans": "We're in the living room watching TV.", "tags": ["core", "casa"], "unit": "casa", "freq": 352 },
-    { "id": "pt0353", "term": "a janela", "trans": "window", "pos": "noun", "gender": "f", "note": "", "ex_t": "Abre a janela, está calor.", "ex_trans": "Open the window, it's hot.", "tags": ["core", "casa"], "unit": "casa", "freq": 353 },
-    { "id": "pt0354", "term": "a porta", "trans": "door", "pos": "noun", "gender": "f", "note": "à porta = at the door, just outside", "ex_t": "Alguém está à porta.", "ex_trans": "Someone is at the door.", "tags": ["core", "casa"], "unit": "casa", "freq": 354 },
-    { "id": "pt0355", "term": "a chave", "trans": "key", "pos": "noun", "gender": "f", "note": "", "ex_t": "Deixei as chaves em casa.", "ex_trans": "I left the keys at home.", "tags": ["core", "casa"], "unit": "casa", "freq": 355 },
-    { "id": "pt0356", "term": "a escada", "trans": "stairs; ladder", "pos": "noun", "gender": "f", "note": "usually plural: as escadas", "ex_t": "O elevador avariou, vamos pelas escadas.", "ex_trans": "The lift broke down, let's take the stairs.", "tags": ["core", "casa"], "unit": "casa", "freq": 356 },
-    { "id": "pt0357", "term": "o frigorífico", "trans": "fridge", "pos": "noun", "gender": "m", "note": "geladeira is the Brazilian word", "ex_t": "Há sumo no frigorífico.", "ex_trans": "There's juice in the fridge.", "tags": ["core", "casa", "pt-pt"], "unit": "casa", "freq": 357 },
-    { "id": "pt0358", "term": "o fogão", "trans": "cooker, stove", "pos": "noun", "gender": "m", "note": "", "ex_t": "A sopa está no fogão.", "ex_trans": "The soup is on the stove.", "tags": ["core", "casa"], "unit": "casa", "freq": 358 },
-    { "id": "pt0359", "term": "a cama", "trans": "bed", "pos": "noun", "gender": "f", "note": "ir para a cama = to go to bed", "ex_t": "Vou para a cama, estou exausto.", "ex_trans": "I'm going to bed, I'm exhausted.", "tags": ["core", "casa"], "unit": "casa", "freq": 359 },
-    { "id": "pt0360", "term": "o chão", "trans": "floor, ground", "pos": "noun", "gender": "m", "note": "no chão = on the floor", "ex_t": "Caiu tudo no chão.", "ex_trans": "Everything fell on the floor.", "tags": ["core", "casa"], "unit": "casa", "freq": 360 },
-    { "id": "pt0361", "term": "a parede", "trans": "wall (indoor)", "pos": "noun", "gender": "f", "note": "muro is the outdoor wall", "ex_t": "Vou pendurar o quadro nesta parede.", "ex_trans": "I'll hang the picture on this wall.", "tags": ["core", "casa"], "unit": "casa", "freq": 361 },
-    { "id": "pt0362", "term": "o telhado", "trans": "roof", "pos": "noun", "gender": "m", "note": "", "ex_t": "O telhado deixa entrar água quando chove muito.", "ex_trans": "The roof lets water in when it rains a lot.", "tags": ["core", "casa"], "unit": "casa", "freq": 362 },
-    { "id": "pt0363", "term": "a varanda", "trans": "balcony", "pos": "noun", "gender": "f", "note": "half of Madeira's rent adverts lead with it", "ex_t": "Tomamos o pequeno-almoço na varanda.", "ex_trans": "We have breakfast on the balcony.", "tags": ["core", "casa", "madeira"], "unit": "casa", "freq": 363 },
-    { "id": "pt0364", "term": "o vizinho", "trans": "neighbour", "pos": "noun", "gender": "m", "note": "a vizinha; also the adjective: o país vizinho", "ex_t": "O vizinho de cima faz barulho à noite.", "ex_trans": "The upstairs neighbour makes noise at night.", "tags": ["core", "casa"], "unit": "casa", "freq": 364 },
-    { "id": "pt0365", "term": "a cabeça", "trans": "head", "pos": "noun", "gender": "f", "note": "dói-me a cabeça — my head aches", "ex_t": "Dói-me a cabeça desde manhã.", "ex_trans": "My head has been aching since morning.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 365 },
-    { "id": "pt0366", "term": "o olho", "trans": "eye", "pos": "noun", "gender": "m", "note": "plural olhos; olho! also means watch out", "ex_t": "Ela tem os olhos verdes.", "ex_trans": "She has green eyes.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 366 },
-    { "id": "pt0367", "term": "a mão", "trans": "hand", "pos": "noun", "gender": "f", "note": "plural mãos; dar uma mão = to lend a hand", "ex_t": "Dás-me uma mão com as compras?", "ex_trans": "Can you give me a hand with the shopping?", "tags": ["core", "corpo"], "unit": "corpo", "freq": 367 },
-    { "id": "pt0368", "term": "o pé", "trans": "foot", "pos": "noun", "gender": "m", "note": "a pé = on foot; ao pé de = next to", "ex_t": "Vou a pé, é perto.", "ex_trans": "I'll walk, it's close.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 368 },
-    { "id": "pt0369", "term": "a perna", "trans": "leg", "pos": "noun", "gender": "f", "note": "", "ex_t": "Depois da levada, as pernas doem.", "ex_trans": "After the levada, my legs ache.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 369 },
-    { "id": "pt0370", "term": "o braço", "trans": "arm", "pos": "noun", "gender": "m", "note": "de braço dado = arm in arm", "ex_t": "Parti o braço a jogar futebol.", "ex_trans": "I broke my arm playing football.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 370 },
-    { "id": "pt0371", "term": "as costas", "trans": "back (of the body)", "pos": "noun", "gender": "f", "note": "always plural — dói-me as costas", "ex_t": "Tenho dores nas costas do computador.", "ex_trans": "My back hurts from the computer.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 371 },
-    { "id": "pt0372", "term": "a garganta", "trans": "throat", "pos": "noun", "gender": "f", "note": "dor de garganta — the pharmacy phrase", "ex_t": "Tenho a garganta inflamada.", "ex_trans": "My throat is inflamed.", "tags": ["core", "corpo", "saude"], "unit": "corpo", "freq": 372 },
-    { "id": "pt0373", "term": "o coração", "trans": "heart", "pos": "noun", "gender": "m", "note": "", "ex_t": "O exercício faz bem ao coração.", "ex_trans": "Exercise is good for the heart.", "tags": ["core", "corpo"], "unit": "corpo", "freq": 373 },
-    { "id": "pt0374", "term": "o dente", "trans": "tooth", "pos": "noun", "gender": "m", "note": "lavar os dentes — to brush your teeth", "ex_t": "Tenho de marcar dentista, dói-me um dente.", "ex_trans": "I need to book a dentist, a tooth hurts.", "tags": ["core", "corpo", "saude"], "unit": "corpo", "freq": 374 },
-    { "id": "pt0375", "term": "a camisa", "trans": "shirt", "pos": "noun", "gender": "f", "note": "camisola is a jumper, not a nightgown", "ex_t": "Vou de camisa branca à reunião.", "ex_trans": "I'm wearing a white shirt to the meeting.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 375 },
-    { "id": "pt0376", "term": "as calças", "trans": "trousers", "pos": "noun", "gender": "f", "note": "always plural, like in English", "ex_t": "Estas calças ficam-te bem.", "ex_trans": "These trousers suit you.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 376 },
-    { "id": "pt0377", "term": "o casaco", "trans": "jacket, coat", "pos": "noun", "gender": "m", "note": "the levada essential — weather turns fast", "ex_t": "Leva casaco, lá em cima está frio.", "ex_trans": "Take a jacket, it's cold up there.", "tags": ["core", "roupa", "madeira"], "unit": "roupa", "freq": 377 },
-    { "id": "pt0378", "term": "os sapatos", "trans": "shoes", "pos": "noun", "gender": "m", "note": "sapatilhas are trainers", "ex_t": "Preciso de sapatos novos para o casamento.", "ex_trans": "I need new shoes for the wedding.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 378 },
-    { "id": "pt0379", "term": "o vestido", "trans": "dress", "pos": "noun", "gender": "m", "note": "also the participle of vestir — dressed", "ex_t": "Ela comprou um vestido para a festa.", "ex_trans": "She bought a dress for the party.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 379 },
-    { "id": "pt0380", "term": "o guarda-chuva", "trans": "umbrella", "pos": "noun", "gender": "m", "note": "literally rain-guard; plural guarda-chuvas", "ex_t": "Esqueci-me do guarda-chuva no autocarro.", "ex_trans": "I forgot my umbrella on the bus.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 380 },
-    { "id": "pt0381", "term": "os óculos", "trans": "glasses", "pos": "noun", "gender": "m", "note": "always plural; óculos de sol — sunglasses", "ex_t": "Não vejo nada sem óculos.", "ex_trans": "I can't see anything without glasses.", "tags": ["core", "roupa"], "unit": "roupa", "freq": 381 },
-    { "id": "pt0382", "term": "a montanha", "trans": "mountain", "pos": "noun", "gender": "m", "note": "", "ex_t": "As montanhas da Madeira chegam aos 1800 metros.", "ex_trans": "Madeira's mountains reach 1800 metres.", "tags": ["core", "natureza", "madeira"], "unit": "natureza", "freq": 382 },
-    { "id": "pt0383", "term": "o mar", "trans": "sea", "pos": "noun", "gender": "m", "note": "à beira-mar = by the sea", "ex_t": "Da varanda vê-se o mar.", "ex_trans": "You can see the sea from the balcony.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 383 },
-    { "id": "pt0384", "term": "a praia", "trans": "beach", "pos": "noun", "gender": "f", "note": "on Madeira mostly pebbles — calhau", "ex_t": "No verão a praia enche-se logo de manhã.", "ex_trans": "In summer the beach fills up early in the morning.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 384 },
-    { "id": "pt0385", "term": "o rio", "trans": "river", "pos": "noun", "gender": "m", "note": "Madeira's are ribeiras — streams in ravines", "ex_t": "O rio passa por baixo da ponte velha.", "ex_trans": "The river runs under the old bridge.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 385 },
-    { "id": "pt0386", "term": "a árvore", "trans": "tree", "pos": "noun", "gender": "f", "note": "", "ex_t": "Esta árvore dá boa sombra.", "ex_trans": "This tree gives good shade.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 386 },
-    { "id": "pt0387", "term": "a flor", "trans": "flower", "pos": "noun", "gender": "f", "note": "Festa da Flor — Funchal's flower festival", "ex_t": "A Madeira está cheia de flores em maio.", "ex_trans": "Madeira is full of flowers in May.", "tags": ["core", "natureza", "madeira"], "unit": "natureza", "freq": 387 },
-    { "id": "pt0388", "term": "o céu", "trans": "sky; heaven", "pos": "noun", "gender": "m", "note": "", "ex_t": "O céu está limpo, vai estar bom dia.", "ex_trans": "The sky is clear, it'll be a nice day.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 388 },
-    { "id": "pt0389", "term": "a pedra", "trans": "stone, rock", "pos": "noun", "gender": "f", "note": "", "ex_t": "Cuidado com as pedras no trilho.", "ex_trans": "Mind the stones on the trail.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 389 },
-    { "id": "pt0390", "term": "o vento", "trans": "wind", "pos": "noun", "gender": "m", "note": "the airport's famous variable", "ex_t": "Com este vento o avião pode não aterrar.", "ex_trans": "With this wind the plane might not land.", "tags": ["core", "natureza", "madeira"], "unit": "natureza", "freq": 390 },
-    { "id": "pt0391", "term": "o nevoeiro", "trans": "fog", "pos": "noun", "gender": "m", "note": "rolls over Paul da Serra in minutes", "ex_t": "Não subas hoje, está nevoeiro no planalto.", "ex_trans": "Don't go up today, the plateau is fogged in.", "tags": ["core", "natureza", "madeira"], "unit": "natureza", "freq": 391 },
-    { "id": "pt0392", "term": "a cidade", "trans": "city, town", "pos": "noun", "gender": "f", "note": "", "ex_t": "A cidade está cheia de turistas.", "ex_trans": "The city is full of tourists.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 392 },
-    { "id": "pt0393", "term": "a aldeia", "trans": "village", "pos": "noun", "gender": "f", "note": "", "ex_t": "Os meus sogros vivem numa aldeia no norte.", "ex_trans": "My in-laws live in a village in the north.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 393 },
-    { "id": "pt0394", "term": "a rua", "trans": "street", "pos": "noun", "gender": "f", "note": "na rua = outside, out of the house", "ex_t": "Moro na rua ao lado do mercado.", "ex_trans": "I live on the street next to the market.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 394 },
-    { "id": "pt0395", "term": "a ponte", "trans": "bridge", "pos": "noun", "gender": "f", "note": "fazer ponte = to take a long weekend", "ex_t": "Sexta é feriado — vou fazer ponte.", "ex_trans": "Friday is a holiday — I'm taking the long weekend.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 395 },
-    { "id": "pt0396", "term": "a igreja", "trans": "church", "pos": "noun", "gender": "f", "note": "the landmark directions are given by", "ex_t": "A festa é no largo da igreja.", "ex_trans": "The festival is in the church square.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 396 },
-    { "id": "pt0397", "term": "o jardim", "trans": "garden, park", "pos": "noun", "gender": "m", "note": "jardim de infância — kindergarten", "ex_t": "Levo os miúdos ao jardim à tarde.", "ex_trans": "I take the kids to the park in the afternoon.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 397 },
-    { "id": "pt0398", "term": "o centro", "trans": "centre", "pos": "noun", "gender": "m", "note": "no centro = downtown; centro de saúde = health centre", "ex_t": "Trabalho no centro, vou de autocarro.", "ex_trans": "I work in the centre, I go by bus.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 398 },
-    { "id": "pt0399", "term": "o caminho", "trans": "way, path", "pos": "noun", "gender": "m", "note": "a caminho de = on the way to", "ex_t": "Compro pão a caminho de casa.", "ex_trans": "I buy bread on the way home.", "tags": ["core", "lugar"], "unit": "lugar", "freq": 399 },
-    { "id": "pt0400", "term": "feliz", "trans": "happy", "pos": "adj", "gender": null, "note": "one form for both genders; plural felizes", "ex_t": "Estou muito feliz com a casa nova.", "ex_trans": "I'm very happy with the new place.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 400 },
-    { "id": "pt0401", "term": "triste", "trans": "sad", "pos": "adj", "gender": null, "note": "", "ex_t": "Ficou triste com a notícia.", "ex_trans": "He was saddened by the news.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 401 },
-    { "id": "pt0402", "term": "cansado", "trans": "tired", "pos": "adj", "gender": null, "note": "cansada for a woman; estou cansado — estar, not ser", "ex_t": "Estou cansado, foi uma semana longa.", "ex_trans": "I'm tired, it's been a long week.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 402 },
-    { "id": "pt0403", "term": "contente", "trans": "pleased, glad", "pos": "adj", "gender": null, "note": "lighter than feliz — glad about something specific", "ex_t": "Estou contente por estares cá.", "ex_trans": "I'm glad you're here.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 403 },
-    { "id": "pt0404", "term": "zangado", "trans": "angry", "pos": "adj", "gender": null, "note": "zangar-se com alguém — to get cross with someone", "ex_t": "Ela está zangada comigo por causa do atraso.", "ex_trans": "She's angry with me because of the delay.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 404 },
-    { "id": "pt0405", "term": "nervoso", "trans": "nervous", "pos": "adj", "gender": null, "note": "", "ex_t": "Fico nervoso antes de falar português ao telefone.", "ex_trans": "I get nervous before speaking Portuguese on the phone.", "tags": ["core", "sentimento", "adjetivo"], "unit": "sentimentos", "freq": 405 },
-    { "id": "pt0406", "term": "com fome", "trans": "hungry", "pos": "phrase", "gender": null, "note": "estar com fome / ter fome — hunger is had, not been", "ex_t": "Estou com uma fome terrível.", "ex_trans": "I'm terribly hungry.", "tags": ["core", "sentimento"], "unit": "sentimentos", "freq": 406 },
-    { "id": "pt0407", "term": "com sede", "trans": "thirsty", "pos": "phrase", "gender": null, "note": "same pattern: estar com sede / ter sede", "ex_t": "Depois da caminhada estávamos com muita sede.", "ex_trans": "After the hike we were very thirsty.", "tags": ["core", "sentimento"], "unit": "sentimentos", "freq": 407 },
-    { "id": "pt0408", "term": "com sono", "trans": "sleepy", "pos": "phrase", "gender": null, "note": "sono is sleep itself; sonho is a dream", "ex_t": "O café não ajudou, continuo com sono.", "ex_trans": "The coffee didn't help, I'm still sleepy.", "tags": ["core", "sentimento"], "unit": "sentimentos", "freq": 408 },
-    { "id": "pt0409", "term": "com medo", "trans": "afraid", "pos": "phrase", "gender": null, "note": "ter medo de — to be afraid of", "ex_t": "Tenho medo de alturas, as levadas custam-me.", "ex_trans": "I'm afraid of heights, levadas are hard for me.", "tags": ["core", "sentimento"], "unit": "sentimentos", "freq": 409 },
-    { "id": "pt0410", "term": "com pressa", "trans": "in a hurry", "pos": "phrase", "gender": null, "note": "", "ex_t": "Desculpa, estou com pressa — falamos logo.", "ex_trans": "Sorry, I'm in a hurry — we'll talk later.", "tags": ["core", "sentimento"], "unit": "sentimentos", "freq": 410 },
-    { "id": "pt0411", "term": "novo", "trans": "new; young", "pos": "adj", "gender": null, "note": "both meanings: casa nova / ele é muito novo", "ex_t": "O carro é novo, ainda cheira a loja.", "ex_trans": "The car is new, it still smells of the shop.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 411 },
-    { "id": "pt0412", "term": "velho", "trans": "old", "pos": "adj", "gender": null, "note": "for people, idoso is politer", "ex_t": "O prédio é velho mas bem cuidado.", "ex_trans": "The building is old but well kept.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 412 },
-    { "id": "pt0413", "term": "limpo", "trans": "clean", "pos": "adj", "gender": null, "note": "also the participle of limpar", "ex_t": "A casa está limpa para as visitas.", "ex_trans": "The house is clean for the guests.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 413 },
-    { "id": "pt0414", "term": "sujo", "trans": "dirty", "pos": "adj", "gender": null, "note": "", "ex_t": "As sapatilhas ficaram sujas da levada.", "ex_trans": "My trainers got dirty from the levada.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 414 },
-    { "id": "pt0415", "term": "cheio", "trans": "full", "pos": "adj", "gender": null, "note": "estar cheio also = to be stuffed after a meal", "ex_t": "O autocarro vinha cheio.", "ex_trans": "The bus came full.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 415 },
-    { "id": "pt0416", "term": "vazio", "trans": "empty", "pos": "adj", "gender": null, "note": "", "ex_t": "Fora de época, o hotel está meio vazio.", "ex_trans": "Off season, the hotel is half empty.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 416 },
-    { "id": "pt0417", "term": "barato", "trans": "cheap", "pos": "adj", "gender": null, "note": "", "ex_t": "O mercado é mais barato que o supermercado.", "ex_trans": "The market is cheaper than the supermarket.", "tags": ["core", "adjetivo", "compras"], "unit": "adjetivos", "freq": 417 },
-    { "id": "pt0418", "term": "caro", "trans": "expensive; dear", "pos": "adj", "gender": null, "note": "", "ex_t": "As rendas no Funchal estão cada vez mais caras.", "ex_trans": "Rents in Funchal keep getting more expensive.", "tags": ["core", "adjetivo", "compras"], "unit": "adjetivos", "freq": 418 },
-    { "id": "pt0419", "term": "forte", "trans": "strong", "pos": "adj", "gender": null, "note": "café forte, chuva forte — heavy rain too", "ex_t": "Hoje a ondulação está forte.", "ex_trans": "The swell is strong today.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 419 },
-    { "id": "pt0420", "term": "fraco", "trans": "weak", "pos": "adj", "gender": null, "note": "rede fraca — weak signal", "ex_t": "O sinal aqui é fraco.", "ex_trans": "The signal here is weak.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 420 },
-    { "id": "pt0421", "term": "quente", "trans": "hot, warm", "pos": "adj", "gender": null, "note": "for weather use calor: está calor, not está quente", "ex_t": "A sopa ainda está quente.", "ex_trans": "The soup is still hot.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 421 },
-    { "id": "pt0422", "term": "frio", "trans": "cold", "pos": "adj", "gender": null, "note": "noun too: está frio / tenho frio", "ex_t": "A água do mar está fria em março.", "ex_trans": "The sea is cold in March.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 422 },
-    { "id": "pt0423", "term": "rápido", "trans": "fast, quick", "pos": "adj", "gender": null, "note": "", "ex_t": "O barco é mais rápido do que parece.", "ex_trans": "The boat is faster than it looks.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 423 },
-    { "id": "pt0424", "term": "lento", "trans": "slow", "pos": "adj", "gender": null, "note": "devagar is the adverb: fala devagar", "ex_t": "A internet aqui é lenta à noite.", "ex_trans": "The internet here is slow at night.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 424 },
-    { "id": "pt0425", "term": "perigoso", "trans": "dangerous", "pos": "adj", "gender": null, "note": "", "ex_t": "Esse trilho é perigoso com chuva.", "ex_trans": "That trail is dangerous in the rain.", "tags": ["core", "adjetivo", "madeira"], "unit": "adjetivos", "freq": 425 },
-    { "id": "pt0426", "term": "seguro", "trans": "safe; insurance", "pos": "adj", "gender": null, "note": "noun and adjective: é seguro / o seguro do carro", "ex_t": "A zona é segura, mesmo à noite.", "ex_trans": "The area is safe, even at night.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 426 },
-    { "id": "pt0427", "term": "importante", "trans": "important", "pos": "adj", "gender": null, "note": "", "ex_t": "O mais importante é praticar todos os dias.", "ex_trans": "The most important thing is to practise every day.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 427 },
-    { "id": "pt0428", "term": "pronto", "trans": "ready", "pos": "adj", "gender": null, "note": "also the filler word: pronto, já está — right, done", "ex_t": "O jantar está pronto!", "ex_trans": "Dinner is ready!", "tags": ["core", "adjetivo", "pt-pt"], "unit": "adjetivos", "freq": 428 },
-    { "id": "pt0429", "term": "sempre", "trans": "always", "pos": "adv", "gender": null, "note": "after the verb it can mean 'after all': ele vem sempre", "ex_t": "Bebo sempre café depois do almoço.", "ex_trans": "I always have coffee after lunch.", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 429 },
-    { "id": "pt0430", "term": "nunca", "trans": "never", "pos": "adv", "gender": null, "note": "double negative is correct: não vou nunca", "ex_t": "Nunca provei espetada em pau de louro?! ", "ex_trans": "You've never tried espetada on a laurel stick?!", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 430 },
-    { "id": "pt0431", "term": "às vezes", "trans": "sometimes", "pos": "adv", "gender": null, "note": "", "ex_t": "Às vezes trabalho a partir de um café.", "ex_trans": "Sometimes I work from a café.", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 431 },
-    { "id": "pt0432", "term": "devagar", "trans": "slowly", "pos": "adv", "gender": null, "note": "the word you need most in week one", "ex_t": "Pode falar mais devagar, se faz favor?", "ex_trans": "Could you speak more slowly, please?", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 432 },
-    { "id": "pt0433", "term": "depressa", "trans": "quickly", "pos": "adv", "gender": null, "note": "", "ex_t": "Anda depressa, o autocarro está a chegar!", "ex_trans": "Come quickly, the bus is arriving!", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 433 },
-    { "id": "pt0434", "term": "quase", "trans": "almost", "pos": "adv", "gender": null, "note": "", "ex_t": "Já está quase pronto, dois minutos.", "ex_trans": "It's almost ready, two minutes.", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 434 },
-    { "id": "pt0435", "term": "juntos", "trans": "together", "pos": "adv", "gender": null, "note": "agrees: juntas for women", "ex_t": "Vamos almoçar juntos para a semana?", "ex_trans": "Shall we have lunch together next week?", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 435 },
-    { "id": "pt0436", "term": "sozinho", "trans": "alone", "pos": "adj", "gender": null, "note": "sozinha; often where English says 'by myself'", "ex_t": "Fiz a levada sozinho, sem guia.", "ex_trans": "I did the levada alone, no guide.", "tags": ["core", "adjetivo"], "unit": "adjetivos", "freq": 436 },
-    { "id": "pt0437", "term": "talvez", "trans": "maybe, perhaps", "pos": "adv", "gender": null, "note": "triggers the conjuntivo: talvez venha", "ex_t": "Talvez vá ao mercado no sábado.", "ex_trans": "Maybe I'll go to the market on Saturday.", "tags": ["core", "adverbio"], "unit": "adverbios", "freq": 437 },
-    { "id": "pt0438", "term": "porque", "trans": "because", "pos": "conj", "gender": null, "note": "porquê? alone is the question 'why?'", "ex_t": "Fico em casa porque está a chover.", "ex_trans": "I'm staying home because it's raining.", "tags": ["core", "conector"], "unit": "adverbios", "freq": 438 },
-    { "id": "pt0439", "term": "mas", "trans": "but", "pos": "conj", "gender": null, "note": "mais with i is 'more' — one letter, different word", "ex_t": "Quero ir, mas não posso.", "ex_trans": "I want to go, but I can't.", "tags": ["core", "conector"], "unit": "adverbios", "freq": 439 },
-    { "id": "pt0440", "term": "enquanto", "trans": "while", "pos": "conj", "gender": null, "note": "", "ex_t": "Ouço podcasts enquanto cozinho.", "ex_trans": "I listen to podcasts while I cook.", "tags": ["core", "conector"], "unit": "adverbios", "freq": 440 },
-    { "id": "pt0441", "term": "a colher", "trans": "spoon", "pos": "noun", "gender": "f", "note": "also the verb colher — to harvest", "ex_t": "Falta uma colher para a sopa.", "ex_trans": "We're missing a spoon for the soup.", "tags": ["core", "cozinha"], "unit": "casa", "freq": 441 },
-    { "id": "pt0442", "term": "o garfo", "trans": "fork", "pos": "noun", "gender": "m", "note": "", "ex_t": "Comes o bolo com garfo ou à mão?", "ex_trans": "Do you eat the cake with a fork or by hand?", "tags": ["core", "cozinha"], "unit": "casa", "freq": 442 },
-    { "id": "pt0443", "term": "a faca", "trans": "knife", "pos": "noun", "gender": "f", "note": "", "ex_t": "Esta faca não corta nada.", "ex_trans": "This knife doesn't cut anything.", "tags": ["core", "cozinha"], "unit": "casa", "freq": 443 },
-    { "id": "pt0444", "term": "o prato", "trans": "plate; dish", "pos": "noun", "gender": "m", "note": "prato do dia — the daily special", "ex_t": "Qual é o prato do dia?", "ex_trans": "What's today's special?", "tags": ["core", "cozinha", "comida"], "unit": "casa", "freq": 444 },
-    { "id": "pt0445", "term": "o copo", "trans": "glass (for drinking)", "pos": "noun", "gender": "m", "note": "um copo de água — the free one you may ask for", "ex_t": "Pode trazer um copo de água?", "ex_trans": "Could you bring a glass of water?", "tags": ["core", "cozinha", "comida"], "unit": "casa", "freq": 445 },
-    { "id": "pt0446", "term": "a garrafa", "trans": "bottle", "pos": "noun", "gender": "f", "note": "", "ex_t": "Levamos uma garrafa de vinho para o jantar.", "ex_trans": "We're taking a bottle of wine to dinner.", "tags": ["core", "cozinha", "comida"], "unit": "casa", "freq": 446 },
-    { "id": "pt0447", "term": "o lixo", "trans": "rubbish", "pos": "noun", "gender": "m", "note": "pôr o lixo lá fora — the nightly ritual", "ex_t": "Não te esqueças de pôr o lixo lá fora.", "ex_trans": "Don't forget to take the rubbish out.", "tags": ["core", "casa"], "unit": "casa", "freq": 447 },
-    { "id": "pt0448", "term": "a roupa", "trans": "clothes; laundry", "pos": "noun", "gender": "f", "note": "estender a roupa — to hang the washing", "ex_t": "Vou estender a roupa enquanto há sol.", "ex_trans": "I'll hang the washing while there's sun.", "tags": ["core", "casa", "roupa"], "unit": "roupa", "freq": 448 },
-    { "id": "pt0449", "term": "a prenda", "trans": "present, gift", "pos": "noun", "gender": "f", "note": "pt-PT says prenda; presente is more formal", "ex_t": "Ainda não comprei a prenda de anos dela.", "ex_trans": "I still haven't bought her birthday present.", "tags": ["core", "pt-pt"], "unit": "lugar", "freq": 449 },
-    { "id": "pt0450", "term": "a festa", "trans": "party, festival", "pos": "noun", "gender": "f", "note": "as festas — the season of village festivals", "ex_t": "Há festa na vila este fim de semana.", "ex_trans": "There's a festival in town this weekend.", "tags": ["core"], "unit": "lugar", "freq": 450 },
-    { "id": "pt0451", "term": "a viagem", "trans": "trip, journey", "pos": "noun", "gender": "f", "note": "viajar is the verb", "ex_t": "A viagem de barco demora duas horas e meia.", "ex_trans": "The boat trip takes two and a half hours.", "tags": ["core", "transporte"], "unit": "lugar", "freq": 451 },
-    { "id": "pt0452", "term": "as férias", "trans": "holidays", "pos": "noun", "gender": "f", "note": "always plural: boas férias!", "ex_t": "Em agosto meia Lisboa está de férias na Madeira.", "ex_trans": "In August half of Lisbon is on holiday in Madeira.", "tags": ["core"], "unit": "lugar", "freq": 452 },
-    { "id": "pt0453", "term": "o barulho", "trans": "noise", "pos": "noun", "gender": "m", "note": "", "ex_t": "Os vizinhos fizeram barulho até às três.", "ex_trans": "The neighbours made noise until three.", "tags": ["core", "casa"], "unit": "casa", "freq": 453 },
-    { "id": "pt0454", "term": "o cheiro", "trans": "smell", "pos": "noun", "gender": "m", "note": "cheirar bem/mal — to smell good/bad", "ex_t": "Que bom cheiro a pão fresco!", "ex_trans": "What a lovely smell of fresh bread!", "tags": ["core"], "unit": "casa", "freq": 454 },
-    { "id": "pt0455", "term": "a luz", "trans": "light; electricity", "pos": "noun", "gender": "f", "note": "a conta da luz — the electricity bill", "ex_t": "Apaga a luz quando saíres.", "ex_trans": "Turn off the light when you leave.", "tags": ["core", "casa"], "unit": "casa", "freq": 455 },
-    { "id": "pt0456", "term": "a sombra", "trans": "shade; shadow", "pos": "noun", "gender": "f", "note": "à sombra — in the shade, where locals sit", "ex_t": "Vamos sentar-nos à sombra.", "ex_trans": "Let's sit in the shade.", "tags": ["core", "natureza"], "unit": "natureza", "freq": 456 },
-    { "id": "pt0457", "term": "o fim de semana", "trans": "weekend", "pos": "noun", "gender": "m", "note": "Brazilian drops the 'de': fim de semana vs finde", "ex_t": "Bom fim de semana!", "ex_trans": "Have a good weekend!", "tags": ["core", "tempo"], "unit": "tempo", "freq": 457 },
-    { "id": "pt0458", "term": "a dúvida", "trans": "doubt; question", "pos": "noun", "gender": "f", "note": "tenho uma dúvida — the polite way to ask a question", "ex_t": "Professora, tenho uma dúvida.", "ex_trans": "Teacher, I have a question.", "tags": ["core"], "unit": "trabalho", "freq": 458 },
-    { "id": "pt0459", "term": "a ajuda", "trans": "help", "pos": "noun", "gender": "f", "note": "", "ex_t": "Obrigado pela ajuda com a mudança.", "ex_trans": "Thanks for the help with the move.", "tags": ["core"], "unit": "trabalho", "freq": 459 },
-    { "id": "pt0460", "term": "a vida", "trans": "life", "pos": "noun", "gender": "f", "note": "ganhar a vida — to earn a living", "ex_t": "A vida na ilha é mais calma.", "ex_trans": "Life on the island is calmer.", "tags": ["core"], "unit": "sentimentos", "freq": 460 }
+    {
+      "term": "o espelho",
+      "trans": "mirror",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O espelho da casa de banho está embaciado.",
+      "ex_trans": "The bathroom mirror is fogged up.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0350",
+      "freq": 350
+    },
+    {
+      "term": "a toalha",
+      "trans": "towel",
+      "pos": "noun",
+      "gender": "f",
+      "note": "toalha de mesa is a tablecloth",
+      "ex_t": "Leva uma toalha para a praia.",
+      "ex_trans": "Take a towel to the beach.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0351",
+      "freq": 351
+    },
+    {
+      "id": "pt0352",
+      "term": "a sala",
+      "trans": "living room",
+      "pos": "noun",
+      "gender": "f",
+      "note": "sala de estar in full; sala de aula is a classroom",
+      "ex_t": "Estamos na sala a ver televisão.",
+      "ex_trans": "We're in the living room watching TV.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 352
+    },
+    {
+      "term": "a almofada",
+      "trans": "pillow, cushion",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esta almofada é dura demais.",
+      "ex_trans": "This pillow is too hard.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0353",
+      "freq": 353
+    },
+    {
+      "term": "o cobertor",
+      "trans": "blanket",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "À noite é preciso cobertor, mesmo no verão.",
+      "ex_trans": "At night you need a blanket, even in summer.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0354",
+      "freq": 354
+    },
+    {
+      "term": "o armário",
+      "trans": "cupboard, wardrobe",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Os copos estão no armário de cima.",
+      "ex_trans": "The glasses are in the top cupboard.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0355",
+      "freq": 355
+    },
+    {
+      "id": "pt0356",
+      "term": "a escada",
+      "trans": "stairs; ladder",
+      "pos": "noun",
+      "gender": "f",
+      "note": "usually plural: as escadas",
+      "ex_t": "O elevador avariou, vamos pelas escadas.",
+      "ex_trans": "The lift broke down, let's take the stairs.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 356
+    },
+    {
+      "id": "pt0357",
+      "term": "o frigorífico",
+      "trans": "fridge",
+      "pos": "noun",
+      "gender": "m",
+      "note": "geladeira is the Brazilian word",
+      "ex_t": "Há sumo no frigorífico.",
+      "ex_trans": "There's juice in the fridge.",
+      "tags": [
+        "core",
+        "casa",
+        "pt-pt"
+      ],
+      "unit": "casa",
+      "freq": 357
+    },
+    {
+      "id": "pt0358",
+      "term": "o fogão",
+      "trans": "cooker, stove",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "A sopa está no fogão.",
+      "ex_trans": "The soup is on the stove.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 358
+    },
+    {
+      "id": "pt0359",
+      "term": "a cama",
+      "trans": "bed",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ir para a cama = to go to bed",
+      "ex_t": "Vou para a cama, estou exausto.",
+      "ex_trans": "I'm going to bed, I'm exhausted.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 359
+    },
+    {
+      "id": "pt0360",
+      "term": "o chão",
+      "trans": "floor, ground",
+      "pos": "noun",
+      "gender": "m",
+      "note": "no chão = on the floor",
+      "ex_t": "Caiu tudo no chão.",
+      "ex_trans": "Everything fell on the floor.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 360
+    },
+    {
+      "id": "pt0361",
+      "term": "a parede",
+      "trans": "wall (indoor)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "muro is the outdoor wall",
+      "ex_t": "Vou pendurar o quadro nesta parede.",
+      "ex_trans": "I'll hang the picture on this wall.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 361
+    },
+    {
+      "id": "pt0362",
+      "term": "o telhado",
+      "trans": "roof",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O telhado deixa entrar água quando chove muito.",
+      "ex_trans": "The roof lets water in when it rains a lot.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 362
+    },
+    {
+      "id": "pt0363",
+      "term": "a varanda",
+      "trans": "balcony",
+      "pos": "noun",
+      "gender": "f",
+      "note": "half of Madeira's rent adverts lead with it",
+      "ex_t": "Tomamos o pequeno-almoço na varanda.",
+      "ex_trans": "We have breakfast on the balcony.",
+      "tags": [
+        "core",
+        "casa",
+        "madeira"
+      ],
+      "unit": "casa",
+      "freq": 363
+    },
+    {
+      "term": "a campainha",
+      "trans": "doorbell",
+      "pos": "noun",
+      "gender": "f",
+      "note": "tocar à campainha — to ring the bell",
+      "ex_t": "Toca à campainha, o portão está fechado.",
+      "ex_trans": "Ring the bell, the gate is closed.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0364",
+      "freq": 364
+    },
+    {
+      "term": "o joelho",
+      "trans": "knee",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Magoei o joelho na descida.",
+      "ex_trans": "I hurt my knee on the way down.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "id": "pt0365",
+      "freq": 365
+    },
+    {
+      "id": "pt0366",
+      "term": "o olho",
+      "trans": "eye",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural olhos; olho! also means watch out",
+      "ex_t": "Ela tem os olhos verdes.",
+      "ex_trans": "She has green eyes.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 366
+    },
+    {
+      "id": "pt0367",
+      "term": "a mão",
+      "trans": "hand",
+      "pos": "noun",
+      "gender": "f",
+      "note": "plural mãos; dar uma mão = to lend a hand",
+      "ex_t": "Dás-me uma mão com as compras?",
+      "ex_trans": "Can you give me a hand with the shopping?",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 367
+    },
+    {
+      "id": "pt0368",
+      "term": "o pé",
+      "trans": "foot",
+      "pos": "noun",
+      "gender": "m",
+      "note": "a pé = on foot; ao pé de = next to",
+      "ex_t": "Vou a pé, é perto.",
+      "ex_trans": "I'll walk, it's close.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 368
+    },
+    {
+      "id": "pt0369",
+      "term": "a perna",
+      "trans": "leg",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Depois da levada, as pernas doem.",
+      "ex_trans": "After the levada, my legs ache.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 369
+    },
+    {
+      "id": "pt0370",
+      "term": "o braço",
+      "trans": "arm",
+      "pos": "noun",
+      "gender": "m",
+      "note": "de braço dado = arm in arm",
+      "ex_t": "Parti o braço a jogar futebol.",
+      "ex_trans": "I broke my arm playing football.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 370
+    },
+    {
+      "id": "pt0371",
+      "term": "as costas",
+      "trans": "back (of the body)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "always plural — dói-me as costas",
+      "ex_t": "Tenho dores nas costas do computador.",
+      "ex_trans": "My back hurts from the computer.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 371
+    },
+    {
+      "id": "pt0372",
+      "term": "a garganta",
+      "trans": "throat",
+      "pos": "noun",
+      "gender": "f",
+      "note": "dor de garganta — the pharmacy phrase",
+      "ex_t": "Tenho a garganta inflamada.",
+      "ex_trans": "My throat is inflamed.",
+      "tags": [
+        "core",
+        "corpo",
+        "saude"
+      ],
+      "unit": "corpo",
+      "freq": 372
+    },
+    {
+      "id": "pt0373",
+      "term": "o coração",
+      "trans": "heart",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O exercício faz bem ao coração.",
+      "ex_trans": "Exercise is good for the heart.",
+      "tags": [
+        "core",
+        "corpo"
+      ],
+      "unit": "corpo",
+      "freq": 373
+    },
+    {
+      "id": "pt0374",
+      "term": "o dente",
+      "trans": "tooth",
+      "pos": "noun",
+      "gender": "m",
+      "note": "lavar os dentes — to brush your teeth",
+      "ex_t": "Tenho de marcar dentista, dói-me um dente.",
+      "ex_trans": "I need to book a dentist, a tooth hurts.",
+      "tags": [
+        "core",
+        "corpo",
+        "saude"
+      ],
+      "unit": "corpo",
+      "freq": 374
+    },
+    {
+      "id": "pt0375",
+      "term": "a camisa",
+      "trans": "shirt",
+      "pos": "noun",
+      "gender": "f",
+      "note": "camisola is a jumper, not a nightgown",
+      "ex_t": "Vou de camisa branca à reunião.",
+      "ex_trans": "I'm wearing a white shirt to the meeting.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 375
+    },
+    {
+      "id": "pt0376",
+      "term": "as calças",
+      "trans": "trousers",
+      "pos": "noun",
+      "gender": "f",
+      "note": "always plural, like in English",
+      "ex_t": "Estas calças ficam-te bem.",
+      "ex_trans": "These trousers suit you.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 376
+    },
+    {
+      "id": "pt0377",
+      "term": "o casaco",
+      "trans": "jacket, coat",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the levada essential — weather turns fast",
+      "ex_t": "Leva casaco, lá em cima está frio.",
+      "ex_trans": "Take a jacket, it's cold up there.",
+      "tags": [
+        "core",
+        "roupa",
+        "madeira"
+      ],
+      "unit": "roupa",
+      "freq": 377
+    },
+    {
+      "id": "pt0378",
+      "term": "os sapatos",
+      "trans": "shoes",
+      "pos": "noun",
+      "gender": "m",
+      "note": "sapatilhas are trainers",
+      "ex_t": "Preciso de sapatos novos para o casamento.",
+      "ex_trans": "I need new shoes for the wedding.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 378
+    },
+    {
+      "id": "pt0379",
+      "term": "o vestido",
+      "trans": "dress",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also the participle of vestir — dressed",
+      "ex_t": "Ela comprou um vestido para a festa.",
+      "ex_trans": "She bought a dress for the party.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 379
+    },
+    {
+      "id": "pt0380",
+      "term": "o guarda-chuva",
+      "trans": "umbrella",
+      "pos": "noun",
+      "gender": "m",
+      "note": "literally rain-guard; plural guarda-chuvas",
+      "ex_t": "Esqueci-me do guarda-chuva no autocarro.",
+      "ex_trans": "I forgot my umbrella on the bus.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 380
+    },
+    {
+      "id": "pt0381",
+      "term": "os óculos",
+      "trans": "glasses",
+      "pos": "noun",
+      "gender": "m",
+      "note": "always plural; óculos de sol — sunglasses",
+      "ex_t": "Não vejo nada sem óculos.",
+      "ex_trans": "I can't see anything without glasses.",
+      "tags": [
+        "core",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 381
+    },
+    {
+      "id": "pt0382",
+      "term": "a montanha",
+      "trans": "mountain",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "As montanhas da Madeira chegam aos 1800 metros.",
+      "ex_trans": "Madeira's mountains reach 1800 metres.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "freq": 382
+    },
+    {
+      "id": "pt0383",
+      "term": "o mar",
+      "trans": "sea",
+      "pos": "noun",
+      "gender": "m",
+      "note": "à beira-mar = by the sea",
+      "ex_t": "Da varanda vê-se o mar.",
+      "ex_trans": "You can see the sea from the balcony.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 383
+    },
+    {
+      "term": "a onda",
+      "trans": "wave",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ondulação is the swell in forecasts",
+      "ex_t": "As ondas hoje estão grandes demais para nadar.",
+      "ex_trans": "The waves are too big to swim today.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0384",
+      "freq": 384
+    },
+    {
+      "id": "pt0385",
+      "term": "o rio",
+      "trans": "river",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Madeira's are ribeiras — streams in ravines",
+      "ex_t": "O rio passa por baixo da ponte velha.",
+      "ex_trans": "The river runs under the old bridge.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 385
+    },
+    {
+      "id": "pt0386",
+      "term": "a árvore",
+      "trans": "tree",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esta árvore dá boa sombra.",
+      "ex_trans": "This tree gives good shade.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 386
+    },
+    {
+      "id": "pt0387",
+      "term": "a flor",
+      "trans": "flower",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Festa da Flor — Funchal's flower festival",
+      "ex_t": "A Madeira está cheia de flores em maio.",
+      "ex_trans": "Madeira is full of flowers in May.",
+      "tags": [
+        "core",
+        "natureza",
+        "madeira"
+      ],
+      "unit": "natureza",
+      "freq": 387
+    },
+    {
+      "id": "pt0388",
+      "term": "o céu",
+      "trans": "sky; heaven",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O céu está limpo, vai estar bom dia.",
+      "ex_trans": "The sky is clear, it'll be a nice day.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 388
+    },
+    {
+      "id": "pt0389",
+      "term": "a pedra",
+      "trans": "stone, rock",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Cuidado com as pedras no trilho.",
+      "ex_trans": "Mind the stones on the trail.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 389
+    },
+    {
+      "term": "a tempestade",
+      "trans": "storm",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A tempestade cancelou os voos.",
+      "ex_trans": "The storm cancelled the flights.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0390",
+      "freq": 390
+    },
+    {
+      "term": "o arco-íris",
+      "trans": "rainbow",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural arco-íris, unchanged",
+      "ex_t": "Depois da chuva apareceu um arco-íris sobre a baía.",
+      "ex_trans": "After the rain a rainbow appeared over the bay.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "id": "pt0391",
+      "freq": 391
+    },
+    {
+      "id": "pt0392",
+      "term": "a cidade",
+      "trans": "city, town",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A cidade está cheia de turistas.",
+      "ex_trans": "The city is full of tourists.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 392
+    },
+    {
+      "id": "pt0393",
+      "term": "a aldeia",
+      "trans": "village",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Os meus sogros vivem numa aldeia no norte.",
+      "ex_trans": "My in-laws live in a village in the north.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 393
+    },
+    {
+      "term": "o passeio",
+      "trans": "pavement; stroll",
+      "pos": "noun",
+      "gender": "m",
+      "note": "both the sidewalk and the walk you take on it",
+      "ex_t": "Vamos dar um passeio à beira-mar?",
+      "ex_trans": "Shall we take a stroll along the seafront?",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt0394",
+      "freq": 394
+    },
+    {
+      "id": "pt0395",
+      "term": "a ponte",
+      "trans": "bridge",
+      "pos": "noun",
+      "gender": "f",
+      "note": "fazer ponte = to take a long weekend",
+      "ex_t": "Sexta é feriado — vou fazer ponte.",
+      "ex_trans": "Friday is a holiday — I'm taking the long weekend.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 395
+    },
+    {
+      "id": "pt0396",
+      "term": "a igreja",
+      "trans": "church",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the landmark directions are given by",
+      "ex_t": "A festa é no largo da igreja.",
+      "ex_trans": "The festival is in the church square.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 396
+    },
+    {
+      "id": "pt0397",
+      "term": "o jardim",
+      "trans": "garden, park",
+      "pos": "noun",
+      "gender": "m",
+      "note": "jardim de infância — kindergarten",
+      "ex_t": "Levo os miúdos ao jardim à tarde.",
+      "ex_trans": "I take the kids to the park in the afternoon.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 397
+    },
+    {
+      "id": "pt0398",
+      "term": "o centro",
+      "trans": "centre",
+      "pos": "noun",
+      "gender": "m",
+      "note": "no centro = downtown; centro de saúde = health centre",
+      "ex_t": "Trabalho no centro, vou de autocarro.",
+      "ex_trans": "I work in the centre, I go by bus.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 398
+    },
+    {
+      "id": "pt0399",
+      "term": "o caminho",
+      "trans": "way, path",
+      "pos": "noun",
+      "gender": "m",
+      "note": "a caminho de = on the way to",
+      "ex_t": "Compro pão a caminho de casa.",
+      "ex_trans": "I buy bread on the way home.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "freq": 399
+    },
+    {
+      "term": "orgulhoso",
+      "trans": "proud",
+      "pos": "adj",
+      "gender": null,
+      "note": "orgulhoso de — proud of",
+      "ex_t": "Estou orgulhoso do teu português.",
+      "ex_trans": "I'm proud of your Portuguese.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0400",
+      "freq": 400
+    },
+    {
+      "id": "pt0401",
+      "term": "triste",
+      "trans": "sad",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ficou triste com a notícia.",
+      "ex_trans": "He was saddened by the news.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "freq": 401
+    },
+    {
+      "term": "preocupado",
+      "trans": "worried",
+      "pos": "adj",
+      "gender": null,
+      "note": "preocupado com — worried about",
+      "ex_t": "Estou preocupado com o prazo do visto.",
+      "ex_trans": "I'm worried about the visa deadline.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0402",
+      "freq": 402
+    },
+    {
+      "term": "surpreendido",
+      "trans": "surprised",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Fiquei surpreendido com o preço.",
+      "ex_trans": "I was surprised by the price.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0403",
+      "freq": 403
+    },
+    {
+      "id": "pt0404",
+      "term": "zangado",
+      "trans": "angry",
+      "pos": "adj",
+      "gender": null,
+      "note": "zangar-se com alguém — to get cross with someone",
+      "ex_t": "Ela está zangada comigo por causa do atraso.",
+      "ex_trans": "She's angry with me because of the delay.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "freq": 404
+    },
+    {
+      "id": "pt0405",
+      "term": "nervoso",
+      "trans": "nervous",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Fico nervoso antes de falar português ao telefone.",
+      "ex_trans": "I get nervous before speaking Portuguese on the phone.",
+      "tags": [
+        "core",
+        "sentimento",
+        "adjetivo"
+      ],
+      "unit": "sentimentos",
+      "freq": 405
+    },
+    {
+      "id": "pt0406",
+      "term": "com fome",
+      "trans": "hungry",
+      "pos": "phrase",
+      "gender": null,
+      "note": "estar com fome / ter fome — hunger is had, not been",
+      "ex_t": "Estou com uma fome terrível.",
+      "ex_trans": "I'm terribly hungry.",
+      "tags": [
+        "core",
+        "sentimento"
+      ],
+      "unit": "sentimentos",
+      "freq": 406
+    },
+    {
+      "id": "pt0407",
+      "term": "com sede",
+      "trans": "thirsty",
+      "pos": "phrase",
+      "gender": null,
+      "note": "same pattern: estar com sede / ter sede",
+      "ex_t": "Depois da caminhada estávamos com muita sede.",
+      "ex_trans": "After the hike we were very thirsty.",
+      "tags": [
+        "core",
+        "sentimento"
+      ],
+      "unit": "sentimentos",
+      "freq": 407
+    },
+    {
+      "id": "pt0408",
+      "term": "com sono",
+      "trans": "sleepy",
+      "pos": "phrase",
+      "gender": null,
+      "note": "sono is sleep itself; sonho is a dream",
+      "ex_t": "O café não ajudou, continuo com sono.",
+      "ex_trans": "The coffee didn't help, I'm still sleepy.",
+      "tags": [
+        "core",
+        "sentimento"
+      ],
+      "unit": "sentimentos",
+      "freq": 408
+    },
+    {
+      "id": "pt0409",
+      "term": "com medo",
+      "trans": "afraid",
+      "pos": "phrase",
+      "gender": null,
+      "note": "ter medo de — to be afraid of",
+      "ex_t": "Tenho medo de alturas, as levadas custam-me.",
+      "ex_trans": "I'm afraid of heights, levadas are hard for me.",
+      "tags": [
+        "core",
+        "sentimento"
+      ],
+      "unit": "sentimentos",
+      "freq": 409
+    },
+    {
+      "id": "pt0410",
+      "term": "com pressa",
+      "trans": "in a hurry",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Desculpa, estou com pressa — falamos logo.",
+      "ex_trans": "Sorry, I'm in a hurry — we'll talk later.",
+      "tags": [
+        "core",
+        "sentimento"
+      ],
+      "unit": "sentimentos",
+      "freq": 410
+    },
+    {
+      "term": "estreito",
+      "trans": "narrow",
+      "pos": "adj",
+      "gender": null,
+      "note": "every old street in Funchal",
+      "ex_t": "A rua é estreita demais para o carro.",
+      "ex_trans": "The street is too narrow for the car.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0411",
+      "freq": 411
+    },
+    {
+      "term": "largo",
+      "trans": "wide; small square",
+      "pos": "adj",
+      "gender": null,
+      "note": "as a noun, o largo is a little square",
+      "ex_t": "O caminho fica mais largo depois do túnel.",
+      "ex_trans": "The path gets wider after the tunnel.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0412",
+      "freq": 412
+    },
+    {
+      "term": "leve",
+      "trans": "light (weight)",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Leva só uma mochila leve.",
+      "ex_trans": "Take just a light backpack.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0413",
+      "freq": 413
+    },
+    {
+      "term": "pesado",
+      "trans": "heavy",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "A mala está pesada demais para a cabine.",
+      "ex_trans": "The suitcase is too heavy for the cabin.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0414",
+      "freq": 414
+    },
+    {
+      "term": "macio",
+      "trans": "soft",
+      "pos": "adj",
+      "gender": null,
+      "note": "suave for sounds and flavours",
+      "ex_t": "O bolo do caco fresco é macio por dentro.",
+      "ex_trans": "Fresh bolo do caco is soft inside.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0415",
+      "freq": 415
+    },
+    {
+      "id": "pt0416",
+      "term": "vazio",
+      "trans": "empty",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Fora de época, o hotel está meio vazio.",
+      "ex_trans": "Off season, the hotel is half empty.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 416
+    },
+    {
+      "term": "grátis",
+      "trans": "free of charge",
+      "pos": "adj",
+      "gender": null,
+      "note": "invariable; gratuito is the formal twin",
+      "ex_t": "A entrada é grátis ao domingo.",
+      "ex_trans": "Entry is free on Sundays.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "compras"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0417",
+      "freq": 417
+    },
+    {
+      "term": "usado",
+      "trans": "used, second-hand",
+      "pos": "adj",
+      "gender": null,
+      "note": "em segunda mão also works",
+      "ex_t": "Comprei o carro usado, mas está impecável.",
+      "ex_trans": "I bought the car second-hand, but it's immaculate.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "compras"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0418",
+      "freq": 418
+    },
+    {
+      "id": "pt0419",
+      "term": "forte",
+      "trans": "strong",
+      "pos": "adj",
+      "gender": null,
+      "note": "café forte, chuva forte — heavy rain too",
+      "ex_t": "Hoje a ondulação está forte.",
+      "ex_trans": "The swell is strong today.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 419
+    },
+    {
+      "id": "pt0420",
+      "term": "fraco",
+      "trans": "weak",
+      "pos": "adj",
+      "gender": null,
+      "note": "rede fraca — weak signal",
+      "ex_t": "O sinal aqui é fraco.",
+      "ex_trans": "The signal here is weak.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 420
+    },
+    {
+      "term": "doce",
+      "trans": "sweet",
+      "pos": "adj",
+      "gender": null,
+      "note": "also the noun: um doce — a sweet/pastry",
+      "ex_t": "Este vinho é doce demais para mim.",
+      "ex_trans": "This wine is too sweet for me.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0421",
+      "freq": 421
+    },
+    {
+      "term": "salgado",
+      "trans": "salty; savoury",
+      "pos": "adj",
+      "gender": null,
+      "note": "os salgados — the savoury snacks at the counter",
+      "ex_t": "A sopa ficou um bocado salgada.",
+      "ex_trans": "The soup came out a bit salty.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "comida"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0422",
+      "freq": 422
+    },
+    {
+      "term": "escuro",
+      "trans": "dark",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "No inverno fica escuro às seis.",
+      "ex_trans": "In winter it gets dark at six.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0423",
+      "freq": 423
+    },
+    {
+      "id": "pt0424",
+      "term": "lento",
+      "trans": "slow",
+      "pos": "adj",
+      "gender": null,
+      "note": "devagar is the adverb: fala devagar",
+      "ex_t": "A internet aqui é lenta à noite.",
+      "ex_trans": "The internet here is slow at night.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 424
+    },
+    {
+      "id": "pt0425",
+      "term": "perigoso",
+      "trans": "dangerous",
+      "pos": "adj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Esse trilho é perigoso com chuva.",
+      "ex_trans": "That trail is dangerous in the rain.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "madeira"
+      ],
+      "unit": "adjetivos",
+      "freq": 425
+    },
+    {
+      "id": "pt0426",
+      "term": "seguro",
+      "trans": "safe; insurance",
+      "pos": "adj",
+      "gender": null,
+      "note": "noun and adjective: é seguro / o seguro do carro",
+      "ex_t": "A zona é segura, mesmo à noite.",
+      "ex_trans": "The area is safe, even at night.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "freq": 426
+    },
+    {
+      "term": "claro",
+      "trans": "light, clear; of course",
+      "pos": "adj",
+      "gender": null,
+      "note": "claro! is the everyday 'of course'",
+      "ex_t": "— Podes ajudar? — Claro!",
+      "ex_trans": "— Can you help? — Of course!",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "unit": "adjetivos",
+      "id": "pt0427",
+      "freq": 427
+    },
+    {
+      "id": "pt0428",
+      "term": "pronto",
+      "trans": "ready",
+      "pos": "adj",
+      "gender": null,
+      "note": "also the filler word: pronto, já está — right, done",
+      "ex_t": "O jantar está pronto!",
+      "ex_trans": "Dinner is ready!",
+      "tags": [
+        "core",
+        "adjetivo",
+        "pt-pt"
+      ],
+      "unit": "adjetivos",
+      "freq": 428
+    },
+    {
+      "term": "raramente",
+      "trans": "rarely",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Raramente chove no Porto Santo.",
+      "ex_trans": "It rarely rains on Porto Santo.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "id": "pt0429",
+      "freq": 429
+    },
+    {
+      "term": "muitas vezes",
+      "trans": "often",
+      "pos": "adv",
+      "gender": null,
+      "note": "frequentemente exists but this is what people say",
+      "ex_t": "Venho muitas vezes a este café.",
+      "ex_trans": "I come to this café often.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "id": "pt0430",
+      "freq": 430
+    },
+    {
+      "id": "pt0431",
+      "term": "às vezes",
+      "trans": "sometimes",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Às vezes trabalho a partir de um café.",
+      "ex_trans": "Sometimes I work from a café.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "freq": 431
+    },
+    {
+      "id": "pt0432",
+      "term": "devagar",
+      "trans": "slowly",
+      "pos": "adv",
+      "gender": null,
+      "note": "the word you need most in week one",
+      "ex_t": "Pode falar mais devagar, se faz favor?",
+      "ex_trans": "Could you speak more slowly, please?",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "freq": 432
+    },
+    {
+      "id": "pt0433",
+      "term": "depressa",
+      "trans": "quickly",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "Anda depressa, o autocarro está a chegar!",
+      "ex_trans": "Come quickly, the bus is arriving!",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "freq": 433
+    },
+    {
+      "term": "apenas",
+      "trans": "only, just",
+      "pos": "adv",
+      "gender": null,
+      "note": "só is the spoken twin",
+      "ex_t": "Faltam apenas dois dias para as férias.",
+      "ex_trans": "Only two days left until the holidays.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "id": "pt0434",
+      "freq": 434
+    },
+    {
+      "term": "sobretudo",
+      "trans": "above all, especially",
+      "pos": "adv",
+      "gender": null,
+      "note": "also an overcoat, but you'll meet the adverb",
+      "ex_t": "Gosto da ilha, sobretudo do norte.",
+      "ex_trans": "I like the island, especially the north.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "id": "pt0435",
+      "freq": 435
+    },
+    {
+      "term": "aliás",
+      "trans": "as a matter of fact, by the way",
+      "pos": "adv",
+      "gender": null,
+      "note": "a very pt-PT discourse word — instant native points",
+      "ex_t": "Aliás, foi ele que me ensinou isso.",
+      "ex_trans": "As a matter of fact, it was he who taught me that.",
+      "tags": [
+        "core",
+        "adverbio",
+        "pt-pt"
+      ],
+      "unit": "adverbios",
+      "id": "pt0436",
+      "freq": 436
+    },
+    {
+      "id": "pt0437",
+      "term": "talvez",
+      "trans": "maybe, perhaps",
+      "pos": "adv",
+      "gender": null,
+      "note": "triggers the conjuntivo: talvez venha",
+      "ex_t": "Talvez vá ao mercado no sábado.",
+      "ex_trans": "Maybe I'll go to the market on Saturday.",
+      "tags": [
+        "core",
+        "adverbio"
+      ],
+      "unit": "adverbios",
+      "freq": 437
+    },
+    {
+      "id": "pt0438",
+      "term": "porque",
+      "trans": "because",
+      "pos": "conj",
+      "gender": null,
+      "note": "porquê? alone is the question 'why?'",
+      "ex_t": "Fico em casa porque está a chover.",
+      "ex_trans": "I'm staying home because it's raining.",
+      "tags": [
+        "core",
+        "conector"
+      ],
+      "unit": "adverbios",
+      "freq": 438
+    },
+    {
+      "id": "pt0439",
+      "term": "mas",
+      "trans": "but",
+      "pos": "conj",
+      "gender": null,
+      "note": "mais with i is 'more' — one letter, different word",
+      "ex_t": "Quero ir, mas não posso.",
+      "ex_trans": "I want to go, but I can't.",
+      "tags": [
+        "core",
+        "conector"
+      ],
+      "unit": "adverbios",
+      "freq": 439
+    },
+    {
+      "id": "pt0440",
+      "term": "enquanto",
+      "trans": "while",
+      "pos": "conj",
+      "gender": null,
+      "note": "",
+      "ex_t": "Ouço podcasts enquanto cozinho.",
+      "ex_trans": "I listen to podcasts while I cook.",
+      "tags": [
+        "core",
+        "conector"
+      ],
+      "unit": "adverbios",
+      "freq": 440
+    },
+    {
+      "id": "pt0441",
+      "term": "a colher",
+      "trans": "spoon",
+      "pos": "noun",
+      "gender": "f",
+      "note": "also the verb colher — to harvest",
+      "ex_t": "Falta uma colher para a sopa.",
+      "ex_trans": "We're missing a spoon for the soup.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "freq": 441
+    },
+    {
+      "id": "pt0442",
+      "term": "o garfo",
+      "trans": "fork",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Comes o bolo com garfo ou à mão?",
+      "ex_trans": "Do you eat the cake with a fork or by hand?",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "freq": 442
+    },
+    {
+      "id": "pt0443",
+      "term": "a faca",
+      "trans": "knife",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Esta faca não corta nada.",
+      "ex_trans": "This knife doesn't cut anything.",
+      "tags": [
+        "core",
+        "cozinha"
+      ],
+      "unit": "casa",
+      "freq": 443
+    },
+    {
+      "id": "pt0444",
+      "term": "o prato",
+      "trans": "plate; dish",
+      "pos": "noun",
+      "gender": "m",
+      "note": "prato do dia — the daily special",
+      "ex_t": "Qual é o prato do dia?",
+      "ex_trans": "What's today's special?",
+      "tags": [
+        "core",
+        "cozinha",
+        "comida"
+      ],
+      "unit": "casa",
+      "freq": 444
+    },
+    {
+      "id": "pt0445",
+      "term": "o copo",
+      "trans": "glass (for drinking)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "um copo de água — the free one you may ask for",
+      "ex_t": "Pode trazer um copo de água?",
+      "ex_trans": "Could you bring a glass of water?",
+      "tags": [
+        "core",
+        "cozinha",
+        "comida"
+      ],
+      "unit": "casa",
+      "freq": 445
+    },
+    {
+      "id": "pt0446",
+      "term": "a garrafa",
+      "trans": "bottle",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Levamos uma garrafa de vinho para o jantar.",
+      "ex_trans": "We're taking a bottle of wine to dinner.",
+      "tags": [
+        "core",
+        "cozinha",
+        "comida"
+      ],
+      "unit": "casa",
+      "freq": 446
+    },
+    {
+      "id": "pt0447",
+      "term": "o lixo",
+      "trans": "rubbish",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pôr o lixo lá fora — the nightly ritual",
+      "ex_t": "Não te esqueças de pôr o lixo lá fora.",
+      "ex_trans": "Don't forget to take the rubbish out.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 447
+    },
+    {
+      "id": "pt0448",
+      "term": "a roupa",
+      "trans": "clothes; laundry",
+      "pos": "noun",
+      "gender": "f",
+      "note": "estender a roupa — to hang the washing",
+      "ex_t": "Vou estender a roupa enquanto há sol.",
+      "ex_trans": "I'll hang the washing while there's sun.",
+      "tags": [
+        "core",
+        "casa",
+        "roupa"
+      ],
+      "unit": "roupa",
+      "freq": 448
+    },
+    {
+      "id": "pt0449",
+      "term": "a prenda",
+      "trans": "present, gift",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT says prenda; presente is more formal",
+      "ex_t": "Ainda não comprei a prenda de anos dela.",
+      "ex_trans": "I still haven't bought her birthday present.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "freq": 449
+    },
+    {
+      "id": "pt0450",
+      "term": "a festa",
+      "trans": "party, festival",
+      "pos": "noun",
+      "gender": "f",
+      "note": "as festas — the season of village festivals",
+      "ex_t": "Há festa na vila este fim de semana.",
+      "ex_trans": "There's a festival in town this weekend.",
+      "tags": [
+        "core"
+      ],
+      "unit": "lugar",
+      "freq": 450
+    },
+    {
+      "id": "pt0451",
+      "term": "a viagem",
+      "trans": "trip, journey",
+      "pos": "noun",
+      "gender": "f",
+      "note": "viajar is the verb",
+      "ex_t": "A viagem de barco demora duas horas e meia.",
+      "ex_trans": "The boat trip takes two and a half hours.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "freq": 451
+    },
+    {
+      "term": "a véspera",
+      "trans": "the day before, eve",
+      "pos": "noun",
+      "gender": "f",
+      "note": "véspera de Natal — Christmas Eve",
+      "ex_t": "Na véspera do exame ninguém dorme bem.",
+      "ex_trans": "The night before the exam nobody sleeps well.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0452",
+      "freq": 452
+    },
+    {
+      "id": "pt0453",
+      "term": "o barulho",
+      "trans": "noise",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Os vizinhos fizeram barulho até às três.",
+      "ex_trans": "The neighbours made noise until three.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "freq": 453
+    },
+    {
+      "id": "pt0454",
+      "term": "o cheiro",
+      "trans": "smell",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cheirar bem/mal — to smell good/bad",
+      "ex_t": "Que bom cheiro a pão fresco!",
+      "ex_trans": "What a lovely smell of fresh bread!",
+      "tags": [
+        "core"
+      ],
+      "unit": "casa",
+      "freq": 454
+    },
+    {
+      "term": "a tomada",
+      "trans": "power socket",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the thing you hunt for in every café",
+      "ex_t": "Há alguma tomada perto desta mesa?",
+      "ex_trans": "Is there a socket near this table?",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt0455",
+      "freq": 455
+    },
+    {
+      "id": "pt0456",
+      "term": "a sombra",
+      "trans": "shade; shadow",
+      "pos": "noun",
+      "gender": "f",
+      "note": "à sombra — in the shade, where locals sit",
+      "ex_t": "Vamos sentar-nos à sombra.",
+      "ex_trans": "Let's sit in the shade.",
+      "tags": [
+        "core",
+        "natureza"
+      ],
+      "unit": "natureza",
+      "freq": 456
+    },
+    {
+      "term": "a semana passada",
+      "trans": "last week",
+      "pos": "phrase",
+      "gender": null,
+      "note": "passado agrees: o mês passado, o ano passado",
+      "ex_t": "Na semana passada choveu todos os dias.",
+      "ex_trans": "Last week it rained every day.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "unit": "tempo",
+      "id": "pt0457",
+      "freq": 457
+    },
+    {
+      "id": "pt0458",
+      "term": "a dúvida",
+      "trans": "doubt; question",
+      "pos": "noun",
+      "gender": "f",
+      "note": "tenho uma dúvida — the polite way to ask a question",
+      "ex_t": "Professora, tenho uma dúvida.",
+      "ex_trans": "Teacher, I have a question.",
+      "tags": [
+        "core"
+      ],
+      "unit": "trabalho",
+      "freq": 458
+    },
+    {
+      "id": "pt0459",
+      "term": "a ajuda",
+      "trans": "help",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Obrigado pela ajuda com a mudança.",
+      "ex_trans": "Thanks for the help with the move.",
+      "tags": [
+        "core"
+      ],
+      "unit": "trabalho",
+      "freq": 459
+    },
+    {
+      "id": "pt0460",
+      "term": "a vida",
+      "trans": "life",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ganhar a vida — to earn a living",
+      "ex_t": "A vida na ilha é mais calma.",
+      "ex_trans": "Life on the island is calmer.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "freq": 460
+    }
   ]
 }

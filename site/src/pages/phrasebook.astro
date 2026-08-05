@@ -21,7 +21,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     const AUDIO = 'https://shpara.com/papagaio/audio/';
-    const API = 'https://papagaio.kirshp.workers.dev/api/deck?course=pt&limit=500';
+    const API = 'https://papagaio.kirshp.workers.dev/api/deck?course=pt&limit=2000';
     const list = document.getElementById('list');
     const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));

@@ -108,7 +108,7 @@ export async function handleApi(request, env, path) {
   if (path === '/api/deck' && request.method === 'GET') {
     const url = new URL(request.url);
     const course = url.searchParams.get('course') ?? 'pt';
-    const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 500);
+    const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 2000);
     const { results } = await env.DB.prepare(
       `SELECT id, course, term, trans, trans_ru, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
        FROM cards WHERE course = ? AND owner IS NULL AND pos IS NOT 'drill'
