@@ -285,8 +285,21 @@ export async function handleApi(request, env, path) {
          freq LIMIT 1`
     ).bind(fq, `${fq} %`, `% ${fq} %`, `% ${fq}`, `${fq}%`, `% ${fq}%`).first();
 
+    const exampleLines = async (term, ui2) => {
+      const pair = ui2 === 'ru' ? 'pt-ru' : 'pt-en';
+      const w = fold(term.replace(/^([oa]s? |um |uma )/, ''));
+      const { results } = await env.DB.prepare(
+        `SELECT src, dst FROM examples WHERE pair = ?1
+           AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4)
+         ORDER BY length(src) LIMIT 3`
+      ).bind(pair, `${w} %`, `% ${w} %`, `% ${w}`).all().catch(() => ({ results: [] }));
+      return results.map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
+    };
+    const uiLang = new URL(request.url).searchParams.get('ui') === 'ru' ? 'ru' : 'en';
+
     if (hit) {
       const entry = await ensureEntry(env, hit).catch(() => null);
+      if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang)];
       return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term) });
     }
 
@@ -308,6 +321,7 @@ export async function handleApi(request, env, path) {
           entry.meanings.push({ trans: d, note: 'definição em português' });
         }
       }
+      if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang)];
       return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term) });
     }
 
@@ -340,6 +354,21 @@ export async function handleApi(request, env, path) {
        LIMIT 25`
     ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course).all();
     return json({ q: s, words: results });
+  }
+
+  // Real sentences containing a word, with their translation — Tatoeba pairs.
+  // The dictionary's examples block: what the word looks like in the wild.
+  if (path === '/api/examples' && request.method === 'GET') {
+    const sp = new URL(request.url).searchParams;
+    const w = fold((sp.get('q') ?? '').trim());
+    const pair = ['pt-ru', 'pt-en', 'en-ru'].includes(sp.get('pair')) ? sp.get('pair') : 'pt-en';
+    if (w.length < 2) return json({ examples: [] });
+    const { results } = await env.DB.prepare(
+      `SELECT src, dst FROM examples WHERE pair = ?1
+         AND (fold = ?2 OR fold LIKE ?3 OR fold LIKE ?4 OR fold LIKE ?5)
+       ORDER BY length(src) LIMIT 4`
+    ).bind(pair, w, `${w} %`, `% ${w} %`, `% ${w}`).all();
+    return json({ examples: results });
   }
 
   // Batch glossing: a list of terms in, one-line translations out. Powers the
