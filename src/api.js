@@ -110,7 +110,7 @@ export async function handleApi(request, env, path) {
     const course = url.searchParams.get('course') ?? 'pt';
     const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 2000);
     const { results } = await env.DB.prepare(
-      `SELECT id, course, term, trans, trans_ru, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
+      `SELECT id, course, term, trans, trans_ru, trans_pt, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
        FROM cards WHERE course = ? AND owner IS NULL AND pos IS NOT 'drill'
        ORDER BY freq LIMIT ?`
     ).bind(course, limit).all();
@@ -322,6 +322,30 @@ export async function handleApi(request, env, path) {
        LIMIT 25`
     ).bind(`%${s}%`, s, `${s}%`).all();
     return json({ q: s, words: results });
+  }
+
+  // Batch glossing: a list of terms in, one-line translations out. Powers the
+  // hidden translation layers of the English deck (EN→PT for everyone,
+  // EN→RU for the Russian mode). Public-capped like every model endpoint.
+  if (path === '/api/gloss' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'not configured' }, 503);
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    const body = await request.json().catch(() => null);
+    const terms = Array.isArray(body?.terms) ? body.terms.map(String).slice(0, 25) : [];
+    const to = body?.to === 'ru' ? 'Russian' : 'European Portuguese (pt-PT, never Brazilian)';
+    if (!terms.length) return json({ error: 'terms required' }, 400);
+    const raw = await chat(env, [
+      { role: 'system', content:
+        `Translate each ${'English'} term into ${to}. Short dictionary glosses, 1-4 words, ` +
+        `no explanations. Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
+      { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
+    ], { json: true });
+    try {
+      const out = JSON.parse(raw);
+      return json({ glosses: (out.glosses ?? []).map(String).slice(0, terms.length) });
+    } catch {
+      return json({ error: 'bad model output' }, 502);
+    }
   }
 
   // Every verb conjugates, whether or not the deck teaches it — by rule, and by

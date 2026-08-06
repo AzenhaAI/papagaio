@@ -14,6 +14,7 @@ export async function transcribe(env, bytes, language, filename = 'voice.ogg', m
     body: fd,
   });
   const j = await r.json();
+  if (r.status === 429) throw new Error('the ear is catching its breath — try again in a few seconds');
   if (!r.ok) throw new Error('whisper: ' + JSON.stringify(j).slice(0, 200));
   return (j.text ?? '').trim();
 }
@@ -33,6 +34,7 @@ export async function chat(env, messages, { json = false, model } = {}) {
     }),
   });
   const j = await r.json();
+  if (r.status === 429) throw new Error('the translator is catching its breath — try again in a few seconds');
   if (!r.ok) throw new Error('groq: ' + JSON.stringify(j).slice(0, 200));
   return j.choices[0].message.content;
 }
