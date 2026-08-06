@@ -237,7 +237,7 @@ export async function handleApi(request, env, path) {
   // into pages that instantly go stale. Cached at the edge for an hour.
   if (path === '/api/counts' && request.method === 'GET') {
     const cache = caches.default;
-    const key = new Request('https://papagaio.cache/counts/v1');
+    const key = new Request('https://papagaio.cache/counts/v2');
     const hit = await cache.match(key);
     if (hit) return hit;
     const row = await env.DB.prepare(
@@ -301,6 +301,13 @@ export async function handleApi(request, env, path) {
 
     if (lex) {
       const entry = lex.entry ? JSON.parse(lex.entry) : null;
+      // The monolingual layer rides into the article: Portuguese definitions
+      // after the English glosses, labelled so the client can flag them.
+      if (lex.def_pt && entry && !entry.meanings?.some((m) => m.note === 'definição em português')) {
+        for (const d of String(lex.def_pt).split('; ').slice(0, 4)) {
+          entry.meanings.push({ trans: d, note: 'definição em português' });
+        }
+      }
       return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term) });
     }
 
