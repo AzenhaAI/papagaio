@@ -223,7 +223,9 @@ function systemPrompt(course, scen, level, known, ui) {
   const words = known.join(', ') || '—';
   // The learner's helper language. The scene itself never changes: Portuguese
   // is Portuguese; only the scaffolding (gloss, note, hint translations) moves.
-  const helper = ui === 'ru' ? 'Russian' : 'English';
+  // 'pt' is the immersion mode: the scaffolding itself switches to simple
+  // European Portuguese — training wheels in the target language.
+  const helper = ui === 'ru' ? 'Russian' : ui === 'pt' ? 'simple European Portuguese' : 'English';
   return course === 'pt'
     ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
       `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +

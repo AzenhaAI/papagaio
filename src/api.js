@@ -286,10 +286,10 @@ export async function handleApi(request, env, path) {
     // like "gato" costs nothing and answers instantly — the model is for the
     // tail this misses, not for the middle of the language.
     const lex = await env.DB.prepare(
-      `SELECT * FROM cards WHERE owner = 'lex' AND (lower(term) = ?1 OR fold LIKE ?2)
+      `SELECT * FROM cards WHERE owner = 'lex' AND (lower(term) = ?1 OR fold LIKE ?2 OR lower(trans_ru) LIKE ?3)
        ORDER BY CASE WHEN lower(term) = ?1 THEN 0 ELSE 1 END,
                 CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
-    ).bind(q.trim().toLowerCase(), `${fold(q.trim())} %`).first();
+    ).bind(q.trim().toLowerCase(), `${fold(q.trim())} %`, `${q.trim().toLowerCase()}%`).first();
 
     if (lex) {
       const entry = lex.entry ? JSON.parse(lex.entry) : null;
@@ -316,11 +316,11 @@ export async function handleApi(request, env, path) {
     // Matching happens on the accent-blind column: "cao" must find "cão".
     const { results } = await env.DB.prepare(
       `SELECT id, term, trans, trans_ru, pos, gender, freq FROM cards
-       WHERE owner = 'lex' AND fold LIKE ?1
+       WHERE owner = 'lex' AND (fold LIKE ?1 OR lower(trans_ru) LIKE ?4)
        ORDER BY CASE WHEN fold = ?2 THEN 0
                      WHEN fold LIKE ?3 THEN 1 ELSE 2 END, freq
        LIMIT 25`
-    ).bind(`%${s}%`, s, `${s}%`).all();
+    ).bind(`%${s}%`, s, `${s}%`, `%${raw}%`).all();
     return json({ q: s, words: results });
   }
 

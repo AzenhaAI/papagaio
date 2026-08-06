@@ -132,7 +132,7 @@ export async function ensureEntry(env, card, lang = 'en') {
 
 const HEAD_SYSTEM = `You identify EUROPEAN Portuguese (pt-PT) words for a dictionary.
 
-Given one word or short phrase in either Portuguese or English, answer as JSON:
+Given one word or short phrase in Portuguese, English or Russian, answer as JSON:
 {
   "term": "the pt-PT headword, with its article for nouns (o gato, a casa); the infinitive for verbs",
   "trans": "short English gloss, two or three senses at most, separated by semicolons",
@@ -145,7 +145,7 @@ Given one word or short phrase in either Portuguese or English, answer as JSON:
 
 Hard rules:
 - European Portuguese only. Never Brazilian vocabulary, spelling or grammar.
-- If the input is English, answer with the Portuguese word for it.
+- If the input is English or Russian, answer with the European Portuguese word for it.
 - British English spelling in every gloss and example: neighbour, colour, organise.
 - If the input is not a word in either language, set "term" to an empty string.`;
 
