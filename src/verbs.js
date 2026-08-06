@@ -472,7 +472,10 @@ export function fold(s) {
     .replace(/[̀-ͯ]/g, '')
     // Apostrophes of every unicode persuasion: typed instead of an accent
     // ("cafe'"), or inside a word ("d'agua") — none of them may break a match.
-    .replace(/['’`´ʼʹ]/g, '');
+    .replace(/['’`´ʼʹ]/g, '')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .replace(/ +/g, ' ')
+    .trim();
 }
 
 /**

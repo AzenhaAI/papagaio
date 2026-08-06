@@ -42,31 +42,68 @@ Answer strictly as JSON:
 
 const MAX_LEN = 600;
 
-// Languages the translator can stand opposite Portuguese. English is the
-// default and the only one the public UI advertises.
+// Languages the translator speaks. Any pair works — the Lingvo-style switcher
+// sends explicit directions like ru->en; 'auto' keeps the old detect-and-flip
+// behaviour against Portuguese.
+const LANGS = {
+  pt: 'European Portuguese (pt-PT, never Brazilian)',
+  en: 'English',
+  ru: 'Russian',
+};
 const OTHER = {
   en: { code: 'en', name: 'English' },
   ru: { code: 'ru', name: 'Russian' },
 };
+
+/** System prompt for one explicit pair. The pt-PT guarantee rides along the
+ *  moment Portuguese is on either side. */
+const PAIR_SYSTEM = (from, to, helper) => `You translate from ${LANGS[from]} into ${LANGS[to]}.
+
+${from === 'pt' || to === 'pt' ? PT_RULES.replaceAll('English', helper) + '\n' : ''}
+- If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
+- "gloss" fields, "why" explanations and "note" are written in ${helper}.
+- "br_diff" is ${to === 'pt' ? 'the list of words a Brazilian would say differently' : 'always an empty list'}.
+
+Answer strictly as JSON:
+{
+  "direction": "${from}->${to}",
+  "translation": "the translation",
+  "corrected_source": "the input with mistakes fixed, or empty string",
+  "corrections": [{"wrong": "...", "right": "...", "why": "..."}],
+  "literal": "a more word-for-word rendering, or empty string",
+  "register": "neutral" or "formal" or "informal",
+  "br_diff": [{"pt": "...", "br": "...", "gloss": "..."}],
+  "note": "one short usage note, else empty string"
+}`;
 
 export async function translate(env, text, direction, ui) {
   const input = String(text ?? '').trim().slice(0, MAX_LEN);
   if (!input) throw new Error('empty input');
 
   const other = OTHER[ui] ?? OTHER.en;
+  const helper = ui === 'ru' ? 'Russian' : 'English';
 
-  // Direction is normally auto-detected; the client can force it.
-  const forced =
-    direction === `${other.code}->pt` || direction === 'en->pt'
-      ? '\nThe user explicitly requests: translate INTO European Portuguese.'
-    : direction === `pt->${other.code}` || direction === 'pt->en'
-      ? `\nThe user explicitly requests: translate INTO ${other.name}.`
-    : '';
+  // Explicit pair from the switcher: any of pt/en/ru on either side.
+  const m = /^(pt|en|ru)->(pt|en|ru)$/.exec(direction ?? '');
+  let system;
+  let forcedDirection = null;
+  if (m && m[1] !== m[2]) {
+    system = PAIR_SYSTEM(m[1], m[2], helper);
+    forcedDirection = direction;
+  } else {
+    const forced =
+      direction === `${other.code}->pt` || direction === 'en->pt'
+        ? '\nThe user explicitly requests: translate INTO European Portuguese.'
+      : direction === `pt->${other.code}` || direction === 'pt->en'
+        ? `\nThe user explicitly requests: translate INTO ${other.name}.`
+      : '';
+    system = SYSTEM(other) + forced;
+  }
 
   const raw = await chat(
     env,
     [
-      { role: 'system', content: SYSTEM(other) + forced },
+      { role: 'system', content: system },
       { role: 'user', content: input },
     ],
     { json: true }
@@ -82,7 +119,7 @@ export async function translate(env, text, direction, ui) {
 
   return {
     source: input,
-    direction: out.direction ?? 'en->pt',
+    direction: forcedDirection ?? out.direction ?? 'en->pt',
     translation: out.translation ?? '',
     corrected_source: out.corrected_source || '',
     corrections: Array.isArray(out.corrections) ? out.corrections.filter((c) => c?.wrong && c?.right) : [],

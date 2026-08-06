@@ -12,7 +12,8 @@ const q = (v) => (v == null || v === '' ? 'NULL' : `'${String(v).replace(/'/g, "
 
 // Accent- and apostrophe-blind copy for searching; mirrors src/verbs.js fold.
 const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '').replace(/['’`´ʼʹ]/g, '');
+  .replace(/[\u0300-\u036f]/g, '').replace(/['’`´ʼʹ]/g, '')
+  .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/ +/g, ' ').trim();
 
 // Rich dictionary entries live in separate files, merged by card id.
 const entries = {};

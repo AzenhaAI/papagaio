@@ -17,7 +17,8 @@ const dir = join(root, 'data', 'lexicon');
 // SQLite has no unaccent, so the accent-blind spelling is stored beside the
 // real one: "cao" has to find "cão" or the search is useless to anyone typing
 // on a phone keyboard.
-const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['’`´ʼʹ]/g, '')
+  .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/ +/g, ' ').trim();
 
 const q = (v) => (v === null || v === undefined ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 
