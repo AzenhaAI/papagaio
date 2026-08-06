@@ -1093,6 +1093,7 @@ async function sendExercise(env, user, opts = {}) {
   // sentence — connected speech is the thing single words never teach.
   if (exercise === 'type' || exercise === 'dictation' || exercise === 'cloze' || exercise === 'drill') {
     let sent;
+    let extra = null;
     if (exercise === 'drill') {
       const hint = card.trans === 'ser or estar?'
         ? '_ser or estar?_'
@@ -1103,16 +1104,32 @@ async function sendExercise(env, user, opts = {}) {
         parse_mode: 'Markdown',
       });
     } else if (exercise === 'cloze') {
-      sent = await tg(env, 'sendMessage', {
-        chat_id: user.chat_id,
-        text: `🧩 *Fill the gap*\n\n${COURSES[card.course].flag} ${cloze.sentence}\n\n` +
-              (card.ex_trans ? `_${card.ex_trans}_\n\n` : '') +
-              `_Type the missing word. Accents optional._`,
-        parse_mode: 'Markdown',
-      });
+      // Half the time, a sentence somebody actually said instead of ours.
+      const tat = Math.random() < 0.5 ? await tatoebaFor(env, card) : null;
+      if (tat?.found) {
+        extra = { kind: 'cloze', answer: tat.found, dst: tat.dst };
+        const gapped = tat.src.slice(0, tat.at) + '_'.repeat(Math.max(tat.found.length, 4)) + tat.src.slice(tat.at + tat.found.length);
+        sent = await tg(env, 'sendMessage', {
+          chat_id: user.chat_id,
+          text: `🧩 *Fill the gap*\n\n${COURSES[card.course].flag} ${gapped}\n\n_${tat.dst}_\n\n` +
+                `_Type the missing word. Accents optional._`,
+          parse_mode: 'Markdown',
+        });
+      } else {
+        sent = await tg(env, 'sendMessage', {
+          chat_id: user.chat_id,
+          text: `🧩 *Fill the gap*\n\n${COURSES[card.course].flag} ${cloze.sentence}\n\n` +
+                (card.ex_trans ? `_${card.ex_trans}_\n\n` : '') +
+                `_Type the missing word. Accents optional._`,
+          parse_mode: 'Markdown',
+        });
+      }
     } else if (exercise === 'dictation') {
+      const tat = Math.random() < 0.5 ? await tatoebaFor(env, card) : null;
+      const line = tat?.src ?? card.ex_t;
       try {
-        const audio = await synthesize(card.ex_t, card.course);
+        const audio = await synthesize(line, card.course);
+        if (tat) extra = { kind: 'dictation', src: tat.src, dst: tat.dst };
         sent = await tgVoice(env, user.chat_id, audio,
           `✍️ Dictation — type what you hear. Accents optional, spelling counts.`);
       } catch {
@@ -1129,11 +1146,11 @@ async function sendExercise(env, user, opts = {}) {
     if (!sent?.ok) return false;
     await env.DB.batch([
       env.DB.prepare(
-        `INSERT INTO pending (user_id, card_id, exercise, correct_idx, message_id, sent_at)
-         VALUES (?, ?, ?, NULL, ?, ?)
+        `INSERT INTO pending (user_id, card_id, exercise, correct_idx, message_id, sent_at, extra)
+         VALUES (?, ?, ?, NULL, ?, ?, ?)
          ON CONFLICT(user_id) DO UPDATE SET card_id = excluded.card_id, exercise = excluded.exercise,
-           correct_idx = NULL, message_id = excluded.message_id, sent_at = excluded.sent_at`
-      ).bind(user.id, card.id, exercise, sent.result.message_id, now()),
+           correct_idx = NULL, message_id = excluded.message_id, sent_at = excluded.sent_at, extra = excluded.extra`
+      ).bind(user.id, card.id, exercise, sent.result.message_id, now(), extra ? JSON.stringify(extra) : null),
       env.DB.prepare(`UPDATE users SET last_push_at = ? WHERE id = ?`).bind(now(), user.id),
       env.DB.prepare(
         `INSERT INTO events (user_id, card_id, kind, exercise, created_at) VALUES (?, ?, 'push', ?, ?)`
@@ -1242,6 +1259,31 @@ function levenshtein(a, b) {
  * Returns null when the term does not literally appear in it — a wrong gap
  * teaches nothing, so we simply skip cloze for that card.
  */
+/**
+ * A random real sentence containing the card's term, for cloze and dictation.
+ * Thousands of exercises for free — and sentences someone actually said beat
+ * the ones we wrote for the card. pt only; short ones (the LIMIT is on length
+ * upstream) so a dictation stays typable.
+ */
+async function tatoebaFor(env, card) {
+  if (card.course !== 'pt') return null;
+  const term = (card.term ?? '').replace(/^([oa]s? |um |uma )/, '').trim();
+  if (term.length < 3) return null;
+  const w = term.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/ +/g, ' ').trim();
+  const row = await env.DB.prepare(
+    `SELECT src, dst FROM examples WHERE pair = 'pt-en'
+       AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?3)
+     ORDER BY RANDOM() LIMIT 1`
+  ).bind(`${w} %`, `% ${w} %`, `% ${w}`).first().catch(() => null);
+  if (!row) return null;
+  const idx = row.src.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .indexOf(w.split(' ')[0]);
+  // Recover the surface form for the gap by matching the term loosely.
+  const m = new RegExp(term.split(' ')[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').exec(row.src);
+  return { src: row.src, dst: row.dst, found: m ? m[0] : null, at: m ? m.index : idx };
+}
+
 function clozeFrom(card) {
   if (!card.ex_t || !card.term) return null;
   const candidates = [card.term];
@@ -1266,9 +1308,11 @@ async function checkTyped(env, msg, pending) {
   const uid = msg.from.id;
   const card = await env.DB.prepare(`SELECT * FROM cards WHERE id = ?`).bind(pending.card_id).first();
   if (!card) return;
+  let extra = null;
+  try { extra = pending.extra ? JSON.parse(pending.extra) : null; } catch { /* legacy row */ }
   const expected =
-    pending.exercise === 'dictation' ? card.ex_t
-    : pending.exercise === 'cloze' ? (clozeFrom(card)?.answer ?? card.term)
+    pending.exercise === 'dictation' ? (extra?.src ?? card.ex_t)
+    : pending.exercise === 'cloze' ? (extra?.answer ?? clozeFrom(card)?.answer ?? card.term)
     : card.term; // 'type' and 'drill' both want the term itself
   const given = msg.text.trim();
 
@@ -1311,7 +1355,7 @@ async function checkTyped(env, msg, pending) {
     text = `🤏 *Almost* — a slip of the finger.\n\nCorrect: *${expected}*\nYou wrote: ${given}`;
   } else {
     text = `❌ *Not quite. The answer is:*\n\n${expected}`;
-    if (pending.exercise === 'dictation') text += `\n_${card.ex_trans || card.trans}_`;
+    if (pending.exercise === 'dictation') text += `\n_${extra?.dst ?? card.ex_trans ?? card.trans}_`;
     text += `\n\n_You'll see this one again soon._`;
   }
   // A drill without the rule behind it is just a fact to memorise.

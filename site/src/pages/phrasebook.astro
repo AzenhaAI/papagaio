@@ -11,6 +11,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     every line. Tap a phrase for its full article.
   </p>
 
+  <div class="panel" style="margin-top:18px; padding:16px 18px;">
+    <strong style="font-size:15px;">🔎 Search real sentences</strong>
+    <p class="muted" style="font-size:13px; margin:4px 0 10px;">
+      181,000 sentence pairs from <a href="https://tatoeba.org">Tatoeba</a> (CC-BY).
+      Type any Portuguese word — see how people actually use it.</p>
+    <div style="display:flex; gap:8px;">
+      <input id="sq" type="search" placeholder="se calhar, saudade, dá para…"
+        style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+               border-radius:10px; padding:8px 14px; font:inherit;" />
+      <select id="spair" style="background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+               border-radius:10px; padding:8px 10px; font:inherit;">
+        <option value="pt-en">PT → EN</option>
+        <option value="pt-ru">PT → RU</option>
+        <option value="en-ru">EN → RU</option>
+      </select>
+    </div>
+    <div id="sres" style="margin-top:10px;"></div>
+  </div>
+
   <div id="list" style="margin-top:18px;"><p class="muted">loading…</p></div>
 
   <p class="muted" style="margin-top:22px; font-size:13.5px;">
@@ -21,6 +40,42 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     const AUDIO = 'https://shpara.com/papagaio/audio/';
+    const EXAPI = 'https://papagaio.kirshp.workers.dev/api/examples';
+
+    // Sentence search: debounced, race-guarded, TTS on every Portuguese line.
+    let sseq = 0, stimer;
+    const sres = document.getElementById('sres');
+    const esc2 = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    async function ssearch() {
+      const q = document.getElementById('sq').value.trim();
+      const pair = document.getElementById('spair').value;
+      if (q.length < 2) { sres.innerHTML = ''; return; }
+      const mine = ++sseq;
+      let d;
+      try {
+        d = await (await fetch(`${EXAPI}?q=${encodeURIComponent(q)}&pair=${pair}&limit=15`)).json();
+      } catch { d = null; }
+      if (mine !== sseq) return;
+      sres.innerHTML = (d?.examples ?? []).map((e) => `
+        <div style="padding:8px 0; border-bottom:1px solid var(--panel2); font-size:14.5px;">
+          ${esc2(e.src)}
+          ${pair.startsWith('pt') ? `<button onclick="playTts(this, ${JSON.stringify(e.src).replace(/"/g, '&quot;')})"
+            style="background:none; border:0; cursor:pointer; font-size:13px;">🔊</button>` : ''}
+          <div class="muted" style="font-size:13.5px;">${esc2(e.dst)}</div>
+        </div>`).join('') || '<p class="muted" style="font-size:13.5px;">Nothing found in this pair.</p>';
+    }
+    window.playTts = async (btn, text) => {
+      const r = await fetch('https://papagaio.kirshp.workers.dev/api/tts', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ text, course: 'pt' }),
+      });
+      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+    };
+    document.getElementById('sq').addEventListener('input', () => {
+      clearTimeout(stimer); stimer = setTimeout(ssearch, 350);
+    });
+    document.getElementById('spair').addEventListener('change', ssearch);
     const API = 'https://papagaio.kirshp.workers.dev/api/deck?course=pt&limit=2000';
     const list = document.getElementById('list');
     const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>

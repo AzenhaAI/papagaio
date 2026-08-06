@@ -298,8 +298,11 @@ export async function handleApi(request, env, path) {
     const uiLang = new URL(request.url).searchParams.get('ui') === 'ru' ? 'ru' : 'en';
 
     if (hit) {
-      const entry = await ensureEntry(env, hit).catch(() => null);
-      if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang)];
+      // No article yet is no reason to withhold examples: an empty shell
+      // carries the Tatoeba lines just fine.
+      const entry = (await ensureEntry(env, hit).catch(() => null))
+        ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
+      entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang)];
       return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term) });
     }
 
@@ -366,8 +369,9 @@ export async function handleApi(request, env, path) {
     const { results } = await env.DB.prepare(
       `SELECT src, dst FROM examples WHERE pair = ?1
          AND (fold = ?2 OR fold LIKE ?3 OR fold LIKE ?4 OR fold LIKE ?5)
-       ORDER BY length(src) LIMIT 4`
-    ).bind(pair, w, `${w} %`, `% ${w} %`, `% ${w}`).all();
+       ORDER BY length(src) LIMIT ?6`
+    ).bind(pair, w, `${w} %`, `% ${w} %`, `% ${w}`,
+           Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)).all();
     return json({ examples: results });
   }
 
