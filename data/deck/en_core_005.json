@@ -1,0 +1,308 @@
+{
+  "meta": {
+    "deck": "en_core_005",
+    "course": "en",
+    "variant": "en-GB",
+    "level": "B1-B2",
+    "note": "The 500 crossing: British weather in all its vocabulary, viewpoints literal and figurative, and the last of the everyday idioms."
+  },
+  "cards": [
+    {
+      "term": "a downpour",
+      "trans": "sudden heavy rain",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "We got caught in a downpour above Monte.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "weather"
+      ],
+      "unit": "life",
+      "id": "en0481",
+      "freq": 481
+    },
+    {
+      "term": "chilly",
+      "trans": "unpleasantly cold (mildly)",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "Evenings get chilly up in the hills.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "weather"
+      ],
+      "unit": "life",
+      "id": "en0482",
+      "freq": 482
+    },
+    {
+      "term": "overcast",
+      "trans": "fully clouded sky",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "Overcast morning, perfect for a levada.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "weather"
+      ],
+      "unit": "life",
+      "id": "en0483",
+      "freq": 483
+    },
+    {
+      "term": "to clear up",
+      "trans": "weather becoming fine; to resolve",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "It should clear up by noon.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "weather",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0484",
+      "freq": 484
+    },
+    {
+      "term": "a forecast",
+      "trans": "a weather or business prediction",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The forecast says wind — check the flights.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "weather",
+        "data"
+      ],
+      "unit": "life",
+      "id": "en0485",
+      "freq": 485
+    },
+    {
+      "term": "a viewpoint",
+      "trans": "a place with a view; an opinion",
+      "pos": "noun",
+      "note": "both meanings earn their keep here",
+      "ex_t": "There's a viewpoint two bends up the road.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0486",
+      "freq": 486
+    },
+    {
+      "term": "breathtaking",
+      "trans": "astonishingly beautiful",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "The cliff view is genuinely breathtaking.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0487",
+      "freq": 487
+    },
+    {
+      "term": "stunning",
+      "trans": "extremely impressive",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "The sunset last night was stunning.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0488",
+      "freq": 488
+    },
+    {
+      "term": "to strike a balance",
+      "trans": "to find a sensible middle",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "We struck a balance between price and location.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0489",
+      "freq": 489
+    },
+    {
+      "term": "to make the most of",
+      "trans": "to use an opportunity fully",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Make the most of the low season.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0490",
+      "freq": 490
+    },
+    {
+      "term": "to get carried away",
+      "trans": "to lose self-control in enthusiasm",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I got carried away at the plant market.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0491",
+      "freq": 491
+    },
+    {
+      "term": "to keep track of",
+      "trans": "to monitor continuously",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The app keeps track of what you've learned.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "glue"
+      ],
+      "unit": "work",
+      "id": "en0492",
+      "freq": 492
+    },
+    {
+      "term": "in the long run",
+      "trans": "over a long period",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Buying beats renting in the long run — maybe.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "idiom"
+      ],
+      "unit": "glue",
+      "id": "en0493",
+      "freq": 493
+    },
+    {
+      "term": "a no-brainer",
+      "trans": "an obviously right decision",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "At that price the annual pass is a no-brainer.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0494",
+      "freq": 494
+    },
+    {
+      "term": "to be worth it",
+      "trans": "to justify the cost or effort",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The climb hurts, but the view is worth it.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0495",
+      "freq": 495
+    },
+    {
+      "term": "hindsight",
+      "trans": "understanding available only afterwards",
+      "pos": "noun",
+      "note": "'with hindsight'",
+      "ex_t": "With hindsight, we priced it too low.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0496",
+      "freq": 496
+    },
+    {
+      "term": "a silver lining",
+      "trans": "the good side of a bad situation",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The delay's silver lining: time for lunch.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0497",
+      "freq": 497
+    },
+    {
+      "term": "to catch someone off guard",
+      "trans": "to surprise someone unprepared",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The question caught me off guard.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0498",
+      "freq": 498
+    },
+    {
+      "term": "to give it a go",
+      "trans": "to try something (BrE)",
+      "pos": "phrase",
+      "note": "give it a shot — AmE",
+      "ex_t": "Never surfed? Give it a go.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0499",
+      "freq": 499
+    },
+    {
+      "term": "fingers crossed",
+      "trans": "hoping for luck",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Fingers crossed the visa comes through this week.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0500",
+      "freq": 500
+    }
+  ]
+}
