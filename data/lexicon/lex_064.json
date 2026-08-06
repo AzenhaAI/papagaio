@@ -1,0 +1,10686 @@
+{
+ "meta": {
+  "shard": "064",
+  "source": "English Wiktionary via kaikki.org (CC BY-SA 4.0); ranking from OpenSubtitles 2018 frequency list (CC BY-SA 4.0)",
+  "note": "Lookup lexicon, not the teaching deck. Inflected forms are dropped — the conjugator generates them."
+ },
+ "words": [
+  {
+   "term": "visigodo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Visigothic (of, relating to or belonging to the Visigoths)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visigodo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "one of the Visigoths (East Germanic tribe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visigótico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Visigothic (of, relating to or belonging to the Visigoths)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visigotismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a loanword from the Gothic language of the Visigoths",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visionação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "visualisation (the act of imagining or visualizing something)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visionamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "visualisation (the act of imagining or visualizing something)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visitação",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "visitation",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vislumbraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vislumbrar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visom",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "mink",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "mink coat",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vison-americano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "American mink",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "víspora",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "lotto (the game of chance)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vissungo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a work song of enslaved Africans in Brazilian gold or diamond mines",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vista desarmada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "naked eye (unaided eyesight)",
+     "tags": [],
+     "ex": "Estes elementos são visíveis à vista desarmada."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Estes elementos são visíveis à vista desarmada."
+    }
+   ]
+  },
+  {
+   "term": "visto que",
+   "pos": "conj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "since; as; considering that",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vistoriador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "inspector; surveyor",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "visualizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of visualizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitalismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitalism (doctrine that life involves some immaterial vital force)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitalmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitally",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitamina A",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitamin A",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitamina B",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitamin B",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitamina C",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitamin C",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitamina D",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitamin D",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitamina E",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitamin E",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitaminado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in shape; healthy",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitaminado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "that is rich in or has added vitamins; vitaminized",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "good-looking",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "someone living with AIDS or HIV",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitelo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "calf (young bull)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vitellus, egg yolk",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viticultor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "winegrower",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viticultura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "viticulture (the growing of grape vines)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitiligo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vitiligo (patchy loss of skin pigmentation)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "victimization",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to victimize",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vitimar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "victimism, victimhood (tendency to act like a victim)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "victimist",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimização",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "victimization",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimização secundária",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "secondary victimization",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to victimize (to make someone a victim)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to self-victimize",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitimizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vitimizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitivinícola",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "viticultural",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitivinicultor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "winegrower",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitivinicultura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "viticulture (the growing of grape vines)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitória de Pirro",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Pyrrhic victory (a costly victory)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitória pírrica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Pyrrhic victory (a costly victory)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitória pirrónica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Pyrrhic victory (a costly victory)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitória-régia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Amazon lily (Victoria amazonica, an aquatic plant belonging to the nymphaea family, Victoria regia, of South American origin, its circular leaves can reach 2 meters in diameter, with single, white flowers and edible seeds)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "water lily",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Victorian (relating to the reign of Queen Victoria of England)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to acclaim, applaud",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vitoriar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriense",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of, from or relating to Vitória",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriense",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "native or inhabitant of Vitória",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitoriosamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "victoriously",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vítreo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "glassy",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vitreous",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitrificar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vitrify",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to glaze",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitrificaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vitrificar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitrola",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "record player",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "gramophone",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "chatterbox, blabbermouth",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vítulo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "calf (young bull)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vituperar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vituperate; revile; affront; outrage; insult",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to depreciate; demean",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to reproach harshly",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to consider (something/someone) as ignominious",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vituperaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vituperar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vituperável",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vituperable",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vitupério",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "insult, offense",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viu só",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "see? (used when one has just demonstrated or proved something)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viúva-negra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "black widow (species of venomous spider)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viuvaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of viuvar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viuvez",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "widowhood (the condition of being a widow)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivacidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vivacity",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivalma",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a living soul (in negative sentences)",
+     "tags": [],
+     "ex": "Nas ruas da cidade não se via vivalma."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Nas ruas da cidade não se via vivalma."
+    }
+   ]
+  },
+  {
+   "term": "vivar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to hooray (to shout an expression of excitement)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vivar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivaz",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "long-lived",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "perennial",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "lively (full of life)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivedoiro",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "long-lived (having a long lifespan)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "existence",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "experience",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivenciar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to live [a situation] directly or in practice and be deeply affected or changed by it",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivenciaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vivenciar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "living (having life; not dead)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivente",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "person; human being",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viver da terra",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to live off the land (to sustain a living by eating produce that one harvests or hunts)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "viver e deixar viver",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to live and let live (to be tolerant)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "víveres",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "food supplies, provisions",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivianite",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vivianite (a hydrated iron phosphate mineral)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vividez",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vividness",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "brightness",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "saturation",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vívido",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vivid (clear, detailed or powerful)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vivid (bright, intense or colourful)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vivid (full of life)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivinho da silva",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "alive and kicking",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivíparo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "viviparous (arising from an embryo that develops from the outset)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "viviparous (whose development occurs inside the body of the mother)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivíparo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a viviparous animal",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vivissecção",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vivisection (surgery on a living organism for research purposes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vixe",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "expresses surprise or admiration. May or may not be used before 'Mary' for emphasis.",
+     "tags": [],
+     "ex": "Vixe Maria! Ele está de volta!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Vixe Maria! Ele está de volta!"
+    }
+   ]
+  },
+  {
+   "term": "vlog",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vlog",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vlogar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vlog",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vlogaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vlogar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vlogger",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vlogger (video blogger)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vlogueiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vlogger",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "airborne; flying (in flight)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "flying (able to fly)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "flying",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "fast, swift",
+     "tags": [],
+     "ex": "O dos muy lindos buſcãtes, / rraſteyros, & tam voantes, / caçadores rraſtejantes, / que caçam çaça ^([sic]) rreal."
+    },
+    {
+     "trans": "ephemeral; short-lived",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O dos muy lindos buſcãtes, / rraſteyros, & tam voantes, / caçadores rraſtejantes, / que caçam çaça ^([sic]) rreal."
+    }
+   ]
+  },
+  {
+   "term": "vobla",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vobla (Rutilus caspicus, a fish of the Caspian sea)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocabulário ativo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "active vocabulary (words and phrases that someone commonly uses)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocabulário passivo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "passive vocabulary (words and phrases that someone understands but does not commonly use)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocábulo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vocable (word or utterance)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocálico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vocalic (relating to or being a vowel)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocalização",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vocalization",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vocalization",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "vocalization",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocalizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to voice; to express",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to vocalise (to sing without using words)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to vocalise (turn a consonant into a vowel)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocalizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vocalizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocalmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vocally (using words)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vocativo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vocative case (case used when addressing someone)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você e quem mais",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Used other than figuratively or idiomatically: see você, e, quem, mais.",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "you and whose army? (you can't do that on your own)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você fala português",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Do you speak Portuguese?",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você me ama",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "do you love me?",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você não existe",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "said to a person who did something extraordinary or unexpected",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "said to a person who appears just when they are mentioned in a talk",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see você, não, existe.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você que pensa",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "states that the interlocutor is misled by their opinion",
+     "tags": [],
+     "ex": "Você disse que não há animais selvagens nesta área. Você que pensa! Já vi muitos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você disse que não há animais selvagens nesta área. Você que pensa! Já vi muitos."
+    }
+   ]
+  },
+  {
+   "term": "você que sabe",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "you know better; it's your decision",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você vem sempre aqui",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "do you come here often; a phrase strongly associated with flirtatious behavior",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "você-sabe-quem",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "you-know-who (known and unmentioned person)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vociferar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vociferate (to cry out with vehemence)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vociferaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vociferar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voçoroca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "gully",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voejar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to almost fly, to glide",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voejaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of voejar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voga",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vogue (the prevailing fashion or style)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vogal anterior",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "front vowel (any vowel sound produced in the front of the mouth)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vogal posterior",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "back vowel (any vowel produced in the back of the mouth)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vogal temática",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the first vowel of a suffix, such as a and i in -ado and -ido respectively",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "thematic vowel (the vowel *e or *o before a suffix in Proto-Indo-European)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vogar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to sail, to row (of a person or people: to move over a body of water by means of sails or oars)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to sail (of a watercraft: to move over a body of water)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to navigate, to sail (of a person: to travel somewhere by means of sailing)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to drift; to float (to move slowly)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to spread, to become widely known (of information)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to be in vogue",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vogaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vogar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voivoda",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voivode (a local ruler or official in various parts of central and eastern Europe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voivodato",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voivodeship (the realm of a voivode)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voivodia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voivodeship (the realm of a voivode)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volapuque",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Volapük (language)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volatilidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volatility",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volatilizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to volatilize, vapourize",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volatilizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of volatilizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vólei",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volleyball (game)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "volley",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vôlei",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volleyball (game)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vôlei de praia",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "beach volleyball",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voleibol de praia",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "beach volleyball",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voleibolista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volleyball player, volleyballer",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voleibolístico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volleyball",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voleio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volley (flight of a ball before it bounces)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volémico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volemic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volfrâmio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tungsten (chemical element)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volframita",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wolframite",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volição",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volition (a conscious choice or decision)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "volition; will (the mental power or ability of choosing)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volitar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to almost fly, to glide",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volitaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of volitar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volitivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voluntary",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volsco",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Volscian (relating to the Volsci)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volt",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volt (unit of measure)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volta e meia",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "now and then, occasionally",
+     "tags": [],
+     "ex": "Volta e meia estes políticos se envolvem em algum escândalo."
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see volta, e, meia.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Volta e meia estes políticos se envolvem em algum escândalo."
+    }
+   ]
+  },
+  {
+   "term": "voltaico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voltaic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltairianismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Voltairism (philosophy of Voltaire, 18th century French philosopher)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltairiano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Voltairian (related to Voltaire, 18th century French philosopher.)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltairiano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Voltairian (follower of Voltaire or his philosophy.)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltar à estaca zero",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to go back to square one",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltar às boas",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to make up, to make peace, to reconcile (to resolve, forgive or smooth over an argument or fight)",
+     "tags": [],
+     "ex": "Você me traía\nTrocando carinhos com outras pessoas\nMas com seu jeitinho me levava no papo\nE a gente acabava voltando às boas"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você me traía\nTrocando carinhos com outras pessoas\nMas com seu jeitinho me levava no papo\nE a gente acabava voltando às boas"
+    }
+   ]
+  },
+  {
+   "term": "volte sempre",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "come again (a polite farewell)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to rotate, turn, veer",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to flutter",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of voltear",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volteio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "spin",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voltímetro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voltmeter (instrument for measuring electric potential)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volume russo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "A type of eyelash extension technique.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volumetria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volumetry",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volumetricamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volumetrically",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volumétrico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volumetric (relating to the determination of volumes; relating to volumetry)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volúpia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "lust; lasciviousness (the state or characteristic of being lascivious)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "voluptuousness; sensuality (a sensual appearance)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voluptuário",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voluptuous",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voluptuoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voluptuous",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voluta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volute",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volutabro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wetland, marsh, swamp",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "filthiness, ugliness",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volúvel",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "fickle",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "völva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "völva (Old Norse prophetess)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "volveram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of volver",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vólvulo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volvulus (twist in a loop of the bowel)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vombate",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wombat (any of several Australian marsupials of the family Vombatidae)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vómer",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vomer bone",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vomeronasal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vomeronasal (of, pertaining to, or situated near the vomer bone between the nose and the mouth)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vómico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "emetic (causing vomiting)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vomitaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vomitar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voracidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voracity",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voragem",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "whirlpool",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "abyss",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vorazmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voraciously",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vosear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to address someone with the polite vós pronoun",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vosearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vosear",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "Vossa Alteza",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Your Highness (a title of respect used to address a prince or princess)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "Vossa Excelência",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "your Excellency (title used to address a top-important and generally State-related person)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Your Honor (title used to address a judge)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "Vossa Majestade",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Your Majesty (title of respect)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "Vossa Majestade Imperial",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Your Imperial Majesty (title of respect)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vossa santidade",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Your Holiness",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "votante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voting or having the right to vote",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "votante",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voter (one who votes or has the right to vote)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "votar com os pés",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vote with one's feet (to express one's preferences through one's actions)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "votivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "votive",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voto cacareco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "protest vote (vote cast to demonstrate dissatisfaction with the candidates or system)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voto de Minerva",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "casting vote",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Kamilla foi para o paredão com três votos da casa, empatando com Anamara, e mais o voto de minerva de Nasser.",
+     "tag": "pre-reform"
+    }
+   ]
+  },
+  {
+   "term": "voto útil",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tactical vote",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vou pensar",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "maybe",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see vou, pensar.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vou pensar no seu caso",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "maybe",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voucher",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voucher, coupon (a piece of paper that entitles the holder to a discount)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vouzelense",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of Vouzela",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vouzelense",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "native or inhabitant of Vouzela",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vovente",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "votive (who makes vows or promises)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vovente",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "votive person (person who makes vows or promises)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voxel",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voxel",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voyeurismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "voyeurism (derivation of sexual satisfaction by watching people secretly)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voz ativa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "active voice (the voice in which the subject of a verb carries out the action)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voz média",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "middle voice (form in which the subject of a verb performs some action upon itself)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "voz passiva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "passive voice (voice in which the subject receives the action)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vozear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to speak loudly or to shout",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to voice",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vozearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vozear",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vozearia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "clamor (noise from multiple people talking)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vozeirão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "loud voice",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vozerio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "clamor (noise from multiple people talking)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "VPN",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "VPN",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vrum",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vroom",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "VT",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a short recorded video, especially one shown on the TV as part of a larger show",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "VTuber",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "virtual YouTuber",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vuco-vuco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "confusion, tumult (large number of people concentrated in a very small space, moving around in a disorderly manner)",
+     "tags": [
+      "colloquial",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "intimate caresses or sexual act",
+     "tags": [
+      "colloquial",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcânico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanism (natural phenomena associated with volcanoes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanização",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulcanization",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulcanize (to harden rubber with heat)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vulcanizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanogênico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanogenic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanologia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanology (study of volcanoes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanologista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanologist (person who studies volcanology)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcanólogo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "volcanologist, vulcanologist (person who studies volcanology)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulcão-escudo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shield volcano (volcano with a large size and low profile)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgarizado",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulgarized",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgarizar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to vulgarise (to make something vulgar)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgarizaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vulgarizar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgarmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "commonly",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "indifferently",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "in general, usually",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgívago",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "corrupt, contemptible, despicable, or vulgar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the common people; the masses",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulgo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "introduces a colloquial synonym, or a nickname; informally or commonly known as",
+     "tags": [],
+     "ex": "Ele sofre de tireomegalia, vulgo papeira."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele sofre de tireomegalia, vulgo papeira."
+    },
+    {
+     "t": "René Higuita, vulgo O Escorpião, foi um goleiro colombiano."
+    }
+   ]
+  },
+  {
+   "term": "vulnerar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to wound; to hurt; to injure",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulneraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of vulnerar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulnífico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulnific",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulpino",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulpine (relating to foxes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "aspect",
+     "tags": [],
+     "ex": "Tinha um vulto amedrontador."
+    },
+    {
+     "trans": "an indistinct figure, such as something seen with the corner of one’s eye or in the dark",
+     "tags": [],
+     "ex": "Vi um vulto passar ao meu lado."
+    },
+    {
+     "trans": "importance; significance; prominence",
+     "tags": [],
+     "ex": "É uma pesquisa de grande vulto."
+    },
+    {
+     "trans": "greatness",
+     "tags": [],
+     "ex": "O vulto de sua ajuda me impressionou."
+    },
+    {
+     "trans": "bulk (major part of something)",
+     "tags": [],
+     "ex": "Vulto das águas."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tinha um vulto amedrontador."
+    },
+    {
+     "t": "Vi um vulto passar ao meu lado."
+    },
+    {
+     "t": "É uma pesquisa de grande vulto."
+    },
+    {
+     "t": "O vulto de sua ajuda me impressionou."
+    }
+   ]
+  },
+  {
+   "term": "vultoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bulky, big, great, massive",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vultuoso",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "having swollen and congested lips and eyes",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vulva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vulva (the external female sexual organs)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "vuvuzela",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vuvuzela",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wafer",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wafer (type of biscuit)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "wafer (disk on which an electronic circuit is produced)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "waifu",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "waifu",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wakf",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "waqf (inalienable endowment for charity in Islamic countries)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wallaby",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wallaby (any of several Australian species of marsupial)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "Walpurgisnacht",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Walpurgis night (a feast of witchcraft in German folklore)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wardar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to place a ward; to set up vision on part of the map",
+     "tags": [],
+     "ex": "Warda o rio antes do dragão nascer."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Warda o rio antes do dragão nascer."
+    }
+   ]
+  },
+  {
+   "term": "warholiano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Warholian (of or relating to Andy Warhol)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "washingtónia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "washingtonia (fan palm of the genus Washingtonia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wat",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wat (a type of Buddhist temple common in Southeast Asia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wattímetro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wattmeter (device for measuring electric power)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wawa",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bus (vehicle for transporting large numbers of people)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O artista angolano, Fábio Dance, partilhou nesta quinta-feira (25), a experiência de andar de autocarro, comummente conhecido por “Wawa”, em Luanda.",
+     "tag": "pre-reform"
+    }
+   ]
+  },
+  {
+   "term": "webamigo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a virtual friend; an online friend",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webconferência",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "web conference (meeting, presentation or communication conducted via the World Wide Web)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "weberiano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Weberian (of or relating to German sociologist and political economist Max Weber)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Weberian (of or relating to German anatomist and biologist Ernst Heinrich Weber)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webinário",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "webinar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webjornalismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "online journalism",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webnamorada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a girlfriend one knows entirely or mostly online",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webnamorado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a boyfriend one knows entirely or mostly online",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webnamorar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to have a romantic relationship that happens entirely or mostly online",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webnamoraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of webnamorar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "webnamoro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a romantic relationship happening entirely or mostly online; a virtual romantic relationship",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "welwitschia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "welwitschia (Welwitschia mirabilis, a desert plant of southwest Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "WhatsApp",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "WhatsApp (a message on WhatsApp)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "WhatsApp (an account on WhatsApp)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "whorfiano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Whorfian (relating to the Sapir-Whorf hypothesis)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikificação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the process of converting a website or system into a wiki",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikificar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to wikify (to adapt text to a wiki)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikificaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of wikificar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikimedista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Wikimedian (a person who contributes to Wikimedia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikimedista em residência",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Wikimedian in Residence (a Wikimedian who holds a visiting scholar position at an educational institution)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikipediano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Wikipedian (a person who contributes to Wikipedia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikipediano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of or relating to Wikipedia",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikipedista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Wikipedian (a person who contributes to Wikipedia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wikitexto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wikitext",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "windsurfe",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "windsurfing",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wishful thinking",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wishful thinking",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wishlist",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wish list (list of desires)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wok",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wok (large round pan used in Oriental cuisine)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "woke",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "woke (promoting cancel culture or virtue signaling)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "woke",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a social justice warrior; a wokie",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "woke (successor ideology)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wokismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wokeism",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wokista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Of, relating to, supporting, or advocating wokeism.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wokista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wokeist",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wolfhound irlandês",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Irish wolfhound (a sighthound used to hunt wolves)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wolframita",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wolframite",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wollastonite",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wollastonite (a grey inosilicate mineral)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wolof",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Wolof (a Niger-Congo language spoken in Senegal and the Gambia)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a member of the Wolof people",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wolof",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of the Wolof people",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "workaholic",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "workaholic (person who feels compelled to work excessively)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "workstation",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "workstation (powerful desktop computer)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wulfenita",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wulfenite",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "wushu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wushu (a Chinese martial art)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "x-ato",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "utility knife (tool used to cut)",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "x-caboquinho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "x-caboquinho",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "x-ésimo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "whatth (on a variable or unknown ordinal position)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "X-salada",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a burger with salad ingredients, especially lettuce",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "X-tudo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a burger with many ingredients",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "X9",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "snitch, informer, grass",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xã",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shan (language)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xácara",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a kind of short light-hearted or satirical play or song, historically performed during the entr'acte",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xadrezista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "chess player (person who plays chess)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xairel",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "saddlecloth (blanket placed under a saddle)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamânico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shamanic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamanismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shamanism (any of several traditional beliefs involving altered states of consciousness)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamanista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shamanist",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamanista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shamanist",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamanístico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shamanistic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xamate",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "checkmate (conclusive victory in a game of chess)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xampu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shampoo",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xana",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy (female genitalia)",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": "Minha xana é dourada, brilho que ofusca a prata / Faz diamante de sangue quando eu tô menstruada."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Minha xana é dourada, brilho que ofusca a prata / Faz diamante de sangue quando eu tô menstruada."
+    }
+   ]
+  },
+  {
+   "term": "xandanga",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vagina (woman's genitalia)",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaninha",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vagina, pussy",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xântico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xanthic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xantina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xanthine (any group of alkaloids, including caffeine)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xantoma",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xanthoma (dermatosis characterized by the presence of small yellowish tumors)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaputa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Atlantic pomfret",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xara",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a pointed stick (such as an arrow or spear) whose head has been hardened by fire",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "gum rockrose (Cistus ladanifer), particularly",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "subspecies C. l. subsp. ladanifer, endemic to the Iberian Peninsula",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "scrub (thick vegetation)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "variety of red grape from Beira, Portugal",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "dogfish shark (any shark of the order Squaliformes), particularly",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xará",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "namesake (person with the same name as another)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "An informal term of address: bro, pal, mate",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "country ballet",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xará",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "which has curly hair",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xareta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "fishing net",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaréu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "leather cape used by cowboys to cover the hips of their horses",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "frost",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "pompano (any of various fishes of the genus Trachinotus)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "jack (any of various fishes of the genus Caranx)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shari'a (Islamic religious law)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xarifa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "female genitals",
+     "tags": [
+      "vulgar"
+     ],
+     "ex": "[…] ao feminino chama-se ordinariamente a vulva, a vagina, a pássara, a passarola, o pardejo, a pinta, o pito, a rata, a nódos, a pachacha, o vespeiro, a coisa, a xarifa, o pechincho."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "[…] ao feminino chama-se ordinariamente a vulva, a vagina, a pássara, a passarola, o pardejo, a pinta, o pito, a rata, a nódos, a pachacha, o vespeiro, a coisa, a xarifa, o pechincho."
+    }
+   ]
+  },
+  {
+   "term": "xaroca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy, cunt",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xastre",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tailor (person who makes, repairs or alters clothing)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xátria",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "kshatriya (the second-highest ranking caste within the fourfold varna system of Hindu society, consisting of warriors and administrators)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xauarma",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shawarma (a Middle Eastern sandwich-like wrap)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xavante",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a member of the Xavánte people",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Xavánte (Ge language spoken by the Xavánte people)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xavante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of the Xavánte peple",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xavasca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy (female genitalia)",
+     "tags": [
+      "Brazil",
+      "slang",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xavecar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to flirt with, to try to seduce someone by flattening",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Ele gostava de xavecar as meninas da escola."
+    },
+    {
+     "trans": "to cheat, to act in an unfair way",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele gostava de xavecar as meninas da escola."
+    }
+   ]
+  },
+  {
+   "term": "xavecaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xavecar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaveco",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xebec (Arabic transport ship)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a small, old and poorly built boat",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "flirting (talk in which one intends to seduce a person)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "knavery, trickery",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "trifle (something or someone without much importance)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "hag (old and ugly woman)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xávega",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "related to that type of fishing",
+     "tags": [],
+     "ex": "arte xávega"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "arte xávega"
+    }
+   ]
+  },
+  {
+   "term": "xaxado",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a dance created in the Brazilian state of Pernambuco, which was often practiced by cangaceiros of the region to commemorate victory in battle",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xaxim",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "A tree fern of species Dicksonia sellowiana.",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "The fiber of this fern, used for plant pots and as support for orchids.",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Não deixe acumular água em pratos de vasos de plantas e xaxins. Coloque areia fina até a borda do pratinho."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não deixe acumular água em pratos de vasos de plantas e xaxins. Coloque areia fina até a borda do pratinho."
+    }
+   ]
+  },
+  {
+   "term": "xeca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "female genitals; vagina",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the wife of a sheik",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeique",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a sheik",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenartro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenarthran",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeneize",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of or relating to the Argentinian sports team Boca Juniors",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeneize",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a member or supporter of Boca Juniors",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xénio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of xénon",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenodóquio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenodochium (room in a monastery that accommodates pilgrims)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenofobia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenophobia (fear or hatred of foreigners)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenofóbico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenophobic (exhibiting or characteristic of xenophobia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenofobismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of xenofobia",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenófobo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenophobic (exhibiting or characteristic of xenophobia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenófobo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenophobe (person who hates foreigners)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenogênero",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenogender",
+     "tags": [],
+     "ex": "Xenogênero: abrange qualquer identidade de gênero caracterizada pela relação com coisas que não são normalmente associadas com gênero, como plantas, animais, minerais, sentimentos, cores, estéticas e sensações; […]"
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenólito",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenolith",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xénon",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenon",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenônio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of xênon",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenoparidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenoparity",
+     "tags": [],
+     "ex": "Na xenoparidade, existe a necessidade de propagar o genoma de outra espécie através dos próprios ovos."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Na xenoparidade, existe a necessidade de propagar o genoma de outra espécie através dos próprios ovos."
+    },
+    {
+     "t": "O fenómeno da xenoparidade tem profundas implicações para a biologia evolutiva."
+    }
+   ]
+  },
+  {
+   "term": "xenóparo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenoparous",
+     "tags": [],
+     "ex": "Os pesquisadores definiram essas rainhas/fêmeas como xenóparas, significando que elas precisam produzir indivíduos de outra espécie como parte do ciclo de vida."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Os pesquisadores definiram essas rainhas/fêmeas como xenóparas, significando que elas precisam produzir indivíduos de outra espécie como parte do ciclo de vida."
+    },
+    {
+     "t": "Para os pesquisadores, as fêmeas de M. ibericus são xenóparas."
+    }
+   ]
+  },
+  {
+   "term": "xenótimo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenotime",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenotoxicidade",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenotoxicity",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xenotransplante",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xenotransplantation (transplantation into a different species)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xepa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "military ration",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "food leftover",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "food that, in markets, is sold for a lower price when it is about to expire",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "paper collected to be sold to cellulose manufacturers",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "used newspaper that is sold again",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "butt (remnant of a smoked cigarette or cigar)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xequerê",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "sekere (musical instrument similar to a rattle)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xereca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the vulva",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerecard",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a situation where a woman offers sex to get out of a difficult situation or receive a favor",
+     "tags": [
+      "Brazil",
+      "slang",
+      "vulgar"
+     ],
+     "ex": "— Não esquenta, maninho, aqui elas aceitam xerecard. A gente parcela essa tua foda."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "— Não esquenta, maninho, aqui elas aceitam xerecard. A gente parcela essa tua foda."
+    }
+   ]
+  },
+  {
+   "term": "xerém",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cracked corn; corn grits (frequently used as bird feed)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "porridge made with corn grits",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xereta",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "nosey person",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Nunca poderia dialogar com você através de um biocomputador ou transfone, sabendo dos vários xeretas que poderiam estar na escuta. Detesto abelhudos!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Nunca poderia dialogar com você através de um biocomputador ou transfone, sabendo dos vários xeretas que poderiam estar na escuta. Detesto abelhudos!"
+    }
+   ]
+  },
+  {
+   "term": "xeretar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to pry (to look where one is not welcome; to be nosey)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeretaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xeretar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerocar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to photocopy; to xerox (to make photocopies)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerocaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xerocar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerófilo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xerophilic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeroftalmia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xerophthalmia (condition where the conjunctiva and cornea become dry)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerografia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xerography",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerolaine",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "vagina",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "– Sério, Hen? Você não namorava há séculos. E agora, você tem um cara incrível, com, cito: \"um instrumento que faz sua xerolaine gritar de medo e prazer” […]"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "– Sério, Hen? Você não namorava há séculos. E agora, você tem um cara incrível, com, cito: \"um instrumento que faz sua xerolaine gritar de medo e prazer” […]"
+    }
+   ]
+  },
+  {
+   "term": "xerpa",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "of the Sherpa",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xerpa",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "sherpa (member of an ethnic group)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sherpa (local employed as mountain guide/ porter)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Sherpa (language)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xeta",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "blown kiss",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xexé",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "gaga; senile",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xexeca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of xereca",
+     "tags": [
+      "Brazil",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xexelento",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "dirty, stinky and/or untidy",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "annoying and/or captious",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "inferior, worthless",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "crappy, worthless, of poor quality (of a thing)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xhosa",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Xhosa (member of a Bantu people from South Africa)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Xhosa (a Bantu language spoken by the Xhosa)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xibiu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy (the female genitalia)",
+     "tags": [
+      "slang",
+      "vulgar"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a small diamond used in tools for cutting glass",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xibolete",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shibboleth (a pronunciation that distinguishes members of a group from non-members)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "any characteristic that tells a member of a group apart",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "shibboleth (a common belief or custom associated with a group)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xifópago",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xiphopagus (which presents duplication in the ventral region between the end of the sternum and the navel)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "xiphopagus (that is closely linked to another through the way of thinking and/or acting)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xifópago",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xiphopagus (being that presents duplication in the ventral region between the end of the sternum and the navel)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "xiphopagus (individual who is closely linked to another by way of thinking and/or acting)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shi'a; Shi'ism; Shia Islam (a branch of Islam)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiita",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shiite (of, or relating to Shiites or the Shi'a branch of Islam)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "extremist (taking an extreme view on something)",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiita",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shiite (a member of the Shi'a branch of Islam)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "extremist (someone who has an extreme view on something)",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilema",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylem (vascular tissue in land plants)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xileno",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylene (di-methyl-benzene)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilindró",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "jail (place for the confinement of people)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilitol",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylitol (a pentahydric alcohol derived from xylose)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilofone",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylophone (instrument consisting of wooden bars struck by mallets)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilografia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylography (art of making engravings in wood)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "xylograph (engraving in wood)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilogravura",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "woodcut",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xilose",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylose (a sugar derived from wood)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiloteca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xylotheque",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiluva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "flower",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ximbo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "horse whose owner is unknown",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xing ling",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "(of a product) low-quality, counterfeit (usually made in China); shanzhai",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xing ling",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a Chinese person; ching chong",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Foi descoberto por um médico chinês de nome Li Wenling. / Só poderia ser um Xing Ling!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Foi descoberto por um médico chinês de nome Li Wenling. / Só poderia ser um Xing Ling!"
+    }
+   ]
+  },
+  {
+   "term": "xingamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "insult (speech intended to be rude)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xingar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to insult; to swear at",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "As crianças aprenderam. “As vezes me xingam por causa da minha cor, mas eu não ligo. Sei que é só para tentar me magoar”, conta Camila."
+    },
+    {
+     "trans": "to curse (to use vulgar words to expressing anger, frustration)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As crianças aprenderam. “As vezes me xingam por causa da minha cor, mas eu não ligo. Sei que é só para tentar me magoar”, conta Camila."
+    }
+   ]
+  },
+  {
+   "term": "xingaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xingar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xintoísmo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shinto (an animistic religion originating in Japan)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xintoísta",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Shinto (related to Shintoism)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xique-xique",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "ganzá",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "xique-xique (Pilosocereus gounellei)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xiri",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy (the female genitalia)",
+     "tags": [
+      "slang",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xis",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "The name of the Latin script letter X/x.",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "main (the main part of something)",
+     "tags": [],
+     "ex": "o xis da questão"
+    },
+    {
+     "trans": "burger",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": "xis e espetinhos"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "o xis da questão"
+    }
+   ]
+  },
+  {
+   "term": "xis",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Said while being photographed; cheese",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xis da questão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "crux of the matter",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xis-nove",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "snitch; rat",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xisnovar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to rat out; to snitch",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xisto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "schist",
+     "tags": [],
+     "ex": "Os xistos abrangem grande parte da área mapeada e fazem contato tectônico com paragnaisses, afloram em blocos ou em lajedos e apresentam granulação fina a média[…]."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Os xistos abrangem grande parte da área mapeada e fazem contato tectônico com paragnaisses, afloram em blocos ou em lajedos e apresentam granulação fina a média[…]."
+    }
+   ]
+  },
+  {
+   "term": "xitaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xitar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xituculumucumba",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a kind of evil spirit or bogeyman that appears in nightmares",
+     "tags": [],
+     "ex": "De facto era xituculumucumba. Tinha dois pés mas era xituculumucumba. Tinha muitos dentes mas era xituculumucumba."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "De facto era xituculumucumba. Tinha dois pés mas era xituculumucumba. Tinha muitos dentes mas era xituculumucumba."
+    }
+   ]
+  },
+  {
+   "term": "xiu",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "requesting silence; shh",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xixa",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shisha; hookah; narghile (Oriental tobacco pipe wherein the smoke is drawn through water)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xodó",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "affection",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": "Se a paixão não pega / É o amor que pega sim / Mesmo que cê vá embora / O xodó nunca terá fim"
+    },
+    {
+     "trans": "an object or person of affection",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "gossip",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Se a paixão não pega / É o amor que pega sim / Mesmo que cê vá embora / O xodó nunca terá fim"
+    }
+   ]
+  },
+  {
+   "term": "xofrango",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "(Gypaetus barbatus) large vulture, native to the Mediterranean region where it is found in mountainous and rugged areas, it reaches more than one meter in length, with a wingspan of about three meters and has brown plumage, lighter on the chest and undersides and darker on the wings; gypaetus, bone breaker",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "name by which the osprey (Pandion haliaetus) is also known, when it is a juvenile",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xogum",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shogun (military governor of Japan)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xogunato",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shogunate (administration of a shogun)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xonaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xonar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xongas",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "nothing",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "xor; exclusive or (logical operation that outputs true only when both inputs differ)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xota",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "female genitals; vagina",
+     "tags": [
+      "Brazil",
+      "slang",
+      "vulgar"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "penis",
+     "tags": [
+      "Portugal",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xotaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xotar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xote",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a Brazilian dance and music subgenre associated with forró",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a dance and music genre of South Brazil",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "schottische; schottisch (a lively dance similar to polka)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xoxar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to mock, to make fun of",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xoxaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xoxar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xoxota",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "pussy (female genitalia)",
+     "tags": [
+      "Brazil",
+      "slang",
+      "vulgar"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xpto",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cutting-edge (representing the forefront or the position of greatest advancement)",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": "É o carro topo de gama, a aparelhagem xpto, a televisão e o computador última geração, a par de CDs, DVDs, livros, e outros gadgets."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "É o carro topo de gama, a aparelhagem xpto, a televisão e o computador última geração, a par de CDs, DVDs, livros, e outros gadgets."
+    }
+   ]
+  },
+  {
+   "term": "xuá",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the sound of rushing water",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xucro",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "untamed",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "inexperienced",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "rude or uncouth",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "without sugar; sugarless",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xudra",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shudra (the fourth and lowest-ranking (excluding dalits) caste within the fourfold varna system of traditional Hindu society, consisting of workers and artisans)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xumbrega",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tacky; kitsch",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xumbregar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "(pronominal) to get drunk",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to grope, to rub against someone",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to have sex",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to annoy",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to kill, to hurt severely",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xumbregaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of xumbregar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xurumbambo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "old and worn-out object",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xuxialismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "socialism, often in the context of the policy and alleged corruption of the Portuguese Socialist Party",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "xuxinha",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "scrunchie",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Ela se afastou, ajustou o corpo e prendeu o cabelo na xuxinha (assim que ela chamava) que carregava sempre no pulso."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ela se afastou, ajustou o corpo e prendeu o cabelo na xuxinha (assim que ela chamava) que carregava sempre no pulso."
+    }
+   ]
+  },
+  {
+   "term": "yakisoba",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yakisoba (Japanese dish made of fried wheat flour noodles, pork, vegetables and a sweet sauce)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yaoi",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yaoi (narrative genre)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an issue of a yaoi work",
+     "tags": [],
+     "ex": "Amo ler meus yaois antes de dormir"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Amo ler meus yaois antes de dormir"
+    }
+   ]
+  },
+  {
+   "term": "yield",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yield (the current return as a percentage of the price of a stock or bond)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yin-yang",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yin-yang (opposite principles in Chinese philosophy)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yorubano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Yoruba (a sub-Saharan language)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yottabit",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yottabit (one septillion bits)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yottabyte",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yottabyte (one septillion bytes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "youtuber",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "YouTuber",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ypêrdível",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "unmissable",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Tá 'Ypêrdível': miraram no Lulinha e acertaram o Rachadinha."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Tá 'Ypêrdível': miraram no Lulinha e acertaram o Rachadinha."
+    },
+    {
+     "t": "CAMISA CANCELADA!\nEssa história está YPÊrdível!"
+    }
+   ]
+  },
+  {
+   "term": "yttérbio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "ytterbium",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yupik",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Yup'ik (a language of the Eskimo-Aleut family)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Yup'ik (a group of native peoples of Alaska and Chukotka)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "yuppie",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "yuppie (young upwardly mobile urban professional person)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zabaione",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zabaglione, sabayon (custard-like dessert made with egg yolks, sugar and Marsala wine)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zabela",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "gay",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zabelê",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a species of bird native to Brazil (Crypturellus zabele)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zabumba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zabumba",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zaburro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a variety of corn/maize used for animal feed",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zaga",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "rear (the part of an army or fleet which comes last)",
+     "tags": [
+      "archaic"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "defence (portion of a team dedicated to preventing the other team from scoring)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zagal",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "shepherd",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "strong lad",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "1911, Coelho Neto, Mistério do Natal, Lello & Irmão editores",
+     "tag": "pre-reform"
+    }
+   ]
+  },
+  {
+   "term": "zagueiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "back (player in a position behind most players on the team)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zaipe",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wink",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zambiano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zambian (of or relating to Zambia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zambiano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zambian (a person from Zambia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zambujal",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wild olive grove",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zambujeiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wild olive tree (Olea europaea subsp. europaea)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Olea maderensis",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zambujo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "wild olive tree (Olea europaea subsp. europaea)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zanaga",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cross-eyed",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zangaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zangar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zanolho",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "one-eyed (having only one functioning eye)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zanzar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to mooch; to roam (to wander around aimlessly)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zanzaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zanzar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zap",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the highest ranking card in a game of Truco; usually a trump card of clubs, but the rules can vary",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": "Assim, as Manilhas na versão mineira ficam desta maneira: / 4 de paus (Zap ou Gato); / 7 de copas (Copeta ou Copilha); / Ás de espadas (Espadilha); / 7 de ouros (Pica-fumo ou Mole)."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Assim, as Manilhas na versão mineira ficam desta maneira: / 4 de paus (Zap ou Gato); / 7 de copas (Copeta ou Copilha); / Ás de espadas (Espadilha); / 7 de ouros (Pica-fumo ou Mole)."
+    }
+   ]
+  },
+  {
+   "term": "zaparam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zapar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapatismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zapatismo",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapatista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zapatista",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapatista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zapatista",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to zap (change TV channels repeatedly)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zapear",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapping",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zapping, channel hopping, channel surfing",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zapzap",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of zap",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zarabatana",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "blowgun",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zaragatoa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a cotton swab used to take samples of bodily fluids and genetic material",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "any of several plantain species used in herbal medicine to treat intestinal problems",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zaralhar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to mess around, to fool around",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zarelhar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to meddle, to interfere",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to make mischief; to go crazy",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to shake up",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zarelharam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zarelhar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zarolha",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of zarolho",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zarparam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zarpar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zê",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "The name of the Latin script letter Z/z.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zé da véstia",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a worthless or useless individual",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zé das couves",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "an average joe",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Você acha mesmo que o zé das couves vai saber de física quântica?"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você acha mesmo que o zé das couves vai saber de física quântica?"
+    }
+   ]
+  },
+  {
+   "term": "zé dos anzóis",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a worthless or useless individual",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zé fini",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "it is over, it has finished/ended",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zé-droguinha",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "someone who consumes recreational drugs, especially if the person is young and does so largely for attention; a stoner",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zé-prequeté",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a worthless or useless individual",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zebu (domesticated ox native to Asia and Africa)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebralo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zorse",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to stripe, as in a zebra pattern",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to go wrong",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zebrar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a wild horse or a wild ass (Equus hydruntinus, an extinct equine)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zebu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zebu (Bos taurus indicus)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zécora",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "evening primrose",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "onager (wild ass)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zéfiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zephyr; breeze (light, refreshing wind)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "zephyr (a light wind from the west)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zeísmo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeism, pellagra",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zeitgeist",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeitgeist (the dominant set of ideals and beliefs of an era)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelandês",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zeelandic (from or relating to the Dutch province of Zeeland)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Zealandic (from or relating to the Danish island of Zealand)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelandês",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zeelander (person from Zeeland)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Zeelandic (Low Franconian lect spoken in Zeeland)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zelar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelha",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Montpellier maple (Acer monspessulanum, a tree principally of the Mediterranean region)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelosamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zealously (with zealotry)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zelosia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the quality of being zealous, showing zeal or jealousy",
+     "tags": [
+      "archaic"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zénite",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zenith (point vertically above a position or observer)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "zenith (highest point reached by a celestial body)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "zenith; peak; apogee (highest or best point or state)",
+     "tags": [],
+     "ex": "A popularidade deles chegou ao zénite nos anos 80."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A popularidade deles chegou ao zénite nos anos 80."
+    }
+   ]
+  },
+  {
+   "term": "zenuada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tinnitus, buzzing",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zeólito",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeolite",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zepelim",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeppelin",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zerar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to set a measuring instrument to zero",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Lembre de zerar a balança para tirar a tara."
+    },
+    {
+     "trans": "to cause or set some value or amount to be zero",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Seus gastos zeraram a sua conta."
+    },
+    {
+     "trans": "to change a memory location to values of zero",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Zere o contador depois de terminar as iterações."
+    },
+    {
+     "trans": "to receive or give (someone) a grade of zero",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Droga! Zerei em português de novo."
+    },
+    {
+     "trans": "to pay off (to pay the entirety of a loan)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Usei o prêmio para zerar a dívida do carro."
+    },
+    {
+     "trans": "to beat (to complete all levels of a video game)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Nunca consegui zerar todas as fases do Age of Empires."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Lembre de zerar a balança para tirar a tara."
+    },
+    {
+     "t": "Seus gastos zeraram a sua conta."
+    },
+    {
+     "t": "Zere o contador depois de terminar as iterações."
+    },
+    {
+     "t": "Droga! Zerei em português de novo."
+    }
+   ]
+  },
+  {
+   "term": "zerar a vida",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to feel an extremely deep sense of accomplishment",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zeraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zerar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zerésimo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeroth",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zerinho ou um",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a variant of the children's game of dois ou um in which the handshapes used are either 0 (closed hand) or 1 (index finger extended)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zero à esquerda",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a good-for-nothing (a person of low worth or usefulness or a person who is incompetent or ignorant in a particular area or task)",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Ela se casou com João? Aquele zero à esquerda!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ela se casou com João? Aquele zero à esquerda!"
+    }
+   ]
+  },
+  {
+   "term": "zero absoluto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "absolute zero",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zero bala",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "brand new (utterly new)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zetética",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "investigation; research",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "skepticism",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zetético",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zetetic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zettabit",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zettabit (one sextillion bits)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zettabyte",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zettabyte (one sixtillion bytes)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zeugma",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zeugma",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zibelina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "sable (animal)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bad luck",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "problem",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Zika disease",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Zika virus",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "bicycle",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zica",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cool",
+     "tags": [
+      "Brazil",
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zicar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to inflict bad luck",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zicaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zicar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zigoma",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cheekbone; zygoma",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zigomático",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zygomatic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zigomático",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cheekbone; zygoma",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zigoto",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zygote (fertilized egg cell)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziguezagueante",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zigzag; zigzagging (moving in or having a zigzag)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziguezaguear",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to zigzag (move in a zigzag manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziguezaguearam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of ziguezaguear",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zilhão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zillion (any very large number)",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zilião",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zillion",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbabuense",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zimbabwean (of, from, or pertaining to Zimbabwe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbabuense",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zimbabwean (person from Zimbabwe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbabweano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zimbabwean (of, from, or pertaining to Zimbabwe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbabweano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zimbabwean (person from Zimbabwe)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a particular univalve mollusc once used as currency",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbório",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "dome",
+     "tags": [],
+     "ex": "Defronte de uma porta, há um zimbório sustentado por colunas abertas à luz. Do teto do zimbório pende uma cadeia de ferro. O zimbório é alto, todo cheio de luz, e aquela cadeia velha, carunchosa, misteriosa, tem um aspeto trágico."
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbreiro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "juniper (shrub or tree of the genus Juniperus)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zimbro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "juniper (shrub or tree of the genus Juniperus)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "juniper berry (berry-like galbulus of a juniper tree)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zincografia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zincography",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zinnwaldita",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zinnwaldite",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zipar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to zip (to convert a computer file into a smaller package)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziparam",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zipar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zíper",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zip fastener (a type of fastener used in clothing, bags)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "fly (strip that hides the opening of trousers/pants or underpants)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zipzop",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "synonym of zapzap",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziquizira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bad luck",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "any illness of unknown cause",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zircão",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zircon (a mineral of silica and zirconia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zircónio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zirconium",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "ziriano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zyrian (Finnic language spoken in the Komi Republic, Russia)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zirro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "swift (small plain-colored bird of the family Apodidae that resembles a swallow)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zloty",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zloty (the currency unit of Poland)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "mockery, ridicule",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoada",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "tinnitus",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "susurrus of waves",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "murmur",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to buzz",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to mock, to make fun of (to make an object of laughter or ridicule)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to kid; to joke (to say or do something without being serious)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to fool around (to engage in frivolous behaviour)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "to mess up; to disorganize",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zoar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zodiacal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zodiacal (of or relating to the zodiac)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoeira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "noise (various sounds, usually unwanted)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "mockery; the act of mocking",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a playful lie told with the intent of quickly revealing the truth afterwards; just kidding",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Paguei R$500 por este objeto! Zoeira, foram apenas R$30!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Paguei R$500 por este objeto! Zoeira, foram apenas R$30!"
+    }
+   ]
+  },
+  {
+   "term": "zoeiro",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "prone to mocking people",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zogue-zogue",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "titi (any monkey in the subfamily Callicebinae)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "O zogue-zogue ouviu os Nambikwára falando dentro da pedra. Ficou ali perto esperando o pessoal sair. Mas nunca saía. Com isso, o zogue-zogue apanhou tanto sol, que ficou com as costas vermelhas."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O zogue-zogue ouviu os Nambikwára falando dentro da pedra. Ficou ali perto esperando o pessoal sair. Mas nunca saía. Com isso, o zogue-zogue apanhou tanto sol, que ficou com as costas vermelhas."
+    },
+    {
+     "t": "É uma das poucas regiões do Brasil onde pode ser encontrado o macaco zogue-zogue."
+    },
+    {
+     "t": "A região em que os zogue-zogues de Alta Floresta vivem faz parte do chamado arco do desmatamento, trecho sul da Amazônia em que o desflorestamento é significativo"
+    }
+   ]
+  },
+  {
+   "term": "zoguista",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zogist (supporting or relating to King Zog I of Albania)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoião",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "gluttonous; greedy (prone to excessive eating)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "avaricious; greedy (wishing more wealth than is needed)",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoião",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "one who is prone to overeating; a glutton",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "fried egg",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoiaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zoiar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoilo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoilus (a severe and vindictive critic)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoina",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "hooker, whore, prostitute",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zombar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to taunt; to jeer; to mock; to make fun of",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to tiptoe; to walk slowly",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Está zombando de mim?",
+     "tag": "br"
+    }
+   ]
+  },
+  {
+   "term": "zombaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zombar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zombaria",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "mockery; ridicule; taunting; jeer",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona abissal",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "abyssal zone (deep part of the ocean)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona afótica",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "aphotic zone (part of an ocean or lake that receives insufficient sunlight for photosynthesis)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona de abscisão",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "abscission zone (area where the abscission layer if formed)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona de guerra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "war zone",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona do agrião",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "penalty area",
+     "tags": [],
+     "ex": "[…]admito que ele foi um cracaço na zona do agrião, talvez incomparável. Só que futebol não é só zona do agrião."
+    },
+    {
+     "trans": "perineum",
+     "tags": [],
+     "ex": "“Eu tenho ódio! Porque daí passa naquele bundão cheio de pêlo que eles têm. Naquela zona do agrião entre o c* e o saco, que fica um cheiro insuportável…”"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "[…]admito que ele foi um cracaço na zona do agrião, talvez incomparável. Só que futebol não é só zona do agrião."
+    },
+    {
+     "t": "“Eu tenho ódio! Porque daí passa naquele bundão cheio de pêlo que eles têm. Naquela zona do agrião entre o c* e o saco, que fica um cheiro insuportável…”"
+    }
+   ]
+  },
+  {
+   "term": "zona económica exclusiva",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "exclusive economic zone",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona erógena",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "erogenous zone",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zona T",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "T-zone (the forehead and nose considered together as a region of the face)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zonal",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zonal (pertaining or relating to zones)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "having transversal colorful strips",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zonalmente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zonally (in a zonal manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zonar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to zone; to divide into regions or zones",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zonaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zonar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoncá",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Dzongkha (Sino-Tibetan spoken in Bhutan)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoneamento",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoning (division of land into zones for particular uses)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoofilia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoophilia (sexual attraction towards or sexual interaction with animals)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoofobia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoophobia (unusual fear of animals)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoologia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoology (science that studies the animal kingdom)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoologicamente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoologically",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoologista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoologist",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoólogo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoologist (one who studies zoology)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoomorfo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoomorphic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoonomia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoonomy",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoonose",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoonosis",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoonosologia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoonosology",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoonótico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoonotic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoopatologia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoopathology (animal pathology)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zooplâncton",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zooplankton",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoopraxioscópio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoopraxiscope",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoopraxiscópio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoopraxiscope",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoospermia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoospermia (presence of live spermatozoa in the semen)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zootecnia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zootechnics; zootechny; animal husbandry (the study of livestock breeding)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zootécnico",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zootechnician (one working in zootechnics)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zootécnico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zootechnic (relating to zootechnics)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zootecnista",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zootechnician (specialist in zootechnics)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zootrópio",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zoetrope",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zorba",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "male underpants",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoroastriano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zoroastrian",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoroastriano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zoroastrian",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zoroastrismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zoroastrianism (religion and philosophy ascribed to Zoroaster)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zorra",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "sledge, dray",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "an old fox",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a plodder",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a prostitute",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "a mess",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zorrilho",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Andes skunk (Conepatus chinga)",
+     "tags": [],
+     "ex": "Na boca da noite / Me aparece um zorrilho / Vem mijar perto de casa / Pra enticar com a cachorrada"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Na boca da noite / Me aparece um zorrilho / Vem mijar perto de casa / Pra enticar com a cachorrada"
+    }
+   ]
+  },
+  {
+   "term": "zoteca",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zotheca (cabinet, in ancient Roman dwellings, for study, rest or nap)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zuarte",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a coarse cotton fabric, usually dyed blue",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "fabric used to make the capote e capelo",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zuca",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Brazilian",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zuca",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Brazilian",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zum",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the sound of something rushing by",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumba",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zumba",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumbaia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bow (ceremonial greeting)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "deep courtesy, exaggerated bow",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "sycophancy (exaggerated flattery, with which one seeks to obtain favor, privilege, etc.)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumbificação",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zombification",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumbificar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to zombify (to turn into a zombie)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumbificaram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zumbificar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zumbiram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zumbir",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zungueira",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "woman walking around the streets selling different goods inside a bowl carried over her head",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zunidor",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "buzzing, humming",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zunidor",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bullroarer",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zunir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to buzz",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zuniram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zunir",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zunzum",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "humming; buzzing",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "indistinct noise",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "buzz, rumor; gossip",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Disseram que com as mãos estou preocupada\n E corre por aí que eu sei certo zum-zum\n Que já não tenho molho, ritmo, nem nada\n E dos balangandãs já nem existe mais nenhum"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Disseram que com as mãos estou preocupada\n E corre por aí que eu sei certo zum-zum\n Que já não tenho molho, ritmo, nem nada\n E dos balangandãs já nem existe mais nenhum"
+    }
+   ]
+  },
+  {
+   "term": "zura",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "miserly (excessively cautious with money)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zura",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "skinflint (one who is excessively cautious with money)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zureta",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "crazy, insane",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "upset, grumpy",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zureta",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a crazy person",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "an upset or grumpy person",
+     "tags": [
+      "Brazil",
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurrador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "that brays",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurrador",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "one that brays",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurrapa",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "plonk (poor-quality wine)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Any low quality or distasteful drink, usually alcoholic.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurrar",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to bray (of a donkey: to make its cry)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurraram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zurrar",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurro",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bray (the cry of a donkey)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zuruó",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "crazy, insane",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurzidela",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the act of beating, punishing or afflicting",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurzir",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to beat, to batter",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to chastise, to punish",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to afflict, to mistreat",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zurziram",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "third-person plural preterite/pluperfect indicative of zurzir",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwinglianismo",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zwinglianism",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwingliano",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zwinglian (relating to Zwingli, Swiss Protestant reformer)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwingliano",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Zwinglian (a follower of Zwingli)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwitterion",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zwitterion (molecule that carries both a positive and a negative charge)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwitteriónico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zwitterionic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zwitteriônico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zwitterionic",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "zzz",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "zzz (sleeping)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "indicates that one doesn't care about or agree with what is being said",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  }
+ ]
+}

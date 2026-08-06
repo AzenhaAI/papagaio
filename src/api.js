@@ -233,6 +233,33 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  // The product's headline numbers, computed from the data rather than typed
+  // into pages that instantly go stale. Cached at the edge for an hour.
+  if (path === '/api/counts' && request.method === 'GET') {
+    const cache = caches.default;
+    const key = new Request('https://papagaio.cache/counts/v1');
+    const hit = await cache.match(key);
+    if (hit) return hit;
+    const row = await env.DB.prepare(
+      `SELECT
+        (SELECT COUNT(*) FROM cards WHERE course='pt' AND owner IS NULL AND pos IS NOT 'drill') AS pt_cards,
+        (SELECT COUNT(*) FROM cards WHERE course='pt' AND owner IS NULL AND pos='drill') AS pt_drills,
+        (SELECT COUNT(*) FROM cards WHERE course='en' AND owner IS NULL) AS en_cards,
+        (SELECT COUNT(*) FROM cards WHERE owner IS NULL AND tags LIKE '%"frase"%') AS frases,
+        (SELECT COUNT(*) FROM cards WHERE owner IS NULL AND unit='fado') AS fado,
+        (SELECT COUNT(*) FROM cards WHERE owner='lex') AS lexicon`
+    ).first();
+    const resp = new Response(JSON.stringify({ ...row, verbs: VERBS.length }), {
+      headers: {
+        'content-type': 'application/json; charset=utf-8',
+        'cache-control': 'public, max-age=3600',
+        ...CORS,
+      },
+    });
+    await cache.put(key, resp.clone());
+    return resp;
+  }
+
   // A dictionary that only answers for words it already teaches is a deck
   // browser. "gato" is not in the frequency deck and never will be at 400 words,
   // but a learner who types it deserves an answer, so unknown words are looked

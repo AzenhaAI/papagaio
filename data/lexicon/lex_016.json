@@ -14260,6 +14260,2688 @@
     }
    ],
    "corpus": []
+  },
+  {
+   "term": "-eu",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a noun-forming suffix of low productivity, corresponding especially to English learned words in -ee: apogeu , espondeu , jubileu",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "-mórfico",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "-morphic",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "-tomia",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "-tomy",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "... sim, ... não",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "every other; every two (usually said about time periods)",
+     "tags": [],
+     "ex": "dia sim, dia não"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "dia sim, dia não"
+    }
+   ]
+  },
+  {
+   "term": "⚔",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "frottage",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "10.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "10th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "10/10",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "10/10; especially in reference to attractive people.",
+     "tags": [],
+     "ex": "Cheguei na 10/10 querendo entrosar, mas ela me deu um fora."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Cheguei na 10/10 querendo entrosar, mas ela me deu um fora."
+    }
+   ]
+  },
+  {
+   "term": "10/10",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "10/10 (ideal)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "11.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "11th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "12.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "12th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "13.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "13th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "14.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "14th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "15.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "15th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "16.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "16th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "17.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "17th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "171",
+   "pos": "noun",
+   "gender": "m/f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "embezzler",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "swindler; conman",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "liar",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "18.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "18th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "19.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "19th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "20.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "20th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "24",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "gayness, homosexuality",
+     "tags": [
+      "slang"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "24 horas",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "round-the-clock, 24-hour, twenty-four seven (referring to a business that operates all day)",
+     "tags": [],
+     "ex": "farmácia 24 horas"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "farmácia 24 horas"
+    }
+   ]
+  },
+  {
+   "term": "24/7",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "twenty-four seven (relationship where the submissive is always available)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "24/7",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "twenty-four seven (of or relating to a 24/7 relationship)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "4.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "4th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "5.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "5th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "500.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "500th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "6.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "6th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "7.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "7th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "8.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "8th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "9.º",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "9th",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à beça",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "very much; to a great extent",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Você fala à beça."
+    },
+    {
+     "trans": "very; really",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Consegui um livro bom à beça."
+    },
+    {
+     "trans": "loads of; a lot of",
+     "tags": [
+      "Brazil",
+      "colloquial"
+     ],
+     "ex": "Dinheiro à beça."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Você fala à beça."
+    },
+    {
+     "t": "Consegui um livro bom à beça."
+    },
+    {
+     "t": "Dinheiro à beça."
+    }
+   ]
+  },
+  {
+   "term": "à beira",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "near, next",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à beira de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "on the brink of",
+     "tags": [],
+     "ex": "Após o acidente, ficou à beira da morte por dias."
+    },
+    {
+     "trans": "next to",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Após o acidente, ficou à beira da morte por dias."
+    }
+   ]
+  },
+  {
+   "term": "a bem da verdade",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "\"to tell the truth\", \"for the sake of accuracy\" (used to introduce a clarifying statement)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à bolonhesa",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "seasoned with Bolognese sauce",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "according to the fashion of Bologna",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a bordo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "aboard; on board (in or into a craft)",
+     "tags": [],
+     "ex": "Eles estão a bordo de um navio."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Eles estão a bordo de um navio."
+    }
+   ]
+  },
+  {
+   "term": "à borla",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "Used other than figuratively or idiomatically: see à, borla.",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "for free (not requiring any payment)",
+     "tags": [
+      "informal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à caçador",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "forgoing underwear beneath one's outer clothing; going commando",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à caçador",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "while going commando",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a cada passo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "from time to time; now and again; occasionally",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, cada, passo.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a caminho",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "on the way; on one's way; en route",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a caminho de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "on the way to; on one's way to; en route to",
+     "tags": [],
+     "ex": "Estamos a caminho do festival."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Estamos a caminho do festival."
+    }
+   ]
+  },
+  {
+   "term": "a cântaros",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "torrentially, in a grand amount",
+     "tags": [],
+     "ex": "Choveu a cântaros, fiquei encharcado!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Choveu a cântaros, fiquei encharcado!"
+    }
+   ]
+  },
+  {
+   "term": "à canzana",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "doggy style",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à capela",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a cappella (performed by a choir with no instrumental accompaniment)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a casa caiu",
+   "pos": "interj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "said after a particularly undesirable, harmful change of events; often, though not always, said of a criminal or illicit activity discovered by the authority",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Quando a polícia descobriu onde escondiam as drogas, a casa caiu para eles."
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, casa, caiu.",
+     "tags": [],
+     "ex": "Devido a ventos e tornados fortíssimos e sua estrutura precária, a casa caiu completamente."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Quando a polícia descobriu onde escondiam as drogas, a casa caiu para eles."
+    },
+    {
+     "t": "Devido a ventos e tornados fortíssimos e sua estrutura precária, a casa caiu completamente."
+    }
+   ]
+  },
+  {
+   "term": "à cata",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "searching, in search",
+     "tags": [],
+     "ex": "As ruas estão cheias de cegos que andam à cata de comida."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "As ruas estão cheias de cegos que andam à cata de comida."
+    }
+   ]
+  },
+  {
+   "term": "a cereja do bolo",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the icing on the cake (something wonderful at the end of something good)",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a céu aberto",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "open-air; outdoor (not inside a building)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a céu aberto",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "outdoors (not inside a building)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a cobrar",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "collect (paid for by the recipient)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a conta, por favor",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the bill, please",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a contragosto",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "against the grain; unwillingly; reluctantly",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a curto prazo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in the short term (in the near or immediate future)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a dar com pau",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in an abundant quantity; in excess",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à deriva",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "adrift (floating at random)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à deriva",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "adrift (in a drifting condition)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à desamão",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "out of the way",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a desbancar",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "abundantly, copiously",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a desoras",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "untimely, inopportunely (usually late at night)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "out of time (too late)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a despeito de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in spite of (despite)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a Deus dará",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "disordered",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a distância",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at a distance; from a distance; aloof",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, distância.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a dois tempos",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "two-stroke",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a duras penas",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "with great effort or difficulty",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a eito",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "uninterruptedly, without intermission or interruption",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a emenda sair pior que o soneto",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the cure is worse than the disease (the solution to a problem produces a worse net result)",
+     "tags": [],
+     "ex": "Junto aos poderes competentes chegavam insistentes súplicas de ajuda e proteção. Finalmente, após reiterados pedidos dos imigrantes, o Governo enviou alguns soldados. Mas a emenda saiu pior que o soneto. A presença dos policiais, durante três anos, não afastou os bugres que prosseguiram no seu furor vandálico e sanguinário."
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à época",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at the time; back then (at some point in the distant past)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a esmo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "with unpredictable outcomes; at random; randomly; haphazardly",
+     "tags": [],
+     "ex": "Sou como rês desgarrada / Nessa multidão, boiada caminhando a esmo."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Sou como rês desgarrada / Nessa multidão, boiada caminhando a esmo."
+    }
+   ]
+  },
+  {
+   "term": "à falsa fé",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "sneakily, unexpectedly",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "treacherously",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a favor",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in favour",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a favor de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in favour of; in support of",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a ferro e fogo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "with extreme violence",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "at all costs",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a fila anda",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "that ship has sailed (that opportunity has been lost)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "expresses the notion that it is normal to move on from one relationship to the next; see also: serial monogamy",
+     "tags": [],
+     "ex": "E daí que ele te deixou? A fila anda!"
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, fila, anda.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "E daí que ele te deixou? A fila anda!"
+    },
+    {
+     "t": "Se ele não se comportar, vou terminar com ele! A fila anda!"
+    }
+   ]
+  },
+  {
+   "term": "a fim",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "desiring or interested in",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "romantically attracted to",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a fim de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in order to (for the purpose of)",
+     "tags": [],
+     "ex": "Fiz um empréstimo a fim de abrir um negócio."
+    },
+    {
+     "trans": "to be interested in; to feel like",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Está a fim de viajar para a Europa?"
+    },
+    {
+     "trans": "into (romantically attracted to)",
+     "tags": [
+      "informal"
+     ],
+     "ex": "Dizem que a Maria está a fim do João."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Fiz um empréstimo a fim de abrir um negócio."
+    },
+    {
+     "t": "Está a fim de viajar para a Europa?"
+    },
+    {
+     "t": "Arrumar meu quarto? Não estou a fim [disso]."
+    },
+    {
+     "t": "Dizem que a Maria está a fim do João."
+    }
+   ]
+  },
+  {
+   "term": "a fim de que",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in order to (as a means of achieving the specified aim)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a fio",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "uninterruptedly, continuously, constantly",
+     "tags": [],
+     "ex": "anos a fio"
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, fio.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "anos a fio"
+    }
+   ]
+  },
+  {
+   "term": "à força",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "forcefully",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a fortiori",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a fortiori",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à frente",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "ahead (in the front)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à frente de seu tempo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "ahead of one's time (in advance of commonly accepted ideas)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a fundo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "thoroughly (in a thorough or complete manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a gente",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "we (first-person plural personal pronoun, conjugated in the third person)",
+     "tags": [
+      "colloquial"
+     ],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see a, gente.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Se ao menos a gente pudesse ouvir o que estão dizendo!",
+     "tag": "br"
+    }
+   ]
+  },
+  {
+   "term": "a gota que transbordou o copo",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the straw that broke the camel's back (the small additional burden which causes failure)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a granel",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "bulk (without packaging)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a grosso modo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "roughly speaking",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a i eito",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "uninterruptedly",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a justo título",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "fairly, rightfully",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à la carte",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "à la carte",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à la carte",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "à la carte",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à la minuta",
+   "pos": "noun",
+   "gender": "m",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "An economical meal (prato feito) from Rio Grande do Sul, usually including beans, rice, fries, steak, fried egg, and salad.",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "O prato que deu fama à casa é o à la minuta (R$ 9). Para acompanhar os dois ovos, a batata frita, o arroz e a salada, o cliente escolhe entre carne vermelha e frango, na chapa ou à milanesa. O prato serve duas pessoas."
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à letra",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "word for word (in exactly the same words)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "to the letter",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a longo prazo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in the long term (in the far future)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à luz de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in light of; given; considering (introduces a fact that is relevant to the conclusion)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "Used other than figuratively or idiomatically: see à, luz, de.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a luz no fim do túnel",
+   "pos": "noun",
+   "gender": "f",
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "light at the end of the tunnel (a better situation after long hardship)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à medida que",
+   "pos": "conj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "as (varying through time to the same proportion that)",
+     "tags": [],
+     "ex": "O porco engordava à medida que lhe davam mais lavagem."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O porco engordava à medida que lhe davam mais lavagem."
+    }
+   ]
+  },
+  {
+   "term": "a menos que",
+   "pos": "conj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "unless",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à mercê",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "under complete dependence of",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a mil",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at full blast; at full throttle",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "\"Eu estava dirigindo a mil pela rodovia quando vi um carro parado na margem da estrada.\"",
+     "tag": "br"
+    }
+   ]
+  },
+  {
+   "term": "a milhão",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at high speed",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a minha",
+   "pos": "pron",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the missus (one's wife)",
+     "tags": [],
+     "ex": "Amanhã, a minha vai ao Faial para ver a sua vavó."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Amanhã, a minha vai ao Faial para ver a sua vavó."
+    }
+   ]
+  },
+  {
+   "term": "à moda antiga",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "old-fashioned (preferring the customs of earlier times)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à moda antiga",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in an old-fashioned manner",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a montanha parir um rato",
+   "pos": "verb",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "[for someone to] make a mountain out of a molehill",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à mostra",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "showing, exposed, visible",
+     "tags": [],
+     "ex": "Ela tirou os cabelos da testa, deixando as cicatrizes à mostra."
+    },
+    {
+     "trans": "on display, on show",
+     "tags": [],
+     "ex": "Roupas típicas daquela época estavam à mostra no museu local."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ela tirou os cabelos da testa, deixando as cicatrizes à mostra."
+    },
+    {
+     "t": "Roupas típicas daquela época estavam à mostra no museu local."
+    }
+   ]
+  },
+  {
+   "term": "a não ser",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "besides (other than; except for)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a não ser que",
+   "pos": "conj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "unless (except on a specified condition)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "A negativo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "A negative (blood type)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à noite",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at night",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a noite é uma criança",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "the night is young",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à outrance",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "à outrance",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à pai Adão",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "butt-naked; not wearing any clothing",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à pai Adão",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "while butt-naked",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": "Deu-me para ser vira-lata / Vestir fato com gravata / E dançar à pai Adão"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Deu-me para ser vira-lata / Vestir fato com gravata / E dançar à pai Adão"
+    }
+   ]
+  },
+  {
+   "term": "à paisana",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "plainclothes",
+     "tags": [],
+     "ex": "Raul tornou-se tão adorado pelas môças e tão odiado pela torcida atleticana que não podia sair à rua sem uma escolta de policiais à paisana."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Raul tornou-se tão adorado pelas môças e tão odiado pela torcida atleticana que não podia sair à rua sem uma escolta de policiais à paisana."
+    }
+   ]
+  },
+  {
+   "term": "à paisana",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "plainclothes",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O individuo vestido á paisana, o qual já o moço fayalense desconfiava ser pessoa de consideração, por quanto o official de marinha que o acompanhava jamais emparelhava com elle[…]",
+     "tag": "pre-reform"
+    }
+   ]
+  },
+  {
+   "term": "a par",
+   "pos": "phrase",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "up (informed about)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à parte",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "apart; separately",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à partida",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in principle; provisionally",
+     "tags": [],
+     "ex": "No próximo ano enfrenta eleições federais que, à partida, vencerá, apesar de também ela ser ameaçada por uma onda semelhante à que varreu os seus antigos colegas das cimeiras do Conselho Europeu."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "No próximo ano enfrenta eleições federais que, à partida, vencerá, apesar de também ela ser ameaçada por uma onda semelhante à que varreu os seus antigos colegas das cimeiras do Conselho Europeu."
+    }
+   ]
+  },
+  {
+   "term": "a partir de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "from; beginning; starting",
+     "tags": [],
+     "ex": "A partir do ano que vem lerei um livro por mês."
+    },
+    {
+     "trans": "at least",
+     "tags": [],
+     "ex": "Um bolo custa a partir de cinquenta euros."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "A partir do ano que vem lerei um livro por mês."
+    },
+    {
+     "t": "Um bolo custa a partir de cinquenta euros."
+    }
+   ]
+  },
+  {
+   "term": "a passo de caracol",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at a snail's pace; very slowly.",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a pé",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "afoot (by walking, especially a long distance, as opposed to using a vehicle)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a penantes",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "afoot, by foot",
+     "tags": [
+      "Portugal",
+      "colloquial"
+     ],
+     "ex": "Se não conseguir boleia, vou ter que ir a penantes."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Se não conseguir boleia, vou ter que ir a penantes."
+    },
+    {
+     "t": "Fui de autocarro e voltei a penantes."
+    }
+   ]
+  },
+  {
+   "term": "a pino",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at its height, the highest in the sky, at noon",
+     "tags": [],
+     "ex": "O sol está a pino."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O sol está a pino."
+    }
+   ]
+  },
+  {
+   "term": "a ponto de",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "about to; imminently",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a portas fechadas",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "behind closed doors (in private)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "A positivo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "A positive (blood type)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a posteriori",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a posteriori",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a posteriori",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a posteriori",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a preço de banana",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "cheaply",
+     "tags": [
+      "Brazil"
+     ],
+     "ex": "Comprei esta TV a preço de banana."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Comprei esta TV a preço de banana."
+    }
+   ]
+  },
+  {
+   "term": "à primeira vista",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at first glance (after only a superficial examination or review)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a princípio",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "initially, at first",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a priori",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a priori (derived by logic)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "a priori (presumed without analysis)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a propósito",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "apropos (regarding or concerning)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à prova de fogo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "fireproof",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a qualquer custo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at any cost; whatever it takes",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a quantas anda",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "how is it going?",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "à queima-roupa",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "point blank, at point blank range",
+     "tags": [],
+     "ex": "O medo fez gelar o sangue do soldado, e foi o medo que o fez apontar a arma e disparar uma rajada à queima-roupa."
+    },
+    {
+     "trans": "point blank (directly, bluntly)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": [
+    {
+     "t": "O medo fez gelar o sangue do soldado, e foi o medo que o fez apontar a arma e disparar uma rajada à queima-roupa."
+    }
+   ]
+  },
+  {
+   "term": "a quo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "a quo",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a respeito de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "about",
+     "tags": [],
+     "ex": "Nas aulas de matemática aprendemos tudo a respeito de números."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Nas aulas de matemática aprendemos tudo a respeito de números."
+    }
+   ]
+  },
+  {
+   "term": "à risca",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "to the letter, strictly",
+     "tags": [],
+     "ex": "Só vai funcionar se seguirmos as instruções à risca."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Só vai funcionar se seguirmos as instruções à risca."
+    }
+   ]
+  },
+  {
+   "term": "a rodo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "excessively and at will",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a saber",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "namely, i.e., to wit; that is to say",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a salto",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "illegal, clandestine",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": "Muitos lusofranceses são descendentes de emigrantes a salto."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Muitos lusofranceses são descendentes de emigrantes a salto."
+    }
+   ]
+  },
+  {
+   "term": "a salto",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "illegally",
+     "tags": [
+      "Portugal"
+     ],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a salvo",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "safe (not in danger)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a sangue frio",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "in cold blood (in a ruthless and unfeeling manner)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a seco",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "without liquids, such as a glass of water, to help digestion",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "without preparation, especially in a manner considered shocking",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a seguir",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "next, after this",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "following, below",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a sério",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "frankly; honestly",
+     "tags": [],
+     "ex": "É esta a minha nova tática. Quanto ao nosso assunto, não abrirei a boca até que o senhor mande. Está a rir se? À vontade; eu próprio me rio. Mas agora estou a falar a sério, a sério, a sério, embora quem se apressa tanto seja medíocre, não é?"
+    },
+    {
+     "trans": "seriously; really",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a seu bel-prazer",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at will, on a whim, as one pleases",
+     "tags": [],
+     "ex": "Ele não pode desmanchar o que combinamos simples assim, a seu bel-prazer."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Ele não pode desmanchar o que combinamos simples assim, a seu bel-prazer."
+    }
+   ]
+  },
+  {
+   "term": "a tempo e horas",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "on time",
+     "tags": [],
+     "ex": "É bom que ele chegue a tempo e horas!"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "É bom que ele chegue a tempo e horas!"
+    },
+    {
+     "t": "E entrando aſſy a falarlhe, a tempo & horas, / A ſua falſidade acomodadas, / Lhe diz como erão gentes roubadoras, / Eſtas que ora de nouo ſam chegadas: […]"
+    }
+   ]
+  },
+  {
+   "term": "a tiracolo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "crossing a person’s chest from one side of their neck to the opposite side of the body",
+     "tags": [],
+     "ex": "Leva sempre uma bolsa a tiracolo."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Leva sempre uma bolsa a tiracolo."
+    },
+    {
+     "t": "Desejou ver aquillo de perto, levantou-se, botou o aiol a tiracollo, foi buscar o chapeo de couro e a espingarda de pederneira.",
+     "tag": "pre-reform"
+    }
+   ]
+  },
+  {
+   "term": "a título de",
+   "pos": "prep",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "for; as to",
+     "tags": [],
+     "ex": "a título de exemplo"
+    }
+   ],
+   "corpus": [
+    {
+     "t": "a título de exemplo"
+    },
+    {
+     "t": "a título de curiosidade"
+    }
+   ]
+  },
+  {
+   "term": "à toa",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "aimlessly, out of the blue",
+     "tags": [],
+     "ex": "Não é à toa que ..."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Não é à toa que ..."
+    },
+    {
+     "t": "Ela não vai desistir à toa."
+    }
+   ]
+  },
+  {
+   "term": "à toa",
+   "pos": "adj",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "idle (not doing anything important)",
+     "tags": [],
+     "ex": ""
+    },
+    {
+     "trans": "despicable, without importance",
+     "tags": [],
+     "ex": "Por um errinho à toa, levou uma bronca daquelas."
+    }
+   ],
+   "corpus": [
+    {
+     "t": "Por um errinho à toa, levou uma bronca daquelas."
+    }
+   ]
+  },
+  {
+   "term": "a todo custo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at all costs; whatever it takes",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a todo o custo",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "at all costs; whatever it takes",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a todo vapor",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "full steam ahead, at full blast, at full tilt",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a toque de caixa",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "hastily",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a torto e a direito",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "left and right (indiscriminately, frequently or excessively)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a troco de nada",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "apropos of nothing (without any apparent reason or purpose)",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
+  },
+  {
+   "term": "a troco de quê",
+   "pos": "adv",
+   "gender": null,
+   "rank": 900000,
+   "senses": [
+    {
+     "trans": "for what reason?",
+     "tags": [],
+     "ex": ""
+    }
+   ],
+   "corpus": []
   }
  ]
 }

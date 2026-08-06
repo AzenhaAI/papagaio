@@ -30,7 +30,11 @@ import { Readable } from 'node:stream';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const work = join(root, '.cache');
 const outDir = join(root, 'data', 'lexicon');
-const MAX = parseInt(process.argv[2] ?? '12000', 10);
+// 'all' drops the frequency gate entirely: every decent Wiktionary headword
+// enters, ranked ones first. That is what turns a search index into a
+// dictionary a paper Dicionário Básico would recognise as a peer.
+const ARG = process.argv[2] ?? '12000';
+const MAX = ARG === 'all' ? Infinity : parseInt(ARG, 10);
 
 const FREQ_URL = 'https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/pt/pt_50k.txt';
 const WIKT_URL = 'https://kaikki.org/dictionary/Portuguese/kaikki.org-dictionary-Portuguese.jsonl';
@@ -57,7 +61,7 @@ const wiktFile = await fetchTo(WIKT_URL, join(work, 'pt_wiktionary.jsonl'));
 const rank = new Map();
 readFileSync(freqFile, 'utf8').split('\n').forEach((line, i) => {
   const w = line.split(' ')[0];
-  if (w && !rank.has(w) && rank.size < MAX * 4) rank.set(w, i);
+  if (w && !rank.has(w)) rank.set(w, i);
 });
 
 const POS = {
@@ -126,8 +130,9 @@ for await (const line of rl) {
 
   const term = String(e.word ?? '').trim();
   if (!term || term.length > 32) continue;
-  const r = rank.get(term.toLowerCase());
-  if (r === undefined || r >= MAX) continue;
+  let r = rank.get(term.toLowerCase());
+  if (MAX !== Infinity && (r === undefined || r >= MAX)) continue;
+  if (r === undefined) r = 900000; // unranked: real words, sorted after the ranked
 
   const pos = POS[e.pos];
   if (!pos) continue;
