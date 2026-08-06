@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const GH = 'https://github.com/kirshp/papagaio/releases/download';
+---
+<BaseLayout
+  title="Get PapaGaio — every screen"
+  desc="PapaGaio on your phone, your Mac, your PC and in Telegram: European Portuguese dictionary, verb conjugator, translator and AI coach, free on every platform.">
+  <h1>One parrot, every screen</h1>
+  <p class="muted">
+    The same account everywhere: pair once with the bot's /link code and your
+    progress follows you. Free on every platform — that is the whole point.
+  </p>
+
+  <style is:global>
+    .appcard {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--panel); border-radius: var(--radius);
+      padding: 18px 20px; margin-bottom: 12px;
+    }
+    .appcard .em { font-size: 30px; line-height: 1.1; }
+    .appcard h3 { margin: 0 0 2px; font-size: 16.5px; }
+    .appcard p { margin: 0 0 8px; color: var(--muted); font-size: 13.5px; }
+    .appcard .soon { color: var(--muted); font-size: 13.5px; }
+  </style>
+
+  <div style="margin-top:22px;">
+    <div class="appcard">
+      <span class="em">🤖</span>
+      <div>
+        <h3>Android</h3>
+        <p>Direct APK — installs outside Google Play; allow "unknown apps" when asked. Play Store listing is on its way.</p>
+        <a class="btn" href={`${GH}/android-v1.0.0/PapaGaio-1.0.0.apk`}>Download APK · 55 MB</a>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">📱</span>
+      <div>
+        <h3>iPhone</h3>
+        <p>App Store release is in preparation. Until then, builds go out by hand — ask and you shall receive.</p>
+        <a class="btn" href="mailto:azenha.agent@gmail.com?subject=PapaGaio%20for%20iOS" style="background:var(--panel2); color:var(--text);">Request by email</a>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">💻</span>
+      <div>
+        <h3>macOS</h3>
+        <p>The full app as a Mac citizen. Unsigned build: right-click → Open on first launch.</p>
+        <a class="btn" href={`${GH}/mac-v1.0.0/PapaGaio-mac-1.0.0.zip`}>Download for Mac · 50 MB</a>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">🪟</span>
+      <div>
+        <h3>Windows</h3>
+        <p>Built fresh by CI. Unzip anywhere and run <code>papagaio_app.exe</code>; SmartScreen will want one reassuring click.</p>
+        <a class="btn" href={`${GH}/windows-v1.0.0/PapaGaio-windows-1.0.0.zip`}>Download for Windows</a>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">🖥</span>
+      <div>
+        <h3>iPad</h3>
+        <p class="soon">Coming with the App Store release — the dictionary belongs on that screen.</p>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">🦜</span>
+      <div>
+        <h3>Telegram bot</h3>
+        <p>A card every 15 minutes, voice dialogues, /translate anything. Where PapaGaio was born.</p>
+        <a class="btn" href="https://t.me/papagaio_bot">Open @papagaio_bot</a>
+      </div>
+    </div>
+
+    <div class="appcard">
+      <span class="em">🌐</span>
+      <div>
+        <h3>Web</h3>
+        <p>Everything works right here — dictionary, verbs, translator, coach.</p>
+        <a class="btn" href="./" style="background:var(--panel2); color:var(--text);">You are here</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

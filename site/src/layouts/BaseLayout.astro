@@ -154,9 +154,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <a class="drawer-link" href="https://github.com/kirshp/papagaio">⭐ GitHub</a>
     <a class="drawer-link" href="mailto:azenha.agent@gmail.com">✉️ Contact</a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <a class="drawer-link" href="https://github.com/kirshp/papagaio/releases/download/android-v1.0.0/PapaGaio-1.0.0.apk">🤖 Android app (APK, 55 MB)</a>
-    <a class="drawer-link" href="https://github.com/kirshp/papagaio/releases/download/mac-v1.0.0/PapaGaio-mac-1.0.0.zip">💻 Mac app (zip, 50 MB)</a>
-    <a class="drawer-link" href="mailto:azenha.agent@gmail.com?subject=PapaGaio%20for%20iOS">🍎 iOS app — request by email</a>
+    <a class="drawer-link" href={`${base}/apps/`}>⬇️ Apps — Android · iPhone · Mac · Windows</a>
   </aside>
   <main><slot /></main>
 

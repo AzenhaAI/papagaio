@@ -345,7 +345,9 @@ export async function handleApi(request, env, path) {
   // EN→RU for the Russian mode). Public-capped like every model endpoint.
   if (path === '/api/gloss' && request.method === 'POST') {
     if (!env.GROQ_API_KEY) return json({ error: 'not configured' }, 503);
-    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    // Our own batch jobs authenticate past the public cap; the street stays capped.
+    const isBatch = env.BATCH_KEY && request.headers.get('x-batch-key') === env.BATCH_KEY;
+    if (!isBatch && !(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
     const body = await request.json().catch(() => null);
     const terms = Array.isArray(body?.terms) ? body.terms.map(String).slice(0, 25) : [];
     const to = body?.to === 'ru' ? 'Russian' : 'European Portuguese (pt-PT, never Brazilian)';
