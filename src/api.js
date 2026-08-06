@@ -325,18 +325,20 @@ export async function handleApi(request, env, path) {
   // Type-ahead over the lexicon. Cheap and public: it is one indexed LIKE over
   // rows we already have, no model involved.
   if (path === '/api/search' && request.method === 'GET') {
-    const raw = (new URL(request.url).searchParams.get('q') ?? '').trim().toLowerCase();
+    const sp = new URL(request.url).searchParams;
+    const course = sp.get('course') === 'en' ? 'en' : 'pt';
+    const raw = (sp.get('q') ?? '').trim().toLowerCase();
     const s = fold(raw);
     if (s.length < 2) return json({ q: raw, words: [] });
     // Matching happens on the accent-blind column: "cao" must find "cão".
     const { results } = await env.DB.prepare(
-      `SELECT id, term, trans, trans_ru, pos, gender, freq FROM cards
-       WHERE owner = 'lex' AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5 OR lower(trans_ru) LIKE ?4)
+      `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
+       WHERE owner = 'lex' AND course = ?7 AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5 OR lower(trans_ru) LIKE ?4)
        ORDER BY CASE WHEN fold = ?3 OR fold LIKE ?6 THEN 0
                      WHEN fold LIKE ?2 THEN 1
                      WHEN fold LIKE ?1 THEN 2 ELSE 3 END, freq
        LIMIT 25`
-    ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`).all();
+    ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course).all();
     return json({ q: s, words: results });
   }
 
