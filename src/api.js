@@ -268,18 +268,14 @@ export async function handleApi(request, env, path) {
     const q = new URL(request.url).searchParams.get('q') ?? '';
     if (!q.trim()) return json({ error: 'q required' }, 400);
 
-    // The deck first: its cards are hand-checked and carry audio.
-    const like = `%${q.trim().toLowerCase()}%`;
+    // The deck first: its cards are hand-checked and carry audio. Matching runs
+    // on the folded column, so cafe, café and cafe' are the same question.
+    const fq = fold(q.trim());
     const hit = await env.DB.prepare(
       `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
-         AND (lower(term) = ?1 OR lower(trans) = ?1)
-       ORDER BY freq LIMIT 1`
-    ).bind(q.trim().toLowerCase()).first()
-      ?? await env.DB.prepare(
-        `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
-           AND (lower(term) LIKE ?1 OR lower(trans) LIKE ?1)
-         ORDER BY freq LIMIT 1`
-      ).bind(like).first();
+         AND (fold = ?1 OR fold LIKE ?2 OR fold LIKE ?3)
+       ORDER BY CASE WHEN fold = ?1 THEN 0 WHEN fold LIKE ?2 THEN 1 ELSE 2 END, freq LIMIT 1`
+    ).bind(fq, `${fq} %`, `%${fq}%`).first();
 
     if (hit) {
       const entry = await ensureEntry(env, hit).catch(() => null);

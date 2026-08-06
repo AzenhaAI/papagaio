@@ -54,7 +54,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Searching "cafe" must find "café": nobody reaches for the accent key, and
     // Portuguese puts one on a great many words.
     const fold = (x) => String(x ?? '').toLowerCase()
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['\u2019`´]/g, '');
 
     function render() {
       const q = fold(document.getElementById('q').value.trim());

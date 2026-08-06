@@ -10,6 +10,10 @@ const deckDir = join(root, 'data', 'deck');
 const entriesDir = join(root, 'data', 'entries');
 const q = (v) => (v == null || v === '' ? 'NULL' : `'${String(v).replace(/'/g, "''")}'`);
 
+// Accent- and apostrophe-blind copy for searching; mirrors src/verbs.js fold.
+const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '').replace(/['’`´ʼʹ]/g, '');
+
 // Rich dictionary entries live in separate files, merged by card id.
 const entries = {};
 try {
@@ -33,12 +37,12 @@ for (const file of readdirSync(deckDir).filter((f) => f.endsWith('.json')).sort(
     if (!term || !c.id || !c.trans) throw new Error(`${file}: broken card ${JSON.stringify(c).slice(0, 80)}`);
     const entry = entries[c.id] ? JSON.stringify(entries[c.id]) : null;
     if (entry) enriched++;
-    sql += `INSERT INTO cards (id, course, term, trans, pos, gender, note, ex_t, ex_trans, tags, freq, entry, unit) VALUES (` +
+    sql += `INSERT INTO cards (id, course, term, trans, pos, gender, note, ex_t, ex_trans, tags, freq, entry, unit, fold) VALUES (` +
       [q(c.id), q(course), q(term), q(c.trans), q(c.pos), q(c.gender), q(c.note), q(ex), q(c.ex_trans),
-       q(JSON.stringify(c.tags ?? [])), c.freq ?? 'NULL', q(entry), q(c.unit)].join(', ') +
+       q(JSON.stringify(c.tags ?? [])), c.freq ?? 'NULL', q(entry), q(c.unit), q(`${fold(term)} ${fold(c.trans)}`)].join(', ') +
       `) ON CONFLICT(id) DO UPDATE SET course = excluded.course, term = excluded.term, trans = excluded.trans, ` +
       `pos = excluded.pos, gender = excluded.gender, note = excluded.note, ex_t = excluded.ex_t, ` +
-      `ex_trans = excluded.ex_trans, tags = excluded.tags, freq = excluded.freq, entry = excluded.entry, unit = excluded.unit;\n`;
+      `ex_trans = excluded.ex_trans, tags = excluded.tags, freq = excluded.freq, entry = excluded.entry, unit = excluded.unit, fold = excluded.fold;\n`;
     total++;
   }
   console.log(`${file}: ${deck.cards.length} cards (${course})`);

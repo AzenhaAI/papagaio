@@ -466,7 +466,13 @@ export const VERBS = RAW.trim().split('\n')
 
 /** Accent- and case-blind, because nobody types "começar" into a search box. */
 export function fold(s) {
-  return String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  return String(s ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    // Apostrophes of every unicode persuasion: typed instead of an accent
+    // ("cafe'"), or inside a word ("d'agua") — none of them may break a match.
+    .replace(/['’`´ʼʹ]/g, '');
 }
 
 /**

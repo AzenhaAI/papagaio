@@ -1,0 +1,456 @@
+{
+  "meta": {
+    "deck": "core_013",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2",
+    "note": "The thousand-crossing top-up: the structural nouns every sentence borrows (fim, lado, maneira, altura), the pt-PT identity words (sítio, pormenor, bica, o continente) and the last of the places."
+  },
+  "cards": [
+    {
+      "term": "o sítio",
+      "trans": "place; website",
+      "pos": "noun",
+      "gender": "m",
+      "note": "THE pt-PT word for place — lugar's everyday twin",
+      "ex_t": "Conheço um sítio bom para jantar.",
+      "ex_trans": "I know a good place for dinner.",
+      "tags": [
+        "core",
+        "lugar",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt0990",
+      "freq": 990
+    },
+    {
+      "term": "o pormenor",
+      "trans": "detail",
+      "pos": "noun",
+      "gender": "m",
+      "note": "detalhe exists, pormenor is the pt-PT flavour",
+      "ex_t": "Conta-me tudo, com pormenores.",
+      "ex_trans": "Tell me everything, with details.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "unit": "trabalho",
+      "id": "pt0991",
+      "freq": 991
+    },
+    {
+      "term": "a bica",
+      "trans": "espresso (Lisbon word)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "in Lisbon uma bica, in Porto um cimbalino, everywhere um café",
+      "ex_t": "Em Lisboa pede-se uma bica, não um café.",
+      "ex_trans": "In Lisbon you order a bica, not a café.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "unit": "comida",
+      "id": "pt0992",
+      "freq": 992
+    },
+    {
+      "term": "o fim",
+      "trans": "end",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ao fim de — after (time); no fim — in the end",
+      "ex_t": "No fim correu tudo bem.",
+      "ex_trans": "In the end everything went fine.",
+      "tags": [
+        "core"
+      ],
+      "unit": "tempo",
+      "id": "pt0993",
+      "freq": 993
+    },
+    {
+      "term": "o início",
+      "trans": "beginning",
+      "pos": "noun",
+      "gender": "m",
+      "note": "no início de setembro",
+      "ex_t": "O início do curso é já para a semana.",
+      "ex_trans": "The course starts next week already.",
+      "tags": [
+        "core"
+      ],
+      "unit": "tempo",
+      "id": "pt0994",
+      "freq": 994
+    },
+    {
+      "term": "a entrada",
+      "trans": "entrance; starter; down payment",
+      "pos": "noun",
+      "gender": "f",
+      "note": "three meanings, all daily",
+      "ex_t": "A entrada do museu é gratuita ao domingo de manhã.",
+      "ex_trans": "Museum entry is free on Sunday mornings.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt0995",
+      "freq": 995
+    },
+    {
+      "term": "a saída",
+      "trans": "exit; way out",
+      "pos": "noun",
+      "gender": "f",
+      "note": "saída de emergência",
+      "ex_t": "A saída é pelo outro lado.",
+      "ex_trans": "The exit is on the other side.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt0996",
+      "freq": 996
+    },
+    {
+      "term": "a chegada",
+      "trans": "arrival",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "O painel das chegadas está ali.",
+      "ex_trans": "The arrivals board is over there.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0997",
+      "freq": 997
+    },
+    {
+      "term": "a partida",
+      "trans": "departure; prank; match",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pregar uma partida — to play a prank",
+      "ex_t": "A partida do voo atrasou uma hora.",
+      "ex_trans": "The flight's departure was delayed an hour.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "unit": "lugar",
+      "id": "pt0998",
+      "freq": 998
+    },
+    {
+      "term": "a idade",
+      "trans": "age",
+      "pos": "noun",
+      "gender": "f",
+      "note": "que idade tens? — how old are you?",
+      "ex_t": "Com a idade vem a paciência, dizem.",
+      "ex_trans": "With age comes patience, they say.",
+      "tags": [
+        "core"
+      ],
+      "unit": "sentimentos",
+      "id": "pt0999",
+      "freq": 999
+    },
+    {
+      "term": "o tamanho",
+      "trans": "size",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Tem este casaco noutro tamanho?",
+      "ex_trans": "Do you have this jacket in another size?",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "unit": "roupa",
+      "id": "pt1000",
+      "freq": 1000
+    },
+    {
+      "term": "a metade",
+      "trans": "half",
+      "pos": "noun",
+      "gender": "f",
+      "note": "metade do preço — half price",
+      "ex_t": "Comi só metade, guarda o resto.",
+      "ex_trans": "I ate only half, keep the rest.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "unit": "numeros",
+      "id": "pt1001",
+      "freq": 1001
+    },
+    {
+      "term": "o pedaço",
+      "trans": "piece",
+      "pos": "noun",
+      "gender": "m",
+      "note": "um bocado is the spoken twin",
+      "ex_t": "Um pedaço de bolo de mel, se faz favor.",
+      "ex_trans": "A piece of honey cake, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "unit": "comida",
+      "id": "pt1002",
+      "freq": 1002
+    },
+    {
+      "term": "o resto",
+      "trans": "the rest",
+      "pos": "noun",
+      "gender": "m",
+      "note": "de resto — besides, otherwise",
+      "ex_t": "O resto fica para amanhã.",
+      "ex_trans": "The rest can wait till tomorrow.",
+      "tags": [
+        "core"
+      ],
+      "unit": "basics",
+      "id": "pt1003",
+      "freq": 1003
+    },
+    {
+      "term": "o exemplo",
+      "trans": "example",
+      "pos": "noun",
+      "gender": "m",
+      "note": "por exemplo — for example",
+      "ex_t": "Dá-me um exemplo com esta palavra.",
+      "ex_trans": "Give me an example with this word.",
+      "tags": [
+        "core",
+        "escola"
+      ],
+      "unit": "trabalho",
+      "id": "pt1004",
+      "freq": 1004
+    },
+    {
+      "term": "a maneira",
+      "trans": "way, manner",
+      "pos": "noun",
+      "gender": "f",
+      "note": "de maneira nenhuma — no way",
+      "ex_t": "Há maneira mais fácil de dizer isto?",
+      "ex_trans": "Is there an easier way to say this?",
+      "tags": [
+        "core"
+      ],
+      "unit": "basics",
+      "id": "pt1005",
+      "freq": 1005
+    },
+    {
+      "term": "o lado",
+      "trans": "side",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ao lado — next door; por outro lado — on the other hand",
+      "ex_t": "Moro já aqui ao lado.",
+      "ex_trans": "I live just next door.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt1006",
+      "freq": 1006
+    },
+    {
+      "term": "o canto",
+      "trans": "corner; singing",
+      "pos": "noun",
+      "gender": "m",
+      "note": "o canto da sala; o canto dos pássaros",
+      "ex_t": "O gato dorme no canto do sofá.",
+      "ex_trans": "The cat sleeps in the corner of the sofa.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt1007",
+      "freq": 1007
+    },
+    {
+      "term": "a ponta",
+      "trans": "tip, end",
+      "pos": "noun",
+      "gender": "f",
+      "note": "na ponta da língua — on the tip of my tongue",
+      "ex_t": "Tenho a palavra na ponta da língua!",
+      "ex_trans": "The word is on the tip of my tongue!",
+      "tags": [
+        "core"
+      ],
+      "unit": "corpo",
+      "id": "pt1008",
+      "freq": 1008
+    },
+    {
+      "term": "o topo",
+      "trans": "top",
+      "pos": "noun",
+      "gender": "m",
+      "note": "no topo da montanha",
+      "ex_t": "Do topo vê-se a ilha inteira.",
+      "ex_trans": "From the top you can see the whole island.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "natureza",
+      "id": "pt1009",
+      "freq": 1009
+    },
+    {
+      "term": "o fundo",
+      "trans": "bottom; fund",
+      "pos": "noun",
+      "gender": "m",
+      "note": "ao fundo — at the back/end; no fundo — deep down",
+      "ex_t": "No fundo, tens razão.",
+      "ex_trans": "Deep down, you're right.",
+      "tags": [
+        "core"
+      ],
+      "unit": "basics",
+      "id": "pt1010",
+      "freq": 1010
+    },
+    {
+      "term": "a distância",
+      "trans": "distance",
+      "pos": "noun",
+      "gender": "f",
+      "note": "à distância — remotely",
+      "ex_t": "Trabalho à distância desde a pandemia.",
+      "ex_trans": "I've worked remotely since the pandemic.",
+      "tags": [
+        "core",
+        "trabalho"
+      ],
+      "unit": "trabalho",
+      "id": "pt1011",
+      "freq": 1011
+    },
+    {
+      "term": "a altura",
+      "trans": "height; moment",
+      "pos": "noun",
+      "gender": "f",
+      "note": "nessa altura — at that time; the double meaning is very pt",
+      "ex_t": "Nessa altura ainda não falava português.",
+      "ex_trans": "At that time I didn't speak Portuguese yet.",
+      "tags": [
+        "core",
+        "pt-pt"
+      ],
+      "unit": "tempo",
+      "id": "pt1012",
+      "freq": 1012
+    },
+    {
+      "term": "a esquina",
+      "trans": "street corner",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ao virar da esquina — around the corner",
+      "ex_t": "O café faz esquina com a rua do mercado.",
+      "ex_trans": "The café is on the corner of the market street.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt1013",
+      "freq": 1013
+    },
+    {
+      "term": "o degrau",
+      "trans": "step (of stairs)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Cuidado com o degrau à entrada.",
+      "ex_trans": "Mind the step at the entrance.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "unit": "casa",
+      "id": "pt1014",
+      "freq": 1014
+    },
+    {
+      "term": "a torre",
+      "trans": "tower",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A torre da igreja vê-se de longe.",
+      "ex_trans": "The church tower can be seen from afar.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "unit": "lugar",
+      "id": "pt1015",
+      "freq": 1015
+    },
+    {
+      "term": "a ponte aérea",
+      "trans": "air link; shuttle",
+      "pos": "noun",
+      "gender": "f",
+      "note": "how islanders call the mainland flights",
+      "ex_t": "A ponte aérea para Lisboa enche à sexta.",
+      "ex_trans": "The Lisbon air link fills up on Fridays.",
+      "tags": [
+        "core",
+        "transporte",
+        "madeira"
+      ],
+      "unit": "lugar",
+      "id": "pt1016",
+      "freq": 1016
+    },
+    {
+      "term": "o continente",
+      "trans": "mainland; continent",
+      "pos": "noun",
+      "gender": "m",
+      "note": "on Madeira, 'o continente' means mainland Portugal",
+      "ex_t": "Vou ao continente na próxima semana.",
+      "ex_trans": "I'm going to the mainland next week.",
+      "tags": [
+        "core",
+        "madeira",
+        "pt-pt"
+      ],
+      "unit": "lugar",
+      "id": "pt1017",
+      "freq": 1017
+    }
+  ]
+}
