@@ -1,0 +1,1913 @@
+{
+  "meta": {
+    "deck": "en_core_004",
+    "course": "en",
+    "variant": "en-GB",
+    "level": "B1-B2",
+    "note": "To the 500 mark: make/do/take/get collocations, the phrasal-verb backbone, travel and restaurant registers (BrE), polite disagreement machinery, the idioms people actually say, numbers-and-change vocabulary, and the money-admin tail — instalments spelled the British way."
+  },
+  "cards": [
+    {
+      "term": "to make a decision",
+      "trans": "to decide (make, never do)",
+      "pos": "phrase",
+      "note": "make decisions, mistakes, progress, an effort",
+      "ex_t": "We need to make a decision by Friday.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0352",
+      "freq": 352
+    },
+    {
+      "term": "to do the dishes",
+      "trans": "to wash up after a meal",
+      "pos": "phrase",
+      "note": "do the dishes, the laundry, the shopping",
+      "ex_t": "Your turn to do the dishes.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "collocations"
+      ],
+      "unit": "life",
+      "id": "en0353",
+      "freq": 353
+    },
+    {
+      "term": "to take one's time",
+      "trans": "to do something without hurrying",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Take your time — the form is confusing.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0354",
+      "freq": 354
+    },
+    {
+      "term": "to get used to",
+      "trans": "to become accustomed to",
+      "pos": "phrase",
+      "note": "get used to + -ing: got used to driving on cobbles",
+      "ex_t": "You get used to the church bells surprisingly fast.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "collocations"
+      ],
+      "unit": "life",
+      "id": "en0355",
+      "freq": 355
+    },
+    {
+      "term": "to make an effort",
+      "trans": "to try hard deliberately",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "He made a real effort to speak Portuguese at dinner.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0356",
+      "freq": 356
+    },
+    {
+      "term": "to do one's best",
+      "trans": "to try as hard as possible",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I'll do my best, but the deadline is brutal.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "collocations"
+      ],
+      "unit": "work",
+      "id": "en0357",
+      "freq": 357
+    },
+    {
+      "term": "to take place",
+      "trans": "to happen (events)",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The festival takes place in early June.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0358",
+      "freq": 358
+    },
+    {
+      "term": "to get in touch",
+      "trans": "to make contact",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Get in touch when you land.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "collocations"
+      ],
+      "unit": "social",
+      "id": "en0359",
+      "freq": 359
+    },
+    {
+      "term": "to make sense of",
+      "trans": "to manage to understand something confusing",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I can't make sense of this electricity bill.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "collocations"
+      ],
+      "unit": "glue",
+      "id": "en0360",
+      "freq": 360
+    },
+    {
+      "term": "to take turns",
+      "trans": "to alternate doing something",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "We take turns cooking during the week.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "collocations"
+      ],
+      "unit": "life",
+      "id": "en0361",
+      "freq": 361
+    },
+    {
+      "term": "to run out of",
+      "trans": "to have none left",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "We've run out of coffee — a genuine crisis.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0362",
+      "freq": 362
+    },
+    {
+      "term": "to put off",
+      "trans": "to postpone",
+      "pos": "verb",
+      "note": "put off + -ing",
+      "ex_t": "I keep putting off the dentist.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "phrasal"
+      ],
+      "unit": "glue",
+      "id": "en0363",
+      "freq": 363
+    },
+    {
+      "term": "to come up",
+      "trans": "to arise unexpectedly",
+      "pos": "verb",
+      "note": "'something came up' — the universal excuse",
+      "ex_t": "Sorry, something came up at work.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0364",
+      "freq": 364
+    },
+    {
+      "term": "to sort out",
+      "trans": "to fix, resolve (BrE favourite)",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "The bank finally sorted out my card.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0365",
+      "freq": 365
+    },
+    {
+      "term": "to look into",
+      "trans": "to investigate",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "We're looking into the drop in signups.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0366",
+      "freq": 366
+    },
+    {
+      "term": "to look forward to",
+      "trans": "to be pleased about a future thing",
+      "pos": "verb",
+      "note": "+ -ing: looking forward to seeing you",
+      "ex_t": "I'm looking forward to the cooler weather.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "phrasal"
+      ],
+      "unit": "social",
+      "id": "en0367",
+      "freq": 367
+    },
+    {
+      "term": "to give up",
+      "trans": "to stop trying; to quit",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Don't give up on the subjunctive yet.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "phrasal"
+      ],
+      "unit": "glue",
+      "id": "en0368",
+      "freq": 368
+    },
+    {
+      "term": "to turn out",
+      "trans": "to prove to be in the end",
+      "pos": "verb",
+      "note": "'it turned out that…'",
+      "ex_t": "It turned out the flat had no heating at all.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "phrasal"
+      ],
+      "unit": "glue",
+      "id": "en0369",
+      "freq": 369
+    },
+    {
+      "term": "to carry on",
+      "trans": "to continue (BrE)",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Carry on without me, I'll catch up.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "phrasal"
+      ],
+      "unit": "glue",
+      "id": "en0370",
+      "freq": 370
+    },
+    {
+      "term": "to set up",
+      "trans": "to establish, arrange",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "We set up a call for Tuesday.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0371",
+      "freq": 371
+    },
+    {
+      "term": "to take over",
+      "trans": "to assume control of",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "She's taking over the project in March.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0372",
+      "freq": 372
+    },
+    {
+      "term": "to fill in",
+      "trans": "to complete a form (BrE)",
+      "pos": "verb",
+      "note": "fill out is AmE",
+      "ex_t": "Fill in the arrival date here.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0373",
+      "freq": 373
+    },
+    {
+      "term": "to drop by",
+      "trans": "to visit briefly without ceremony",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Drop by for a coffee when you're near.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "phrasal"
+      ],
+      "unit": "social",
+      "id": "en0374",
+      "freq": 374
+    },
+    {
+      "term": "to bring up",
+      "trans": "to mention; to raise a child",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Don't bring up the budget at dinner.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "phrasal"
+      ],
+      "unit": "social",
+      "id": "en0375",
+      "freq": 375
+    },
+    {
+      "term": "to work out",
+      "trans": "to turn out well; to exercise; to calculate",
+      "pos": "verb",
+      "note": "three meanings, all common",
+      "ex_t": "It all worked out in the end.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "phrasal"
+      ],
+      "unit": "glue",
+      "id": "en0376",
+      "freq": 376
+    },
+    {
+      "term": "to cut down on",
+      "trans": "to reduce consumption of",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "I'm cutting down on sugar, mostly.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0377",
+      "freq": 377
+    },
+    {
+      "term": "a boarding pass",
+      "trans": "the document that gets you on the plane",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Digital boarding passes die exactly at the gate.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0378",
+      "freq": 378
+    },
+    {
+      "term": "a layover",
+      "trans": "a stop between connecting flights",
+      "pos": "noun",
+      "note": "stopover for longer ones",
+      "ex_t": "Two hours' layover in Lisbon — enough for a bica.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0379",
+      "freq": 379
+    },
+    {
+      "term": "to check in",
+      "trans": "to register for a flight or hotel",
+      "pos": "verb",
+      "note": "the desk is check-in, hyphenated",
+      "ex_t": "We can check in online from midnight.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0380",
+      "freq": 380
+    },
+    {
+      "term": "carry-on",
+      "trans": "luggage taken into the cabin",
+      "pos": "noun",
+      "note": "BrE also hand luggage",
+      "ex_t": "Only a carry-on — we travel light.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0381",
+      "freq": 381
+    },
+    {
+      "term": "a delay",
+      "trans": "a period of lateness",
+      "pos": "noun",
+      "note": "delayed — the adjective on the board",
+      "ex_t": "A two-hour delay because of the wind, classic Funchal.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0382",
+      "freq": 382
+    },
+    {
+      "term": "a connection",
+      "trans": "a connecting flight; a link",
+      "pos": "noun",
+      "note": "'tight connection' — the stress phrase",
+      "ex_t": "Forty minutes is a tight connection in Lisbon.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0383",
+      "freq": 383
+    },
+    {
+      "term": "customs",
+      "trans": "the border control for goods",
+      "pos": "noun",
+      "note": "'nothing to declare'",
+      "ex_t": "Customs waved us straight through.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0384",
+      "freq": 384
+    },
+    {
+      "term": "a return ticket",
+      "trans": "a ticket there and back (BrE)",
+      "pos": "noun",
+      "note": "round-trip is AmE",
+      "ex_t": "A return ticket to Porto Santo, please.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "travel"
+      ],
+      "unit": "life",
+      "id": "en0385",
+      "freq": 385
+    },
+    {
+      "term": "a side effect",
+      "trans": "an unwanted effect of medicine",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Drowsiness is the main side effect.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health"
+      ],
+      "unit": "life",
+      "id": "en0386",
+      "freq": 386
+    },
+    {
+      "term": "a check-up",
+      "trans": "a routine medical examination",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "I'm due a check-up this autumn.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health"
+      ],
+      "unit": "life",
+      "id": "en0387",
+      "freq": 387
+    },
+    {
+      "term": "to come down with",
+      "trans": "to start suffering an illness",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Half the office came down with the flu.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0388",
+      "freq": 388
+    },
+    {
+      "term": "over-the-counter",
+      "trans": "sold without prescription",
+      "pos": "adj",
+      "note": "OTC in writing",
+      "ex_t": "It's over-the-counter here, surprisingly.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health"
+      ],
+      "unit": "life",
+      "id": "en0389",
+      "freq": 389
+    },
+    {
+      "term": "an appointment",
+      "trans": "a scheduled meeting, esp. medical",
+      "pos": "noun",
+      "note": "'book an appointment'",
+      "ex_t": "I booked an appointment for Thursday morning.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health"
+      ],
+      "unit": "life",
+      "id": "en0390",
+      "freq": 390
+    },
+    {
+      "term": "to feel under the weather",
+      "trans": "to feel slightly ill",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I'm a bit under the weather — nothing serious.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "health"
+      ],
+      "unit": "life",
+      "id": "en0391",
+      "freq": 391
+    },
+    {
+      "term": "a starter",
+      "trans": "the first course (BrE)",
+      "pos": "noun",
+      "note": "appetizer is AmE",
+      "ex_t": "Shall we share a couple of starters?",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0392",
+      "freq": 392
+    },
+    {
+      "term": "the main",
+      "trans": "the main course",
+      "pos": "noun",
+      "note": "'mains' on menus",
+      "ex_t": "The mains here are huge — consider sharing.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0393",
+      "freq": 393
+    },
+    {
+      "term": "to book a table",
+      "trans": "to reserve at a restaurant",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I booked a table for eight, sea view.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0394",
+      "freq": 394
+    },
+    {
+      "term": "the bill",
+      "trans": "what you pay at a restaurant (BrE)",
+      "pos": "noun",
+      "note": "check is AmE",
+      "ex_t": "Could we have the bill, please?",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0395",
+      "freq": 395
+    },
+    {
+      "term": "to split the bill",
+      "trans": "to divide the cost between people",
+      "pos": "phrase",
+      "note": "'go halves' informally",
+      "ex_t": "Let's just split the bill evenly.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0396",
+      "freq": 396
+    },
+    {
+      "term": "takeaway",
+      "trans": "food you collect and eat elsewhere (BrE)",
+      "pos": "noun",
+      "note": "takeout is AmE",
+      "ex_t": "Friday is takeaway night, no negotiation.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0397",
+      "freq": 397
+    },
+    {
+      "term": "still or sparkling",
+      "trans": "the water question every waiter asks",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "— Still or sparkling? — Tap is fine, thanks.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0398",
+      "freq": 398
+    },
+    {
+      "term": "on the house",
+      "trans": "free, paid by the establishment",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The poncha was on the house.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "food"
+      ],
+      "unit": "life",
+      "id": "en0399",
+      "freq": 399
+    },
+    {
+      "term": "I see your point",
+      "trans": "I understand your argument",
+      "pos": "phrase",
+      "note": "precedes a 'but' more often than not",
+      "ex_t": "I see your point, but the data says otherwise.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "social"
+      ],
+      "unit": "meetings",
+      "id": "en0400",
+      "freq": 400
+    },
+    {
+      "term": "I'm not so sure",
+      "trans": "polite disagreement",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I'm not so sure — last quarter looked different.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "social"
+      ],
+      "unit": "meetings",
+      "id": "en0401",
+      "freq": 401
+    },
+    {
+      "term": "that's a fair point",
+      "trans": "conceding something in an argument",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "That's a fair point, let me rerun the numbers.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "social"
+      ],
+      "unit": "meetings",
+      "id": "en0402",
+      "freq": 402
+    },
+    {
+      "term": "to agree to disagree",
+      "trans": "to accept the disagreement and move on",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "On tabs versus spaces we agreed to disagree.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0403",
+      "freq": 403
+    },
+    {
+      "term": "let's play it by ear",
+      "trans": "let's decide as we go",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "No fixed plan — we'll play it by ear.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0404",
+      "freq": 404
+    },
+    {
+      "term": "it's not set in stone",
+      "trans": "it can still be changed",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The date isn't set in stone yet.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "glue"
+      ],
+      "unit": "work",
+      "id": "en0405",
+      "freq": 405
+    },
+    {
+      "term": "to be on the same page",
+      "trans": "to share the same understanding",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Quick sync so we're all on the same page.",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0406",
+      "freq": 406
+    },
+    {
+      "term": "to see eye to eye",
+      "trans": "to agree with someone",
+      "pos": "phrase",
+      "note": "usually negated",
+      "ex_t": "We don't quite see eye to eye on pricing.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0407",
+      "freq": 407
+    },
+    {
+      "term": "Would you mind…?",
+      "trans": "the politest request opener",
+      "pos": "phrase",
+      "note": "+ -ing: would you mind checking?",
+      "ex_t": "Would you mind forwarding me that email?",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "social"
+      ],
+      "unit": "glue",
+      "id": "en0408",
+      "freq": 408
+    },
+    {
+      "term": "I'd appreciate it if…",
+      "trans": "formal request",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I'd appreciate it if you could reply by Monday.",
+      "ex_trans": "",
+      "tags": [
+        "writing"
+      ],
+      "unit": "writing",
+      "id": "en0409",
+      "freq": 409
+    },
+    {
+      "term": "My apologies",
+      "trans": "formal 'sorry'",
+      "pos": "phrase",
+      "note": "'apologies for the delay' — email standard",
+      "ex_t": "My apologies for the confusion earlier.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "social"
+      ],
+      "unit": "writing",
+      "id": "en0410",
+      "freq": 410
+    },
+    {
+      "term": "It slipped my mind",
+      "trans": "I forgot (softened)",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The invoice completely slipped my mind.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0411",
+      "freq": 411
+    },
+    {
+      "term": "I didn't catch that",
+      "trans": "I didn't hear/understand",
+      "pos": "phrase",
+      "note": "the call-quality classic",
+      "ex_t": "Sorry, I didn't catch that — you froze.",
+      "ex_trans": "",
+      "tags": [
+        "meetings",
+        "social"
+      ],
+      "unit": "meetings",
+      "id": "en0412",
+      "freq": 412
+    },
+    {
+      "term": "Could you elaborate?",
+      "trans": "please say more about that",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Interesting — could you elaborate on the method?",
+      "ex_trans": "",
+      "tags": [
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0413",
+      "freq": 413
+    },
+    {
+      "term": "to give someone the benefit of the doubt",
+      "trans": "to assume good intent",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Let's give the vendor the benefit of the doubt.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "work"
+      ],
+      "unit": "social",
+      "id": "en0414",
+      "freq": 414
+    },
+    {
+      "term": "the day after tomorrow",
+      "trans": "two days from now",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The parts arrive the day after tomorrow.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "time"
+      ],
+      "unit": "glue",
+      "id": "en0415",
+      "freq": 415
+    },
+    {
+      "term": "a fortnight",
+      "trans": "two weeks (BrE)",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The review cycle is a fortnight.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "time"
+      ],
+      "unit": "glue",
+      "id": "en0416",
+      "freq": 416
+    },
+    {
+      "term": "to run late",
+      "trans": "to be behind schedule",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I'm running late — start without me.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "time"
+      ],
+      "unit": "glue",
+      "id": "en0417",
+      "freq": 417
+    },
+    {
+      "term": "ahead of schedule",
+      "trans": "earlier than planned",
+      "pos": "phrase",
+      "note": "behind schedule — the usual state",
+      "ex_t": "For once we're ahead of schedule.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "time"
+      ],
+      "unit": "work",
+      "id": "en0418",
+      "freq": 418
+    },
+    {
+      "term": "at short notice",
+      "trans": "with little warning",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Thanks for coming at such short notice.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "time"
+      ],
+      "unit": "work",
+      "id": "en0419",
+      "freq": 419
+    },
+    {
+      "term": "for the time being",
+      "trans": "for now, temporarily",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "We'll keep both systems for the time being.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "time"
+      ],
+      "unit": "work",
+      "id": "en0420",
+      "freq": 420
+    },
+    {
+      "term": "around the clock",
+      "trans": "24 hours non-stop",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Support runs around the clock.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "time"
+      ],
+      "unit": "work",
+      "id": "en0421",
+      "freq": 421
+    },
+    {
+      "term": "a long shot",
+      "trans": "an attempt unlikely to succeed",
+      "pos": "noun",
+      "note": "'it's a long shot, but…'",
+      "ex_t": "It's a long shot, but let's pitch them anyway.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0422",
+      "freq": 422
+    },
+    {
+      "term": "the last straw",
+      "trans": "the final problem that breaks patience",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The third outage was the last straw.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0423",
+      "freq": 423
+    },
+    {
+      "term": "to cut corners",
+      "trans": "to do something cheaply and badly",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "They cut corners on waterproofing — hence the damp.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0424",
+      "freq": 424
+    },
+    {
+      "term": "to think outside the box",
+      "trans": "to think unconventionally",
+      "pos": "phrase",
+      "note": "cliché — recognise it, avoid saying it",
+      "ex_t": "The brief literally says 'think outside the box'.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0425",
+      "freq": 425
+    },
+    {
+      "term": "to get the ball rolling",
+      "trans": "to start a process",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Let's get the ball rolling with a small pilot.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0426",
+      "freq": 426
+    },
+    {
+      "term": "to be in the loop",
+      "trans": "to be kept informed",
+      "pos": "phrase",
+      "note": "'keep me in the loop'",
+      "ex_t": "Keep legal in the loop on this one.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0427",
+      "freq": 427
+    },
+    {
+      "term": "a win-win",
+      "trans": "good for both sides",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Remote Fridays were a win-win.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0428",
+      "freq": 428
+    },
+    {
+      "term": "to touch wood",
+      "trans": "said to avoid jinxing luck (BrE)",
+      "pos": "phrase",
+      "note": "knock on wood is AmE",
+      "ex_t": "No crashes since May — touch wood.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0429",
+      "freq": 429
+    },
+    {
+      "term": "it's early days",
+      "trans": "too soon to judge",
+      "pos": "phrase",
+      "note": "BrE",
+      "ex_t": "Retention looks good, but it's early days.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "idiom"
+      ],
+      "unit": "data",
+      "id": "en0430",
+      "freq": 430
+    },
+    {
+      "term": "to move the needle",
+      "trans": "to make a measurable difference",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The redesign barely moved the needle.",
+      "ex_trans": "",
+      "tags": [
+        "data",
+        "idiom"
+      ],
+      "unit": "data",
+      "id": "en0431",
+      "freq": 431
+    },
+    {
+      "term": "low-hanging fruit",
+      "trans": "the easiest wins",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Fix the low-hanging fruit before the rebuild.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0432",
+      "freq": 432
+    },
+    {
+      "term": "a rough patch",
+      "trans": "a period of difficulty",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Every migration hits a rough patch.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0433",
+      "freq": 433
+    },
+    {
+      "term": "to top up",
+      "trans": "to add credit or fill up (BrE)",
+      "pos": "verb",
+      "note": "top up the phone, the coffee, the account",
+      "ex_t": "I topped up the transport card.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "phrasal"
+      ],
+      "unit": "life",
+      "id": "en0434",
+      "freq": 434
+    },
+    {
+      "term": "a landline",
+      "trans": "a fixed home phone",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The office still has a landline, adorably.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0435",
+      "freq": 435
+    },
+    {
+      "term": "to charge",
+      "trans": "to refill a battery; to bill",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "My watch died — forgot to charge it.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0436",
+      "freq": 436
+    },
+    {
+      "term": "a power cut",
+      "trans": "an electricity outage (BrE)",
+      "pos": "noun",
+      "note": "outage is the AmE/tech word",
+      "ex_t": "A power cut killed the router mid-call.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0437",
+      "freq": 437
+    },
+    {
+      "term": "to back up",
+      "trans": "to make a safety copy",
+      "pos": "verb",
+      "note": "backup — the noun",
+      "ex_t": "Back up the laptop before the update.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0438",
+      "freq": 438
+    },
+    {
+      "term": "to log in",
+      "trans": "to sign into a system",
+      "pos": "verb",
+      "note": "login — the noun",
+      "ex_t": "I can't log in since the password change.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "phrasal"
+      ],
+      "unit": "work",
+      "id": "en0439",
+      "freq": 439
+    },
+    {
+      "term": "to scroll",
+      "trans": "to move through content on a screen",
+      "pos": "verb",
+      "note": "doomscrolling — the diagnosis",
+      "ex_t": "I scrolled past your message, sorry.",
+      "ex_trans": "",
+      "tags": [
+        "life"
+      ],
+      "unit": "life",
+      "id": "en0440",
+      "freq": 440
+    },
+    {
+      "term": "to mute",
+      "trans": "to silence a mic or chat",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "I muted the group till Monday.",
+      "ex_trans": "",
+      "tags": [
+        "life",
+        "meetings"
+      ],
+      "unit": "meetings",
+      "id": "en0441",
+      "freq": 441
+    },
+    {
+      "term": "barely",
+      "trans": "only just, almost not",
+      "pos": "adv",
+      "note": "",
+      "ex_t": "Sales barely covered the costs.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0442",
+      "freq": 442
+    },
+    {
+      "term": "steadily",
+      "trans": "at a constant gradual rate",
+      "pos": "adv",
+      "note": "",
+      "ex_t": "Traffic has grown steadily since March.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0443",
+      "freq": 443
+    },
+    {
+      "term": "to halve",
+      "trans": "to reduce by half",
+      "pos": "verb",
+      "note": "to double — the twin",
+      "ex_t": "We halved the load time.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0444",
+      "freq": 444
+    },
+    {
+      "term": "to triple",
+      "trans": "to become three times bigger",
+      "pos": "verb",
+      "note": "",
+      "ex_t": "Signups tripled after the feature launch.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0445",
+      "freq": 445
+    },
+    {
+      "term": "negligible",
+      "trans": "too small to matter",
+      "pos": "adj",
+      "note": "",
+      "ex_t": "The difference is negligible at this sample size.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0446",
+      "freq": 446
+    },
+    {
+      "term": "a margin of error",
+      "trans": "the uncertainty range of a measurement",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Within the margin of error, they're tied.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0447",
+      "freq": 447
+    },
+    {
+      "term": "a sample size",
+      "trans": "how many cases were measured",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "With that sample size, I'd trust nothing.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0448",
+      "freq": 448
+    },
+    {
+      "term": "a breakdown",
+      "trans": "a division into categories; a failure",
+      "pos": "noun",
+      "note": "'breakdown by region'",
+      "ex_t": "Here's the breakdown by device.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0449",
+      "freq": 449
+    },
+    {
+      "term": "an uptick",
+      "trans": "a small increase",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "There's an uptick in weekend usage.",
+      "ex_trans": "",
+      "tags": [
+        "data"
+      ],
+      "unit": "data",
+      "id": "en0450",
+      "freq": 450
+    },
+    {
+      "term": "a refund",
+      "trans": "money returned for a purchase",
+      "pos": "noun",
+      "note": "to refund",
+      "ex_t": "The refund took ten working days.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0451",
+      "freq": 451
+    },
+    {
+      "term": "a receipt",
+      "trans": "proof of payment",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "Keep the receipt for the warranty.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0452",
+      "freq": 452
+    },
+    {
+      "term": "a warranty",
+      "trans": "the repair guarantee on goods",
+      "pos": "noun",
+      "note": "",
+      "ex_t": "The kettle died a week after the warranty.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0453",
+      "freq": 453
+    },
+    {
+      "term": "instalments",
+      "trans": "payment in parts (BrE spelling)",
+      "pos": "noun",
+      "note": "'in instalments'",
+      "ex_t": "We paid for the sofa in instalments.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0454",
+      "freq": 454
+    },
+    {
+      "term": "a standing order",
+      "trans": "a fixed automatic bank payment (BrE)",
+      "pos": "noun",
+      "note": "direct debit varies with the bill",
+      "ex_t": "The rent goes out by standing order.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0455",
+      "freq": 455
+    },
+    {
+      "term": "to owe",
+      "trans": "to have a debt to",
+      "pos": "verb",
+      "note": "'you owe me one' — favours too",
+      "ex_t": "You owe me a coffee for that review.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0456",
+      "freq": 456
+    },
+    {
+      "term": "to afford",
+      "trans": "to have enough money for",
+      "pos": "verb",
+      "note": "can't afford + noun/to-verb",
+      "ex_t": "We can't afford the seafront rents.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0457",
+      "freq": 457
+    },
+    {
+      "term": "a bargain",
+      "trans": "something bought cheaply",
+      "pos": "noun",
+      "note": "'a real bargain'",
+      "ex_t": "Two euros? That's a bargain.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0458",
+      "freq": 458
+    },
+    {
+      "term": "to overcharge",
+      "trans": "to charge too much",
+      "pos": "verb",
+      "note": "undercharge — the rare twin",
+      "ex_t": "They overcharged us for the wine.",
+      "ex_trans": "",
+      "tags": [
+        "money"
+      ],
+      "unit": "money",
+      "id": "en0459",
+      "freq": 459
+    },
+    {
+      "term": "expenses",
+      "trans": "costs you can claim back",
+      "pos": "noun",
+      "note": "'on expenses'",
+      "ex_t": "The conference hotel goes on expenses.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "work"
+      ],
+      "unit": "money",
+      "id": "en0460",
+      "freq": 460
+    },
+    {
+      "term": "How come?",
+      "trans": "why? (casual)",
+      "pos": "phrase",
+      "note": "no inversion: How come you stayed?",
+      "ex_t": "How come you never mentioned the boat?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0461",
+      "freq": 461
+    },
+    {
+      "term": "What a shame",
+      "trans": "expressing sympathy for a pity",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "What a shame the fog hid the view.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0462",
+      "freq": 462
+    },
+    {
+      "term": "Suit yourself",
+      "trans": "do as you like (mildly annoyed)",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "— I'll walk. — Suit yourself, it's raining.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0463",
+      "freq": 463
+    },
+    {
+      "term": "Never mind",
+      "trans": "forget it, it doesn't matter",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Never mind, I found it.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0464",
+      "freq": 464
+    },
+    {
+      "term": "You must be joking",
+      "trans": "disbelief",
+      "pos": "phrase",
+      "note": "BrE flavour: you're having a laugh",
+      "ex_t": "Forty euros for parking? You must be joking.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0465",
+      "freq": 465
+    },
+    {
+      "term": "Speak of the devil",
+      "trans": "said when someone mentioned appears",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Speak of the devil — we were just discussing your PR.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "idiom"
+      ],
+      "unit": "social",
+      "id": "en0466",
+      "freq": 466
+    },
+    {
+      "term": "to make yourself at home",
+      "trans": "to relax as if in your own house",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Make yourself at home, coffee's in the pot.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0467",
+      "freq": 467
+    },
+    {
+      "term": "to give someone a lift",
+      "trans": "to drive someone somewhere (BrE)",
+      "pos": "phrase",
+      "note": "a ride is AmE",
+      "ex_t": "I'll give you a lift to the airport.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "life"
+      ],
+      "unit": "social",
+      "id": "en0468",
+      "freq": 468
+    },
+    {
+      "term": "to be up for",
+      "trans": "to be willing to do",
+      "pos": "phrase",
+      "note": "'are you up for…?'",
+      "ex_t": "Are you up for a levada on Saturday?",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "phrasal"
+      ],
+      "unit": "social",
+      "id": "en0469",
+      "freq": 469
+    },
+    {
+      "term": "to owe someone an apology",
+      "trans": "to need to say sorry",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "I owe you an apology about yesterday.",
+      "ex_trans": "",
+      "tags": [
+        "social"
+      ],
+      "unit": "social",
+      "id": "en0470",
+      "freq": 470
+    },
+    {
+      "term": "to take it easy",
+      "trans": "to relax, not overdo things",
+      "pos": "phrase",
+      "note": "also a goodbye",
+      "ex_t": "Doctor said to take it easy this week.",
+      "ex_trans": "",
+      "tags": [
+        "social",
+        "glue"
+      ],
+      "unit": "social",
+      "id": "en0471",
+      "freq": 471
+    },
+    {
+      "term": "to keep an eye on",
+      "trans": "to watch, monitor",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Keep an eye on the error rate after deploy.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "glue"
+      ],
+      "unit": "work",
+      "id": "en0472",
+      "freq": 472
+    },
+    {
+      "term": "so far so good",
+      "trans": "everything is fine up to now",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Migration day two: so far so good.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0473",
+      "freq": 473
+    },
+    {
+      "term": "better late than never",
+      "trans": "late is still acceptable",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "He replied in June — better late than never.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "idiom"
+      ],
+      "unit": "glue",
+      "id": "en0474",
+      "freq": 474
+    },
+    {
+      "term": "to make ends meet",
+      "trans": "to just manage financially",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "On one salary here you can make ends meet, barely.",
+      "ex_trans": "",
+      "tags": [
+        "money",
+        "idiom"
+      ],
+      "unit": "money",
+      "id": "en0475",
+      "freq": 475
+    },
+    {
+      "term": "word for word",
+      "trans": "exactly as said, literally",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Don't translate it word for word — it dies.",
+      "ex_trans": "",
+      "tags": [
+        "writing",
+        "glue"
+      ],
+      "unit": "writing",
+      "id": "en0476",
+      "freq": 476
+    },
+    {
+      "term": "on second thought",
+      "trans": "having reconsidered",
+      "pos": "phrase",
+      "note": "BrE also 'on second thoughts'",
+      "ex_t": "On second thought, let's ship Monday.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0477",
+      "freq": 477
+    },
+    {
+      "term": "to sleep on it",
+      "trans": "to decide after a night's rest",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "Big decision — sleep on it.",
+      "ex_trans": "",
+      "tags": [
+        "glue",
+        "idiom"
+      ],
+      "unit": "glue",
+      "id": "en0478",
+      "freq": 478
+    },
+    {
+      "term": "it's up in the air",
+      "trans": "still undecided",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "The office move is still up in the air.",
+      "ex_trans": "",
+      "tags": [
+        "work",
+        "idiom"
+      ],
+      "unit": "work",
+      "id": "en0479",
+      "freq": 479
+    },
+    {
+      "term": "to weigh the pros and cons",
+      "trans": "to compare advantages and drawbacks",
+      "pos": "phrase",
+      "note": "",
+      "ex_t": "We weighed the pros and cons of both flats.",
+      "ex_trans": "",
+      "tags": [
+        "glue"
+      ],
+      "unit": "glue",
+      "id": "en0480",
+      "freq": 480
+    }
+  ]
+}
