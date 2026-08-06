@@ -40,6 +40,8 @@ const UNIT_ORDER = {
     { key: 'trabalho',   label: '💼 Work & money' },
     { key: 'madeira',    label: '🌴 Madeira' },
     { key: 'fado',       label: '🎶 Fado & song' },
+    { key: 'siglas',     label: '🔤 Abbreviations' },
+    { key: 'referencia', label: '📚 Grammar reference' },
     { key: 'gramatica',  label: '📐 Grammar' },
   ],
   en: [

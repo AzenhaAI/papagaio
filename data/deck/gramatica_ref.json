@@ -1,0 +1,603 @@
+{
+  "meta": {
+    "deck": "gramatica_ref",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2-B1",
+    "note": "The grammar dictionary, Lingvo-style: twelve reference articles on the traps a learner actually falls into, rendered through the same entry UI as any word — meanings become bullet points, collocations become the examples."
+  },
+  "cards": [
+    {
+      "id": "ref0001",
+      "term": "ser vs estar",
+      "trans": "the two verbs 'to be'",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1200,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "ser — what something IS: identity, profession, origin, character",
+            "note": "Sou analista. Ela é do Porto. O mar é salgado."
+          },
+          {
+            "trans": "estar — how something IS RIGHT NOW: state, place, mood",
+            "note": "Estou cansado. O café está frio. Estamos no Funchal."
+          },
+          {
+            "trans": "the pair that proves it",
+            "note": "A sopa é boa (good soup as such) / A sopa está boa (came out well today)"
+          },
+          {
+            "trans": "permanent place uses ficar or ser",
+            "note": "O banco fica na esquina."
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "ser de",
+            "trans": "to be from / made of / belong to"
+          },
+          {
+            "t": "estar a + infinitivo",
+            "trans": "to be doing (the pt-PT progressive)"
+          },
+          {
+            "t": "estar com fome/sede/medo",
+            "trans": "to be hungry / thirsty / afraid"
+          }
+        ],
+        "grammar": "Rule of thumb: if tomorrow it can be different — estar. If it defines the thing — ser.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0002",
+      "term": "por vs para",
+      "trans": "the two 'for'",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1201,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "para — direction, purpose, deadline, recipient",
+            "note": "Vou para casa. Isto é para ti. Para sexta."
+          },
+          {
+            "trans": "por — cause, exchange, route, duration, 'per'",
+            "note": "Obrigado por tudo. Paguei 10 € por isto. Fui pelo túnel."
+          },
+          {
+            "trans": "the minimal pair",
+            "note": "Faço-o para ti (for your benefit) / Faço-o por ti (in your place, because of you)"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "por acaso",
+            "trans": "by chance"
+          },
+          {
+            "t": "por isso",
+            "trans": "that's why"
+          },
+          {
+            "t": "para já",
+            "trans": "for now"
+          },
+          {
+            "t": "por volta de",
+            "trans": "around (time)"
+          }
+        ],
+        "grammar": "para looks forward (goal); por looks backward or around (cause, path, price).",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0003",
+      "term": "contrações",
+      "trans": "preposition + article contractions",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1202,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "de + o/a/os/as → do, da, dos, das",
+            "note": "o carro do vizinho"
+          },
+          {
+            "trans": "em + o/a → no, na (nos, nas)",
+            "note": "Estou no café. Moro na Madeira."
+          },
+          {
+            "trans": "a + o/a → ao, à (aos, às)",
+            "note": "Vou ao mercado às nove."
+          },
+          {
+            "trans": "por + o/a → pelo, pela",
+            "note": "Obrigado pela ajuda."
+          },
+          {
+            "trans": "de/em + um → dum, num (colloquial but standard pt-PT)",
+            "note": "Moro num T2."
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "à direita / à esquerda",
+            "trans": "to the right / left"
+          },
+          {
+            "t": "ao lado de",
+            "trans": "next to"
+          },
+          {
+            "t": "no fundo",
+            "trans": "deep down / at the back"
+          }
+        ],
+        "grammar": "Contractions are mandatory, not stylistic: 'em o café' is simply wrong.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0004",
+      "term": "clíticos",
+      "trans": "where me/te/o/lhe go",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1203,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "default pt-PT: AFTER the verb, with a hyphen",
+            "note": "Diz-me. Vi-o ontem. Dá-lhe o livro."
+          },
+          {
+            "trans": "magnets pull it BEFORE: não, que, quem, já, também, sempre, talvez",
+            "note": "Não me digas! Acho que te vi."
+          },
+          {
+            "trans": "future/conditional split the verb (mesoclisis, formal)",
+            "note": "Dir-te-ei amanhã — in writing; speech says 'vou dizer-te'"
+          },
+          {
+            "trans": "Brazilian default is before the verb — the giveaway",
+            "note": "'Me diz' sounds Brazilian; Portugal says 'Diz-me'"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "dá-me",
+            "trans": "give me"
+          },
+          {
+            "t": "chama-se",
+            "trans": "he/she is called"
+          },
+          {
+            "t": "vemo-nos",
+            "trans": "see you (we see each other)"
+          }
+        ],
+        "grammar": "When in doubt in Portugal: verb first, pronoun after — unless a 'magnet word' stands before the verb.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0005",
+      "term": "conjuntivo — quando usar",
+      "trans": "when the subjunctive fires",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1204,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "wishes and emotions: querer que, esperar que, ter medo que",
+            "note": "Espero que corras bem no exame."
+          },
+          {
+            "trans": "doubt and denial: talvez, duvido que, não acho que",
+            "note": "Talvez chova logo."
+          },
+          {
+            "trans": "after certain conjunctions: embora, para que, antes que",
+            "note": "Embora seja caro, vale a pena."
+          },
+          {
+            "trans": "the future one after quando/se/assim que (futuro do conjuntivo)",
+            "note": "Quando puderes, liga-me. Se vieres, avisa."
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "oxalá",
+            "trans": "let's hope (from Arabic inshallah)"
+          },
+          {
+            "t": "é que",
+            "trans": "question glue, no conjuntivo needed"
+          },
+          {
+            "t": "se calhar + indicativo",
+            "trans": "spoken 'maybe' that dodges the conjuntivo"
+          }
+        ],
+        "grammar": "If the event is wished, doubted or not yet real — conjuntivo. Facts get the indicativo.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0006",
+      "term": "o infinitivo pessoal",
+      "trans": "the personal infinitive — pt speciality",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1205,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "an infinitive that conjugates: falares, falarmos, falarem",
+            "note": "É melhor falarmos amanhã."
+          },
+          {
+            "trans": "after para / antes de / depois de with its own subject",
+            "note": "Trouxe o mapa para não nos perdermos."
+          },
+          {
+            "trans": "looks like futuro do conjuntivo for regular verbs",
+            "note": "same forms, different job"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "ao chegares",
+            "trans": "when you arrive (ao + pers. inf.)"
+          },
+          {
+            "t": "apesar de sermos",
+            "trans": "despite us being"
+          }
+        ],
+        "grammar": "Portuguese's own invention — no other Romance language conjugates the infinitive.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0007",
+      "term": "tu vs você",
+      "trans": "how to say 'you' in Portugal",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1206,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "tu + 2nd person verb — friends, family, colleagues your age",
+            "note": "Tu falas bem!"
+          },
+          {
+            "trans": "o senhor / a senhora — respectful to strangers, elders",
+            "note": "O senhor pode ajudar-me?"
+          },
+          {
+            "trans": "você exists but is tricky in Portugal — often too blunt",
+            "note": "safer: drop the pronoun, use 3rd person verb: 'Pode ajudar-me?'"
+          },
+          {
+            "trans": "verb alone carries politeness",
+            "note": "'Quer um café?' is already polite"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "os senhores",
+            "trans": "you (plural, formal)"
+          },
+          {
+            "t": "vocês",
+            "trans": "you (plural, neutral — fine everywhere)"
+          }
+        ],
+        "grammar": "In Portugal 'você' aimed at a person can sound pushy; Brazilians use it neutrally. When unsure, use the verb without any pronoun.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0008",
+      "term": "artigos com nomes",
+      "trans": "articles glued to names and places",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1207,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "people take articles in speech",
+            "note": "A Ana chegou. O Pedro liga depois."
+          },
+          {
+            "trans": "most countries take one — Portugal doesn't",
+            "note": "em Portugal, but no Brasil, na Madeira, nos Açores"
+          },
+          {
+            "trans": "possessives take articles in pt-PT",
+            "note": "o meu carro, a tua casa — Brazilian often drops it"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "na Madeira",
+            "trans": "on Madeira"
+          },
+          {
+            "t": "no continente",
+            "trans": "on the mainland"
+          },
+          {
+            "t": "a minha mulher",
+            "trans": "my wife"
+          }
+        ],
+        "grammar": "Article before names is warm, not wrong — it is how Portugal talks about people in the room.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0009",
+      "term": "plurais irregulares",
+      "trans": "plurals that refuse the -s",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1208,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "-ão has three plurals: -ões (most), -ães, -ãos",
+            "note": "limão→limões, pão→pães, mão→mãos, irmão→irmãos"
+          },
+          {
+            "trans": "-l drops and gains -is",
+            "note": "animal→animais, papel→papéis, azul→azuis"
+          },
+          {
+            "trans": "-m becomes -ns",
+            "note": "homem→homens, viagem→viagens"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "os pães",
+            "trans": "the breads"
+          },
+          {
+            "t": "os papéis",
+            "trans": "the papers / roles"
+          },
+          {
+            "t": "os verões",
+            "trans": "the summers"
+          }
+        ],
+        "grammar": "When unsure about an -ão word, -ões wins most often — but the bakery will forgive pãos, once.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0010",
+      "term": "género — as armadilhas",
+      "trans": "gender traps",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1209,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "-a words that are masculine: o dia, o mapa, o problema, o clima",
+            "note": "Greek imports mostly"
+          },
+          {
+            "trans": "-agem is feminine: a viagem, a garagem, a mensagem",
+            "note": ""
+          },
+          {
+            "trans": "pairs that change meaning with gender",
+            "note": "o capital (money) / a capital (city); o guia (person) / a guia (booklet)"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "o telefonema",
+            "trans": "the phone call (masculine!)"
+          },
+          {
+            "t": "a árvore",
+            "trans": "the tree (feminine)"
+          }
+        ],
+        "grammar": "Learn nouns with their article from day one — the deck already does this for you.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0011",
+      "term": "há vs faz vs desde",
+      "trans": "saying 'ago' and 'since'",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1210,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "há + period — ago / for",
+            "note": "Cheguei há dois anos. Moro cá há dois anos."
+          },
+          {
+            "trans": "desde + point in time — since",
+            "note": "Moro cá desde 2024."
+          },
+          {
+            "trans": "faz for time is Brazilian — Portugal says há",
+            "note": "'faz dois anos' marks you instantly"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "há bocado",
+            "trans": "a while ago"
+          },
+          {
+            "t": "desde então",
+            "trans": "since then"
+          },
+          {
+            "t": "de hoje a oito dias",
+            "trans": "a week from today"
+          }
+        ],
+        "grammar": "há looks back across a span; desde pins the starting point.",
+        "conj": {}
+      }
+    },
+    {
+      "id": "ref0012",
+      "term": "diminutivos",
+      "trans": "-inho: the national suffix",
+      "pos": "ref",
+      "gender": null,
+      "note": "grammar reference — open 📖 for the full article",
+      "ex_t": null,
+      "ex_trans": null,
+      "tags": [
+        "gramatica-ref"
+      ],
+      "unit": "referencia",
+      "freq": 1211,
+      "entry": {
+        "meanings": [
+          {
+            "trans": "smallness, affection, softening — often all three",
+            "note": "um cafezinho? cá está o troquinho"
+          },
+          {
+            "trans": "softens requests and waits",
+            "note": "só um minutinho — expect five"
+          },
+          {
+            "trans": "attaches to anything, adverbs included",
+            "note": "devagarinho, agorinha, obrigadinho"
+          }
+        ],
+        "synonyms": [],
+        "collocations": [
+          {
+            "t": "um bocadinho",
+            "trans": "a little bit"
+          },
+          {
+            "t": "à tardinha",
+            "trans": "in the late afternoon"
+          },
+          {
+            "t": "baratinho",
+            "trans": "nice and cheap"
+          }
+        ],
+        "grammar": "Not baby talk: -inho is register control, and Portugal plays it like an instrument.",
+        "conj": {}
+      }
+    }
+  ]
+}

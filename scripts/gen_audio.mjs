@@ -78,7 +78,13 @@ const deckDir = join(root, 'data', 'deck');
 const cards = [];
 for (const file of readdirSync(deckDir).filter((f) => f.endsWith('.json')).sort()) {
   const deck = JSON.parse(readFileSync(join(deckDir, file), 'utf8'));
-  for (const c of deck.cards) cards.push({ id: c.id, term: c.term ?? c.pt ?? c.en, course: deck.meta.course });
+  for (const c of deck.cards) cards.push({
+    id: c.id,
+    // 'say' overrides what the voice reads — siglas are letter names, and
+    // GNR sounded out as one syllable helps nobody.
+    term: c.say ?? c.term ?? c.pt ?? c.en,
+    course: deck.meta.course,
+  });
 }
 
 let done = 0, skipped = 0, failed = 0;
