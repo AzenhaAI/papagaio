@@ -2,6 +2,10 @@
 const { title = 'PapaGaio — AI Coach for European Portuguese', desc = 'A live AI conversation coach for European Portuguese (pt-PT): roleplay the caf\u00e9, the bank, AIMA — it hears you, talks back and corrects you. Plus a pt-PT translator, reader and flashcards. Free forever.' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpara.com').href;
+// The current section lights up in the nav — computed at build time from the
+// page's own path, so every page gets it for free.
+const here = Astro.url.pathname.replace(/\/$/, '');
+const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 ---
 <!doctype html>
 <html lang="en">
@@ -91,6 +95,10 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     header.site nav { display: flex; gap: 18px; margin-left: auto; }
     header.site nav a { color: var(--muted); font-size: 15px; white-space: nowrap; }
     header.site nav a:hover { color: var(--text); text-decoration: none; }
+    header.site nav a.active {
+      color: var(--text); font-weight: 600;
+      border-bottom: 2px solid var(--accent); padding-bottom: 2px;
+    }
     header.site { flex-wrap: nowrap; }
     /* Six links do not fit a phone: below this width the burger is the nav. */
     @media (max-width: 860px) {
@@ -117,15 +125,15 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
 </head>
 <body>
   <header class="site">
-    <a class="logo" href={`${base}/`}>Papa<span>Gaio</span> 🦜</a>
+    <a class="logo" href={`${base}/`}>Papa<span>Gaio</span></a>
     <nav>
-      <a href={`${base}/coach/`}>AI Coach</a>
-      <a href={`${base}/practice/`}>Cards</a>
-      <a href={`${base}/translate/`}>Translate</a>
-      <a href={`${base}/dictionary/`}>Dictionary</a>
-      <a href={`${base}/phrasebook/`}>Phrasebook</a>
-      <a href={`${base}/verbs/`}>Verbs</a>
-      <a href={`${base}/progress/`}>Progress</a>
+      <a class={active('coach')} href={`${base}/coach/`}>AI Coach</a>
+      <a class={active('practice')} href={`${base}/practice/`}>Cards</a>
+      <a class={active('translate')} href={`${base}/translate/`}>Translate</a>
+      <a class={active('dictionary')} href={`${base}/dictionary/`}>Dictionary</a>
+      <a class={active('phrasebook')} href={`${base}/phrasebook/`}>Phrasebook</a>
+      <a class={active('verbs')} href={`${base}/verbs/`}>Verbs</a>
+      <a class={active('progress')} href={`${base}/progress/`}>Progress</a>
       <a href="https://t.me/papagaio_bot">Telegram bot</a>
     </nav>
     <button id="burger" aria-label="Menu" style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
@@ -148,7 +156,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <a class="drawer-link" href={`${base}/verbs/`}>🔀 Verbs</a>
     <a class="drawer-link" href={`${base}/progress/`}>📊 Progress</a>
     <a class="drawer-link" href={`${base}/about/`}>ℹ️ About</a>
-    <a class="drawer-link" href="https://t.me/papagaio_bot">🦜 Telegram bot</a>
+    <a class="drawer-link" href="https://t.me/papagaio_bot">✈️ Telegram bot</a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
     <button id="theme-toggle" class="drawer-link" style="background:none; border:0; font:inherit; text-align:left; cursor:pointer; width:100%;">🌗 Theme: <span id="theme-name">dark</span></button>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />

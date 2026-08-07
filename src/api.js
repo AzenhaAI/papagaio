@@ -392,7 +392,7 @@ export async function handleApi(request, env, path) {
         `Translate each ${'English'} term into ${to}. Short dictionary glosses, 1-4 words, ` +
         `no explanations. Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
       { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
-    ], { json: true });
+    ], { json: true, noFallback: true });
     try {
       const out = JSON.parse(raw);
       return json({ glosses: (out.glosses ?? []).map(String).slice(0, terms.length) });
