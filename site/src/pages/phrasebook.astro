@@ -33,9 +33,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div id="list" style="margin-top:18px;"><p class="muted">loading…</p></div>
 
   <p class="muted" style="margin-top:22px; font-size:13.5px;">
-    These are cards from <a href="./dictionary/">the deck</a> — the bot drills
+    These are cards from <a href="/papagaio/dictionary/">the deck</a> — the bot drills
     them with spaced repetition, and the
-    <a href="./coach/">AI coach</a> makes you use them in scenes.
+    <a href="/papagaio/coach/">AI coach</a> makes you use them in scenes.
   </p>
 
   <script>
@@ -111,7 +111,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         list.innerHTML += `<h2 style="margin-top:30px;">🎶 Fado & song words</h2>
           <p class="muted" style="font-size:13.5px;">The vocabulary fado and the
           bailinho are made of — saudade, o cais, o luar. Take them to the
-          <a href="../coach/">coach</a>: there's a casa-de-fados scene to try them in.</p>` +
+          <a href="/papagaio/coach/">coach</a>: there's a casa-de-fados scene to try them in.</p>` +
           fado.map((c) => `
           <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
             <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">

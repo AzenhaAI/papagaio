@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <script is:inline>
     // The tool people open daily is the translator — land there by default.
     // The marketing landing stays reachable at /?home (linked from the menu).
-    if (!location.search.includes('home')) location.replace('translate/');
+    if (!location.search.includes('home')) location.replace('/papagaio/translate/');
   </script>
   <section style="background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
     border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <span class="hero-chip">🚕 Táxi</span><span class="hero-chip">🐢→🏃 3 speeds</span>
     </div>
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
-      <a class="btn" href="coach/">🎭 Talk to the AI Coach</a>
+      <a class="btn" href="/papagaio/coach/">🎭 Talk to the AI Coach</a>
       <a class="btn" href="https://t.me/papagaio_bot"
         style="background:var(--panel2); color:var(--text);">🎙 Voice version in Telegram</a>
     </div>
@@ -36,39 +36,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </style>
 
   <div class="tilegrid">
-    <a class="tile" href="coach/" style="border-color: color-mix(in srgb, var(--accent) 45%, transparent);">
+    <a class="tile" href="/papagaio/coach/" style="border-color: color-mix(in srgb, var(--accent) 45%, transparent);">
       <span class="tile-emoji">🎭</span><strong>AI Coach</strong>
       <span class="muted">roleplay the café, the bank, AIMA — voice in, voice out</span>
     </a>
-    <a class="tile" href="practice/">
+    <a class="tile" href="/papagaio/practice/">
       <span class="tile-emoji">🎴</span><strong>Cards</strong>
       <span class="muted">spaced repetition on a <span data-count="deck">1,400+</span>-card pt-PT deck</span>
     </a>
-    <a class="tile" href="read/">
+    <a class="tile" href="/papagaio/read/">
       <span class="tile-emoji">📰</span><strong>Reader</strong>
       <span class="muted">paste any text — see exactly what you don't know yet</span>
     </a>
-    <a class="tile" href="dictionary/">
+    <a class="tile" href="/papagaio/dictionary/">
       <span class="tile-emoji">📖</span><strong>Dictionary</strong>
       <span class="muted">articles with examples and ten-tense conjugations</span>
     </a>
-    <a class="tile" href="translate/">
+    <a class="tile" href="/papagaio/translate/">
       <span class="tile-emoji">🔤</span><strong>Translate</strong>
       <span class="muted">guaranteed pt-PT, Brazilian divergences flagged</span>
     </a>
-    <a class="tile" href="phrasebook/">
+    <a class="tile" href="/papagaio/phrasebook/">
       <span class="tile-emoji">💬</span><strong>Phrasebook</strong>
       <span class="muted"><span data-count="frases">170+</span> phrases people actually say, with native audio</span>
     </a>
-    <a class="tile" href="verbs/">
+    <a class="tile" href="/papagaio/verbs/">
       <span class="tile-emoji">🔀</span><strong>Verbs</strong>
       <span class="muted">conjugate anything — twelve tenses, pt-PT forms</span>
     </a>
-    <a class="tile" href="progress/">
+    <a class="tile" href="/papagaio/progress/">
       <span class="tile-emoji">📊</span><strong>Progress</strong>
       <span class="muted">review load ahead and a CIPLE readiness proxy</span>
     </a>
-    <a class="tile" href="apps/">
+    <a class="tile" href="/papagaio/apps/">
       <span class="tile-emoji">⬇️</span><strong>Apps</strong>
       <span class="muted">Android, iPhone, Mac, Windows — free everywhere</span>
     </a>
@@ -153,7 +153,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           (qscore === QUIZ.length
             ? 'perfect. The deck will still find something you don\'t know.'
             : 'the gap is exactly what PapaGaio drills.') +
-          `</p><a class="btn" href="practice/">Start learning →</a>
+          `</p><a class="btn" href="/papagaio/practice/">Start learning →</a>
            <button class="qopt" style="margin-left:8px;" onclick="location.reload()">Play again</button>`;
         return;
       }
@@ -184,7 +184,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     The Portuguese actually spoken in Portugal and Madeira. Big translators
     default to the Brazilian variant — PapaGaio always answers in pt-PT and
     marks every word where the two diverge.
-    <a href="translate/">Open the translator →</a>
+    <a href="/papagaio/translate/">Open the translator →</a>
   </p>
 
   <h2>How it works</h2>
