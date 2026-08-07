@@ -237,7 +237,7 @@ export async function handleApi(request, env, path) {
   // into pages that instantly go stale. Cached at the edge for an hour.
   if (path === '/api/counts' && request.method === 'GET') {
     const cache = caches.default;
-    const key = new Request('https://papagaio.cache/counts/v2');
+    const key = new Request('https://papagaio.cache/counts/v3');
     const hit = await cache.match(key);
     if (hit) return hit;
     const row = await env.DB.prepare(
@@ -247,7 +247,16 @@ export async function handleApi(request, env, path) {
         (SELECT COUNT(*) FROM cards WHERE course='en' AND owner IS NULL) AS en_cards,
         (SELECT COUNT(*) FROM cards WHERE owner IS NULL AND tags LIKE '%"frase"%') AS frases,
         (SELECT COUNT(*) FROM cards WHERE owner IS NULL AND unit='fado') AS fado,
-        (SELECT COUNT(*) FROM cards WHERE owner='lex') AS lexicon`
+        (SELECT COUNT(*) FROM cards WHERE owner='lex') AS lexicon,
+        -- The Lingvo shelf: how many entries each layer holds, shown right in
+        -- the dictionary header so the shelf is visible, not folklore.
+        (SELECT COUNT(*) FROM cards WHERE id LIKE 'lex:%' AND course='pt') AS lex_pt_en,
+        (SELECT COUNT(*) FROM cards WHERE id LIKE 'lexpt:%') AS lex_pt_def,
+        (SELECT COUNT(*) FROM cards WHERE owner='lex' AND course='pt' AND trans_ru IS NOT NULL) AS lex_pt_ru,
+        (SELECT COUNT(*) FROM cards WHERE id LIKE 'lexen:%') AS lex_en,
+        (SELECT COUNT(*) FROM cards WHERE owner='lex' AND course='en' AND trans_ru IS NOT NULL) AS lex_en_ru,
+        (SELECT COUNT(*) FROM cards WHERE owner='lex' AND course='en' AND trans_pt IS NOT NULL) AS lex_en_pt,
+        (SELECT COUNT(*) FROM examples) AS examples`
     ).first();
     const resp = new Response(JSON.stringify({ ...row, verbs: VERBS.length }), {
       headers: {
@@ -363,15 +372,36 @@ export async function handleApi(request, env, path) {
   // The dictionary's examples block: what the word looks like in the wild.
   if (path === '/api/examples' && request.method === 'GET') {
     const sp = new URL(request.url).searchParams;
-    const w = fold((sp.get('q') ?? '').trim());
+    const raw = (sp.get('q') ?? '').trim();
+    const w = fold(raw);
     const pair = ['pt-ru', 'pt-en', 'en-ru'].includes(sp.get('pair')) ? sp.get('pair') : 'pt-en';
     if (w.length < 2) return json({ examples: [] });
+
+    // A dictionary headword is a lemma; sentences hold its forms. Verbs expand
+    // through the conjugation engine (falar → falou, falámos…); everything
+    // else gets the plural spellings. Searching all of them is what lets
+    // "gato" surface a sentence about gatos.
+    const forms = new Set([w]);
+    const verb = findVerb(raw);
+    if (verb && !pair.startsWith('en')) {
+      for (const t of Object.values(conjugate(verb.inf))) {
+        for (const f of [t].flat()) if (typeof f === 'string') forms.add(fold(f));
+      }
+    } else {
+      if (w.endsWith('ao')) { forms.add(`${w.slice(0, -2)}oes`); forms.add(`${w.slice(0, -2)}aes`); forms.add(`${w}s`); }
+      else if (w.endsWith('m')) forms.add(`${w.slice(0, -1)}ns`);
+      else if (w.endsWith('l')) forms.add(`${w.slice(0, -1)}is`);
+      else if (/[rzs]$/.test(w)) forms.add(`${w}es`);
+      else forms.add(`${w}s`);
+      if (w.endsWith('s')) forms.add(w.slice(0, -1));
+    }
+
+    const list = [...forms].slice(0, 60);
+    const cond = list.map((_, i) => `instr(' '||fold||' ', ?${i + 2}) > 0`).join(' OR ');
     const { results } = await env.DB.prepare(
-      `SELECT src, dst FROM examples WHERE pair = ?1
-         AND (fold = ?2 OR fold LIKE ?3 OR fold LIKE ?4 OR fold LIKE ?5)
-       ORDER BY length(src) LIMIT ?6`
-    ).bind(pair, w, `${w} %`, `% ${w} %`, `% ${w}`,
-           Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)).all();
+      `SELECT src, dst FROM examples WHERE pair = ?1 AND (${cond})
+       ORDER BY length(src) LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)}`
+    ).bind(pair, ...list.map((f) => ` ${f} `)).all();
     return json({ examples: results });
   }
 
@@ -386,10 +416,11 @@ export async function handleApi(request, env, path) {
     const body = await request.json().catch(() => null);
     const terms = Array.isArray(body?.terms) ? body.terms.map(String).slice(0, 25) : [];
     const to = body?.to === 'ru' ? 'Russian' : 'European Portuguese (pt-PT, never Brazilian)';
+    const from = body?.from === 'pt' ? 'European Portuguese' : 'English';
     if (!terms.length) return json({ error: 'terms required' }, 400);
     const raw = await chat(env, [
       { role: 'system', content:
-        `Translate each ${'English'} term into ${to}. Short dictionary glosses, 1-4 words, ` +
+        `Translate each ${from} term into ${to}. Short dictionary glosses, 1-4 words, ` +
         `no explanations. Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
       { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
     ], { json: true, noFallback: true });

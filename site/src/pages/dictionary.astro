@@ -15,6 +15,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     ranked by an <a href="https://github.com/hermitdave/FrequencyWords">OpenSubtitles
     frequency list</a> (CC BY-SA 4.0).
   </p>
+  <!-- The Lingvo shelf: which dictionaries sit behind the search box, with
+       live counts. One line of chips, not a page of methodology. -->
+  <div id="layers" style="display:none; gap:8px; flex-wrap:wrap; margin-top:2px;"></div>
 
   <div style="display:flex; gap:10px; margin: 18px 0; flex-wrap:wrap;">
     <button class="btn" data-course="pt" id="btn-pt">🇵🇹 Portuguese</button>
@@ -404,7 +407,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     }
     renderHist();
     fetch('https://papagaio.kirshp.workers.dev/api/counts').then((r) => r.json())
-      .then((c) => { document.getElementById('lexcount').textContent = c.lexicon.toLocaleString('en-GB'); })
+      .then((c) => {
+        document.getElementById('lexcount').textContent = c.lexicon.toLocaleString('en-GB');
+        if (c.lex_pt_en) {
+          const fmt = (n) => n.toLocaleString('en-GB');
+          const chip = (label, n) =>
+            `<span style="background:var(--panel); border:1px solid var(--panel2); border-radius:14px;` +
+            ` padding:3px 10px; font-size:12.5px; color:var(--muted);">${label}` +
+            ` <strong style="color:var(--text); font-weight:600;">${fmt(n)}</strong></span>`;
+          const box = document.getElementById('layers');
+          box.style.display = 'flex';
+          box.innerHTML =
+            chip('PT→EN', c.lex_pt_en) + chip('PT explanatory', c.lex_pt_def) +
+            chip('PT→RU', c.lex_pt_ru) + chip('EN', c.lex_en) +
+            chip('EN→RU', c.lex_en_ru) + chip('EN→PT', c.lex_en_pt) +
+            chip('Examples', c.examples);
+        }
+      })
       .catch(() => {});
     document.getElementById('q').addEventListener('input', render);
     document.getElementById('btn-pt').onclick = () => load('pt');
