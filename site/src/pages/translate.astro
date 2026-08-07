@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Translate — European Portuguese (pt-PT) | PapaGaio"
+  desc="A translator that guarantees European Portuguese: pt-PT output, misspellings corrected, Brazilian divergences flagged. Single words get a full dictionary article with real example sentences.">
+  <h1>Translate into European Portuguese</h1>
+  <p class="muted" style="max-width: 640px;">
+    The Portuguese actually spoken in Portugal and Madeira. Big translators
+    default to the Brazilian variant — PapaGaio always answers in pt-PT and
+    marks every word where the two diverge. Single words also get a dictionary
+    article and real sentences from the Tatoeba corpus.
+  </p>
+
+  <div class="panel" style="margin-top: 22px;">
+    <!-- The pair switcher, the way Yandex or Lingvo draw it: from ⇄ to. -->
+    <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; align-items:center;">
+      <button id="fromchip" class="pairchip">🇬🇧 English</button>
+      <button id="swap" class="iconbtn" title="Swap languages" style="font-size:20px;">⇄</button>
+      <button id="tochip" class="pairchip">🇵🇹 Portuguese</button>
+      <label class="muted" style="font-size:13.5px; display:flex; align-items:center; gap:5px; margin-left:6px;">
+        <input type="checkbox" id="auto" checked style="accent-color:var(--accent);" /> auto-detect
+      </label>
+    </div>
+    <div style="position:relative;">
+      <textarea id="src" rows="3" maxlength="600" placeholder="Type a word or phrase…"
+        style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+               border-radius:10px; padding:12px 38px 12px 14px; font:inherit; resize:vertical;"></textarea>
+      <button id="clear" class="iconbtn" title="Clear"
+        style="display:none; position:absolute; top:8px; right:6px; color:var(--muted); font-size:17px;">✕</button>
+    </div>
+    <div class="muted" id="counter" style="font-size:12.5px; text-align:right; margin-top:4px;">0 / 600</div>
+    <div id="chips" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
+      <button class="chip">gato</button>
+      <button class="chip">Where is the nearest pharmacy?</button>
+      <button class="chip">Queria uma bica e um pastel de nata</button>
+      <button class="chip">Can I pay by card?</button>
+    </div>
+    <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
+      <button class="btn" id="go">Translate</button>
+      <span id="spin" style="display:none; width:18px; height:18px; border:2.5px solid var(--panel2); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite;"></span>
+      <span class="muted" id="status"></span>
+      <span class="muted" id="dirhint" style="font-size:13.5px;"></span>
+    </div>
+
+    <div id="out" style="display:none; margin-top:18px;">
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+        <div id="tr" style="font-size:22px; font-weight:600;"></div>
+        <button class="iconbtn" id="speak" title="Listen">🔊</button>
+        <button class="iconbtn" id="copy" title="Copy">📋</button>
+      </div>
+      <div id="fix" style="margin-top:8px;"></div>
+      <div id="lit" class="muted" style="font-style:italic;"></div>
+      <div id="diff" style="margin-top:12px;"></div>
+      <div id="note" class="muted" style="margin-top:10px;"></div>
+    </div>
+  </div>
+
+  <!-- Single words fall through to the dictionary: even when the model is over
+       its daily cap, "gato" still answers instantly from 110k lexicon rows. -->
+  <div id="dictbox" class="panel" style="margin-top:14px; display:none;">
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">📖 In the dictionary</div>
+    <div id="dictlist"></div>
+  </div>
+
+  <div id="exbox" class="panel" style="margin-top:14px; display:none;">
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">💬 From real texts <span style="opacity:.7;">· Tatoeba · CC-BY</span></div>
+    <div id="exlist"></div>
+  </div>
+
+  <div id="histbox" class="panel" style="margin-top:14px; display:none;">
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">Recent (stored only in your browser)</div>
+    <div id="histlist"></div>
+  </div>
+
+  <div class="muted" style="margin-top:16px; font-size:14px;">
+    Want it as a flashcard with audio?
+    <a href="https://t.me/papagaio_bot">Send it to the bot</a> — one tap adds it to your deck.
+  </div>
+
+  <style is:global>
+    .pairchip {
+      background: var(--panel2); color: var(--text); border: 1px solid #2a4433;
+      border-radius: 10px; padding: 7px 14px; font: inherit; font-size: 14.5px;
+      font-weight: 600; cursor: default;
+    }
+    .chip {
+      background: none; border: 1px dashed #2a4433; color: var(--muted); border-radius: 20px;
+      padding: 5px 12px; font: inherit; font-size: 13.5px; cursor: pointer;
+    }
+    .chip:hover { color: var(--text); border-color: var(--accent); }
+    .iconbtn { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 2px 6px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .hist { cursor: pointer; }
+    .hist:hover { color: var(--text); }
+    .dicthit { display:flex; gap:10px; align-items:baseline; padding:6px 0; border-bottom:1px solid var(--panel2); font-size:15.5px; flex-wrap:wrap; }
+    .dicthit:last-child { border-bottom:0; }
+    .exline { padding:7px 0; border-bottom:1px solid var(--panel2); font-size:15px; line-height:1.5; }
+    .exline:last-child { border-bottom:0; }
+  </style>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const API = 'https://papagaio.kirshp.workers.dev';
+    const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+    const LANGS = { en: '🇬🇧 English', pt: '🇵🇹 Portuguese' };
+    let from = 'en', to = 'pt';
+    let last = null, lastReq = '', inflight = null, debounce = null;
+
+    function drawPair() {
+      $('fromchip').textContent = LANGS[from];
+      $('tochip').textContent = LANGS[to];
+      $('dirhint').textContent = $('auto').checked
+        ? 'Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.'
+        : `${LANGS[from]} in — ${LANGS[to]} out.`;
+    }
+    $('swap').onclick = () => { [from, to] = [to, from]; $('auto').checked = false; drawPair(); run(true); };
+    $('fromchip').onclick = $('tochip').onclick = () => { $('auto').checked = !$('auto').checked; drawPair(); };
+    $('auto').onchange = drawPair;
+    drawPair();
+
+    const HKEY = 'pg_history';
+    const hist = () => JSON.parse(localStorage.getItem(HKEY) ?? '[]');
+    function pushHist(src, t) {
+      const h = [{ src, tr: t.translation, d: t.direction }, ...hist().filter((x) => x.src !== src)].slice(0, 10);
+      localStorage.setItem(HKEY, JSON.stringify(h));
+      renderHist();
+    }
+    function renderHist() {
+      const h = hist();
+      $('histbox').style.display = h.length ? 'block' : 'none';
+      $('histlist').innerHTML = h.map((x, i) =>
+        `<div class="muted hist" data-i="${i}" style="padding:4px 0; font-size:14.5px;">` +
+        `${esc(x.src)} <span style="color:var(--accent)">→</span> ${esc(x.tr)}</div>`).join('');
+      document.querySelectorAll('.hist').forEach((el) => {
+        el.onclick = () => { $('src').value = hist()[el.dataset.i].src; onInput(); run(true); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+      });
+    }
+    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function setBusy(b) {
+      $('go').disabled = b;
+      $('spin').style.display = b ? 'inline-block' : 'none';
+      if (b) $('status').textContent = '';
+    }
+
+    // The dictionary layer: for 1-3 word queries, show lexicon hits and real
+    // sentences regardless of what the model does. This is what makes "gato"
+    // always land on 🐈 instead of on a rate-limit message.
+    async function dictAndExamples(text) {
+      const short = text.split(/\s+/).filter(Boolean);
+      if (!short.length || short.length > 3) {
+        $('dictbox').style.display = $('exbox').style.display = 'none';
+        return;
+      }
+      try {
+        const [pt, en, ex] = await Promise.all([
+          fetch(`${API}/api/search?q=${encodeURIComponent(text)}&course=pt`).then((r) => r.json()),
+          fetch(`${API}/api/search?q=${encodeURIComponent(text)}&course=en`).then((r) => r.json()),
+          fetch(`${API}/api/examples?q=${encodeURIComponent(text)}&pair=pt-en&limit=5`).then((r) => r.json()),
+        ]);
+        const hits = [...(pt.words ?? []), ...(en.words ?? [])].slice(0, 6);
+        $('dictbox').style.display = hits.length ? 'block' : 'none';
+        $('dictlist').innerHTML = hits.map((w) =>
+          `<div class="dicthit"><a href="${BASE}/dictionary/?q=${encodeURIComponent(w.term)}" style="font-weight:600;">${esc(w.term)}</a>` +
+          (w.gender ? `<span class="muted" style="font-size:13px;">${w.gender}.</span>` : '') +
+          (w.pos ? `<span class="muted" style="font-size:13px;">${esc(w.pos)}</span>` : '') +
+          `<span>${esc(w.trans ?? w.trans_pt ?? '')}</span></div>`).join('');
+        const exs = ex.examples ?? [];
+        $('exbox').style.display = exs.length ? 'block' : 'none';
+        $('exlist').innerHTML = exs.map((e, i) =>
+          `<div class="exline">${esc(e.src)} <button class="iconbtn exspeak" data-t="${esc(e.src)}" style="font-size:15px;">🔊</button>` +
+          `<div class="muted" style="font-size:14px;">${esc(e.dst)}</div></div>`).join('');
+        document.querySelectorAll('.exspeak').forEach((b) => { b.onclick = () => say(b.dataset.t, b); });
+      } catch { /* the dictionary layer is best-effort */ }
+    }
+
+    async function say(text, btn) {
+      const was = btn.textContent;
+      btn.textContent = '⏳';
+      try {
+        const r = await fetch(`${API}/api/tts`, {
+          method: 'POST', headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text, course: 'pt' }),
+        });
+        if (!r.ok) throw new Error(r.status);
+        new Audio(URL.createObjectURL(await r.blob())).play();
+      } catch { $('status').textContent = 'audio failed'; }
+      btn.textContent = was;
+    }
+
+    async function run(force = false) {
+      const text = $('src').value.trim();
+      if (!text || text.length < 2) return;
+      dictAndExamples(text);
+      const dir = $('auto').checked ? 'auto' : `${from}->${to}`;
+      const sig = dir + '|' + text;
+      if (!force && sig === lastReq) return;
+      lastReq = sig;
+      inflight?.abort();
+      inflight = new AbortController();
+      setBusy(true);
+      try {
+        const r = await fetch(`${API}/api/translate`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text, ...(dir !== 'auto' ? { direction: dir } : {}) }),
+          signal: inflight.signal,
+        });
+        const t = await r.json();
+        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — the dictionary below still works, or use the Telegram bot.' : (t.error ?? r.status));
+        last = t;
+        $('out').style.display = 'block';
+        $('tr').textContent = (t.direction === 'en->pt' ? '🇵🇹 ' : '🇬🇧 ') + t.translation;
+        $('fix').innerHTML = (t.corrections ?? []).length
+          ? '<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ Your text had a slip</div>' +
+            t.corrections.map((c) =>
+              `<div><code>${esc(c.wrong)}</code> → <code style="color:var(--accent)">${esc(c.right)}</code>` +
+              (c.why ? ` <span class="muted">— ${esc(c.why)}</span>` : '') + '</div>').join('') +
+            (t.corrected_source ? `<div class="muted" style="font-size:14px;">Correct version: <em>${esc(t.corrected_source)}</em></div>` : '')
+          : '';
+        $('lit').textContent = t.literal && t.literal !== t.translation ? 'literally: ' + t.literal : '';
+        $('diff').innerHTML = (t.br_diff ?? []).length
+          ? '<div style="color:var(--red); font-weight:600; margin-bottom:6px;">🇵🇹 Portugal, not Brazil</div>' +
+            t.br_diff.map((d) =>
+              `<div><code style="color:var(--accent)">${esc(d.pt)}</code>` +
+              ` <span class="muted">— in Brazil</span> <code>${esc(d.br)}</code>` +
+              (d.gloss ? ` <span class="muted">(${esc(d.gloss)})</span>` : '') + '</div>'
+            ).join('')
+          : '';
+        $('note').textContent = t.note || '';
+        pushHist(text, t);
+      } catch (e) {
+        if (e.name !== 'AbortError') $('status').textContent = 'error: ' + e.message;
+        setBusy(false);
+        return;
+      }
+      setBusy(false);
+    }
+
+    function onInput() {
+      const v = $('src').value;
+      $('counter').textContent = `${v.length} / 600`;
+      $('clear').style.display = v ? 'block' : 'none';
+    }
+    $('go').addEventListener('click', () => run(true));
+    $('src').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run(true);
+    });
+    $('src').addEventListener('input', () => {
+      onInput();
+      clearTimeout(debounce);
+      debounce = setTimeout(run, 1000);
+    });
+    $('clear').onclick = () => {
+      $('src').value = '';
+      onInput();
+      lastReq = '';
+      $('out').style.display = $('dictbox').style.display = $('exbox').style.display = 'none';
+      $('src').focus();
+    };
+    document.querySelectorAll('.chip').forEach((c) => {
+      c.addEventListener('click', () => { $('src').value = c.textContent; onInput(); run(true); });
+    });
+
+    $('speak').addEventListener('click', () => {
+      if (!last) return;
+      say(last.direction === 'en->pt' ? last.translation : last.source, $('speak'));
+    });
+    $('copy').addEventListener('click', async () => {
+      if (!last) return;
+      await navigator.clipboard.writeText(last.translation);
+      $('copy').textContent = '✅';
+      setTimeout(() => { $('copy').textContent = '📋'; }, 1200);
+    });
+
+    // ?q= deep link — the dictionary and history hand words to this page.
+    const q0 = new URLSearchParams(location.search).get('q');
+    if (q0) { $('src').value = q0; onInput(); run(true); }
+    renderHist();
+  </script>
+</BaseLayout>

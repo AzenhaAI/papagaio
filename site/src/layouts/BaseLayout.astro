@@ -121,7 +121,7 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
     <nav>
       <a href={`${base}/coach/`}>AI Coach</a>
       <a href={`${base}/practice/`}>Cards</a>
-      <a href={`${base}/`}>Translate</a>
+      <a href={`${base}/translate/`}>Translate</a>
       <a href={`${base}/dictionary/`}>Dictionary</a>
       <a href={`${base}/phrasebook/`}>Phrasebook</a>
       <a href={`${base}/verbs/`}>Verbs</a>
@@ -138,7 +138,8 @@ const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpa
       <strong style="font-size:18px;">Menu</strong>
       <button id="drawer-close" aria-label="Close" style="background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer;">✕</button>
     </div>
-    <a class="drawer-link" href={`${base}/`}>🔤 Translator</a>
+    <a class="drawer-link" href={`${base}/?home`}>🏠 Home</a>
+    <a class="drawer-link" href={`${base}/translate/`}>🔤 Translator</a>
     <a class="drawer-link" href={`${base}/practice/`}>🎴 Practice</a>
     <a class="drawer-link" href={`${base}/coach/`}>🎭 AI coach</a>
     <a class="drawer-link" href={`${base}/read/`}>📰 Reader</a>

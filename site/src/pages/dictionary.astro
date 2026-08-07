@@ -409,6 +409,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     document.getElementById('q').addEventListener('input', render);
     document.getElementById('btn-pt').onclick = () => load('pt');
     document.getElementById('btn-en').onclick = () => load('en');
+    // ?q= deep link — the translator and external pages hand words to this page.
+    const q0 = new URLSearchParams(location.search).get('q');
+    if (q0) document.getElementById('q').value = q0;
     load('pt');
   </script>
   <style is:global>

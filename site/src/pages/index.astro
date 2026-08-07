@@ -2,6 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
+  <script is:inline>
+    // The tool people open daily is the dictionary — land there by default.
+    // The marketing landing stays reachable at /?home (linked from the menu).
+    if (!location.search.includes('home')) location.replace('dictionary/');
+  </script>
   <section style="background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
     border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
     padding:28px 26px; margin-bottom:34px;">
@@ -46,6 +51,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <a class="tile" href="dictionary/">
       <span class="tile-emoji">📖</span><strong>Dictionary</strong>
       <span class="muted">articles with examples and ten-tense conjugations</span>
+    </a>
+    <a class="tile" href="translate/">
+      <span class="tile-emoji">🔤</span><strong>Translate</strong>
+      <span class="muted">guaranteed pt-PT, Brazilian divergences flagged</span>
     </a>
     <a class="tile" href="phrasebook/">
       <span class="tile-emoji">💬</span><strong>Phrasebook</strong>
@@ -175,67 +184,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     The Portuguese actually spoken in Portugal and Madeira. Big translators
     default to the Brazilian variant — PapaGaio always answers in pt-PT and
     marks every word where the two diverge.
+    <a href="translate/">Open the translator →</a>
   </p>
-
-  <div class="panel" style="margin-top: 22px;">
-    <div id="dir" style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
-      <button data-d="auto" class="dirbtn active">⇄ Auto</button>
-      <button data-d="en->pt" class="dirbtn">🇬🇧 EN → 🇵🇹 PT</button>
-      <button data-d="pt->en" class="dirbtn">🇵🇹 PT → 🇬🇧 EN</button>
-    </div>
-    <textarea id="src" rows="3" maxlength="600" placeholder="Type a phrase in English or Portuguese…"
-      style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
-             border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
-    <div class="muted" id="counter" style="font-size:12.5px; text-align:right; margin-top:4px;">0 / 600</div>
-    <div id="chips" style="display:flex; gap:8px; flex-wrap:wrap; margin-top:8px;">
-      <button class="chip">Where is the nearest pharmacy?</button>
-      <button class="chip">Queria uma bica e um pastel de nata</button>
-      <button class="chip">Can I pay by card?</button>
-      <button class="chip">O elevador está avariado outra vez</button>
-    </div>
-    <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
-      <button class="btn" id="go">Translate</button>
-      <span id="spin" style="display:none; width:18px; height:18px; border:2.5px solid var(--panel2); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite;"></span>
-      <span class="muted" id="status"></span>
-      <span class="muted" id="dirhint" style="font-size:13.5px;">Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.</span>
-    </div>
-    <style is:global>
-      .dirbtn {
-        background: var(--panel2); color: var(--muted); border: 1px solid #2a4433;
-        border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer;
-      }
-      .dirbtn.active { background: var(--accent); color: #08130c; font-weight: 600; border-color: var(--accent); }
-      .chip {
-        background: none; border: 1px dashed #2a4433; color: var(--muted); border-radius: 20px;
-        padding: 5px 12px; font: inherit; font-size: 13.5px; cursor: pointer;
-      }
-      .chip:hover { color: var(--text); border-color: var(--accent); }
-      .iconbtn { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 2px 6px; }
-      @keyframes spin { to { transform: rotate(360deg); } }
-      .hist { cursor: pointer; }
-      .hist:hover { color: var(--text); }
-    </style>
-    <div id="out" style="display:none; margin-top:18px;">
-      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-        <div id="tr" style="font-size:22px; font-weight:600;"></div>
-        <button class="iconbtn" id="speak" title="Listen">🔊</button>
-        <button class="iconbtn" id="copy" title="Copy">📋</button>
-      </div>
-      <div id="fix" style="margin-top:8px;"></div>
-      <div id="lit" class="muted" style="font-style:italic;"></div>
-      <div id="diff" style="margin-top:12px;"></div>
-      <div id="note" class="muted" style="margin-top:10px;"></div>
-      <div class="muted" style="margin-top:16px; font-size:14px;">
-        Want it as a flashcard with audio?
-        <a href="https://t.me/papagaio_bot">Send it to the bot</a> — one tap adds it to your deck.
-      </div>
-    </div>
-  </div>
-
-  <div id="histbox" class="panel" style="margin-top:14px; display:none;">
-    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">Recent (stored only in your browser)</div>
-    <div id="histlist"></div>
-  </div>
 
   <h2>How it works</h2>
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
@@ -282,140 +232,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     free, with no premium tier. <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/about/`}>More →</a>
   </p>
 
-  <script>
-    const $ = (id) => document.getElementById(id);
-    let dir = 'auto';
-    const HINTS = {
-      'auto': 'Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.',
-      'en->pt': 'English in — European Portuguese out.',
-      'pt->en': 'Portuguese in — English out.',
-    };
-    document.querySelectorAll('.dirbtn').forEach((b) => {
-      b.addEventListener('click', () => {
-        dir = b.dataset.d;
-        document.querySelectorAll('.dirbtn').forEach((x) => x.classList.toggle('active', x === b));
-        $('dirhint').textContent = HINTS[dir];
-        run(); // direction changed — retranslate what's in the box
-      });
-    });
-    const API = 'https://papagaio.kirshp.workers.dev';
-    let last = null;      // last result, for speak/copy
-    let lastReq = '';     // text+dir of the last fired request — skip duplicates
-    let inflight = null;  // AbortController of the request in flight
-    let debounce = null;  // live-translate timer
-
-    // Translation history lives in localStorage only.
-    const HKEY = 'pg_history';
-    const hist = () => JSON.parse(localStorage.getItem(HKEY) ?? '[]');
-    function pushHist(src, t) {
-      const h = [{ src, tr: t.translation, d: t.direction }, ...hist().filter((x) => x.src !== src)].slice(0, 10);
-      localStorage.setItem(HKEY, JSON.stringify(h));
-      renderHist();
-    }
-    function renderHist() {
-      const h = hist();
-      $('histbox').style.display = h.length ? 'block' : 'none';
-      $('histlist').innerHTML = h.map((x, i) =>
-        `<div class="muted hist" data-i="${i}" style="padding:4px 0; font-size:14.5px;">` +
-        `${x.src} <span style="color:var(--accent)">→</span> ${x.tr}</div>`).join('');
-      document.querySelectorAll('.hist').forEach((el) => {
-        el.onclick = () => { $('src').value = hist()[el.dataset.i].src; run(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-      });
-    }
-
-    function setBusy(b) {
-      $('go').disabled = b;
-      $('spin').style.display = b ? 'inline-block' : 'none';
-      if (b) $('status').textContent = '';
-    }
-
-    async function run(force = false) {
-      const text = $('src').value.trim();
-      if (!text || text.length < 2) return;
-      const sig = dir + '|' + text;
-      if (!force && sig === lastReq) return; // same text, same direction — nothing to do
-      lastReq = sig;
-      inflight?.abort();
-      inflight = new AbortController();
-      setBusy(true);
-      try {
-        const r = await fetch(`${API}/api/translate`, {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text, ...(dir !== 'auto' ? { direction: dir } : {}) }),
-          signal: inflight.signal,
-        });
-        const t = await r.json();
-        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — try again tomorrow, or use the Telegram bot.' : (t.error ?? r.status));
-        last = t;
-        $('out').style.display = 'block';
-        $('tr').textContent = (t.direction === 'en->pt' ? '🇵🇹 ' : '🇬🇧 ') + t.translation;
-        $('fix').innerHTML = (t.corrections ?? []).length
-          ? '<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ Your text had a slip</div>' +
-            t.corrections.map((c) =>
-              `<div><code>${c.wrong}</code> → <code style="color:var(--accent)">${c.right}</code>` +
-              (c.why ? ` <span class="muted">— ${c.why}</span>` : '') + '</div>').join('') +
-            (t.corrected_source ? `<div class="muted" style="font-size:14px;">Correct version: <em>${t.corrected_source}</em></div>` : '')
-          : '';
-        $('lit').textContent = t.literal && t.literal !== t.translation ? 'literally: ' + t.literal : '';
-        $('diff').innerHTML = (t.br_diff ?? []).length
-          ? '<div style="color:var(--red); font-weight:600; margin-bottom:6px;">🇵🇹 Portugal, not Brazil</div>' +
-            t.br_diff.map((d) =>
-              `<div><code style="color:var(--accent)">${d.pt}</code>` +
-              ` <span class="muted">— in Brazil</span> <code>${d.br}</code>` +
-              (d.gloss ? ` <span class="muted">(${d.gloss})</span>` : '') + '</div>'
-            ).join('')
-          : '';
-        $('note').textContent = t.note || '';
-        pushHist(text, t);
-      } catch (e) {
-        if (e.name !== 'AbortError') $('status').textContent = 'error: ' + e.message;
-        setBusy(false);
-        return;
-      }
-      setBusy(false);
-    }
-
-    $('go').addEventListener('click', () => run(true));
-    $('src').addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run(true);
-    });
-    // Live translate: fire ~1s after typing pauses, Google-Translate style.
-    $('src').addEventListener('input', () => {
-      $('counter').textContent = `${$('src').value.length} / 600`;
-      clearTimeout(debounce);
-      debounce = setTimeout(run, 1000);
-    });
-    document.querySelectorAll('.chip').forEach((c) => {
-      c.addEventListener('click', () => { $('src').value = c.textContent; run(); });
-    });
-
-    // 🔊 — synthesize the Portuguese side of the result via /api/tts.
-    $('speak').addEventListener('click', async () => {
-      if (!last) return;
-      const ptSide = last.direction === 'en->pt' ? last.translation : last.source;
-      $('speak').textContent = '⏳';
-      try {
-        const r = await fetch(`${API}/api/tts`, {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text: ptSide, course: 'pt' }),
-        });
-        if (!r.ok) throw new Error(r.status);
-        new Audio(URL.createObjectURL(await r.blob())).play();
-      } catch { $('status').textContent = 'audio failed'; }
-      $('speak').textContent = '🔊';
-    });
-
-    $('copy').addEventListener('click', async () => {
-      if (!last) return;
-      await navigator.clipboard.writeText(last.translation);
-      $('copy').textContent = '✅';
-      setTimeout(() => { $('copy').textContent = '📋'; }, 1200);
-    });
-
-    renderHist();
-  </script>
 <script>
   // The headline numbers come from the data, not from prose that goes stale.
   fetch('https://papagaio.kirshp.workers.dev/api/counts').then((r) => r.json()).then((c) => {
