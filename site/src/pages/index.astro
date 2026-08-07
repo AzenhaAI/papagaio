@@ -3,9 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout>
   <script is:inline>
-    // The tool people open daily is the dictionary — land there by default.
+    // The tool people open daily is the translator — land there by default.
     // The marketing landing stays reachable at /?home (linked from the menu).
-    if (!location.search.includes('home')) location.replace('dictionary/');
+    if (!location.search.includes('home')) location.replace('translate/');
   </script>
   <section style="background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
     border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
