@@ -90,11 +90,17 @@ const en = readWords('lexicon_en').map((w) => {
   };
 });
 
-// --- examples pack, recovered from the generated SQL ---
+// --- examples pack, recovered from the generated SQL (direct + pivoted) ---
 const examples = [];
 for (const line of readFileSync(join(root, 'build', 'examples.sql'), 'utf8').split('\n')) {
   const m = line.match(/^INSERT INTO examples .* VALUES \('(pt-ru|pt-en|en-ru)', '((?:[^']|'')*)', '((?:[^']|'')*)', '(?:[^']|'')*'\);$/);
   if (m) examples.push({ p: m[1], s: m[2].replace(/''/g, "'"), d: m[3].replace(/''/g, "'") });
+}
+if (existsSync(join(root, 'build', 'examples_pivot.sql'))) {
+  for (const line of readFileSync(join(root, 'build', 'examples_pivot.sql'), 'utf8').split('\n')) {
+    const m = line.match(/^INSERT INTO examples .* VALUES \('pt-ru', '((?:[^']|'')*)', '((?:[^']|'')*)', '(?:[^']|'')*', 'en'\);$/);
+    if (m) examples.push({ p: 'pt-ru', s: m[1].replace(/''/g, "'"), d: m[2].replace(/''/g, "'"), v: 'en' });
+  }
 }
 
 // --- Russian inflection map: «кошкой» → «кошка», for offline Russian search ---

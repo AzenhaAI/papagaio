@@ -169,6 +169,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         $('exbox').style.display = exs.length ? 'block' : 'none';
         $('exlist').innerHTML = exs.map((e, i) =>
           `<div class="exline">${esc(e.src)} <button class="iconbtn exspeak" data-t="${esc(e.src)}" style="font-size:15px;">🔊</button>` +
+          (e.via ? `<span class="muted" style="font-size:11px;"> · via ${esc(e.via.toUpperCase())}</span>` : '') +
           `<div class="muted" style="font-size:14px;">${esc(e.dst)}</div></div>`).join('');
         document.querySelectorAll('.exspeak').forEach((b) => { b.onclick = () => say(b.dataset.t, b); });
       } catch { /* the dictionary layer is best-effort */ }

@@ -411,9 +411,11 @@ export async function handleApi(request, env, path) {
 
     const list = [...forms].slice(0, 60);
     const cond = list.map((_, i) => `instr(' '||fold||' ', ?${i + 2}) > 0`).join(' OR ');
+    // Direct pairs outrank pivoted ones (via='en'): human beats chained.
     const { results } = await env.DB.prepare(
-      `SELECT src, dst FROM examples WHERE pair = ?1 AND (${cond})
-       ORDER BY length(src) LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)}`
+      `SELECT src, dst, via FROM examples WHERE pair = ?1 AND (${cond})
+       ORDER BY via IS NOT NULL, length(src)
+       LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)}`
     ).bind(pair, ...list.map((f) => ` ${f} `)).all();
     return json({ examples: results });
   }
@@ -431,10 +433,17 @@ export async function handleApi(request, env, path) {
     const to = body?.to === 'ru' ? 'Russian' : 'European Portuguese (pt-PT, never Brazilian)';
     const from = body?.from === 'pt' ? 'European Portuguese' : 'English';
     if (!terms.length) return json({ error: 'terms required' }, 400);
+    // rich mode: a Multitran-style row instead of a one-worder — equivalents
+    // separated by «;», each with an optional bracketed domain/style hint.
+    const style = body?.rich
+      ? `2-4 equivalents separated by "; ", each optionally followed by a short ` +
+        `bracketed hint in ${to} marking domain, style or nuance — like ` +
+        `"кот (самец); кошка (о животном)". No other explanations.`
+      : `Short dictionary glosses, 1-4 words, no explanations.`;
     const raw = await chat(env, [
       { role: 'system', content:
-        `Translate each ${from} term into ${to}. Short dictionary glosses, 1-4 words, ` +
-        `no explanations. Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
+        `Translate each ${from} term into ${to}. ${style} ` +
+        `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
       { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
     ], { json: true, noFallback: true });
     try {
