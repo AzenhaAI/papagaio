@@ -356,15 +356,28 @@ export async function handleApi(request, env, path) {
     const raw = (sp.get('q') ?? '').trim().toLowerCase();
     const s = fold(raw);
     if (s.length < 2) return json({ q: raw, words: [] });
-    // Matching happens on the accent-blind column: "cao" must find "cão".
+    // Russian input may arrive in any case form — «кошкой» resolves to its
+    // lemma through the inflection table before the glosses are searched.
+    let ruQ = raw;
+    if (/[а-яё]/.test(raw)) {
+      const hit = await env.DB.prepare(
+        `SELECT lemma FROM ru_forms WHERE form = ?1`
+      ).bind(raw).first().catch(() => null);
+      if (hit?.lemma) ruQ = hit.lemma.toLowerCase();
+    }
+    // Matching happens on the accent-blind column: "cao" must find "cão" —
+    // and the stored Russian keeps its stress marks (ко́шка), so the acute is
+    // stripped at compare time.
     const { results } = await env.DB.prepare(
       `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
-       WHERE owner = 'lex' AND course = ?7 AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5 OR lower(trans_ru) LIKE ?4)
+       WHERE owner = 'lex' AND course = ?7 AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5
+         OR replace(lower(trans_ru), '́', '') LIKE ?4
+         OR replace(lower(trans_ru), '́', '') LIKE ?8)
        ORDER BY CASE WHEN fold = ?3 OR fold LIKE ?6 THEN 0
                      WHEN fold LIKE ?2 THEN 1
                      WHEN fold LIKE ?1 THEN 2 ELSE 3 END, freq
        LIMIT 25`
-    ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course).all();
+    ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course, `%${ruQ}%`).all();
     return json({ q: s, words: results });
   }
 

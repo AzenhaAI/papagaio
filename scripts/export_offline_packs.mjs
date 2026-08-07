@@ -30,7 +30,13 @@ const readWords = (dir) =>
   readdirSync(join(root, 'data', dir)).filter((f) => f.endsWith('.json')).sort()
     .flatMap((f) => JSON.parse(readFileSync(join(root, 'data', dir, f), 'utf8')).words);
 
-// --- Russian glosses: the wiktionary inversion plus every model batch we kept ---
+// --- Russian glosses: the deep pass (accents + sense notes) beats the flat
+// inversion, which beats a model one-worder. All three sources merge here.
+const deep = existsSync(join(root, 'build', 'ru_deep.json'))
+  ? JSON.parse(readFileSync(join(root, 'build', 'ru_deep.json'), 'utf8'))
+  : { pt: {}, en: {} };
+const deepLine = (list) => list?.slice(0, 4)
+  .map((x) => (x.s ? `${x.a ?? x.w} (${x.s})` : (x.a ?? x.w))).join('; ').slice(0, 240);
 const enrich = JSON.parse(readFileSync(join(root, 'build', 'ru_enrich.json'), 'utf8'));
 const modelRu = new Map();
 const modelFiles = [
@@ -55,7 +61,9 @@ for (const w of readWords('lexicon_ptdef')) {
   if (!ptDefs.has(w.term)) ptDefs.set(w.term, (w.defs ?? []).slice(0, 2).join(' | ').slice(0, 220));
 }
 const pt = readWords('lexicon').map((w) => {
-  const ru = enrich.pt[w.term]?.slice(0, 5).join(', ') ?? modelRu.get(w.term) ?? null;
+  const ru = deepLine(deep.pt[w.term.toLowerCase()])
+    ?? enrich.pt[w.term]?.slice(0, 5).join(', ')
+    ?? modelRu.get(w.term) ?? null;
   const d = ptDefs.get(w.term);
   ptDefs.delete(w.term);
   return {
@@ -71,12 +79,16 @@ for (const [term, d] of ptDefs) {
 }
 
 // --- en pack ---
-const en = readWords('lexicon_en').map((w) => ({
-  t: w.term, p: w.pos, r: w.rank,
-  e: (w.defs ?? []).slice(0, 2).join(' | ').slice(0, 300),
-  ...(w.pt?.length ? { pt: w.pt.slice(0, 4).join(', ') } : {}),
-  ...(w.ru?.length ? { ru: w.ru.slice(0, 5).join(', ') } : {}),
-}));
+const en = readWords('lexicon_en').map((w) => {
+  const ru = deepLine(deep.en[w.term.toLowerCase()])
+    ?? (w.ru?.length ? w.ru.slice(0, 5).join(', ') : null);
+  return {
+    t: w.term, p: w.pos, r: w.rank,
+    e: (w.defs ?? []).slice(0, 2).join(' | ').slice(0, 300),
+    ...(w.pt?.length ? { pt: w.pt.slice(0, 4).join(', ') } : {}),
+    ...(ru ? { ru } : {}),
+  };
+});
 
 // --- examples pack, recovered from the generated SQL ---
 const examples = [];
@@ -85,13 +97,19 @@ for (const line of readFileSync(join(root, 'build', 'examples.sql'), 'utf8').spl
   if (m) examples.push({ p: m[1], s: m[2].replace(/''/g, "'"), d: m[3].replace(/''/g, "'") });
 }
 
-const packs = { pt, en, examples };
+// --- Russian inflection map: «кошкой» → «кошка», for offline Russian search ---
+const ruForms = existsSync(join(root, 'build', 'ru_forms.json'))
+  ? JSON.parse(readFileSync(join(root, 'build', 'ru_forms.json'), 'utf8'))
+  : {};
+
+const packs = { pt, en, examples, ru_forms: ruForms };
 const manifest = { version: 1, updated: '2026-08-07', packs: {} };
 for (const [name, rows] of Object.entries(packs)) {
   const gz = gzipSync(JSON.stringify(rows), { level: 9 });
   writeFileSync(join(out, `${name}.json.gz`), gz);
-  manifest.packs[name] = { rows: rows.length, bytes: gz.length };
-  console.error(`${name}: ${rows.length} rows, ${(gz.length / 1e6).toFixed(1)} MB gz`);
+  const n = Array.isArray(rows) ? rows.length : Object.keys(rows).length;
+  manifest.packs[name] = { rows: n, bytes: gz.length };
+  console.error(`${name}: ${n} rows, ${(gz.length / 1e6).toFixed(1)} MB gz`);
 }
 writeFileSync(join(out, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 console.error('→ build/packs/');
