@@ -22,7 +22,10 @@ export function retrievability(t, s) {
 /** Interval in days until retrievability drops to DESIRED_R. */
 function intervalFor(s) {
   const days = (s / FACTOR) * (Math.pow(DESIRED_R, 1 / DECAY) - 1);
-  return Math.min(Math.max(Math.round(days), 1), MAX_INTERVAL);
+  // ±5% fuzz: twelve cards introduced the same Monday must not return as one
+  // Monday battalion for months. Harmless in Anki; expensive at 36 push slots.
+  const fuzzed = days * (0.95 + Math.random() * 0.1);
+  return Math.min(Math.max(Math.round(fuzzed), 1), MAX_INTERVAL);
 }
 
 function initialDifficulty(g) {

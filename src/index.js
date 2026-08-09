@@ -230,6 +230,31 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  if (text.startsWith('/spread')) {
+    // Back from a week away, the queue is a wall. The scheduler absorbs the
+    // backlog by spreading everything overdue across the coming seven days —
+    // the no-shaming rule expressed as code.
+    const { results: overdue } = await env.DB.prepare(
+      `SELECT card_id FROM user_cards WHERE user_id = ? AND due < ? ORDER BY due`
+    ).bind(uid, now()).all();
+    const n = overdue?.length ?? 0;
+    if (n < 8) {
+      await tg(env, 'sendMessage', { chat_id: chat,
+        text: `Only ${n} card${n === 1 ? '' : 's'} waiting — no backlog to spread. 🦜` });
+      return;
+    }
+    const updates = overdue.map((r, i) => {
+      const day = Math.floor((i / n) * 7);
+      const d = new Date(Date.now() + day * 86400000 + Math.floor(Math.random() * 6) * 3600000);
+      return env.DB.prepare(`UPDATE user_cards SET due = ? WHERE user_id = ? AND card_id = ?`)
+        .bind(d.toISOString(), uid, r.card_id);
+    });
+    for (let i = 0; i < updates.length; i += 50) await env.DB.batch(updates.slice(i, i + 50));
+    await tg(env, 'sendMessage', { chat_id: chat,
+      text: `📅 Spread ${n} overdue cards across the next 7 days. They'll come back a few at a time.` });
+    return;
+  }
+
   if (text.startsWith('/undo')) {
     // Cards arrive mid-workday; a fat-finger tap must not write a permanent
     // lapse into the history that FSRS tuning will later learn from.
@@ -960,7 +985,7 @@ async function handleCallback(cb, env) {
   if (card.note) result += `\nℹ️ ${card.note}`;
   if (!correct) result += `\n\n_You'll see this one again soon._`;
 
-  const isCaption = pending.exercise === 'audio' || pending.exercise === 'listen_sent';
+  const isCaption = ['audio', 'listen_sent', 'minpair'].includes(pending.exercise);
   const editMethod = isCaption ? 'editMessageCaption' : 'editMessageText';
   const textField = isCaption ? 'caption' : 'text';
   await tg(env, editMethod, {
@@ -1105,6 +1130,9 @@ async function sendExercise(env, user, opts = {}) {
     // Connected speech: hear the whole sentence, pick what it meant. The
     // skill that fails at a Funchal counter is never the isolated word.
     if (card.audio_ex && card.ex_trans) pool.push('listen_sent');
+    // A minimal-pair card exists to be confused with its twin — so the
+    // exercise is exactly that: hear one, choose between the two.
+    if (card.audio && card.tags?.includes('"minpair"') && card.note) pool.push('minpair');
     if (reps >= 2) pool.push('type');
     if (reps >= 2 && card.ex_t) pool.push('dictation');
     if (env.GROQ_API_KEY && reps >= 3) pool.push('voice');
@@ -1212,18 +1240,26 @@ async function sendExercise(env, user, opts = {}) {
   // Options are translations, except when the answer is the term itself —
   // and for sentence listening they are whole sentence translations.
   const askTrans = exercise === 't_ru' || exercise === 'audio';
-  const optCol = exercise === 'listen_sent' ? 'ex_trans' : askTrans ? 'trans' : 'term';
-  const { results: distractors } = await env.DB.prepare(
-    `SELECT ${optCol} AS v FROM cards
-     WHERE course = ? AND id != ? AND owner IS NULL AND pos IS NOT 'drill'
-       AND ${optCol} IS NOT NULL
-     ORDER BY RANDOM() LIMIT 3`
-  ).bind(course, card.id).all();
+  let options, correctIdx;
+  if (exercise === 'minpair') {
+    // Two buttons only: the word and its twin. The whole point is that
+    // random distractors would be trivially eliminable by length or letter.
+    correctIdx = Math.floor(Math.random() * 2);
+    options = correctIdx === 0 ? [card.term, card.note] : [card.note, card.term];
+  } else {
+    const optCol = exercise === 'listen_sent' ? 'ex_trans' : askTrans ? 'trans' : 'term';
+    const { results: distractors } = await env.DB.prepare(
+      `SELECT ${optCol} AS v FROM cards
+       WHERE course = ? AND id != ? AND owner IS NULL AND pos IS NOT 'drill'
+         AND ${optCol} IS NOT NULL
+       ORDER BY RANDOM() LIMIT 3`
+    ).bind(course, card.id).all();
 
-  const options = distractors.map((d) => d.v);
-  const correctIdx = Math.floor(Math.random() * 4);
-  options.splice(correctIdx, 0,
-    exercise === 'listen_sent' ? card.ex_trans : askTrans ? card.trans : card.term);
+    options = distractors.map((d) => d.v);
+    correctIdx = Math.floor(Math.random() * 4);
+    options.splice(correctIdx, 0,
+      exercise === 'listen_sent' ? card.ex_trans : askTrans ? card.trans : card.term);
+  }
 
   const keyboard = {
     inline_keyboard: [
@@ -1248,6 +1284,14 @@ async function sendExercise(env, user, opts = {}) {
       chat_id: user.chat_id,
       voice: env.AUDIO_BASE + card.audio_ex,
       caption: `🎧 *Listen to the sentence* — what does it mean?\n_Tap the meaning you heard._`,
+      parse_mode: 'Markdown',
+      reply_markup: keyboard,
+    });
+  } else if (exercise === 'minpair') {
+    sent = await tg(env, 'sendVoice', {
+      chat_id: user.chat_id,
+      voice: env.AUDIO_BASE + card.audio,
+      caption: `👂 *Twins* — which one did you hear?\n_One vowel decides. Tap it._`,
       parse_mode: 'Markdown',
       reply_markup: keyboard,
     });

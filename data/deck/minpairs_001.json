@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "deck": "minpairs_001",
+    "course": "pt",
+    "variant": "pt-PT",
+    "level": "A2-B1",
+    "note": "Minimal pairs — the sounds that decide whether you said grandmother or grandfather. Each card's note holds its twin; the bot plays one and offers both. Nasals, open/closed vowels, and the two Rs: the short enumerable list of what an ear trained on Russian actually confuses in European Portuguese."
+  },
+  "cards": [
+    { "id": "mp0001", "term": "avô", "trans": "grandfather", "pos": "noun", "gender": "m", "note": "avó", "ex_t": "O meu avô faz oitenta anos.", "ex_trans": "My grandfather turns eighty.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3001 },
+    { "id": "mp0002", "term": "avó", "trans": "grandmother", "pos": "noun", "gender": "f", "note": "avô", "ex_t": "A avó faz o melhor bolo de mel.", "ex_trans": "Grandma makes the best honey cake.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3002 },
+    { "id": "mp0003", "term": "pão", "trans": "bread", "pos": "noun", "gender": "m", "note": "pau", "ex_t": "Compra pão fresco na padaria.", "ex_trans": "Buy fresh bread at the bakery.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3003 },
+    { "id": "mp0004", "term": "pau", "trans": "stick, wood", "pos": "noun", "gender": "m", "note": "pão", "ex_t": "O cão trouxe um pau da praia.", "ex_trans": "The dog brought a stick from the beach.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3004 },
+    { "id": "mp0005", "term": "mão", "trans": "hand", "pos": "noun", "gender": "f", "note": "mau", "ex_t": "Dá-me a mão para atravessar.", "ex_trans": "Give me your hand to cross.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3005 },
+    { "id": "mp0006", "term": "mau", "trans": "bad", "pos": "adj", "note": "mão", "ex_t": "O tempo está mau hoje.", "ex_trans": "The weather is bad today.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3006 },
+    { "id": "mp0007", "term": "lã", "trans": "wool", "pos": "noun", "gender": "f", "note": "lá", "ex_t": "Esta camisola é de lã.", "ex_trans": "This sweater is wool.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3007 },
+    { "id": "mp0008", "term": "lá", "trans": "there", "pos": "adv", "note": "lã", "ex_t": "O café fica lá em cima.", "ex_trans": "The café is up there.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3008 },
+    { "id": "mp0009", "term": "caro", "trans": "expensive", "pos": "adj", "note": "carro", "ex_t": "Este restaurante é caro demais.", "ex_trans": "This restaurant is too expensive.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3009 },
+    { "id": "mp0010", "term": "carro", "trans": "car", "pos": "noun", "gender": "m", "note": "caro", "ex_t": "Deixei o carro no parque.", "ex_trans": "I left the car in the car park.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3010 },
+    { "id": "mp0011", "term": "coro", "trans": "choir", "pos": "noun", "gender": "m", "note": "corro", "ex_t": "Ela canta no coro da igreja.", "ex_trans": "She sings in the church choir.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3011 },
+    { "id": "mp0012", "term": "corro", "trans": "I run", "pos": "verb", "note": "coro", "ex_t": "Corro na marginal todas as manhãs.", "ex_trans": "I run along the seafront every morning.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3012 },
+    { "id": "mp0013", "term": "pôr", "trans": "to put", "pos": "verb", "note": "por", "ex_t": "Vou pôr a mesa para o jantar.", "ex_trans": "I'll set the table for dinner.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3013 },
+    { "id": "mp0014", "term": "por", "trans": "by, through", "pos": "prep", "note": "pôr", "ex_t": "Passámos por Câmara de Lobos.", "ex_trans": "We passed through Câmara de Lobos.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3014 },
+    { "id": "mp0015", "term": "vem", "trans": "he/she comes", "pos": "verb", "note": "vêm", "ex_t": "Ela vem cá amanhã.", "ex_trans": "She comes here tomorrow.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3015 },
+    { "id": "mp0016", "term": "vêm", "trans": "they come", "pos": "verb", "note": "vem", "ex_t": "Eles vêm de autocarro.", "ex_trans": "They come by bus.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3016 },
+    { "id": "mp0017", "term": "maçã", "trans": "apple", "pos": "noun", "gender": "f", "note": "massa", "ex_t": "Come uma maçã por dia.", "ex_trans": "Eat an apple a day.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3017 },
+    { "id": "mp0018", "term": "massa", "trans": "pasta, dough", "pos": "noun", "gender": "f", "note": "maçã", "ex_t": "A massa está quase pronta.", "ex_trans": "The pasta is almost ready.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3018 },
+    { "id": "mp0019", "term": "sonho", "trans": "dream", "pos": "noun", "gender": "m", "note": "sono", "ex_t": "Tive um sonho estranho esta noite.", "ex_trans": "I had a strange dream last night.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3019 },
+    { "id": "mp0020", "term": "sono", "trans": "sleep, sleepiness", "pos": "noun", "gender": "m", "note": "sonho", "ex_t": "Estou cheio de sono.", "ex_trans": "I'm really sleepy.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3020 },
+    { "id": "mp0021", "term": "pões", "trans": "you put", "pos": "verb", "note": "pois", "ex_t": "Onde é que pões as chaves?", "ex_trans": "Where do you put the keys?", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3021 },
+    { "id": "mp0022", "term": "pois", "trans": "well, indeed", "pos": "adv", "note": "pões", "ex_t": "Pois, tens razão.", "ex_trans": "Well, you're right.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3022 },
+    { "id": "mp0023", "term": "mundo", "trans": "world", "pos": "noun", "gender": "m", "note": "mudo", "ex_t": "Quero ver o mundo inteiro.", "ex_trans": "I want to see the whole world.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3023 },
+    { "id": "mp0024", "term": "mudo", "trans": "mute, silent", "pos": "adj", "note": "mundo", "ex_t": "O filme é mudo, mas diz tudo.", "ex_trans": "The film is silent, but says everything.", "tags": ["minpair", "som"], "unit": "minpair", "freq": 3024 }
+  ]
+}
