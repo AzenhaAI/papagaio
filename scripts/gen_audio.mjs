@@ -83,30 +83,38 @@ for (const file of readdirSync(deckDir).filter((f) => f.endsWith('.json')).sort(
     // 'say' overrides what the voice reads — siglas are letter names, and
     // GNR sounded out as one syllable helps nobody.
     term: c.say ?? c.term ?? c.pt ?? c.en,
+    // The example sentence gets its own mp3: connected speech is the skill
+    // the isolated word never trains.
+    ex: c.ex_t ?? null,
     course: deck.meta.course,
   });
 }
 
 let done = 0, skipped = 0, failed = 0;
 const sql = [];
+const jobs = [];
 for (const c of cards) {
-  const out = join(OUT_DIR, `${c.id}.mp3`);
+  jobs.push({ file: `${c.id}.mp3`, text: c.term, course: c.course, col: 'audio', id: c.id });
+  if (c.ex) jobs.push({ file: `${c.id}_ex.mp3`, text: c.ex, course: c.course, col: 'audio_ex', id: c.id });
+}
+for (const j of jobs) {
+  const out = join(OUT_DIR, j.file);
   if (existsSync(out) && statSync(out).size > 1000) {
     skipped++;
-    sql.push(`UPDATE cards SET audio = '${c.id}.mp3' WHERE id = '${c.id}';`);
+    sql.push(`UPDATE cards SET ${j.col} = '${j.file}' WHERE id = '${j.id}';`);
     continue;
   }
   try {
-    const audio = await synth(c.term, c.course);
+    const audio = await synth(j.text, j.course);
     if (audio.length < 1000) throw new Error('empty audio');
     writeFileSync(out, audio);
-    sql.push(`UPDATE cards SET audio = '${c.id}.mp3' WHERE id = '${c.id}';`);
+    sql.push(`UPDATE cards SET ${j.col} = '${j.file}' WHERE id = '${j.id}';`);
     done++;
-    process.stdout.write(`\r${done + skipped}/${cards.length} ${c.id} (${c.term})          `);
+    process.stdout.write(`\r${done + skipped}/${jobs.length} ${j.file}          `);
     await sleep(300); // be gentle with the free endpoint
   } catch (e) {
     failed++;
-    console.error(`\n${c.id} (${c.term}): ${e.message}`);
+    console.error(`\n${j.file}: ${e.message}`);
     await sleep(2000);
   }
 }

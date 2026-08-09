@@ -954,8 +954,9 @@ async function handleCallback(cb, env) {
   if (card.note) result += `\nℹ️ ${card.note}`;
   if (!correct) result += `\n\n_You'll see this one again soon._`;
 
-  const editMethod = pending.exercise === 'audio' ? 'editMessageCaption' : 'editMessageText';
-  const textField = pending.exercise === 'audio' ? 'caption' : 'text';
+  const isCaption = pending.exercise === 'audio' || pending.exercise === 'listen_sent';
+  const editMethod = isCaption ? 'editMessageCaption' : 'editMessageText';
+  const textField = isCaption ? 'caption' : 'text';
   await tg(env, editMethod, {
     chat_id: cb.message.chat.id,
     message_id: cb.message.message_id,
@@ -1090,6 +1091,9 @@ async function sendExercise(env, user, opts = {}) {
     const pool = ['t_ru', 'ru_t'];
     if (cloze) pool.push('cloze');
     if (card.audio) pool.push('audio');
+    // Connected speech: hear the whole sentence, pick what it meant. The
+    // skill that fails at a Funchal counter is never the isolated word.
+    if (card.audio_ex && card.ex_trans) pool.push('listen_sent');
     if (reps >= 2) pool.push('type');
     if (reps >= 2 && card.ex_t) pool.push('dictation');
     if (env.GROQ_API_KEY && reps >= 3) pool.push('voice');
@@ -1194,17 +1198,21 @@ async function sendExercise(env, user, opts = {}) {
     return true;
   }
 
-  // Options are translations, except when the answer is the term itself.
+  // Options are translations, except when the answer is the term itself —
+  // and for sentence listening they are whole sentence translations.
   const askTrans = exercise === 't_ru' || exercise === 'audio';
+  const optCol = exercise === 'listen_sent' ? 'ex_trans' : askTrans ? 'trans' : 'term';
   const { results: distractors } = await env.DB.prepare(
-    `SELECT ${askTrans ? 'trans' : 'term'} AS v FROM cards
+    `SELECT ${optCol} AS v FROM cards
      WHERE course = ? AND id != ? AND owner IS NULL AND pos IS NOT 'drill'
+       AND ${optCol} IS NOT NULL
      ORDER BY RANDOM() LIMIT 3`
   ).bind(course, card.id).all();
 
   const options = distractors.map((d) => d.v);
   const correctIdx = Math.floor(Math.random() * 4);
-  options.splice(correctIdx, 0, askTrans ? card.trans : card.term);
+  options.splice(correctIdx, 0,
+    exercise === 'listen_sent' ? card.ex_trans : askTrans ? card.trans : card.term);
 
   const keyboard = {
     inline_keyboard: [
@@ -1221,6 +1229,14 @@ async function sendExercise(env, user, opts = {}) {
       chat_id: user.chat_id,
       voice: env.AUDIO_BASE + card.audio,
       caption: `🔊 *Listen* — which word is it?\n_Tap the ${lang} word you heard._`,
+      parse_mode: 'Markdown',
+      reply_markup: keyboard,
+    });
+  } else if (exercise === 'listen_sent') {
+    sent = await tg(env, 'sendVoice', {
+      chat_id: user.chat_id,
+      voice: env.AUDIO_BASE + card.audio_ex,
+      caption: `🎧 *Listen to the sentence* — what does it mean?\n_Tap the meaning you heard._`,
       parse_mode: 'Markdown',
       reply_markup: keyboard,
     });

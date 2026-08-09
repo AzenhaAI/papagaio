@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS cards (
   tags     TEXT,               -- JSON array
   freq     INTEGER,            -- frequency rank = order of introduction
   audio    TEXT,               -- file name under /papagaio/audio/, no base URL
+  audio_ex TEXT,               -- the example sentence spoken, same folder
   owner    INTEGER,            -- NULL = shared deck; user id = added from a translation
   entry    TEXT                -- rich dictionary entry (JSON): meanings, synonyms,
                                -- collocations, grammar, conj, lit (public-domain quotes)
