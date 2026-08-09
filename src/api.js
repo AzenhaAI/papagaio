@@ -11,6 +11,7 @@ import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
 import { analyse } from './read.js';
 import { buildStats } from './stats.js';
+import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
 import { VERBS, findVerb, fold } from './verbs.js';
@@ -68,7 +69,13 @@ export async function handleApi(request, env, path) {
     }
     if (!body?.text?.trim()) return json({ error: 'text is required' }, 400);
     try {
-      return json(await translate(env, body.text, body.direction, body.ui));
+      const t = await translate(env, body.text, body.direction, body.ui);
+      // Corrections land in the ledger — the recurring ones become cards.
+      if (t.corrections?.length) {
+        const who = await authUser(env, request).catch(() => null);
+        if (who) await recordMistakes(env, who, t.corrections, 'translate').catch(() => {});
+      }
+      return json(t);
     } catch (e) {
       return json({ error: e.message }, 502);
     }

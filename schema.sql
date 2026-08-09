@@ -123,3 +123,19 @@ CREATE TABLE IF NOT EXISTS course_progress (
   attempts     INTEGER NOT NULL DEFAULT 0,
   PRIMARY KEY (user_id, lesson_id)
 );
+
+-- Every correction the coach or the translator hands out, remembered.
+-- The recurring ones ARE the syllabus: at three sightings a mistake becomes
+-- a card of its own (tagged 'mistake'), scheduled like any other.
+CREATE TABLE IF NOT EXISTS mistakes (
+  user_id  INTEGER NOT NULL,
+  course   TEXT    NOT NULL DEFAULT 'pt',
+  wrong    TEXT    NOT NULL,
+  right    TEXT    NOT NULL,
+  why      TEXT,
+  source   TEXT,               -- coach | translate
+  n        INTEGER NOT NULL DEFAULT 1,
+  promoted INTEGER NOT NULL DEFAULT 0,
+  last_at  TEXT,
+  PRIMARY KEY (user_id, wrong, right)
+);

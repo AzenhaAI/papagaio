@@ -5,6 +5,7 @@ import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
 import { fold, findVerb } from './verbs.js';
+import { recordMistakes, promoteMistakes } from './mistakes.js';
 import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
@@ -483,6 +484,11 @@ async function handleTranslation(env, uid, chatId, text) {
   } catch (e) {
     await tg(env, 'sendMessage', { chat_id: chatId, text: 'Translation failed: ' + e.message.slice(0, 120) });
     return;
+  }
+
+  // Corrections feed the ledger; at three sightings a mistake becomes a card.
+  if (t.corrections?.length) {
+    await recordMistakes(env, uid, t.corrections, 'translate').catch(() => {});
   }
 
   // The learner's target is always the non-English side.
@@ -1002,6 +1008,11 @@ function formatEntry(card, e) {
 
 async function tick(env) {
   const nowDate = new Date();
+  // Once a day (the first cron slot after 20:00 UTC), recurring mistakes
+  // graduate into cards — they arrive with tomorrow's queue, not mid-evening.
+  if (nowDate.getUTCHours() === 20 && nowDate.getUTCMinutes() < 5) {
+    await promoteMistakes(env).catch(() => {});
+  }
   // chat_id < 0 marks an app-only account created through POST /api/device —
   // there is no Telegram chat to push into, and the app schedules its own
   // reminders on the phone anyway.
