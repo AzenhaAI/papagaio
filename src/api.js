@@ -420,6 +420,19 @@ export async function handleApi(request, env, path) {
     return json({ examples: results });
   }
 
+  // An endless stream of real sentences for the cloze grinder — the
+  // Clozemaster idea on our own corpus: 90k pt-en pairs, free forever.
+  if (path === '/api/examples/random' && request.method === 'GET') {
+    const sp = new URL(request.url).searchParams;
+    const pair = ['pt-ru', 'pt-en', 'en-ru'].includes(sp.get('pair')) ? sp.get('pair') : 'pt-en';
+    const { results } = await env.DB.prepare(
+      `SELECT src, dst FROM examples WHERE pair = ?1 AND via IS NULL
+         AND length(src) BETWEEN 15 AND 70
+       ORDER BY RANDOM() LIMIT ?2`
+    ).bind(pair, Math.min(parseInt(sp.get('limit') ?? '20', 10) || 20, 50)).all();
+    return json({ examples: results });
+  }
+
   // Batch glossing: a list of terms in, one-line translations out. Powers the
   // hidden translation layers of the English deck (EN→PT for everyone,
   // EN→RU for the Russian mode). Public-capped like every model endpoint.
