@@ -29,7 +29,7 @@ console.error(`expand queue: ${need.length}`);
 const q = (v) => `'${String(v).replace(/'/g, "''")}'`;
 const out = join(root, 'build', 'ru_expand.sql');
 writeFileSync(out, '');
-let ok = 0, bad = 0;
+let ok = 0, bad = 0, dryStreak = 0;
 
 for (let i = 0; i < need.length; i += 20) {
   const batch = need.slice(i, i + 20);
@@ -47,6 +47,7 @@ for (let i = 0; i < need.length; i += 20) {
     await new Promise((res) => setTimeout(res, 5000));
   }
   if (Array.isArray(d.glosses) && d.glosses.length === batch.length) {
+    dryStreak = 0;
     const lines = batch.map(([t, p], k) => {
       const g = String(d.glosses[k] ?? '').trim().slice(0, 240);
       // A rich row has structure; a bare echo of what we had is not an upgrade.
@@ -57,6 +58,9 @@ for (let i = 0; i < need.length; i += 20) {
     ok += lines.length;
   } else {
     bad += batch.length;
+    // Five failed batches in a row means the budget is gone for the day —
+    // marching on just hammers the rate limiter for nothing.
+    if (++dryStreak >= 5) { console.error('budget dry — stopping this run'); break; }
   }
   if (i % 400 === 0) console.error(`${i}/${need.length} (ok ${ok}, failed ${bad})`);
   await new Promise((res) => setTimeout(res, 2400));

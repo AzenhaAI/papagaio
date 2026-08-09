@@ -440,12 +440,20 @@ export async function handleApi(request, env, path) {
         `bracketed hint in ${to} marking domain, style or nuance — like ` +
         `"кот (самец); кошка (о животном)". No other explanations.`
       : `Short dictionary glosses, 1-4 words, no explanations.`;
-    const raw = await chat(env, [
-      { role: 'system', content:
-        `Translate each ${from} term into ${to}. ${style} ` +
-        `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
-      { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
-    ], { json: true, noFallback: true });
+    // Batch jobs run on the SMALL model as primary: one-word glosses don't
+    // need 70b, and Groq budgets are per-model — so overnight batches and
+    // daytime users stop competing for the same tokens entirely.
+    let raw;
+    try {
+      raw = await chat(env, [
+        { role: 'system', content:
+          `Translate each ${from} term into ${to}. ${style} ` +
+          `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
+        { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
+      ], { json: true, noFallback: true, ...(isBatch ? { model: 'llama-3.1-8b-instant' } : {}) });
+    } catch (e) {
+      return json({ error: String(e.message ?? e).slice(0, 140) }, 429);
+    }
     try {
       const out = JSON.parse(raw);
       return json({ glosses: (out.glosses ?? []).map(String).slice(0, terms.length) });
