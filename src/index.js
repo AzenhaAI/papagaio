@@ -4,6 +4,7 @@ import { schedule } from './fsrs.js';
 import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
+import { fold, findVerb } from './verbs.js';
 import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
@@ -494,9 +495,43 @@ async function handleTranslation(env, uid, chatId, text) {
        note = excluded.note, created_at = excluded.created_at`
   ).bind(uid, term, trans, t.note ?? '', now()).run();
 
+  // Short queries get the dictionary riding along: the same lexicon articles
+  // and real sentences the site and the app answer with — straight from D1,
+  // no extra model call. A one-word ask deserves more than a one-word answer.
+  let extra = '';
+  try {
+    const clean = term.replace(/^([oa]s? |um |uma )/i, '').trim();
+    if (clean && clean.split(/\s+/).length <= 2) {
+      const strip = (s) => String(s ?? '').replace(/[*_`[\]]/g, '');
+      const w = fold(clean);
+      const { results: hits } = await env.DB.prepare(
+        `SELECT term, trans, pos, gender FROM cards
+         WHERE owner = 'lex' AND course = 'pt' AND (fold = ?1 OR fold LIKE ?2)
+         ORDER BY freq LIMIT 2`
+      ).bind(w, `${w} %`).all();
+      for (const h of hits ?? []) {
+        extra += `\n\n📖 *${strip(h.term)}*` +
+          (h.gender ? ` (${h.gender})` : '') + (h.pos ? ` — _${strip(h.pos)}_` : '') +
+          `\n${strip(h.trans).slice(0, 160)}`;
+      }
+      const { results: exs } = await env.DB.prepare(
+        `SELECT src, dst FROM examples WHERE pair = 'pt-en'
+           AND (instr(' '||fold||' ', ?1) > 0 OR instr(' '||fold||' ', ?2) > 0)
+         ORDER BY via IS NOT NULL, length(src) LIMIT 2`
+      ).bind(` ${w} `, ` ${w}s `).all();
+      if (exs?.length) {
+        extra += '\n';
+        for (const e of exs) extra += `\n💬 ${strip(e.src)} — _${strip(e.dst)}_`;
+      }
+      if (findVerb(clean)) {
+        extra += `\n\n🔀 Every tense: shpara.com/papagaio/verbs/`;
+      }
+    }
+  } catch { /* the dictionary block is a bonus, never a blocker */ }
+
   await tg(env, 'sendMessage', {
     chat_id: chatId,
-    text: formatTranslation(t),
+    text: formatTranslation(t) + extra,
     parse_mode: 'Markdown',
     reply_markup: { inline_keyboard: [[{ text: '➕ Learn this word', callback_data: 'add' }, { text: '🔊 Listen', callback_data: 'say' }]] },
   });
