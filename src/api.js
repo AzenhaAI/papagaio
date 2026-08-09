@@ -720,11 +720,15 @@ export async function handleApi(request, env, path) {
     const body = await request.json().catch(() => null);
     if (!body?.term || !body?.trans) return json({ error: 'term and trans are required' }, 400);
     const id = `u${uid.toString(36)}-${Date.now().toString(36)}`;
+    // The sentence the word was met in travels with it — a word captured from
+    // a Finanças letter without its sentence is a word stripped of the one
+    // thing that made it memorable (and of its future cloze exercise).
     await env.DB.batch([
       env.DB.prepare(
-        `INSERT INTO cards (id, course, term, trans, note, tags, freq, owner, unit)
-         VALUES (?, ?, ?, ?, ?, '["mine"]', 100000, ?, 'mine')`
-      ).bind(id, body.course ?? 'pt', body.term, body.trans, body.note ?? '', uid),
+        `INSERT INTO cards (id, course, term, trans, note, ex_t, ex_trans, tags, freq, owner, unit)
+         VALUES (?, ?, ?, ?, ?, ?, ?, '["mine"]', 100000, ?, 'mine')`
+      ).bind(id, body.course ?? 'pt', body.term, body.trans, body.note ?? '',
+             body.ex_t ?? null, body.ex_trans ?? null, uid),
       env.DB.prepare(`INSERT INTO user_cards (user_id, card_id, due) VALUES (?, ?, ?)`)
         .bind(uid, id, new Date().toISOString()),
     ]);
