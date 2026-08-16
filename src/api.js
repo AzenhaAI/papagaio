@@ -517,6 +517,71 @@ export async function handleApi(request, env, path) {
     return json({ examples: results });
   }
 
+  // Offline dictionary packs, served from our own hostname. GitHub releases
+  // are still where they live — free, versioned, no storage bill — but the
+  // app must never hold a URL with a personal account in it, so the download
+  // goes through here and the origin stays behind the Worker.
+  // Same idea for the app downloads the website offers: the APK and the
+  // desktop zips live on releases too, and their URLs were the other place a
+  // visitor could read the account name straight off a button.
+  if (path.startsWith('/dl/') && request.method === 'GET') {
+    const name = path.slice('/dl/'.length);
+    const RELEASES = {
+      'PapaGaio-1.0.0.apk': 'android-v1.0.0',
+      'PapaGaio-mac-1.0.0.zip': 'mac-v1.0.0',
+      'PapaGaio-windows-1.0.0.zip': 'windows-v1.0.0',
+    };
+    const tag = RELEASES[name];
+    if (!tag) return json({ error: 'not found' }, 404);
+    // Streamed, not cached: these are tens of megabytes and a download is a
+    // once-per-version event, so the edge would hold them for nothing.
+    // Range rides through: a 56 MB APK over hotel wifi has to be resumable,
+    // and swallowing the header would turn every hiccup into a fresh start.
+    const range = request.headers.get('range');
+    const upstream = await fetch(
+      `https://github.com/kirshp/papagaio/releases/download/${tag}/${name}`,
+      { redirect: 'follow', headers: range ? { range } : {} });
+    if (!upstream.ok && upstream.status !== 206) {
+      return json({ error: 'download unavailable' }, 502);
+    }
+    const headers = new Headers(CORS);
+    headers.set('content-type', 'application/octet-stream');
+    headers.set('content-disposition', `attachment; filename="${name}"`);
+    headers.set('accept-ranges', 'bytes');
+    for (const h of ['content-length', 'content-range']) {
+      const v = upstream.headers.get(h);
+      if (v) headers.set(h, v);
+    }
+    return new Response(upstream.body, { status: upstream.status, headers });
+  }
+
+  if (path.startsWith('/packs/') && request.method === 'GET') {
+    const name = path.slice('/packs/'.length);
+    if (!/^[a-z_]+\.json\.gz$|^manifest\.json$/.test(name)) {
+      return json({ error: 'not found' }, 404);
+    }
+    const cache = caches.default;
+    const key = new Request(`https://papagaio.cache/packs/v1/${name}`);
+    const hit = await cache.match(key);
+    if (hit) return hit;
+
+    const origin =
+      `https://github.com/kirshp/papagaio/releases/download/packs-v1/${name}`;
+    const upstream = await fetch(origin, { redirect: 'follow' });
+    if (!upstream.ok) return json({ error: 'pack unavailable' }, 502);
+    const resp = new Response(upstream.body, {
+      headers: {
+        'content-type': name.endsWith('.gz') ? 'application/gzip' : 'application/json',
+        // A pack changes when we rebuild it; a day at the edge is plenty and
+        // keeps a fresh install off GitHub's rate limits.
+        'cache-control': 'public, max-age=86400',
+        ...CORS,
+      },
+    });
+    await cache.put(key, resp.clone());
+    return resp;
+  }
+
   // An endless stream of real sentences for the cloze grinder — the
   // Clozemaster idea on our own corpus: 90k pt-en pairs, free forever.
   if (path === '/api/examples/random' && request.method === 'GET') {

@@ -71,7 +71,10 @@ export default {
       }
       return new Response('ok');
     }
-    if (url.pathname.startsWith('/api/')) {
+    // /packs/ rides the same handler: it is the offline dictionary download,
+    // proxied so the app never holds a URL pointing at a personal account.
+    if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/packs/') ||
+        url.pathname.startsWith('/dl/')) {
       return handleApi(request, env, url.pathname);
     }
     return new Response('PapaGaio 🦜');

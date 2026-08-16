@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const GH = 'https://github.com/kirshp/papagaio/releases/download';
+// Downloads go through our own hostname, which proxies the release assets:
+// a store-bound product does not put an account name on a download button.
+const GH = 'https://papagaio.shpara.com/dl';
 ---
 <BaseLayout
   title="Get PapaGaio — every screen"
@@ -29,7 +31,7 @@ const GH = 'https://github.com/kirshp/papagaio/releases/download';
       <div>
         <h3>Android</h3>
         <p>Direct APK — installs outside Google Play; allow "unknown apps" when asked. Play Store listing is on its way.</p>
-        <a class="btn" href={`${GH}/android-v1.0.0/PapaGaio-1.0.0.apk`}>Download APK · 55 MB</a>
+        <a class="btn" href={`${GH}/PapaGaio-1.0.0.apk`}>Download APK · 55 MB</a>
       </div>
     </div>
 
@@ -47,7 +49,7 @@ const GH = 'https://github.com/kirshp/papagaio/releases/download';
       <div>
         <h3>macOS</h3>
         <p>The full app as a Mac citizen. Unsigned build: right-click → Open on first launch.</p>
-        <a class="btn" href={`${GH}/mac-v1.0.0/PapaGaio-mac-1.0.0.zip`}>Download for Mac · 50 MB</a>
+        <a class="btn" href={`${GH}/PapaGaio-mac-1.0.0.zip`}>Download for Mac · 50 MB</a>
       </div>
     </div>
 
@@ -56,7 +58,7 @@ const GH = 'https://github.com/kirshp/papagaio/releases/download';
       <div>
         <h3>Windows</h3>
         <p>Built fresh by CI. Unzip anywhere and run <code>papagaio_app.exe</code>; SmartScreen will want one reassuring click.</p>
-        <a class="btn" href={`${GH}/windows-v1.0.0/PapaGaio-windows-1.0.0.zip`}>Download for Windows</a>
+        <a class="btn" href={`${GH}/PapaGaio-windows-1.0.0.zip`}>Download for Windows</a>
       </div>
     </div>
 

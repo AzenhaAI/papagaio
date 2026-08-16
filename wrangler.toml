@@ -2,6 +2,14 @@ name = "papagaio"
 main = "src/index.js"
 compatibility_date = "2026-07-01"
 
+# The app ships this hostname inside a store binary, so it must not carry a
+# personal handle: papagaio.kirshp.workers.dev announced both the account and
+# the GitHub repo to anyone watching the traffic. workers.dev keeps working as
+# a fallback; everything published points here.
+routes = [
+  { pattern = "papagaio.shpara.com", custom_domain = true },
+]
+
 [triggers]
 crons = ["*/5 * * * *"]
 

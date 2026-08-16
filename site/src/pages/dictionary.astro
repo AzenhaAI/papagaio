@@ -41,11 +41,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     const AUDIO = 'https://shpara.com/papagaio/audio/';
-    const API = 'https://papagaio.kirshp.workers.dev/api/deck';
-    const LOOKUP = 'https://papagaio.kirshp.workers.dev/api/lookup';
-    const SEARCH = 'https://papagaio.kirshp.workers.dev/api/search';
-    const TTS = 'https://papagaio.kirshp.workers.dev/api/tts';
-    const CONJ = 'https://papagaio.kirshp.workers.dev/api/conjugate';
+    const API = 'https://papagaio.shpara.com/api/deck';
+    const LOOKUP = 'https://papagaio.shpara.com/api/lookup';
+    const SEARCH = 'https://papagaio.shpara.com/api/search';
+    const TTS = 'https://papagaio.shpara.com/api/tts';
+    const CONJ = 'https://papagaio.shpara.com/api/conjugate';
     const list = document.getElementById('list');
     let all = [];      // loaded cards of the current course
     let tag = null;    // active tag filter
@@ -406,7 +406,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       render();
     }
     renderHist();
-    fetch('https://papagaio.kirshp.workers.dev/api/counts').then((r) => r.json())
+    fetch('https://papagaio.shpara.com/api/counts').then((r) => r.json())
       .then((c) => {
         document.getElementById('lexcount').textContent = c.lexicon.toLocaleString('en-GB');
         if (c.lex_pt_en) {
