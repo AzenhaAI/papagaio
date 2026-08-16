@@ -9,6 +9,11 @@ compatibility_date = "2026-07-01"
 routes = [
   { pattern = "papagaio.shpara.com", custom_domain = true },
 ]
+# Adding routes turns the workers.dev subdomain OFF unless it is asked for
+# explicitly — which instantly 404s every already-installed app, since a
+# shipped binary keeps calling the hostname it was built with. Keep it alive:
+# it costs nothing and it is the fallback for every old download out there.
+workers_dev = true
 
 [triggers]
 crons = ["*/5 * * * *"]
