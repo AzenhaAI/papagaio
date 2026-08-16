@@ -1,7 +1,7 @@
 ---
 const { title = 'PapaGaio — AI Coach for European Portuguese', desc = 'A live AI conversation coach for European Portuguese (pt-PT): roleplay the caf\u00e9, the bank, AIMA — it hears you, talks back and corrects you. Plus a pt-PT translator, reader and flashcards. Free forever.' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://shpara.com').href;
+const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://azenha.ai').href;
 // The current section lights up in the nav — computed at build time from the
 // page's own path, so every page gets it for free.
 const here = Astro.url.pathname.replace(/\/$/, '');
@@ -22,7 +22,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <meta property="og:title" content={title} />
   <meta property="og:description" content={desc} />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://shpara.com/papagaio/og.png" />
+  <meta property="og:image" content="https://azenha.ai/papagaio/og.png" />
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content={canonical} />
   {import.meta.env.PROD && (
@@ -163,8 +163,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
     <button id="theme-toggle" class="drawer-link" style="background:none; border:0; font:inherit; text-align:left; cursor:pointer; width:100%;">🌗 Theme: <span id="theme-name">dark</span></button>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <a class="drawer-link" href="https://github.com/kirshp/papagaio">⭐ GitHub</a>
-    <a class="drawer-link" href="mailto:azenha.agent@gmail.com">✉️ Contact</a>
+    <a class="drawer-link" href="mailto:agent@azenha.ai">✉️ Contact</a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
     <a class="drawer-link" href={`${base}/apps/`}>⬇️ Apps — Android · iPhone · Mac · Windows</a>
   </aside>
@@ -234,8 +233,8 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <footer class="site">
     PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.
     · <a href={`${base}/privacy/`}>Privacy</a>
-    · <a href="https://github.com/kirshp/papagaio">Source on GitHub</a>
-    · Part of <a href="https://shpara.com">shpara.com</a>
+
+    · Part of <a href="https://azenha.ai">azenha.ai</a>
   </footer>
 </body>
 </html>

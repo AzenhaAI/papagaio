@@ -18,7 +18,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const API = 'https://papagaio.shpara.com/api/gloss';
+const API = 'https://papagaio.azenha.ai/api/gloss';
 const KEY = readFileSync(join(root, '.batch_key'), 'utf8').trim();
 
 const skipPath = join(root, 'build', 'ru_expand_skip.json');

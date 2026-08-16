@@ -13,7 +13,7 @@
 // Nothing here is generated — it is Wikipedia's own summary, CC BY-SA, shown
 // with attribution and a link back.
 
-const UA = 'PapaGaio/1.0 (https://shpara.com/papagaio)';
+const UA = 'PapaGaio/1.0 (https://azenha.ai/papagaio)';
 
 /// Parts of speech that never have an encyclopedia article worth reading.
 /// A verb resolves to philosophy, a preposition to grammar trivia.

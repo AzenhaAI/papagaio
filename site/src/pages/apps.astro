@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 // Downloads go through our own hostname, which proxies the release assets:
 // a store-bound product does not put an account name on a download button.
-const GH = 'https://papagaio.shpara.com/dl';
+const GH = 'https://papagaio.azenha.ai/dl';
 ---
 <BaseLayout
   title="Get PapaGaio — every screen"
@@ -31,7 +31,7 @@ const GH = 'https://papagaio.shpara.com/dl';
       <div>
         <h3>Android</h3>
         <p>Direct APK — installs outside Google Play; allow "unknown apps" when asked. Play Store listing is on its way.</p>
-        <a class="btn" href={`${GH}/PapaGaio-1.0.0.apk`}>Download APK · 55 MB</a>
+        <a class="btn" href="/dl/PapaGaio.apk">Download APK · 18 MB</a>
       </div>
     </div>
 
@@ -40,7 +40,7 @@ const GH = 'https://papagaio.shpara.com/dl';
       <div>
         <h3>iPhone</h3>
         <p>App Store release is in preparation. Until then, builds go out by hand — ask and you shall receive.</p>
-        <a class="btn" href="mailto:azenha.agent@gmail.com?subject=PapaGaio%20for%20iOS" style="background:var(--panel2); color:var(--text);">Request by email</a>
+        <a class="btn" href="mailto:agent@azenha.ai?subject=PapaGaio%20for%20iOS" style="background:var(--panel2); color:var(--text);">Request by email</a>
       </div>
     </div>
 

@@ -539,6 +539,10 @@ export async function handleApi(request, env, path) {
     // and swallowing the header would turn every hiccup into a fresh start.
     const range = request.headers.get('range');
     const upstream = await fetch(
+      // NOT a public URL — this is the storage behind the proxy, and the
+      // whole point is that visitors never see it. A blanket domain rewrite
+      // once turned it into azenha.ai and the Worker started fetching from
+      // itself: every download 502'd. Leave the host alone.
       `https://github.com/kirshp/papagaio/releases/download/${tag}/${name}`,
       { redirect: 'follow', headers: range ? { range } : {} });
     if (!upstream.ok && upstream.status !== 206) {
@@ -566,6 +570,7 @@ export async function handleApi(request, env, path) {
     if (hit) return hit;
 
     const origin =
+      // Same rule as /dl/: origin, not a link. Do not rewrite the host.
       `https://github.com/kirshp/papagaio/releases/download/packs-v1/${name}`;
     const upstream = await fetch(origin, { redirect: 'follow' });
     if (!upstream.ok) return json({ error: 'pack unavailable' }, 502);

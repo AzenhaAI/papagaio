@@ -481,7 +481,7 @@ async function handleUpdate(update, env) {
       }
     }
 
-    out += `\n\n_Full picture: shpara.com/papagaio/progress_`;
+    out += `\n\n_Full picture: azenha.ai/papagaio/progress_`;
     await tg(env, 'sendMessage', { chat_id: chat, text: out, parse_mode: 'Markdown' });
     return;
   }
@@ -561,7 +561,7 @@ async function handleTranslation(env, uid, chatId, text) {
         for (const e of exs) extra += `\n💬 ${strip(e.src)} — _${strip(e.dst)}_`;
       }
       if (findVerb(clean)) {
-        extra += `\n\n🔀 Every tense: shpara.com/papagaio/verbs/`;
+        extra += `\n\n🔀 Every tense: azenha.ai/papagaio/verbs/`;
       }
     }
   } catch { /* the dictionary block is a bonus, never a blocker */ }
