@@ -43,6 +43,67 @@ async function underPublicCap(env, request) {
   return (row?.n ?? 0) <= PUBLIC_DAILY_CAP;
 }
 
+/**
+ * The lemma a Portuguese word form belongs to, or null.
+ *
+ * Verbs go through the conjugation engine backwards — every form of all 439
+ * verbs is generated and compared, which is how "olhare" finds olhar. Nouns
+ * and adjectives get the plural rules, which are pure orthography in
+ * Portuguese: -ões/-ães/-ais/-is/-ns and the plain -s/-es.
+ */
+// Built once per isolate, not per request: 439 verbs × a dozen tenses is a
+// lot of string work to redo on every dictionary miss.
+let VERB_FORMS = null;
+function verbForms() {
+  if (VERB_FORMS) return VERB_FORMS;
+  VERB_FORMS = new Map();
+  for (const v of VERBS) {
+    const inf = v.inf.replace(/-se$/, '');
+    const c = conjugate(inf);
+    if (!c) continue;
+    for (const [tense, forms] of Object.entries(c)) {
+      for (const f of [forms].flat()) {
+        if (typeof f !== 'string' || !f) continue;
+        const k = fold(f);
+        // First verb wins: the frequency-ordered list puts the common one
+        // first, so "for" resolves to ser/ir the way a learner expects.
+        if (!VERB_FORMS.has(k)) VERB_FORMS.set(k, { word: inf, kind: 'verb', tense, gloss: v.gloss });
+      }
+    }
+  }
+  return VERB_FORMS;
+}
+
+/**
+ * Lemmas a Portuguese word form might belong to, best guess first.
+ *
+ * Verbs come from the conjugation engine run backwards — that is how "olhare"
+ * finds olhar. Nouns and adjectives get the plural rules, which in Portuguese
+ * are pure orthography: -ões/-ães/-ais/-éis/-is/-ns and the plain -s/-es.
+ */
+function lemmaCandidates(folded, course) {
+  if (course !== 'pt' || !folded || folded.includes(' ')) return [];
+  const out = [];
+  const verb = verbForms().get(folded);
+  if (verb && verb.word !== folded) out.push(verb);
+
+  const plural = (w) => ({ word: w, kind: 'plural' });
+  if (folded.endsWith('oes')) out.push(plural(`${folded.slice(0, -3)}ao`));
+  if (folded.endsWith('aes')) out.push(plural(`${folded.slice(0, -3)}ao`));
+  if (folded.endsWith('ais')) out.push(plural(`${folded.slice(0, -3)}al`));
+  if (folded.endsWith('eis')) out.push(plural(`${folded.slice(0, -3)}el`));
+  if (folded.endsWith('ois')) out.push(plural(`${folded.slice(0, -3)}ol`));
+  if (folded.endsWith('uis')) out.push(plural(`${folded.slice(0, -3)}ul`));
+  if (folded.endsWith('is')) out.push(plural(`${folded.slice(0, -2)}il`));
+  if (folded.endsWith('ns')) out.push(plural(`${folded.slice(0, -2)}m`));
+  if (folded.endsWith('es')) out.push(plural(folded.slice(0, -2)));
+  if (folded.endsWith('s')) out.push(plural(folded.slice(0, -1)));
+  // Last resort, a typo guard: one letter too many turns olhar into "olhare",
+  // and a dictionary that answers "nothing" to that is being pedantic.
+  if (folded.length >= 5) out.push({ word: folded.slice(0, -1), kind: 'spelling' });
+  return out.filter((c) => c.word.length >= 2 && c.word !== folded);
+}
+
 /** Resolves x-device-token to a user id, or null. */
 async function authUser(env, request) {
   const token = request.headers.get('x-device-token');
@@ -385,7 +446,36 @@ export async function handleApi(request, env, path) {
                      WHEN fold LIKE ?1 THEN 2 ELSE 3 END, freq
        LIMIT 25`
     ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course, `%${ruQ}%`).all();
-    return json({ q: s, words: results });
+
+    // A headword is a lemma; the reader met a FORM. "gatos" used to answer
+    // with gato-pingado and gatonet — real rows, so the old empty-results
+    // gate never fired — while gato itself was one plural rule away. Resolve
+    // the form whenever nothing matched the spelling EXACTLY, and let the
+    // lemma lead; the substring neighbours keep their place underneath.
+    const exact = (results ?? []).some((r) => {
+      const f = fold(r.term);
+      return f === s || f.startsWith(`${s} `);
+    });
+    if (exact) return json({ q: s, words: results });
+
+    for (const lemma of lemmaCandidates(s, course)) {
+      const f = fold(lemma.word);
+      const { results: byLemma } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
+         WHERE owner = 'lex' AND course = ?3 AND (fold = ?1 OR fold LIKE ?2)
+         ORDER BY freq LIMIT 25`
+      ).bind(f, `${f} %`, course).all();
+      if (byLemma?.length) {
+        const seen = new Set(byLemma.map((r) => r.id));
+        const rest = (results ?? []).filter((r) => !seen.has(r.id));
+        return json({
+          q: s,
+          words: [...byLemma, ...rest].slice(0, 25),
+          from_form: { form: s, ...lemma },
+        });
+      }
+    }
+    return json({ q: s, words: results ?? [] });
   }
 
   // Real sentences containing a word, with their translation — Tatoeba pairs.

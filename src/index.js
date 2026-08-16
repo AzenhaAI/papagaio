@@ -517,8 +517,11 @@ async function handleTranslation(env, uid, chatId, text) {
   }
 
   // The learner's target is always the non-English side.
-  const term = t.direction === 'en->pt' ? t.translation : t.source;
-  const trans = t.direction === 'en->pt' ? t.source : t.translation;
+  // Whichever side is Portuguese is the side worth learning; when neither is
+  // (en->ru through the switcher), the output is still the answer.
+  const ptIsOutput = !t.direction.startsWith('pt->');
+  const term = ptIsOutput ? t.translation : t.source;
+  const trans = ptIsOutput ? t.source : t.translation;
 
   await env.DB.prepare(
     `INSERT INTO tr_last (user_id, course, term, trans, note, created_at) VALUES (?, 'pt', ?, ?, ?, ?)

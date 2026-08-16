@@ -110,7 +110,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       $('fromchip').textContent = LANGS[from];
       $('tochip').textContent = LANGS[to];
       $('dirhint').textContent = $('auto').checked
-        ? 'Auto: I detect the language and translate the other way. Portuguese output is always pt-PT.'
+        ? `Auto: I detect what you typed and translate it into ${LANGS[to]}. Portuguese output is always pt-PT.`
         : `${LANGS[from]} in — ${LANGS[to]} out.`;
     }
     $('swap').onclick = () => { [from, to] = [to, from]; $('auto').checked = false; drawPair(); run(true); };
@@ -193,7 +193,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const text = $('src').value.trim();
       if (!text || text.length < 2) return;
       dictAndExamples(text);
-      const dir = $('auto').checked ? 'auto' : `${from}->${to}`;
+      // Auto describes the INPUT only — the target chip still decides where
+      // the text lands, the way Yandex does it.
+      const dir = $('auto').checked ? `auto->${to}` : `${from}->${to}`;
       const sig = dir + '|' + text;
       if (!force && sig === lastReq) return;
       lastReq = sig;
@@ -204,14 +206,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         const r = await fetch(`${API}/api/translate`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text, ...(dir !== 'auto' ? { direction: dir } : {}) }),
+          body: JSON.stringify({ text, direction: dir }),
           signal: inflight.signal,
         });
         const t = await r.json();
         if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — the dictionary below still works, or use the Telegram bot.' : (t.error ?? r.status));
         last = t;
         $('out').style.display = 'block';
-        $('tr').textContent = (t.direction === 'en->pt' ? '🇵🇹 ' : '🇬🇧 ') + t.translation;
+        const FLAG = { pt: '🇵🇹', en: '🇬🇧', ru: '🇷🇺' };
+        const outLang = String(t.direction ?? '').split('->')[1];
+        $('tr').textContent = (FLAG[outLang] ?? '') + ' ' + t.translation;
+        // Say which language it heard, so a wrong guess is visible, not silent.
+        $('fromchip').textContent = $('auto').checked && t.detected
+          ? `${LANGS[t.detected] ?? t.detected} · auto` : LANGS[from];
         $('fix').innerHTML = (t.corrections ?? []).length
           ? '<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ Your text had a slip</div>' +
             t.corrections.map((c) =>
@@ -265,7 +272,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     $('speak').addEventListener('click', () => {
       if (!last) return;
-      say(last.direction === 'en->pt' ? last.translation : last.source, $('speak'));
+      say(last.direction.endsWith('->pt') ? last.translation : last.source, $('speak'));
     });
     $('copy').addEventListener('click', async () => {
       if (!last) return;
