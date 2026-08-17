@@ -11,10 +11,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>Contact</h2>
   <p style="max-width:640px;">
-    Email <a href="mailto:azenha.agent@gmail.com">azenha.agent@gmail.com</a> —
+    Email <a href="mailto:agent@azenha.ai">agent@azenha.ai</a> —
     questions, bug reports and suggestions are all welcome, usually answered
     within a couple of days. If you prefer chat, the bot
     <a href="https://t.me/papagaio_bot">@papagaio_bot</a> reaches the same place.
+  </p>
+  <!-- Written out again, unlinked: Cloudflare rewrites mailto links into its
+       own anti-spam redirect, so anyone reading the page source — an app
+       reviewer, for instance — sees a placeholder instead of an address. -->
+  <p class="muted" style="max-width:640px; font-size:14px;">
+    Support address, spelled out: agent [at] azenha.ai — Cloudflare rewrites
+    any address it recognises into an anti-spam redirect, so the readable copy
+    has to dodge the scanner to stay readable in the page source.
   </p>
 
   <h2>Common questions</h2>
