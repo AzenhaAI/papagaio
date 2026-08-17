@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Support — PapaGaio"
+  desc="Help for the PapaGaio apps: starting without Telegram, syncing progress between devices, offline dictionaries, audio and account deletion.">
+  <h1>Support</h1>
+  <p class="muted" style="max-width:640px;">
+    Help for the PapaGaio apps — iPhone, iPad, Android, Mac and Windows — and
+    for the Telegram bot.
+  </p>
+
+  <h2>Contact</h2>
+  <p style="max-width:640px;">
+    Email <a href="mailto:azenha.agent@gmail.com">azenha.agent@gmail.com</a> —
+    questions, bug reports and suggestions are all welcome, usually answered
+    within a couple of days. If you prefer chat, the bot
+    <a href="https://t.me/papagaio_bot">@papagaio_bot</a> reaches the same place.
+  </p>
+
+  <h2>Common questions</h2>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>Do I need an account?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      No. The app opens straight into the translator and the dictionary. Tap
+      <em>start here</em> on the Cards tab and it creates a profile on the
+      spot — no email, no password, nothing to remember.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>How do I get the same progress on my phone and my laptop?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      Send <code>/link</code> to <a href="https://t.me/papagaio_bot">@papagaio_bot</a>,
+      then paste the code it replies with into the app (Settings → Pairing
+      code). Every device holding that code shares one deck and one review
+      queue: start a card on the phone, finish it on the laptop.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>Does it work without internet?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      The dictionary does, once you download it: Settings → Offline
+      dictionaries. Cards you have already synced also review offline, and your
+      answers are sent when the connection returns. The AI coach, the translator
+      and photo translation need a connection — they think on the server.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>There is no sound.</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      Check the silent switch and the volume first — audio plays through the
+      media channel. Recorded audio is fetched once and cached, so the very
+      first play of a word needs a connection.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>Why European Portuguese only?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      Because that is the point. Most translators quietly answer in the
+      Brazilian variant; PapaGaio always answers in the Portuguese spoken in
+      Portugal and Madeira, and flags every word where the two differ.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>How do I delete my data?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      Send <code>/delete</code> to the bot, or email us from the address above
+      and say so — the profile, the cards you added and the review history go
+      with it. Deleting the app alone removes only the local copy.
+    </p>
+  </div>
+
+  <div class="panel" style="max-width:720px; margin-bottom:12px;">
+    <strong>Is it really free?</strong>
+    <p class="muted" style="margin:6px 0 0;">
+      Yes — no ads, no subscription, no premium tier, nothing locked. It runs on
+      free infrastructure and is built as a language-learning tool, not a
+      business.
+    </p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p class="muted" style="max-width:640px;">
+    What is stored and what is not:
+    <a href="/papagaio/privacy/">privacy policy</a>.
+  </p>
+</BaseLayout>

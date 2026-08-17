@@ -366,6 +366,38 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  if (text.startsWith('/delete')) {
+    // Two steps on purpose: one stray tap must not wipe a year of reviews.
+    if (text.trim() !== '/delete confirm') {
+      await tg(env, 'sendMessage', {
+        chat_id: chat,
+        text: '🗑 *Delete everything?*\n\nThis removes your profile, your review ' +
+              'history, the cards you added and every paired device. The shared ' +
+              'deck stays — it belongs to nobody.\n\nSend `/delete confirm` to go ' +
+              'ahead, or `/export` first to keep a copy.',
+        parse_mode: 'Markdown',
+      });
+      return;
+    }
+    await env.DB.batch([
+      env.DB.prepare(`DELETE FROM user_cards WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM events WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM dialog WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM tr_last WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM mistakes WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM course_progress WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM cards WHERE owner = ?`).bind(String(uid)),
+      env.DB.prepare(`DELETE FROM devices WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM users WHERE id = ?`).bind(uid),
+    ]);
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: 'Done — everything of yours is gone. /start begins again from zero.',
+    });
+    return;
+  }
+
   if (text.startsWith('/stop')) {
     const session = await env.DB.prepare(`SELECT * FROM dialog WHERE user_id = ?`).bind(uid).first();
     if (!session) {

@@ -19,7 +19,7 @@ import { VERBS, findVerb, fold } from './verbs.js';
 const CORS = {
   'access-control-allow-origin': '*',
   'access-control-allow-headers': 'content-type, x-device-token',
-  'access-control-allow-methods': 'GET, POST, OPTIONS',
+  'access-control-allow-methods': 'GET, POST, DELETE, OPTIONS',
 };
 
 const json = (data, status = 200) =>
@@ -887,6 +887,31 @@ export async function handleApi(request, env, path) {
     } catch (e) {
       return json({ error: e.message }, 502);
     }
+  }
+
+  // Deleting the account, from inside the app. Apple requires this of anything
+  // that can create one (5.1.1(v)), and it is the right thing anyway: the
+  // account was made with one tap, so it has to be undone with one.
+  //
+  // Everything keyed to this user goes: the profile, the schedule, the review
+  // history, the cards they wrote, the mistakes ledger, every paired device.
+  // The shared deck is untouched — it belongs to no one.
+  if (path === '/api/account' && request.method === 'DELETE') {
+    await env.DB.batch([
+      env.DB.prepare(`DELETE FROM user_cards WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM events WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM pending WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM dialog WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM tr_last WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM mistakes WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM course_progress WHERE user_id = ?`).bind(uid),
+      // Cards the user wrote themselves — owner holds their id.
+      env.DB.prepare(`DELETE FROM cards WHERE owner = ?`).bind(String(uid)),
+      // Devices last: this is the row that authenticated the request.
+      env.DB.prepare(`DELETE FROM devices WHERE user_id = ?`).bind(uid),
+      env.DB.prepare(`DELETE FROM users WHERE id = ?`).bind(uid),
+    ]);
+    return json({ ok: true });
   }
 
   if (path === '/api/mine' && request.method === 'GET') {

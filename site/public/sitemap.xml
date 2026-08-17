@@ -11,5 +11,6 @@
   <url><loc>https://azenha.ai/papagaio/apps/</loc><priority>0.6</priority></url>
   <url><loc>https://azenha.ai/papagaio/progress/</loc><priority>0.5</priority></url>
   <url><loc>https://azenha.ai/papagaio/about/</loc><priority>0.7</priority></url>
+  <url><loc>https://azenha.ai/papagaio/support/</loc><priority>0.5</priority></url>
   <url><loc>https://azenha.ai/papagaio/privacy/</loc><priority>0.3</priority></url>
 </urlset>
