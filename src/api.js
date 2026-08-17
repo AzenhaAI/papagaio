@@ -5,7 +5,7 @@ import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
 import { ensureEntry, lookupWord } from './entry.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap, scenarioList } from './coach.js';
-import { chat, transcribe } from './groq.js';
+import { chat, transcribe, availableModels } from './groq.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
@@ -600,6 +600,16 @@ export async function handleApi(request, env, path) {
     return json({ examples: results });
   }
 
+  // Which models the key can actually reach. Behind the batch key: it is a
+  // debugging tool, and this outage — a retired model taking five features
+  // down — is exactly the question it answers in one request.
+  if (path === '/api/models' && request.method === 'GET') {
+    if (!env.BATCH_KEY || request.headers.get('x-batch-key') !== env.BATCH_KEY) {
+      return json({ error: 'not found' }, 404);
+    }
+    return json({ models: await availableModels(env, { fresh: true }) });
+  }
+
   // Batch glossing: a list of terms in, one-line translations out. Powers the
   // hidden translation layers of the English deck (EN→PT for everyone,
   // EN→RU for the Russian mode). Public-capped like every model endpoint.
@@ -630,7 +640,7 @@ export async function handleApi(request, env, path) {
           `Translate each ${from} term into ${to}. ${style} ` +
           `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
         { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
-      ], { json: true, noFallback: true, ...(isBatch ? { model: 'llama-3.1-8b-instant' } : {}) });
+      ], { json: true, noFallback: true, ...(isBatch ? { small: true } : {}) });
     } catch (e) {
       return json({ error: String(e.message ?? e).slice(0, 140) }, 429);
     }
