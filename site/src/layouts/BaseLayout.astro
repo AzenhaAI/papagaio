@@ -37,10 +37,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         if (localStorage.getItem('pg_consent') === 'yes') {
           const s = document.createElement('script');
           s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QM1PRCY7M1';
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M2PTQLF903';
           document.head.appendChild(s);
           gtag('js', new Date());
-          gtag('config', 'G-QM1PRCY7M1');
+          gtag('config', 'G-M2PTQLF903');
         }
       </script>
     </>
@@ -212,9 +212,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       consent.style.display = 'none';
       const s = document.createElement('script');
       s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QM1PRCY7M1';
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-M2PTQLF903';
       document.head.appendChild(s);
-      if (window.gtag) { gtag('js', new Date()); gtag('config', 'G-QM1PRCY7M1'); }
+      if (window.gtag) { gtag('js', new Date()); gtag('config', 'G-M2PTQLF903'); }
     };
     document.getElementById('consent-no').onclick = () => {
       localStorage.setItem('pg_consent', 'no');
