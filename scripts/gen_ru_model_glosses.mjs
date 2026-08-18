@@ -24,7 +24,10 @@ for (let i = 0; i < need.length; i += 20) {
       const r = await fetch(API, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-batch-key': KEY },
-        body: JSON.stringify({ terms: batch.map(([t]) => t), to: 'ru', from: 'pt' }),
+        // via:cf — this queue runs on the Workers AI lane. It is the biggest
+        // queue by far, and moving it off Groq means the two providers' daily
+        // budgets add up instead of being divided between three queues.
+        body: JSON.stringify({ terms: batch.map(([t]) => t), to: 'ru', from: 'pt', via: 'cf' }),
       });
       d = await r.json();
       if (Array.isArray(d.glosses) && d.glosses.length === batch.length) break;
@@ -33,10 +36,12 @@ for (let i = 0; i < need.length; i += 20) {
   }
   if (Array.isArray(d.glosses) && d.glosses.length === batch.length) {
     dryStreak = 0;
-    const lines = batch.map(([t, p], k) => {
+    const lines = batch.map(([t, p, id], k) => {
       const g = String(d.glosses[k] ?? '').trim().slice(0, 200);
       if (!g) return null;
-      return `UPDATE cards SET trans_ru = ${q(g)} WHERE id = ${q(`lex:${t}|${p}`)} AND trans_ru IS NULL;`;
+      // The queue carries the id since it spans lex: and lexpt: alike; older
+      // lists without one are all lex:, the prefix this rebuilt before.
+      return `UPDATE cards SET trans_ru = ${q(g)} WHERE id = ${q(id ?? `lex:${t}|${p}`)} AND trans_ru IS NULL;`;
     }).filter(Boolean);
     appendFileSync(out, lines.join('\n') + '\n');
     ok += lines.length;
@@ -47,6 +52,8 @@ for (let i = 0; i < need.length; i += 20) {
     if (++dryStreak >= 5) { console.error('budget dry — stopping this run'); break; }
   }
   if (i % 400 === 0) console.error(`${i}/${need.length} (ok ${ok}, failed ${bad})`);
-  await new Promise((res) => setTimeout(res, 2400)); // 30 RPM ceiling, politely under
+  // Workers AI throttles per request, not 30 RPM like Groq — a shorter pause
+  // is polite enough, and the retry loop above absorbs the occasional slap.
+  await new Promise((res) => setTimeout(res, 1200));
 }
 console.error(`done: ${ok} glosses, ${bad} failed → build/ru_model.sql`);

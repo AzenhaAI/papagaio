@@ -5,7 +5,8 @@ import { translate } from './translate.js';
 import { schedule } from './fsrs.js';
 import { ensureEntry, lookupWord } from './entry.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap, scenarioList } from './coach.js';
-import { chat, transcribe, availableModels } from './groq.js';
+import { chat, transcribe, availableModels, rateLimits } from './groq.js';
+import { chatCF } from './cfai.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
@@ -610,13 +611,29 @@ export async function handleApi(request, env, path) {
     return json({ models: await availableModels(env, { fresh: true }) });
   }
 
+  // How much budget is actually left, per model. The nightly batch only ever
+  // sees "429", which cannot tell a spent day from a busy minute — and the two
+  // call for opposite fixes: a bigger ceiling, or slower pacing. Behind the
+  // batch key like /api/models: it is an instrument, not a feature.
+  if (path === '/api/limits' && request.method === 'GET') {
+    if (!env.BATCH_KEY || request.headers.get('x-batch-key') !== env.BATCH_KEY) {
+      return json({ error: 'not found' }, 404);
+    }
+    if (!env.GROQ_API_KEY) return json({ error: 'not configured' }, 503);
+    const [small, big] = await Promise.all([
+      rateLimits(env, { small: true }),
+      rateLimits(env),
+    ]);
+    return json({ small, big });
+  }
+
   // Batch glossing: a list of terms in, one-line translations out. Powers the
   // hidden translation layers of the English deck (EN→PT for everyone,
   // EN→RU for the Russian mode). Public-capped like every model endpoint.
   if (path === '/api/gloss' && request.method === 'POST') {
-    if (!env.GROQ_API_KEY) return json({ error: 'not configured' }, 503);
     // Our own batch jobs authenticate past the public cap; the street stays capped.
     const isBatch = env.BATCH_KEY && request.headers.get('x-batch-key') === env.BATCH_KEY;
+    if (!env.GROQ_API_KEY && !(isBatch && env.AI)) return json({ error: 'not configured' }, 503);
     if (!isBatch && !(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
     const body = await request.json().catch(() => null);
     const terms = Array.isArray(body?.terms) ? body.terms.map(String).slice(0, 25) : [];
@@ -633,14 +650,28 @@ export async function handleApi(request, env, path) {
     // Batch jobs run on the SMALL model as primary: one-word glosses don't
     // need 70b, and Groq budgets are per-model — so overnight batches and
     // daytime users stop competing for the same tokens entirely.
+    const glossMessages = [
+      { role: 'system', content:
+        `Translate each ${from} term into ${to}. ${style} ` +
+        `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
+      { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
+    ];
     let raw;
     try {
-      raw = await chat(env, [
-        { role: 'system', content:
-          `Translate each ${from} term into ${to}. ${style} ` +
-          `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
-        { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
-      ], { json: true, noFallback: true, ...(isBatch ? { small: true } : {}) });
+      if (isBatch && body?.via === 'cf') {
+        // The second lane: Workers AI, whose quota is its own — a batch queue
+        // routed here adds to the night's throughput instead of dividing it.
+        // Batch-only: the public cap is tuned for one provider's budget.
+        ({ text: raw } = await chatCF(env, glossMessages));
+        // Workers AI has no JSON response mode; models often wrap the object
+        // in prose or a code fence, so cut the object out before parsing.
+        const start = raw.indexOf('{');
+        const end = raw.lastIndexOf('}');
+        if (start >= 0 && end > start) raw = raw.slice(start, end + 1);
+      } else {
+        raw = await chat(env, glossMessages,
+          { json: true, noFallback: true, ...(isBatch ? { small: true } : {}) });
+      }
     } catch (e) {
       return json({ error: String(e.message ?? e).slice(0, 140) }, 429);
     }
@@ -648,7 +679,11 @@ export async function handleApi(request, env, path) {
       const out = JSON.parse(raw);
       return json({ glosses: (out.glosses ?? []).map(String).slice(0, terms.length) });
     } catch {
-      return json({ error: 'bad model output' }, 502);
+      // Batch callers get a peek at what the model actually said: "bad model
+      // output" alone cannot distinguish a prose-wrapped answer from garbage,
+      // and the difference decides whether the parser or the prompt is at
+      // fault. The street sees only the plain error, as before.
+      return json({ error: 'bad model output', ...(isBatch ? { raw: String(raw).slice(0, 300) } : {}) }, 502);
     }
   }
 

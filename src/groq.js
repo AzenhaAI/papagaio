@@ -77,6 +77,36 @@ async function pick(env, preference, wanted) {
   return preference.find((m) => ids.includes(m)) ?? ids[0] ?? preference[0];
 }
 
+/**
+ * What the account actually has left, straight from Groq's own counters.
+ *
+ * The nightly batch only ever learns "429", and that one number hides two very
+ * different walls: the day's token budget and the per-minute one. Guessing
+ * between them is how the nightly ceiling ended up a hardcoded 4000 — so the
+ * ceiling now gets read off these headers instead of hope.
+ */
+export async function rateLimits(env, { small = false } = {}) {
+  const model = await pick(env, small ? SMALL_PREFERENCE : BIG_PREFERENCE, null);
+  // One token on the shortest possible prompt: the answer is irrelevant, the
+  // numbers ride on the headers — and a 429 carries the very same headers,
+  // which is precisely the moment we most want to read them.
+  const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      authorization: `Bearer ${env.GROQ_API_KEY}`,
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ model, messages: [{ role: 'user', content: 'ok' }], max_tokens: 1 }),
+  });
+  const out = { model, status: r.status };
+  for (const [k, v] of r.headers) {
+    if (k.startsWith('x-ratelimit-')) out[k.slice('x-ratelimit-'.length)] = v;
+  }
+  const retry = r.headers.get('retry-after');
+  if (retry) out['retry-after'] = retry;
+  return out;
+}
+
 export async function chat(env, messages, { json = false, model, noFallback = false, small = false } = {}) {
   const call = async (m) => {
     const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
