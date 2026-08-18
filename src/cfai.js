@@ -17,7 +17,6 @@ const MODELS = [
   '@cf/meta/llama-3.1-8b-instruct',
   '@cf/mistralai/mistral-small-3.1-24b-instruct',
   '@cf/google/gemma-3-12b-it',
-  '@cf/qwen/qwen1.5-14b-chat-awq',
 ];
 
 /**
@@ -26,7 +25,12 @@ const MODELS = [
  */
 export async function chatCF(env, messages, { maxTokens = 900 } = {}) {
   if (!env.AI) throw new Error('workers ai not configured');
-  let lastError;
+  // The FIRST refusal is the one worth reporting. When the day's neurons run
+  // out every model fails alike, and keeping the last error meant the lane
+  // blamed whichever name happened to sit at the end of the list — a
+  // deprecation notice from a model we would never have reached on a good day,
+  // hiding the real answer, which is simply "no budget left".
+  let firstError;
   for (const model of MODELS) {
     try {
       const out = await env.AI.run(model, { messages, max_tokens: maxTokens });
@@ -39,8 +43,8 @@ export async function chatCF(env, messages, { maxTokens = 900 } = {}) {
     } catch (e) {
       // A model the account cannot reach is not a failure of the request —
       // try the next name before giving up on the whole lane.
-      lastError = e;
+      firstError ??= e;
     }
   }
-  throw new Error('workers ai: ' + String(lastError?.message ?? 'empty answer').slice(0, 140));
+  throw new Error('workers ai: ' + String(firstError?.message ?? 'empty answer').slice(0, 140));
 }

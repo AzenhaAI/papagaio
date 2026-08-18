@@ -7,7 +7,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const API = 'https://papagaio.azenha.ai/api/gloss';
+const API = 'https://azenha.ai/api/gloss';
 
 const cards = [];
 for (const f of readdirSync(join(root, 'data', 'deck')).filter((x) => x.startsWith('en_core'))) {

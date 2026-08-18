@@ -58,8 +58,10 @@ const lines = [];
 let hits = 0, misses = 0;
 
 // The lexicon: id encodes term|pos already.
+const enKeys = new Set();
 for (const f of readdirSync(join(root, 'data', 'lexicon')).filter((x) => x.endsWith('.json')).sort()) {
   for (const w of JSON.parse(readFileSync(join(root, 'data', 'lexicon', f), 'utf8')).words) {
+    enKeys.add(`${w.term.toLowerCase()}|${w.pos}`);
     const g = pick(`${w.term.toLowerCase()}|${w.pos}`, w.term.toLowerCase());
     if (!g) { misses++; continue; }
     hits++;
@@ -81,6 +83,30 @@ for (const f of readdirSync(join(root, 'data', 'deck')).filter((x) => x.endsWith
   }
 }
 
+// The monolingual layer (lexpt: rows, words only the Portuguese Wiktionary
+// carries) is a separate population this pass never reached, so its Russian was
+// left entirely to the nightly model batches. Where ru-wiktionary knows the
+// word, a human-written gloss beats a generated one and costs no quota.
+// Written apart from ru.sql: these rows are being glossed by the model in
+// parallel, and the guard keeps this from overwriting what it produced.
+const lexptLines = [];
+let lexptHits = 0;
+const POSMAP = { intj: 'interj' };
+for (const f of readdirSync(join(root, 'data', 'lexicon_ptdef')).filter((x) => x.endsWith('.json')).sort()) {
+  for (const w of JSON.parse(readFileSync(join(root, 'data', 'lexicon_ptdef', f), 'utf8')).words) {
+    const pos = POSMAP[w.pos] ?? w.pos;
+    // Entries the English layer already carries were merged into a lex: card;
+    // no lexpt: row was ever minted for them.
+    if (enKeys.has(`${w.term.toLowerCase()}|${pos}`)) continue;
+    const g = pick(`${w.term.toLowerCase()}|${pos}`, w.term.toLowerCase());
+    if (!g) continue;
+    lexptHits++;
+    lexptLines.push(`UPDATE cards SET trans_ru = ${q(g)} WHERE id = ${q(`lexpt:${w.term}|${pos}`)} AND trans_ru IS NULL;`);
+  }
+}
+
 mkdirSync(join(root, 'build'), { recursive: true });
 writeFileSync(join(root, 'build', 'ru.sql'), lines.join('\n') + '\n');
+writeFileSync(join(root, 'build', 'ru_lexpt.sql'), lexptLines.join('\n') + '\n');
 console.error(`glosses: ${hits} matched, ${misses} without Russian — those stay English`);
+console.error(`lexpt layer: ${lexptHits} matched → build/ru_lexpt.sql`);

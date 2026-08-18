@@ -10,7 +10,13 @@ routes = [
   # azenha.ai is the product's home; shpara.com stays wired because binaries
   # already in the wild were built against it, and a hostname is forever once
   # it ships inside an app.
-  { pattern = "papagaio.azenha.ai", custom_domain = true },
+  #
+  # The API lives on the apex under /api/*, not on a subdomain of its own:
+  # papagaio.azenha.ai was never planned and has been deleted. Leaving its
+  # custom_domain entry here would have been worse than untidy — a deploy
+  # recreates whatever this list declares, so the next push would have
+  # resurrected the subdomain behind everyone's back.
+  { pattern = "azenha.ai/api/*", zone_name = "azenha.ai" },
   { pattern = "papagaio.shpara.com", custom_domain = true },
 ]
 # Adding routes turns the workers.dev subdomain OFF unless it is asked for
