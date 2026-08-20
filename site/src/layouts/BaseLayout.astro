@@ -103,13 +103,34 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       border-bottom: 2px solid var(--accent); padding-bottom: 2px;
     }
     header.site { flex-wrap: nowrap; }
-    /* Six links do not fit a phone: below this width the burger is the nav. */
+    /* Eight links do not fit a phone side by side, but hiding them outright left
+       the header empty and every section a tap away behind the burger. They stay,
+       as a strip that scrolls sideways and fades out before the burger; the burger
+       keeps the full list, including what the strip has no room for. */
     @media (max-width: 860px) {
-      header.site nav { display: none; }
-      header.site #burger { margin-left: auto; }
+      header.site { flex-wrap: nowrap; gap: 10px; }
+      header.site nav {
+        margin-left: 0; flex: 1 1 auto; min-width: 0; gap: 14px;
+        overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+        -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
+                mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
+      }
+      header.site nav::-webkit-scrollbar { display: none; }
+      header.site nav a { font-size: 14px; }
+      header.site .logo { font-size: 21px; flex: 0 0 auto; }
+      header.site #burger { margin-left: 0; flex: 0 0 auto; }
     }
     header.site #burger { margin-left: 4px; }
     main { max-width: var(--max); margin: 0 auto; padding: 28px 20px 60px; }
+    .intro-fold { margin: 0 0 18px; }
+    .intro-fold > summary {
+      cursor: pointer; list-style: none; color: var(--muted); font-size: 14px;
+      padding: 7px 0; border-bottom: 1px solid var(--panel2);
+    }
+    .intro-fold > summary::-webkit-details-marker { display: none; }
+    .intro-fold > summary::after { content: ' ▾'; }
+    .intro-fold[open] > summary::after { content: ' ▴'; }
+    .intro-fold[open] > summary { margin-bottom: 10px; }
     footer.site {
       max-width: var(--max); margin: 0 auto; padding: 24px 20px 40px;
       color: var(--muted); font-size: 13.5px; border-top: 1px solid var(--panel2);
@@ -168,6 +189,62 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     <a class="drawer-link" href={`${base}/apps/`}>⬇️ Apps — Android · iPhone · Mac · Windows</a>
   </aside>
   <main><slot /></main>
+
+  <script is:inline>
+    /* On a phone every tool page opened with its explanation: between 27 and 87
+       words before the first field, which on a small screen pushed the tool itself
+       off the bottom. The heading stays put and the prose folds behind it, so the
+       page opens on the thing it is for. Desktop is untouched — there is room there.
+       Written without ?. or ?? on purpose: one such token would throw on an older
+       Safari and take the whole script with it. */
+    (function () {
+      if (window.innerWidth > 860) return;
+      var main = document.querySelector('main');
+      if (!main) return;
+      var kids = Array.prototype.slice.call(main.children);
+      var interactive = 'input, textarea, select, button';
+      var idx = -1;
+      for (var i = 0; i < kids.length; i++) {
+        var k = kids[i];
+        if (k.matches && k.matches(interactive)) { idx = i; break; }
+        if (k.querySelector && k.querySelector(interactive)) { idx = i; break; }
+      }
+      if (idx < 1) return;
+      var start = (kids[0] && kids[0].tagName === 'H1') ? 1 : 0;
+      var intro = kids.slice(start, idx);
+      if (!intro.length) return;
+      var words = 0;
+      for (var j = 0; j < intro.length; j++) {
+        var t = (intro[j].textContent || '').trim();
+        if (t) words += t.split(/\s+/).length;
+      }
+      if (words < 25) return;
+      var d = document.createElement('details');
+      d.className = 'intro-fold';
+      var sum = document.createElement('summary');
+      sum.textContent = 'What this page is';
+      d.appendChild(sum);
+      main.insertBefore(d, intro[0]);
+      for (var n = 0; n < intro.length; n++) d.appendChild(intro[n]);
+    })();
+
+    /* The strip scrolls, so on a section further along it opens showing the first
+       links and not the one you are on. Bring the current section into view. */
+    (function () {
+      if (window.innerWidth > 860) return;
+      var nav = document.querySelector('header.site nav');
+      if (!nav) return;
+      var cur = nav.querySelector('a.active');
+      if (!cur) return;
+      /* offsetLeft is measured against the nearest positioned ancestor, which is
+         not this strip — using it put the active link half off the left edge.
+         Actual rectangles say where things really are. */
+      var navBox = nav.getBoundingClientRect();
+      var curBox = cur.getBoundingClientRect();
+      var delta = (curBox.left - navBox.left) - (navBox.width - curBox.width) / 2;
+      nav.scrollLeft = nav.scrollLeft + delta;
+    })();
+  </script>
 
   <div id="consent" style="display:none; position:fixed; bottom:14px; left:14px; right:14px; max-width:560px;
     margin:0 auto; background:var(--panel); border:1px solid var(--panel2); border-radius:14px;
