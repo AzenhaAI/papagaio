@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Privacy — PapaGaio">
   <h1>Privacy</h1>
-  <p class="muted">Last updated: 28 July 2026</p>
+  <p class="muted">Last updated: 20 August 2026</p>
 
   <h2>The short version</h2>
   <p style="max-width:640px;">
@@ -31,17 +31,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li>Dialog sessions with the AI coach keep only the recent turns needed for context, and are deleted at /stop.</li>
   </ul>
 
+  <h2>Mobile app (Android and iPhone)</h2>
+  <ul class="muted" style="max-width:640px; line-height:1.9;">
+    <li>Tapping <strong style="color:var(--text)">Start here</strong> creates an anonymous account on our server. There is no email, no password and no social sign-in — the account is identified by a random token stored securely on your device.</li>
+    <li>Tied to that token we keep your <strong style="color:var(--text)">learning progress</strong>: which cards you have answered, how you graded them and when each is due next. This is what lets the schedule survive a reinstall and stay in step with the Telegram bot if you pair them.</li>
+    <li>Cards you write yourself are stored with the account, as is the text you send to the reader and the recent turns of a coach conversation.</li>
+    <li>Voice recordings you make for pronunciation practice, and photos you point at Portuguese text, are sent for processing and are <strong style="color:var(--text)">not kept</strong> afterwards.</li>
+    <li>The app has no advertising, no analytics SDK and no crash reporter. Nothing about you is sold or handed to advertisers.</li>
+    <li><strong style="color:var(--text)">Delete everything from inside the app:</strong> Settings → Delete account. That erases the profile, the schedule, the review history, the cards you wrote and every paired device. It is immediate and cannot be undone.</li>
+  </ul>
+
   <h2>Third parties</h2>
   <ul class="muted" style="max-width:640px; line-height:1.9;">
     <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database.</li>
-    <li><strong style="color:var(--text)">Groq</strong> — translation, dialog and speech recognition.</li>
+    <li><strong style="color:var(--text)">Groq</strong> — translation, dialog, speech recognition and reading text from photos. Processing happens in the United States.</li>
     <li><strong style="color:var(--text)">Microsoft Edge TTS</strong> — audio synthesis (receives only the text to be spoken).</li>
   </ul>
 
   <h2>Your data, your call</h2>
   <p class="muted" style="max-width:640px;">
-    Want your bot data gone? Send /pause and email
+    In the app: <strong style="color:var(--text)">Settings → Delete account</strong>,
+    which removes everything at once. For the bot: send /pause and email
     <a href="mailto:agent@azenha.ai">agent@azenha.ai</a> — everything
-    tied to your Telegram id will be deleted.
+    tied to your Telegram id will be deleted. Either way, write to us at the
+    same address if you would rather we did it for you.
   </p>
 </BaseLayout>
