@@ -17,6 +17,18 @@ routes = [
   # recreates whatever this list declares, so the next push would have
   # resurrected the subdomain behind everyone's back.
   { pattern = "azenha.ai/api/*", zone_name = "azenha.ai" },
+  # The offline dictionary packs ride the apex too: build 3 fetches them from
+  # azenha.ai/packs/, so this route is part of the app's contract.
+  #
+  # /dl/* is deliberately NOT routed here. On azenha.ai that path is the
+  # site's own download folder (Pages: /dl/index.html plus three APKs), and
+  # claiming it broke every one of those downloads on 20.08.2026 — the only
+  # /dl link the PapaGaio page carries points at the Pages file, not at this
+  # Worker. The Worker's own /dl/ handler (GitHub-release proxy for the mac
+  # and windows zips that are too big for Pages) stays reachable where its
+  # consumers actually live: papagaio.shpara.com and workers.dev, which route
+  # every path.
+  { pattern = "azenha.ai/packs/*", zone_name = "azenha.ai" },
   { pattern = "papagaio.shpara.com", custom_domain = true },
 ]
 # Adding routes turns the workers.dev subdomain OFF unless it is asked for
