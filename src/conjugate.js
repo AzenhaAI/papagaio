@@ -15,16 +15,30 @@
 
 const P = 5;
 
-/** Orthography that keeps the sound when the ending changes. */
-function respell(stem, ending) {
+/** Orthography that keeps the sound when the ending changes.
+ *
+ * Which way a stem shifts depends on the conjugation, because the same letter
+ * is hard in one class and soft in the other. Applying both sets to every verb
+ * is what produced «fiço» and «esqueque» in the deck: c is hard in ficar, so it
+ * needs no ç before o, and soft in esquecer, so it needs no qu before e. */
+function respell(stem, ending, kind) {
   const soft = /^[ei]/.test(ending);
-  if (soft) {
-    if (stem.endsWith('c')) return stem.slice(0, -1) + 'qu' + ending;   // ficar → fique
-    if (stem.endsWith('g')) return stem.slice(0, -1) + 'gu' + ending;   // chegar → chegue
-    if (stem.endsWith('ç')) return stem.slice(0, -1) + 'c' + ending;    // começar → comece
-  } else {
-    if (stem.endsWith('c') && /^[ao]/.test(ending)) return stem.slice(0, -1) + 'ç' + ending; // conhecer → conheço
-    if (stem.endsWith('gu') && /^[ao]/.test(ending)) return stem.slice(0, -2) + 'g' + ending;
+  if (kind === 'ar') {
+    // Hard c/g: they take a u to stay hard in front of e/i…
+    if (soft) {
+      if (stem.endsWith('c')) return stem.slice(0, -1) + 'qu' + ending;   // ficar → fique
+      if (stem.endsWith('g')) return stem.slice(0, -1) + 'gu' + ending;   // chegar → chegue
+      if (stem.endsWith('ç')) return stem.slice(0, -1) + 'c' + ending;    // começar → comece
+    }
+    // …and are already right in front of a/o: ficar → fico, never fiço.
+    return stem + ending;
+  }
+  // -er / -ir: c and g are soft here, so a/o is the ending that needs help,
+  // and e/i leaves the stem alone: esquecer → esqueço but esquece, esqueci.
+  if (/^[ao]/.test(ending)) {
+    if (stem.endsWith('gu')) return stem.slice(0, -2) + 'g' + ending;     // erguer → ergo
+    if (stem.endsWith('c')) return stem.slice(0, -1) + 'ç' + ending;      // conhecer → conheço
+    if (stem.endsWith('g')) return stem.slice(0, -1) + 'j' + ending;      // proteger → protejo
   }
   return stem + ending;
 }
@@ -60,6 +74,30 @@ const REGULAR = {
 // Futuro and condicional attach to the whole infinitive, so they are regular for
 // almost every verb — only these three contract.
 const FUTURE_STEM = { fazer: 'far', dizer: 'dir', trazer: 'trar' };
+
+/** -ir verbs whose last stem vowel lifts — e→i, o→u — in the 1sg present and in
+ * every present subjunctive built on it: servir → sirvo, sirva; dormir → durmo,
+ * durma. Every other tense keeps the plain stem (servi, servia, servirei).
+ *
+ * Membership is lexical, not phonetic, so the verbs are listed rather than
+ * derived: seguir lifts (sigo) while emergir does not (emerjo), and no rule
+ * over the spelling separates them. A verb in IRREGULAR wins over this table. */
+const STEM_LIFT = {
+  e: ['aderir', 'advertir', 'competir', 'conferir', 'conseguir', 'consentir',
+      'despir', 'digerir', 'divertir', 'ferir', 'inserir', 'investir', 'mentir',
+      'perseguir', 'preferir', 'referir', 'refletir', 'repetir', 'seguir',
+      'sentir', 'servir', 'sugerir', 'transferir', 'vestir'],
+  o: ['cobrir', 'descobrir', 'dormir', 'encobrir', 'engolir', 'polir', 'tossir'],
+};
+
+/** Lift the last e or o in the stem; returns the stem unchanged for the rest. */
+function liftStem(verb, stem) {
+  const v = STEM_LIFT.e.includes(verb) ? 'e' : STEM_LIFT.o.includes(verb) ? 'o' : null;
+  if (!v) return stem;
+  const at = stem.lastIndexOf(v);
+  if (at < 0) return stem;
+  return stem.slice(0, at) + (v === 'e' ? 'i' : 'u') + stem.slice(at + 1);
+}
 
 /** Verbs whose stems change. Only the tenses that deviate are listed. */
 const IRREGULAR = {
@@ -241,13 +279,19 @@ export function conjugate(infinitive) {
   const stem = verb === 'pôr' ? 'po' : m[1];
   const kind = verb === 'pôr' ? 'er' : m[2];
   const R = REGULAR[kind];
-  const reg = (endings) => endings.map((e) => respell(stem, e));
+  const reg = (endings) => endings.map((e) => respell(stem, e, kind));
+
+  // The lifted stem carries the 1sg present and the whole present subjunctive.
+  const lifted = kind === 'ir' ? liftStem(verb, stem) : stem;
+  const lift = (endings) => endings.map((e) => respell(lifted, e, kind));
 
   const out = {
-    presente: irr?.presente ?? reg(R.presente),
+    presente: irr?.presente
+      ?? (lifted === stem ? reg(R.presente)
+        : [lift([R.presente[0]])[0], ...reg(R.presente).slice(1)]),
     pps: irr?.pps ?? reg(R.pps),
     imperfeito: irr?.imperfeito ?? reg(R.imperfeito),
-    presente_conj: irr?.presente_conj ?? reg(R.presente_conj),
+    presente_conj: irr?.presente_conj ?? lift(R.presente_conj),
     imperfeito_conj: irr?.imperfeito_conj ?? reg(R.imperfeito_conj),
   };
 

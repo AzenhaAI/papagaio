@@ -19,6 +19,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href={canonical} />
   <link rel="icon" href={`${base}/icon.svg`} type="image/svg+xml" />
+  <!-- Safari and the iOS home screen ignore SVG favicons; without these
+       the tab falls back to a blank page glyph. -->
+  <link rel="icon" href={`${base}/icon-32.png`} sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} sizes="180x180" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={desc} />
   <meta property="og:type" content="website" />
