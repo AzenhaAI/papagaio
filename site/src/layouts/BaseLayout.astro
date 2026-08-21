@@ -1,5 +1,5 @@
 ---
-const { title = 'PapaGaio — AI Coach for European Portuguese', desc = 'A live AI conversation coach for European Portuguese (pt-PT): roleplay the caf\u00e9, the bank, AIMA — it hears you, talks back and corrects you. Plus a pt-PT translator, reader and flashcards. Free forever.' } = Astro.props;
+const { title = 'PapaGaio', desc = 'A live AI conversation coach for European Portuguese (pt-PT): roleplay the caf\u00e9, the bank, AIMA — it hears you, talks back and corrects you. Plus a pt-PT translator, reader and flashcards. Free forever.' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://azenha.ai').href;
 // The current section lights up in the nav — computed at build time from the
