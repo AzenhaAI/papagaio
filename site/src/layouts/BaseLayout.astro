@@ -23,6 +23,13 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
        the tab falls back to a blank page glyph. -->
   <link rel="icon" href={`${base}/icon-32.png`} sizes="32x32" type="image/png" />
   <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} sizes="180x180" />
+  <!-- Added to a home screen, the shortcut is named from the manifest.
+       Without one Chrome falls back to the page title, which is how a
+       tab called "Translate into European Portuguese" ended up as an
+       icon label. short_name is the only string that fits under one. -->
+  <link rel="manifest" href={`${base}/manifest.webmanifest`} />
+  <meta name="theme-color" content="#0e1a14" />
+  <meta name="apple-mobile-web-app-title" content="PapaGaio" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={desc} />
   <meta property="og:type" content="website" />

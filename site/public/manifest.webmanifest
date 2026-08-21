@@ -1,0 +1,22 @@
+{
+  "name": "PapaGaio — European Portuguese",
+  "short_name": "PapaGaio",
+  "description": "European Portuguese dictionary, translator, verb conjugator and AI coach. Free forever.",
+  "id": "/papagaio/",
+  "scope": "/papagaio/",
+  "start_url": "/papagaio/translate/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e1a14",
+  "theme_color": "#0e1a14",
+  "icons": [
+    { "src": "/papagaio/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/papagaio/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/papagaio/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Dictionary", "url": "/papagaio/dictionary/" },
+    { "name": "Verbs", "url": "/papagaio/verbs/" },
+    { "name": "Cards", "url": "/papagaio/practice/" }
+  ]
+}

@@ -65,3 +65,13 @@ for (const px of [32, 180]) {
     .resize(px, px).png().toFile(join(WEB, name));
   console.log(`wrote ${name} (${px}px) → site/public/`);
 }
+
+// Home-screen icons for the manifest. Square, not rounded: Android applies its
+// own mask, and a pre-rounded square inside a circular mask loses its corners
+// twice. The bird is drawn smaller here for the same reason — a maskable icon
+// can be cropped to the middle ~80%.
+for (const px of [192, 512]) {
+  await sharp(Buffer.from(svg(S, flagBack(S) + parrot(S, 0.5))))
+    .resize(px, px).png().toFile(join(WEB, `icon-${px}.png`));
+  console.log(`wrote icon-${px}.png (${px}px) → site/public/`);
+}
