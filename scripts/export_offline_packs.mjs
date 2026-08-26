@@ -14,7 +14,7 @@
 //   manifest.json     row counts + byte sizes, what the app's download UI shows
 //
 // Run: node scripts/export_offline_packs.mjs   → build/packs/
-// Ship: gh release upload packs-v1 build/packs/* --repo kirshp/papagaio --clobber
+// Ship: gh release upload packs-v1 build/packs/* --repo Azenhaai/papagaio --clobber
 
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync, statSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';

@@ -572,8 +572,8 @@
       "trans": "I have a booking for ten",
       "pos": "phrase",
       "note": "no appointment, no entry — the AIMA rule",
-      "ex_t": "Tenho marcação para as dez, em nome de Kirill.",
-      "ex_trans": "I have a booking for ten, under the name Kirill.",
+      "ex_t": "Tenho marcação para as dez, em nome de Marco.",
+      "ex_trans": "I have a booking for ten, under the name Marco.",
       "tags": [
         "frase",
         "burocracia"
