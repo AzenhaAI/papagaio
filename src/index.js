@@ -119,22 +119,7 @@ async function handleUpdate(update, env) {
       `INSERT INTO users (id, chat_id, name, created_at) VALUES (?, ?, ?, ?)
        ON CONFLICT(id) DO UPDATE SET chat_id = excluded.chat_id, active = 1`
     ).bind(uid, chat, msg.from.first_name ?? '', now()).run();
-    await tg(env, 'setMyCommands', {
-      commands: [
-        { command: 'course', description: '🎓 The course — lessons with a goal' },
-        { command: 'talk',   description: '🎭 Free practice with the AI coach' },
-        { command: 'stop',   description: '🏁 End the dialog + error recap' },
-        { command: 'now',    description: 'A card right now' },
-        { command: 'drill',  description: '📐 Practise grammar on demand' },
-        { command: 'skip',   description: '⏭ Mark a topic you already know' },
-        { command: 'undo',   description: '↩️ Take back the last answer' },
-        { command: 'export', description: '💾 Download everything as JSON' },
-        { command: 'stats',  description: '📊 Statistics' },
-        { command: 'lang',   description: 'Languages: PT / EN / both' },
-        { command: 'pause',  description: 'Pause' },
-        { command: 'resume', description: 'Resume' },
-      ],
-    });
+    await publishCommands(env);
     await tg(env, 'sendMessage', {
       chat_id: chat,
       text:
@@ -144,6 +129,7 @@ async function handleUpdate(update, env) {
         'A card every 15 minutes during working hours (09:00–18:00) — one tap, ' +
         'back to work. And send me any phrase for a translation that is always ' +
         '*European* Portuguese, never Brazilian.\n\n' +
+        'Already speak some Portuguese? /level starts you further in.\n\n' +
         'Which languages are we learning?',
       parse_mode: 'Markdown',
       reply_markup: courseKeyboard(),
@@ -154,6 +140,22 @@ async function handleUpdate(update, env) {
   if (text.startsWith('/lang')) {
     await tg(env, 'sendMessage', {
       chat_id: chat, text: 'Which languages are we learning?', reply_markup: courseKeyboard(),
+    });
+    return;
+  }
+
+  if (text.startsWith('/level')) {
+    // Aileen, who already speaks some Portuguese, had to sit through "olá" to
+    // reach anything she needed. There is no CEFR field on a card, but the deck
+    // is ordered by frequency rank, and that ordering IS the level: knowing the
+    // first 400 words of a language is roughly where A2 ends.
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      text: '*Where do we start?*\n\nI can mark the easiest words as already known, so the cards begin where you actually are. Nothing is lost — skipped words still come back in a few weeks to be checked, and _✓ I already know this_ keeps working card by card.',
+      parse_mode: 'Markdown',
+      reply_markup: { inline_keyboard: START_LEVELS.map(([k, label, , hint]) => [
+        { text: `${label} — ${hint}`, callback_data: `lv:${k}` },
+      ]) },
     });
     return;
   }
@@ -649,8 +651,21 @@ async function pronunciationCheck(env, msg, pending) {
   const heard = await transcribe(env, bytes, card.course);
 
   const norm = (s) => s.toLowerCase().replace(/[.,!?;:¿¡"'«»…-]/g, ' ').replace(/\s+/g, ' ').trim();
-  const ok = norm(heard) === norm(card.term) || norm(heard).includes(norm(card.term));
-  const grade = ok ? 3 : 1;
+  const said = norm(heard);
+  const want = norm(card.term);
+  // Substring matching used to pass anything: "sim" lives inside "assim que
+  // possível", so a mis-heard sentence scored a clean hit and the learner was
+  // told they nailed a word they never said. Match whole words only, and only
+  // when the take is about as long as the target — a whole spoken sentence
+  // that happens to contain the word is not a pronunciation of that word.
+  const words = said.split(' ');
+  const wantWords = want.split(' ');
+  const containsWhole = wantWords.every((w) => words.includes(w));
+  const exact = said === want;
+  const ok = exact || (containsWhole && words.length <= wantWords.length + 2);
+  // One letter off, accents included: heard as a real attempt, not a hit.
+  const near = !ok && levenshtein(said, want) <= 1;
+  const grade = ok ? 3 : near ? 2 : 1;
 
   const uc = await env.DB.prepare(`SELECT * FROM user_cards WHERE user_id = ? AND card_id = ?`).bind(uid, card.id).first();
   const ns = schedule(uc, grade);
@@ -667,8 +682,10 @@ async function pronunciationCheck(env, msg, pending) {
 
   const text = ok
     ? `✅ Clean! I heard: "${heard}"`
-    : `🤏 I heard: "${heard}"\nTarget: *${card.term}*\nThe word comes back today — let's try again.`;
-  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown' });
+    : near
+      ? `👌 Almost — I heard: "${heard}"\nTarget: *${card.term}*\nOne sound away; it comes back soon.`
+      : `🤏 I heard: "${heard}"\nTarget: *${card.term}*\nThe word comes back today — let's try again.`;
+  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown', reply_markup: NEXT_ROW });
 }
 
 async function dialogTurn(env, msg, session) {
@@ -742,6 +759,67 @@ async function dialogTurn(env, msg, session) {
 async function handleCallback(cb, env) {
   const uid = cb.from.id;
   const data = cb.data ?? '';
+
+  // Placement: everything below the chosen rank is booked as known.
+  if (data.startsWith('lv:')) {
+    const row = START_LEVELS.find(([k]) => k === data.slice(3));
+    if (!row) return;
+    const [, label, upTo] = row;
+    const user = await getUser(env, uid);
+    const course = user ? pickCourse(user) : 'pt';
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    let n = 0;
+    if (upTo > 0) {
+      // One statement, not a batch: this touches a few hundred rows and D1
+      // batches are capped. Due dates are spread over a month and a half so the
+      // whole skipped block cannot come back on the same morning.
+      const r = await env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
+         SELECT ?1, c.id, 30, 4, 1, 0, 2,
+                datetime('now', '+' || (20 + abs(random()) % 25) || ' days'), ?2
+           FROM cards c
+          WHERE c.course = ?3 AND c.owner IS NULL AND c.freq <= ?4
+            AND (c.pos IS NULL OR c.pos != 'drill')
+            AND c.id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?1)`
+      ).bind(uid, now(), course, upTo).run();
+      n = r.meta?.changes ?? 0;
+    }
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id, message_id: cb.message.message_id,
+      text: n
+        ? `*Starting at ${label}.*\n\n${n} words booked as known — they come back over the next few weeks so I can check I believed you.\n\nNext card: /now`
+        : `*Starting at ${label}* — from the top, nothing skipped.\n\nNext card: /now`,
+      parse_mode: 'Markdown',
+    });
+    return;
+  }
+
+  // Continue the session without a command.
+  if (data === 'next' || data === 'stop') {
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    await tg(env, 'editMessageReplyMarkup', {
+      chat_id: cb.message.chat.id, message_id: cb.message.message_id,
+      reply_markup: { inline_keyboard: [] },
+    });
+    if (data === 'stop') {
+      await tg(env, 'sendMessage', {
+        chat_id: cb.message.chat.id,
+        text: 'Right — I keep the schedule. The next card comes at your usual slot, or say /now.',
+      });
+      return;
+    }
+    const user = await getUser(env, uid);
+    if (user) {
+      const sent = await sendExercise(env, user);
+      if (!sent) {
+        await tg(env, 'sendMessage', {
+          chat_id: cb.message.chat.id,
+          text: 'Nothing due right now — all caught up for today 🎉\nWant more anyway? /drill',
+        });
+      }
+    }
+    return;
+  }
 
   if (data.startsWith('c:')) {
     const courses = data.slice(2);
@@ -1067,6 +1145,26 @@ function formatEntry(card, e) {
   return s.slice(0, 4000);
 }
 
+async function publishCommands(env) {
+  await tg(env, 'setMyCommands', {
+      commands: [
+        { command: 'course', description: '🎓 The course — lessons with a goal' },
+        { command: 'talk',   description: '🎭 Free practice with the AI coach' },
+        { command: 'stop',   description: '🏁 End the dialog + error recap' },
+        { command: 'now',    description: 'A card right now' },
+        { command: 'drill',  description: '📐 Practise grammar on demand' },
+        { command: 'level',  description: '🎚 Start higher — skip what you know' },
+        { command: 'skip',   description: '⏭ Mark a topic you already know' },
+        { command: 'undo',   description: '↩️ Take back the last answer' },
+        { command: 'export', description: '💾 Download everything as JSON' },
+        { command: 'stats',  description: '📊 Statistics' },
+        { command: 'lang',   description: 'Languages: PT / EN / both' },
+        { command: 'pause',  description: 'Pause' },
+        { command: 'resume', description: 'Resume' },
+      ],
+  });
+}
+
 // ---------- Cron ----------
 
 async function tick(env) {
@@ -1075,6 +1173,10 @@ async function tick(env) {
   // graduate into cards — they arrive with tomorrow's queue, not mid-evening.
   if (nowDate.getUTCHours() === 20 && nowDate.getUTCMinutes() < 5) {
     await promoteMistakes(env).catch(() => {});
+    // The command menu is registered on /start, which means everyone who
+    // signed up before a new command existed never sees it. Re-publishing it
+    // daily is one API call and keeps every existing chat in step.
+    await publishCommands(env).catch(() => {});
   }
   // chat_id < 0 marks an app-only account created through POST /api/device —
   // there is no Telegram chat to push into, and the app schedules its own
@@ -1119,6 +1221,15 @@ async function tick(env) {
 }
 
 // ---------- Exercises ----------
+
+// Starting points, by frequency rank in the taught deck (the deck runs to
+// about 1000 words; drills live above that and are never skipped).
+const START_LEVELS = [
+  ['a1', 'A1', 0, 'from the very beginning'],
+  ['a2', 'A2', 150, 'I know the basics'],
+  ['b1', 'B1', 400, 'I get by day to day'],
+  ['b2', 'B2', 700, 'I just want the gaps'],
+];
 
 async function sendExercise(env, user, opts = {}) {
   const course = opts.unit === 'gramatica' || opts.unit === 'numeros_drill' ? 'pt' : pickCourse(user);
@@ -1508,8 +1619,18 @@ async function checkTyped(env, msg, pending) {
     if (card.ex_trans) text += `\n_${card.ex_trans}_`;
     if (card.note) text += `\n\nℹ️ ${card.note}`;
   }
-  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown' });
+  await tg(env, 'sendMessage', { chat_id: msg.chat.id, text, parse_mode: 'Markdown', reply_markup: NEXT_ROW });
 }
+
+/** Buttons under every graded answer. Reviewing used to dead-end on the
+ *  result: the next card only came from typing /now, so a keen learner had to
+ *  keep issuing a command to keep going. One tap continues the session. */
+const NEXT_ROW = {
+  inline_keyboard: [[
+    { text: '▶️ Next card', callback_data: 'next' },
+    { text: '😴 Enough for now', callback_data: 'stop' },
+  ]],
+};
 
 /** Strips buttons off the previous unanswered card so only one is ever live. */
 async function expirePending(env, user) {

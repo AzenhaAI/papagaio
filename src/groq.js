@@ -1,19 +1,42 @@
 // Groq: Whisper for voice transcription + LLM for dialogs. Free tier.
 
+// A neutral sample of the orthography we expect back. Whisper takes `prompt`
+// as a style hint, and without one it writes European Portuguese in whatever
+// convention it likes — dropping accents, or drifting to Brazilian spelling.
+// Deliberately NOT the phrase being graded: biasing the decoder with the right
+// answer makes it hear the right answer, which is how a wrong pronunciation
+// gets marked correct.
+const STYLE_HINT = {
+  pt: 'Português europeu, escrito com acentos: olá, obrigado, se faz favor, autocarro, telemóvel, pequeno-almoço, não percebi, está bem, amanhã.',
+  en: 'British English, plainly spelled: hello, thank you, could you repeat that please.',
+};
+
 export async function transcribe(env, bytes, language, filename = 'voice.ogg', mime = 'audio/ogg') {
   // Whisper keys the container format off the filename extension, so browser
   // recordings (webm in Chrome, mp4 in Safari) must arrive under their own name.
-  const fd = new FormData();
-  fd.append('file', new Blob([bytes], { type: mime }), filename);
-  fd.append('model', 'whisper-large-v3-turbo');
-  fd.append('language', language);
-  fd.append('response_format', 'json');
-  const r = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
-    method: 'POST',
-    headers: { authorization: `Bearer ${env.GROQ_API_KEY}` },
-    body: fd,
-  });
-  const j = await r.json();
+  const send = async (model) => {
+    const fd = new FormData();
+    fd.append('file', new Blob([bytes], { type: mime }), filename);
+    fd.append('model', model);
+    fd.append('language', language);
+    fd.append('response_format', 'json');
+    fd.append('temperature', '0');
+    if (STYLE_HINT[language]) fd.append('prompt', STYLE_HINT[language]);
+    const res = await fetch('https://api.groq.com/openai/v1/audio/transcriptions', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${env.GROQ_API_KEY}` },
+      body: fd,
+    });
+    return { res, body: await res.json() };
+  };
+
+  // The full model, not turbo: turbo is distilled for speed, and fast connected
+  // speech — a learner's spouse talking at normal pace — is exactly where it
+  // turns words into nonsense. An extra second is worth an answer that is right.
+  let { res: r, body: j } = await send('whisper-large-v3');
+  if (!r.ok && j?.error?.code === 'model_not_found') {
+    ({ res: r, body: j } = await send('whisper-large-v3-turbo'));
+  }
   if (r.status === 429) throw new Error('the ear is catching its breath — try again in a few seconds');
   if (!r.ok) throw new Error('whisper: ' + JSON.stringify(j).slice(0, 200));
   return (j.text ?? '').trim();

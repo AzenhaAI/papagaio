@@ -14,6 +14,7 @@ export const SCENARIOS = {
   pt: {
     cafe: {
       label: '☕ Café', open: 'Bom dia! O que deseja?',
+      role: "You are the person behind the counter of a Portuguese café. You take an order, say the price, hand things over. You do not ask about the customer's plans or private life. Address the customer formally (3rd person: o senhor / a senhora / você), never tu. The business is done when the order is served or paid for.",
       gloss: 'Good morning! What would you like?',
       hints: [
         { pt: 'Bom dia! Queria um café, por favor.', en: 'Good morning! I would like a coffee, please.' },
@@ -22,6 +23,7 @@ export const SCENARIOS = {
     },
     autocarro: {
       label: '🚌 Autocarro', open: 'Boa tarde! Para onde vai?',
+      role: 'You are a bus driver in Madeira. You sell or check a ticket, name the fare, say where to get off. Nothing else. Formal address. Done when the passenger has their ticket and knows the stop.',
       gloss: 'Good afternoon! Where are you going?',
       hints: [
         { pt: 'Para o Funchal, por favor.', en: 'To Funchal, please.' },
@@ -30,6 +32,7 @@ export const SCENARIOS = {
     },
     banco: {
       label: '🏦 Banco', open: 'Bom dia! Em que posso ajudar?',
+      role: 'You are a bank clerk. You handle one banking errand — an account, a card, a transfer, a fee. Formal address. Done when the errand is finished and the customer says they need nothing more.',
       gloss: 'Good morning! How can I help?',
       hints: [
         { pt: 'Queria abrir uma conta.', en: 'I would like to open an account.' },
@@ -38,6 +41,7 @@ export const SCENARIOS = {
     },
     medico: {
       label: '🩺 Médico', open: 'Boa tarde! O que o traz cá hoje?',
+      role: 'You are a GP in a Portuguese health centre. You ask what is wrong, how long, and about allergies or medication, then give a short instruction. Formal address. Done when the patient has the prescription or the advice.',
       gloss: 'Good afternoon! What brings you here today?',
       hints: [
         { pt: 'Dói-me a cabeça desde ontem.', en: 'My head has hurt since yesterday.' },
@@ -46,6 +50,7 @@ export const SCENARIOS = {
     },
     condominio: {
       label: '🏢 Vizinho', open: 'Olá, vizinho! Tudo bem?',
+      role: 'You are a neighbour in the same building, chatting in the lobby. Small talk only: the weather, the lift, the rubbish, the works upstairs. Informal address (tu) is fine here. Done when the chat reaches a natural goodbye.',
       gloss: 'Hello, neighbour! All good?',
       hints: [
         { pt: 'Tudo bem, obrigado. E consigo?', en: 'All good, thanks. And you?' },
@@ -54,6 +59,7 @@ export const SCENARIOS = {
     },
     farmacia: {
       label: '💊 Farmácia', open: 'Bom dia! Precisa de alguma coisa?',
+      role: 'You are a pharmacist. You listen to the symptom or the prescription, offer a product, say the price and the dose. Formal address. Done when the customer has what they came for.',
       gloss: 'Good morning! Do you need something?',
       hints: [
         { pt: 'Queria alguma coisa para a garganta.', en: 'I would like something for my throat.' },
@@ -62,6 +68,7 @@ export const SCENARIOS = {
     },
     cabeleireiro: {
       label: '💇 Cabeleireiro', open: 'Olá! Como quer o corte hoje?',
+      role: 'You are a hairdresser. You discuss the cut, the length, the price and the next appointment. Nothing medical, nothing bureaucratic. Done when the cut is agreed or booked.',
       gloss: 'Hello! How would you like your cut today?',
       hints: [
         { pt: 'Curto atrás e nos lados, por favor.', en: 'Short at the back and sides, please.' },
@@ -70,6 +77,7 @@ export const SCENARIOS = {
     },
     sindico: {
       label: '🔧 Síndico', open: 'Bom dia. Diga-me, qual é o problema no prédio?',
+      role: 'You are the building manager. You take one complaint about the building — water, lift, noise, a broken door — and say what happens next. Formal address. Done when the resident knows what will be done.',
       gloss: 'Good morning. Tell me, what is the problem in the building?',
       hints: [
         { pt: 'Não há água quente desde ontem.', en: 'There has been no hot water since yesterday.' },
@@ -78,6 +86,7 @@ export const SCENARIOS = {
     },
     arrendamento: {
       label: '🏠 Arrendar casa', open: 'Boa tarde! Vem ver o apartamento?',
+      role: 'You are a landlord showing a flat. You answer about rent, bills, deposit, contract length, and when it is free. Done when the visitor has the numbers or says they will think about it.',
       gloss: 'Good afternoon! Are you here to see the flat?',
       hints: [
         { pt: 'Sim, boa tarde. Quanto é a renda?', en: 'Yes, good afternoon. How much is the rent?' },
@@ -86,6 +95,7 @@ export const SCENARIOS = {
     },
     aima: {
       label: '🛂 AIMA', open: 'Bom dia. Tem marcação? Mostre-me os seus documentos, por favor.',
+      role: "You are a clerk at AIMA, the Portuguese immigration agency, at a booked appointment for a residence permit. You check the appointment, take the documents (passport, NIF, proof of address, contract), take fingerprints, and say when the card arrives. You are NOT a border guard: never ask the purpose of the trip, never ask whether the person wants a visa or already has a residence permit, and never ask them to 'open the passport'. Formal address. Done when the file is accepted and the receipt is handed over.",
       gloss: 'Good morning. Do you have an appointment? Show me your documents, please.',
       hints: [
         { pt: 'Bom dia. Tenho marcação para as dez horas.', en: 'Good morning. I have an appointment at ten.' },
@@ -94,6 +104,7 @@ export const SCENARIOS = {
     },
     taxi: {
       label: '🚕 Táxi', open: 'Boa tarde! Para onde?',
+      role: 'You are a taxi driver. You take the destination, say roughly how long and how much, and handle payment. Done at the destination or when the fare is agreed.',
       gloss: 'Good afternoon! Where to?',
       hints: [
         { pt: 'Para o aeroporto, por favor.', en: 'To the airport, please.' },
@@ -102,6 +113,7 @@ export const SCENARIOS = {
     },
     mercado: {
       label: '🥬 Mercado', open: 'Bom dia, freguês! O que vai levar hoje?',
+      role: 'You are a market stallholder selling fruit and vegetables. You weigh, name prices, suggest what is good today. Done when the shopping is paid for.',
       gloss: 'Good morning, customer! What are you taking today?',
       hints: [
         { pt: 'Queria meio quilo de tomate.', en: 'I would like half a kilo of tomatoes.' },
@@ -110,6 +122,7 @@ export const SCENARIOS = {
     },
     suporte: {
       label: '📞 Suporte', open: 'Boa tarde, está a falar com o apoio ao cliente. Em que posso ajudar?',
+      role: 'You are a phone support agent for a telecoms or utility company. You identify the account, take the problem, and give one next step. Formal address. Done when the ticket is open or the fix is explained.',
       gloss: 'Good afternoon, you are speaking to customer support. How can I help?',
       hints: [
         { pt: 'A internet não funciona desde ontem.', en: 'The internet has not worked since yesterday.' },
@@ -118,6 +131,7 @@ export const SCENARIOS = {
     },
     vizinho_barulho: {
       label: '🔊 Barulho', open: 'Olá... desculpe, podemos falar sobre o barulho de ontem à noite?',
+      role: 'You are the neighbour who was making noise last night. You are a little embarrassed and reasonable. Done when the two of you have agreed something.',
       gloss: 'Hello... sorry, can we talk about the noise last night?',
       hints: [
         { pt: 'Peço desculpa, tivemos uma festa.', en: 'I apologise, we had a party.' },
@@ -126,6 +140,7 @@ export const SCENARIOS = {
     },
     fado: {
       label: '🎶 Casa de fados', open: 'Boa noite! É a primeira vez que vem ouvir fado?',
+      role: 'You are the host of a fado house. You seat the guest, explain the rule of silence during the singing, take a drinks order, say when it starts. Done when the guest is seated and served.',
       gloss: 'Good evening! Is it your first time coming to hear fado?',
       hints: [
         { pt: 'É sim, nunca ouvi fado ao vivo.', en: 'Yes, I have never heard fado live.' },
@@ -228,7 +243,17 @@ function systemPrompt(course, scen, level, known, ui) {
   const helper = ui === 'ru' ? 'Russian' : ui === 'pt' ? 'simple European Portuguese' : 'English';
   return course === 'pt'
     ? `You are a patient coach of EUROPEAN Portuguese (pt-PT, never Brazilian). Scene: ${scen.label}. ` +
-      `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
+      `${scen.role ?? ''} ` +
+      // "Always end with a question" is what made this thing unbearable: it
+      // said "come again!" and then asked whether you wanted anything else,
+      // because the prompt left it no way to stop. A scene that cannot end is
+      // not a rehearsal of anything real.
+      `${levelPrompt} Keep replies short (1–2 sentences). Ask a question only while ` +
+      `the business of the scene is unfinished. When it is done — the order served, the ` +
+      `documents accepted, the fare agreed — or when the learner signals they are ` +
+      `finished ("é tudo", "obrigado, mais nada"), say a natural goodbye, ask NOTHING ` +
+      `further, and set "done": true. Never reopen a transaction you have closed. ` +
+      `Stay inside your role: do not ask about anything a person in this job would not ask. ` +
       `Prefer words the learner already knows: ${words}. ` +
       `If the learner made a mistake, put a brief correction in ${helper} in "note", else "". ` +
       `Also give "gloss": your own line translated into plain ${helper}, and "hints": two or three ` +
@@ -236,15 +261,19 @@ function systemPrompt(course, scen, level, known, ui) {
       `The hints must fit this exact moment in the scene, be usable verbatim, and stay at the ` +
       `learner's level — they are a way out of a blank page, not a vocabulary lesson. ` +
       `Answer strictly as JSON: {"reply": "your line in Portuguese", "gloss": "your line in ${helper}", ` +
-      `"note": "correction in ${helper} or empty", "hints": [{"pt": "...", "en": "the ${helper} translation"}]}.`
+      `"note": "correction in ${helper} or empty", "done": true or false, ` +
+      `"hints": [{"pt": "...", "en": "the ${helper} translation"}]}. ` +
+      `When "done" is true, "hints" may be an empty list — there is nothing left to say.`
     : `You are a friendly English coach (British English). Scene: ${scen.label}. Learner level B1–B2. ` +
-      `${levelPrompt} Keep replies short (1–2 sentences), always end with a question. ` +
+      `${scen.role ?? ''} ${levelPrompt} Keep replies short (1–2 sentences). Ask a question ` +
+      `only while the business of the scene is unfinished; when it is done, or the learner ` +
+      `signals they are finished, close the conversation, ask nothing further and set "done": true. ` +
       `Prefer words the learner already knows: ${words}. ` +
       `If the learner made a mistake, put a brief correction in "note", else "". ` +
       `Also give "gloss": "" (the line is already English), and "hints": two or three SHORT ` +
       `replies the learner could give next, each as {"pt": "the reply", "en": ""}. ` +
       `Answer strictly as JSON: {"reply": "your line in English", "gloss": "", ` +
-      `"note": "correction or empty", "hints": [{"pt": "...", "en": ""}]}.`;
+      `"note": "correction or empty", "done": true or false, "hints": [{"pt": "...", "en": ""}]}.`;
 }
 
 /**
@@ -267,9 +296,9 @@ export async function coachTurn(env, { userId, course, scenario, level, history,
     { json: true }
   );
 
-  let reply, note, gloss, hints;
+  let reply, note, gloss, hints, done;
   try {
-    ({ reply, note, gloss, hints } = JSON.parse(raw));
+    ({ reply, note, gloss, hints, done } = JSON.parse(raw));
   } catch {
     reply = raw;
     note = '';
@@ -280,6 +309,9 @@ export async function coachTurn(env, { userId, course, scenario, level, history,
     gloss: gloss ?? '',
     note: note ?? '',
     hints: (Array.isArray(hints) ? hints : []).filter((h) => h?.pt).slice(0, 3),
+    // The scene reached its natural end. Clients use this to offer the recap
+    // instead of pretending there is more to say.
+    done: done === true,
     history: [...turns, { role: 'assistant', content: reply ?? '' }].slice(-16),
   };
 }

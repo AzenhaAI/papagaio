@@ -927,6 +927,7 @@ export async function handleApi(request, env, path) {
       }
       return json({
         reply: turn.reply, gloss: turn.gloss, note: turn.note, hints: turn.hints,
+        done: turn.done,
         messages: turn.history, lesson: lessonState,
       });
     } catch (e) {
