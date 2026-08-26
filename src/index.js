@@ -9,6 +9,7 @@ import { recordMistakes, promoteMistakes } from './mistakes.js';
 import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
+import { START_LEVELS, applyLevel } from './level.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -153,8 +154,8 @@ async function handleUpdate(update, env) {
       chat_id: chat,
       text: '*Where do we start?*\n\nI can mark the easiest words as already known, so the cards begin where you actually are. Nothing is lost — skipped words still come back in a few weeks to be checked, and _✓ I already know this_ keeps working card by card.',
       parse_mode: 'Markdown',
-      reply_markup: { inline_keyboard: START_LEVELS.map(([k, label, , hint]) => [
-        { text: `${label} — ${hint}`, callback_data: `lv:${k}` },
+      reply_markup: { inline_keyboard: START_LEVELS.map((l) => [
+        { text: `${l.label} — ${l.hint}`, callback_data: `lv:${l.key}` },
       ]) },
     });
     return;
@@ -762,32 +763,16 @@ async function handleCallback(cb, env) {
 
   // Placement: everything below the chosen rank is booked as known.
   if (data.startsWith('lv:')) {
-    const row = START_LEVELS.find(([k]) => k === data.slice(3));
-    if (!row) return;
-    const [, label, upTo] = row;
+    const key = data.slice(3);
+    if (!START_LEVELS.some((l) => l.key === key)) return;
     const user = await getUser(env, uid);
     const course = user ? pickCourse(user) : 'pt';
     await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
-    let n = 0;
-    if (upTo > 0) {
-      // One statement, not a batch: this touches a few hundred rows and D1
-      // batches are capped. Due dates are spread over a month and a half so the
-      // whole skipped block cannot come back on the same morning.
-      const r = await env.DB.prepare(
-        `INSERT INTO user_cards (user_id, card_id, stability, difficulty, reps, lapses, state, due, last_review)
-         SELECT ?1, c.id, 30, 4, 1, 0, 2,
-                datetime('now', '+' || (20 + abs(random()) % 25) || ' days'), ?2
-           FROM cards c
-          WHERE c.course = ?3 AND c.owner IS NULL AND c.freq <= ?4
-            AND (c.pos IS NULL OR c.pos != 'drill')
-            AND c.id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?1)`
-      ).bind(uid, now(), course, upTo).run();
-      n = r.meta?.changes ?? 0;
-    }
+    const { label, known } = await applyLevel(env, uid, course, key);
     await tg(env, 'editMessageText', {
       chat_id: cb.message.chat.id, message_id: cb.message.message_id,
-      text: n
-        ? `*Starting at ${label}.*\n\n${n} words booked as known — they come back over the next few weeks so I can check I believed you.\n\nNext card: /now`
+      text: known
+        ? `*Starting at ${label}.*\n\n${known} words booked as known — they come back over the next few weeks so I can check I believed you.\n\nNext card: /now`
         : `*Starting at ${label}* — from the top, nothing skipped.\n\nNext card: /now`,
       parse_mode: 'Markdown',
     });
@@ -1221,15 +1206,6 @@ async function tick(env) {
 }
 
 // ---------- Exercises ----------
-
-// Starting points, by frequency rank in the taught deck (the deck runs to
-// about 1000 words; drills live above that and are never skipped).
-const START_LEVELS = [
-  ['a1', 'A1', 0, 'from the very beginning'],
-  ['a2', 'A2', 150, 'I know the basics'],
-  ['b1', 'B1', 400, 'I get by day to day'],
-  ['b2', 'B2', 700, 'I just want the gaps'],
-];
 
 async function sendExercise(env, user, opts = {}) {
   const course = opts.unit === 'gramatica' || opts.unit === 'numeros_drill' ? 'pt' : pickCourse(user);

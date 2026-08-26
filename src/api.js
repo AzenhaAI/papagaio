@@ -16,6 +16,7 @@ import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
 import { VERBS, findVerb, fold } from './verbs.js';
+import { START_LEVELS, applyLevel } from './level.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -753,6 +754,21 @@ export async function handleApi(request, env, path) {
       return json({ text });
     } catch (e) {
       return json({ error: e.message }, 502);
+    }
+  }
+
+  // Starting level. GET lists the choices so the app never hardcodes a table
+  // the bot could change under it; POST books the frequency head as known.
+  if (path === '/api/level' && request.method === 'GET') {
+    return json({ levels: START_LEVELS });
+  }
+  if (path === '/api/level' && request.method === 'POST') {
+    const b = await request.json().catch(() => ({}));
+    const course = b.course === 'en' ? 'en' : 'pt';
+    try {
+      return json(await applyLevel(env, uid, course, b.level));
+    } catch (e) {
+      return json({ error: e.message }, 400);
     }
   }
 

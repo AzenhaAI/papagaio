@@ -1,8 +1,8 @@
-/* PapaGaio service worker — минимальная офлайн-оболочка.
-   Network-first: свежесть важнее скорости, кэш выручает только когда сети нет.
-   Нужен не столько ради офлайна, сколько ради самой возможности установки:
-   без обработчика fetch Chrome не считает сайт приложением и не показывает
-   кнопку «Установить». */
+/* PapaGaio service worker — a minimal offline shell.
+   Network-first: freshness matters more than speed here, and the cache only
+   steps in when there is no network. Its real job is not offline support but
+   installability: without a fetch handler Chrome does not consider the site an
+   app and shows no install button at all. */
 const CACHE = 'papagaio-v1';
 
 self.addEventListener('install', () => self.skipWaiting());

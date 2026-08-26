@@ -157,9 +157,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; }
     h2 { font-size: 21px; margin: 34px 0 12px; }
   </style>
-    <!-- Smart App Banner: родная плашка Safari, ведёт в App Store.
-         Заготовка: приложение ещё на ревью, до релиза строка закомментирована,
-         иначе баннер ведёт на несуществующую карточку. -->
+    <!-- Smart App Banner: Safari's own strip, linking to the App Store.
+         Held back until the listing is public: a banner pointing at a
+         missing page reads as a broken product. -->
     <!-- <meta name="apple-itunes-app" content="app-id=6802084974" /> -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
@@ -331,28 +331,28 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 
     · Part of <a href="https://azenha.ai">azenha.ai</a>
   </footer>
-<!-- Предложение установить приложение — эталон, вставляется перед </body>.
-     Источник правды: ~/Projects/_stores/ios-install-hint.html
+<!-- Install prompt — the reference copy, inserted before </body>.
+     Source of truth: ~/Projects/_stores/ios-install-hint.html
 
-     Один баннер, два поведения, потому что платформы устроены по-разному:
+     One banner, two behaviours, because the platforms differ:
 
-     Android и десктопный Chromium дают событие beforeinstallprompt — там
-     показываем НАСТОЯЩУЮ кнопку, по нажатию открывается системный диалог
-     установки. Событие приходит только если сайт установим: манифест с
-     иконками 192 и 512, display standalone, https и service worker с
-     обработчиком fetch. Без воркера кнопки не будет вовсе.
+     Android and desktop Chromium fire beforeinstallprompt, so there we show a
+     REAL button that opens the system install dialog. The event only arrives
+     when the site is installable: a manifest with 192 and 512 icons, display
+     standalone, https, and a service worker with a fetch handler. Without the
+     worker there is no button at all.
 
-     Safari beforeinstallprompt не поддерживает и не будет, а на iOS ВСЕ
-     браузеры обязаны работать на движке Safari — значит и Chrome с Firefox
-     там ведут себя так же. Остаётся подсказать, где кнопка «Поделиться».
+     Safari does not support beforeinstallprompt and never will, and on iOS
+     EVERY browser must run on Safari's engine — so Chrome and Firefox behave
+     the same there. All that is left is to point at the Share button.
 
-     Показываем только когда уместно: страница ещё не открыта как приложение и
-     человек подсказку не закрывал. Закрытие помним в localStorage — баннер,
-     возвращающийся на каждой странице, раздражает сильнее, чем помогает.
+     Shown only when it makes sense: the page is not already running as an app
+     and the visitor has not dismissed the hint. The dismissal is remembered in
+     localStorage — a banner that returns on every page annoys more than helps.
 
-     Проверка на iPadOS отдельная: с 13-й версии iPad представляется
-     макинтошем, и обычный /iPad/ по userAgent его больше не ловит — ловим по
-     наличию тач-точек у платформы MacIntel. -->
+     iPadOS needs its own check: since version 13 an iPad reports itself as a
+     Mac, so a plain /iPad/ userAgent test no longer catches it — we detect it
+     by MacIntel reporting touch points. -->
 <div id="a2hs" hidden>
   <p id="a2hs-text"></p>
   <button type="button" id="a2hs-go" hidden>Install</button>
@@ -365,7 +365,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     background:rgba(20,26,22,.94);color:#f2f5f3;
     font:14px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     box-shadow:0 6px 24px rgba(0,0,0,.35);
-    /* Дом-бар у айфонов без кнопки перекрывает нижние 34pt. */
+    /* The home bar on button-less iPhones covers the bottom 34pt. */
     margin-bottom:env(safe-area-inset-bottom,0)}
   #a2hs[hidden]{display:none}
   #a2hs p{margin:0;flex:1}
@@ -396,7 +396,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       try { localStorage.setItem(KEY, '1'); } catch (e) {}
     });
 
-    // Android / Chromium: настоящая установка.
+    // Android / Chromium: a real install.
     var deferred = null;
     window.addEventListener('beforeinstallprompt', function (e) {
       e.preventDefault();
@@ -419,21 +419,21 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       try { localStorage.setItem(KEY, '1'); } catch (e) {}
     });
 
-    // iOS: кнопки нет, показываем дорогу к ней.
+    // iOS: no button exists, so point the way to it.
     var ua = navigator.userAgent;
     var iOS = /iPhone|iPod|iPad/.test(ua) ||
               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     if (iOS) {
       txt.innerHTML = 'Install this as an app: tap <strong>Share</strong>, ' +
                       'then <strong>Add to Home Screen</strong>.';
-      // Не сразу: подсказка на первой секунде читается как реклама.
+      // Not immediately: a hint in the first second reads as an ad.
       setTimeout(function () { if (!deferred) el.hidden = false; }, 2500);
     }
   })();
 </script>
   <script is:inline>
-    // Без воркера с обработчиком fetch Chrome не считает сайт
-    // приложением и кнопки «Установить» не покажет.
+    // Without a worker with a fetch handler Chrome does not treat the
+    // site as an app and shows no install button.
     if ('serviceWorker' in navigator) addEventListener('load', function () {
       navigator.serviceWorker.register('/papagaio/sw.js', { scope: '/papagaio/' })
         .catch(function () {});
