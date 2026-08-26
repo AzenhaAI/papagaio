@@ -157,6 +157,12 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; }
     h2 { font-size: 21px; margin: 34px 0 12px; }
   </style>
+    <!-- Smart App Banner: родная плашка Safari, ведёт в App Store.
+         Заготовка: приложение ещё на ревью, до релиза строка закомментирована,
+         иначе баннер ведёт на несуществующую карточку. -->
+    <!-- <meta name="apple-itunes-app" content="app-id=6802084974" /> -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
 </head>
 <body>
   <header class="site">
@@ -325,5 +331,113 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 
     · Part of <a href="https://azenha.ai">azenha.ai</a>
   </footer>
+<!-- Предложение установить приложение — эталон, вставляется перед </body>.
+     Источник правды: ~/Projects/_stores/ios-install-hint.html
+
+     Один баннер, два поведения, потому что платформы устроены по-разному:
+
+     Android и десктопный Chromium дают событие beforeinstallprompt — там
+     показываем НАСТОЯЩУЮ кнопку, по нажатию открывается системный диалог
+     установки. Событие приходит только если сайт установим: манифест с
+     иконками 192 и 512, display standalone, https и service worker с
+     обработчиком fetch. Без воркера кнопки не будет вовсе.
+
+     Safari beforeinstallprompt не поддерживает и не будет, а на iOS ВСЕ
+     браузеры обязаны работать на движке Safari — значит и Chrome с Firefox
+     там ведут себя так же. Остаётся подсказать, где кнопка «Поделиться».
+
+     Показываем только когда уместно: страница ещё не открыта как приложение и
+     человек подсказку не закрывал. Закрытие помним в localStorage — баннер,
+     возвращающийся на каждой странице, раздражает сильнее, чем помогает.
+
+     Проверка на iPadOS отдельная: с 13-й версии iPad представляется
+     макинтошем, и обычный /iPad/ по userAgent его больше не ловит — ловим по
+     наличию тач-точек у платформы MacIntel. -->
+<div id="a2hs" hidden>
+  <p id="a2hs-text"></p>
+  <button type="button" id="a2hs-go" hidden>Install</button>
+  <button type="button" id="a2hs-x" aria-label="Dismiss">&times;</button>
+</div>
+<style>
+  #a2hs{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;
+    display:flex;align-items:center;gap:10px;padding:12px 14px;
+    border-radius:12px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(20,26,22,.94);color:#f2f5f3;
+    font:14px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    box-shadow:0 6px 24px rgba(0,0,0,.35);
+    /* Дом-бар у айфонов без кнопки перекрывает нижние 34pt. */
+    margin-bottom:env(safe-area-inset-bottom,0)}
+  #a2hs[hidden]{display:none}
+  #a2hs p{margin:0;flex:1}
+  #a2hs strong{white-space:nowrap}
+  #a2hs button{flex:none;border:0;border-radius:8px;color:inherit;cursor:pointer;
+    font:inherit;background:rgba(255,255,255,.12)}
+  #a2hs-go{padding:7px 14px;font-weight:600;background:#2f7d5d;color:#fff}
+  #a2hs-go[hidden]{display:none}
+  #a2hs-x{width:28px;height:28px;font-size:18px;line-height:1}
+</style>
+<script>
+  (function () {
+    var el = document.getElementById('a2hs');
+    if (!el) return;
+    var txt = document.getElementById('a2hs-text');
+    var go = document.getElementById('a2hs-go');
+    var KEY = 'a2hs-dismissed';
+
+    var dismissed = false;
+    try { dismissed = localStorage.getItem(KEY) === '1'; } catch (e) {}
+    var installed = window.navigator.standalone === true ||
+                    (window.matchMedia &&
+                     window.matchMedia('(display-mode: standalone)').matches);
+    if (dismissed || installed) return;
+
+    document.getElementById('a2hs-x').addEventListener('click', function () {
+      el.hidden = true;
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    });
+
+    // Android / Chromium: настоящая установка.
+    var deferred = null;
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferred = e;
+      txt.textContent = 'Install this as an app — it opens without a browser bar and works offline.';
+      go.hidden = false;
+      el.hidden = false;
+    });
+    go.addEventListener('click', function () {
+      if (!deferred) return;
+      deferred.prompt();
+      deferred.userChoice.then(function () {
+        el.hidden = true;
+        try { localStorage.setItem(KEY, '1'); } catch (e) {}
+      });
+      deferred = null;
+    });
+    window.addEventListener('appinstalled', function () {
+      el.hidden = true;
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    });
+
+    // iOS: кнопки нет, показываем дорогу к ней.
+    var ua = navigator.userAgent;
+    var iOS = /iPhone|iPod|iPad/.test(ua) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (iOS) {
+      txt.innerHTML = 'Install this as an app: tap <strong>Share</strong>, ' +
+                      'then <strong>Add to Home Screen</strong>.';
+      // Не сразу: подсказка на первой секунде читается как реклама.
+      setTimeout(function () { if (!deferred) el.hidden = false; }, 2500);
+    }
+  })();
+</script>
+  <script is:inline>
+    // Без воркера с обработчиком fetch Chrome не считает сайт
+    // приложением и кнопки «Установить» не покажет.
+    if ('serviceWorker' in navigator) addEventListener('load', function () {
+      navigator.serviceWorker.register('/papagaio/sw.js', { scope: '/papagaio/' })
+        .catch(function () {});
+    });
+  </script>
 </body>
 </html>

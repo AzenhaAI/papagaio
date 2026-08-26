@@ -9,7 +9,10 @@ import { chat } from './groq.js';
 // vision.js so the two can never drift into different dialects.
 export const PT_RULES = `Hard rules:
 - Portuguese output is ALWAYS European Portuguese. Never Brazilian.
-- Use pt-PT vocabulary: autocarro (not ônibus), comboio (not trem), telemóvel (not celular), casa de banho (not banheiro), pequeno-almoço (not café da manhã), perceber (not entender), se faz favor, fixe (not legal), casa de banho, rapariga (girl — harmless in Portugal).
+- Use pt-PT vocabulary: autocarro (not ônibus), comboio (not trem), telemóvel (not celular), casa de banho (not banheiro), pequeno-almoço (not café da manhã), fixe (not legal), rapariga (girl — harmless in Portugal).
+- Two pairs are NOT dialect splits, and calling them one teaches a mistake:
+  * perceber vs entender — both are European Portuguese. perceber is the everyday "catch what was said"; entender is deeper, grasping the sense ("percebi, mas não quero entender"). Prefer perceber for plain understanding, never label entender as Brazilian.
+  * por favor vs se faz favor — both are European Portuguese. por favor is the neutral please and the default inside a request ("pode repetir, por favor?"); se faz favor is firmer, for calling attention or urging ("a conta, se faz favor" when time is short). Defaulting to se faz favor everywhere sounds pushy.
 - Use pt-PT grammar: "estou a fazer" for the progressive, never "estou fazendo". Prefer clitic placement as used in Portugal (diz-me, não me digas).
 - Detect the input language and translate into the other one. If the input is in neither expected language, translate into European Portuguese.
 - In br_diff list every word in YOUR Portuguese output that a Brazilian would say differently. This is the learner's main value — be thorough but only include real divergences.

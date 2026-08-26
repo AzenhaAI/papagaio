@@ -59,6 +59,12 @@ export async function analyse(env, text, uid) {
        FROM cards c
        LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
        WHERE c.course = 'pt' AND c.pos IS NOT 'drill'
+         -- The lexicon lives in this table too, all 141k rows of it. Without
+         -- this line every word ever written in Portuguese counted as "in your
+         -- deck", the reader never marked anything new, and the one thing it
+         -- promised — showing what you do not know yet — quietly stopped
+         -- working the day the dictionary was loaded.
+         AND (c.owner IS NULL OR c.owner = ?1)
          AND (LOWER(c.term) IN (${marks})
               OR LOWER(REPLACE(REPLACE(REPLACE(REPLACE(c.term, 'o ', ''), 'a ', ''), 'os ', ''), 'as ', '')) IN (${marks}))`
     ).bind(uid ?? 0, ...lemmas, ...lemmas).all();

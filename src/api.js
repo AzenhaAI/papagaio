@@ -959,6 +959,80 @@ export async function handleApi(request, env, path) {
     return json({ ok: true });
   }
 
+  // The bridge between reading and remembering: hand back a text, get every
+  // word in it you do not know yet as cards, each carrying the sentence it was
+  // met in. Until now the reader could tell you what you did not know and the
+  // deck could drill what somebody else chose — the two never spoke, so the
+  // word you tripped over this morning was gone by lunchtime.
+  if (path === '/api/read/collect' && request.method === 'POST') {
+    if (!env.GROQ_API_KEY) return json({ error: 'reader not configured' }, 503);
+    const body = await request.json().catch(() => null);
+    const text = String(body?.text ?? '').trim();
+    if (!text) return json({ error: 'text is required' }, 400);
+
+    // Analysed here rather than trusted from the client: the status of a word
+    // depends on this user's deck, which only the server can see.
+    let read;
+    try {
+      read = await analyse(env, text, uid);
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
+
+    // Only what is genuinely new, and only real words: the model marks
+    // punctuation and numbers too, and a deck full of "e" teaches nothing.
+    const seen = new Set();
+    const fresh = (read.words ?? []).filter((w) => {
+      const lemma = String(w.lemma ?? '').trim().toLowerCase();
+      if (w.status !== 'new' || lemma.length < 2 || !w.gloss) return false;
+      if (!/^[\p{L}][\p{L}\p{M}'’ -]*$/u.test(lemma) || seen.has(lemma)) return false;
+      seen.add(lemma);
+      return true;
+    }).slice(0, 60);
+
+    if (!fresh.length) return json({ added: 0, words: [] });
+
+    // The sentence the word was met in travels with the card — that is the
+    // whole difference between a word list and something you can actually
+    // learn, and it is what the future cloze exercise lands on.
+    const sentences = text.split(/(?<=[.!?…])\s+/);
+    const sentenceFor = (surface) =>
+      sentences.find((s) => s.toLowerCase().includes(String(surface).toLowerCase()))
+        ?.trim().replace(/\s+/g, ' ').slice(0, 200) ?? null;
+
+    // Never twice: a word already in this user's own cards is left alone.
+    const { results: mineRows } = await env.DB.prepare(
+      `SELECT LOWER(term) AS t FROM cards WHERE owner = ?1`
+    ).bind(String(uid)).all();
+    const mine = new Set((mineRows ?? []).map((r) => r.t));
+
+    const now = new Date().toISOString();
+    const stmts = [];
+    const added = [];
+    for (const w of fresh) {
+      const term = String(w.lemma).trim();
+      if (mine.has(term.toLowerCase())) continue;
+      const id = `u${uid.toString(36)}-${Date.now().toString(36)}-${added.length}`;
+      stmts.push(env.DB.prepare(
+        `INSERT INTO cards (id, course, term, trans, note, ex_t, tags, freq, owner, unit)
+         VALUES (?1, 'pt', ?2, ?3, '', ?4, '["mine","read"]', 100000, ?5, 'mine')`
+      ).bind(id, term, String(w.gloss).slice(0, 200), sentenceFor(w.surface), String(uid)));
+      stmts.push(env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, due) VALUES (?1, ?2, ?3)`
+      ).bind(uid, id, now));
+      stmts.push(env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?1, ?2, 'add', ?3)`
+      ).bind(uid, id, now));
+      added.push({ term, trans: w.gloss });
+    }
+    if (stmts.length) {
+      for (let i = 0; i < stmts.length; i += 60) {
+        await env.DB.batch(stmts.slice(i, i + 60));
+      }
+    }
+    return json({ added: added.length, words: added, counts: read.counts });
+  }
+
   if (path === '/api/mine' && request.method === 'GET') {
     const { results } = await env.DB.prepare(
       `SELECT * FROM cards WHERE owner = ? ORDER BY id DESC LIMIT 200`

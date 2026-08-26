@@ -109,9 +109,9 @@
       "trans": "please (request)",
       "pos": "phrase",
       "gender": null,
-      "note": "distinctly European Portuguese; Brazilians say por favor",
+      "note": "both are used in Portugal: por favor is the neutral please, se faz favor is firmer — good for calling a waiter or urging, pushy inside an ordinary request",
       "ex_t": "A conta, se faz favor.",
-      "ex_trans": "The bill, please.",
+      "ex_trans": "The bill, please. (said when you are in a hurry)",
       "tags": [
         "core",
         "cortesia",
@@ -220,7 +220,7 @@
       "trans": "I don't understand",
       "pos": "phrase",
       "gender": null,
-      "note": "key pt-PT marker: perceber = to understand; Brazilian entender sounds foreign here",
+      "note": "perceber is the everyday verb for understanding in Portugal; entender is not Brazilian, it is deeper — grasping the sense of a thing rather than catching what was said",
       "ex_t": "Desculpe, não percebo.",
       "ex_trans": "Sorry, I don't understand.",
       "tags": [
@@ -682,7 +682,7 @@
       "trans": "to understand",
       "pos": "verb",
       "gender": null,
-      "note": "the default verb for understanding in Portugal",
+      "note": "the everyday verb for understanding in Portugal: to catch what was said. entender is the deeper one — \"percebi, mas não quero entender\": I caught it, but I cannot accept it",
       "ex_t": "Percebeste?",
       "ex_trans": "Did you understand?",
       "tags": [

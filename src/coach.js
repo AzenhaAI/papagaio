@@ -16,7 +16,7 @@ export const SCENARIOS = {
       label: '☕ Café', open: 'Bom dia! O que deseja?',
       gloss: 'Good morning! What would you like?',
       hints: [
-        { pt: 'Bom dia! Queria um café, se faz favor.', en: 'Good morning! I would like a coffee, please.' },
+        { pt: 'Bom dia! Queria um café, por favor.', en: 'Good morning! I would like a coffee, please.' },
         { pt: 'Um galão e um pastel de nata, se faz favor.', en: 'A milky coffee and a custard tart, please.' },
       ],
     },
@@ -24,7 +24,7 @@ export const SCENARIOS = {
       label: '🚌 Autocarro', open: 'Boa tarde! Para onde vai?',
       gloss: 'Good afternoon! Where are you going?',
       hints: [
-        { pt: 'Para o Funchal, se faz favor.', en: 'To Funchal, please.' },
+        { pt: 'Para o Funchal, por favor.', en: 'To Funchal, please.' },
         { pt: 'Quanto custa o bilhete?', en: 'How much is the ticket?' },
       ],
     },
@@ -64,7 +64,7 @@ export const SCENARIOS = {
       label: '💇 Cabeleireiro', open: 'Olá! Como quer o corte hoje?',
       gloss: 'Hello! How would you like your cut today?',
       hints: [
-        { pt: 'Curto atrás e nos lados, se faz favor.', en: 'Short at the back and sides, please.' },
+        { pt: 'Curto atrás e nos lados, por favor.', en: 'Short at the back and sides, please.' },
         { pt: 'Só aparar as pontas.', en: 'Just a trim.' },
       ],
     },
@@ -85,7 +85,7 @@ export const SCENARIOS = {
       ],
     },
     aima: {
-      label: '🛂 AIMA', open: 'Bom dia. Tem marcação? Mostre-me os seus documentos, se faz favor.',
+      label: '🛂 AIMA', open: 'Bom dia. Tem marcação? Mostre-me os seus documentos, por favor.',
       gloss: 'Good morning. Do you have an appointment? Show me your documents, please.',
       hints: [
         { pt: 'Bom dia. Tenho marcação para as dez horas.', en: 'Good morning. I have an appointment at ten.' },
@@ -96,7 +96,7 @@ export const SCENARIOS = {
       label: '🚕 Táxi', open: 'Boa tarde! Para onde?',
       gloss: 'Good afternoon! Where to?',
       hints: [
-        { pt: 'Para o aeroporto, se faz favor.', en: 'To the airport, please.' },
+        { pt: 'Para o aeroporto, por favor.', en: 'To the airport, please.' },
         { pt: 'Quanto tempo demora?', en: 'How long does it take?' },
       ],
     },
@@ -314,7 +314,7 @@ export async function coachRecap(env, history, ui) {
         '1. BRAZILIAN forms where European Portuguese was wanted. This matters most. ' +
         'The giveaways: "estou fazendo" instead of "estou a fazer" (the gerund progressive is ' +
         'Brazilian — pt-PT uses estar a + infinitive), pegar for apanhar, ônibus for autocarro, ' +
-        'celular for telemóvel, banheiro for casa de banho, tela for ecrã, entender for perceber, ' +
+        'celular for telemóvel, banheiro for casa de banho, tela for ecrã, ' +
         'você where tu belongs, clitics before the verb in a plain statement (me diz for diz-me).\n' +
         '2. Grammar: wrong person, wrong gender or article, ser/estar mixed up, missing "há" ' +
         'for elapsed time, wrong preposition or a missing contraction.\n' +
