@@ -2,22 +2,42 @@
   "manifest_version": 3,
   "name": "PapaGaio — European Portuguese",
   "version": "1.0.0",
-  "description": "Select any word and read it in European Portuguese — never Brazilian — with the dictionary, real sentences and the pronunciation.",
-  "permissions": ["storage", "contextMenus"],
-  "host_permissions": ["https://azenha.ai/*"],
-  "background": { "service_worker": "background.js" },
-  "action": { "default_popup": "popup.html", "default_title": "PapaGaio" },
-  "icons": { "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "description": "Select any word and read it in European Portuguese — meanings, real sentences and the pronunciation.",
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://azenha.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PapaGaio"
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     }
   ],
   "commands": {
     "translate-selection": {
-      "suggested_key": { "default": "Alt+P", "mac": "Alt+P" },
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Alt+P"
+      },
       "description": "Translate the selected text"
     }
   }
