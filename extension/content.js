@@ -55,6 +55,27 @@ const CSS = `
   background: #21242b; color: #c9d0da; cursor: pointer; font-size: 12.5px;
   text-decoration: none; }
 .btn:hover { background: #2a2e36; }
+.chips { display: flex; align-items: center; gap: 8px; padding: 10px 12px 4px; }
+.chip { flex: 1; text-align: center; padding: 7px 0; border-radius: 10px;
+  background: #21242b; color: #e8ecf2; font-size: 13px; cursor: pointer; }
+.swap { color: #8b929e; cursor: pointer; padding: 0 2px; font-size: 15px; }
+.line { display: flex; align-items: flex-start; gap: 8px; padding: 8px 12px; }
+.line .txt { flex: 1; word-break: break-word; }
+.line.top { border-bottom: 1px solid #23262d; }
+.line.top .txt { color: #e8ecf2; font-size: 15px; }
+.line.out .txt { font-size: 19px; font-weight: 600; }
+.spk { color: #8b929e; cursor: pointer; user-select: none; }
+.spk:hover { color: #29b89a; }
+.tabs { display: flex; gap: 6px; padding: 8px 12px 0; }
+.tab { padding: 5px 10px; border-radius: 999px; background: #21242b;
+  color: #a7aeba; font-size: 12px; cursor: pointer; }
+.tab.on { background: #2f333c; color: #f2f4f7; }
+.sense { padding: 8px 12px 0; }
+.sense .n { color: #8b929e; font-size: 12px; }
+.syn { display: inline-block; background: #2a2e36; color: #e8ecf2; border-radius: 6px;
+  padding: 2px 7px; margin: 3px 4px 0 0; font-size: 12.5px; }
+.syn.ant { background: transparent; border: 1px solid #3a3f49; color: #a7aeba; }
+.gloss { color: #a7aeba; font-size: 12.5px; margin-top: 2px; }
 .pill { position: fixed; z-index: 2147483647; cursor: pointer;
   background: #16181d; border: 1px solid #2b2f36; border-radius: 999px;
   padding: 5px 10px; font-size: 15px; box-shadow: 0 6px 20px rgba(0,0,0,.4); }
@@ -124,121 +145,185 @@ function close() {
   card = null;
 }
 
+const NAMES = { auto: 'Auto', pt: 'Português', en: 'English', ru: 'Русский' };
+
+let current = { text: '', at: null, answer: null, tab: 'dict' };
+
 function open(text, rect) {
   mount();
   close();
   const sel = (text ?? window.getSelection()?.toString() ?? '').trim().slice(0, 600);
   if (!sel) return;
-  const at = rect ?? selectionRect() ?? { left: 20, top: 20, bottom: 20 };
+  current = { text: sel, at: rect ?? selectionRect() ?? { left: 20, top: 20, bottom: 20 }, answer: null, tab: 'dict' };
 
   card = document.createElement('div');
   card.className = 'wrap';
   card.innerHTML = `
     <div class="head"><span class="brand">PapaGaio</span><span class="x">✕</span></div>
-    <div class="body"><div class="src"></div><div class="out">…</div><div class="note"></div></div>
-    <div class="langs"></div>
+    <div class="chips">
+      <span class="chip from"></span><span class="swap">⇄</span><span class="chip to"></span>
+    </div>
+    <div class="line top"><span class="txt src"></span><span class="spk spk-src">🔊</span></div>
+    <div class="line out"><span class="txt res">…</span><span class="spk spk-out">🔊</span></div>
+    <div class="body"></div>
     <div class="acts">
       <span class="btn copy">Copy</span>
       <a class="btn" target="_blank" rel="noreferrer">Open PapaGaio</a>
     </div>`;
   root.append(card);
 
-  const q = (s) => card.querySelector(s);
+  const q = (x) => card.querySelector(x);
   q('.src').textContent = sel;
   q('.x').addEventListener('click', close);
   q('a.btn').href = `https://azenha.ai/papagaio/translate/?q=${encodeURIComponent(sel)}`;
+  q('.copy').addEventListener('click', () => {
+    navigator.clipboard?.writeText(current.answer?.translation ?? '');
+    q('.copy').textContent = 'Copied';
+  });
 
-  const langs = q('.langs');
-  for (const [code, name] of TARGETS) {
-    const b = document.createElement('span');
-    b.className = 'lang' + (code === target ? ' on' : '');
-    b.textContent = name;
-    b.addEventListener('click', () => {
-      if (code === target) return;
-      target = code;
-      chrome.storage.local.set({ target: code });
-      open(sel, at);
-    });
-    langs.append(b);
-  }
+  // The target chip cycles; the source is whatever the server detected, which
+  // is why it says Auto until the answer comes back. Swapping means "give me
+  // the other direction", the one thing a two-language reader keeps needing.
+  q('.chip.to').textContent = NAMES[target];
+  q('.chip.to').addEventListener('click', () => {
+    const order = ['en', 'ru', 'pt'];
+    target = order[(order.indexOf(target) + 1) % order.length];
+    chrome.storage.local.set({ target });
+    open(current.text, current.at);
+  });
+  q('.chip.from').textContent = NAMES.auto;
+  q('.swap').addEventListener('click', () => {
+    const detected = current.answer?.detected;
+    if (!detected || detected === target) return;
+    target = detected;
+    chrome.storage.local.set({ target });
+    open(current.answer.translation, current.at);
+  });
 
-  place(card, at);
-  render(sel, q, at);
+  q('.spk-src').addEventListener('click', () =>
+    speak(current.text, q('.spk-src'), current.answer?.detected ?? 'pt'));
+  q('.spk-out').addEventListener('click', () =>
+    speak(current.answer?.translation ?? '', q('.spk-out'), target));
+
+  place(card, current.at);
+  render();
 }
 
-function render(sel, q, at) {
+function render() {
+  const q = (x) => card.querySelector(x);
   chrome.runtime.sendMessage(
-    { kind: 'translate', text: sel, target, ui: target === 'pt' ? 'en' : target },
+    { kind: 'translate', text: current.text, target, ui: target === 'pt' ? 'en' : target },
     (res) => {
       if (!card) return;
       if (!res?.ok) {
-        q('.out').innerHTML = `<span class="err">${res?.error || 'No connection.'}</span>`;
+        q('.res').innerHTML = `<span class="err">${res?.error || 'No connection.'}</span>`;
         return;
       }
-      const t = res.t;
-      q('.out').textContent = t.translation;
-
-      const notes = [];
-      if (t.br_diff?.length) {
-        notes.push('🇵🇹 ' + t.br_diff
-          .map((d) => `${d.pt} — in Brazil: ${d.br}`)
-          .join(' · '));
-      }
-      if (t.register && t.register !== 'neutral') notes.push('🗣 ' + t.register);
-      if (t.corrections?.length) {
-        notes.push('✏️ ' + t.corrections
-          .slice(0, 2).map((c) => `${c.wrong} → ${c.right}`).join(' · '));
-      }
-      if (t.note) notes.push('ℹ️ ' + t.note);
-      for (const w of res.words ?? []) {
-        const gloss = target === 'ru' && w.trans_ru ? w.trans_ru : w.trans;
-        if (gloss) {
-          notes.push(`📖 ${w.term}${w.gender ? ` (${w.gender})` : ''} — ${String(gloss).slice(0, 160)}`);
-        }
-      }
-
-      const note = q('.note');
-      note.innerHTML = '';
-      for (const line of notes) {
-        const d = document.createElement('div');
-        d.textContent = line;
-        note.append(d);
-      }
-      for (const e of res.examples ?? []) {
-        const d = document.createElement('div');
-        d.className = 'ex';
-        d.innerHTML = '💬 ';
-        d.append(document.createTextNode(e.src));
-        const i = document.createElement('i');
-        i.textContent = ` — ${e.dst}`;
-        d.append(i);
-        note.append(d);
-      }
-
-      // Hearing it is half of learning a language you have to speak.
-      const ptSide = t.direction?.endsWith('->pt') ? t.translation : t.source;
-      if (ptSide) {
-        const play = document.createElement('div');
-        play.className = 'ex';
-        play.style.cursor = 'pointer';
-        play.textContent = '🔊 Listen';
-        play.addEventListener('click', () => {
-          play.textContent = '🔊 …';
-          chrome.runtime.sendMessage({ kind: 'tts', text: ptSide }, (a) => {
-            play.textContent = '🔊 Listen';
-            if (a?.ok) new Audio(a.audio).play().catch(() => {});
-          });
-        });
-        note.append(play);
-      }
-
-      q('.copy').addEventListener('click', () => {
-        navigator.clipboard?.writeText(t.translation);
-        q('.copy').textContent = 'Copied';
-      });
-      place(card, at);
+      current.answer = { ...res.t, examples: res.examples ?? [], words: res.words ?? [] };
+      q('.res').textContent = res.t.translation;
+      const from = res.t.detected;
+      q('.chip.from').textContent = from ? NAMES[from] ?? NAMES.auto : NAMES.auto;
+      // Only Portuguese and English have a voice: showing a speaker that
+      // returns silence is a promise the product cannot keep.
+      q('.spk-src').style.display = from === 'ru' ? 'none' : '';
+      q('.spk-out').style.display = target === 'ru' ? 'none' : '';
+      drawBody();
+      place(card, current.at);
     }
   );
+}
+
+/// Two tabs, and only the ones that have something behind them. A tab that
+/// opens onto nothing is worse than no tab.
+function drawBody() {
+  const a = current.answer;
+  const body = card.querySelector('.body');
+  body.innerHTML = '';
+
+  const notes = [];
+  if (a.br_diff?.length) {
+    notes.push('🇵🇹 ' + a.br_diff.map((d) => `${d.pt} — in Brazil: ${d.br}`).join(' · '));
+  }
+  if (a.register && a.register !== 'neutral') notes.push('🗣 ' + a.register);
+  if (a.corrections?.length) {
+    notes.push('✏️ ' + a.corrections.slice(0, 2).map((c) => `${c.wrong} → ${c.right}`).join(' · '));
+  }
+  if (a.note) notes.push('ℹ️ ' + a.note);
+
+  const has = { dict: (a.senses ?? []).length > 0, ex: (a.examples ?? []).length > 0 };
+  if (has.dict || has.ex) {
+    const tabs = document.createElement('div');
+    tabs.className = 'tabs';
+    const add = (key, label) => {
+      const t = document.createElement('span');
+      t.className = 'tab' + (current.tab === key ? ' on' : '');
+      t.textContent = label;
+      t.addEventListener('click', () => { current.tab = key; drawBody(); });
+      tabs.append(t);
+    };
+    if (has.dict) add('dict', 'Dictionary');
+    if (has.ex) add('ex', 'Examples');
+    body.append(tabs);
+    if (current.tab === 'dict' && !has.dict) current.tab = 'ex';
+    if (current.tab === 'ex' && !has.ex) current.tab = 'dict';
+  }
+
+  if (current.tab === 'dict') {
+    (a.senses ?? []).forEach((s, i) => {
+      const box = document.createElement('div');
+      box.className = 'sense';
+      const head = document.createElement('div');
+      head.innerHTML = `<span class="n">${i + 1}</span> `;
+      for (const w of s.synonyms ?? []) {
+        const chip = document.createElement('span');
+        chip.className = 'syn';
+        chip.textContent = w;
+        head.append(chip);
+      }
+      // Antonyms are outlined rather than filled: a learner reaching for a
+      // word must never grab the opposite one by mistake.
+      for (const w of s.antonyms ?? []) {
+        const chip = document.createElement('span');
+        chip.className = 'syn ant';
+        chip.textContent = '≠ ' + w;
+        head.append(chip);
+      }
+      box.append(head);
+      const g = document.createElement('div');
+      g.className = 'gloss';
+      g.textContent = s.pos ? `${s.gloss} · ${s.pos}` : s.gloss;
+      box.append(g);
+      body.append(box);
+    });
+  } else {
+    for (const e of a.examples ?? []) {
+      const d = document.createElement('div');
+      d.className = 'sense';
+      d.append(document.createTextNode(e.src));
+      const i = document.createElement('div');
+      i.className = 'gloss';
+      i.textContent = e.dst;
+      d.append(i);
+      body.append(d);
+    }
+  }
+
+  for (const line of notes) {
+    const d = document.createElement('div');
+    d.className = 'sense gloss';
+    d.textContent = line;
+    body.append(d);
+  }
+}
+
+function speak(text, icon, lang) {
+  const t = (text ?? '').trim();
+  if (!t || lang === 'ru') return;
+  icon.textContent = '⏳';
+  chrome.runtime.sendMessage({ kind: 'tts', text: t, course: lang === 'en' ? 'en' : 'pt' }, (a) => {
+    icon.textContent = '🔊';
+    if (a?.ok) new Audio(a.audio).play().catch(() => {});
+  });
 }
 
 document.addEventListener('mouseup', () => {

@@ -19,6 +19,7 @@ export const PT_RULES = `Hard rules:
 - Keep register natural for the situation: a café order is not a formal letter.
 - "translation" is ONLY the translated phrase. Never commentary, never advice, never two alternatives joined by a comma, never a sentence about what you would prefer to say. If several renderings are natural, put the best one in "translation" and mention the others in "note".
 - Fixed social formulas translate to the formula the other language actually uses, not word for word: "how do you do?" is "tudo bem?", not a discussion of formality.
+- If the INPUT is a single word or a short phrase (up to three words), fill "senses": its distinct meanings, most common first, at most four. Each sense carries a short gloss in the helper language, the part of speech, and the synonyms and antonyms OF THE TRANSLATION, in the language you are translating into — a learner uses them to say the same thing another way, so they must be words they can actually use. For anything longer than three words, "senses" is an empty list: a sentence has no dictionary entry.
 - "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer.`;
 
 // The second language defaults to English; a learner who set their interface
@@ -40,7 +41,8 @@ Answer strictly as JSON:
   "literal": "a more word-for-word rendering, or empty string if it matches the translation",
   "register": "neutral" or "formal" or "informal",
   "br_diff": [{"pt": "autocarro", "br": "ônibus", "gloss": "bus"}],
-  "note": "one short usage note if something is worth knowing, else empty string"
+  "note": "one short usage note if something is worth knowing, else empty string",
+  "senses": [{"gloss": "renowned, widely admired", "pos": "adjective", "synonyms": ["famoso", "célebre"], "antonyms": ["desconhecido"]}]
 }`;
 
 const MAX_LEN = 600;
@@ -76,7 +78,8 @@ Answer strictly as JSON:
   "literal": "a more word-for-word rendering, or empty string",
   "register": "neutral" or "formal" or "informal",
   "br_diff": [{"pt": "...", "br": "...", "gloss": "..."}],
-  "note": "one short usage note, else empty string"
+  "note": "one short usage note, else empty string",
+  "senses": [{"gloss": "...", "pos": "...", "synonyms": ["..."], "antonyms": ["..."]}]
 }`;
 
 /** Auto mode the way Yandex does it: "auto" describes the INPUT only, never
@@ -109,7 +112,8 @@ Answer strictly as JSON:
   "literal": "a more word-for-word rendering, or empty string",
   "register": "neutral" or "formal" or "informal",
   "br_diff": [{"pt": "...", "br": "...", "gloss": "..."}],
-  "note": "one short usage note, else empty string"
+  "note": "one short usage note, else empty string",
+  "senses": [{"gloss": "...", "pos": "...", "synonyms": ["..."], "antonyms": ["..."]}]
 }`;
 };
 
@@ -175,6 +179,19 @@ export async function translate(env, text, direction, ui) {
     register: out.register || 'neutral',
     br_diff: Array.isArray(out.br_diff) ? out.br_diff.filter((d) => d?.pt && d?.br) : [],
     note: out.note || '',
+    // The dictionary half of the answer: what else this word means, and how
+    // else to say it. Only ever filled for a word or a short phrase.
+    senses: Array.isArray(out.senses)
+      ? out.senses
+          .filter((x) => x?.gloss)
+          .slice(0, 4)
+          .map((x) => ({
+            gloss: String(x.gloss),
+            pos: x.pos ? String(x.pos) : '',
+            synonyms: Array.isArray(x.synonyms) ? x.synonyms.filter(Boolean).slice(0, 6).map(String) : [],
+            antonyms: Array.isArray(x.antonyms) ? x.antonyms.filter(Boolean).slice(0, 4).map(String) : [],
+          }))
+      : [],
   };
 }
 

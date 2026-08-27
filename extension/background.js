@@ -68,7 +68,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
         const r = await fetch(`${API}/api/tts`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text: msg.text, course: 'pt' }),
+          body: JSON.stringify({ text: msg.text, course: msg.course === 'en' ? 'en' : 'pt' }),
         });
         if (!r.ok) throw new Error('no audio');
         const buf = await r.arrayBuffer();
