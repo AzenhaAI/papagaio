@@ -168,7 +168,8 @@ function open(text, rect) {
     <div class="body"></div>
     <div class="acts">
       <span class="btn copy">Copy</span>
-      <a class="btn" target="_blank" rel="noreferrer">Open PapaGaio</a>
+      <span class="btn deck">➕ Deck</span>
+      <a class="btn" target="_blank" rel="noreferrer">Open</a>
     </div>`;
   root.append(card);
 
@@ -179,6 +180,23 @@ function open(text, rect) {
   q('.copy').addEventListener('click', () => {
     navigator.clipboard?.writeText(current.answer?.translation ?? '');
     q('.copy').textContent = 'Copied';
+  });
+
+  // The word plus the sentence it was met in: a card without its context is a
+  // word list, and word lists are what people abandon.
+  q('.deck').addEventListener('click', () => {
+    const btn = q('.deck');
+    btn.textContent = '…';
+    const payload = [sel, sentenceAround(sel)].filter(Boolean).join('. ');
+    chrome.runtime.sendMessage({ kind: 'add', text: payload }, (r) => {
+      if (r?.error === 'not paired') {
+        btn.textContent = 'Pair first';
+        note(q, 'Open the PapaGaio button in the toolbar and paste the code from /link in the bot — otherwise cards go to an account you will never open.');
+        return;
+      }
+      if (!r?.ok) { btn.textContent = 'Failed'; return; }
+      btn.textContent = r.added > 0 ? `✓ ${r.added} added` : '✓ known already';
+    });
   });
 
   // The target chip cycles; the source is whatever the server detected, which
@@ -207,6 +225,28 @@ function open(text, rect) {
 
   place(card, current.at);
   render();
+}
+
+
+/// The sentence the selection sits in, so the card carries its context. Falls
+/// back to nothing rather than to a whole paragraph.
+function sentenceAround(text) {
+  const sel = window.getSelection();
+  const block = sel?.anchorNode?.parentElement?.closest('p, li, td, blockquote, div');
+  const full = (block?.innerText ?? '').replace(/\s+/g, ' ').trim();
+  if (!full || full.length > 600) return '';
+  const parts = full.split(/(?<=[.!?…])\s+/);
+  return parts.find((p) => p.toLowerCase().includes(text.toLowerCase())) ?? '';
+}
+
+/// A one-off line under the answer — used when an action needs explaining
+/// rather than silently failing.
+function note(q, message) {
+  const box = q('.body');
+  const d = document.createElement('div');
+  d.className = 'sense gloss';
+  d.textContent = message;
+  box.append(d);
 }
 
 function render() {

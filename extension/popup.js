@@ -64,3 +64,39 @@ function run() {
     }
   );
 }
+
+// ---- pairing ----
+//
+// Adding a word to your deck only means something if it is YOUR deck. Without
+// this, the extension writes into the anonymous account it minted on first use
+// — which nobody will ever open — and the cards are effectively thrown away.
+
+function drawPair() {
+  const box = document.getElementById('pair');
+  chrome.runtime.sendMessage({ kind: 'status' }, (r) => {
+    if (r?.paired) {
+      box.innerHTML = '<span class="ok">✓ Paired with your deck.</span> ' +
+        'Words you add from a page land in it. <button id="unpair">Unpair</button>';
+      document.getElementById('unpair').addEventListener('click', () => {
+        chrome.runtime.sendMessage({ kind: 'unpair' }, drawPair);
+      });
+      return;
+    }
+    box.innerHTML =
+      'To add words to your own deck, paste the code from <b>/link</b> in the ' +
+      '<a href="https://t.me/papagaio_ebot" target="_blank">Telegram bot</a>.' +
+      '<input id="code" placeholder="paste the code" autocomplete="off">' +
+      '<button id="dopair">Pair</button> <span id="pairmsg"></span>';
+    document.getElementById('dopair').addEventListener('click', () => {
+      const code = document.getElementById('code').value.trim();
+      const msg = document.getElementById('pairmsg');
+      msg.textContent = '…';
+      chrome.runtime.sendMessage({ kind: 'pair', code }, (res) => {
+        if (!res?.ok) { msg.textContent = res?.error || 'failed'; return; }
+        drawPair();
+      });
+    });
+  });
+}
+
+drawPair();

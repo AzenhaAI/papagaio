@@ -7,6 +7,12 @@
 
 const API = 'https://azenha.ai';
 
+/// Two kinds of token can be here, and the difference matters.
+///
+/// The anonymous one is minted on first use so translating works with no setup
+/// at all. The paired one comes from the bot's /link and belongs to a person
+/// who already has a deck — cards added from a page must land there, not in an
+/// account nobody will ever open again.
 async function token() {
   const { token } = await chrome.storage.local.get('token');
   if (token) return token;
@@ -62,6 +68,37 @@ chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
         // translation ran.
         const pt = t.direction?.endsWith('->pt') ? t.translation : t.source;
         reply({ ok: true, t, ...(await extras(pt).catch(() => ({}))) });
+        return;
+      }
+      if (msg.kind === 'status') {
+        const { paired } = await chrome.storage.local.get('paired');
+        reply({ ok: true, paired: paired === true });
+        return;
+      }
+      if (msg.kind === 'pair') {
+        const code = String(msg.code ?? '').trim();
+        if (!code) { reply({ ok: false, error: 'no code' }); return; }
+        // Verified before it is stored: a mistyped code would otherwise be
+        // discovered later, when the cards had already gone somewhere else.
+        const r = await fetch(`${API}/api/progress`, { headers: { 'x-device-token': code } });
+        if (!r.ok) { reply({ ok: false, error: 'that code was refused' }); return; }
+        const stats = await r.json().catch(() => ({}));
+        await chrome.storage.local.set({ token: code, paired: true });
+        reply({ ok: true, learned: stats.learned ?? 0 });
+        return;
+      }
+      if (msg.kind === 'unpair') {
+        // The anonymous token is dropped along with the paired one: keeping it
+        // would silently resume writing into the throwaway account.
+        await chrome.storage.local.remove(['token', 'paired']);
+        reply({ ok: true });
+        return;
+      }
+      if (msg.kind === 'add') {
+        const { paired } = await chrome.storage.local.get('paired');
+        if (paired !== true) { reply({ ok: false, error: 'not paired' }); return; }
+        const j = await call('/api/read/collect', { method: 'POST', body: { text: msg.text } });
+        reply({ ok: true, added: j.added ?? 0, words: j.words ?? [] });
         return;
       }
       if (msg.kind === 'tts') {
