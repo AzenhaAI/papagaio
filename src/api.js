@@ -661,7 +661,8 @@ export async function handleApi(request, env, path) {
     const tagged = terms.some((x) => x.pos || x.sense);
     const senseRule = tagged
       ? `An entry may carry a part of speech in [brackets] and its English sense after "\u2014". ` +
-        `When present, translate ONLY that sense; never fold the word's other meanings into the line. `
+        `When present, translate ONLY that sense; never fold the word's other meanings into the line. ` +
+        `Output the ${to} equivalents alone \u2014 never echo the term, its bracketed tag or the English sense. `
       : '';
     const glossMessages = [
       { role: 'system', content:
