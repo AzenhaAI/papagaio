@@ -203,7 +203,7 @@ function open(text, rect) {
   q('.spk-src').addEventListener('click', () =>
     speak(current.text, q('.spk-src'), current.answer?.detected ?? 'pt'));
   q('.spk-out').addEventListener('click', () =>
-    speak(current.answer?.translation ?? '', q('.spk-out'), target));
+    speak(current.answer?.translation ?? '', q('.spk-out'), current.out ?? target));
 
   place(card, current.at);
   render();
@@ -221,12 +221,19 @@ function render() {
       }
       current.answer = { ...res.t, examples: res.examples ?? [], words: res.words ?? [] };
       q('.res').textContent = res.t.translation;
-      const from = res.t.detected;
-      q('.chip.from').textContent = from ? NAMES[from] ?? NAMES.auto : NAMES.auto;
+      // Label both chips from the direction the server actually took, not from
+      // what we asked for: selecting an English word while the target is
+      // English makes the server translate into Portuguese instead, and a chip
+      // reading "English → English" over a Portuguese answer is a lie.
+      const [from, to] = String(res.t.direction ?? '').split('->');
+      const src = res.t.detected || from;
+      q('.chip.from').textContent = NAMES[src] ?? NAMES.auto;
+      q('.chip.to').textContent = NAMES[to] ?? NAMES[target];
+      current.out = to || target;
       // Only Portuguese and English have a voice: showing a speaker that
       // returns silence is a promise the product cannot keep.
-      q('.spk-src').style.display = from === 'ru' ? 'none' : '';
-      q('.spk-out').style.display = target === 'ru' ? 'none' : '';
+      q('.spk-src').style.display = src === 'ru' ? 'none' : '';
+      q('.spk-out').style.display = current.out === 'ru' ? 'none' : '';
       drawBody();
       place(card, current.at);
     }

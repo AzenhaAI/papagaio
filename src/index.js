@@ -101,6 +101,7 @@ async function tg(env, method, payload) {
 
 async function handleUpdate(update, env) {
   if (update.callback_query) return handleCallback(update.callback_query, env);
+  if (update.inline_query) return handleInline(update.inline_query, env);
 
   const msg = update.message;
   if (!msg) return;
@@ -142,6 +143,24 @@ async function handleUpdate(update, env) {
     await tg(env, 'sendMessage', {
       chat_id: chat, text: 'Which languages are we learning?', reply_markup: courseKeyboard(),
     });
+    return;
+  }
+
+  // Sending a word plainly has always worked, but nothing in the bot ever
+  // said so: a menu of commands reads as "these are the things it does".
+  if (text.startsWith('/tr')) {
+    const q = text.replace(/^\/tr(@\S+)?\s*/, '').trim();
+    if (!q) {
+      await tg(env, 'sendMessage', {
+        chat_id: chat,
+        parse_mode: 'Markdown',
+        text: 'Send me the word or the phrase — any language — and you get it back in European Portuguese, ' +
+              'never Brazilian, with the meanings and the words you could use instead.\n\n' +
+              'Inside any other chat, type `@papagaio_ebot word` and pick the answer without leaving the conversation.',
+      });
+      return;
+    }
+    await handleTranslation(env, uid, chat, q);
     return;
   }
 
@@ -793,6 +812,66 @@ async function dialogTurn(env, msg, session) {
   }
 }
 
+
+/** Inline mode: `@papagaio_ebot obrigado` typed inside any conversation.
+ *
+ *  This is where a translator earns its place — mid-sentence with a Portuguese
+ *  landlord, without leaving the chat to go and ask a different app. Telegram
+ *  gives about ten seconds before it drops the query, which is why the answer
+ *  is one article and not a dictionary. */
+async function handleInline(q, env) {
+  const text = (q.query ?? '').trim().slice(0, 200);
+  if (text.length < 2) {
+    await tg(env, 'answerInlineQuery', {
+      inline_query_id: q.id,
+      results: JSON.stringify([]),
+      cache_time: 5,
+      button: JSON.stringify({ text: 'Type a word to translate', start_parameter: 'inline' }),
+    });
+    return;
+  }
+
+  let t;
+  try {
+    t = await translate(env, text, 'auto', 'en');
+  } catch {
+    await tg(env, 'answerInlineQuery', { inline_query_id: q.id, results: JSON.stringify([]), cache_time: 5 });
+    return;
+  }
+
+  const extra = (t.senses ?? [])
+    .slice(0, 2)
+    .map((sn) => (sn.synonyms ?? []).join(', '))
+    .filter(Boolean)
+    .join(' · ');
+
+  await tg(env, 'answerInlineQuery', {
+    inline_query_id: q.id,
+    // Cached per query by Telegram itself: the same word asked twice in a
+    // minute costs one model call, not two.
+    cache_time: 60,
+    results: JSON.stringify([
+      {
+        type: 'article',
+        id: 'tr',
+        title: t.translation,
+        description: [t.note, extra].filter(Boolean).join(' — ').slice(0, 120) || text,
+        input_message_content: { message_text: t.translation },
+      },
+      {
+        type: 'article',
+        id: 'full',
+        title: `${t.translation} — with the explanation`,
+        description: 'Sends the translation plus what a Brazilian would say differently',
+        input_message_content: {
+          message_text: formatTranslation(t),
+          parse_mode: 'Markdown',
+        },
+      },
+    ]),
+  });
+}
+
 // ---------- Button answers ----------
 
 async function handleCallback(cb, env) {
@@ -1172,6 +1251,7 @@ async function publishCommands(env) {
   await tg(env, 'setMyCommands', {
       commands: [
         { command: 'help',   description: '🦜 What I can do' },
+        { command: 'tr',     description: '🔤 Translate a word or a phrase' },
         { command: 'course', description: '🎓 The course — lessons with a goal' },
         { command: 'talk',   description: '🎭 Free practice with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },

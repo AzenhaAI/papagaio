@@ -66,7 +66,7 @@ const PAIR_SYSTEM = (from, to, helper) => `You translate from ${LANGS[from]} int
 
 ${from === 'pt' || to === 'pt' ? PT_RULES.replaceAll('English', helper) + '\n' : ''}
 - If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
-- "gloss" fields, "why" explanations and "note" are written in ${helper}.
+- "gloss" fields, "why" explanations and "note" are written in ${helper} — the language the reader thinks in. Never write them in the language you translated into, unless it is the same language.
 - "br_diff" is ${to === 'pt' ? 'the list of words a Brazilian would say differently' : 'always an empty list'}.
 
 Answer strictly as JSON:
@@ -99,7 +99,7 @@ First DETECT the language of the INPUT: Portuguese ("pt"), English ("en") or Rus
 
 ${PT_RULES.replaceAll('English', helper).split('\n').filter((l) => !l.startsWith('- Detect the input language')).join('\n')}
 - If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
-- "gloss" fields, "why" explanations and "note" are written in ${helper}.
+- "gloss" fields, "why" explanations and "note" are written in ${helper} — the language the reader thinks in. Never write them in the language you translated into, unless it is the same language.
 - "br_diff" is only ever filled when YOUR OUTPUT is Portuguese; otherwise it is an empty list.
 
 Answer strictly as JSON:
