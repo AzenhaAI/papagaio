@@ -9,9 +9,12 @@ import { fileURLToPath } from 'node:url';
 import WebSocket from 'ws';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-// The site repo moved under ~/Projects; a stale path here silently re-synthesised
-// the whole deck into an abandoned folder and reported success.
-const OUT_DIR = join(process.env.HOME, 'Projects', 'shpara1', 'papagaio', 'audio');
+// The site moved again, this time to the azenha.ai repo, and this path did not
+// follow — the same failure its previous note warned about: synthesis succeeds,
+// files land in an abandoned checkout, and nothing reaches production. The audio
+// directory now lives with the site that actually serves it, and AUDIO_BASE in
+// wrangler.toml points at that host.
+const OUT_DIR = join(process.env.HOME, 'Projects', 'azenha', 'papagaio', 'audio');
 const TOKEN = '6A5AA1D4EAFF4E9FB37E23D68491D6F4';
 const VOICES = { pt: 'pt-PT-DuarteNeural', en: 'en-GB-RyanNeural' };
 const LANGS = { pt: 'pt-PT', en: 'en-GB' };
