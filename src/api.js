@@ -637,10 +637,16 @@ export async function handleApi(request, env, path) {
     if (!env.GROQ_API_KEY && !(isBatch && env.AI)) return json({ error: 'not configured' }, 503);
     if (!isBatch && !(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
     const body = await request.json().catch(() => null);
-    const terms = Array.isArray(body?.terms) ? body.terms.map(String).slice(0, 25) : [];
+    // Entries may be plain strings or {t, pos, sense}. A bare homograph makes the
+    // model merge every meaning into one line, which the caller then writes to
+    // each sense's own row — "que [conj]" and "que [pron]" ended up identical.
+    const terms = (Array.isArray(body?.terms) ? body.terms.slice(0, 25) : []).map((e) =>
+      e && typeof e === 'object'
+        ? { t: String(e.t ?? e.term ?? ''), pos: String(e.pos ?? ''), sense: String(e.sense ?? '').slice(0, 120) }
+        : { t: String(e), pos: '', sense: '' });
     const to = body?.to === 'ru' ? 'Russian' : 'European Portuguese (pt-PT, never Brazilian)';
     const from = body?.from === 'pt' ? 'European Portuguese' : 'English';
-    if (!terms.length) return json({ error: 'terms required' }, 400);
+    if (!terms.length || terms.some((x) => !x.t)) return json({ error: 'terms required' }, 400);
     // rich mode: a Multitran-style row instead of a one-worder — equivalents
     // separated by «;», each with an optional bracketed domain/style hint.
     const style = body?.rich
@@ -651,11 +657,18 @@ export async function handleApi(request, env, path) {
     // Batch jobs run on the SMALL model as primary: one-word glosses don't
     // need 70b, and Groq budgets are per-model — so overnight batches and
     // daytime users stop competing for the same tokens entirely.
+    // Only worth explaining the notation when some row actually carries it.
+    const tagged = terms.some((x) => x.pos || x.sense);
+    const senseRule = tagged
+      ? `An entry may carry a part of speech in [brackets] and its English sense after "\u2014". ` +
+        `When present, translate ONLY that sense; never fold the word's other meanings into the line. `
+      : '';
     const glossMessages = [
       { role: 'system', content:
-        `Translate each ${from} term into ${to}. ${style} ` +
+        `Translate each ${from} term into ${to}. ${senseRule}${style} ` +
         `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
-      { role: 'user', content: terms.map((t, i) => `${i + 1}. ${t}`).join('\n') },
+      { role: 'user', content: terms.map((x, i) =>
+        `${i + 1}. ${x.t}${x.pos ? ` [${x.pos}]` : ''}${x.sense ? ` \u2014 ${x.sense}` : ''}`).join('\n') },
     ];
     let raw;
     try {

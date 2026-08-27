@@ -37,7 +37,7 @@ try {
 // Over-fetch by the skip count so the night still gets a full 2000 to chew on.
 const listOut = execFileSync('npx', [
   'wrangler', 'd1', 'execute', 'papagaio', '--remote', '--json', '--command',
-  `SELECT id, term, pos FROM cards
+  `SELECT id, term, pos, trans FROM cards
      WHERE (id LIKE 'lex:%' OR id LIKE 'lexpt:%') AND course='pt'
      AND trans_ru IS NOT NULL AND trans_ru NOT LIKE '%;%'
      AND trans_ru NOT LIKE '%,%' AND trans_ru NOT LIKE '%(%'
@@ -45,7 +45,7 @@ const listOut = execFileSync('npx', [
    ORDER BY freq, id LIMIT ${2000 + skipSet.size}`,
 ], { cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 const need = JSON.parse(listOut)[0].results
-  .map((r) => [r.term, r.pos, r.id])
+  .map((r) => [r.term, r.pos, r.id, r.trans])
   .filter(([, , id]) => !skipSet.has(id))
   .slice(0, 2000);
 console.error(`expand queue: ${need.length} (skipping ${skipSet.size} known-thin)`);
@@ -89,7 +89,15 @@ for (let i = 0; i < need.length; i += BATCH) {
       const r = await fetch(API, {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'x-batch-key': KEY },
-        body: JSON.stringify({ terms: batch.map(([t]) => t), to: 'ru', from: 'pt', rich: true }),
+        // Send the row's own sense, not the bare word. Rows are keyed term|pos, so
+        // a word with four parts of speech asks four times; glossing the bare
+        // word answered all four identically and filed a cattle adjective under
+        // the conjunction "que". The English `trans` is already sense-specific
+        // on these rows, which makes it the cheapest disambiguator available.
+        body: JSON.stringify({
+          terms: batch.map(([t, p, , sense]) => ({ t, pos: p ?? '', sense: sense ?? '' })),
+          to: 'ru', from: 'pt', rich: true,
+        }),
       });
       limited = r.status === 429 || r.status >= 500;
       d = await r.json().catch(() => ({}));
