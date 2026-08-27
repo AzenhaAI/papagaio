@@ -786,6 +786,42 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  // A card in your own words. The reader and the translator both make cards
+  // for you, but a machine gloss is not always the one you need: the word your
+  // landlord used, in the sense he used it, with the sentence he said.
+  if (path === '/api/cards' && request.method === 'POST') {
+    const b = await request.json().catch(() => ({}));
+    const term = String(b?.term ?? '').trim().slice(0, 80);
+    const trans = String(b?.trans ?? '').trim().slice(0, 200);
+    if (!term || !trans) return json({ error: 'term and trans are required' }, 400);
+    const course = b?.course === 'en' ? 'en' : 'pt';
+    const note = String(b?.note ?? '').trim().slice(0, 300);
+    const ex = String(b?.example ?? '').trim().slice(0, 300);
+
+    // Same word twice is a card you will answer twice and learn once.
+    const dupe = await env.DB.prepare(
+      `SELECT id FROM cards WHERE owner = ?1 AND LOWER(term) = LOWER(?2) AND course = ?3`
+    ).bind(String(uid), term, course).first();
+    if (dupe) return json({ id: dupe.id, duplicate: true });
+
+    // freq 100000 keeps it after the frequency deck: your own words are extra,
+    // never a queue-jumper ahead of the thousand that come first.
+    const id = `u${Number(uid).toString(36)}-${Date.now().toString(36)}`;
+    await env.DB.batch([
+      env.DB.prepare(
+        `INSERT INTO cards (id, course, term, trans, note, ex_t, tags, freq, owner)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, '["mine"]', 100000, ?7)`
+      ).bind(id, course, term, trans, note, ex || null, String(uid)),
+      env.DB.prepare(
+        `INSERT INTO user_cards (user_id, card_id, due) VALUES (?1, ?2, ?3)`
+      ).bind(uid, id, new Date().toISOString()),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?1, ?2, 'add', ?3)`
+      ).bind(uid, id, new Date().toISOString()),
+    ]);
+    return json({ id, duplicate: false });
+  }
+
   if (path === '/api/course' && request.method === 'GET') {
     return json(await courseMap(env, uid));
   }

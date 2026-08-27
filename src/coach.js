@@ -260,6 +260,9 @@ function systemPrompt(course, scen, level, known, ui) {
       `SHORT things the learner could plausibly say next, each as {"pt": "...", "en": "..."}. ` +
       `The hints must fit this exact moment in the scene, be usable verbatim, and stay at the ` +
       `learner's level — they are a way out of a blank page, not a vocabulary lesson. ` +
+      `NEVER repeat your previous line word for word. A greeting answered with ` +
+      `the same greeting is what a broken machine does: move the scene forward ` +
+      `instead — greet back and then do your job. ` +
       `Answer strictly as JSON: {"reply": "your line in Portuguese", "gloss": "your line in ${helper}", ` +
       `"note": "correction in ${helper} or empty", "done": true or false, ` +
       `"hints": [{"pt": "...", "en": "the ${helper} translation"}]}. ` +
