@@ -263,7 +263,12 @@ function systemPrompt(course, scen, level, known, ui) {
       `NEVER repeat your previous line word for word. A greeting answered with ` +
       `the same greeting is what a broken machine does: move the scene forward ` +
       `instead — greet back and then do your job. ` +
+      `Also report on WHAT THE LEARNER JUST SAID: "you_gloss" is their line in ` +
+      `${helper} — what they actually said, not what they meant to say, so a ` +
+      `wrong word shows up as the wrong meaning. "you_fixed" is their line ` +
+      `rewritten as a native would say it, or empty when it was already fine. ` +
       `Answer strictly as JSON: {"reply": "your line in Portuguese", "gloss": "your line in ${helper}", ` +
+      `"you_gloss": "their line in ${helper}", "you_fixed": "their line corrected, or empty", ` +
       `"note": "correction in ${helper} or empty", "done": true or false, ` +
       `"hints": [{"pt": "...", "en": "the ${helper} translation"}]}. ` +
       `When "done" is true, "hints" may be an empty list — there is nothing left to say.`
@@ -299,9 +304,9 @@ export async function coachTurn(env, { userId, course, scenario, level, history,
     { json: true }
   );
 
-  let reply, note, gloss, hints, done;
+  let reply, note, gloss, hints, done, you_gloss, youFixed;
   try {
-    ({ reply, note, gloss, hints, done } = JSON.parse(raw));
+    ({ reply, note, gloss, hints, done, you_gloss, you_fixed: youFixed } = JSON.parse(raw));
   } catch {
     reply = raw;
     note = '';
@@ -311,6 +316,12 @@ export async function coachTurn(env, { userId, course, scenario, level, history,
     reply: reply ?? '',
     gloss: gloss ?? '',
     note: note ?? '',
+    // What the learner said, read back to them: the translation of their own
+    // line and, when it needed one, the version a native would have used.
+    // A correction they cannot see in their own words is advice about
+    // somebody else's sentence.
+    youGloss: you_gloss ?? '',
+    youFixed: (youFixed ?? '').trim(),
     hints: (Array.isArray(hints) ? hints : []).filter((h) => h?.pt).slice(0, 3),
     // The scene reached its natural end. Clients use this to offer the recap
     // instead of pretending there is more to say.

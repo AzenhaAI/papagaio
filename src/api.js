@@ -993,6 +993,7 @@ export async function handleApi(request, env, path) {
       }
       return json({
         reply: turn.reply, gloss: turn.gloss, note: turn.note, hints: turn.hints,
+        you_gloss: turn.youGloss, you_fixed: turn.youFixed,
         done: turn.done,
         messages: turn.history, lesson: lessonState,
       });
