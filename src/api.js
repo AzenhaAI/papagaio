@@ -650,7 +650,20 @@ export async function handleApi(request, env, path) {
     if (!terms.length || terms.some((x) => !x.t)) return json({ error: 'terms required' }, 400);
     // rich mode: a Multitran-style row instead of a one-worder — equivalents
     // separated by «;», each with an optional bracketed domain/style hint.
-    const style = body?.rich
+    // define mode: a monolingual dictionary definition rather than a translation.
+    // Matches the shape of the definitions already in the table — lowercase, no
+    // article, no repetition of the headword, no closing period.
+    const task = body?.define
+      ? `Write a dictionary definition of each ${from} term in ${to}.`
+      : `Translate each ${from} term into ${to}.`;
+    const style = body?.define
+      ? `One definition of 3-12 words, in ${to}, starting lowercase, with no ` +
+        `article, no closing period, and without repeating the term itself. ` +
+        `The commonest words here are grammatical — articles, pronouns, ` +
+        `prepositions, conjunctions, determiners. Describe what such a word ` +
+        `DOES in a sentence ("liga duas oracoes coordenadas"); never answer ` +
+        `with an example phrase using it.`
+      : body?.rich
       ? `2-4 equivalents separated by "; ", each optionally followed by a short ` +
         `bracketed hint in ${to} marking domain, style or nuance — like ` +
         `"кот (самец); кошка (о животном)". No other explanations.`
@@ -663,11 +676,11 @@ export async function handleApi(request, env, path) {
     const senseRule = tagged
       ? `An entry may carry a part of speech in [brackets] and its English sense after "\u2014". ` +
         `When present, translate ONLY that sense; never fold the word's other meanings into the line. ` +
-        `Output the ${to} equivalents alone \u2014 never echo the term, its bracketed tag or the English sense. `
+        `Output the ${to} text alone \u2014 never echo the term, its bracketed tag or the English sense. `
       : '';
     const glossMessages = [
       { role: 'system', content:
-        `Translate each ${from} term into ${to}. ${senseRule}${style} ` +
+        `${task} ${senseRule}${style} ` +
         `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
       { role: 'user', content: terms.map((x, i) =>
         `${i + 1}. ${x.t}${x.pos ? ` [${x.pos}]` : ''}${x.sense ? ` \u2014 ${x.sense}` : ''}`).join('\n') },
@@ -754,6 +767,12 @@ export async function handleApi(request, env, path) {
     const sp = new URL(request.url).searchParams;
     const level = ['a2', 'b1', 'b2'].includes(sp.get('level')) ? sp.get('level') : 'b1';
     const helper = sp.get('ui') === 'ru' ? 'Russian' : 'English';
+    // The stored bulletin is free to serve, but the path that builds one calls
+    // the model — and this endpoint is public. The cap is what keeps a public
+    // reason-to-open-the-app from being a public way to spend the day's quota.
+    if (!(await underPublicCap(env, request))) {
+      return json({ error: 'daily limit reached' }, 429);
+    }
     try {
       return json(await getBulletin(env, { level, helper }));
     } catch (e) {

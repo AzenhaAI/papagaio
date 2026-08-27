@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// The island's news, rewritten for a learner. Client-side on purpose: the
+// bulletin changes every morning and this site is a static tree, so baking it
+// in would mean a deploy a day to say what happened today.
+---
+<BaseLayout title="Island news in European Portuguese">
+  <h1>Today on the island</h1>
+  <p class="lede" style="max-width: 680px;">
+    What happened in Madeira this morning, rewritten at the level you read, with
+    the words worth keeping underneath. Written from the headlines of
+    <a href="https://www.jm-madeira.pt/" rel="noreferrer">JM-Madeira</a> — never
+    copied from them.
+  </p>
+
+  <div class="levels" id="levels">
+    <button class="lv" data-lv="a2">A2</button>
+    <button class="lv on" data-lv="b1">B1</button>
+    <button class="lv" data-lv="b2">B2</button>
+    <span class="muted" id="day"></span>
+  </div>
+
+  <div id="out" class="bulletin muted">Loading…</div>
+
+  <div id="words"></div>
+
+  <p class="muted" style="margin-top: 26px; font-size: 13px;">
+    Want it every morning without coming here?
+    <a href="https://t.me/papagaio_ebot">The bot sends it</a> — /news — and the
+    app has it with the audio and one tap to keep the words.
+  </p>
+</BaseLayout>
+
+<style>
+  .levels { display: flex; gap: 8px; align-items: center; margin: 18px 0 14px; }
+  .lv { background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+    border-radius: 9px; padding: 6px 14px; font: inherit; font-size: 13px;
+    font-weight: 700; cursor: pointer; }
+  .lv.on { background: var(--accent); color: #08110f; border-color: var(--accent); }
+  .bulletin { max-width: 680px; white-space: pre-wrap; line-height: 1.7;
+    color: var(--text); background: var(--panel); border-radius: 12px; padding: 18px; }
+  .wordlist { max-width: 680px; margin-top: 18px; }
+  .word { display: flex; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); }
+  .word b { color: var(--text); font-weight: 600; }
+  .word span { color: var(--muted); font-size: 14px; }
+  h2.small { font-size: 13px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin: 22px 0 6px; }
+</style>
+
+<script>
+  const API = '/api/news';
+  const out = document.getElementById('out');
+  const words = document.getElementById('words');
+  const day = document.getElementById('day');
+
+  async function load(level) {
+    out.textContent = 'Loading…';
+    words.innerHTML = '';
+    try {
+      const r = await fetch(`${API}?level=${level}`);
+      const d = await r.json();
+      if (d.error) throw new Error(d.error);
+      out.textContent = d.text;
+      day.textContent = d.day ?? '';
+      if (Array.isArray(d.words) && d.words.length) {
+        const h = document.createElement('h2');
+        h.className = 'small';
+        h.textContent = 'Words worth keeping';
+        const box = document.createElement('div');
+        box.className = 'wordlist';
+        for (const w of d.words) {
+          const row = document.createElement('div');
+          row.className = 'word';
+          const b = document.createElement('b');
+          b.textContent = w.pt;
+          const s = document.createElement('span');
+          s.textContent = w.gloss ?? '';
+          row.append(b, s);
+          box.append(row);
+        }
+        words.append(h, box);
+      }
+    } catch (e) {
+      out.textContent = 'The bulletin is not ready — try again in a minute.';
+    }
+  }
+
+  for (const b of document.querySelectorAll('.lv')) {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.lv').forEach((x) => x.classList.remove('on'));
+      b.classList.add('on');
+      load(b.dataset.lv);
+    });
+  }
+  load('b1');
+</script>
