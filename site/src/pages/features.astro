@@ -1,0 +1,191 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Everything the product does, in one place. Two testers independently asked
+// for things that already existed — the reader turning a text into cards was
+// built, shipped, and requested again a week later — which is a documentation
+// failure, not a product one.
+
+const surfaces = [
+  {
+    name: 'iPhone & iPad',
+    line: 'The full thing: cards, coach, reader, translator, dictionary, verbs — and it keeps working with the network down.',
+  },
+  {
+    name: 'Telegram bot',
+    line: 'A card every so often during the day, one tap to answer. Send it any phrase for a translation; type @papagaio_ebot inside someone else’s chat to translate without leaving the conversation.',
+  },
+  {
+    name: 'This website',
+    line: 'Everything the app has, in a browser, with nothing to install.',
+  },
+  {
+    name: 'Chrome & Safari',
+    line: 'Select a word on any page and the answer appears next to it — meanings, synonyms, pronunciation — without leaving what you were reading.',
+  },
+  {
+    name: 'The system translator',
+    line: 'On iPhone and iPad, PapaGaio can be your default translation app, so selecting text anywhere on the device answers in European Portuguese.',
+  },
+];
+
+const groups = [
+  {
+    title: 'Translator',
+    why: 'Google and DeepL answer in Brazilian Portuguese by default. Living in Portugal, that is the wrong language in small, constant ways.',
+    items: [
+      ['European Portuguese, always', 'Every answer is pt-PT, and every word a Brazilian would say differently is flagged: autocarro, not ônibus.'],
+      ['A dictionary, not just a translation', 'For a word or a short phrase you also get its distinct meanings, each with synonyms you can actually use and the antonyms marked ≠.'],
+      ['Your mistakes, named', 'Typos and grammar slips in what you typed are fixed openly, with the reason — never silently.'],
+      ['Register', 'It tells you when a phrase is formal or blunt, which is how "please" turns into an order without you noticing.'],
+      ['Three languages', 'English, Russian and Portuguese, in any direction, with the source detected automatically.'],
+      ['Out loud', 'Hear any Portuguese line in a real pt-PT voice.'],
+    ],
+  },
+  {
+    title: 'Cards that fit a day',
+    why: 'A word met once is a word forgotten. The scheduler decides when you see it again — you do not have to.',
+    items: [
+      ['Spaced repetition (FSRS)', 'Each answer moves the card forward or back. Nothing to configure.'],
+      ['Start where you are', 'Already speak some Portuguese? Pick A2, B1 or B2 and the easy end is booked as known — it still comes back weeks later to be checked.'],
+      ['Seven kinds of exercise', 'Recognise, type it out, fill the gap, dictation, grammar drills, minimal pairs, and saying the word aloud.'],
+      ['Pronunciation checked', 'Say the word; it is transcribed and compared to what you were asked for — whole words, no near-enough credit.'],
+      ['Skip what you know', 'One tap on any card, or drop a whole topic at once.'],
+      ['Undo', 'Answered by accident? Take it back.'],
+    ],
+  },
+  {
+    title: 'AI coach',
+    why: 'Reading a language is not speaking it. This is the part that makes you talk before it matters.',
+    items: [
+      ['Fifteen real scenes', 'The café, the bank, the doctor, AIMA, the landlord, the mechanic — each with a role that behaves the way that person actually behaves.'],
+      ['You speak, it answers', 'Say your line; it replies in a real voice and keeps the scene going.'],
+      ['Scenes end', 'When the business is done, it is done — and then you get every mistake you made, collected.'],
+      ['Difficulty', 'From patient and slow to street pace.'],
+      ['A course with a point', 'Lessons in order, each ending in a scene you can now handle.'],
+    ],
+  },
+  {
+    title: 'Reader',
+    why: 'The words worth learning are the ones in front of you, not the ones on a list.',
+    items: [
+      ['Paste anything', 'An article, an email from the landlord, a menu photographed on the street.'],
+      ['It becomes a deck', 'The words you do not know yet are collected into cards — with the sentence you met them in.'],
+      ['Tap any word', 'The dictionary article, the examples and the pronunciation, without leaving the text.'],
+    ],
+  },
+  {
+    title: 'Dictionary & verbs',
+    why: 'Portuguese verbs are where beginners drown.',
+    items: [
+      ['Every tense, laid out', 'Conjugations for the verbs you will actually use, including the simplified future.'],
+      ['Real sentences', 'Examples from a human corpus, not invented ones.'],
+      ['A large lexicon', 'Well beyond the taught deck, so looking something up rarely dead-ends.'],
+    ],
+  },
+];
+
+
+const offline = {
+  works: [
+    ['The whole deck', 'Cards are stored on the device, not fetched one at a time. You can study a full session with the radio off.'],
+    ['Pronunciation audio', 'Downloaded once and kept — every word you have met is still speakable offline.'],
+    ['The dictionary, if you install it', 'Dictionary packs are files you own: once installed, lookups and example sentences work with no network at all.'],
+    ['Your answers', 'Everything you answer offline is queued and syncs by itself the next time you have signal. Nothing is lost, and the scheduler catches up.'],
+    ['Reminders', 'Scheduled on the phone itself, so cards still arrive with no connection and without Telegram.'],
+    ['Progress', 'The last figures stay readable instead of turning into an error.'],
+  ],
+  needs: [
+    ['The translator and the dictionary beyond your packs', 'Both ask a server; there is no model small enough to live in your pocket and still be right about European Portuguese.'],
+    ['The coach', 'It listens and answers in a voice — both happen server-side.'],
+    ['Turning a text into a deck', 'Deciding which words are new to you is a question for your account.'],
+    ['A word you have never met', 'Its audio has to be fetched once; after that it is yours.'],
+  ],
+};
+
+const principles = [
+  ['Free, permanently', 'No subscription, no premium tier, nothing locked. The whole stack runs on free tiers; there is nothing to charge for.'],
+  ['No account', 'No email, no password, no sign-up. Your progress belongs to your device, and one code moves it between your phone and the bot.'],
+  ['No shaming', 'Ignore three cards and it goes quiet until tomorrow. There are no streaks to break.'],
+  ['Your data, yours', 'Export everything as JSON whenever you like, and delete all of it from inside the app.'],
+];
+---
+<BaseLayout title="What PapaGaio does">
+  <h1>What PapaGaio does</h1>
+  <p class="lede" style="max-width: 680px;">
+    A free European Portuguese tutor, for people who live where it is spoken.
+    Everything below is included — there is no paid tier to unlock.
+  </p>
+
+  <h2>Where it works</h2>
+  <div class="surfaces">
+    {surfaces.map((s) => (
+      <div class="surface">
+        <strong>{s.name}</strong>
+        <span class="muted">{s.line}</span>
+      </div>
+    ))}
+  </div>
+  <p class="muted" style="max-width: 680px;">
+    Same account across all of them: your deck, your mistakes and your progress
+    follow you. In the bot, <code>/link</code> gives you the code that pairs a device.
+  </p>
+
+  {groups.map((g) => (
+    <section style="margin-top: 34px;">
+      <h2>{g.title}</h2>
+      <p class="muted" style="max-width: 680px; margin-top: -6px;">{g.why}</p>
+      <ul class="features">
+        {g.items.map(([name, line]) => (
+          <li><strong>{name}</strong> — <span class="muted">{line}</span></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+
+  <section style="margin-top: 34px;">
+    <h2>On a levada with no signal</h2>
+    <p class="muted" style="max-width: 680px; margin-top: -6px;">
+      The app is built to be useful where the signal is not. Here is the exact
+      line, so it is never a surprise halfway up a mountain.
+    </p>
+    <h3 style="margin-bottom: 4px;">Works offline</h3>
+    <ul class="features">
+      {offline.works.map(([name, line]) => (
+        <li><strong>{name}</strong> — <span class="muted">{line}</span></li>
+      ))}
+    </ul>
+    <h3 style="margin-bottom: 4px;">Needs a connection</h3>
+    <ul class="features">
+      {offline.needs.map(([name, line]) => (
+        <li><strong>{name}</strong> — <span class="muted">{line}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section style="margin-top: 34px;">
+    <h2>What it will never do</h2>
+    <ul class="features">
+      {principles.map(([name, line]) => (
+        <li><strong>{name}</strong> — <span class="muted">{line}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <p style="margin-top: 34px;">
+    <a class="btn" href="/papagaio/apps/">Get the app</a>
+    <a class="btn ghost" href="https://t.me/papagaio_ebot">Open the bot</a>
+  </p>
+</BaseLayout>
+
+<style>
+  .surfaces { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 900px; margin: 14px 0 18px; }
+  .surface { background: var(--panel); border-radius: 12px; padding: 14px 16px;
+    display: flex; flex-direction: column; gap: 6px; }
+  .surface strong { font-size: 15px; }
+  .surface span { font-size: 13.5px; line-height: 1.55; }
+  ul.features { max-width: 680px; line-height: 1.75; padding-left: 18px; }
+  ul.features li { margin-bottom: 8px; }
+  ul.features strong { color: var(--text); }
+</style>

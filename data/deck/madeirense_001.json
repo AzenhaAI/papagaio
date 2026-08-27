@@ -1,0 +1,761 @@
+{
+  "meta": {
+    "name": "Madeiran regionalisms",
+    "note": "Curated from public glossaries of the Madeiran dialect; the obscene and the town-to-town insults are deliberately left out. Needs a native review before it is taught as fact.",
+    "course": "pt"
+  },
+  "cards": [
+    {
+      "id": "md0001",
+      "pt": "a semilha",
+      "trans": "potato",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a batata». Informal: understand it, and use it once you live here.",
+      "ex_t": "Compra duas semilhas para o jantar.",
+      "ex_trans": "Buy two potatoes for dinner.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3101,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0002",
+      "pt": "a pepinela",
+      "trans": "chayote",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o chuchu». Informal: understand it, and use it once you live here.",
+      "ex_t": "Sopa de pepinela é comida de casa.",
+      "ex_trans": "Chayote soup is home food.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3102,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0003",
+      "pt": "o tabaibo",
+      "trans": "prickly pear",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o figo-da-índia». Informal: understand it, and use it once you live here.",
+      "ex_t": "No verão vendem tabaibos na estrada.",
+      "ex_trans": "In summer they sell prickly pears by the road.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3103,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0004",
+      "pt": "a bêbra",
+      "trans": "an early, fat fig",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o figo temporão». Informal: understand it, and use it once you live here.",
+      "ex_t": "As bêbras vêm antes dos figos.",
+      "ex_trans": "The bêbras come before the figs.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3104,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0005",
+      "pt": "o frangolho",
+      "trans": "wheat porridge with pork fat",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «papa de trigo». Informal: understand it, and use it once you live here.",
+      "ex_t": "O frangolho é prato de festa.",
+      "ex_trans": "Frangolho is a feast-day dish.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3105,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0006",
+      "pt": "o chicharro",
+      "trans": "horse mackerel",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o carapau (na ilha diz-se chicharro)». Informal: understand it, and use it once you live here.",
+      "ex_t": "Chicharro frito com milho.",
+      "ex_trans": "Fried horse mackerel with corn.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3106,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0007",
+      "pt": "a chinesa",
+      "trans": "milky coffee in a glass",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o galão». Informal: understand it, and use it once you live here.",
+      "ex_t": "Uma chinesa, por favor.",
+      "ex_trans": "A milky coffee, please.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3107,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0008",
+      "pt": "a brisa",
+      "trans": "any fizzy soft drink",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o refrigerante». Informal: understand it, and use it once you live here.",
+      "ex_t": "Queres uma brisa?",
+      "ex_trans": "Do you want a soft drink?",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3108,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0009",
+      "pt": "a poncha",
+      "trans": "sugarcane spirit with honey and lemon",
+      "pos": "noun",
+      "note": "Madeiran, and it exists nowhere else. Informal: understand it, and use it once you live here.",
+      "ex_t": "Uma poncha de maracujá.",
+      "ex_trans": "One passion-fruit poncha.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3109,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0010",
+      "pt": "a nikita",
+      "trans": "beer, pineapple and ice cream, mixed",
+      "pos": "noun",
+      "note": "Madeiran, and it exists nowhere else. Informal: understand it, and use it once you live here.",
+      "ex_t": "Nikita bebe-se ao sol.",
+      "ex_trans": "Nikita is drunk in the sun.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3110,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0011",
+      "pt": "o dentinho",
+      "trans": "something small to eat with a drink",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o petisco». Informal: understand it, and use it once you live here.",
+      "ex_t": "Trouxeram um dentinho com a cerveja.",
+      "ex_trans": "They brought a snack with the beer.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3111,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0012",
+      "pt": "o conduto",
+      "trans": "whatever goes alongside the main dish",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o acompanhamento». Informal: understand it, and use it once you live here.",
+      "ex_t": "Que conduto tem hoje?",
+      "ex_trans": "What is it served with today?",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3112,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0013",
+      "pt": "a levada",
+      "trans": "an irrigation channel along the mountain",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o canal de rega». Informal: understand it, and use it once you live here.",
+      "ex_t": "Vamos andar pela levada.",
+      "ex_trans": "Let's walk along the levada.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3113,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0014",
+      "pt": "o poio",
+      "trans": "a terrace of land held by a basalt wall",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o socalco». Informal: understand it, and use it once you live here.",
+      "ex_t": "Plantaram bananeiras no poio.",
+      "ex_trans": "They planted bananas on the terrace.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3114,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0015",
+      "pt": "o camalhão",
+      "trans": "a ridge of earth on a terrace",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o montículo de terra». Informal: understand it, and use it once you live here.",
+      "ex_t": "Sentou-se no camalhão a descansar.",
+      "ex_trans": "He sat on the ridge to rest.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3115,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0016",
+      "pt": "o furado",
+      "trans": "a tunnel",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o túnel». Informal: understand it, and use it once you live here.",
+      "ex_t": "A estrada tem muitos furados.",
+      "ex_trans": "The road has many tunnels.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3116,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0017",
+      "pt": "o horário",
+      "trans": "the bus",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o autocarro». Informal: understand it, and use it once you live here.",
+      "ex_t": "Perdi o horário das oito.",
+      "ex_trans": "I missed the eight o'clock bus.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3117,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0018",
+      "pt": "a lambeca",
+      "trans": "soft ice cream",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o gelado». Informal: understand it, and use it once you live here.",
+      "ex_t": "As crianças querem lambeca.",
+      "ex_trans": "The children want ice cream.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3118,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0019",
+      "pt": "a lapinha",
+      "trans": "the ornate Christmas nativity throne",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o presépio». Informal: understand it, and use it once you live here.",
+      "ex_t": "Em dezembro faz-se a lapinha.",
+      "ex_trans": "In December you set up the lapinha.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3119,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0020",
+      "pt": "o embate",
+      "trans": "the breeze coming off the sea",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a brisa marítima». Informal: understand it, and use it once you live here.",
+      "ex_t": "À tarde entra o embate.",
+      "ex_trans": "The sea breeze comes in during the afternoon.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3120,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0021",
+      "pt": "a viração",
+      "trans": "a turning breeze",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a corrente de ar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Está uma viração fresca.",
+      "ex_trans": "There is a fresh breeze.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3121,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0022",
+      "pt": "forrado",
+      "trans": "overcast, clouded over the hills",
+      "pos": "adj",
+      "note": "Madeira only — on the mainland this is «encoberto». Informal: understand it, and use it once you live here.",
+      "ex_t": "O céu está forrado.",
+      "ex_trans": "The sky is overcast.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3122,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0023",
+      "pt": "arrevalhar",
+      "trans": "to drizzle",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «chuviscar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Começou a arrevalhar.",
+      "ex_trans": "It started to drizzle.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3123,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0024",
+      "pt": "estiar",
+      "trans": "to stop raining",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «parar de chover». Informal: understand it, and use it once you live here.",
+      "ex_t": "Esperamos que estie.",
+      "ex_trans": "We are waiting for the rain to stop.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3124,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0026",
+      "pt": "mercar",
+      "trans": "to buy",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «comprar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Fui mercar pão.",
+      "ex_trans": "I went to buy bread.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3126,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0027",
+      "pt": "atremar",
+      "trans": "to catch what was said, to make out",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «perceber». Informal: understand it, and use it once you live here.",
+      "ex_t": "Não atremei o que disse.",
+      "ex_trans": "I didn't catch what you said.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3127,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0028",
+      "pt": "cramar",
+      "trans": "to complain",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «queixar-se». Informal: understand it, and use it once you live here.",
+      "ex_t": "Anda sempre a cramar.",
+      "ex_trans": "He is always complaining.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3128,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0029",
+      "pt": "a reina",
+      "trans": "anger, a temper",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a raiva». Informal: understand it, and use it once you live here.",
+      "ex_t": "Ficou com uma reina.",
+      "ex_trans": "He got into a temper.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3129,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0030",
+      "pt": "a fraima",
+      "trans": "a fright, a scare",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o susto». Informal: understand it, and use it once you live here.",
+      "ex_t": "Que fraima me deste!",
+      "ex_trans": "What a fright you gave me!",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3130,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0031",
+      "pt": "a rezonda",
+      "trans": "a telling-off",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a repreensão». Informal: understand it, and use it once you live here.",
+      "ex_t": "Levou uma rezonda do patrão.",
+      "ex_trans": "He got a telling-off from the boss.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3131,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0032",
+      "pt": "a roeza",
+      "trans": "gnawing hunger",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a fome». Informal: understand it, and use it once you live here.",
+      "ex_t": "Tenho uma roeza.",
+      "ex_trans": "I'm starving.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3132,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0033",
+      "pt": "cacul",
+      "trans": "full to the brim",
+      "pos": "adj",
+      "note": "Madeira only — on the mainland this is «cheio a transbordar». Informal: understand it, and use it once you live here.",
+      "ex_t": "O saco está cacul.",
+      "ex_trans": "The bag is full to the brim.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3133,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0034",
+      "pt": "bilhardar",
+      "trans": "to gossip, to pry",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «mexericar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Passa o dia a bilhardar.",
+      "ex_trans": "She spends the day gossiping.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3134,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0035",
+      "pt": "a madorna",
+      "trans": "drowsiness",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a sonolência». Informal: understand it, and use it once you live here.",
+      "ex_t": "Deu-me uma madorna depois do almoço.",
+      "ex_trans": "I got drowsy after lunch.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3135,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0036",
+      "pt": "trompicar",
+      "trans": "to stumble",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «tropeçar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Trompiquei na pedra.",
+      "ex_trans": "I stumbled on the stone.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3136,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0037",
+      "pt": "esvarar",
+      "trans": "to slip",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «escorregar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Cuidado, esvara-se aqui.",
+      "ex_trans": "Careful, it's slippery here.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3137,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0038",
+      "pt": "a cambriola",
+      "trans": "a somersault",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a cambalhota». Informal: understand it, and use it once you live here.",
+      "ex_t": "O miúdo deu uma cambriola.",
+      "ex_trans": "The kid did a somersault.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3138,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0039",
+      "pt": "juntar",
+      "trans": "to pick up off the ground",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «apanhar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Junta isso do chão.",
+      "ex_trans": "Pick that up off the floor.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3139,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0040",
+      "pt": "enfincar",
+      "trans": "to shove something in",
+      "pos": "verb",
+      "note": "Madeira only — on the mainland this is «enfiar». Informal: understand it, and use it once you live here.",
+      "ex_t": "Enfincou a chave no bolso.",
+      "ex_trans": "He shoved the key in his pocket.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3140,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0041",
+      "pt": "a tapona",
+      "trans": "a slap",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a bofetada». Informal: understand it, and use it once you live here.",
+      "ex_t": "Levou uma tapona.",
+      "ex_trans": "He got a slap.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3141,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0042",
+      "pt": "a penca",
+      "trans": "a big nose",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o narigão». Informal: understand it, and use it once you live here.",
+      "ex_t": "Que penca!",
+      "ex_trans": "What a nose!",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3142,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0043",
+      "pt": "a guedelha",
+      "trans": "a mop of hair",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «a cabeleira». Informal: understand it, and use it once you live here.",
+      "ex_t": "Corta essa guedelha.",
+      "ex_trans": "Cut that mop of hair.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3143,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0044",
+      "pt": "quéto",
+      "trans": "quiet, still",
+      "pos": "adj",
+      "note": "Madeira only — on the mainland this is «quieto». Informal: understand it, and use it once you live here.",
+      "ex_t": "Fica quéto!",
+      "ex_trans": "Keep still!",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3144,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0045",
+      "pt": "indagora",
+      "trans": "just now, a moment ago",
+      "pos": "adv",
+      "note": "Madeira only — on the mainland this is «agora mesmo». Informal: understand it, and use it once you live here.",
+      "ex_t": "Ele saiu indagora.",
+      "ex_trans": "He left just now.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3145,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0046",
+      "pt": "à pata",
+      "trans": "on foot",
+      "pos": "adv",
+      "note": "Madeira only — on the mainland this is «a pé». Informal: understand it, and use it once you live here.",
+      "ex_t": "Fomos à pata até ao Monte.",
+      "ex_trans": "We went up to Monte on foot.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3146,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0047",
+      "pt": "ir cascar batatas",
+      "trans": "to be sent packing",
+      "pos": "phrase",
+      "note": "Madeira only — on the mainland this is «ir dar uma volta». Informal: understand it, and use it once you live here.",
+      "ex_t": "Vai cascar batatas!",
+      "ex_trans": "Get lost!",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3147,
+      "unit": "madeira"
+    },
+    {
+      "id": "md0048",
+      "pt": "o tratuário",
+      "trans": "the pavement",
+      "pos": "noun",
+      "note": "Madeira only — on the mainland this is «o passeio». Informal: understand it, and use it once you live here.",
+      "ex_t": "Anda pelo tratuário.",
+      "ex_trans": "Walk on the pavement.",
+      "tags": [
+        "madeira",
+        "regional",
+        "pt-pt"
+      ],
+      "freq": 3148,
+      "unit": "madeira"
+    }
+  ]
+}
