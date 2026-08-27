@@ -98,3 +98,20 @@ paying for everything else does not also pay to be understood at the pharmacy.
 **Mnemonic tags aimed at Russian speakers.** One peer builds this and it is a
 good idea for a Russian-language product. Here it would push the interface
 towards a language this app has decided is the exception, not the default.
+
+---
+
+## Waiting on review, and what goes into 1.0.1
+
+Build 3 has been in the queue since 20 August; build 4 is uploaded and cannot
+replace it — Apple locks the build to the submission, and swapping means
+cancelling and starting the queue again. So build 4 becomes 1.0.1, submitted
+the moment the current one is decided either way.
+
+Already in build 4: the system default translator, the Safari extension, island
+news, the phrasebook, hand-written cards, the starting level, text size, the
+coach reading your own line back, voice sent on release.
+
+Everything shipped from here until that verdict lands is 1.0.1 too — the
+server-side half reaches people the day it deploys regardless, which is why
+waiting costs so little.
