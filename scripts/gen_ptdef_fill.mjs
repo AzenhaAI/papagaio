@@ -31,6 +31,11 @@ const rows = JSON.parse(execFileSync('npx', [
   'wrangler', 'd1', 'execute', 'papagaio', '--remote', '--json', '--command',
   `SELECT id, term, pos, trans FROM cards
      WHERE id LIKE 'lex:%' AND freq < 900000 AND (def_pt IS NULL OR def_pt = '')
+     -- A handful of rows carry a Wiktionary cross-reference instead of a gloss
+     -- ("Same as entry above."). There is nothing there to define from, and the
+     -- model fills the void by echoing whatever it answered last, so these keep
+     -- an honest blank.
+     AND trans NOT LIKE 'Same as %' AND trans NOT LIKE 'See %'
      ORDER BY freq, id`,
 ], { cwd: root, encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 }))[0].results;
 
