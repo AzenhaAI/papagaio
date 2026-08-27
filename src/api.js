@@ -17,6 +17,7 @@ import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from '.
 import { conjugate } from './conjugate.js';
 import { VERBS, findVerb, fold } from './verbs.js';
 import { START_LEVELS, applyLevel } from './level.js';
+import { getBulletin } from './news.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -745,6 +746,19 @@ export async function handleApi(request, env, path) {
       scenarios: scenarioList(course),
       levels: Object.entries(LEVELS).map(([key, l]) => ({ key, label: l.label })),
     });
+  }
+
+  // Today's bulletin. Public on purpose — a reason to open the app should not
+  // be behind a pairing step — but capped like every other public model call.
+  if (path === '/api/news' && request.method === 'GET') {
+    const sp = new URL(request.url).searchParams;
+    const level = ['a2', 'b1', 'b2'].includes(sp.get('level')) ? sp.get('level') : 'b1';
+    const helper = sp.get('ui') === 'ru' ? 'Russian' : 'English';
+    try {
+      return json(await getBulletin(env, { level, helper }));
+    } catch (e) {
+      return json({ error: e.message }, 502);
+    }
   }
 
   // ---- authenticated ----

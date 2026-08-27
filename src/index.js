@@ -10,6 +10,7 @@ import { handleApi } from './api.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
 import { START_LEVELS, applyLevel } from './level.js';
+import { buildBulletin, getBulletin } from './news.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -161,6 +162,11 @@ async function handleUpdate(update, env) {
       return;
     }
     await handleTranslation(env, uid, chat, q);
+    return;
+  }
+
+  if (text.startsWith('/news')) {
+    await sendBulletin(env, chat, 'b1');
     return;
   }
 
@@ -872,6 +878,45 @@ async function handleInline(q, env) {
   });
 }
 
+
+/** Today's island news, written for a learner. */
+async function sendBulletin(env, chatId, level) {
+  const b = await getBulletin(env).catch(() => null) ;
+  const wanted = level;
+  const data = b && b.level === wanted ? b : await getBulletin(env, { level: wanted }).catch(() => null);
+  if (!data) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: 'The bulletin is not ready — try again in a minute.' });
+    return;
+  }
+
+  const words = (data.words ?? []).map((w) => `• *${w.pt}* — ${w.gloss}`).join('\n');
+  // The sources are named, always: we write from their headlines, and a
+  // bulletin that hides where the news came from is not a bulletin.
+  const src = (data.sources ?? []).slice(0, 3).map((x) => x.title).join(' · ');
+
+  await tg(env, 'sendMessage', {
+    chat_id: chatId,
+    parse_mode: 'Markdown',
+    disable_web_page_preview: true,
+    text: `📰 *${data.day}* · ${data.level.toUpperCase()}\n\n${data.text}` +
+          (words ? `\n\n*Words worth keeping*\n${words}` : '') +
+          (src ? `\n\n_Fonte: JM-Madeira — ${src}_` : ''),
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: 'A2', callback_data: 'news:a2' },
+          { text: 'B1', callback_data: 'news:b1' },
+          { text: 'B2', callback_data: 'news:b2' },
+        ],
+        [
+          { text: '🔊 Listen', callback_data: `newsay:${data.level}` },
+          { text: '➕ Learn these words', callback_data: `newsadd:${data.level}` },
+        ],
+      ],
+    },
+  });
+}
+
 // ---------- Button answers ----------
 
 async function handleCallback(cb, env) {
@@ -892,6 +937,60 @@ async function handleCallback(cb, env) {
         ? `*Starting at ${label}.*\n\n${known} words booked as known — they come back over the next few weeks so I can check I believed you.\n\nNext card: /now`
         : `*Starting at ${label}* — from the top, nothing skipped.\n\nNext card: /now`,
       parse_mode: 'Markdown',
+    });
+    return;
+  }
+
+  // The bulletin: another level, the audio, or its words into the deck.
+  if (data.startsWith('news:') || data.startsWith('newsay:') || data.startsWith('newsadd:')) {
+    const [kind, level] = data.split(':');
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    if (kind === 'news') {
+      await sendBulletin(env, cb.message.chat.id, level);
+      return;
+    }
+    const b = await getBulletin(env, { level }).catch(() => null);
+    if (!b) return;
+
+    if (kind === 'newsay') {
+      // Telegram caps a voice note, and a three-minute bulletin is longer than
+      // the synthesiser will return in one piece — the first item is the part
+      // people actually replay anyway.
+      const head = b.text.split(/\n\s*\n/).slice(0, 2).join('\n\n').slice(0, 900);
+      try {
+        const audio = await synthesize(head, 'pt');
+        await tgVoice(env, cb.message.chat.id, audio, `📰 ${b.day} · ${b.level.toUpperCase()}`);
+      } catch {
+        await tg(env, 'sendMessage', { chat_id: cb.message.chat.id, text: 'No voice right now — try again shortly.' });
+      }
+      return;
+    }
+
+    // Its words, into the deck, with the bulletin sentence they came from.
+    let added = 0;
+    for (const w of (b.words ?? []).slice(0, 10)) {
+      const term = w.pt.trim();
+      if (!term) continue;
+      const exists = await env.DB.prepare(
+        `SELECT 1 FROM cards WHERE owner = ?1 AND LOWER(term) = LOWER(?2)`
+      ).bind(String(uid), term).first();
+      if (exists) continue;
+      const id = `u${uid.toString(36)}-${Date.now().toString(36)}-${added}`;
+      await env.DB.batch([
+        env.DB.prepare(
+          `INSERT INTO cards (id, course, term, trans, note, tags, freq, owner)
+           VALUES (?1, 'pt', ?2, ?3, ?4, '["news"]', 100000, ?5)`
+        ).bind(id, term, w.gloss ?? '', `From the bulletin of ${b.day}`, String(uid)),
+        env.DB.prepare(`INSERT INTO user_cards (user_id, card_id, due) VALUES (?1, ?2, ?3)`)
+          .bind(uid, id, now()),
+      ]);
+      added += 1;
+    }
+    await tg(env, 'sendMessage', {
+      chat_id: cb.message.chat.id,
+      text: added
+        ? `➕ ${added} word${added === 1 ? '' : 's'} added — they come back on the usual schedule.`
+        : 'You already have all of those.',
     });
     return;
   }
@@ -1252,6 +1351,7 @@ async function publishCommands(env) {
       commands: [
         { command: 'help',   description: '🦜 What I can do' },
         { command: 'tr',     description: '🔤 Translate a word or a phrase' },
+        { command: 'news',   description: '📰 Today on the island, at your level' },
         { command: 'course', description: '🎓 The course — lessons with a goal' },
         { command: 'talk',   description: '🎭 Free practice with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
@@ -1273,6 +1373,13 @@ async function publishCommands(env) {
 
 async function tick(env) {
   const nowDate = new Date();
+  // The island's news, written for a learner, once a morning for everyone —
+  // three model calls a day rather than one per reader who asks.
+  if (nowDate.getUTCHours() === 6 && nowDate.getUTCMinutes() < 5) {
+    for (const level of ['a2', 'b1', 'b2']) {
+      await buildBulletin(env, { level }).catch(() => {});
+    }
+  }
   // Once a day (the first cron slot after 20:00 UTC), recurring mistakes
   // graduate into cards — they arrive with tomorrow's queue, not mid-evening.
   if (nowDate.getUTCHours() === 20 && nowDate.getUTCMinutes() < 5) {
