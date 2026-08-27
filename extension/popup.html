@@ -1,0 +1,30 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; width: 320px; background: #16181d; color: #f2f4f7;
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .pad { padding: 14px; }
+  h1 { font-size: 13px; color: #29b89a; margin: 0 0 10px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 70px; resize: vertical;
+    background: #21242b; color: #f2f4f7; border: 1px solid #2b2f36; border-radius: 8px;
+    padding: 8px; font: inherit; }
+  .langs { display: flex; gap: 6px; margin: 10px 0; }
+  .lang { flex: 1; text-align: center; padding: 6px 0; border-radius: 8px;
+    background: #21242b; color: #c9d0da; cursor: pointer; font-size: 12.5px; }
+  .lang.on { background: #29b89a; color: #08110f; font-weight: 600; }
+  .out { font-size: 17px; font-weight: 600; margin-top: 10px; min-height: 22px; }
+  .note { color: #a7aeba; font-size: 12.5px; margin-top: 8px; }
+  .note div { margin-top: 4px; }
+  .hint { color: #8b929e; font-size: 11.5px; margin-top: 12px; }
+  a { color: #29b89a; }
+</style>
+<div class="pad">
+  <h1>PapaGaio — European Portuguese</h1>
+  <textarea id="in" placeholder="Type or paste anything…"></textarea>
+  <div class="langs" id="langs"></div>
+  <div class="out" id="out"></div>
+  <div class="note" id="note"></div>
+  <div class="hint">Or select text on any page and click the 🦜.<br>
+    Free, no account. <a href="https://azenha.ai/papagaio" target="_blank">azenha.ai/papagaio</a></div>
+</div>
+<script src="popup.js"></script>

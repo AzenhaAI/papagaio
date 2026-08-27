@@ -145,6 +145,44 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  if (text.startsWith('/help')) {
+    // The command menu lists names; it never says what any of them is FOR.
+    // A tester went through the whole bot and came out asking what the reader
+    // was even for — that was this gap, not the reader.
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      parse_mode: 'Markdown',
+      disable_web_page_preview: true,
+      text:
+        '🦜 *What I can do*\n\n' +
+        '*Just send me anything.* A word, a phrase, a message someone sent you — ' +
+        'you get it in European Portuguese, never Brazilian, with your typos fixed ' +
+        'and every word a Brazilian would say differently flagged. Send one word and ' +
+        'you also get the dictionary article and real sentences it appears in.\n\n' +
+        '*Speak instead of typing.* A voice message works the same way, and in a ' +
+        'dialog I answer with a real pt-PT voice.\n\n' +
+        '🎭 /talk — a live roleplay: the café, the bank, AIMA. I stay in the role ' +
+        'until the scene is actually finished, then /stop gives you every mistake you made.\n' +
+        '🎓 /course — lessons with a goal, in order, each ending in a scene you can handle.\n' +
+        '🃏 /now — a card right now. Cards come on their own during the day; ' +
+        'the buttons under each answer keep the session going.\n' +
+        '📐 /drill — grammar on demand, as much as you want.\n\n' +
+        '*If you already speak some Portuguese*\n' +
+        '🎚 /level — start at A2, B1 or B2 instead of "olá". Skipped words are booked ' +
+        'as known and come back later so the claim gets checked.\n' +
+        '⏭ /skip — drop a whole topic you know.\n' +
+        '✓ Every new card has _I already know this_ on it.\n\n' +
+        '*Housekeeping*\n' +
+        '↩️ /undo — take back the last answer. 📊 /stats — where you are.\n' +
+        '💾 /export — everything you have, as JSON. It is your data.\n' +
+        '🌍 /lang — Portuguese, English or both. ⏸ /pause and /resume.\n' +
+        '🗑 /delete — erase me from your life, permanently.\n\n' +
+        'Everything is free and there is nothing to buy.\n' +
+        'Also an app and a web version: azenha.ai/papagaio',
+    });
+    return;
+  }
+
   if (text.startsWith('/level')) {
     // Aileen, who already speaks some Portuguese, had to sit through "olá" to
     // reach anything she needed. There is no CEFR field on a card, but the deck
@@ -1133,6 +1171,7 @@ function formatEntry(card, e) {
 async function publishCommands(env) {
   await tg(env, 'setMyCommands', {
       commands: [
+        { command: 'help',   description: '🦜 What I can do' },
         { command: 'course', description: '🎓 The course — lessons with a goal' },
         { command: 'talk',   description: '🎭 Free practice with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
