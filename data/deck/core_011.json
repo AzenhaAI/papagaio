@@ -461,7 +461,7 @@
       "pos": "noun",
       "gender": "m",
       "note": "",
-      "ex_t": "Um pacote de leite meio-gordo, se faz favor.",
+      "ex_t": "Um pacote de leite meio-gordo, por favor.",
       "ex_trans": "A carton of semi-skimmed milk, please.",
       "tags": [
         "core",
@@ -1080,7 +1080,7 @@
       "pos": "verb",
       "gender": null,
       "note": "the phone-call survival verb",
-      "ex_t": "Pode soletrar o apelido, se faz favor?",
+      "ex_t": "Pode soletrar o apelido, por favor?",
       "ex_trans": "Can you spell the surname, please?",
       "tags": [
         "core",

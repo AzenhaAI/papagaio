@@ -9,11 +9,11 @@
   "cards": [
     {
       "id": "fr0041",
-      "term": "queria um café, se faz favor",
+      "term": "queria um café, por favor",
       "trans": "I'd like an espresso, please",
       "pos": "phrase",
       "note": "queria (not quero) is the polite ask; um café alone means espresso",
-      "ex_t": "Bom dia, queria um café e um pastel de nata, se faz favor.",
+      "ex_t": "Bom dia, queria um café e um pastel de nata, por favor.",
       "ex_trans": "Good morning, I'd like an espresso and a pastel de nata, please.",
       "tags": [
         "frase",
@@ -28,7 +28,7 @@
       "trans": "it's to take away",
       "pos": "phrase",
       "note": "the counter question is 'é para aqui ou para levar?'",
-      "ex_t": "É para levar, se faz favor.",
+      "ex_t": "É para levar, por favor.",
       "ex_trans": "To take away, please.",
       "tags": [
         "frase",
@@ -43,7 +43,7 @@
       "trans": "the bill, please",
       "pos": "phrase",
       "note": "in Portugal you ask for the bill — it does not arrive on its own",
-      "ex_t": "Quando puder, a conta, se faz favor.",
+      "ex_t": "Quando puder, a conta, por favor.",
       "ex_trans": "When you have a moment, the bill please.",
       "tags": [
         "frase",
@@ -119,7 +119,7 @@
       "trans": "coffee with milk (large cup)",
       "pos": "phrase",
       "note": "Madeira's own order is a chinesa; garoto is the small one",
-      "ex_t": "Uma meia de leite e uma torrada, se faz favor.",
+      "ex_t": "Uma meia de leite e uma torrada, por favor.",
       "ex_trans": "A coffee with milk and toast, please.",
       "tags": [
         "frase",
@@ -286,7 +286,7 @@
       "trans": "can you give me a bag?",
       "pos": "phrase",
       "note": "bags cost a few cents — you will be asked 'quer saco?'",
-      "ex_t": "Pode-me dar um saco pequeno, se faz favor?",
+      "ex_t": "Pode-me dar um saco pequeno, por favor?",
       "ex_trans": "Can you give me a small bag, please?",
       "tags": [
         "frase",
@@ -402,11 +402,11 @@
     },
     {
       "id": "fr0067",
-      "term": "pode parar aqui, se faz favor",
+      "term": "pode parar aqui, por favor",
       "trans": "you can stop here, please",
       "pos": "phrase",
       "note": "to the taxi driver",
-      "ex_t": "Pode parar aqui ao pé da igreja, se faz favor.",
+      "ex_t": "Pode parar aqui ao pé da igreja, por favor.",
       "ex_trans": "You can stop here by the church, please.",
       "tags": [
         "frase",
@@ -1010,7 +1010,7 @@
       "trans": "call the police, please",
       "pos": "phrase",
       "note": "",
-      "ex_t": "Houve um acidente — chame a polícia, se faz favor.",
+      "ex_t": "Houve um acidente — chame a polícia, por favor.",
       "ex_trans": "There's been an accident — call the police, please.",
       "tags": [
         "frase",
@@ -1248,11 +1248,11 @@
     },
     {
       "id": "fr0123",
-      "term": "encha o depósito, se faz favor",
+      "term": "encha o depósito, por favor",
       "trans": "fill the tank, please",
       "pos": "phrase",
       "note": "at the petrol station; gasóleo is diesel, gasolina is petrol",
-      "ex_t": "Encha o depósito com gasóleo, se faz favor.",
+      "ex_t": "Encha o depósito com gasóleo, por favor.",
       "ex_trans": "Fill it up with diesel, please.",
       "tags": [
         "frase",

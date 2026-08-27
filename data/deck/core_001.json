@@ -30,7 +30,7 @@
       "pos": "phrase",
       "gender": null,
       "note": "until noon; after that — boa tarde",
-      "ex_t": "Bom dia! Um café, se faz favor.",
+      "ex_t": "Bom dia! Um café, por favor.",
       "ex_trans": "Good morning! A coffee, please.",
       "tags": [
         "core",
@@ -249,12 +249,12 @@
     },
     {
       "id": "pt0016",
-      "pt": "pode repetir, se faz favor?",
+      "pt": "pode repetir, por favor?",
       "trans": "can you repeat, please?",
       "pos": "phrase",
       "gender": null,
       "note": "",
-      "ex_t": "Pode repetir, se faz favor? Não percebi.",
+      "ex_t": "Pode repetir, por favor? Não percebi.",
       "ex_trans": "Can you repeat, please? I didn't understand.",
       "tags": [
         "core",
@@ -301,7 +301,7 @@
       "trans": "the bill",
       "pos": "noun",
       "gender": "f",
-      "note": "in a café you ask: «A conta, se faz favor»",
+      "note": "in a café you ask: «A conta, por favor»",
       "ex_t": "A conta, se faz favor.",
       "ex_trans": "The bill, please.",
       "tags": [
@@ -549,7 +549,7 @@
       "pos": "verb",
       "gender": null,
       "note": "in a café queria (I'd like) is politer than quero",
-      "ex_t": "Queria um café, se faz favor.",
+      "ex_t": "Queria um café, por favor.",
       "ex_trans": "I'd like a coffee, please.",
       "tags": [
         "core",
@@ -1108,7 +1108,7 @@
       "pos": "noun",
       "gender": "f",
       "note": "feminine, article a despite the stressed á",
-      "ex_t": "Uma água sem gás, se faz favor.",
+      "ex_t": "Uma água sem gás, por favor.",
       "ex_trans": "A still water, please.",
       "tags": [
         "core",
@@ -1124,7 +1124,7 @@
       "pos": "noun",
       "gender": "m",
       "note": "plural — pães",
-      "ex_t": "Queria dois pães, se faz favor.",
+      "ex_t": "Queria dois pães, por favor.",
       "ex_trans": "I'd like two bread rolls, please.",
       "tags": [
         "core",
@@ -1140,7 +1140,7 @@
       "pos": "noun",
       "gender": "m",
       "note": "just «um café» = an espresso",
-      "ex_t": "Um café, se faz favor.",
+      "ex_t": "Um café, por favor.",
       "ex_trans": "An espresso, please.",
       "tags": [
         "core",
@@ -1157,7 +1157,7 @@
       "pos": "noun",
       "gender": "m",
       "note": "masculine, though it looks feminine",
-      "ex_t": "Café com leite, se faz favor.",
+      "ex_t": "Café com leite, por favor.",
       "ex_trans": "Coffee with milk, please.",
       "tags": [
         "core",
@@ -1189,7 +1189,7 @@
       "pos": "noun",
       "gender": "f",
       "note": "a small draft is um fino (north) / uma imperial (south and Madeira)",
-      "ex_t": "Uma imperial, se faz favor.",
+      "ex_t": "Uma imperial, por favor.",
       "ex_trans": "A draft beer, please.",
       "tags": [
         "core",
@@ -1303,7 +1303,7 @@
       "pos": "noun",
       "gender": "f",
       "note": "Madeiran drink: sugar-cane aguardente, honey, lemon",
-      "ex_t": "Uma poncha, se faz favor.",
+      "ex_t": "Uma poncha, por favor.",
       "ex_trans": "A poncha, please.",
       "tags": [
         "madeira",
@@ -1351,7 +1351,7 @@
       "pos": "noun",
       "gender": "f",
       "note": "Madeira only; on the mainland order a galão or garoto",
-      "ex_t": "Uma chinesa, se faz favor.",
+      "ex_t": "Uma chinesa, por favor.",
       "ex_trans": "A coffee with milk, please.",
       "tags": [
         "madeira",

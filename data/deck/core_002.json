@@ -7,72 +7,1086 @@
     "note": "Batch 2: numbers, family, home, documents. freq continues from core_001."
   },
   "cards": [
-    { "id": "pt0084", "pt": "um", "trans": "one", "pos": "num", "gender": "m", "note": "feminine — uma; also the indefinite article", "ex_t": "Um café, se faz favor.", "ex_trans": "One coffee, please.", "tags": ["core", "numero"], "freq": 84, "unit": "numeros" },
-    { "id": "pt0085", "pt": "dois", "trans": "two", "pos": "num", "gender": "m", "note": "feminine — duas: duas horas", "ex_t": "Tenho dois filhos e duas filhas.", "ex_trans": "I have two sons and two daughters.", "tags": ["core", "numero"], "freq": 85, "unit": "numeros" },
-    { "id": "pt0086", "pt": "três", "trans": "three", "pos": "num", "gender": null, "note": "", "ex_t": "Três, se faz favor.", "ex_trans": "Three, please.", "tags": ["core", "numero"], "freq": 86, "unit": "numeros" },
-    { "id": "pt0087", "pt": "quatro", "trans": "four", "pos": "num", "gender": null, "note": "", "ex_t": "Somos quatro pessoas.", "ex_trans": "We are four people.", "tags": ["core", "numero"], "freq": 87, "unit": "numeros" },
-    { "id": "pt0088", "pt": "cinco", "trans": "five", "pos": "num", "gender": null, "note": "", "ex_t": "Cinco euros.", "ex_trans": "Five euros.", "tags": ["core", "numero"], "freq": 88, "unit": "numeros" },
-    { "id": "pt0089", "pt": "seis", "trans": "six", "pos": "num", "gender": null, "note": "on the phone people say meia (half a dozen) to avoid confusing seis with três", "ex_t": "São seis horas.", "ex_trans": "It's six o'clock.", "tags": ["core", "numero", "pt-pt"], "freq": 89, "unit": "numeros" },
-    { "id": "pt0090", "pt": "sete", "trans": "seven", "pos": "num", "gender": null, "note": "", "ex_t": "A loja fecha às sete.", "ex_trans": "The shop closes at seven.", "tags": ["core", "numero"], "freq": 90, "unit": "numeros" },
-    { "id": "pt0091", "pt": "oito", "trans": "eight", "pos": "num", "gender": null, "note": "", "ex_t": "O comboio sai às oito.", "ex_trans": "The train leaves at eight.", "tags": ["core", "numero"], "freq": 91, "unit": "numeros" },
-    { "id": "pt0092", "pt": "nove", "trans": "nine", "pos": "num", "gender": null, "note": "", "ex_t": "Abre às nove da manhã.", "ex_trans": "It opens at nine in the morning.", "tags": ["core", "numero"], "freq": 92, "unit": "numeros" },
-    { "id": "pt0093", "pt": "dez", "trans": "ten", "pos": "num", "gender": null, "note": "", "ex_t": "Custa dez euros.", "ex_trans": "It costs ten euros.", "tags": ["core", "numero"], "freq": 93, "unit": "numeros" },
-    { "id": "pt0094", "pt": "onze", "trans": "eleven", "pos": "num", "gender": null, "note": "", "ex_t": "Onze e meia.", "ex_trans": "Half past eleven.", "tags": ["core", "numero"], "freq": 94, "unit": "numeros" },
-    { "id": "pt0095", "pt": "doze", "trans": "twelve", "pos": "num", "gender": null, "note": "", "ex_t": "Doze ovos, uma dúzia.", "ex_trans": "Twelve eggs, a dozen.", "tags": ["core", "numero"], "freq": 95, "unit": "numeros" },
-    { "id": "pt0096", "pt": "catorze", "trans": "fourteen", "pos": "num", "gender": null, "note": "pt-PT spelling; Brazilians write quatorze", "ex_t": "Catorze de agosto.", "ex_trans": "The fourteenth of August.", "tags": ["core", "numero", "pt-pt"], "freq": 96, "unit": "numeros" },
-    { "id": "pt0097", "pt": "quinze", "trans": "fifteen", "pos": "num", "gender": null, "note": "quinze dias = a fortnight, used constantly", "ex_t": "Volto daqui a quinze dias.", "ex_trans": "I'm back in a fortnight.", "tags": ["core", "numero"], "freq": 97, "unit": "numeros" },
-    { "id": "pt0098", "pt": "vinte", "trans": "twenty", "pos": "num", "gender": null, "note": "21 = vinte e um", "ex_t": "Vinte e cinco euros.", "ex_trans": "Twenty-five euros.", "tags": ["core", "numero"], "freq": 98, "unit": "numeros" },
-    { "id": "pt0099", "pt": "trinta", "trans": "thirty", "pos": "num", "gender": null, "note": "", "ex_t": "Trinta minutos.", "ex_trans": "Thirty minutes.", "tags": ["core", "numero"], "freq": 99, "unit": "numeros" },
-    { "id": "pt0100", "pt": "cinquenta", "trans": "fifty", "pos": "num", "gender": null, "note": "", "ex_t": "Cinquenta euros, se faz favor.", "ex_trans": "Fifty euros, please.", "tags": ["core", "numero"], "freq": 100, "unit": "numeros" },
-    { "id": "pt0101", "pt": "cem", "trans": "one hundred", "pos": "num", "gender": null, "note": "exactly 100 is cem; 101+ becomes cento e um", "ex_t": "Cem euros.", "ex_trans": "A hundred euros.", "tags": ["core", "numero"], "freq": 101, "unit": "numeros" },
-    { "id": "pt0102", "pt": "mil", "trans": "one thousand", "pos": "num", "gender": null, "note": "never um mil — just mil", "ex_t": "Mil e quinhentos euros.", "ex_trans": "One thousand five hundred euros.", "tags": ["core", "numero"], "freq": 102, "unit": "numeros" },
-    { "id": "pt0103", "pt": "meio", "trans": "half", "pos": "adj", "gender": "m", "note": "feminine meia; time uses meia: duas e meia", "ex_t": "Meio quilo de queijo.", "ex_trans": "Half a kilo of cheese.", "tags": ["core", "numero"], "freq": 103, "unit": "numeros" },
-    { "id": "pt0104", "pt": "primeiro", "trans": "first", "pos": "adj", "gender": "m", "note": "floors are ordinal: primeiro andar", "ex_t": "Moro no primeiro andar.", "ex_trans": "I live on the first floor.", "tags": ["core", "numero"], "freq": 104, "unit": "numeros" },
-    { "id": "pt0105", "pt": "segunda-feira", "trans": "Monday", "pos": "noun", "gender": "f", "note": "Portuguese weekdays are ordinal: Monday is the 'second fair'", "ex_t": "Volto na segunda-feira.", "ex_trans": "I'm back on Monday.", "tags": ["core", "tempo"], "freq": 105, "unit": "tempo" },
-    { "id": "pt0106", "pt": "terça-feira", "trans": "Tuesday", "pos": "noun", "gender": "f", "note": "terça, not terceira — the only irregular one", "ex_t": "Tenho consulta na terça-feira.", "ex_trans": "I have an appointment on Tuesday.", "tags": ["core", "tempo"], "freq": 106, "unit": "tempo" },
-    { "id": "pt0107", "pt": "quarta-feira", "trans": "Wednesday", "pos": "noun", "gender": "f", "note": "", "ex_t": "Até quarta-feira!", "ex_trans": "See you Wednesday!", "tags": ["core", "tempo"], "freq": 107, "unit": "tempo" },
-    { "id": "pt0108", "pt": "quinta-feira", "trans": "Thursday", "pos": "noun", "gender": "f", "note": "", "ex_t": "Na quinta-feira vou ao médico.", "ex_trans": "On Thursday I'm going to the doctor.", "tags": ["core", "tempo"], "freq": 108, "unit": "tempo" },
-    { "id": "pt0109", "pt": "sexta-feira", "trans": "Friday", "pos": "noun", "gender": "f", "note": "", "ex_t": "Sexta-feira à noite.", "ex_trans": "Friday night.", "tags": ["core", "tempo"], "freq": 109, "unit": "tempo" },
-    { "id": "pt0110", "pt": "sábado", "trans": "Saturday", "pos": "noun", "gender": "m", "note": "weekend days keep their names — no feira", "ex_t": "No sábado vamos à praia.", "ex_trans": "On Saturday we're going to the beach.", "tags": ["core", "tempo"], "freq": 110, "unit": "tempo" },
-    { "id": "pt0111", "pt": "domingo", "trans": "Sunday", "pos": "noun", "gender": "m", "note": "", "ex_t": "Domingo é dia de descanso.", "ex_trans": "Sunday is a day of rest.", "tags": ["core", "tempo"], "freq": 111, "unit": "tempo" },
-    { "id": "pt0112", "pt": "o fim de semana", "trans": "weekend", "pos": "noun", "gender": "m", "note": "pt-PT keeps the spaces; Brazilians write fim de semana too but say final de semana", "ex_t": "Bom fim de semana!", "ex_trans": "Have a good weekend!", "tags": ["core", "tempo", "pt-pt"], "freq": 112, "unit": "tempo" },
-    { "id": "pt0113", "pt": "janeiro", "trans": "January", "pos": "noun", "gender": "m", "note": "months are lowercase in Portuguese", "ex_t": "Em janeiro faz frio.", "ex_trans": "In January it's cold.", "tags": ["core", "tempo"], "freq": 113, "unit": "tempo" },
-    { "id": "pt0114", "pt": "março", "trans": "March", "pos": "noun", "gender": "m", "note": "", "ex_t": "Quinze de março.", "ex_trans": "The fifteenth of March.", "tags": ["core", "tempo"], "freq": 114, "unit": "tempo" },
-    { "id": "pt0115", "pt": "agosto", "trans": "August", "pos": "noun", "gender": "m", "note": "the month Portugal goes on holiday", "ex_t": "Em agosto está tudo fechado.", "ex_trans": "In August everything is closed.", "tags": ["core", "tempo"], "freq": 115, "unit": "tempo" },
-    { "id": "pt0116", "pt": "dezembro", "trans": "December", "pos": "noun", "gender": "m", "note": "", "ex_t": "Em dezembro há festas.", "ex_trans": "In December there are festivities.", "tags": ["core", "tempo"], "freq": 116, "unit": "tempo" },
-    { "id": "pt0117", "pt": "a família", "trans": "family", "pos": "noun", "gender": "f", "note": "", "ex_t": "A minha família mora na Rússia.", "ex_trans": "My family lives in Russia.", "tags": ["core", "familia"], "freq": 117, "unit": "familia" },
-    { "id": "pt0118", "pt": "a mulher", "trans": "woman; wife", "pos": "noun", "gender": "f", "note": "both meanings — a minha mulher = my wife", "ex_t": "A minha mulher trabalha aqui.", "ex_trans": "My wife works here.", "tags": ["core", "familia"], "freq": 118, "unit": "familia" },
-    { "id": "pt0119", "pt": "o marido", "trans": "husband", "pos": "noun", "gender": "m", "note": "", "ex_t": "O meu marido é português.", "ex_trans": "My husband is Portuguese.", "tags": ["core", "familia"], "freq": 119, "unit": "familia" },
-    { "id": "pt0120", "pt": "o filho", "trans": "son", "pos": "noun", "gender": "m", "note": "filha = daughter; filhos = children in general", "ex_t": "Tenho um filho de dez anos.", "ex_trans": "I have a ten-year-old son.", "tags": ["core", "familia"], "freq": 120, "unit": "familia" },
-    { "id": "pt0121", "pt": "a mãe", "trans": "mother", "pos": "noun", "gender": "f", "note": "", "ex_t": "A minha mãe telefona todos os dias.", "ex_trans": "My mother calls every day.", "tags": ["core", "familia"], "freq": 121, "unit": "familia" },
-    { "id": "pt0122", "pt": "o pai", "trans": "father", "pos": "noun", "gender": "m", "note": "pais = parents", "ex_t": "Os meus pais vêm cá em agosto.", "ex_trans": "My parents are coming in August.", "tags": ["core", "familia"], "freq": 122, "unit": "familia" },
-    { "id": "pt0123", "pt": "o irmão", "trans": "brother", "pos": "noun", "gender": "m", "note": "irmã = sister; plural irmãos", "ex_t": "Tenho dois irmãos.", "ex_trans": "I have two brothers.", "tags": ["core", "familia"], "freq": 123, "unit": "familia" },
-    { "id": "pt0124", "pt": "o amigo", "trans": "friend", "pos": "noun", "gender": "m", "note": "amiga for a woman", "ex_t": "É um amigo meu.", "ex_trans": "He's a friend of mine.", "tags": ["core", "familia"], "freq": 124, "unit": "familia" },
-    { "id": "pt0125", "pt": "o vizinho", "trans": "neighbour", "pos": "noun", "gender": "m", "note": "you will use this word more than you expect", "ex_t": "O vizinho de cima faz muito barulho.", "ex_trans": "The neighbour upstairs makes a lot of noise.", "tags": ["core", "familia", "casa"], "freq": 125, "unit": "familia" },
-    { "id": "pt0126", "pt": "a criança", "trans": "child", "pos": "noun", "gender": "f", "note": "feminine even for a boy: a criança", "ex_t": "As crianças estão na escola.", "ex_trans": "The children are at school.", "tags": ["core", "familia"], "freq": 126, "unit": "familia" },
-    { "id": "pt0127", "pt": "o apartamento", "trans": "flat, apartment", "pos": "noun", "gender": "m", "note": "also apartamento T2 = two-bedroom, the standard listing format", "ex_t": "Arrendei um apartamento T2.", "ex_trans": "I rented a two-bedroom flat.", "tags": ["core", "casa"], "freq": 127, "unit": "casa" },
-    { "id": "pt0128", "pt": "o prédio", "trans": "building", "pos": "noun", "gender": "m", "note": "", "ex_t": "O prédio tem elevador.", "ex_trans": "The building has a lift.", "tags": ["core", "casa"], "freq": 128, "unit": "casa" },
-    { "id": "pt0129", "pt": "o quarto", "trans": "room, bedroom", "pos": "noun", "gender": "m", "note": "also means 'fourth' — context decides", "ex_t": "O quarto tem vista para o mar.", "ex_trans": "The bedroom has a sea view.", "tags": ["core", "casa"], "freq": 129, "unit": "casa" },
-    { "id": "pt0130", "pt": "a cozinha", "trans": "kitchen", "pos": "noun", "gender": "f", "note": "also means cuisine: cozinha portuguesa", "ex_t": "A cozinha é pequena mas chega.", "ex_trans": "The kitchen is small but enough.", "tags": ["core", "casa"], "freq": 130, "unit": "casa" },
-    { "id": "pt0131", "pt": "a chave", "trans": "key", "pos": "noun", "gender": "f", "note": "", "ex_t": "Perdi a chave de casa.", "ex_trans": "I lost my house key.", "tags": ["core", "casa"], "freq": 131, "unit": "casa" },
-    { "id": "pt0132", "pt": "a porta", "trans": "door", "pos": "noun", "gender": "f", "note": "", "ex_t": "Fecha a porta, se faz favor.", "ex_trans": "Close the door, please.", "tags": ["core", "casa"], "freq": 132, "unit": "casa" },
-    { "id": "pt0133", "pt": "a janela", "trans": "window", "pos": "noun", "gender": "f", "note": "", "ex_t": "A janela dá para a rua.", "ex_trans": "The window looks onto the street.", "tags": ["core", "casa"], "freq": 133, "unit": "casa" },
-    { "id": "pt0134", "pt": "o elevador", "trans": "lift, elevator", "pos": "noun", "gender": "m", "note": "avariado = out of order, the word you'll see on it", "ex_t": "O elevador está avariado.", "ex_trans": "The lift is out of order.", "tags": ["core", "casa"], "freq": 134, "unit": "casa" },
-    { "id": "pt0135", "pt": "a luz", "trans": "light; electricity", "pos": "noun", "gender": "f", "note": "your electricity bill is a conta da luz", "ex_t": "A conta da luz veio alta.", "ex_trans": "The electricity bill came in high.", "tags": ["core", "casa"], "freq": 135, "unit": "casa" },
-    { "id": "pt0136", "pt": "a água quente", "trans": "hot water", "pos": "noun", "gender": "f", "note": "the phrase you need when the boiler dies", "ex_t": "Não há água quente.", "ex_trans": "There's no hot water.", "tags": ["core", "casa"], "freq": 136, "unit": "casa" },
-    { "id": "pt0137", "pt": "a renda", "trans": "rent", "pos": "noun", "gender": "f", "note": "pt-PT; Brazilians say aluguel", "ex_t": "Pago a renda no dia um.", "ex_trans": "I pay the rent on the first.", "tags": ["core", "casa", "pt-pt"], "freq": 137, "unit": "casa" },
-    { "id": "pt0138", "pt": "o senhorio", "trans": "landlord", "pos": "noun", "gender": "m", "note": "senhoria for a woman", "ex_t": "O senhorio vem amanhã.", "ex_trans": "The landlord is coming tomorrow.", "tags": ["core", "casa"], "freq": 138, "unit": "casa" },
-    { "id": "pt0139", "pt": "o contrato", "trans": "contract", "pos": "noun", "gender": "m", "note": "", "ex_t": "Assinei o contrato ontem.", "ex_trans": "I signed the contract yesterday.", "tags": ["core", "burocracia"], "freq": 139, "unit": "burocracia" },
-    { "id": "pt0140", "pt": "o documento", "trans": "document", "pos": "noun", "gender": "m", "note": "", "ex_t": "Traga os documentos todos.", "ex_trans": "Bring all the documents.", "tags": ["core", "burocracia"], "freq": 140, "unit": "burocracia" },
-    { "id": "pt0141", "pt": "o passaporte", "trans": "passport", "pos": "noun", "gender": "m", "note": "", "ex_t": "O meu passaporte expira em maio.", "ex_trans": "My passport expires in May.", "tags": ["core", "burocracia"], "freq": 141, "unit": "burocracia" },
-    { "id": "pt0142", "pt": "a morada", "trans": "address", "pos": "noun", "gender": "f", "note": "pt-PT; Brazilians say endereço", "ex_t": "Qual é a sua morada?", "ex_trans": "What's your address?", "tags": ["core", "burocracia", "pt-pt"], "freq": 142, "unit": "burocracia" },
-    { "id": "pt0143", "pt": "a marcação", "trans": "appointment, booking", "pos": "noun", "gender": "f", "note": "nothing happens in Portuguese bureaucracy without one", "ex_t": "Tem marcação?", "ex_trans": "Do you have an appointment?", "tags": ["core", "burocracia"], "freq": 143, "unit": "burocracia" },
-    { "id": "pt0144", "pt": "a senha", "trans": "queue ticket; password", "pos": "noun", "gender": "f", "note": "in any public office you take a senha first", "ex_t": "Tire uma senha e espere.", "ex_trans": "Take a ticket and wait.", "tags": ["core", "burocracia"], "freq": 144, "unit": "burocracia" },
-    { "id": "pt0145", "pt": "o número", "trans": "number", "pos": "noun", "gender": "m", "note": "", "ex_t": "Qual é o número do contribuinte?", "ex_trans": "What's your tax number?", "tags": ["core", "burocracia"], "freq": 145, "unit": "burocracia" },
-    { "id": "pt0146", "pt": "assinar", "trans": "to sign", "pos": "verb", "gender": null, "note": "false friend: not 'to assign'", "ex_t": "Assine aqui, se faz favor.", "ex_trans": "Sign here, please.", "tags": ["core", "verbo", "burocracia"], "freq": 146, "unit": "burocracia" },
-    { "id": "pt0147", "pt": "pagar", "trans": "to pay", "pos": "verb", "gender": null, "note": "pagar a pronto = pay in cash", "ex_t": "Posso pagar com multibanco?", "ex_trans": "Can I pay by debit card?", "tags": ["core", "verbo", "financas"], "freq": 147, "unit": "burocracia" },
-    { "id": "pt0148", "pt": "o multibanco", "trans": "ATM; debit card payment", "pos": "noun", "gender": "m", "note": "uniquely Portuguese: the national card network, the ATM, and the verb for paying by card", "ex_t": "Há multibanco aqui perto?", "ex_trans": "Is there a cash machine nearby?", "tags": ["core", "financas", "pt-pt"], "freq": 148, "unit": "burocracia" },
-    { "id": "pt0149", "pt": "o dinheiro", "trans": "money", "pos": "noun", "gender": "m", "note": "em dinheiro = in cash", "ex_t": "Só aceito dinheiro.", "ex_trans": "I only take cash.", "tags": ["core", "financas"], "freq": 149, "unit": "burocracia" },
-    { "id": "pt0150", "pt": "o recibo", "trans": "receipt", "pos": "noun", "gender": "m", "note": "always ask for one — needed for tax deductions", "ex_t": "Pode dar-me o recibo?", "ex_trans": "Can you give me the receipt?", "tags": ["core", "financas"], "freq": 150, "unit": "burocracia" }
+    {
+      "id": "pt0084",
+      "pt": "um",
+      "trans": "one",
+      "pos": "num",
+      "gender": "m",
+      "note": "feminine — uma; also the indefinite article",
+      "ex_t": "Um café, por favor.",
+      "ex_trans": "One coffee, please.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 84,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0085",
+      "pt": "dois",
+      "trans": "two",
+      "pos": "num",
+      "gender": "m",
+      "note": "feminine — duas: duas horas",
+      "ex_t": "Tenho dois filhos e duas filhas.",
+      "ex_trans": "I have two sons and two daughters.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 85,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0086",
+      "pt": "três",
+      "trans": "three",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Três, por favor.",
+      "ex_trans": "Three, please.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 86,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0087",
+      "pt": "quatro",
+      "trans": "four",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Somos quatro pessoas.",
+      "ex_trans": "We are four people.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 87,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0088",
+      "pt": "cinco",
+      "trans": "five",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Cinco euros.",
+      "ex_trans": "Five euros.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 88,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0089",
+      "pt": "seis",
+      "trans": "six",
+      "pos": "num",
+      "gender": null,
+      "note": "on the phone people say meia (half a dozen) to avoid confusing seis with três",
+      "ex_t": "São seis horas.",
+      "ex_trans": "It's six o'clock.",
+      "tags": [
+        "core",
+        "numero",
+        "pt-pt"
+      ],
+      "freq": 89,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0090",
+      "pt": "sete",
+      "trans": "seven",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "A loja fecha às sete.",
+      "ex_trans": "The shop closes at seven.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 90,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0091",
+      "pt": "oito",
+      "trans": "eight",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "O comboio sai às oito.",
+      "ex_trans": "The train leaves at eight.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 91,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0092",
+      "pt": "nove",
+      "trans": "nine",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Abre às nove da manhã.",
+      "ex_trans": "It opens at nine in the morning.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 92,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0093",
+      "pt": "dez",
+      "trans": "ten",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Custa dez euros.",
+      "ex_trans": "It costs ten euros.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 93,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0094",
+      "pt": "onze",
+      "trans": "eleven",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Onze e meia.",
+      "ex_trans": "Half past eleven.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 94,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0095",
+      "pt": "doze",
+      "trans": "twelve",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Doze ovos, uma dúzia.",
+      "ex_trans": "Twelve eggs, a dozen.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 95,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0096",
+      "pt": "catorze",
+      "trans": "fourteen",
+      "pos": "num",
+      "gender": null,
+      "note": "pt-PT spelling; Brazilians write quatorze",
+      "ex_t": "Catorze de agosto.",
+      "ex_trans": "The fourteenth of August.",
+      "tags": [
+        "core",
+        "numero",
+        "pt-pt"
+      ],
+      "freq": 96,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0097",
+      "pt": "quinze",
+      "trans": "fifteen",
+      "pos": "num",
+      "gender": null,
+      "note": "quinze dias = a fortnight, used constantly",
+      "ex_t": "Volto daqui a quinze dias.",
+      "ex_trans": "I'm back in a fortnight.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 97,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0098",
+      "pt": "vinte",
+      "trans": "twenty",
+      "pos": "num",
+      "gender": null,
+      "note": "21 = vinte e um",
+      "ex_t": "Vinte e cinco euros.",
+      "ex_trans": "Twenty-five euros.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 98,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0099",
+      "pt": "trinta",
+      "trans": "thirty",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Trinta minutos.",
+      "ex_trans": "Thirty minutes.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 99,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0100",
+      "pt": "cinquenta",
+      "trans": "fifty",
+      "pos": "num",
+      "gender": null,
+      "note": "",
+      "ex_t": "Cinquenta euros, por favor.",
+      "ex_trans": "Fifty euros, please.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 100,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0101",
+      "pt": "cem",
+      "trans": "one hundred",
+      "pos": "num",
+      "gender": null,
+      "note": "exactly 100 is cem; 101+ becomes cento e um",
+      "ex_t": "Cem euros.",
+      "ex_trans": "A hundred euros.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 101,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0102",
+      "pt": "mil",
+      "trans": "one thousand",
+      "pos": "num",
+      "gender": null,
+      "note": "never um mil — just mil",
+      "ex_t": "Mil e quinhentos euros.",
+      "ex_trans": "One thousand five hundred euros.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 102,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0103",
+      "pt": "meio",
+      "trans": "half",
+      "pos": "adj",
+      "gender": "m",
+      "note": "feminine meia; time uses meia: duas e meia",
+      "ex_t": "Meio quilo de queijo.",
+      "ex_trans": "Half a kilo of cheese.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 103,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0104",
+      "pt": "primeiro",
+      "trans": "first",
+      "pos": "adj",
+      "gender": "m",
+      "note": "floors are ordinal: primeiro andar",
+      "ex_t": "Moro no primeiro andar.",
+      "ex_trans": "I live on the first floor.",
+      "tags": [
+        "core",
+        "numero"
+      ],
+      "freq": 104,
+      "unit": "numeros"
+    },
+    {
+      "id": "pt0105",
+      "pt": "segunda-feira",
+      "trans": "Monday",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Portuguese weekdays are ordinal: Monday is the 'second fair'",
+      "ex_t": "Volto na segunda-feira.",
+      "ex_trans": "I'm back on Monday.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 105,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0106",
+      "pt": "terça-feira",
+      "trans": "Tuesday",
+      "pos": "noun",
+      "gender": "f",
+      "note": "terça, not terceira — the only irregular one",
+      "ex_t": "Tenho consulta na terça-feira.",
+      "ex_trans": "I have an appointment on Tuesday.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 106,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0107",
+      "pt": "quarta-feira",
+      "trans": "Wednesday",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Até quarta-feira!",
+      "ex_trans": "See you Wednesday!",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 107,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0108",
+      "pt": "quinta-feira",
+      "trans": "Thursday",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Na quinta-feira vou ao médico.",
+      "ex_trans": "On Thursday I'm going to the doctor.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 108,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0109",
+      "pt": "sexta-feira",
+      "trans": "Friday",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Sexta-feira à noite.",
+      "ex_trans": "Friday night.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 109,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0110",
+      "pt": "sábado",
+      "trans": "Saturday",
+      "pos": "noun",
+      "gender": "m",
+      "note": "weekend days keep their names — no feira",
+      "ex_t": "No sábado vamos à praia.",
+      "ex_trans": "On Saturday we're going to the beach.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 110,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0111",
+      "pt": "domingo",
+      "trans": "Sunday",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Domingo é dia de descanso.",
+      "ex_trans": "Sunday is a day of rest.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 111,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0112",
+      "pt": "o fim de semana",
+      "trans": "weekend",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pt-PT keeps the spaces; Brazilians write fim de semana too but say final de semana",
+      "ex_t": "Bom fim de semana!",
+      "ex_trans": "Have a good weekend!",
+      "tags": [
+        "core",
+        "tempo",
+        "pt-pt"
+      ],
+      "freq": 112,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0113",
+      "pt": "janeiro",
+      "trans": "January",
+      "pos": "noun",
+      "gender": "m",
+      "note": "months are lowercase in Portuguese",
+      "ex_t": "Em janeiro faz frio.",
+      "ex_trans": "In January it's cold.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 113,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0114",
+      "pt": "março",
+      "trans": "March",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Quinze de março.",
+      "ex_trans": "The fifteenth of March.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 114,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0115",
+      "pt": "agosto",
+      "trans": "August",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the month Portugal goes on holiday",
+      "ex_t": "Em agosto está tudo fechado.",
+      "ex_trans": "In August everything is closed.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 115,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0116",
+      "pt": "dezembro",
+      "trans": "December",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Em dezembro há festas.",
+      "ex_trans": "In December there are festivities.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 116,
+      "unit": "tempo"
+    },
+    {
+      "id": "pt0117",
+      "pt": "a família",
+      "trans": "family",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A minha família mora na Rússia.",
+      "ex_trans": "My family lives in Russia.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 117,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0118",
+      "pt": "a mulher",
+      "trans": "woman; wife",
+      "pos": "noun",
+      "gender": "f",
+      "note": "both meanings — a minha mulher = my wife",
+      "ex_t": "A minha mulher trabalha aqui.",
+      "ex_trans": "My wife works here.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 118,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0119",
+      "pt": "o marido",
+      "trans": "husband",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O meu marido é português.",
+      "ex_trans": "My husband is Portuguese.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 119,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0120",
+      "pt": "o filho",
+      "trans": "son",
+      "pos": "noun",
+      "gender": "m",
+      "note": "filha = daughter; filhos = children in general",
+      "ex_t": "Tenho um filho de dez anos.",
+      "ex_trans": "I have a ten-year-old son.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 120,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0121",
+      "pt": "a mãe",
+      "trans": "mother",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A minha mãe telefona todos os dias.",
+      "ex_trans": "My mother calls every day.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 121,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0122",
+      "pt": "o pai",
+      "trans": "father",
+      "pos": "noun",
+      "gender": "m",
+      "note": "pais = parents",
+      "ex_t": "Os meus pais vêm cá em agosto.",
+      "ex_trans": "My parents are coming in August.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 122,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0123",
+      "pt": "o irmão",
+      "trans": "brother",
+      "pos": "noun",
+      "gender": "m",
+      "note": "irmã = sister; plural irmãos",
+      "ex_t": "Tenho dois irmãos.",
+      "ex_trans": "I have two brothers.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 123,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0124",
+      "pt": "o amigo",
+      "trans": "friend",
+      "pos": "noun",
+      "gender": "m",
+      "note": "amiga for a woman",
+      "ex_t": "É um amigo meu.",
+      "ex_trans": "He's a friend of mine.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 124,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0125",
+      "pt": "o vizinho",
+      "trans": "neighbour",
+      "pos": "noun",
+      "gender": "m",
+      "note": "you will use this word more than you expect",
+      "ex_t": "O vizinho de cima faz muito barulho.",
+      "ex_trans": "The neighbour upstairs makes a lot of noise.",
+      "tags": [
+        "core",
+        "familia",
+        "casa"
+      ],
+      "freq": 125,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0126",
+      "pt": "a criança",
+      "trans": "child",
+      "pos": "noun",
+      "gender": "f",
+      "note": "feminine even for a boy: a criança",
+      "ex_t": "As crianças estão na escola.",
+      "ex_trans": "The children are at school.",
+      "tags": [
+        "core",
+        "familia"
+      ],
+      "freq": 126,
+      "unit": "familia"
+    },
+    {
+      "id": "pt0127",
+      "pt": "o apartamento",
+      "trans": "flat, apartment",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also apartamento T2 = two-bedroom, the standard listing format",
+      "ex_t": "Arrendei um apartamento T2.",
+      "ex_trans": "I rented a two-bedroom flat.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 127,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0128",
+      "pt": "o prédio",
+      "trans": "building",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O prédio tem elevador.",
+      "ex_trans": "The building has a lift.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 128,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0129",
+      "pt": "o quarto",
+      "trans": "room, bedroom",
+      "pos": "noun",
+      "gender": "m",
+      "note": "also means 'fourth' — context decides",
+      "ex_t": "O quarto tem vista para o mar.",
+      "ex_trans": "The bedroom has a sea view.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 129,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0130",
+      "pt": "a cozinha",
+      "trans": "kitchen",
+      "pos": "noun",
+      "gender": "f",
+      "note": "also means cuisine: cozinha portuguesa",
+      "ex_t": "A cozinha é pequena mas chega.",
+      "ex_trans": "The kitchen is small but enough.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 130,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0131",
+      "pt": "a chave",
+      "trans": "key",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Perdi a chave de casa.",
+      "ex_trans": "I lost my house key.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 131,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0132",
+      "pt": "a porta",
+      "trans": "door",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Fecha a porta, por favor.",
+      "ex_trans": "Close the door, please.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 132,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0133",
+      "pt": "a janela",
+      "trans": "window",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A janela dá para a rua.",
+      "ex_trans": "The window looks onto the street.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 133,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0134",
+      "pt": "o elevador",
+      "trans": "lift, elevator",
+      "pos": "noun",
+      "gender": "m",
+      "note": "avariado = out of order, the word you'll see on it",
+      "ex_t": "O elevador está avariado.",
+      "ex_trans": "The lift is out of order.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 134,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0135",
+      "pt": "a luz",
+      "trans": "light; electricity",
+      "pos": "noun",
+      "gender": "f",
+      "note": "your electricity bill is a conta da luz",
+      "ex_t": "A conta da luz veio alta.",
+      "ex_trans": "The electricity bill came in high.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 135,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0136",
+      "pt": "a água quente",
+      "trans": "hot water",
+      "pos": "noun",
+      "gender": "f",
+      "note": "the phrase you need when the boiler dies",
+      "ex_t": "Não há água quente.",
+      "ex_trans": "There's no hot water.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 136,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0137",
+      "pt": "a renda",
+      "trans": "rent",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT; Brazilians say aluguel",
+      "ex_t": "Pago a renda no dia um.",
+      "ex_trans": "I pay the rent on the first.",
+      "tags": [
+        "core",
+        "casa",
+        "pt-pt"
+      ],
+      "freq": 137,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0138",
+      "pt": "o senhorio",
+      "trans": "landlord",
+      "pos": "noun",
+      "gender": "m",
+      "note": "senhoria for a woman",
+      "ex_t": "O senhorio vem amanhã.",
+      "ex_trans": "The landlord is coming tomorrow.",
+      "tags": [
+        "core",
+        "casa"
+      ],
+      "freq": 138,
+      "unit": "casa"
+    },
+    {
+      "id": "pt0139",
+      "pt": "o contrato",
+      "trans": "contract",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Assinei o contrato ontem.",
+      "ex_trans": "I signed the contract yesterday.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 139,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0140",
+      "pt": "o documento",
+      "trans": "document",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Traga os documentos todos.",
+      "ex_trans": "Bring all the documents.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 140,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0141",
+      "pt": "o passaporte",
+      "trans": "passport",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "O meu passaporte expira em maio.",
+      "ex_trans": "My passport expires in May.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 141,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0142",
+      "pt": "a morada",
+      "trans": "address",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT; Brazilians say endereço",
+      "ex_t": "Qual é a sua morada?",
+      "ex_trans": "What's your address?",
+      "tags": [
+        "core",
+        "burocracia",
+        "pt-pt"
+      ],
+      "freq": 142,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0143",
+      "pt": "a marcação",
+      "trans": "appointment, booking",
+      "pos": "noun",
+      "gender": "f",
+      "note": "nothing happens in Portuguese bureaucracy without one",
+      "ex_t": "Tem marcação?",
+      "ex_trans": "Do you have an appointment?",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 143,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0144",
+      "pt": "a senha",
+      "trans": "queue ticket; password",
+      "pos": "noun",
+      "gender": "f",
+      "note": "in any public office you take a senha first",
+      "ex_t": "Tire uma senha e espere.",
+      "ex_trans": "Take a ticket and wait.",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 144,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0145",
+      "pt": "o número",
+      "trans": "number",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Qual é o número do contribuinte?",
+      "ex_trans": "What's your tax number?",
+      "tags": [
+        "core",
+        "burocracia"
+      ],
+      "freq": 145,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0146",
+      "pt": "assinar",
+      "trans": "to sign",
+      "pos": "verb",
+      "gender": null,
+      "note": "false friend: not 'to assign'",
+      "ex_t": "Assine aqui, por favor.",
+      "ex_trans": "Sign here, please.",
+      "tags": [
+        "core",
+        "verbo",
+        "burocracia"
+      ],
+      "freq": 146,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0147",
+      "pt": "pagar",
+      "trans": "to pay",
+      "pos": "verb",
+      "gender": null,
+      "note": "pagar a pronto = pay in cash",
+      "ex_t": "Posso pagar com multibanco?",
+      "ex_trans": "Can I pay by debit card?",
+      "tags": [
+        "core",
+        "verbo",
+        "financas"
+      ],
+      "freq": 147,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0148",
+      "pt": "o multibanco",
+      "trans": "ATM; debit card payment",
+      "pos": "noun",
+      "gender": "m",
+      "note": "uniquely Portuguese: the national card network, the ATM, and the verb for paying by card",
+      "ex_t": "Há multibanco aqui perto?",
+      "ex_trans": "Is there a cash machine nearby?",
+      "tags": [
+        "core",
+        "financas",
+        "pt-pt"
+      ],
+      "freq": 148,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0149",
+      "pt": "o dinheiro",
+      "trans": "money",
+      "pos": "noun",
+      "gender": "m",
+      "note": "em dinheiro = in cash",
+      "ex_t": "Só aceito dinheiro.",
+      "ex_trans": "I only take cash.",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "freq": 149,
+      "unit": "burocracia"
+    },
+    {
+      "id": "pt0150",
+      "pt": "o recibo",
+      "trans": "receipt",
+      "pos": "noun",
+      "gender": "m",
+      "note": "always ask for one — needed for tax deductions",
+      "ex_t": "Pode dar-me o recibo?",
+      "ex_trans": "Can you give me the receipt?",
+      "tags": [
+        "core",
+        "financas"
+      ],
+      "freq": 150,
+      "unit": "burocracia"
+    }
   ]
 }

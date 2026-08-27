@@ -7,75 +7,1151 @@
     "note": "Batch 3: restaurant and food, health and pharmacy, city and transport."
   },
   "cards": [
-    { "id": "pt0151", "pt": "o restaurante", "trans": "restaurant", "pos": "noun", "gender": "m", "note": "", "ex_t": "Conhece um bom restaurante aqui perto?", "ex_trans": "Do you know a good restaurant nearby?", "tags": ["core", "comida"], "freq": 151, "unit": "comida" },
-    { "id": "pt0152", "pt": "a ementa", "trans": "menu", "pos": "noun", "gender": "f", "note": "pt-PT; Brazilians say cardápio", "ex_t": "A ementa, se faz favor.", "ex_trans": "The menu, please.", "tags": ["core", "comida", "pt-pt"], "freq": 152, "unit": "comida" },
-    { "id": "pt0153", "pt": "o prato do dia", "trans": "dish of the day", "pos": "noun", "gender": "m", "note": "cheapest and freshest lunch option in any Portuguese café", "ex_t": "Qual é o prato do dia?", "ex_trans": "What's the dish of the day?", "tags": ["core", "comida", "pt-pt"], "freq": 153, "unit": "comida" },
-    { "id": "pt0154", "pt": "a sopa", "trans": "soup", "pos": "noun", "gender": "f", "note": "sopa comes before everything, every day", "ex_t": "Hoje há sopa de legumes.", "ex_trans": "Today there's vegetable soup.", "tags": ["core", "comida"], "freq": 154, "unit": "comida" },
-    { "id": "pt0155", "pt": "a sobremesa", "trans": "dessert", "pos": "noun", "gender": "f", "note": "", "ex_t": "Quer sobremesa?", "ex_trans": "Would you like dessert?", "tags": ["core", "comida"], "freq": 155, "unit": "comida" },
-    { "id": "pt0156", "pt": "o pequeno", "trans": "small (coffee); short one", "pos": "adj", "gender": "m", "note": "café pequeno = the standard espresso", "ex_t": "Um pequeno e uma torrada.", "ex_trans": "An espresso and a piece of toast.", "tags": ["core", "cafe"], "freq": 156, "unit": "comida" },
-    { "id": "pt0157", "pt": "o galão", "trans": "milky coffee in a glass", "pos": "noun", "gender": "m", "note": "mainland breakfast staple; in Madeira ask for a chinesa", "ex_t": "Um galão claro, se faz favor.", "ex_trans": "A light milky coffee, please.", "tags": ["core", "cafe", "pt-pt"], "freq": 157, "unit": "comida" },
-    { "id": "pt0158", "pt": "o pastel de nata", "trans": "custard tart", "pos": "noun", "gender": "m", "note": "plural pastéis de nata", "ex_t": "Dois pastéis de nata, se faz favor.", "ex_trans": "Two custard tarts, please.", "tags": ["core", "comida"], "freq": 158, "unit": "comida" },
-    { "id": "pt0159", "pt": "a fruta", "trans": "fruit", "pos": "noun", "gender": "f", "note": "", "ex_t": "A fruta aqui é muito boa.", "ex_trans": "The fruit here is very good.", "tags": ["core", "comida"], "freq": 159, "unit": "comida" },
-    { "id": "pt0160", "pt": "os legumes", "trans": "vegetables", "pos": "noun", "gender": "m", "note": "", "ex_t": "Só como legumes ao jantar.", "ex_trans": "I only eat vegetables for dinner.", "tags": ["core", "comida"], "freq": 160, "unit": "comida" },
-    { "id": "pt0161", "pt": "o arroz", "trans": "rice", "pos": "noun", "gender": "m", "note": "", "ex_t": "Arroz com peixe.", "ex_trans": "Rice with fish.", "tags": ["core", "comida"], "freq": 161, "unit": "comida" },
-    { "id": "pt0162", "pt": "a batata", "trans": "potato", "pos": "noun", "gender": "f", "note": "batatas fritas = chips", "ex_t": "Com batatas fritas, se faz favor.", "ex_trans": "With chips, please.", "tags": ["core", "comida"], "freq": 162, "unit": "comida" },
-    { "id": "pt0163", "pt": "o queijo", "trans": "cheese", "pos": "noun", "gender": "m", "note": "", "ex_t": "Queijo da ilha, por favor.", "ex_trans": "Island cheese, please.", "tags": ["core", "comida"], "freq": 163, "unit": "comida" },
-    { "id": "pt0164", "pt": "o ovo", "trans": "egg", "pos": "noun", "gender": "m", "note": "plural ovos, pronounced with an open o", "ex_t": "Uma dúzia de ovos.", "ex_trans": "A dozen eggs.", "tags": ["core", "comida"], "freq": 164, "unit": "comida" },
-    { "id": "pt0165", "pt": "o sal", "trans": "salt", "pos": "noun", "gender": "m", "note": "", "ex_t": "Falta sal.", "ex_trans": "It needs salt.", "tags": ["core", "comida"], "freq": 165, "unit": "comida" },
-    { "id": "pt0166", "pt": "o açúcar", "trans": "sugar", "pos": "noun", "gender": "m", "note": "", "ex_t": "Sem açúcar, obrigado.", "ex_trans": "No sugar, thanks.", "tags": ["core", "comida"], "freq": 166, "unit": "comida" },
-    { "id": "pt0167", "pt": "quente", "trans": "hot", "pos": "adj", "gender": null, "note": "for spicy use picante", "ex_t": "A sopa está muito quente.", "ex_trans": "The soup is very hot.", "tags": ["core", "adjetivo"], "freq": 167, "unit": "comida" },
-    { "id": "pt0168", "pt": "frio", "trans": "cold", "pos": "adj", "gender": "m", "note": "ter frio = to feel cold; está frio = it's cold out", "ex_t": "Está frio hoje.", "ex_trans": "It's cold today.", "tags": ["core", "adjetivo"], "freq": 168, "unit": "comida" },
-    { "id": "pt0169", "pt": "delicioso", "trans": "delicious", "pos": "adj", "gender": "m", "note": "or just: está muito bom", "ex_t": "Estava delicioso, obrigado.", "ex_trans": "It was delicious, thank you.", "tags": ["core", "adjetivo"], "freq": 169, "unit": "comida" },
-    { "id": "pt0170", "pt": "levar", "trans": "to take away; to carry", "pos": "verb", "gender": null, "note": "para levar = takeaway", "ex_t": "É para levar ou para comer aqui?", "ex_trans": "Is it takeaway or eating in?", "tags": ["core", "verbo", "comida"], "freq": 170, "unit": "comida" },
-    { "id": "pt0171", "pt": "o médico", "trans": "doctor", "pos": "noun", "gender": "m", "note": "médica for a woman", "ex_t": "Preciso de marcar consulta com o médico.", "ex_trans": "I need to book an appointment with the doctor.", "tags": ["core", "saude"], "freq": 171, "unit": "saude" },
-    { "id": "pt0172", "pt": "a consulta", "trans": "medical appointment", "pos": "noun", "gender": "f", "note": "", "ex_t": "Tenho consulta às três.", "ex_trans": "I have an appointment at three.", "tags": ["core", "saude"], "freq": 172, "unit": "saude" },
-    { "id": "pt0173", "pt": "o centro de saúde", "trans": "public health centre", "pos": "noun", "gender": "m", "note": "where you go first; hospital only for emergencies", "ex_t": "Vou ao centro de saúde amanhã.", "ex_trans": "I'm going to the health centre tomorrow.", "tags": ["core", "saude", "pt-pt"], "freq": 173, "unit": "saude" },
-    { "id": "pt0174", "pt": "as urgências", "trans": "A&E, emergency room", "pos": "noun", "gender": "f", "note": "always plural", "ex_t": "Levaram-no às urgências.", "ex_trans": "They took him to A&E.", "tags": ["core", "saude", "pt-pt"], "freq": 174, "unit": "saude" },
-    { "id": "pt0175", "pt": "a dor", "trans": "pain", "pos": "noun", "gender": "f", "note": "dor de cabeça, dor de garganta, dor de dentes", "ex_t": "Tenho dor de cabeça.", "ex_trans": "I have a headache.", "tags": ["core", "saude"], "freq": 175, "unit": "saude" },
-    { "id": "pt0176", "pt": "doente", "trans": "ill, sick", "pos": "adj", "gender": null, "note": "estou doente — with estar, it's temporary", "ex_t": "Estou doente, não vou trabalhar.", "ex_trans": "I'm ill, I'm not going to work.", "tags": ["core", "saude"], "freq": 176, "unit": "saude" },
-    { "id": "pt0177", "pt": "a febre", "trans": "fever", "pos": "noun", "gender": "f", "note": "ter febre — with ter, like hunger", "ex_t": "O menino tem febre.", "ex_trans": "The boy has a fever.", "tags": ["core", "saude"], "freq": 177, "unit": "saude" },
-    { "id": "pt0178", "pt": "a receita", "trans": "prescription; recipe", "pos": "noun", "gender": "f", "note": "both meanings — context decides", "ex_t": "Preciso de receita para isto?", "ex_trans": "Do I need a prescription for this?", "tags": ["core", "saude"], "freq": 178, "unit": "saude" },
-    { "id": "pt0179", "pt": "o medicamento", "trans": "medicine, drug", "pos": "noun", "gender": "m", "note": "", "ex_t": "Este medicamento é caro.", "ex_trans": "This medicine is expensive.", "tags": ["core", "saude"], "freq": 179, "unit": "saude" },
-    { "id": "pt0180", "pt": "o comprimido", "trans": "pill, tablet", "pos": "noun", "gender": "m", "note": "", "ex_t": "Um comprimido de manhã.", "ex_trans": "One tablet in the morning.", "tags": ["core", "saude"], "freq": 180, "unit": "saude" },
-    { "id": "pt0181", "pt": "doer", "trans": "to hurt", "pos": "verb", "gender": null, "note": "works like 'to please': dói-me a cabeça = my head hurts me", "ex_t": "Dói-me as costas.", "ex_trans": "My back hurts.", "tags": ["core", "verbo", "saude"], "freq": 181, "unit": "saude" },
-    { "id": "pt0182", "pt": "a cabeça", "trans": "head", "pos": "noun", "gender": "f", "note": "", "ex_t": "Dói-me a cabeça desde ontem.", "ex_trans": "My head has hurt since yesterday.", "tags": ["core", "saude", "corpo"], "freq": 182, "unit": "saude" },
-    { "id": "pt0183", "pt": "o estômago", "trans": "stomach", "pos": "noun", "gender": "m", "note": "", "ex_t": "Tenho dores de estômago.", "ex_trans": "I have stomach pains.", "tags": ["core", "saude", "corpo"], "freq": 183, "unit": "saude" },
-    { "id": "pt0184", "pt": "a farmácia de serviço", "trans": "duty pharmacy (open at night)", "pos": "noun", "gender": "f", "note": "rota posted on every pharmacy door — vital at 2am", "ex_t": "Qual é a farmácia de serviço hoje?", "ex_trans": "Which pharmacy is on duty today?", "tags": ["core", "saude", "pt-pt"], "freq": 184, "unit": "saude" },
-    { "id": "pt0185", "pt": "melhor", "trans": "better; best", "pos": "adj", "gender": null, "note": "irregular comparative of bom", "ex_t": "Já estou melhor, obrigado.", "ex_trans": "I'm better now, thank you.", "tags": ["core", "adjetivo"], "freq": 185, "unit": "saude" },
-    { "id": "pt0186", "pt": "pior", "trans": "worse; worst", "pos": "adj", "gender": null, "note": "irregular comparative of mau", "ex_t": "Hoje está pior.", "ex_trans": "Today it's worse.", "tags": ["core", "adjetivo"], "freq": 186, "unit": "saude" },
-    { "id": "pt0187", "pt": "a paragem", "trans": "bus stop", "pos": "noun", "gender": "f", "note": "pt-PT; Brazilians say ponto de ônibus", "ex_t": "A paragem é ali à frente.", "ex_trans": "The stop is just ahead.", "tags": ["core", "transporte", "pt-pt"], "freq": 187, "unit": "cidade" },
-    { "id": "pt0188", "pt": "o bilhete", "trans": "ticket", "pos": "noun", "gender": "m", "note": "", "ex_t": "Um bilhete de ida e volta.", "ex_trans": "A return ticket.", "tags": ["core", "transporte"], "freq": 188, "unit": "cidade" },
-    { "id": "pt0189", "pt": "apanhar", "trans": "to catch (transport); to pick up", "pos": "verb", "gender": null, "note": "pt-PT for catching a bus; Brazilians say pegar", "ex_t": "Apanho o autocarro das oito.", "ex_trans": "I catch the eight o'clock bus.", "tags": ["core", "verbo", "transporte", "pt-pt"], "freq": 189, "unit": "cidade" },
-    { "id": "pt0190", "pt": "o carro", "trans": "car", "pos": "noun", "gender": "m", "note": "", "ex_t": "Vou de carro.", "ex_trans": "I'm going by car.", "tags": ["core", "transporte"], "freq": 190, "unit": "cidade" },
-    { "id": "pt0191", "pt": "estacionar", "trans": "to park", "pos": "verb", "gender": null, "note": "estacionamento = parking", "ex_t": "Onde posso estacionar?", "ex_trans": "Where can I park?", "tags": ["core", "verbo", "transporte"], "freq": 191, "unit": "cidade" },
-    { "id": "pt0192", "pt": "a estrada", "trans": "road", "pos": "noun", "gender": "f", "note": "", "ex_t": "A estrada está cortada.", "ex_trans": "The road is closed.", "tags": ["core", "transporte"], "freq": 192, "unit": "cidade" },
-    { "id": "pt0193", "pt": "perto", "trans": "near", "pos": "adv", "gender": null, "note": "perto de = near to", "ex_t": "Fica perto daqui?", "ex_trans": "Is it near here?", "tags": ["core", "direcoes"], "freq": 193, "unit": "cidade" },
-    { "id": "pt0194", "pt": "longe", "trans": "far", "pos": "adv", "gender": null, "note": "", "ex_t": "É muito longe a pé.", "ex_trans": "It's very far on foot.", "tags": ["core", "direcoes"], "freq": 194, "unit": "cidade" },
-    { "id": "pt0195", "pt": "à esquerda", "trans": "on/to the left", "pos": "phrase", "gender": null, "note": "", "ex_t": "Vire à esquerda no semáforo.", "ex_trans": "Turn left at the traffic light.", "tags": ["core", "direcoes"], "freq": 195, "unit": "cidade" },
-    { "id": "pt0196", "pt": "à direita", "trans": "on/to the right", "pos": "phrase", "gender": null, "note": "", "ex_t": "A farmácia fica à direita.", "ex_trans": "The pharmacy is on the right.", "tags": ["core", "direcoes"], "freq": 196, "unit": "cidade" },
-    { "id": "pt0197", "pt": "em frente", "trans": "straight ahead", "pos": "phrase", "gender": null, "note": "sempre em frente = keep going straight", "ex_t": "Siga sempre em frente.", "ex_trans": "Keep going straight ahead.", "tags": ["core", "direcoes"], "freq": 197, "unit": "cidade" },
-    { "id": "pt0198", "pt": "aberto", "trans": "open", "pos": "adj", "gender": "m", "note": "sign on every door", "ex_t": "Está aberto ao domingo?", "ex_trans": "Is it open on Sundays?", "tags": ["core", "adjetivo"], "freq": 198, "unit": "cidade" },
-    { "id": "pt0199", "pt": "fechado", "trans": "closed", "pos": "adj", "gender": "m", "note": "encerrado is the formal version on official notices", "ex_t": "Fechado para férias.", "ex_trans": "Closed for holidays.", "tags": ["core", "adjetivo"], "freq": 199, "unit": "cidade" },
-    { "id": "pt0200", "pt": "os correios", "trans": "post office", "pos": "noun", "gender": "m", "note": "always plural; the brand is CTT", "ex_t": "Vou aos correios levantar uma encomenda.", "ex_trans": "I'm going to the post office to collect a parcel.", "tags": ["core", "lugar"], "freq": 200, "unit": "cidade" },
-    { "id": "pt0201", "pt": "a encomenda", "trans": "parcel, order", "pos": "noun", "gender": "f", "note": "", "ex_t": "A encomenda chegou ontem.", "ex_trans": "The parcel arrived yesterday.", "tags": ["core", "compras"], "freq": 201, "unit": "cidade" },
-    { "id": "pt0202", "pt": "o mercado", "trans": "market", "pos": "noun", "gender": "m", "note": "Funchal's is Mercado dos Lavradores", "ex_t": "O mercado abre às sete.", "ex_trans": "The market opens at seven.", "tags": ["core", "lugar", "compras"], "freq": 202, "unit": "cidade" },
-    { "id": "pt0203", "pt": "barato", "trans": "cheap", "pos": "adj", "gender": "m", "note": "", "ex_t": "Aqui é mais barato.", "ex_trans": "It's cheaper here.", "tags": ["core", "adjetivo", "compras"], "freq": 203, "unit": "cidade" },
-    { "id": "pt0204", "pt": "caro", "trans": "expensive", "pos": "adj", "gender": "m", "note": "also 'dear' in letters: Caro amigo", "ex_t": "Está muito caro.", "ex_trans": "That's very expensive.", "tags": ["core", "adjetivo", "compras"], "freq": 204, "unit": "cidade" },
-    { "id": "pt0205", "pt": "o troco", "trans": "change (money back)", "pos": "noun", "gender": "m", "note": "não tenho troco = I have no change", "ex_t": "Fique com o troco.", "ex_trans": "Keep the change.", "tags": ["core", "financas", "compras"], "freq": 205, "unit": "cidade" },
-    { "id": "pt0206", "pt": "o desconto", "trans": "discount", "pos": "noun", "gender": "m", "note": "", "ex_t": "Faz desconto?", "ex_trans": "Do you offer a discount?", "tags": ["core", "compras"], "freq": 206, "unit": "cidade" },
-    { "id": "pt0207", "pt": "o tempo", "trans": "weather; time", "pos": "noun", "gender": "m", "note": "both meanings; que tempo faz? = what's the weather like?", "ex_t": "Que tempo faz hoje?", "ex_trans": "What's the weather like today?", "tags": ["core", "tempo"], "freq": 207, "unit": "cidade" },
-    { "id": "pt0208", "pt": "a chuva", "trans": "rain", "pos": "noun", "gender": "f", "note": "chover = to rain; está a chover = it's raining", "ex_t": "Está a chover outra vez.", "ex_trans": "It's raining again.", "tags": ["core", "tempo"], "freq": 208, "unit": "cidade" },
-    { "id": "pt0209", "pt": "o sol", "trans": "sun", "pos": "noun", "gender": "m", "note": "faz sol = it's sunny", "ex_t": "Hoje faz sol.", "ex_trans": "It's sunny today.", "tags": ["core", "tempo"], "freq": 209, "unit": "cidade" },
-    { "id": "pt0210", "pt": "o vento", "trans": "wind", "pos": "noun", "gender": "m", "note": "on Madeira this word earns its keep", "ex_t": "Está muito vento no Arieiro.", "ex_trans": "It's very windy at Arieiro.", "tags": ["core", "tempo"], "freq": 210, "unit": "cidade" },
-    { "id": "pt0211", "pt": "o nevoeiro", "trans": "fog", "pos": "noun", "gender": "m", "note": "the reason Madeira flights divert", "ex_t": "Há nevoeiro na serra.", "ex_trans": "There's fog in the mountains.", "tags": ["core", "tempo", "madeira"], "freq": 211, "unit": "cidade" },
-    { "id": "pt0212", "pt": "a praia", "trans": "beach", "pos": "noun", "gender": "f", "note": "", "ex_t": "Vamos à praia no sábado.", "ex_trans": "We're going to the beach on Saturday.", "tags": ["core", "lugar"], "freq": 212, "unit": "cidade" },
-    { "id": "pt0213", "pt": "a serra", "trans": "mountain range", "pos": "noun", "gender": "f", "note": "on Madeira, 'up in the serra' means the interior highlands", "ex_t": "Na serra está sempre mais frio.", "ex_trans": "Up in the mountains it's always colder.", "tags": ["core", "lugar", "madeira"], "freq": 213, "unit": "cidade" },
-    { "id": "pt0214", "pt": "o miradouro", "trans": "viewpoint", "pos": "noun", "gender": "m", "note": "signposted everywhere on Madeira", "ex_t": "Há um miradouro ali em cima.", "ex_trans": "There's a viewpoint up there.", "tags": ["core", "lugar", "madeira"], "freq": 214, "unit": "madeira" },
-    { "id": "pt0215", "pt": "o teleférico", "trans": "cable car", "pos": "noun", "gender": "m", "note": "Funchal–Monte, the one tourists queue for", "ex_t": "Subimos de teleférico ao Monte.", "ex_trans": "We went up to Monte by cable car.", "tags": ["core", "transporte", "madeira"], "freq": 215, "unit": "madeira" },
-    { "id": "pt0216", "pt": "a vereda", "trans": "footpath, trail", "pos": "noun", "gender": "f", "note": "Madeira's mountain trails, as opposed to a levada walk", "ex_t": "A vereda do Areeiro é exigente.", "ex_trans": "The Areeiro trail is demanding.", "tags": ["core", "lugar", "madeira"], "freq": 216, "unit": "madeira" },
-    { "id": "pt0217", "pt": "a lapa", "trans": "limpet", "pos": "noun", "gender": "f", "note": "grilled with garlic butter — the Madeiran starter", "ex_t": "Lapas grelhadas, se faz favor.", "ex_trans": "Grilled limpets, please.", "tags": ["core", "comida", "madeira"], "freq": 217, "unit": "madeira" },
-    { "id": "pt0218", "pt": "a maracujá", "trans": "passion fruit", "pos": "noun", "gender": "f", "note": "Madeira grows several varieties found nowhere else", "ex_t": "Sumo de maracujá, se faz favor.", "ex_trans": "Passion fruit juice, please.", "tags": ["core", "comida", "madeira"], "freq": 218, "unit": "madeira" },
-    { "id": "pt0219", "pt": "o funchalense", "trans": "person from Funchal", "pos": "noun", "gender": "m", "note": "Madeirans generally: madeirense", "ex_t": "Ele é funchalense de gema.", "ex_trans": "He's a Funchal native through and through.", "tags": ["core", "madeira"], "freq": 219, "unit": "madeira" },
-    { "id": "pt0220", "pt": "o autocarro urbano", "trans": "city bus", "pos": "noun", "gender": "m", "note": "in Funchal the yellow Horários do Funchal buses", "ex_t": "O autocarro urbano passa de meia em meia hora.", "ex_trans": "The city bus runs every half hour.", "tags": ["core", "transporte", "madeira"], "freq": 220, "unit": "madeira" }
+    {
+      "id": "pt0151",
+      "pt": "o restaurante",
+      "trans": "restaurant",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Conhece um bom restaurante aqui perto?",
+      "ex_trans": "Do you know a good restaurant nearby?",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 151,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0152",
+      "pt": "a ementa",
+      "trans": "menu",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT; Brazilians say cardápio",
+      "ex_t": "A ementa, por favor.",
+      "ex_trans": "The menu, please.",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "freq": 152,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0153",
+      "pt": "o prato do dia",
+      "trans": "dish of the day",
+      "pos": "noun",
+      "gender": "m",
+      "note": "cheapest and freshest lunch option in any Portuguese café",
+      "ex_t": "Qual é o prato do dia?",
+      "ex_trans": "What's the dish of the day?",
+      "tags": [
+        "core",
+        "comida",
+        "pt-pt"
+      ],
+      "freq": 153,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0154",
+      "pt": "a sopa",
+      "trans": "soup",
+      "pos": "noun",
+      "gender": "f",
+      "note": "sopa comes before everything, every day",
+      "ex_t": "Hoje há sopa de legumes.",
+      "ex_trans": "Today there's vegetable soup.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 154,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0155",
+      "pt": "a sobremesa",
+      "trans": "dessert",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Quer sobremesa?",
+      "ex_trans": "Would you like dessert?",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 155,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0156",
+      "pt": "o pequeno",
+      "trans": "small (coffee); short one",
+      "pos": "adj",
+      "gender": "m",
+      "note": "café pequeno = the standard espresso",
+      "ex_t": "Um pequeno e uma torrada.",
+      "ex_trans": "An espresso and a piece of toast.",
+      "tags": [
+        "core",
+        "cafe"
+      ],
+      "freq": 156,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0157",
+      "pt": "o galão",
+      "trans": "milky coffee in a glass",
+      "pos": "noun",
+      "gender": "m",
+      "note": "mainland breakfast staple; in Madeira ask for a chinesa",
+      "ex_t": "Um galão claro, por favor.",
+      "ex_trans": "A light milky coffee, please.",
+      "tags": [
+        "core",
+        "cafe",
+        "pt-pt"
+      ],
+      "freq": 157,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0158",
+      "pt": "o pastel de nata",
+      "trans": "custard tart",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural pastéis de nata",
+      "ex_t": "Dois pastéis de nata, por favor.",
+      "ex_trans": "Two custard tarts, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 158,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0159",
+      "pt": "a fruta",
+      "trans": "fruit",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A fruta aqui é muito boa.",
+      "ex_trans": "The fruit here is very good.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 159,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0160",
+      "pt": "os legumes",
+      "trans": "vegetables",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Só como legumes ao jantar.",
+      "ex_trans": "I only eat vegetables for dinner.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 160,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0161",
+      "pt": "o arroz",
+      "trans": "rice",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Arroz com peixe.",
+      "ex_trans": "Rice with fish.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 161,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0162",
+      "pt": "a batata",
+      "trans": "potato",
+      "pos": "noun",
+      "gender": "f",
+      "note": "batatas fritas = chips",
+      "ex_t": "Com batatas fritas, por favor.",
+      "ex_trans": "With chips, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 162,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0163",
+      "pt": "o queijo",
+      "trans": "cheese",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Queijo da ilha, por favor.",
+      "ex_trans": "Island cheese, please.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 163,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0164",
+      "pt": "o ovo",
+      "trans": "egg",
+      "pos": "noun",
+      "gender": "m",
+      "note": "plural ovos, pronounced with an open o",
+      "ex_t": "Uma dúzia de ovos.",
+      "ex_trans": "A dozen eggs.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 164,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0165",
+      "pt": "o sal",
+      "trans": "salt",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Falta sal.",
+      "ex_trans": "It needs salt.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 165,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0166",
+      "pt": "o açúcar",
+      "trans": "sugar",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Sem açúcar, obrigado.",
+      "ex_trans": "No sugar, thanks.",
+      "tags": [
+        "core",
+        "comida"
+      ],
+      "freq": 166,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0167",
+      "pt": "quente",
+      "trans": "hot",
+      "pos": "adj",
+      "gender": null,
+      "note": "for spicy use picante",
+      "ex_t": "A sopa está muito quente.",
+      "ex_trans": "The soup is very hot.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 167,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0168",
+      "pt": "frio",
+      "trans": "cold",
+      "pos": "adj",
+      "gender": "m",
+      "note": "ter frio = to feel cold; está frio = it's cold out",
+      "ex_t": "Está frio hoje.",
+      "ex_trans": "It's cold today.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 168,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0169",
+      "pt": "delicioso",
+      "trans": "delicious",
+      "pos": "adj",
+      "gender": "m",
+      "note": "or just: está muito bom",
+      "ex_t": "Estava delicioso, obrigado.",
+      "ex_trans": "It was delicious, thank you.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 169,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0170",
+      "pt": "levar",
+      "trans": "to take away; to carry",
+      "pos": "verb",
+      "gender": null,
+      "note": "para levar = takeaway",
+      "ex_t": "É para levar ou para comer aqui?",
+      "ex_trans": "Is it takeaway or eating in?",
+      "tags": [
+        "core",
+        "verbo",
+        "comida"
+      ],
+      "freq": 170,
+      "unit": "comida"
+    },
+    {
+      "id": "pt0171",
+      "pt": "o médico",
+      "trans": "doctor",
+      "pos": "noun",
+      "gender": "m",
+      "note": "médica for a woman",
+      "ex_t": "Preciso de marcar consulta com o médico.",
+      "ex_trans": "I need to book an appointment with the doctor.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 171,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0172",
+      "pt": "a consulta",
+      "trans": "medical appointment",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Tenho consulta às três.",
+      "ex_trans": "I have an appointment at three.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 172,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0173",
+      "pt": "o centro de saúde",
+      "trans": "public health centre",
+      "pos": "noun",
+      "gender": "m",
+      "note": "where you go first; hospital only for emergencies",
+      "ex_t": "Vou ao centro de saúde amanhã.",
+      "ex_trans": "I'm going to the health centre tomorrow.",
+      "tags": [
+        "core",
+        "saude",
+        "pt-pt"
+      ],
+      "freq": 173,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0174",
+      "pt": "as urgências",
+      "trans": "A&E, emergency room",
+      "pos": "noun",
+      "gender": "f",
+      "note": "always plural",
+      "ex_t": "Levaram-no às urgências.",
+      "ex_trans": "They took him to A&E.",
+      "tags": [
+        "core",
+        "saude",
+        "pt-pt"
+      ],
+      "freq": 174,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0175",
+      "pt": "a dor",
+      "trans": "pain",
+      "pos": "noun",
+      "gender": "f",
+      "note": "dor de cabeça, dor de garganta, dor de dentes",
+      "ex_t": "Tenho dor de cabeça.",
+      "ex_trans": "I have a headache.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 175,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0176",
+      "pt": "doente",
+      "trans": "ill, sick",
+      "pos": "adj",
+      "gender": null,
+      "note": "estou doente — with estar, it's temporary",
+      "ex_t": "Estou doente, não vou trabalhar.",
+      "ex_trans": "I'm ill, I'm not going to work.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 176,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0177",
+      "pt": "a febre",
+      "trans": "fever",
+      "pos": "noun",
+      "gender": "f",
+      "note": "ter febre — with ter, like hunger",
+      "ex_t": "O menino tem febre.",
+      "ex_trans": "The boy has a fever.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 177,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0178",
+      "pt": "a receita",
+      "trans": "prescription; recipe",
+      "pos": "noun",
+      "gender": "f",
+      "note": "both meanings — context decides",
+      "ex_t": "Preciso de receita para isto?",
+      "ex_trans": "Do I need a prescription for this?",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 178,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0179",
+      "pt": "o medicamento",
+      "trans": "medicine, drug",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Este medicamento é caro.",
+      "ex_trans": "This medicine is expensive.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 179,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0180",
+      "pt": "o comprimido",
+      "trans": "pill, tablet",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Um comprimido de manhã.",
+      "ex_trans": "One tablet in the morning.",
+      "tags": [
+        "core",
+        "saude"
+      ],
+      "freq": 180,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0181",
+      "pt": "doer",
+      "trans": "to hurt",
+      "pos": "verb",
+      "gender": null,
+      "note": "works like 'to please': dói-me a cabeça = my head hurts me",
+      "ex_t": "Dói-me as costas.",
+      "ex_trans": "My back hurts.",
+      "tags": [
+        "core",
+        "verbo",
+        "saude"
+      ],
+      "freq": 181,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0182",
+      "pt": "a cabeça",
+      "trans": "head",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Dói-me a cabeça desde ontem.",
+      "ex_trans": "My head has hurt since yesterday.",
+      "tags": [
+        "core",
+        "saude",
+        "corpo"
+      ],
+      "freq": 182,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0183",
+      "pt": "o estômago",
+      "trans": "stomach",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Tenho dores de estômago.",
+      "ex_trans": "I have stomach pains.",
+      "tags": [
+        "core",
+        "saude",
+        "corpo"
+      ],
+      "freq": 183,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0184",
+      "pt": "a farmácia de serviço",
+      "trans": "duty pharmacy (open at night)",
+      "pos": "noun",
+      "gender": "f",
+      "note": "rota posted on every pharmacy door — vital at 2am",
+      "ex_t": "Qual é a farmácia de serviço hoje?",
+      "ex_trans": "Which pharmacy is on duty today?",
+      "tags": [
+        "core",
+        "saude",
+        "pt-pt"
+      ],
+      "freq": 184,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0185",
+      "pt": "melhor",
+      "trans": "better; best",
+      "pos": "adj",
+      "gender": null,
+      "note": "irregular comparative of bom",
+      "ex_t": "Já estou melhor, obrigado.",
+      "ex_trans": "I'm better now, thank you.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 185,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0186",
+      "pt": "pior",
+      "trans": "worse; worst",
+      "pos": "adj",
+      "gender": null,
+      "note": "irregular comparative of mau",
+      "ex_t": "Hoje está pior.",
+      "ex_trans": "Today it's worse.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 186,
+      "unit": "saude"
+    },
+    {
+      "id": "pt0187",
+      "pt": "a paragem",
+      "trans": "bus stop",
+      "pos": "noun",
+      "gender": "f",
+      "note": "pt-PT; Brazilians say ponto de ônibus",
+      "ex_t": "A paragem é ali à frente.",
+      "ex_trans": "The stop is just ahead.",
+      "tags": [
+        "core",
+        "transporte",
+        "pt-pt"
+      ],
+      "freq": 187,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0188",
+      "pt": "o bilhete",
+      "trans": "ticket",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Um bilhete de ida e volta.",
+      "ex_trans": "A return ticket.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "freq": 188,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0189",
+      "pt": "apanhar",
+      "trans": "to catch (transport); to pick up",
+      "pos": "verb",
+      "gender": null,
+      "note": "pt-PT for catching a bus; Brazilians say pegar",
+      "ex_t": "Apanho o autocarro das oito.",
+      "ex_trans": "I catch the eight o'clock bus.",
+      "tags": [
+        "core",
+        "verbo",
+        "transporte",
+        "pt-pt"
+      ],
+      "freq": 189,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0190",
+      "pt": "o carro",
+      "trans": "car",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Vou de carro.",
+      "ex_trans": "I'm going by car.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "freq": 190,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0191",
+      "pt": "estacionar",
+      "trans": "to park",
+      "pos": "verb",
+      "gender": null,
+      "note": "estacionamento = parking",
+      "ex_t": "Onde posso estacionar?",
+      "ex_trans": "Where can I park?",
+      "tags": [
+        "core",
+        "verbo",
+        "transporte"
+      ],
+      "freq": 191,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0192",
+      "pt": "a estrada",
+      "trans": "road",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A estrada está cortada.",
+      "ex_trans": "The road is closed.",
+      "tags": [
+        "core",
+        "transporte"
+      ],
+      "freq": 192,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0193",
+      "pt": "perto",
+      "trans": "near",
+      "pos": "adv",
+      "gender": null,
+      "note": "perto de = near to",
+      "ex_t": "Fica perto daqui?",
+      "ex_trans": "Is it near here?",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 193,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0194",
+      "pt": "longe",
+      "trans": "far",
+      "pos": "adv",
+      "gender": null,
+      "note": "",
+      "ex_t": "É muito longe a pé.",
+      "ex_trans": "It's very far on foot.",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 194,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0195",
+      "pt": "à esquerda",
+      "trans": "on/to the left",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "Vire à esquerda no semáforo.",
+      "ex_trans": "Turn left at the traffic light.",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 195,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0196",
+      "pt": "à direita",
+      "trans": "on/to the right",
+      "pos": "phrase",
+      "gender": null,
+      "note": "",
+      "ex_t": "A farmácia fica à direita.",
+      "ex_trans": "The pharmacy is on the right.",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 196,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0197",
+      "pt": "em frente",
+      "trans": "straight ahead",
+      "pos": "phrase",
+      "gender": null,
+      "note": "sempre em frente = keep going straight",
+      "ex_t": "Siga sempre em frente.",
+      "ex_trans": "Keep going straight ahead.",
+      "tags": [
+        "core",
+        "direcoes"
+      ],
+      "freq": 197,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0198",
+      "pt": "aberto",
+      "trans": "open",
+      "pos": "adj",
+      "gender": "m",
+      "note": "sign on every door",
+      "ex_t": "Está aberto ao domingo?",
+      "ex_trans": "Is it open on Sundays?",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 198,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0199",
+      "pt": "fechado",
+      "trans": "closed",
+      "pos": "adj",
+      "gender": "m",
+      "note": "encerrado is the formal version on official notices",
+      "ex_t": "Fechado para férias.",
+      "ex_trans": "Closed for holidays.",
+      "tags": [
+        "core",
+        "adjetivo"
+      ],
+      "freq": 199,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0200",
+      "pt": "os correios",
+      "trans": "post office",
+      "pos": "noun",
+      "gender": "m",
+      "note": "always plural; the brand is CTT",
+      "ex_t": "Vou aos correios levantar uma encomenda.",
+      "ex_trans": "I'm going to the post office to collect a parcel.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "freq": 200,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0201",
+      "pt": "a encomenda",
+      "trans": "parcel, order",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "A encomenda chegou ontem.",
+      "ex_trans": "The parcel arrived yesterday.",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "freq": 201,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0202",
+      "pt": "o mercado",
+      "trans": "market",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Funchal's is Mercado dos Lavradores",
+      "ex_t": "O mercado abre às sete.",
+      "ex_trans": "The market opens at seven.",
+      "tags": [
+        "core",
+        "lugar",
+        "compras"
+      ],
+      "freq": 202,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0203",
+      "pt": "barato",
+      "trans": "cheap",
+      "pos": "adj",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Aqui é mais barato.",
+      "ex_trans": "It's cheaper here.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "compras"
+      ],
+      "freq": 203,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0204",
+      "pt": "caro",
+      "trans": "expensive",
+      "pos": "adj",
+      "gender": "m",
+      "note": "also 'dear' in letters: Caro amigo",
+      "ex_t": "Está muito caro.",
+      "ex_trans": "That's very expensive.",
+      "tags": [
+        "core",
+        "adjetivo",
+        "compras"
+      ],
+      "freq": 204,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0205",
+      "pt": "o troco",
+      "trans": "change (money back)",
+      "pos": "noun",
+      "gender": "m",
+      "note": "não tenho troco = I have no change",
+      "ex_t": "Fique com o troco.",
+      "ex_trans": "Keep the change.",
+      "tags": [
+        "core",
+        "financas",
+        "compras"
+      ],
+      "freq": 205,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0206",
+      "pt": "o desconto",
+      "trans": "discount",
+      "pos": "noun",
+      "gender": "m",
+      "note": "",
+      "ex_t": "Faz desconto?",
+      "ex_trans": "Do you offer a discount?",
+      "tags": [
+        "core",
+        "compras"
+      ],
+      "freq": 206,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0207",
+      "pt": "o tempo",
+      "trans": "weather; time",
+      "pos": "noun",
+      "gender": "m",
+      "note": "both meanings; que tempo faz? = what's the weather like?",
+      "ex_t": "Que tempo faz hoje?",
+      "ex_trans": "What's the weather like today?",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 207,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0208",
+      "pt": "a chuva",
+      "trans": "rain",
+      "pos": "noun",
+      "gender": "f",
+      "note": "chover = to rain; está a chover = it's raining",
+      "ex_t": "Está a chover outra vez.",
+      "ex_trans": "It's raining again.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 208,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0209",
+      "pt": "o sol",
+      "trans": "sun",
+      "pos": "noun",
+      "gender": "m",
+      "note": "faz sol = it's sunny",
+      "ex_t": "Hoje faz sol.",
+      "ex_trans": "It's sunny today.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 209,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0210",
+      "pt": "o vento",
+      "trans": "wind",
+      "pos": "noun",
+      "gender": "m",
+      "note": "on Madeira this word earns its keep",
+      "ex_t": "Está muito vento no Arieiro.",
+      "ex_trans": "It's very windy at Arieiro.",
+      "tags": [
+        "core",
+        "tempo"
+      ],
+      "freq": 210,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0211",
+      "pt": "o nevoeiro",
+      "trans": "fog",
+      "pos": "noun",
+      "gender": "m",
+      "note": "the reason Madeira flights divert",
+      "ex_t": "Há nevoeiro na serra.",
+      "ex_trans": "There's fog in the mountains.",
+      "tags": [
+        "core",
+        "tempo",
+        "madeira"
+      ],
+      "freq": 211,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0212",
+      "pt": "a praia",
+      "trans": "beach",
+      "pos": "noun",
+      "gender": "f",
+      "note": "",
+      "ex_t": "Vamos à praia no sábado.",
+      "ex_trans": "We're going to the beach on Saturday.",
+      "tags": [
+        "core",
+        "lugar"
+      ],
+      "freq": 212,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0213",
+      "pt": "a serra",
+      "trans": "mountain range",
+      "pos": "noun",
+      "gender": "f",
+      "note": "on Madeira, 'up in the serra' means the interior highlands",
+      "ex_t": "Na serra está sempre mais frio.",
+      "ex_trans": "Up in the mountains it's always colder.",
+      "tags": [
+        "core",
+        "lugar",
+        "madeira"
+      ],
+      "freq": 213,
+      "unit": "cidade"
+    },
+    {
+      "id": "pt0214",
+      "pt": "o miradouro",
+      "trans": "viewpoint",
+      "pos": "noun",
+      "gender": "m",
+      "note": "signposted everywhere on Madeira",
+      "ex_t": "Há um miradouro ali em cima.",
+      "ex_trans": "There's a viewpoint up there.",
+      "tags": [
+        "core",
+        "lugar",
+        "madeira"
+      ],
+      "freq": 214,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0215",
+      "pt": "o teleférico",
+      "trans": "cable car",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Funchal–Monte, the one tourists queue for",
+      "ex_t": "Subimos de teleférico ao Monte.",
+      "ex_trans": "We went up to Monte by cable car.",
+      "tags": [
+        "core",
+        "transporte",
+        "madeira"
+      ],
+      "freq": 215,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0216",
+      "pt": "a vereda",
+      "trans": "footpath, trail",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira's mountain trails, as opposed to a levada walk",
+      "ex_t": "A vereda do Areeiro é exigente.",
+      "ex_trans": "The Areeiro trail is demanding.",
+      "tags": [
+        "core",
+        "lugar",
+        "madeira"
+      ],
+      "freq": 216,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0217",
+      "pt": "a lapa",
+      "trans": "limpet",
+      "pos": "noun",
+      "gender": "f",
+      "note": "grilled with garlic butter — the Madeiran starter",
+      "ex_t": "Lapas grelhadas, por favor.",
+      "ex_trans": "Grilled limpets, please.",
+      "tags": [
+        "core",
+        "comida",
+        "madeira"
+      ],
+      "freq": 217,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0218",
+      "pt": "a maracujá",
+      "trans": "passion fruit",
+      "pos": "noun",
+      "gender": "f",
+      "note": "Madeira grows several varieties found nowhere else",
+      "ex_t": "Sumo de maracujá, por favor.",
+      "ex_trans": "Passion fruit juice, please.",
+      "tags": [
+        "core",
+        "comida",
+        "madeira"
+      ],
+      "freq": 218,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0219",
+      "pt": "o funchalense",
+      "trans": "person from Funchal",
+      "pos": "noun",
+      "gender": "m",
+      "note": "Madeirans generally: madeirense",
+      "ex_t": "Ele é funchalense de gema.",
+      "ex_trans": "He's a Funchal native through and through.",
+      "tags": [
+        "core",
+        "madeira"
+      ],
+      "freq": 219,
+      "unit": "madeira"
+    },
+    {
+      "id": "pt0220",
+      "pt": "o autocarro urbano",
+      "trans": "city bus",
+      "pos": "noun",
+      "gender": "m",
+      "note": "in Funchal the yellow Horários do Funchal buses",
+      "ex_t": "O autocarro urbano passa de meia em meia hora.",
+      "ex_trans": "The city bus runs every half hour.",
+      "tags": [
+        "core",
+        "transporte",
+        "madeira"
+      ],
+      "freq": 220,
+      "unit": "madeira"
+    }
   ]
 }
