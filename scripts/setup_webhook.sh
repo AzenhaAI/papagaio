@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 read -rsp "BotFather token: " TG_TOKEN; echo
-WORKER_URL="${1:-https://papagaio.kirshp.workers.dev}"
+WORKER_URL="${1:-https://azenha.ai}"
 
 SECRET=$(openssl rand -hex 16)
 

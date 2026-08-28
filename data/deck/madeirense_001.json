@@ -102,22 +102,6 @@
       "unit": "madeira"
     },
     {
-      "id": "md0007",
-      "pt": "a chinesa",
-      "trans": "milky coffee in a glass",
-      "pos": "noun",
-      "note": "Madeira only — on the mainland this is «o galão». Informal: understand it, and use it once you live here.",
-      "ex_t": "Uma chinesa, por favor.",
-      "ex_trans": "A milky coffee, please.",
-      "tags": [
-        "madeira",
-        "regional",
-        "pt-pt"
-      ],
-      "freq": 3107,
-      "unit": "madeira"
-    },
-    {
       "id": "md0008",
       "pt": "a brisa",
       "trans": "any fizzy soft drink",
@@ -131,22 +115,6 @@
         "pt-pt"
       ],
       "freq": 3108,
-      "unit": "madeira"
-    },
-    {
-      "id": "md0009",
-      "pt": "a poncha",
-      "trans": "sugarcane spirit with honey and lemon",
-      "pos": "noun",
-      "note": "Madeiran, and it exists nowhere else. Informal: understand it, and use it once you live here.",
-      "ex_t": "Uma poncha de maracujá.",
-      "ex_trans": "One passion-fruit poncha.",
-      "tags": [
-        "madeira",
-        "regional",
-        "pt-pt"
-      ],
-      "freq": 3109,
       "unit": "madeira"
     },
     {
@@ -198,22 +166,6 @@
       "unit": "madeira"
     },
     {
-      "id": "md0013",
-      "pt": "a levada",
-      "trans": "an irrigation channel along the mountain",
-      "pos": "noun",
-      "note": "Madeira only — on the mainland this is «o canal de rega». Informal: understand it, and use it once you live here.",
-      "ex_t": "Vamos andar pela levada.",
-      "ex_trans": "Let's walk along the levada.",
-      "tags": [
-        "madeira",
-        "regional",
-        "pt-pt"
-      ],
-      "freq": 3113,
-      "unit": "madeira"
-    },
-    {
       "id": "md0014",
       "pt": "o poio",
       "trans": "a terrace of land held by a basalt wall",
@@ -259,22 +211,6 @@
         "pt-pt"
       ],
       "freq": 3116,
-      "unit": "madeira"
-    },
-    {
-      "id": "md0017",
-      "pt": "o horário",
-      "trans": "the bus",
-      "pos": "noun",
-      "note": "Madeira only — on the mainland this is «o autocarro». Informal: understand it, and use it once you live here.",
-      "ex_t": "Perdi o horário das oito.",
-      "ex_trans": "I missed the eight o'clock bus.",
-      "tags": [
-        "madeira",
-        "regional",
-        "pt-pt"
-      ],
-      "freq": 3117,
       "unit": "madeira"
     },
     {

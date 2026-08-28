@@ -73,7 +73,10 @@ for (const file of readdirSync(join(root, 'data/deck')).filter((f) => f.endsWith
     if (seen.has(c.id)) problems.push(`${where}: duplicate id, also in ${seen.get(c.id)}`);
     seen.set(c.id, file);
 
-    if (c.pos !== 'drill') {
+    // Minimal pairs contrast a taught word against its near-twin — mau against
+    // mão — so the word appearing twice is the exercise, not a mistake. Every
+    // other unit means it as a duplicate.
+    if (c.pos !== 'drill' && c.unit !== 'minpair') {
       const key = `${course}:${term.toLowerCase()}`;
       if (terms.has(key)) problems.push(`${where}: "${term}" already taught as ${terms.get(key)}`);
       terms.set(key, `${c.id} in ${file}`);

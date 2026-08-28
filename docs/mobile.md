@@ -1,6 +1,6 @@
 # PapaGaio mobile — API contract and app plan
 
-The Worker at `https://papagaio.kirshp.workers.dev` is an API first; the Telegram
+The Worker at `https://azenha.ai/api` is an API first; the Telegram
 bot is one client of it. The app is the second client and shares the same D1, so
 progress is continuous: start a card on the phone, finish it in Telegram.
 

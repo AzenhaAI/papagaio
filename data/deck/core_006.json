@@ -550,10 +550,10 @@
     {
       "id": "pt0324",
       "pt": "o horário",
-      "trans": "schedule; timetable",
+      "trans": "schedule; timetable — and, in Madeira, the bus itself",
       "pos": "noun",
       "gender": "m",
-      "note": "",
+      "note": "Madeira only: «apanhar o horário» means to catch the bus. On the mainland that is «o autocarro».",
       "ex_t": "O horário dos autocarros muda nos feriados.",
       "ex_trans": "The bus timetable changes on public holidays.",
       "tags": [
