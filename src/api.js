@@ -859,42 +859,6 @@ export async function handleApi(request, env, path) {
     return json({ added: true, already: false });
   }
 
-  // A card in your own words. The reader and the translator both make cards
-  // for you, but a machine gloss is not always the one you need: the word your
-  // landlord used, in the sense he used it, with the sentence he said.
-  if (path === '/api/cards' && request.method === 'POST') {
-    const b = await request.json().catch(() => ({}));
-    const term = String(b?.term ?? '').trim().slice(0, 80);
-    const trans = String(b?.trans ?? '').trim().slice(0, 200);
-    if (!term || !trans) return json({ error: 'term and trans are required' }, 400);
-    const course = b?.course === 'en' ? 'en' : 'pt';
-    const note = String(b?.note ?? '').trim().slice(0, 300);
-    const ex = String(b?.example ?? '').trim().slice(0, 300);
-
-    // Same word twice is a card you will answer twice and learn once.
-    const dupe = await env.DB.prepare(
-      `SELECT id FROM cards WHERE owner = ?1 AND LOWER(term) = LOWER(?2) AND course = ?3`
-    ).bind(String(uid), term, course).first();
-    if (dupe) return json({ id: dupe.id, duplicate: true });
-
-    // freq 100000 keeps it after the frequency deck: your own words are extra,
-    // never a queue-jumper ahead of the thousand that come first.
-    const id = `u${Number(uid).toString(36)}-${Date.now().toString(36)}`;
-    await env.DB.batch([
-      env.DB.prepare(
-        `INSERT INTO cards (id, course, term, trans, note, ex_t, tags, freq, owner)
-         VALUES (?1, ?2, ?3, ?4, ?5, ?6, '["mine"]', 100000, ?7)`
-      ).bind(id, course, term, trans, note, ex || null, String(uid)),
-      env.DB.prepare(
-        `INSERT INTO user_cards (user_id, card_id, due) VALUES (?1, ?2, ?3)`
-      ).bind(uid, id, new Date().toISOString()),
-      env.DB.prepare(
-        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?1, ?2, 'add', ?3)`
-      ).bind(uid, id, new Date().toISOString()),
-    ]);
-    return json({ id, duplicate: false });
-  }
-
   if (path === '/api/course' && request.method === 'GET') {
     return json(await courseMap(env, uid));
   }
@@ -1193,10 +1157,21 @@ export async function handleApi(request, env, path) {
   }
 
   if (path === '/api/mine' && request.method === 'GET') {
+    const course = new URL(request.url).searchParams.get('course') === 'en' ? 'en' : 'pt';
     const { results } = await env.DB.prepare(
-      `SELECT * FROM cards WHERE owner = ? ORDER BY id DESC LIMIT 200`
-    ).bind(uid).all();
-    return json({ cards: results });
+      `SELECT c.id, c.course, c.term, c.trans, c.trans_ru, c.pos, c.gender,
+              c.note, c.ex_t, c.ex_trans, c.unit, c.audio, c.tags, c.entry,
+              uc.due AS due, uc.reps AS reps,
+              (SELECT MAX(created_at) FROM events e
+                WHERE e.user_id = ?1 AND e.card_id = c.id AND e.kind = 'add') AS added_at
+         FROM user_cards uc JOIN cards c ON c.id = uc.card_id
+        WHERE uc.user_id = ?1 AND c.course = ?2
+          AND (c.owner = ?3 OR c.id IN (
+                SELECT card_id FROM events WHERE user_id = ?1 AND kind = 'add'))
+        ORDER BY added_at DESC, uc.due
+        LIMIT 500`
+    ).bind(uid, course, String(uid)).all();
+    return json({ count: results.length, cards: results });
   }
 
   if (path === '/api/mine' && request.method === 'POST') {
