@@ -115,3 +115,12 @@ coach reading your own line back, voice sent on release.
 Everything shipped from here until that verdict lands is 1.0.1 too — the
 server-side half reaches people the day it deploys regardless, which is why
 waiting costs so little.
+
+## Sign the Mac build properly
+
+The desktop app is signed ad-hoc, and a sandboxed app signed that way is
+refused by the keychain — `-34018` on every write. The token falls back to a
+file today, which works and is weaker than it should be. Signing with the
+development identity (team ARY46X758B) and adding the keychain-access-groups
+entitlement puts it back where it belongs, and is also the step a notarised
+download would need anyway.
