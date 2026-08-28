@@ -832,6 +832,33 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  // A taught card, into your queue. Distinct from POST /api/cards: that makes
+  // a card of your own, this schedules one that already exists — copying a
+  // deck word into a private duplicate would split its history in two.
+  if (path === '/api/deck/learn' && request.method === 'POST') {
+    const b = await request.json().catch(() => ({}));
+    const id = String(b?.id ?? '').trim();
+    if (!id) return json({ error: 'id is required' }, 400);
+    const card = await env.DB.prepare(
+      `SELECT id FROM cards WHERE id = ?1 AND (owner IS NULL OR owner = ?2)`
+    ).bind(id, String(uid)).first();
+    if (!card) return json({ error: 'no such card' }, 404);
+
+    const had = await env.DB.prepare(
+      `SELECT 1 FROM user_cards WHERE user_id = ?1 AND card_id = ?2`
+    ).bind(uid, id).first();
+    if (had) return json({ added: false, already: true });
+
+    await env.DB.batch([
+      env.DB.prepare(`INSERT INTO user_cards (user_id, card_id, due) VALUES (?1, ?2, ?3)`)
+        .bind(uid, id, new Date().toISOString()),
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?1, ?2, 'add', ?3)`
+      ).bind(uid, id, new Date().toISOString()),
+    ]);
+    return json({ added: true, already: false });
+  }
+
   // A card in your own words. The reader and the translator both make cards
   // for you, but a machine gloss is not always the one you need: the word your
   // landlord used, in the sense he used it, with the sentence he said.
