@@ -15,7 +15,15 @@
   .out { font-size: 17px; font-weight: 600; margin-top: 10px; min-height: 22px; }
   .note { color: #a7aeba; font-size: 12.5px; margin-top: 8px; }
   .note div { margin-top: 4px; }
-  .hint { color: #8b929e; font-size: 11.5px; margin-top: 12px; }
+  .hint { color: #8b929e; font-size: 11.5px; margin-top: 12px; line-height: 1.45; }
+  .pair { margin-top: 10px; border-top: 1px solid #23262d; padding-top: 10px; }
+  .pair input { width: 100%; box-sizing: border-box; background: #21242b; color: #f2f4f7;
+    border: 1px solid #2b2f36; border-radius: 8px; padding: 7px 8px; font: inherit;
+    font-size: 12px; margin: 6px 0; }
+  .pair button { width: 100%; background: #21242b; color: #c9d0da; border: 1px solid #2b2f36;
+    border-radius: 8px; padding: 7px 0; font: inherit; font-size: 12.5px; cursor: pointer; }
+  .pair button:hover { background: #2a2e36; }
+  .pair.done input, .pair.done button { display: none; }
   .pair { margin-top: 14px; border-top: 1px solid #2b2f36; padding-top: 12px;
     color: #a7aeba; font-size: 12px; line-height: 1.5; }
   .pair input { width: 100%; box-sizing: border-box; margin-top: 6px; padding: 7px 8px;
@@ -33,7 +41,14 @@
   <div class="out" id="out"></div>
   <div class="note" id="note"></div>
   <div class="pair" id="pair"></div>
-  <div class="hint">Or select text on any page and click the 🦜.<br>
-    Free, no account. <a href="https://azenha.ai/papagaio" target="_blank">azenha.ai/papagaio</a></div>
+  <div class="hint">Or select text on any page and click the 🦜.</div>
+
+  <div class="pair" id="pair">
+    <div class="hint" id="pairstate">Words you keep go to a deck of this
+      browser's own. Paste the code from <code>/link</code> in the bot to put
+      them in the deck you actually study.</div>
+    <input id="code" placeholder="code from /link" autocomplete="off">
+    <button id="pairbtn">Connect</button>
+  </div>
 </div>
 <script src="popup.js"></script>

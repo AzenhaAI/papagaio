@@ -1189,6 +1189,12 @@ export async function handleApi(request, env, path) {
              body.ex_t ?? null, body.ex_trans ?? null, uid),
       env.DB.prepare(`INSERT INTO user_cards (user_id, card_id, due) VALUES (?, ?, ?)`)
         .bind(uid, id, new Date().toISOString()),
+      // The add event is what "my words" is ordered by and, for taught cards,
+      // what it is defined by. Writing the card without it left a word you
+      // just added sitting at the bottom of your own list.
+      env.DB.prepare(
+        `INSERT INTO events (user_id, card_id, kind, created_at) VALUES (?, ?, 'add', ?)`
+      ).bind(uid, id, new Date().toISOString()),
     ]);
     return json({ ok: true, id });
   }

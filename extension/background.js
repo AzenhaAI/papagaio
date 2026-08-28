@@ -27,6 +27,21 @@ async function token() {
   return j.token;
 }
 
+/// Joins the account the bot and the app already share.
+///
+/// Without this the extension registers a device of its own, and a word kept
+/// from a web page lands in a deck nobody studies — the button worked and the
+/// word was gone. `/link` in the bot issues the code; pasting it here replaces
+/// whatever anonymous account this browser had.
+async function pair(code) {
+  const clean = String(code ?? '').trim();
+  if (!/^[0-9a-f-]{30,40}$/i.test(clean)) throw new Error('That does not look like a code');
+  const r = await fetch(`${API}/api/progress`, { headers: { 'x-device-token': clean } });
+  if (!r.ok) throw new Error('That code was not accepted — send /link again');
+  await chrome.storage.local.set({ token: clean, paired: true });
+  return true;
+}
+
 async function call(path, { method = 'GET', body } = {}) {
   const r = await fetch(`${API}${path}`, {
     method,
@@ -117,6 +132,26 @@ chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
           bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
         }
         reply({ ok: true, audio: `data:audio/mpeg;base64,${btoa(bin)}` });
+        return;
+      }
+      if (msg.kind === 'pair') {
+        await pair(msg.code);
+        reply({ ok: true });
+        return;
+      }
+      if (msg.kind === 'status') {
+        const { paired } = await chrome.storage.local.get('paired');
+        reply({ ok: true, paired: paired === true });
+        return;
+      }
+      // Keeping a word: the same endpoint the app's dictionary uses, so a word
+      // kept here is the same card, with one history, not a copy.
+      if (msg.kind === 'keep') {
+        const t = await call('/api/mine', {
+          method: 'POST',
+          body: { term: msg.term, trans: msg.trans, course: 'pt', ex_t: msg.example ?? '' },
+        });
+        reply({ ok: true, id: t.id });
         return;
       }
       reply({ ok: false, error: 'unknown request' });

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Everywhere from '../components/Everywhere.astro';
 // Downloads go through our own hostname, which proxies the release assets:
 // a store-bound product does not put an account name on a download button.
 ---
@@ -94,4 +95,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </div>
+  <Everywhere />
 </BaseLayout>

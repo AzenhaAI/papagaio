@@ -182,6 +182,28 @@ function open(text, rect) {
     q('.copy').textContent = 'Copied';
   });
 
+  // Keeping the word is the reason to look it up. Which side is Portuguese
+  // depends on the direction the server took, so the card is built from that
+  // rather than from whichever side happened to be selected.
+  q('.keep').addEventListener('click', () => {
+    const a = current.answer;
+    if (!a) return;
+    const toPt = String(a.direction ?? '').endsWith('->pt');
+    const btn = q('.keep');
+    btn.textContent = '…';
+    chrome.runtime.sendMessage(
+      {
+        kind: 'keep',
+        term: toPt ? a.translation : a.source,
+        trans: toPt ? a.source : a.translation,
+        example: a.examples?.[0]?.src ?? '',
+      },
+      (res) => {
+        btn.textContent = res?.ok ? '✓ In deck' : (res?.error ?? 'failed');
+      }
+    );
+  });
+
   // The word plus the sentence it was met in: a card without its context is a
   // word list, and word lists are what people abandon.
   q('.deck').addEventListener('click', () => {

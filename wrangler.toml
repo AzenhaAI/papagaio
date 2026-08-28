@@ -30,6 +30,10 @@ routes = [
   # every path.
   { pattern = "azenha.ai/packs/*", zone_name = "azenha.ai" },
   { pattern = "papagaio.shpara.com", custom_domain = true },
+  # The download proxy on our own domain. papagaio.shpara.com keeps answering
+  # for copies already downloaded — a hostname is forever once it ships — but
+  # everything published from here on points at this one.
+  { pattern = "dl.azenha.ai", custom_domain = true },
 ]
 # Adding routes turns the workers.dev subdomain OFF unless it is asked for
 # explicitly — which instantly 404s every already-installed app, since a

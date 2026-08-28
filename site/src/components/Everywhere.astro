@@ -1,0 +1,50 @@
+---
+// Every door into PapaGaio, in one strip.
+//
+// The product lives in seven places and each page mentioned whichever one it
+// happened to be about — someone reading the translator page had no idea the
+// bot existed, and the browser panel was invisible unless you went looking.
+const base = '/papagaio';
+
+const doors = [
+  { icon: '🌍', name: 'In the browser', line: 'Nothing to install', href: `${base}/translate/` },
+  { icon: '📱', name: 'iPhone & iPad', line: 'App Store pending', href: `${base}/apps/` },
+  { icon: '🤖', name: 'Android', line: 'Direct APK, 20 MB', href: '/dl/PapaGaio.apk' },
+  { icon: '💻', name: 'macOS', line: 'Disk image, 22 MB', href: '/dl/PapaGaio-mac.dmg' },
+  { icon: '🪟', name: 'Windows', line: 'Zip, 13 MB', href: '/dl/PapaGaio-windows.zip' },
+  { icon: '✈️', name: 'Telegram bot', line: 'Cards and voice in chat', href: 'https://t.me/papagaio_ebot' },
+  { icon: '🧩', name: 'Chrome', line: 'Select a word, read it in place', href: '/dl/PapaGaio-chrome.zip' },
+  { icon: '🧭', name: 'Safari', line: 'Comes inside the iPhone app', href: `${base}/features/` },
+];
+---
+<section class="everywhere">
+  <h2>PapaGaio, wherever you read</h2>
+  <p class="muted" style="max-width:640px; margin-top:-6px;">
+    Same account across all of them — the bot's <code>/link</code> code pairs a
+    device, and your deck follows.
+  </p>
+  <div class="doors">
+    {doors.map((d) => (
+      <a class="door" href={d.href}>
+        <span class="ic">{d.icon}</span>
+        <span>
+          <strong>{d.name}</strong>
+          <small>{d.line}</small>
+        </span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .everywhere { margin: 34px 0 8px; }
+  .doors { display: grid; gap: 10px; margin-top: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); max-width: 900px; }
+  .door { display: flex; gap: 11px; align-items: center; text-decoration: none;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 14px; transition: border-color .15s ease; }
+  .door:hover { border-color: var(--accent); }
+  .ic { font-size: 21px; line-height: 1; }
+  .door strong { display: block; color: var(--text); font-size: 14px; font-weight: 600; }
+  .door small { display: block; color: var(--muted); font-size: 12.5px; margin-top: 1px; }
+</style>

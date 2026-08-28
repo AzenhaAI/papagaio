@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Everywhere from '../components/Everywhere.astro';
 ---
 <BaseLayout>
   <script is:inline>
@@ -244,4 +245,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     set('en', c.en_cards);
   }).catch(() => {});
 </script>
+  <Everywhere />
 </BaseLayout>

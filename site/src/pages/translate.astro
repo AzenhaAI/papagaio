@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Everywhere from '../components/Everywhere.astro';
 ---
 <BaseLayout title="Translate — PapaGaio"
   desc="A translator that guarantees European Portuguese: pt-PT output, misspellings corrected, Brazilian divergences flagged. Single words get a full dictionary article with real example sentences.">
@@ -286,4 +287,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     if (q0) { $('src').value = q0; onInput(); run(true); }
     renderHist();
   </script>
+  <Everywhere />
 </BaseLayout>

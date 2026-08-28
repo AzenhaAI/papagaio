@@ -100,3 +100,28 @@ function drawPair() {
 }
 
 drawPair();
+
+// Pairing. Without it the extension studies a deck of its own, which is the
+// worst kind of broken: the button works, the word is saved, and it is saved
+// where nobody will ever see it.
+const pairBox = document.getElementById('pair');
+const pairState = document.getElementById('pairstate');
+
+chrome.runtime.sendMessage({ kind: 'status' }, (res) => {
+  if (res?.paired) markPaired();
+});
+
+function markPaired() {
+  pairBox.classList.add('done');
+  pairState.textContent = 'Connected — kept words go to your own deck.';
+}
+
+document.getElementById('pairbtn').addEventListener('click', () => {
+  const code = document.getElementById('code').value.trim();
+  if (!code) return;
+  pairState.textContent = 'Checking…';
+  chrome.runtime.sendMessage({ kind: 'pair', code }, (res) => {
+    if (res?.ok) markPaired();
+    else pairState.textContent = res?.error ?? 'That code was not accepted.';
+  });
+});
