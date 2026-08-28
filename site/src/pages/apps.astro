@@ -95,12 +95,41 @@ import Everywhere from '../components/Everywhere.astro';
           the browser and, if you want it as an icon, <strong>Share → Add to
           Home Screen</strong>. It then opens full-screen, without the address
           bar, and looks like the app.</p>
+        <p>On a computer it installs too: Chrome and Edge show an install
+          icon in the address bar, or use their menu → <strong>Install
+          PapaGaio</strong>; Safari on macOS has <strong>File → Add to
+          Dock</strong>. It then runs in its own window, out of the browser
+          tabs, and keeps its place in the Dock.</p>
         <p class="soon">The one thing the browser cannot do is work with no
           signal — the installed apps keep your deck and its audio on the
           device, the web version asks the server each time.</p>
         <a class="btn" href="./" style="background:var(--panel2); color:var(--text);">You are here</a>
+        <button class="btn" id="pwa-install" style="display:none; margin-left:8px;">Install as an app</button>
       </div>
     </div>
   </div>
   <Everywhere />
 </BaseLayout>
+
+<script>
+  // The browser decides whether installing is possible — it fires this event
+  // only when it is, and never on a device that already has the app. So the
+  // button appears exactly when it would work and stays hidden otherwise,
+  // rather than promising something the browser will refuse.
+  let deferred = null;
+  const btn = document.getElementById('pwa-install');
+  addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferred = e;
+    if (btn) btn.style.display = '';
+  });
+  btn?.addEventListener('click', async () => {
+    if (!deferred) return;
+    btn.disabled = true;
+    deferred.prompt();
+    await deferred.userChoice;
+    deferred = null;
+    btn.style.display = 'none';
+  });
+  addEventListener('appinstalled', () => { if (btn) btn.style.display = 'none'; });
+</script>
