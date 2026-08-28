@@ -109,7 +109,14 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     /* Centred, not stretched: without this the plain links sit at the top of
        their full-height boxes while the padded pill centres inside its own,
        and the row reads as if one item slipped. */
-    header.site nav { display: flex; align-items: center; gap: 18px; margin-left: auto; }
+    header.site nav {
+      display: flex; flex-direction: column; align-items: flex-end;
+      gap: 7px; margin-left: auto;
+    }
+    header.site nav .row { display: flex; align-items: center; gap: 18px; }
+    /* The second row is the quieter one: reference and links out, not the
+       things you came to do. */
+    header.site nav .row.secondary a { font-size: 14px; }
     header.site nav a { color: var(--muted); font-size: 15px; white-space: nowrap; }
     header.site nav a:hover { color: var(--text); text-decoration: none; }
     header.site nav a.active {
@@ -123,8 +130,12 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
        keeps the full list, including what the strip has no room for. */
     @media (max-width: 860px) {
       header.site { flex-wrap: nowrap; gap: 10px; }
+      /* One strip again on a phone: `display: contents` dissolves the rows so
+         their links become direct children of the scrolling nav. */
+      header.site nav .row { display: contents; }
       header.site nav {
-        margin-left: 0; flex: 1 1 auto; min-width: 0; gap: 14px;
+        margin-left: 0; flex-direction: row; align-items: center;
+        flex: 1 1 auto; min-width: 0; gap: 14px;
         overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
         -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
                 mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent 100%);
@@ -177,17 +188,26 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <header class="site">
     <a class="logo" href={`${base}/`}>Papa<span>Gaio</span></a>
     <nav>
+      <!-- Two rows on a wide screen: ten links in a single line stretched the
+           header the whole width of the window and read as a list rather than
+           a menu. The first row is what you do, the second is what you read
+           about it. On a phone the rows collapse back into the scrolling strip
+           with `display: contents`. -->
+      <div class="row primary">
       <a class={active('coach')} href={`${base}/coach/`}>AI Coach</a>
       <a class={active('practice')} href={`${base}/practice/`}>Cards</a>
       <a class={active('translate')} href={`${base}/translate/`}>Translate</a>
       <a class={active('dictionary')} href={`${base}/dictionary/`}>Dictionary</a>
       <a class={active('phrasebook')} href={`${base}/phrasebook/`}>Phrasebook</a>
       <a class={active('verbs')} href={`${base}/verbs/`}>Verbs</a>
+      </div>
+      <div class="row secondary">
       <a class={active('progress')} href={`${base}/progress/`}>Progress</a>
       <a class={active('news')} href={`${base}/news/`}>News</a>
       <a class={active('features')} href={`${base}/features/`}>What it does</a>
       <a href="https://t.me/papagaio_ebot">Telegram bot</a>
       <a class="getapp-pill" href={`${base}/apps/`}>📱 Get the app</a>
+      </div>
     </nav>
     <button id="burger" aria-label="Menu" style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
   </header>
