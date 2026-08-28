@@ -163,6 +163,11 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     <!-- <meta name="apple-itunes-app" content="app-id=6802084974" /> -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
+  <style is:global>
+    .getapp-pill { border: 1px solid var(--border); border-radius: 999px;
+      padding: 5px 12px; font-size: 13px; white-space: nowrap; }
+    .getapp-pill:hover { border-color: var(--accent); }
+  </style>
 </head>
 <body>
   <header class="site">
@@ -178,6 +183,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       <a class={active('news')} href={`${base}/news/`}>News</a>
       <a class={active('features')} href={`${base}/features/`}>What it does</a>
       <a href="https://t.me/papagaio_ebot">Telegram bot</a>
+      <a class="getapp-pill" href={`${base}/apps/`}>📱 Get the app</a>
     </nav>
     <button id="burger" aria-label="Menu" style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
   </header>
