@@ -27,6 +27,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </details>
   </div>
 
+  <!-- The lanes beside the scheduled deck, the same four the app puts above
+       its card: what left the header did not leave the product. -->
+  <div class="lanes">
+    <a href="/papagaio/news/">🗞 Island news</a>
+    <a href="/papagaio/phrasebook/">💬 Phrasebook</a>
+    <a href="/papagaio/read/">📰 Reader</a>
+    <a href="/papagaio/features/">✨ What it does</a>
+  </div>
+
   <div id="app" style="display:none;">
     <div style="display:flex; gap:10px; align-items:center; margin:18px 0 10px; flex-wrap:wrap;">
       <button class="cbtn active" data-c="pt" id="c-pt">🇵🇹 Português</button>
@@ -212,3 +221,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     boot();
   </script>
 </BaseLayout>
+
+<style>
+  .lanes { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 18px; }
+  .lanes a { display: inline-flex; align-items: center; gap: 6px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 999px;
+    padding: 7px 13px; font-size: 13.5px; color: var(--text); text-decoration: none; }
+  .lanes a:hover { border-color: var(--accent); }
+</style>
