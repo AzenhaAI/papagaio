@@ -106,7 +106,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     }
     header.site .logo { font-size: 26px; font-weight: 700; color: var(--accent); }
     header.site .logo span { color: var(--red); }
-    header.site nav { display: flex; gap: 18px; margin-left: auto; }
+    /* Centred, not stretched: without this the plain links sit at the top of
+       their full-height boxes while the padded pill centres inside its own,
+       and the row reads as if one item slipped. */
+    header.site nav { display: flex; align-items: center; gap: 18px; margin-left: auto; }
     header.site nav a { color: var(--muted); font-size: 15px; white-space: nowrap; }
     header.site nav a:hover { color: var(--text); text-decoration: none; }
     header.site nav a.active {
@@ -164,8 +167,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
   <style is:global>
-    .getapp-pill { border: 1px solid var(--border); border-radius: 999px;
-      padding: 5px 12px; font-size: 13px; white-space: nowrap; }
+    .getapp-pill { display: inline-flex; align-items: center; gap: 6px;
+      border: 1px solid var(--border); border-radius: 999px;
+      padding: 6px 12px; font-size: 13px; line-height: 1; white-space: nowrap; }
     .getapp-pill:hover { border-color: var(--accent); }
   </style>
 </head>
