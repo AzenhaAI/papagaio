@@ -917,11 +917,21 @@ export async function handleApi(request, env, path) {
   if (path === '/api/next' && request.method === 'GET') {
     const url = new URL(request.url);
     const course = url.searchParams.get('course') ?? 'pt';
+    // Studying one set at a time. Without this the scheduler decides entirely,
+    // which is right for a daily habit and wrong for the evening before a
+    // doctor's appointment, when only the health words matter. 'mine' is the
+    // set of words you added yourself — they carry an owner instead of a unit.
+    const unit = url.searchParams.get('unit');
+    const mine = unit === 'mine';
+    const unitFilter = unit && !mine ? unit : null;
+
     const card = await env.DB.prepare(
       `SELECT c.* FROM user_cards uc JOIN cards c ON c.id = uc.card_id
-       WHERE uc.user_id = ? AND uc.due <= ? AND c.course = ?
+       WHERE uc.user_id = ?1 AND uc.due <= ?2 AND c.course = ?3
+         AND (?4 IS NULL OR c.unit = ?4)
+         AND (?5 = 0 OR c.owner = ?6)
        ORDER BY uc.due LIMIT 1`
-    ).bind(uid, new Date().toISOString(), course).first();
+    ).bind(uid, new Date().toISOString(), course, unitFilter, mine ? 1 : 0, String(uid)).first();
     if (card) return json({ card, isNew: false });
     const fresh = await env.DB.prepare(
       // Numbered placeholders throughout: mixing `?` with `?1` made D1 throw,
@@ -929,8 +939,10 @@ export async function handleApi(request, env, path) {
       // first card of a fresh account.
       `SELECT * FROM cards WHERE course = ?1 AND (owner IS NULL OR owner = ?2)
        AND id NOT IN (SELECT card_id FROM user_cards WHERE user_id = ?2)
+       AND (?3 IS NULL OR unit = ?3)
+       AND (?4 = 0 OR owner = ?5)
        ORDER BY freq LIMIT 1`
-    ).bind(course, uid).first();
+    ).bind(course, uid, unitFilter, mine ? 1 : 0, String(uid)).first();
     return fresh ? json({ card: fresh, isNew: true }) : json({ card: null });
   }
 
