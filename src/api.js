@@ -924,12 +924,18 @@ export async function handleApi(request, env, path) {
     const unit = url.searchParams.get('unit');
     const mine = unit === 'mine';
     const unitFilter = unit && !mine ? unit : null;
+    // "Mine" means everything you chose deliberately, which is not the same as
+    // everything you own: pressing "learn this word" on a taught card schedules
+    // that card rather than making you a copy of it, so an owner test alone
+    // returned nothing and the set looked broken. The add event is the record
+    // of the decision, wherever the card came from.
 
     const card = await env.DB.prepare(
       `SELECT c.* FROM user_cards uc JOIN cards c ON c.id = uc.card_id
        WHERE uc.user_id = ?1 AND uc.due <= ?2 AND c.course = ?3
          AND (?4 IS NULL OR c.unit = ?4)
-         AND (?5 = 0 OR c.owner = ?6)
+         AND (?5 = 0 OR c.owner = ?6 OR c.id IN (
+               SELECT card_id FROM events WHERE user_id = ?1 AND kind = 'add'))
        ORDER BY uc.due LIMIT 1`
     ).bind(uid, new Date().toISOString(), course, unitFilter, mine ? 1 : 0, String(uid)).first();
     if (card) return json({ card, isNew: false });
