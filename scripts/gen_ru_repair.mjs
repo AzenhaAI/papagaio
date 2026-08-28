@@ -75,7 +75,7 @@ const clean = (raw, row) => {
 };
 const out = join(root, 'build', 'ru_repair.sql');
 writeFileSync(out, '');
-let ok = 0, bad = 0, thin = 0, dryStreak = 0;
+let ok = 0, bad = 0, thin = 0, drifted = 0, dryStreak = 0;
 
 // Same wall as the expansion job: a per-minute token ceiling, not a daily
 // budget. Pace off the refusals rather than a fixed sleep.
@@ -104,7 +104,7 @@ for (const [from, list] of groups) {
           headers: { 'content-type': 'application/json', 'x-batch-key': KEY },
           body: JSON.stringify({
             terms: batch.map((b) => ({ t: b.term, pos: b.pos ?? '', sense: b.trans ?? '' })),
-            to: 'ru', from, rich: true,
+            to: 'ru', from, rich: true, keyed: true,
           }),
         });
         limited = r.status === 429 || r.status >= 500;
@@ -119,7 +119,14 @@ for (const [from, list] of groups) {
       const lines = [];
       const declined = [];
       batch.forEach((b, k) => {
-        const g = clean(d.glosses[k], b);
+        // Alignment is checked, not assumed. A batch of six came back six long
+        // with the last two still describing the previous word — "visit" was
+        // handed the definition of a musical third — and the length check waved
+        // it through onto the wrong rows. keyed mode echoes each term back, so
+        // an answer that drifted can be dropped instead of written.
+        const echoed = String(d.glosses[k]?.t ?? '').trim().toLowerCase();
+        if (!echoed.startsWith(String(b.term ?? '').toLowerCase())) { drifted++; return; }
+        const g = clean(d.glosses[k]?.g, b);
         // Unlike expansion, a one-word answer is a fine result here: a sense
         // that genuinely has one equivalent should read as one word, not be
         // padded back into a row. What is NOT progress is the same merged line
@@ -149,4 +156,4 @@ for (const [from, list] of groups) {
     await new Promise((res) => setTimeout(res, pause));
   }
 }
-console.error(`done: ${ok} repaired, ${thin} came back unchanged, ${bad} failed → build/ru_repair.sql`);
+console.error(`done: ${ok} repaired, ${thin} unchanged, ${drifted} dropped as misaligned, ${bad} failed → build/ru_repair.sql`);

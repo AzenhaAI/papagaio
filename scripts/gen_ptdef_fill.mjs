@@ -72,7 +72,7 @@ const clean = (raw, row) => {
 
 const out = join(root, 'build', 'ptdef_fill.sql');
 writeFileSync(out, '');
-let ok = 0, bad = 0, rejected = 0, dryStreak = 0;
+let ok = 0, bad = 0, rejected = 0, drifted = 0, dryStreak = 0;
 const PAUSE_MIN = 15000, PAUSE_MAX = 60000;
 let pause = PAUSE_MIN;
 const BATCH = 10;
@@ -88,7 +88,7 @@ for (let i = 0; i < need.length; i += BATCH) {
         headers: { 'content-type': 'application/json', 'x-batch-key': KEY },
         body: JSON.stringify({
           terms: batch.map((b) => ({ t: b.term, pos: b.pos ?? '', sense: b.trans ?? '' })),
-          to: 'pt', from: 'pt', define: true,
+          to: 'pt', from: 'pt', define: true, keyed: true,
         }),
       });
       limited = r.status === 429 || r.status >= 500;
@@ -103,7 +103,12 @@ for (let i = 0; i < need.length; i += BATCH) {
     const lines = [];
     const declined = [];
     batch.forEach((b, k) => {
-      const g = clean(d.glosses[k], b);
+      // Same alignment guard the repair job needs: a batch can come back the
+      // right length with answers shifted onto the wrong terms, and only the
+      // echoed term makes that visible.
+      const echoed = String(d.glosses[k]?.t ?? '').trim().toLowerCase();
+      if (!echoed.startsWith(String(b.term ?? '').toLowerCase())) { drifted++; return; }
+      const g = clean(d.glosses[k]?.g, b);
       if (!g) { declined.push(b.id); return; }
       lines.push(`UPDATE cards SET def_pt = ${q(g)} WHERE id = ${q(b.id)} AND (def_pt IS NULL OR def_pt = '');`);
     });
@@ -128,4 +133,4 @@ for (let i = 0; i < need.length; i += BATCH) {
   if (i % 400 === 0) console.error(`${i}/${need.length} (ok ${ok}, rejected ${rejected}, failed ${bad})`);
   await new Promise((res) => setTimeout(res, pause));
 }
-console.error(`done: ${ok} definitions, ${rejected} rejected as non-definitions, ${bad} failed → build/ptdef_fill.sql`);
+console.error(`done: ${ok} definitions, ${rejected} rejected, ${drifted} dropped as misaligned, ${bad} failed → build/ptdef_fill.sql`);

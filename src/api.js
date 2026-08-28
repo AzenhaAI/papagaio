@@ -681,7 +681,10 @@ export async function handleApi(request, env, path) {
     const glossMessages = [
       { role: 'system', content:
         `${task} ${senseRule}${style} ` +
-        `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.` },
+        (body?.keyed
+          ? `Answer strictly as JSON: {"glosses": [{"t": "<the term, copied exactly>", "g": "<your answer>"}, ...]} ` +
+            `with one object per term, in the same order.`
+          : `Answer strictly as JSON: {"glosses": ["...", ...]} in the same order.`) },
       { role: 'user', content: terms.map((x, i) =>
         `${i + 1}. ${x.t}${x.pos ? ` [${x.pos}]` : ''}${x.sense ? ` \u2014 ${x.sense}` : ''}`).join('\n') },
     ];
@@ -706,6 +709,16 @@ export async function handleApi(request, env, path) {
     }
     try {
       const out = JSON.parse(raw);
+      // keyed mode hands back the term alongside each answer so the caller can
+      // prove the two still line up. A batch of six can come back six long with
+      // the last two describing the previous word — the length matched, the
+      // meanings did not, and the wrong rows got written.
+      if (body?.keyed) {
+        const g = (out.glosses ?? []).slice(0, terms.length).map((x) => (x && typeof x === 'object'
+          ? { t: String(x.t ?? ''), g: String(x.g ?? '') }
+          : { t: '', g: String(x ?? '') }));
+        return json({ glosses: g });
+      }
       return json({ glosses: (out.glosses ?? []).map(String).slice(0, terms.length) });
     } catch {
       // Batch callers get a peek at what the model actually said: "bad model
