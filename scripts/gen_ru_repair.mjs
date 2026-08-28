@@ -81,7 +81,12 @@ let ok = 0, bad = 0, thin = 0, dryStreak = 0;
 // budget. Pace off the refusals rather than a fixed sleep.
 const PAUSE_MIN = 15000, PAUSE_MAX = 60000;
 let pause = PAUSE_MIN;
-const BATCH = 10;
+// Smaller than the expansion job's ten, and for a measurable reason: every entry
+// here also carries an English sense, so the same count of terms is a
+// noticeably heavier request against the 8000 tok/min window. At ten, a
+// measured run refused 280 of 445 Portuguese items — most of the wall clock
+// spent waiting rather than glossing.
+const BATCH = 6;
 
 // A batch must be homogeneous in source language: lexen: rows are English
 // headwords, the two Portuguese layers are not. Group first, then slice.
