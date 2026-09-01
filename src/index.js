@@ -166,6 +166,40 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  // The full product, from inside the chat. The bot is the door most people
+  // come through, and until now it never said there was a building behind it.
+  if (text.startsWith('/apps') || text.startsWith('/site')) {
+    await tg(env, 'sendMessage', {
+      chat_id: chat,
+      parse_mode: 'Markdown',
+      disable_web_page_preview: true,
+      text: '🦜 *PapaGaio everywhere*\n\n' +
+        'Same account across all of them — /link pairs a device and your deck follows.\n\n' +
+        'The website needs nothing installed and works on a phone too; the apps keep ' +
+        'your deck and its audio on the device, which is what you want on a levada.',
+      reply_markup: {
+        inline_keyboard: [
+          [
+            { text: '🌍 Website', url: 'https://azenha.ai/papagaio/' },
+            { text: '📱 App Store', url: 'https://apps.apple.com/app/id6802084974' },
+          ],
+          [
+            { text: '🤖 Android', url: 'https://azenha.ai/dl/PapaGaio.apk' },
+            { text: '💻 macOS', url: 'https://azenha.ai/dl/PapaGaio-mac.dmg' },
+            { text: '🪟 Windows', url: 'https://azenha.ai/dl/PapaGaio-windows.zip' },
+          ],
+          [
+            { text: '🧩 Chrome extension', url: 'https://azenha.ai/dl/PapaGaio-chrome.zip' },
+          ],
+          [
+            { text: '✨ What it does', url: 'https://azenha.ai/papagaio/features/' },
+          ],
+        ],
+      },
+    });
+    return;
+  }
+
   if (text.startsWith('/health')) {
     const result = await runHealthCheck(env);
     await tg(env, 'sendMessage', {
@@ -1363,6 +1397,7 @@ async function publishCommands(env) {
         { command: 'help',   description: '🦜 What I can do' },
         { command: 'tr',     description: '🔤 Translate a word or a phrase' },
         { command: 'news',   description: '📰 Today on the island, at your level' },
+        { command: 'apps',   description: '🌍 The site and the apps — every link' },
         { command: 'course', description: '🎓 The course — lessons with a goal' },
         { command: 'talk',   description: '🎭 Free practice with the AI coach' },
         { command: 'stop',   description: '🏁 End the dialog + error recap' },
