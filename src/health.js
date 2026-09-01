@@ -63,6 +63,25 @@ export async function runHealthCheck(env) {
     probe('App Store listing', 'https://itunes.apple.com/lookup?id=6802084974&country=us', {
       expectText: 'papagaio',
     }),
+    // The bot's own face. It disappeared once with nobody able to say when:
+    // Telegram falls back to its generic logo, which looks like a loading
+    // state rather than a missing file. The public page names the real avatar,
+    // so the fallback is visible from outside.
+    await (async () => {
+      try {
+        const r = await fetch('https://t.me/papagaio_ebot');
+        const html = await r.text();
+        const m = /<meta property="og:image" content="([^"]+)"/.exec(html);
+        const src = m?.[1] ?? '';
+        if (!src) return { name: 'bot avatar', ok: false, why: 'page has no image at all' };
+        if (src.includes('telegram.org/img/t_logo')) {
+          return { name: 'bot avatar', ok: false, why: 'missing — BotFather /setuserpic' };
+        }
+        return { name: 'bot avatar', ok: true };
+      } catch (e) {
+        return { name: 'bot avatar', ok: false, why: String(e.message || e).slice(0, 60) };
+      }
+    })(),
   ]);
 
   // The two that cost money, once a day rather than every quarter hour.
