@@ -18,6 +18,7 @@ import { conjugate } from './conjugate.js';
 import { VERBS, findVerb, fold } from './verbs.js';
 import { START_LEVELS, applyLevel } from './level.js';
 import { getBulletin } from './news.js';
+import { publishCommands } from './commands.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -772,6 +773,17 @@ export async function handleApi(request, env, path) {
       scenarios: scenarioList(course),
       levels: Object.entries(LEVELS).map(([key, l]) => ({ key, label: l.label })),
     });
+  }
+
+  // Republish the bot's command menu. Telegram caches it per client and we
+  // publish it on /start and once a night, so a command added at noon was
+  // invisible all afternoon to everyone who had already started the bot.
+  if (path === '/api/admin/commands' && request.method === 'POST') {
+    if (!env.BATCH_KEY || request.headers.get('x-batch-key') !== env.BATCH_KEY) {
+      return json({ error: 'not found' }, 404);
+    }
+    await publishCommands(env);
+    return json({ ok: true });
   }
 
   // Today's bulletin. Public on purpose — a reason to open the app should not
