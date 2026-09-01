@@ -11,6 +11,7 @@ import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
 import { START_LEVELS, applyLevel } from './level.js';
 import { buildBulletin, getBulletin } from './news.js';
+import { runHealthCheck, formatHealth } from './health.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -165,6 +166,15 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  if (text.startsWith('/health')) {
+    const result = await runHealthCheck(env);
+    await tg(env, 'sendMessage', {
+      chat_id: chat, parse_mode: 'Markdown', disable_web_page_preview: true,
+      text: formatHealth(result),
+    });
+    return;
+  }
+
   if (text.startsWith('/news')) {
     await sendBulletin(env, chat, 'b1');
     return;
@@ -202,8 +212,9 @@ async function handleUpdate(update, env) {
         '💾 /export — everything you have, as JSON. It is your data.\n' +
         '🌍 /lang — Portuguese, English or both. ⏸ /pause and /resume.\n' +
         '🗑 /delete — erase me from your life, permanently.\n\n' +
-        'Everything is free and there is nothing to buy.\n' +
-        'Also an app and a web version: azenha.ai/papagaio',
+        'Everything is free and there is nothing to buy.\n\n' +
+        '📱 On the App Store: apps.apple.com/app/id6802084974\n' +
+        'Android, Mac, Windows and the web: azenha.ai/papagaio',
     });
     return;
   }
@@ -1373,6 +1384,23 @@ async function publishCommands(env) {
 
 async function tick(env) {
   const nowDate = new Date();
+  // The morning self-check, before the day's first learner arrives. Silence
+  // means healthy: a message only when something is broken, plus a Monday
+  // report so that a monitor which itself died cannot pass for good news.
+  if (nowDate.getUTCHours() === 7 && nowDate.getUTCMinutes() < 5 && env.OWNER_CHAT) {
+    try {
+      const result = await runHealthCheck(env);
+      if (!result.ok || nowDate.getUTCDay() === 1) {
+        await tg(env, 'sendMessage', {
+          chat_id: env.OWNER_CHAT,
+          parse_mode: 'Markdown',
+          disable_web_page_preview: true,
+          text: formatHealth(result),
+        });
+      }
+    } catch { /* the check must never take the scheduler down with it */ }
+  }
+
   // The island's news, written for a learner, once a morning for everyone —
   // three model calls a day rather than one per reader who asks.
   if (nowDate.getUTCHours() === 6 && nowDate.getUTCMinutes() < 5) {
