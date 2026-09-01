@@ -346,7 +346,64 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 
     · Part of <a href="https://azenha.ai">azenha.ai</a>
   </footer>
-<!-- Install prompt — the reference copy, inserted before </body>.
+<!-- Install prompt — the reference copy, inserted before 
+<script is:inline>
+  // One audio element for the whole site, unlocked by the first tap.
+  //
+  // Every page used to do `new Audio(url).play()` after awaiting the network.
+  // On desktop Chrome that works; in Safari, and on every iPhone, the user
+  // gesture has expired by the time the fetch returns and play() is refused —
+  // silently, as a rejected promise nobody caught. That is the "sometimes it
+  // does not play" testers reported: it depended on the browser, not the word.
+  //
+  // Creating the element inside the gesture and only setting its source later
+  // keeps the permission the tap granted.
+  (function () {
+    var el = null;
+    function element() {
+      if (!el) el = new Audio();
+      return el;
+    }
+    // The first tap anywhere unlocks it, so even the first Listen has a
+    // primed element to hand.
+    addEventListener('pointerdown', function once() {
+      removeEventListener('pointerdown', once);
+      var a = element();
+      a.muted = true;
+      a.play().catch(function () {}).finally(function () {
+        a.pause();
+        a.muted = false;
+      });
+    }, { once: true });
+
+    window.pgPlayUrl = function (url) {
+      var a = element();
+      a.src = url;
+      return a.play().catch(function (e) {
+        console.warn('audio refused', e && e.name);
+      });
+    };
+
+    window.pgSpeak = async function (text, course) {
+      var a = element();
+      // Claim the element while the gesture is still fresh, then fill it.
+      a.play().catch(function () {});
+      try {
+        var r = await fetch('/api/tts', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ text: text, course: course || 'pt' }),
+        });
+        if (!r.ok) return;
+        a.src = URL.createObjectURL(await r.blob());
+        await a.play();
+      } catch (e) {
+        console.warn('audio refused', e && e.name);
+      }
+    };
+  })();
+</script>
+</body>.
      Source of truth: ~/Projects/_stores/ios-install-hint.html
 
      One banner, two behaviours, because the platforms differ:

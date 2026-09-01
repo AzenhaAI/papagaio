@@ -185,7 +185,7 @@ import Everywhere from '../components/Everywhere.astro';
           body: JSON.stringify({ text, course: 'pt' }),
         });
         if (!r.ok) throw new Error(r.status);
-        new Audio(URL.createObjectURL(await r.blob())).play();
+        pgPlayUrl(URL.createObjectURL(await r.blob()));
       } catch { $('status').textContent = 'audio failed'; }
       btn.textContent = was;
     }

@@ -191,7 +191,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           method: 'POST', headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ text, course }),
         });
-        if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+        if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
       };
     }
 
@@ -260,7 +260,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ text, course }),
       });
-      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+      if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
     }
 
     async function send(voiced = false) {

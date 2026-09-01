@@ -70,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <strong style="font-size:18px;">${c.term}</strong>
           ${c.gender ? `<span class="muted">(${c.gender})</span>` : ''}
           <span>— ${c.trans}</span>
-          ${c.audio ? `<button onclick="new Audio('${AUDIO}${c.audio}').play()"
+          ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${c.audio}')"
             style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>` : ''}
           ${c.entry ? `<button class="morebtn" data-i="${i}"
             style="background:none; border:1px solid #2a4433; border-radius:8px; color:var(--accent);
@@ -185,7 +185,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({ text: c.term, course: 'pt' }),
         });
-        if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+        if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
       };
     }
 

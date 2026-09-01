@@ -166,7 +166,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ text: b.dataset.t, course: 'pt' }),
           });
-          if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+          if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
         };
       });
       out.scrollIntoView({ behavior: 'smooth', block: 'start' });

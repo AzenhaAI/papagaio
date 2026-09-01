@@ -160,7 +160,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ text: current.lemma, course: 'pt' }),
       });
-      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+      if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
     };
 
     $('pop-add').onclick = async () => {

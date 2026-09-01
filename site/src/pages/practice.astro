@@ -164,7 +164,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       $('prompt').textContent = drill ? card.ex_t : card.term;
       $('hint').textContent = drill ? card.trans : (card.gender ? `(${card.gender})` : '');
       $('hear').style.display = card.audio ? '' : 'none';
-      $('hear').onclick = () => new Audio(AUDIO + card.audio).play();
+      $('hear').onclick = () => pgPlayUrl(AUDIO + card.audio);
 
       if (drill) {
         $('answer-zone').innerHTML =

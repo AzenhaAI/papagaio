@@ -70,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ text, course: 'pt' }),
       });
-      if (r.ok) new Audio(URL.createObjectURL(await r.blob())).play();
+      if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
     };
     document.getElementById('sq').addEventListener('input', () => {
       clearTimeout(stimer); stimer = setTimeout(ssearch, 350);
@@ -97,7 +97,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
             <strong style="font-size:17.5px;">${esc(c.term)}</strong>
             <span class="muted">— ${esc(c.trans)}</span>
-            ${c.audio ? `<button onclick="new Audio('${AUDIO}${esc(c.audio)}').play()"
+            ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${esc(c.audio)}')"
               style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
           </div>
           ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
@@ -117,7 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
               <strong style="font-size:17.5px;">${esc(c.term)}</strong>
               <span class="muted">— ${esc(c.trans)}</span>
-              ${c.audio ? `<button onclick="new Audio('${AUDIO}${esc(c.audio)}').play()"
+              ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${esc(c.audio)}')"
                 style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
             </div>
             ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
