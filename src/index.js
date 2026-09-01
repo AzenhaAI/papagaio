@@ -11,7 +11,7 @@ import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
 import { START_LEVELS, applyLevel } from './level.js';
 import { buildBulletin, getBulletin } from './news.js';
-import { runHealthCheck, formatHealth } from './health.js';
+import { runHealthCheck, formatHealth, runFastCheck, alertOnChange } from './health.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -1384,6 +1384,22 @@ async function publishCommands(env) {
 
 async function tick(env) {
   const nowDate = new Date();
+  // Every quarter of an hour, the cheap probes — and a message the moment
+  // something changes state. Waiting for tomorrow morning to learn that the
+  // site is down is not monitoring, it is a diary.
+  if (env.OWNER_CHAT && nowDate.getUTCMinutes() % 15 < 5) {
+    try {
+      const fast = await runFastCheck(env);
+      const message = await alertOnChange(env, fast);
+      if (message) {
+        await tg(env, 'sendMessage', {
+          chat_id: env.OWNER_CHAT, parse_mode: 'Markdown',
+          disable_web_page_preview: true, text: message,
+        });
+      }
+    } catch { /* never let the watchman stop the clock */ }
+  }
+
   // The morning self-check, before the day's first learner arrives. Silence
   // means healthy: a message only when something is broken, plus a Monday
   // report so that a monitor which itself died cannot pass for good news.
