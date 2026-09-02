@@ -117,6 +117,8 @@ export async function buildBulletin(env, { level = 'b1', helper = 'English', day
   };
   if (!record.text) throw new Error('empty bulletin');
 
+  // Storing it is an optimisation, not the point: a database that refuses the
+  // write must not throw away a bulletin the reader is waiting for.
   await env.DB.prepare(
     `INSERT INTO bulletins (day, level, course, text, words, sources, created_at)
      VALUES (?1, ?2, 'pt', ?3, ?4, ?5, ?6)
@@ -127,7 +129,7 @@ export async function buildBulletin(env, { level = 'b1', helper = 'English', day
     today, level, record.text,
     JSON.stringify(record.words), JSON.stringify(record.sources),
     new Date().toISOString()
-  ).run();
+  ).run().catch(() => {});
 
   return record;
 }
@@ -135,9 +137,11 @@ export async function buildBulletin(env, { level = 'b1', helper = 'English', day
 /** The stored bulletin, building it on the spot if the morning job has not. */
 export async function getBulletin(env, { level = 'b1', helper = 'English' } = {}) {
   const today = new Date().toISOString().slice(0, 10);
+  // Same on the way in: if the stored copy cannot be read, write a fresh one
+  // rather than telling the reader the news is broken.
   const row = await env.DB.prepare(
     `SELECT * FROM bulletins WHERE day = ?1 AND level = ?2 AND course = 'pt'`
-  ).bind(today, level).first();
+  ).bind(today, level).first().catch(() => null);
   if (row) {
     return {
       day: row.day,

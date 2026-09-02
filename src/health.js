@@ -116,12 +116,16 @@ export function formatHealth({ checks, bad }) {
 export async function runFastCheck(env) {
   const checks = [];
 
-  // The taught deck: a thousand cards or the loader has gone wrong.
+  // Existence, not census. Counting rows to prove a table is alive reads every
+  // row that matches — and the lexicon has 141,000 of them. Run four times an
+  // hour, that check alone spent the database's entire daily read budget and
+  // took the translator down with it: the monitor caused the outage it was
+  // built to catch.
   checks.push(await inside('deck', async () => {
     const r = await env.DB.prepare(
-      `SELECT COUNT(*) AS n FROM cards WHERE course = 'pt' AND owner IS NULL`
+      `SELECT 1 AS ok FROM cards WHERE id = 'pt0001' LIMIT 1`
     ).first();
-    if ((r?.n ?? 0) < 1000) throw new Error(`only ${r?.n ?? 0} cards`);
+    if (!r) throw new Error('the taught deck is empty');
   }));
 
   // The lexicon behind every lookup. Checked the way the search itself looks:
@@ -129,12 +133,8 @@ export async function runFastCheck(env) {
   // equality test against it never matches — which is how this probe cried
   // wolf the first morning it ran.
   checks.push(await inside('dictionary', async () => {
-    const size = await env.DB.prepare(
-      `SELECT COUNT(*) AS n FROM cards WHERE owner = 'lex'`
-    ).first();
-    if ((size?.n ?? 0) < 100000) throw new Error(`lexicon down to ${size?.n ?? 0} rows`);
     const hit = await env.DB.prepare(
-      `SELECT 1 AS ok FROM cards WHERE owner = 'lex' AND term = 'comboio' LIMIT 1`
+      `SELECT 1 AS ok FROM cards WHERE id = 'lex:comboio|noun' LIMIT 1`
     ).first();
     if (!hit) throw new Error('comboio missing from the lexicon');
   }));
@@ -146,6 +146,20 @@ export async function runFastCheck(env) {
       `SELECT length(text) AS n FROM bulletins WHERE day = ?1 LIMIT 1`
     ).bind(today).first();
     if (!r || (r.n ?? 0) < 200) throw new Error('no bulletin for today');
+  }));
+
+  // What real people just hit. A probe every fifteen minutes cannot see an
+  // outage between probes; the error ledger can, because it is written by the
+  // requests themselves.
+  checks.push(await inside('live errors', async () => {
+    // Bounded by the index and by LIMIT: this table is small, but a count with
+    // no ceiling is how the last one got out of hand.
+    const { results } = await env.DB.prepare(
+      `SELECT why FROM api_errors WHERE at > datetime('now', '-20 minutes') LIMIT 5`
+    ).all();
+    if ((results?.length ?? 0) >= 3) {
+      throw new Error(`${results.length}+ failed requests, e.g. ${String(results[0].why).slice(0, 60)}`);
+    }
   }));
 
   // And the site, which is somebody else's service and answers honestly.

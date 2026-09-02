@@ -39,12 +39,20 @@ const PUBLIC_DAILY_CAP = 500;
 async function underPublicCap(env, request) {
   const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
   const day = new Date().toISOString().slice(0, 10);
-  const row = await env.DB.prepare(
-    `INSERT INTO api_usage (day, ip, n) VALUES (?, ?, 1)
-     ON CONFLICT(day, ip) DO UPDATE SET n = n + 1
-     RETURNING n`
-  ).bind(day, ip).first();
-  return (row?.n ?? 0) <= PUBLIC_DAILY_CAP;
+  try {
+    const row = await env.DB.prepare(
+      `INSERT INTO api_usage (day, ip, n) VALUES (?, ?, 1)
+       ON CONFLICT(day, ip) DO UPDATE SET n = n + 1
+       RETURNING n`
+    ).bind(day, ip).first();
+    return (row?.n ?? 0) <= PUBLIC_DAILY_CAP;
+  } catch {
+    // The ledger that limits a free service must not be able to switch the
+    // service off. When the database refuses — its own daily quota spent, an
+    // outage, anything — the honest failure is to let people through: the cap
+    // exists to stop abuse, not to stop translation.
+    return true;
+  }
 }
 
 /**
@@ -142,6 +150,13 @@ export async function handleApi(request, env, path) {
       }
       return json(t);
     } catch (e) {
+      // Every failure a person actually hit, kept for fifteen minutes' worth
+      // of alerting. A synthetic probe once a day cannot see an outage that
+      // lasts an hour, which is how "it fails every time I translate" reached
+      // us from a user rather than from the monitor.
+      await env.DB.prepare(
+        `INSERT INTO api_errors (at, path, why) VALUES (?1, '/api/translate', ?2)`
+      ).bind(new Date().toISOString(), String(e.message ?? e).slice(0, 200)).run().catch(() => {});
       return json({ error: e.message }, 502);
     }
   }

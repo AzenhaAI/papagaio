@@ -170,7 +170,23 @@ export async function chat(env, messages, { json = false, model, noFallback = fa
     if (small !== primary) ({ r, j } = await call(small));
   }
 
+  // A provider's 500 is not an answer, it is weather. Retrying once costs a
+  // second; not retrying costs the user their translation and teaches them the
+  // app is unreliable — which is exactly the complaint we got.
+  if (r.status >= 500) {
+    await new Promise((done) => setTimeout(done, 700));
+    ({ r, j } = await call(primary));
+    if (r.status >= 500) {
+      const other = await pick(env, SMALL_PREFERENCE, null);
+      if (other !== primary) ({ r, j } = await call(other));
+    }
+  }
+
   if (r.status === 429) throw new Error('the translator is catching its breath — try again in a few seconds');
   if (!r.ok) throw new Error('groq: ' + JSON.stringify(j).slice(0, 200));
-  return j.choices[0].message.content;
+  const content = j?.choices?.[0]?.message?.content;
+  // An empty completion reaches the caller as a JSON parse failure three
+  // frames away, which is unreadable in a log and meaningless on a screen.
+  if (typeof content !== 'string') throw new Error('groq: empty completion');
+  return content;
 }
