@@ -1,3 +1,4 @@
+import { unitProgress } from './progress.js';
 // Everything the progress screens need, in one query pass.
 //
 // Deliberately no streaks: a missed day is not a failure state, and a grid of
@@ -11,11 +12,17 @@ const A2_VOCAB_TARGET = 1000;
 export async function buildStats(env, uid) {
   const nowIso = new Date().toISOString();
 
+  // The first three used to be counted here, per learner, per screen open —
+  // and pos='drill' has no index, so opening the stats tab scanned all 190k
+  // cards. They are the same three numbers for everybody and they move once a
+  // day, so they come from the parked row that /api/admin/recount fills.
+  const parked = await env.DB.prepare(
+    `SELECT v FROM stats WHERE k = 'counts'`
+  ).first().catch(() => null);
+  const shared = parked?.v ? JSON.parse(parked.v) : {};
+
   const totals = await env.DB.prepare(
     `SELECT
-       (SELECT COUNT(*) FROM cards WHERE course='pt' AND owner IS NULL AND pos IS NOT 'drill') AS pt_words,
-       (SELECT COUNT(*) FROM cards WHERE course='en' AND owner IS NULL) AS en_words,
-       (SELECT COUNT(*) FROM cards WHERE pos = 'drill') AS drills,
        (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1) AS seen,
        (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND reps > 0) AS learned,
        (SELECT COUNT(*) FROM user_cards WHERE user_id = ?1 AND due <= ?2) AS due_now,
@@ -43,13 +50,9 @@ export async function buildStats(env, uid) {
      GROUP BY date(created_at) ORDER BY day`
   ).bind(uid).all();
 
-  const { results: units } = await env.DB.prepare(
-    `SELECT c.unit, c.course, COUNT(*) AS total,
-       SUM(CASE WHEN uc.card_id IS NOT NULL THEN 1 ELSE 0 END) AS started,
-       SUM(CASE WHEN uc.reps > 0 THEN 1 ELSE 0 END) AS learned
-     FROM cards c LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
-     WHERE c.owner IS NULL GROUP BY c.unit, c.course`
-  ).bind(uid).all();
+  // Both courses, from the per-user rows rather than a join over every card.
+  const units = (await Promise.all(['pt', 'en'].map(async (course) =>
+    (await unitProgress(env, uid, course)).map((u) => ({ ...u, course }))))).flat();
 
   // Leeches: cards you keep failing. Anki suspends these; the least we can do
   // is name them, because they quietly eat the queue.
@@ -85,7 +88,12 @@ export async function buildStats(env, uid) {
   ciple.overall = parts.length ? Math.round(parts.reduce((a, b) => a + b, 0) / parts.length) : 0;
 
   return {
-    totals,
+    totals: {
+      pt_words: shared.pt_cards ?? null,
+      en_words: shared.en_cards ?? null,
+      drills: shared.pt_drills ?? null,
+      ...totals,
+    },
     forecast,
     by_exercise: byExercise.map((r) => ({ ...r, pct: pct(r.ok, r.n) })),
     daily: daily.map((r) => ({ ...r, pct: pct(r.ok, r.n) })),

@@ -1,6 +1,7 @@
 // PapaGaio — Telegram bot for learning pt-PT and English. Cloudflare Worker + D1.
 
 import { schedule } from './fsrs.js';
+import { unitProgress, randomDistractors } from './progress.js';
 import { synthesize } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
@@ -1656,14 +1657,10 @@ async function sendExercise(env, user, opts = {}) {
     options = correctIdx === 0 ? [card.term, card.note] : [card.note, card.term];
   } else {
     const optCol = exercise === 'listen_sent' ? 'ex_trans' : askTrans ? 'trans' : 'term';
-    const { results: distractors } = await env.DB.prepare(
-      `SELECT ${optCol} AS v FROM cards
-       WHERE course = ? AND id != ? AND owner IS NULL AND pos IS NOT 'drill'
-         AND ${optCol} IS NOT NULL
-       ORDER BY RANDOM() LIMIT 3`
-    ).bind(course, card.id).all();
-
-    options = distractors.map((d) => d.v);
+    // Three random picks off the deck index, not a shuffle of the whole deck:
+    // ORDER BY RANDOM() read 111,517 rows per card sent, and was 41% of
+    // everything the database did in a week.
+    options = await randomDistractors(env, course, card.id, optCol, 3);
     correctIdx = Math.floor(Math.random() * 4);
     options.splice(correctIdx, 0,
       exercise === 'listen_sent' ? card.ex_trans : askTrans ? card.trans : card.term);
@@ -1910,12 +1907,7 @@ async function expirePending(env, user) {
 
 /** Per-unit progress for a user: [{unit, total, started}] in course order. */
 async function unitStats(env, userId, course) {
-  const { results } = await env.DB.prepare(
-    `SELECT c.unit AS unit, COUNT(*) AS total,
-       SUM(CASE WHEN uc.card_id IS NOT NULL THEN 1 ELSE 0 END) AS started
-     FROM cards c LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
-     WHERE c.course = ?2 AND c.owner IS NULL GROUP BY c.unit`
-  ).bind(userId, course).all();
+  const results = await unitProgress(env, userId, course);
   const map = Object.fromEntries(results.map((s) => [s.unit, s]));
   return (UNIT_ORDER[course] ?? []).filter((u) => map[u.key]).map((u) => ({ ...u, ...map[u.key] }));
 }

@@ -16,6 +16,7 @@ import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
 import { VERBS, findVerb, fold } from './verbs.js';
+import { unitProgress } from './progress.js';
 import { START_LEVELS, applyLevel } from './level.js';
 import { getBulletin } from './news.js';
 import { publishCommands } from './commands.js';
@@ -1048,13 +1049,10 @@ export async function handleApi(request, env, path) {
 
   if (path === '/api/units' && request.method === 'GET') {
     const course = new URL(request.url).searchParams.get('course') ?? 'pt';
-    const { results } = await env.DB.prepare(
-      `SELECT c.unit AS unit, COUNT(*) AS total,
-         SUM(CASE WHEN uc.card_id IS NOT NULL THEN 1 ELSE 0 END) AS started,
-         SUM(CASE WHEN uc.reps > 0 THEN 1 ELSE 0 END) AS learned
-       FROM cards c LEFT JOIN user_cards uc ON uc.card_id = c.id AND uc.user_id = ?1
-       WHERE c.course = ?2 AND c.owner IS NULL GROUP BY c.unit`
-    ).bind(uid, course).all();
+    // Totals are the deck's shape and are kept in stats; the user's part
+    // reads only the user's rows. This was a join across every card in the
+    // course — 111,395 rows per open of the progress screen.
+    const results = await unitProgress(env, uid, course);
     return json({ course, units: results });
   }
 
