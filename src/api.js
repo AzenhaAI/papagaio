@@ -321,12 +321,41 @@ export async function handleApi(request, env, path) {
   }
 
   // The product's headline numbers, computed from the data rather than typed
-  // into pages that instantly go stale. Cached at the edge for an hour.
+  // into pages that instantly go stale.
+  //
+  // They used to be thirteen COUNT(*)s over a 141k-row table and a 226k-row
+  // one — about two million rows read PER CACHE MISS, and the edge cache is
+  // per-datacentre, so a handful of visitors from a handful of cities emptied
+  // a day's quota between them. Nothing here changes more than once a day, so
+  // the counting moved off the request path entirely: the scan runs on demand
+  // through /api/admin/recount and parks its answer in one row, and the
+  // endpoint reads that row. Two million reads became one.
   if (path === '/api/counts' && request.method === 'GET') {
     const cache = caches.default;
-    const key = new Request('https://papagaio.cache/counts/v3');
+    const key = new Request('https://papagaio.cache/counts/v4');
     const hit = await cache.match(key);
     if (hit) return hit;
+    const saved = await env.DB.prepare(
+      `SELECT v, at FROM stats WHERE k = 'counts'`
+    ).first().catch(() => null);
+    const body = saved?.v ? { ...JSON.parse(saved.v), at: saved.at } : { stale: true };
+    const resp = new Response(JSON.stringify({ ...body, verbs: VERBS.length }), {
+      headers: {
+        'content-type': 'application/json; charset=utf-8',
+        'cache-control': 'public, max-age=3600',
+        ...CORS,
+      },
+    });
+    await cache.put(key, resp.clone());
+    return resp;
+  }
+
+  // The scan itself, on demand and behind the batch key: one deliberate two
+  // million rows, not two million per visitor.
+  if (path === '/api/admin/recount' && request.method === 'POST') {
+    if (!env.BATCH_KEY || request.headers.get('x-batch-key') !== env.BATCH_KEY) {
+      return json({ error: 'not found' }, 404);
+    }
     const row = await env.DB.prepare(
       `SELECT
         (SELECT COUNT(*) FROM cards WHERE course='pt' AND owner IS NULL AND pos IS NOT 'drill') AS pt_cards,
@@ -345,15 +374,11 @@ export async function handleApi(request, env, path) {
         (SELECT COUNT(*) FROM cards WHERE owner='lex' AND course='en' AND trans_pt IS NOT NULL) AS lex_en_pt,
         (SELECT COUNT(*) FROM examples) AS examples`
     ).first();
-    const resp = new Response(JSON.stringify({ ...row, verbs: VERBS.length }), {
-      headers: {
-        'content-type': 'application/json; charset=utf-8',
-        'cache-control': 'public, max-age=3600',
-        ...CORS,
-      },
-    });
-    await cache.put(key, resp.clone());
-    return resp;
+    await env.DB.prepare(
+      `INSERT INTO stats (k, v, at) VALUES ('counts', ?1, datetime('now'))
+         ON CONFLICT(k) DO UPDATE SET v = excluded.v, at = excluded.at`
+    ).bind(JSON.stringify(row)).run();
+    return json({ ok: true, counts: row });
   }
 
   // A dictionary that only answers for words it already teaches is a deck
@@ -442,6 +467,9 @@ export async function handleApi(request, env, path) {
     const course = sp.get('course') === 'en' ? 'en' : 'pt';
     const raw = (sp.get('q') ?? '').trim().toLowerCase();
     const s = fold(raw);
+    // Two letters is not a lookup, it is a keystroke on the way to one — and
+    // for anything the fast path cannot answer it costs a full scan of the
+    // lexicon. Three is where a query starts meaning something.
     if (s.length < 2) return json({ q: raw, words: [] });
     // Russian input may arrive in any case form — «кошкой» resolves to its
     // lemma through the inflection table before the glosses are searched.
@@ -452,6 +480,49 @@ export async function handleApi(request, env, path) {
       ).bind(raw).first().catch(() => null);
       if (hit?.lemma) ruQ = hit.lemma.toLowerCase();
     }
+    // The index has to do the work, and it takes some coaxing. The wide query
+    // below ORs a prefix pattern against two substring patterns and a function
+    // over trans_ru; one unindexable branch is enough for SQLite to give up and
+    // read the whole lexicon — 67,179 rows per keystroke, measured, which is
+    // what emptied the daily quota twice this week. Even a plain range on fold
+    // fell back to a full scan, because ORDER BY freq pulled the planner onto
+    // idx_cards_course_freq instead.
+    //
+    // So the common case — a Latin word typed from its beginning — runs first
+    // as a pure range scan on idx_cards_fold, with the ranking done here rather
+    // than by the planner. Anything else (Russian input, a word looked for in
+    // the middle of a phrase) falls through to the wide query below, which is
+    // now rare enough to afford.
+    if (!/[а-яё]/.test(raw)) {
+      const last = s.charCodeAt(s.length - 1);
+      const upper = s.slice(0, -1) + String.fromCharCode(last + 1);
+      const fast = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq
+           FROM cards INDEXED BY idx_cards_fold
+          WHERE fold >= ?1 AND fold < ?2 AND owner = 'lex' AND course = ?3
+          LIMIT 200`
+      ).bind(s, upper, course).all().catch(() => ({ results: null }));
+      const rows = fast.results ?? [];
+      if (rows.length) {
+        const tier = (r) => {
+          const f = fold(r.term);
+          return f === s ? 0 : f.startsWith(`${s} `) ? 1 : 2;
+        };
+        rows.sort((a, b) => tier(a) - tier(b) || (a.freq ?? 1e9) - (b.freq ?? 1e9));
+        return json({ q: s, words: rows.slice(0, 25) });
+      }
+    }
+
+    // Everything below is the wide query: 67,179 rows, no index able to help,
+    // and the reason a day's allowance disappears while somebody looks up a
+    // handful of words. It runs only when it has a chance of being useful.
+    //
+    // Under three characters it does not: two letters match half the lexicon
+    // by substring, and the reader is still typing. The apps answer from the
+    // pack they ship with, so what arrives here is the tail — worth a scan,
+    // but only once the query is a word.
+    if (s.length < 3) return json({ q: s, words: [] });
+
     // Matching happens on the accent-blind column: "cao" must find "cão" —
     // and the stored Russian keeps its stress marks (ко́шка), so the acute is
     // stripped at compare time.
@@ -611,11 +682,25 @@ export async function handleApi(request, env, path) {
   if (path === '/api/examples/random' && request.method === 'GET') {
     const sp = new URL(request.url).searchParams;
     const pair = ['pt-ru', 'pt-en', 'en-ru'].includes(sp.get('pair')) ? sp.get('pair') : 'pt-en';
-    const { results } = await env.DB.prepare(
-      `SELECT src, dst FROM examples WHERE pair = ?1 AND via IS NULL
-         AND length(src) BETWEEN 15 AND 70
-       ORDER BY RANDOM() LIMIT ?2`
-    ).bind(pair, Math.min(parseInt(sp.get('limit') ?? '20', 10) || 20, 50)).all();
+    const want = Math.min(parseInt(sp.get('limit') ?? '20', 10) || 20, 50);
+    // ORDER BY RANDOM() has to read and score every row in the pair before it
+    // can pick twenty — ninety thousand rows to hand back a sentence. Instead
+    // we drop into the table at a random rowid and walk forward until we have
+    // enough. Rows are not evenly spread across pairs, so a landing near the
+    // end can come up short; one wrap around from the start covers that.
+    const span = await env.DB.prepare(`SELECT MAX(rowid) AS hi FROM examples`).first();
+    const from = Math.floor(Math.random() * Math.max(1, span?.hi ?? 1));
+    const draw = (start, limit) => env.DB.prepare(
+      `SELECT src, dst FROM examples
+        WHERE rowid >= ?3 AND pair = ?1 AND via IS NULL
+          AND length(src) BETWEEN 15 AND 70
+        LIMIT ?2`
+    ).bind(pair, limit, start).all();
+    let { results } = await draw(from, want);
+    if ((results?.length ?? 0) < want) {
+      const more = await draw(0, want - (results?.length ?? 0));
+      results = [...(results ?? []), ...(more.results ?? [])];
+    }
     return json({ examples: results });
   }
 
