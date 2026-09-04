@@ -192,16 +192,34 @@ export async function handleApi(request, env, path) {
     }
   }
 
+  // The shared deck: the same rows for everybody, changing when content is
+  // added rather than when someone opens the app. It was neither indexed nor
+  // cached, and measured at 81,295 rows read to return 2,000 — sixty-one
+  // syncs and a day's free allowance was gone. Two installs and a screenshot
+  // run could do that between them, which is what took the coach and the
+  // translator down with it this week.
+  //
+  // The index makes one sync cost the rows it actually returns. The cache
+  // means most syncs cost nothing at all: the answer is per-datacentre and
+  // holds for an hour, and /api/admin/recount is where content changes are
+  // announced when they cannot wait.
   if (path === '/api/deck' && request.method === 'GET') {
     const url = new URL(request.url);
     const course = url.searchParams.get('course') ?? 'pt';
     const limit = Math.min(parseInt(url.searchParams.get('limit') ?? '100', 10) || 100, 2000);
+    const cache = caches.default;
+    const key = new Request(`https://papagaio.cache/deck/v1/${course}/${limit}`);
+    const hit = await cache.match(key);
+    if (hit) return hit;
     const { results } = await env.DB.prepare(
       `SELECT id, course, term, trans, trans_ru, trans_pt, pos, gender, note, ex_t, ex_trans, tags, freq, audio, unit, entry
        FROM cards WHERE course = ? AND owner IS NULL AND pos IS NOT 'drill'
        ORDER BY freq LIMIT ?`
     ).bind(course, limit).all();
-    return json({ course, count: results.length, cards: results });
+    const res = json({ course, count: results.length, cards: results });
+    res.headers.set('cache-control', 'public, max-age=3600');
+    await cache.put(key, res.clone());
+    return res;
   }
 
   if (path.startsWith('/api/card/') && request.method === 'GET') {
