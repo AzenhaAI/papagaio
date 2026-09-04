@@ -80,7 +80,7 @@ export default {
     // proxied so the app never holds a URL pointing at a personal account.
     if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/packs/') ||
         url.pathname.startsWith('/dl/')) {
-      return handleApi(request, env, url.pathname);
+      return handleApi(request, env, url.pathname).catch((e) => quotaAware(e, env));
     }
     return new Response('PapaGaio 🦜');
   },
@@ -91,6 +91,42 @@ export default {
 };
 
 // ---------- Telegram ----------
+
+/**
+ * The one failure that takes the whole product down at once, named for what
+ * it is. D1's daily read allowance ran out three days running this week, and
+ * every time the product learned it from a user: the coach said HTTP 500, the
+ * translator said nothing was found, and the monitor — which checks by
+ * primary key precisely so as not to spend the allowance — saw a healthy
+ * database. So the exhaustion itself is the alert, sent once per UTC day.
+ * No Cloudflare API token is needed: the error text is the signal.
+ */
+async function quotaAware(e, env) {
+  const msg = String(e?.message ?? e);
+  if (!/row read limit/i.test(msg)) throw e;
+  const today = new Date().toISOString().slice(0, 10);
+  try {
+    const last = await env.DB.prepare(`SELECT v FROM stats WHERE k = 'quota_alert'`).first();
+    if (last?.v !== today && env.OWNER_CHAT) {
+      await env.DB.prepare(
+        `INSERT INTO stats (k, v, at) VALUES ('quota_alert', ?1, datetime('now'))
+           ON CONFLICT(k) DO UPDATE SET v = excluded.v, at = excluded.at`
+      ).bind(today).run();
+      await tg(env, 'sendMessage', {
+        chat_id: env.OWNER_CHAT, parse_mode: 'Markdown',
+        text: `⚠️ *D1 read allowance exhausted* — ${today}\n` +
+          'Coach, deck, progress and lexicon search are failing until 00:00 UTC. ' +
+          'Check `wrangler d1 insights papagaio --sort-by=reads` for what spent it.',
+      });
+    }
+  } catch (_) {
+    // Reads are what ran out; the alert must not depend on one succeeding.
+  }
+  return new Response(JSON.stringify({
+    error: 'quota',
+    message: 'The free database allowance is used up for today; back at 00:00 UTC.',
+  }), { status: 503, headers: { 'content-type': 'application/json' } });
+}
 
 async function tg(env, method, payload) {
   const res = await fetch(`https://api.telegram.org/bot${env.TG_TOKEN}/${method}`, {
