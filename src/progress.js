@@ -14,14 +14,30 @@ export async function unitTotals(env, course) {
   const key = `units_${course}`;
   const saved = await env.DB.prepare(`SELECT v, at FROM stats WHERE k = ?1`)
     .bind(key).first().catch(() => null);
-  if (saved?.at && Date.now() - Date.parse(saved.at + 'Z') < 86_400_000) {
-    return JSON.parse(saved.v);
+  const age = saved?.at ? Date.now() - Date.parse(saved.at.replace(' ', 'T') + 'Z') : Infinity;
+  if (saved?.v && age < 86_400_000) return JSON.parse(saved.v);
+
+  // The count is 32,425 rows, which is fine once a day and ruinous in a loop.
+  // On the day the read allowance ran out it became exactly that loop: the
+  // count failed, nothing was stored, and the next request tried again — the
+  // recovery competing with itself for what was left. So a failure is recorded
+  // like a success, and the stale answer is served until the hour is up.
+  let totals;
+  try {
+    const { results } = await env.DB.prepare(
+      `SELECT unit, COUNT(*) AS total FROM cards
+        WHERE course = ?1 AND owner IS NULL GROUP BY unit`
+    ).bind(course).all();
+    totals = Object.fromEntries(results.map((r) => [r.unit, r.total]));
+  } catch (e) {
+    if (saved?.v) {
+      await env.DB.prepare(
+        `UPDATE stats SET at = datetime('now', '-23 hours') WHERE k = ?1`
+      ).bind(key).run().catch(() => {});
+      return JSON.parse(saved.v);
+    }
+    throw e;
   }
-  const { results } = await env.DB.prepare(
-    `SELECT unit, COUNT(*) AS total FROM cards
-      WHERE course = ?1 AND owner IS NULL GROUP BY unit`
-  ).bind(course).all();
-  const totals = Object.fromEntries(results.map((r) => [r.unit, r.total]));
   await env.DB.prepare(
     `INSERT INTO stats (k, v, at) VALUES (?1, ?2, datetime('now'))
        ON CONFLICT(k) DO UPDATE SET v = excluded.v, at = excluded.at`
