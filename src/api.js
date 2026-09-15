@@ -411,10 +411,20 @@ export async function handleApi(request, env, path) {
     // The deck first: its cards are hand-checked and carry audio. Matching runs
     // on the folded column, so cafe, café and cafe' are the same question.
     const fq = fold(q.trim());
+    // A single word looked up by name is the common case, and it is an exact
+    // match on the folded column — one indexed read. The five-pattern scan
+    // below is for the rest, and it read the deck end to end for every
+    // article; measured at two to three seconds on the Mac, which the
+    // reader experienced as the dictionary not working.
+    const exact = await env.DB.prepare(
+      `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
+         AND (fold = ?1 OR fold LIKE ?2)
+       ORDER BY freq LIMIT 1`
+    ).bind(fq, `${fq} %`).first();
     // Whole words beat prefixes: "cat" is gato (trans word "cat"), then only
     // catorze (prefix); and never estar via "loCATed". LIKE has no \b, so the
     // tiers are spelled out by hand.
-    const hit = await env.DB.prepare(
+    const hit = exact ?? await env.DB.prepare(
       `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
          AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4 OR fold LIKE ?5 OR fold LIKE ?6)
        ORDER BY CASE
@@ -449,7 +459,11 @@ export async function handleApi(request, env, path) {
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
     // like "gato" costs nothing and answers instantly — the model is for the
     // tail this misses, not for the middle of the language.
-    const lex = await env.DB.prepare(
+    const lexExact = await env.DB.prepare(
+      `SELECT * FROM cards WHERE owner = 'lex' AND (fold = ?1 OR fold LIKE ?2)
+       ORDER BY CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
+    ).bind(fq, `${fq} %`).first();
+    const lex = lexExact ?? await env.DB.prepare(
       `SELECT * FROM cards WHERE owner = 'lex' AND (lower(term) = ?1 OR fold LIKE ?2 OR fold LIKE ?4 OR lower(trans_ru) LIKE ?3)
        ORDER BY CASE WHEN lower(term) = ?1 THEN 0 ELSE 1 END,
                 CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
