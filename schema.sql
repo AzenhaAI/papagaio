@@ -139,3 +139,23 @@ CREATE TABLE IF NOT EXISTS mistakes (
   last_at  TEXT,
   PRIMARY KEY (user_id, wrong, right)
 );
+
+-- The headline numbers, parked. Counting them live meant thirteen COUNT(*)s
+-- over 141k + 226k rows on every edge-cache miss — about two million rows read
+-- to render a number that changes once a day, and the fastest way there is to
+-- empty D1's daily quota. /api/admin/recount fills this in; /api/counts reads
+-- this one row and nothing else.
+CREATE TABLE IF NOT EXISTS stats (
+  k  TEXT PRIMARY KEY,
+  v  TEXT NOT NULL,
+  at TEXT
+);
+
+-- The taught deck is a couple of thousand cards inside a table of 190k, and
+-- owner IS NULL was unindexed, so every /api/lookup read the whole table to
+-- find them. IS NULL seeks fine once it leads an index.
+CREATE INDEX IF NOT EXISTS idx_cards_owner_fold ON cards(owner, fold);
+
+-- Same story for the sentence bank: pair = 'pt-en' now seeks instead of
+-- scanning all 226k example rows on every lookup.
+CREATE INDEX IF NOT EXISTS idx_examples_pair_fold ON examples(pair, fold);
