@@ -239,8 +239,11 @@ import Everywhere from '../components/Everywhere.astro';
   // The headline numbers come from the data, not from prose that goes stale.
   fetch('/api/counts').then((r) => r.json()).then((c) => {
     const fmt = (n) => n.toLocaleString('en-GB');
-    const set = (k, v) => document.querySelectorAll(`[data-count="${k}"]`)
-      .forEach((el) => { el.textContent = fmt(v); });
+    // A number we could not read is left as the page shipped it. Printing
+    // "NaN" where a count belongs looks far more broken than a slightly old
+    // figure does.
+    const set = (k, v) => { if (Number.isFinite(v)) document.querySelectorAll(`[data-count="${k}"]`)
+      .forEach((el) => { el.textContent = fmt(v); }); };
     set('deck', c.pt_cards + c.pt_drills);
     set('frases', c.frases);
     set('lexicon', c.lexicon);

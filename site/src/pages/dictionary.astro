@@ -408,7 +408,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     renderHist();
     fetch('/api/counts').then((r) => r.json())
       .then((c) => {
-        document.getElementById('lexcount').textContent = c.lexicon.toLocaleString('en-GB');
+        if (Number.isFinite(c.lexicon)) {
+          document.getElementById('lexcount').textContent = c.lexicon.toLocaleString('en-GB');
+        }
         if (c.lex_pt_en) {
           const fmt = (n) => n.toLocaleString('en-GB');
           const chip = (label, n) =>
