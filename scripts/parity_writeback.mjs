@@ -107,7 +107,16 @@ for (const c of changes) {
 }
 
 if (dry) { console.log(stmts.join('\n')); process.exit(0); }
-for (let i = 0; i < stmts.length; i += 80) run(stmts.slice(i, i + 80).join('\n'));
+// One wrangler call per ~90 KB of SQL: the whole batch rides in a single
+// argv string, which Linux caps at 128 KiB.
+for (let i = 0, chunk = [], size = 0; i <= stmts.length; i++) {
+  const st = stmts[i];
+  if (i === stmts.length || size + Buffer.byteLength(st) > 90_000) {
+    if (chunk.length) run(chunk.join('\n'));
+    chunk = []; size = 0;
+  }
+  if (st) { chunk.push(st); size += Buffer.byteLength(st) + 1; }
+}
 const landed = run(`SELECT col, COUNT(*) n FROM gloss_history WHERE run = ${q(tag)} GROUP BY col`);
 console.error(`run ${tag}: ${changes.length} changes →`, Object.fromEntries(landed.map((r) => [r.col, r.n])),
   `rows read ${rowsRead}, written ${rowsWritten}`);

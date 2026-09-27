@@ -23,6 +23,11 @@ Rows sharing a term but differing in `pos` are DIFFERENT entries: gloss only thi
 7. Abbreviations: gloss what the abbreviation stands for / means, not a guess.
 8. Proper nouns: give the standard equivalent name.
 
+9. **The three layers agree.** en, ru and pt describe the same entry: every sense in one layer must be
+   a sense of this headword that the other layers also cover (or clearly could). A layer glossing a
+   different word or a different sense set than the other two is wrong — e.g. `AAA` with en
+   "anti-aircraft artillery; Alcoholics Anonymous" and ru «высший рейтинг» fails on ru.
+
 ## Layer-specific
 - **ru**: plain Russian, NO stress marks (strip ◌́ and ё is fine). Lowercase unless a proper noun.
   1–4 senses, each 1–3 words (+ optional short parenthetical). Keep under ~120 characters.
