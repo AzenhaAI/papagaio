@@ -3,35 +3,52 @@
 Brief for a Claude Code cloud session on `AzenhaAI/papagaio` (and, for part 4,
 `AzenhaAI/papagaio-app`). Written 2026-09-27 from measurements, not guesses.
 
-## Why
+## Why — measured 2026-09-27
 
-The app's bundled dictionary (`papagaio-app/assets/packs/pt.json.gz`,
-101,509 entries, built 2026-09-03) has an English gloss on 63% of entries and a
-Russian one on **13%**. Of the 5,000 most frequent words, 2,175 have no Russian.
-The server already knows far more: 13 of 13 sampled frequent words that lack
-Russian in the pack came back from `/api/lookup` with a Russian gloss. The
-nightly gloss runs write to D1; nothing carries them into the pack.
+Portuguese headwords live in two D1 layers: `lex:` (63,654, from en-wiktionary;
+`trans` is English) and `lexpt:` (46,479, from pt-wiktionary; `trans` is a
+Portuguese definition). The app's bundled pack merges them into 101,509
+headwords.
 
-Consequences today: offline Russian→Portuguese search only reaches ~13.6k words,
-and "meanings in RU" falls back to English for most entries.
+| layer | in D1 | in the bundled pack (2026-09-03) |
+|---|---|---|
+| Russian gloss | **100%** of both layers (110,133) | **13%** (13,598) |
+| English gloss | `lex:` only — 37,855 headwords have none | 63% |
+| Portuguese definition | `lexpt:` only — 33,267 headwords have none | 67% |
 
-The Russian layer also has quality defects that must not be shipped wider:
+So Russian is a *quality and export* problem, not a quantity one: the nightly
+runs filled D1 and nothing carried it into the pack. English and the
+Portuguese definition are real gaps. Of the top 20,000 by rank, 4,163 lack
+English and 3,437 lack a Portuguese definition.
+
+The Russian layer was largely machine-written by cheap models and shows it:
 
 | word | Russian now | problem |
 |---|---|---|
+| bricolage | хобби | means DIY / small repairs by hand |
 | forçado | ви́лы | that is *forcado*; *forçado* = вынужденный |
 | monitor (deck) | следить за кем-либо | verb gloss on a noun |
 | totalmente | полностью; полностью согласен; полностью уверен | padding |
 | choque | удар; внезапный и резкий | adjective mixed into a noun |
 
-## Goal
+## Goal: three mirrored layers
 
-Russian coverage and quality level with Portuguese and English, in the pack and
-on the server, for all three directions (PT→RU, RU→PT, EN↔RU where the English
-lexicon has it).
+Every Portuguese headword carries an English gloss, a Russian gloss and a
+Portuguese definition, each passing the quality gate — the three meaning
+languages the app offers, mirrored.
 
-Targets: RU gloss on ≥ 95% of the top 20,000 by rank and ≥ 60% of the whole
-pack; every RU gloss passes the quality gate below.
+## Phases, in this order (stop and report after each)
+
+0. **Pilot.** 500 headwords from the top 20k: fill whatever is missing, gate
+   all three layers. Report time taken and the cloud-credit spent, and
+   extrapolate to each phase below before going on.
+1. **Export and pack from D1** (part 1 below). This alone lifts offline Russian
+   from 13% to ~100% of headwords.
+2. **Gate the top 20,000** in all three layers; rewrite what fails.
+3. **Fill English** for the 37,855 headwords without it, most frequent first.
+4. **Fill the Portuguese definition** for the 33,267 without it.
+5. **Gate the long tail** (rank > 20,000), as far as the credit allows;
+   whatever remains goes to the nightly cron lines with the same gate.
 
 ## Constraints — read before touching anything
 
@@ -63,9 +80,10 @@ pack; every RU gloss passes the quality gate below.
    `pt.json.gz` / `en.json.gz` / `ru_forms.json.gz` shapes the app reads (see
    `papagaio-app/lib/data/offline_dict.dart`, class `_Row`: `t p g r e ru pt d`),
    plus `manifest.json`. Report coverage per layer and per rank band.
-2. **Fill and fix Russian.** For entries missing RU (by rank, most frequent
-   first) generate candidates; run the gate over new *and* existing RU glosses
-   in the top 20k; write passing ones back to D1 with history. Also the reverse
+2. **Fill and fix all three layers** per the phases above. Write passing
+   glosses back to D1 with history. English goes to `trans` on `lex:` rows and
+   to a new `trans_en` column on `lexpt:` rows; the Portuguese definition to
+   `trans_pt`. Also the reverse
    index RU→PT: every RU gloss word should find its Portuguese headword.
 3. **Publish.** Upload the packs as a new release `packs-v2` on
    `AzenhaAI/papagaio` if `gh` is authorised here; if not, commit them to a
