@@ -71,5 +71,5 @@ happen: `node scripts/export_packs_d1.mjs --fresh && node scripts/clean_ru_d1.mj
 Every change is in `gloss_history` with its old value. Undo a whole run with
 `node scripts/parity_writeback.mjs --rollback <run>`; the runs are
 `parity-pilot-2026-09-27`, `parity-top-0-2000`, `parity-lean-2k-10k`,
-`parity-ru-redo-4`, `parity-ru-redo-1`, `parity-lean-10k-20k` and
+`parity-ru-redo-4`, `parity-ru-redo-1`, `parity-lean-10k-20k`, `parity-fill-top20k` and
 `ru-mechanical-2026-09`.
