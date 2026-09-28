@@ -124,3 +124,12 @@ file today, which works and is weaker than it should be. Signing with the
 development identity (team ARY46X758B) and adding the keychain-access-groups
 entitlement puts it back where it belongs, and is also the step a notarised
 download would need anyway.
+
+## Benchmark cheaper glossing models against the Sonnet gate
+
+Run DeepSeek, Kimi K2 and Llama 3.3 70B through OpenRouter on the same 200
+single-word lexical glosses, and compare each model's pass rate and cost per
+1,000 words against the Sonnet gate we use today. The question is whether any
+of them clears the quality bar at a fraction of the cost.
+
+Key lives in `.openrouter_key` (gitignored).

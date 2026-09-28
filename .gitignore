@@ -9,3 +9,4 @@ build/
 audio/
 .cache/
 .batch_key
+.openrouter_key
