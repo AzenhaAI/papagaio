@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "updated": "2026-09-28",
+  "source": "D1",
+  "packs": {
+    "pt": {
+      "rows": 110133,
+      "bytes": 6108872
+    },
+    "en": {
+      "rows": 31424,
+      "bytes": 2774007
+    },
+    "ru_forms": {
+      "rows": 464478,
+      "bytes": 2043793
+    }
+  }
+}
