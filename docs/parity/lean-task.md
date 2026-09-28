@@ -10,3 +10,5 @@ Input rows: {id, t (headword), p (part of speech), en, pt, ru}.
 Output: a JSON array with ONE object per CHANGED row only: {"id": "...", "en"?: "...", "ru"?: "...", "pt"?: "..."} — include only the fields you change, each as the full new value. Unchanged rows are omitted.
 Work in chunks of ~300 rows (e.g. read with node, slice, write partial outputs, then merge) so no single write is huge. Write the final merged array to the output path, then validate that it parses and every id exists in the input.
 Reply with only: rows read, rows changed, and changed counts per layer.
+
+IMPORTANT: in earlier shards roughly HALF of all `ru` values turned out to be wrong (wrong word, wrong part of speech, padding, a gloss that belongs to a neighbouring headword, a bare ";"). Look at EVERY row's `ru` individually against t/p/en/pt — do not skim or rely only on automated pattern scans. Use a uniquely named scratch subdirectory for intermediate files (other agents run in parallel).
