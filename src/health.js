@@ -60,9 +60,7 @@ export async function runHealthCheck(env) {
     probe('download: macOS', `${SITE}/dl/PapaGaio-mac.dmg`, { minBytes: 15_000_000 }),
     probe('download: Windows', `${SITE}/dl/PapaGaio-windows.zip`, { minBytes: 8_000_000 }),
     probe('download: Chrome', `${SITE}/dl/PapaGaio-chrome.zip`, { minBytes: 10_000 }),
-    probe('App Store listing', 'https://itunes.apple.com/lookup?id=6802084974&country=us', {
-      expectText: 'papagaio',
-    }),
+    appStore(),
     // The bot's own face. It disappeared once with nobody able to say when:
     // Telegram falls back to its generic logo, which looks like a loading
     // state rather than a missing file. The public page names the real avatar,
@@ -103,12 +101,33 @@ export async function runHealthCheck(env) {
   return { checks, bad, ok: bad.length === 0 };
 }
 
+/**
+ * The App Store listing. Apple answers 403 to Cloudflare's addresses while the
+ * same lookup from anywhere else returns the app, so a 403 or 429 says who is
+ * asking, not whether the listing is up: it is reported as not checked rather
+ * than as broken. Any other failure still counts.
+ */
+async function appStore() {
+  const name = 'App Store listing';
+  const r = await probe(name, 'https://itunes.apple.com/lookup?id=6802084974&country=us', {
+    expectText: 'papagaio',
+  });
+  if (!r.ok && /HTTP (403|429)/.test(r.why)) {
+    return { name, ok: true, unchecked: `Apple refused the probe (${r.why})` };
+  }
+  return r;
+}
+
 /** Formats the report the way it is worth reading at seven in the morning. */
 export function formatHealth({ checks, bad }) {
-  if (!bad.length) return `✅ All ${checks.length} checks passed.`;
+  const unchecked = checks.filter((c) => c.unchecked);
+  const note = unchecked.length
+    ? '\n_not checked: ' + unchecked.map((c) => `${c.name} — ${c.unchecked}`).join('; ') + '_'
+    : '';
+  if (!bad.length) return `✅ All ${checks.length - unchecked.length} checks passed.${note}`;
   return (
     `⚠️ *${bad.length} of ${checks.length} checks failed*\n\n` +
-    bad.map((c) => `• ${c.name} — ${c.why}`).join('\n')
+    bad.map((c) => `• ${c.name} — ${c.why}`).join('\n') + note
   );
 }
 
@@ -139,12 +158,17 @@ export async function runFastCheck(env) {
     if (!hit) throw new Error('comboio missing from the lexicon');
   }));
 
-  // Today's bulletin, which the morning job should have written.
+  // Today's bulletin, which the morning job writes in the 06:00 UTC slot.
+  // Until 07:00 UTC yesterday's still counts: asking for today's at midnight
+  // raised "broken" every night and "working again" every morning.
   checks.push(await inside('news bulletin', async () => {
-    const today = new Date().toISOString().slice(0, 10);
+    const now = new Date();
+    const today = now.toISOString().slice(0, 10);
+    const yesterday = new Date(now - 86400000).toISOString().slice(0, 10);
+    const day = now.getUTCHours() < 7 ? yesterday : today;
     const r = await env.DB.prepare(
-      `SELECT length(text) AS n FROM bulletins WHERE day = ?1 LIMIT 1`
-    ).bind(today).first();
+      `SELECT length(text) AS n FROM bulletins WHERE day >= ?1 ORDER BY day DESC LIMIT 1`
+    ).bind(day).first();
     if (!r || (r.n ?? 0) < 200) throw new Error('no bulletin for today');
   }));
 
