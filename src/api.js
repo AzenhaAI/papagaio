@@ -688,13 +688,13 @@ export async function handleApi(request, env, path) {
       return json({ error: 'not found' }, 404);
     }
     const cache = caches.default;
-    const key = new Request(`https://papagaio.cache/packs/v1/${name}`);
+    const key = new Request(`https://papagaio.cache/packs/v2/${name}`);
     const hit = await cache.match(key);
     if (hit) return hit;
 
     const origin =
       // Same rule as /dl/: origin, not a link. Do not rewrite the host.
-      `https://github.com/Azenhaai/papagaio/releases/download/packs-v1/${name}`;
+      `https://github.com/Azenhaai/papagaio/releases/download/packs-v2/${name}`;
     const upstream = await fetch(origin, { redirect: 'follow' });
     if (!upstream.ok) return json({ error: 'pack unavailable' }, 502);
     const resp = new Response(upstream.body, {
