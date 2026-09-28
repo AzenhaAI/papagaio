@@ -107,17 +107,14 @@ async function quotaAware(e, env) {
   const today = new Date().toISOString().slice(0, 10);
   try {
     const last = await env.DB.prepare(`SELECT v FROM stats WHERE k = 'quota_alert'`).first();
-    if (last?.v !== today && env.OWNER_CHAT) {
+    if (last?.v !== today && env.BRIEF_BOT) {
       await env.DB.prepare(
         `INSERT INTO stats (k, v, at) VALUES ('quota_alert', ?1, datetime('now'))
            ON CONFLICT(k) DO UPDATE SET v = excluded.v, at = excluded.at`
       ).bind(today).run();
-      await tg(env, 'sendMessage', {
-        chat_id: env.OWNER_CHAT, parse_mode: 'Markdown',
-        text: `⚠️ *D1 read allowance exhausted* — ${today}\n` +
-          'Coach, deck, progress and lexicon search are failing until 00:00 UTC. ' +
-          'Check `wrangler d1 insights papagaio --sort-by=reads` for what spent it.',
-      });
+      await alertOwner(env, `⚠️ *D1 read allowance exhausted* — ${today}\n` +
+        'Coach, deck, progress and lexicon search are failing until 00:00 UTC. ' +
+        'Check `wrangler d1 insights papagaio --sort-by=reads` for what spent it.');
     }
   } catch (_) {
     // Reads are what ran out; the alert must not depend on one succeeding.
@@ -126,6 +123,20 @@ async function quotaAware(e, env) {
     error: 'quota',
     message: 'The free database allowance is used up for today; back at 00:00 UTC.',
   }), { status: 503, headers: { 'content-type': 'application/json' } });
+}
+
+/**
+ * Alerts go to the owner through the morning brief bot (Worker
+ * morning-brief-bot, bound as BRIEF_BOT), never through @papagaio_ebot:
+ * that chat belongs to learners, and an outage notice has no place in it.
+ */
+async function alertOwner(env, text) {
+  if (!env.BRIEF_BOT || !env.ALERT_SECRET) return;
+  await env.BRIEF_BOT.fetch('https://brief.azenha.ai/alert', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', authorization: `Bearer ${env.ALERT_SECRET}` },
+    body: JSON.stringify({ source: 'PapaGaio', text, parse_mode: 'Markdown' }),
+  });
 }
 
 async function tg(env, method, payload) {
@@ -238,7 +249,8 @@ async function handleUpdate(update, env) {
     return;
   }
 
-  if (text.startsWith('/health')) {
+  // The owner's only: it lists our internals and runs the two paid checks.
+  if (text.startsWith('/health') && String(chat) === String(env.OWNER_CHAT)) {
     const result = await runHealthCheck(env);
     await tg(env, 'sendMessage', {
       chat_id: chat, parse_mode: 'Markdown', disable_web_page_preview: true,
@@ -1437,33 +1449,21 @@ async function tick(env) {
   // Every quarter of an hour, the cheap probes — and a message the moment
   // something changes state. Waiting for tomorrow morning to learn that the
   // site is down is not monitoring, it is a diary.
-  if (env.OWNER_CHAT && nowDate.getUTCMinutes() % 15 < 5) {
+  if (env.BRIEF_BOT && nowDate.getUTCMinutes() % 15 < 5) {
     try {
       const fast = await runFastCheck(env);
       const message = await alertOnChange(env, fast);
-      if (message) {
-        await tg(env, 'sendMessage', {
-          chat_id: env.OWNER_CHAT, parse_mode: 'Markdown',
-          disable_web_page_preview: true, text: message,
-        });
-      }
+      if (message) await alertOwner(env, message);
     } catch { /* never let the watchman stop the clock */ }
   }
 
   // The morning self-check, before the day's first learner arrives. Silence
   // means healthy: a message only when something is broken, plus a Monday
   // report so that a monitor which itself died cannot pass for good news.
-  if (nowDate.getUTCHours() === 7 && nowDate.getUTCMinutes() < 5 && env.OWNER_CHAT) {
+  if (nowDate.getUTCHours() === 7 && nowDate.getUTCMinutes() < 5 && env.BRIEF_BOT) {
     try {
       const result = await runHealthCheck(env);
-      if (!result.ok || nowDate.getUTCDay() === 1) {
-        await tg(env, 'sendMessage', {
-          chat_id: env.OWNER_CHAT,
-          parse_mode: 'Markdown',
-          disable_web_page_preview: true,
-          text: formatHealth(result),
-        });
-      }
+      if (!result.ok || nowDate.getUTCDay() === 1) await alertOwner(env, formatHealth(result));
     } catch { /* the check must never take the scheduler down with it */ }
   }
 

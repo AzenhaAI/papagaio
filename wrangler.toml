@@ -54,7 +54,13 @@ database_id = "67178255-f07a-43f7-98e2-cf45528e32e9"
 [ai]
 binding = "AI"
 
+# Owner alerts leave through the morning brief bot, not through
+# @papagaio_ebot, whose chats belong to learners (alertOwner in src/index.js).
+[[services]]
+binding = "BRIEF_BOT"
+service = "morning-brief-bot"
+
 [vars]
 AUDIO_BASE = "https://azenha.ai/papagaio/audio/"
 
-# Secrets (not in this file): TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY — see scripts/setup_webhook.sh
+# Secrets (not in this file): TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY, ALERT_SECRET (same as morning-brief-bot's) — see scripts/setup_webhook.sh
