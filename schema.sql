@@ -159,3 +159,20 @@ CREATE INDEX IF NOT EXISTS idx_cards_owner_fold ON cards(owner, fold);
 -- Same story for the sentence bank: pair = 'pt-en' now seeks instead of
 -- scanning all 226k example rows on every lookup.
 CREATE INDEX IF NOT EXISTS idx_examples_pair_fold ON examples(pair, fold);
+
+-- Every gloss rewritten by the dictionary parity passes (scripts/parity_writeback.mjs)
+-- keeps the value it replaced here, so a run can be rolled back column by column.
+-- The same passes added cards.trans_en (ALTER TABLE cards ADD COLUMN trans_en TEXT):
+-- the English gloss of lexpt: rows, whose trans holds the Portuguese definition.
+CREATE TABLE IF NOT EXISTS gloss_history (
+  id      INTEGER PRIMARY KEY AUTOINCREMENT,
+  card_id TEXT NOT NULL,
+  col     TEXT NOT NULL,   -- trans | trans_en | trans_ru | def_pt | fold
+  old     TEXT,
+  new     TEXT,
+  reason  TEXT,            -- the gate's reason for the change
+  run     TEXT NOT NULL,   -- run tag, the unit of rollback
+  at      TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_gloss_history_run ON gloss_history(run);
