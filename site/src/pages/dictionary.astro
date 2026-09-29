@@ -61,10 +61,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     function render() {
       const q = fold(document.getElementById('q').value.trim());
-      const cards = all.filter((c) =>
-        (!tag || (c.tags ?? '').includes(`"${tag}"`)) &&
-        (!q || fold(c.term).includes(q) || fold(c.trans).includes(q) || fold(c.note).includes(q))
-      );
+      // Ranked, not just filtered. A bare substring test kept deck order, so
+      // "cao" listed every word ending in -ção (marcação, informação…) ahead of
+      // cão itself, which sat eighth. Same tiers as the app: the word, then a
+      // word that starts with it, then the query as a whole word of the
+      // meaning, then anything that merely contains it.
+      const rx = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const whole = new RegExp(`(^|[^a-z0-9])${rx}([^a-z0-9]|$)`);
+      const start = new RegExp(`(^|[^a-z0-9])${rx}`);
+      const bare = (t) => fold(t).replace(/^(o|a|os|as|um|uma) /, '');
+      const tier = (c) => {
+        const t = bare(c.term), tr = fold(c.trans);
+        if (t === q) return 0;
+        if (whole.test(t)) return 1;
+        if (t.startsWith(q)) return 2;
+        if (whole.test(tr)) return 3;
+        if (start.test(t) || start.test(tr)) return 4;
+        if (t.includes(q) || tr.includes(q) || fold(c.note).includes(q)) return 5;
+        return 9;
+      };
+      const cards = all
+        .filter((c) => !tag || (c.tags ?? '').includes(`"${tag}"`))
+        .map((c, i) => [q ? tier(c) : 0, i, c])
+        .filter(([t]) => t < 9)
+        .sort((x, y) => x[0] - y[0] || x[1] - y[1])
+        .map(([, , c]) => c);
       list.innerHTML = (cards.length ? cards : []).map((c, i) => `
         <div class="panel" style="margin-bottom:10px; padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
           <strong style="font-size:18px;">${c.term}</strong>
