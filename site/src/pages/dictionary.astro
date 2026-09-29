@@ -37,6 +37,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div id="histstrip" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px;"></div>
   </div>
 
+  <div id="lex"></div>
   <div id="list"></div>
 
   <script>
@@ -47,6 +48,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const TTS = '/api/tts';
     const CONJ = '/api/conjugate';
     const list = document.getElementById('list');
+    const lexBox = document.getElementById('lex');
     let all = [];      // loaded cards of the current course
     let tag = null;    // active tag filter
 
@@ -80,12 +82,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         if (t.includes(q) || tr.includes(q) || fold(c.note).includes(q)) return 5;
         return 9;
       };
-      const cards = all
+      const ranked = all
         .filter((c) => !tag || (c.tags ?? '').includes(`"${tag}"`))
         .map((c, i) => [q ? tier(c) : 0, i, c])
         .filter(([t]) => t < 9)
-        .sort((x, y) => x[0] - y[0] || x[1] - y[1])
-        .map(([, , c]) => c);
+        .sort((x, y) => x[0] - y[0] || x[1] - y[1]);
+      const best = ranked.length ? ranked[0][0] : 9;
+      const cards = ranked.map(([, , c]) => c);
       list.innerHTML = (cards.length ? cards : []).map((c, i) => `
         <div class="panel" style="margin-bottom:10px; padding:14px 18px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
           <strong style="font-size:18px;">${c.term}</strong>
@@ -101,9 +104,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           ${c.entry ? `<div class="entrybox" id="e${i}" style="display:none; width:100%;"></div>` : ''}
         </div>`).join('') || missHtml(q);
 
-      // A miss in the deck goes straight to the 18k-word lexicon rather than
-      // making the learner press a button to be allowed to look something up.
-      if (!cards.length && q) suggest(document.getElementById('q').value.trim());
+      // The dictionary is asked on every settled query, not only when the deck
+      // has nothing: "cao" matched 21 deck cards by substring (marcação,
+      // estação…), so the 110k-word dictionary — where cão, dog, is the first
+      // answer — was never consulted. It leads when the deck has no card for
+      // the word itself, and follows when it does. Debounced: this is a D1 read.
+      clearTimeout(suggestTimer);
+      lexBox.innerHTML = '';
+      const raw = document.getElementById('q').value.trim();
+      if (q.length >= 2 && !tag) {
+        if (best <= 1) list.after(lexBox); else list.before(lexBox);
+        suggestTimer = setTimeout(() => suggest(raw, cards.length > 0), 350);
+      }
 
       list.querySelectorAll('.morebtn').forEach((b) => {
         b.onclick = async () => {
@@ -131,13 +143,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // word you met on a sign this morning, so a miss offers a live lookup rather
     // than a dead end.
     function missHtml(q) {
-      return q ? '<p class="muted">searching the dictionary…</p>'
-               : '<p class="muted">Nothing matches.</p>';
+      return q ? '' : '<p class="muted">Nothing matches.</p>';
     }
 
     let suggestSeq = 0;
-    async function suggest(q) {
+    let suggestTimer = 0;
+    async function suggest(q, deckHasCards = false) {
       const mine = ++suggestSeq;
+      lexBox.innerHTML = '<p class="muted">searching the dictionary…</p>';
       let d;
       try {
         d = await (await fetch(`${SEARCH}?q=${encodeURIComponent(q)}`)).json();
@@ -147,15 +160,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       // Typing is faster than the network: only the newest query may paint.
       if (mine !== suggestSeq) return;
       if (!d?.words?.length) {
-        list.innerHTML = `<div class="panel" style="text-align:center; padding:26px 18px;">
+        lexBox.innerHTML = '';
+        if (deckHasCards) return;
+        lexBox.innerHTML = `<div class="panel" style="text-align:center; padding:26px 18px;">
           <p class="muted" style="margin:0 0 14px;">Not in the deck or the dictionary.</p>
           <button class="btn" id="lookbtn">🔎 Look «${esc(q)}» up anyway</button>
         </div>`;
         document.getElementById('lookbtn').onclick = () => lookup(q);
         return;
       }
-      list.innerHTML = `<p class="muted" style="font-size:14px;">
-          Not taught by the deck — found in the dictionary:</p>` +
+      lexBox.innerHTML = `<p class="muted" style="font-size:14px; margin-top:6px;">
+          📖 In the dictionary:</p>` +
         d.words.map((w) => `
           <button class="lexrow" data-t="${esc(w.term)}">
             <span><strong>${esc(w.term)}</strong>
@@ -163,10 +178,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </span>
             <span class="muted">${esc(w.trans).slice(0, 90)}</span>
           </button>`).join('');
-      list.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t); });
+      lexBox.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t); });
+      if (deckHasCards && lexBox.nextElementSibling === list) lexBox.insertAdjacentHTML('beforeend',
+        '<p class="muted" style="font-size:14px; margin:14px 0 6px;">In the deck:</p>');
     }
 
     async function lookup(q) {
+      clearTimeout(suggestTimer);
+      suggestSeq++;
+      lexBox.innerHTML = '';
       list.innerHTML = '<p class="muted">looking it up…</p>';
       let d;
       try {
