@@ -42,3 +42,23 @@ Rows sharing a term but differing in `pos` are DIFFERENT entries: gloss only thi
 ## Never overwrite good data with worse
 If the current value is acceptable, it stays. A rewrite must be clearly better, never merely different.
 When unsure what a word means, leave it (verdict ok) rather than guess.
+
+## Learner dictionary standard (all three layers)
+
+Added 29 September 2026. The dictionary is for people learning Portuguese, so
+`en` and `ru` are translations, not definitions.
+
+- **en and ru are what the learner would say instead of the Portuguese word.**
+  The first sense is 1–3 equivalent words ("casa → house, home"; "mas → but").
+  An explanation goes only in brackets after the equivalent, and only when the
+  equivalent alone is unclear.
+- **Grammar words** (articles, pronouns, prepositions, conjunctions): the
+  equivalent plus a short label — "o → the (masc. sing.)", "a → her, it (object
+  pronoun)".
+- **Letter names**: "é → the letter E".
+- **Inflected forms** keep their meaning first: "foram → (they) went, were
+  (3rd pl. preterite of ir/ser)", not "third-person plural preterite of ir".
+- **Order and length**: the most frequent sense first; rare, dated and
+  specialist senses last or removed; at most 4 senses.
+- **pt** is a short definition in European Portuguese that an A2–B1 learner
+  can read.
