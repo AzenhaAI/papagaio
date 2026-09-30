@@ -9,6 +9,8 @@
 //   en → trans on lex: rows (the English gloss), trans_en on lexpt: rows
 //   pt → def_pt on every row; on lexpt: rows the displayed trans is the same
 //        definition (cut to 200), so it moves with it
+//   trans_pt → trans_pt (the Portuguese translation of an English lexen: row;
+//        def_pt is a Portuguese definition and belongs to the pt layer)
 // Whenever trans changes, fold (folded "term trans", what search matches) is
 // recomputed — but only where the stored fold still follows that convention.
 //
@@ -97,6 +99,7 @@ for (const c of changes) {
   if (c.layer === 'ru') set(c.id, 'trans_ru', c.old, c.new, c.why);
   else if (c.layer === 'en' && !lexpt) { set(c.id, 'trans', c.old, c.new, c.why); newTrans = c.new; }
   else if (c.layer === 'en') set(c.id, 'trans_en', c.old, c.new, c.why);
+  else if (c.layer === 'trans_pt') set(c.id, 'trans_pt', c.old, c.new, c.why);
   else if (c.layer === 'pt') {
     set(c.id, 'def_pt', c.old, c.new, c.why);
     if (lexpt && row) { set(c.id, 'trans', row.trans, c.new.slice(0, 200), c.why); newTrans = c.new.slice(0, 200); }

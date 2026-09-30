@@ -62,3 +62,13 @@ Added 29 September 2026. The dictionary is for people learning Portuguese, so
   specialist senses last or removed; at most 4 senses.
 - **pt** is a short definition in European Portuguese that an A2–B1 learner
   can read.
+
+### English headwords (lexen:)
+
+For Portuguese and Russian speakers learning English the roles swap: `trans_pt`
+and `trans_ru` are the translations (same rules as en/ru above, and `trans_pt`
+is European Portuguese — autocarro, comboio, casa de banho, ecrã, telemóvel),
+and `trans` is a short English definition of the most common sense for a B1
+learner. The translation must be the row's part of speech: "house" as a verb is
+alojar / размещать, not casa / дом. Write back with layer `trans_pt` (column
+trans_pt), `ru` and `en`.
