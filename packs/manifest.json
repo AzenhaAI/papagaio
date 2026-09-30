@@ -5,11 +5,11 @@
   "packs": {
     "pt": {
       "rows": 110133,
-      "bytes": 5982726
+      "bytes": 5790084
     },
     "en": {
       "rows": 31424,
-      "bytes": 2785741
+      "bytes": 1946316
     },
     "ru_forms": {
       "rows": 464478,
