@@ -14,9 +14,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={desc} />
-  <!-- PapaGaio is still in testing — keep it out of search until it ships.
-       Remove this line to make the whole section indexable again. -->
-  <meta name="robots" content="noindex, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href={canonical} />
   <link rel="icon" href={`${base}/icon.svg`} type="image/svg+xml" />
   <!-- Safari and the iOS home screen ignore SVG favicons; without these
