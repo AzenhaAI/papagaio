@@ -91,6 +91,11 @@ unexpected gender, a false friend. An empty note beats an obvious one.
 
 ## Deploy
 
+Deploy the Worker only from an up-to-date `main`. Owner alerts leave through
+the `BRIEF_BOT` service binding in `wrangler.toml`, never through the
+learners' bot. A deploy from an older branch drops that binding, and the
+alerts go back into the learners' chat. That happened once, on 29 September 2026.
+
 ```bash
 npm install
 npx wrangler d1 create papagaio          # put the id into wrangler.toml
