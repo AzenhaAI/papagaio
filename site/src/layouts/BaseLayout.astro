@@ -163,7 +163,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       #consent { bottom: calc(14px + 62px + env(safe-area-inset-bottom)) !important; }
       #drawer { height: calc(100vh - 62px - env(safe-area-inset-bottom)) !important; }
     }
-    @media (max-width: 360px) { .pg-tabbar a { font-size: 9.5px; } .pg-tabbar a svg { padding: 3px 6px; } }
+    /* The narrowest phones (iPhone SE, 320 pt) fit five tabs at a readable size,
+       not six squeezed: Verbs steps out and stays in the burger. */
+    @media (max-width: 360px) { .pg-tabbar a[href$="/verbs/"]:not(.on) { display: none; } }
     main { max-width: var(--max); margin: 0 auto; padding: 28px 20px 60px; }
     .intro-fold { margin: 0 0 18px; }
     .intro-fold > summary {
