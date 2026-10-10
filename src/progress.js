@@ -9,13 +9,38 @@
 // own rows are dozens, indexed by user. Random picks land on the deck index at
 // a random rank and read the row they land on.
 
+// Concurrent callers in one isolate share one count instead of each starting
+// their own.
+const inflight = new Map();
+
 /** Cards per unit for a course — computed at most once a day, kept in stats. */
-export async function unitTotals(env, course) {
+export function unitTotals(env, course) {
+  if (!inflight.has(course)) {
+    inflight.set(course, countUnits(env, course).finally(() => inflight.delete(course)));
+  }
+  return inflight.get(course);
+}
+
+async function countUnits(env, course) {
   const key = `units_${course}`;
   const saved = await env.DB.prepare(`SELECT v, at FROM stats WHERE k = ?1`)
     .bind(key).first().catch(() => null);
   const age = saved?.at ? Date.now() - Date.parse(saved.at.replace(' ', 'T') + 'Z') : Infinity;
   if (saved?.v && age < 86_400_000) return JSON.parse(saved.v);
+
+  // The day the cache expired during a burst — every user's stats built in
+  // parallel — 49 callers each saw it stale and each counted the whole table:
+  // 5.56M rows on 10 Oct 2026, past the 5M daily read allowance, and the
+  // service went down until midnight UTC. So the recount is claimed first:
+  // one caller moves `at` forward with a compare-and-set, and everyone who
+  // loses the race serves yesterday's numbers, which are right to within a
+  // day's content edits.
+  if (saved?.v) {
+    const claim = await env.DB.prepare(
+      `UPDATE stats SET at = datetime('now') WHERE k = ?1 AND at IS ?2`
+    ).bind(key, saved.at).run().catch(() => null);
+    if (!claim || claim.meta?.changes !== 1) return JSON.parse(saved.v);
+  }
 
   // The count is 32,425 rows, which is fine once a day and ruinous in a loop.
   // On the day the read allowance ran out it became exactly that loop: the
