@@ -38,6 +38,51 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         };
       }
     })();
+    // When the server's voice fails, the device speaks instead. The server
+    // uses Microsoft Edge's online voices, and on 10 Oct 2026 Microsoft
+    // started refusing every third-party client (edge-tts included) with 403.
+    // Pages ask /api/tts in seven places; this answers all of them: on any
+    // failure the phrase goes to the browser's own speech (Joana pt-PT on
+    // Apple devices, Google's pt-PT voice on Android) and the page gets a
+    // moment of silence back, so it neither reports "audio failed" nor stalls
+    // the coach's turn.
+    (function () {
+      if (!window.fetch || !window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
+      var real = window.fetch.bind(window);
+      function silence() {
+        var b = new Uint8Array(46), v = new DataView(b.buffer);
+        [82,73,70,70].forEach(function (c, i) { b[i] = c; }); v.setUint32(4, 38, true);
+        [87,65,86,69,102,109,116,32].forEach(function (c, i) { b[8 + i] = c; });
+        v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+        v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true); v.setUint16(34, 8, true);
+        [100,97,116,97].forEach(function (c, i) { b[36 + i] = c; }); v.setUint32(40, 2, true); b[44] = 128; b[45] = 128;
+        return new Response(new Blob([b], { type: 'audio/wav' }), { status: 200, headers: { 'content-type': 'audio/wav' } });
+      }
+      function say(body) {
+        try {
+          var d = JSON.parse(body || '{}'), lang = d.course === 'en' ? 'en-GB' : 'pt-PT';
+          if (!d.text) return false;
+          var u = new SpeechSynthesisUtterance(d.text);
+          u.lang = lang; u.rate = 0.95;
+          var vs = speechSynthesis.getVoices().filter(function (x) { return x.lang && x.lang.replace('_', '-').indexOf(lang) === 0; });
+          if (vs.length) u.voice = vs[0];
+          speechSynthesis.cancel(); speechSynthesis.speak(u);
+          return true;
+        } catch (e) { return false; }
+      }
+      window.fetch = function (input, init) {
+        var url = typeof input === 'string' ? input : (input && input.url) || '';
+        if (!/\/api\/tts(\?|$)/.test(url)) return real(input, init);
+        var body = init && init.body;
+        return real(input, init).then(function (r) {
+          if (r.ok) return r;
+          return say(body) ? silence() : r;
+        }, function (e) {
+          if (say(body)) return silence();
+          throw e;
+        });
+      };
+    })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
