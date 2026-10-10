@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Settings — PapaGaio" desc="PapaGaio settings on the web: Russian in the translator and dictionary, theme, connecting your progress from the app or the Telegram bot, and deleting your data.">
+  <h1>Settings</h1>
+
+  <style is:global>
+    .set { background: var(--panel); border-radius: var(--radius); padding: 16px 18px; margin: 0 0 12px; }
+    .set h2 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+    .set .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; }
+    .set .row + .row { border-top: 1px solid var(--panel2); }
+    .set .row p { margin: 2px 0 0; color: var(--muted); font-size: 13.5px; }
+    .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; flex: 0 0 auto; }
+    .seg button { background: none; border: 0; color: var(--muted); font: inherit; font-size: 14px; padding: 8px 12px; cursor: pointer; min-height: 40px; }
+    .seg button.on { background: var(--panel2); color: var(--text); font-weight: 600; }
+    .switch { position: relative; width: 50px; height: 30px; flex: 0 0 auto; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .switch span { position: absolute; inset: 0; top: 0; left: 0; right: 0; bottom: 0; background: var(--panel2); border: 1px solid var(--border); border-radius: 30px; cursor: pointer; transition: .2s; }
+    .switch span::before { content: ''; position: absolute; width: 22px; height: 22px; left: 3px; top: 3px; background: var(--muted); border-radius: 50%; transition: .2s; }
+    .switch input:checked + span { background: var(--accent); border-color: var(--accent); }
+    .switch input:checked + span::before { transform: translateX(20px); background: #08130c; }
+    .set input[type=text] { flex: 1; min-width: 0; background: var(--panel2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; font: inherit; }
+    .set .danger { background: none; border: 1px solid var(--red); color: var(--red); border-radius: 10px; padding: 8px 14px; font: inherit; cursor: pointer; min-height: 40px; }
+    .set .links a { display: block; padding: 9px 0; }
+  </style>
+
+  <section class="set" data-unfold>
+    <h2>Languages</h2>
+    <div class="row">
+      <div>
+        <strong>Russian</strong>
+        <p>Adds Russian to the translator and shows Russian meanings in the dictionary — the same switch as in the app.</p>
+      </div>
+      <label class="switch" aria-label="Russian in the translator and dictionary">
+        <input type="checkbox" id="ru" /><span></span>
+      </label>
+    </div>
+    <div class="row">
+      <div>
+        <strong>Interface</strong>
+        <p>The website is in English. The apps also speak Portuguese and Russian.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="set">
+    <h2>Appearance</h2>
+    <div class="row">
+      <strong>Theme</strong>
+      <div class="seg" role="group" aria-label="Theme">
+        <button data-t="system">System</button>
+        <button data-t="dark">Dark</button>
+        <button data-t="light">Light</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="set">
+    <h2>Your progress</h2>
+    <div class="row" id="paired" style="display:none;">
+      <div>
+        <strong>Connected</strong>
+        <p id="paired-id"></p>
+      </div>
+      <button class="danger" id="unpair" style="border-color:var(--border); color:var(--text);">Disconnect</button>
+    </div>
+    <div class="row" id="pair" style="display:none; flex-wrap:wrap;">
+      <div style="flex:1 1 100%;">
+        <strong>Connect your deck</strong>
+        <p>Send /link to the <a href="https://t.me/papagaio_ebot">Telegram bot</a> (or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.</p>
+      </div>
+      <input type="text" id="tok" aria-label="Link code from the bot" placeholder="paste the /link code" />
+      <button class="btn" id="connect">Connect</button>
+    </div>
+  </section>
+
+  <section class="set">
+    <h2>Your data</h2>
+    <div class="row">
+      <div>
+        <strong>Delete my account</strong>
+        <p>Erases your schedule, history, your own cards and every paired device. Immediate, cannot be undone. In the bot: /delete.</p>
+      </div>
+      <button class="danger" id="del">Delete</button>
+    </div>
+    <p class="muted" id="del-msg" style="font-size:13.5px; margin:4px 0 0;"></p>
+  </section>
+
+  <section class="set links">
+    <h2>More</h2>
+    <a href={`${base}/verbs/`}>🔀 Verbs</a>
+    <a href={`${base}/apps/`}>📱 Apps for iPhone, Android, Mac and Windows</a>
+    <a href={`${base}/privacy/`}>🔒 Privacy</a>
+    <a href={`${base}/support/`}>💬 Support</a>
+    <a href={`${base}/about/`}>ℹ️ About</a>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      // Russian: one switch the translator and the dictionary both read.
+      var ru = $('ru');
+      ru.checked = localStorage.getItem('pg_ru') === '1';
+      ru.onchange = function () { localStorage.setItem('pg_ru', ru.checked ? '1' : '0'); };
+
+      // Theme: "system" removes the override and follows the device.
+      var segs = document.querySelectorAll('.seg button');
+      function paintTheme() {
+        var t = localStorage.getItem('pg_theme') || 'system';
+        segs.forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-t') === t); });
+      }
+      segs.forEach(function (b) {
+        b.onclick = function () {
+          var t = b.getAttribute('data-t');
+          if (t === 'system') {
+            localStorage.removeItem('pg_theme');
+            var light = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches;
+            if (light) document.documentElement.dataset.theme = 'light';
+            else delete document.documentElement.dataset.theme;
+          } else {
+            localStorage.setItem('pg_theme', t);
+            document.documentElement.dataset.theme = t;
+          }
+          paintTheme();
+        };
+      });
+      paintTheme();
+
+      // Progress: the same token the cards, coach and progress pages use.
+      var KEY = 'pg_token';
+      function paintPair() {
+        var t = localStorage.getItem(KEY);
+        $('paired').style.display = t ? 'flex' : 'none';
+        $('pair').style.display = t ? 'none' : 'flex';
+        if (t) $('paired-id').textContent = 'Device ' + t.slice(0, 8) + '…';
+      }
+      $('connect').onclick = function () {
+        var v = $('tok').value.trim();
+        if (!v) return;
+        localStorage.setItem(KEY, v);
+        $('tok').value = '';
+        paintPair();
+      };
+      $('unpair').onclick = function () {
+        if (!confirm('Disconnect this browser? Your progress stays on the server and comes back with the code.')) return;
+        localStorage.removeItem(KEY);
+        paintPair();
+      };
+      paintPair();
+
+      $('del').onclick = async function () {
+        var t = localStorage.getItem(KEY);
+        if (!t) { $('del-msg').textContent = 'Nothing to delete: this browser has no account yet.'; return; }
+        if (!confirm('Delete your PapaGaio account and all its progress? This cannot be undone.')) return;
+        try {
+          var r = await fetch('/api/account', { method: 'DELETE', headers: { 'x-device-token': t } });
+          if (!r.ok) throw new Error(r.status);
+          localStorage.removeItem(KEY);
+          paintPair();
+          $('del-msg').textContent = 'Deleted. Everything tied to this account is gone.';
+        } catch (e) {
+          $('del-msg').textContent = 'The server is not answering right now — nothing was deleted. Try again later.';
+        }
+      };
+    })();
+  </script>
+</BaseLayout>

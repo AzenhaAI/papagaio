@@ -104,6 +104,15 @@ import Everywhere from '../components/Everywhere.astro';
     const API = '';   // same origin: /api/* is routed to the worker
     const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
     const LANGS = { en: '🇬🇧 English', pt: '🇵🇹 Portuguese' };
+    // Russian joins only when switched on in Settings, as in the app.
+    let RU = false;
+    try { RU = localStorage.getItem('pg_ru') === '1'; } catch (e) {}
+    if (RU) LANGS.ru = '🇷🇺 Russian';
+    const ORDER = Object.keys(LANGS);
+    const nextLang = (cur, skip) => {
+      const list = ORDER.filter((l) => l !== skip);
+      return list[(list.indexOf(cur) + 1) % list.length];
+    };
     let from = 'en', to = 'pt';
     let last = null, lastReq = '', inflight = null, debounce = null;
 
@@ -115,7 +124,16 @@ import Everywhere from '../components/Everywhere.astro';
         : `${LANGS[from]} in — ${LANGS[to]} out.`;
     }
     $('swap').onclick = () => { [from, to] = [to, from]; $('auto').checked = false; drawPair(); run(true); };
-    $('fromchip').onclick = $('tochip').onclick = () => { $('auto').checked = !$('auto').checked; drawPair(); };
+    // The target chip steps through the languages; the source chip leaves
+    // auto-detect and steps through the rest. With only English and
+    // Portuguese this is the old toggle; with Russian on it reaches all three.
+    $('tochip').onclick = () => { to = nextLang(to, $('auto').checked ? null : from); drawPair(); run(true); };
+    $('fromchip').onclick = () => {
+      if ($('auto').checked) $('auto').checked = false;
+      else from = nextLang(from, to);
+      if (from === to) from = nextLang(from, to);
+      drawPair(); run(true);
+    };
     $('auto').onchange = drawPair;
     drawPair();
 
