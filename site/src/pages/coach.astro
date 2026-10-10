@@ -7,15 +7,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     A live AI conversation partner. Pick a scene and play it out — it stays in
     character, speaks pt-PT, adapts to the words you have already learned,
     corrects you gently as you go, and writes a recap of your mistakes at the
-    end. In the <a href="https://t.me/papagaio_ebot">Telegram bot</a> the same
-    coach listens to your voice and answers with one.
+    end. Tap 🎙 to speak and it answers out loud — here, in the apps, or in the
+    <a href="https://t.me/papagaio_ebot">Telegram bot</a>.
   </p>
   <p class="muted" style="font-size:13px; margin-top:-6px;">
     🤖 Powered by an LLM on Groq + neural pt-PT voices. Every reply is generated
     live — no scripts beyond the opening line.
   </p>
 
-  <div id="gate" class="panel" style="margin-top:20px;">
+  <div id="gate" class="panel" data-unfold style="margin-top:20px;">
     <p style="margin:0;" id="gate-msg">Getting you a scene…</p>
   </div>
 
@@ -26,7 +26,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       to carry your deck over — the coach will then prefer words you have already learned.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
-      <input id="tok" type="text" placeholder="paste the /link code from the bot"
+      <input id="tok" aria-label="Link code from the bot" type="text" placeholder="paste the /link code from the bot"
         style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
       <button class="btn" id="tok-save">Connect</button>
@@ -59,7 +59,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
     <div class="panel" id="log" style="max-height:55vh; overflow-y:auto;"></div>
     <div style="display:flex; gap:8px; margin-top:10px;">
-      <input id="say" placeholder="type in Portuguese — or tap 🎙 and speak" autocomplete="off"
+      <input id="say" aria-label="Your reply" placeholder="type in Portuguese — or tap 🎙 and speak" autocomplete="off"
         style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:12px 14px; font:inherit; font-size:16px;" />
       <button id="mic" title="Speak your reply"
@@ -126,18 +126,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             body: JSON.stringify({ courses: 'pt,en' }),
           });
           const d = await r.json();
-          if (!d.token) throw new Error(d.error ?? 'could not start a session');
+          if (!d.token) throw new Error(d.message ?? d.error ?? 'could not start a session');
           localStorage.setItem(TOKKEY, d.token);
         } catch (e) {
-          $('gate-msg').textContent = 'Could not start a session: ' + e.message;
+          $('gate-msg').textContent = 'The server is not answering right now. ' + (/JSON|token|fetch|network/i.test(e.message || '') ? '' : e.message + ' ') + 'Try again later — the dictionary, verbs and translator still work.';
           return;
         }
       }
       const r = await fetch(`${API}/api/progress`, { headers: headers() });
       if (!r.ok) {
-        // A stale or mistyped token: drop it and let the next load mint a fresh one.
-        localStorage.removeItem(TOKKEY);
-        $('gate-msg').textContent = 'That code did not work — reload to start a fresh session.';
+        // Only 401 is a stale or mistyped token; drop it and let the next load
+        // mint a fresh one. Anything else is the server, and the token is kept.
+        if (r.status === 401) {
+          localStorage.removeItem(TOKKEY);
+          $('gate-msg').textContent = 'That code did not work — reload to start a fresh session.';
+        } else {
+          $('gate-msg').textContent = 'The server is not answering right now. Your progress is safe — try again later.';
+        }
         return;
       }
       $('gate').style.display = 'none';

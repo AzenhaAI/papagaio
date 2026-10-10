@@ -6,4 +6,7 @@ export default defineConfig({
   base: '/papagaio',
   trailingSlash: 'ignore',
   build: { format: 'directory' },
+  // Hoisted scripts used ?. ?? ??= which iOS below 13.4/14 cannot parse; one
+  // syntax error there took the whole page script with it.
+  vite: { build: { target: ['es2019', 'safari12'] } },
 });

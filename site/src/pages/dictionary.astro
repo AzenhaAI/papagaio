@@ -1,15 +1,16 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Dictionary — PapaGaio">
-  <h1>The deck</h1>
+<BaseLayout title="Dictionary — PapaGaio" desc="European Portuguese dictionary: 110,000+ entries with meanings in English and Russian, audio, examples and twelve-tense conjugations. Search without accents.">
+  <h1>Dictionary</h1>
   <p class="muted">
-    The shared frequency deck the bot teaches from. European Portuguese from A1
+    Search the teaching deck first, then the full dictionary behind it. The
+    deck is what the app and the bot teach from: European Portuguese from A1
     (survival first, Madeira vocabulary included) and English from B1–B2.
     Every card has native-quality audio.
   </p>
   <p class="muted" style="font-size:13.5px;">
-    Search anything, not just what the deck teaches: <span id="lexcount">100,000+</span> further headwords sit
+    Search anything, not just what the deck teaches: <span id="lexcount">110,000+</span> further headwords sit
     behind it, and words neither knows are looked up live. Lexicon from
     <a href="https://en.wiktionary.org/">English Wiktionary</a> (CC BY-SA 4.0),
     ranked by an <a href="https://github.com/hermitdave/FrequencyWords">OpenSubtitles
@@ -22,7 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div style="display:flex; gap:10px; margin: 18px 0; flex-wrap:wrap;">
     <button class="btn" data-course="pt" id="btn-pt">🇵🇹 Portuguese</button>
     <button class="btn" data-course="en" id="btn-en" style="background:var(--panel2); color:var(--text);">🇬🇧 English</button>
-    <input id="q" type="search" placeholder="Search…"
+    <input id="q" aria-label="Search the dictionary" type="search" placeholder="Search…"
       style="flex:1; min-width:180px; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:8px 14px; font:inherit;" />
   </div>
@@ -159,6 +160,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       }
       // Typing is faster than the network: only the newest query may paint.
       if (mine !== suggestSeq) return;
+      // A refusal is not an answer: "not in the dictionary" during an outage
+      // told people that words like cão do not exist.
+      if (d?.error) {
+        lexBox.innerHTML = `<p class="muted" style="font-size:14px;">${esc(d.message || 'The dictionary server is not answering right now — try again in a minute.')}</p>`;
+        return;
+      }
       if (!d?.words?.length) {
         lexBox.innerHTML = '';
         if (deckHasCards) return;
@@ -194,7 +201,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       } catch {
         d = { error: 'network' };
       }
-      if (!d || d.error || !d.card) {
+      if (d?.error) {
+        list.innerHTML = `<p class="muted">${esc(d.error === 'network' ? 'No connection — try again in a moment.' : (d.message || 'The dictionary server is not answering right now — try again in a minute.'))}</p>`;
+        return;
+      }
+      if (!d || !d.card) {
         list.innerHTML = `<p class="muted">No entry for «${esc(q)}».</p>`;
         return;
       }

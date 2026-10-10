@@ -8,7 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     the four buttons feed the scheduler, and it believes you.
   </p>
 
-  <div id="gate" class="panel" style="margin-top:20px;">
+  <div id="gate" class="panel" data-unfold style="margin-top:20px;">
     <p style="margin:0;" id="gate-msg">Getting your deck…</p>
   </div>
 
@@ -19,7 +19,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       to practise the same deck here and there.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
-      <input id="tok" type="text" placeholder="paste the /link code"
+      <input id="tok" aria-label="Link code from the bot" type="text" placeholder="paste the /link code"
         style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
       <button class="btn" id="tok-save">Connect</button>
@@ -120,16 +120,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             body: JSON.stringify({ courses: 'pt,en' }),
           });
           const d = await r.json();
-          if (!d.token) throw new Error(d.error ?? 'could not start a session');
+          if (!d.token) throw new Error(d.message ?? d.error ?? 'could not start a session');
           localStorage.setItem(TOKKEY, d.token);
         } catch (e) {
-          $('gate-msg').textContent = 'Could not start a session: ' + e.message;
+          $('gate-msg').textContent = 'The server is not answering right now. ' + (/JSON|token|fetch|network/i.test(e.message || '') ? '' : e.message + ' ') + 'Try again later — the dictionary, verbs and translator still work.';
           return;
         }
       }
       if (!localStorage.getItem(TOKKEY)) return;
       const r = await fetch(`${API}/api/progress`, { headers: headers() });
-      if (!r.ok) { localStorage.removeItem(TOKKEY); $('gate-msg').textContent = 'That code did not work — reload to start a fresh session.'; return; }
+      if (!r.ok) {
+        // Only 401 means the token is wrong. A 503 (the database's daily
+        // allowance) used to land here too and threw away a returning
+        // visitor's only key to their progress.
+        if (r.status === 401) { localStorage.removeItem(TOKKEY); $('gate-msg').textContent = 'That code did not work — reload to start a fresh session.'; }
+        else $('gate-msg').textContent = 'The server is not answering right now. Your progress is safe — try again later.';
+        return;
+      }
       $('gate').style.display = 'none';
       $('app').style.display = 'block';
       next();
@@ -141,7 +148,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       $('empty').style.display = 'none';
       $('card').style.display = 'block';
       const r = await fetch(`${API}/api/next?course=${course}`, { headers: headers() });
-      const d = await r.json();
+      const d = await r.json().catch(() => ({ error: 'network' }));
+      if (d.error) {
+        $('card').style.display = 'none';
+        $('gate').style.display = 'block';
+        $('gate-msg').textContent = d.message || 'The server is not answering right now. Your progress is safe — try again later.';
+        return;
+      }
       if (!d.card) { $('card').style.display = 'none'; $('empty').style.display = 'block'; return; }
       current = d;
       show(d.card, d.isNew);
@@ -150,8 +163,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     async function distractors(card) {
       if (!deckCache) {
-        const r = await fetch(`${API}/api/deck?course=${course}&limit=500`);
-        deckCache = (await r.json()).cards;
+        // The same URL the dictionary uses, which the edge caches for an hour.
+        const r = await fetch(`${API}/api/deck?course=${course}&limit=2000`);
+        deckCache = (await r.json().catch(() => ({}))).cards || [];
       }
       return deckCache.filter((c) => c.id !== card.id)
         .sort(() => Math.random() - 0.5).slice(0, 3).map((c) => c.trans);
@@ -168,7 +182,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       if (drill) {
         $('answer-zone').innerHTML =
-          `<input id="typed" placeholder="type the missing form…" autocomplete="off" />
+          `<input id="typed" aria-label="Your answer" placeholder="type the missing form…" autocomplete="off" />
            <button class="btn" id="check" style="margin-top:10px;">Check</button>`;
         const input = $('typed');
         input.focus();

@@ -23,7 +23,7 @@ import Everywhere from '../components/Everywhere.astro';
       </label>
     </div>
     <div style="position:relative;">
-      <textarea id="src" rows="5" maxlength="600" placeholder="Type a word or phrase…"
+      <textarea id="src" aria-label="Text to translate" rows="5" maxlength="600" placeholder="Type a word or phrase…"
         style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:12px 38px 12px 14px; font:inherit; resize:vertical;"></textarea>
       <button id="clear" class="iconbtn" title="Clear"
@@ -75,7 +75,7 @@ import Everywhere from '../components/Everywhere.astro';
 
   <div class="muted" style="margin-top:16px; font-size:14px;">
     Want it as a flashcard with audio?
-    <a href="https://t.me/papagaio_ebot">Send it to the bot</a> — one tap adds it to your deck.
+    Use the <a href="/papagaio/apps/">app</a> or <a href="https://t.me/papagaio_ebot">the bot</a> — one tap adds it to your deck.
   </div>
 
   <style is:global>

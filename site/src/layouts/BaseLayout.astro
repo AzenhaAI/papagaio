@@ -11,6 +11,34 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <script is:inline>
+    // Safari with storage blocked, and some old in-app browsers, throw on any
+    // localStorage access; a page that reads its token or theme first then
+    // dies before it draws anything. Behind this, every page gets a working
+    // (if forgetful) store instead of an exception.
+    (function () {
+      try { var k = '__pg'; localStorage.setItem(k, k); localStorage.removeItem(k); }
+      catch (e) {
+        var m = {};
+        try {
+          Object.defineProperty(window, 'localStorage', { configurable: true, value: {
+            getItem: function (k) { return k in m ? m[k] : null; },
+            setItem: function (k, v) { m[k] = String(v); },
+            removeItem: function (k) { delete m[k]; },
+            clear: function () { m = {}; },
+            key: function (i) { return Object.keys(m)[i] || null; },
+            get length() { return Object.keys(m).length; },
+          } });
+        } catch (e2) {}
+      }
+      // AbortSignal.timeout arrived in Safari 16; the coach needs it.
+      if (window.AbortController && window.AbortSignal && !AbortSignal.timeout) {
+        AbortSignal.timeout = function (ms) {
+          var c = new AbortController(); setTimeout(function () { c.abort(); }, ms); return c.signal;
+        };
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
   <meta name="description" content={desc} />
@@ -32,7 +60,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   <meta property="og:description" content={desc} />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://azenha.ai/papagaio/og.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content={canonical} />
   {import.meta.env.PROD && (
     <>
@@ -71,6 +99,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       --accent2: #ffc857;
       --red: #e8453c;
       --warn: #ff9d5c;
+      --border: #2a4433;
       --radius: 14px;
       --max: 880px;
     }
@@ -80,10 +109,11 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       --panel2: #e9f1ea;
       --text: #14261a;
       --muted: #5b7263;
-      --accent: #1f9d58;
-      --accent2: #b8860b;
+      --accent: #157a43;
+      --accent2: #8a6508;
       --red: #c8102e;
       --warn: #c05621;
+      --border: #c9d8cc;
     }
     /* The flag's own 2:3 proportion, as a hairline across the top. */
     body::before {
@@ -135,6 +165,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     }
     header.site #burger { margin-left: 4px; }
     .pg-tabbar { display: none; }
+    /* One prompt at a time: three cards stacked over a 320-point screen read as
+       a wall. While the consent card is up, the install prompts wait. */
+    body:has(#consent[style*="block"]) #az-apk,
+    body:has(#consent[style*="block"]) #a2hs { display: none !important; }
     /* Phones: the six sections move from the header strip to the bar, so
        nothing is listed twice; the logo, Get the app and the burger stay. */
     @media (max-width: 760px) {
@@ -161,6 +195,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       .pg-tabbar a:hover { text-decoration: none; }
       /* What floats at the bottom of a page sits above the bar. */
       #consent { bottom: calc(14px + 62px + env(safe-area-inset-bottom)) !important; }
+      /* azenha.ai's own "Get the app for Android" strip (added by the site's
+         middleware) sits above the bar, not over it. */
+      #az-apk { bottom: calc(62px + env(safe-area-inset-bottom)) !important; }
       #drawer { height: calc(100vh - 62px - env(safe-area-inset-bottom)) !important; }
     }
     /* The narrowest phones (iPhone SE, 320 pt) fit five tabs at a readable size,
@@ -195,7 +232,6 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
          the App Store app. The listing is public since 16 August 2026. -->
     <meta name="apple-itunes-app" content="app-id=6802084974" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
   <style is:global>
     .getapp-pill { display: inline-flex; align-items: center; gap: 6px;
       border: 1px solid var(--border); border-radius: 999px;
@@ -239,7 +275,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     ))}
   </nav>
 
-  <div id="drawer-overlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:40;"></div>
+  <div id="drawer-overlay" style="display:none; position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,.5); z-index:40;"></div>
   <aside id="drawer" style="position:fixed; top:0; right:-290px; width:280px; height:100vh; background:var(--panel);
     z-index:50; transition:right .25s ease; padding:22px; display:flex; flex-direction:column; gap:4px; box-shadow:-8px 0 30px rgba(0,0,0,.35);">
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
@@ -395,7 +431,6 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     · Part of <a href="https://azenha.ai">azenha.ai</a>
     · <a href="https://azenha.ai/apps/">All apps</a>
   </footer>
-<!-- Install prompt — the reference copy, inserted before 
 <script is:inline>
   // One audio element for the whole site, unlocked by the first tap.
   //
@@ -452,7 +487,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     };
   })();
 </script>
-</body>.
+<!-- Install prompt — the reference copy, inserted before </body>.
      Source of truth: ~/Projects/_stores/ios-install-hint.html
 
      One banner, two behaviours, because the platforms differ:
@@ -523,7 +558,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     window.addEventListener('beforeinstallprompt', function (e) {
       e.preventDefault();
       deferred = e;
-      txt.textContent = 'Install this as an app — it opens without a browser bar and works offline.';
+      txt.textContent = 'Install this as an app — it opens full-screen, without a browser bar.';
       go.hidden = false;
       el.hidden = false;
     });
@@ -543,8 +578,11 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 
     // iOS: no button exists, so point the way to it.
     var ua = navigator.userAgent;
-    var iOS = /iPhone|iPod|iPad/.test(ua) ||
-              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    // The iPad test (a "Mac" with touch points) also matched Android phones
+    // in some emulators, which then got the App Store offer; Android is ruled
+    // out by name.
+    var iOS = !/Android/.test(ua) && (/iPhone|iPod|iPad/.test(ua) ||
+              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
     // iPhone and iPad: the real app is in the App Store, so that is what the
     // hint offers — a home-screen shortcut to the site is the lesser thing.
     // Safari also shows its own banner (apple-itunes-app above); Chrome and

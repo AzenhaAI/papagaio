@@ -14,7 +14,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       Send <code>/link</code> to the <a href="https://t.me/papagaio_ebot">Telegram bot</a> and paste the code.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
-      <input id="tok" type="text" placeholder="paste the /link code"
+      <input id="tok" aria-label="Link code from the bot" type="text" placeholder="paste the /link code"
         style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
       <button class="btn" id="tok-save">Connect</button>

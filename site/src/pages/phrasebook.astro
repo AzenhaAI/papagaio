@@ -17,10 +17,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       181,000 sentence pairs from <a href="https://tatoeba.org">Tatoeba</a> (CC-BY).
       Type any Portuguese word — see how people actually use it.</p>
     <div style="display:flex; gap:8px;">
-      <input id="sq" type="search" placeholder="se calhar, saudade, dá para…"
-        style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      <input id="sq" aria-label="Search sentences" type="search" placeholder="se calhar, saudade, dá para…"
+        style="flex:1; min-width:0; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:8px 14px; font:inherit;" />
-      <select id="spair" style="background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+      <select id="spair" aria-label="Language pair" style="background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:8px 10px; font:inherit;">
         <option value="pt-en">PT → EN</option>
         <option value="pt-ru">PT → RU</option>
@@ -55,8 +55,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       let d;
       try {
         d = await (await fetch(`${EXAPI}?q=${encodeURIComponent(q)}&pair=${pair}&limit=15`)).json();
-      } catch { d = null; }
+      } catch { d = { error: 'network' }; }
       if (mine !== sseq) return;
+      if (d?.error) {
+        sres.innerHTML = `<p class="muted" style="font-size:13.5px;">${esc2(d.message || 'The sentence search is not answering right now — try again in a minute.')}</p>`;
+        return;
+      }
       sres.innerHTML = (d?.examples ?? []).map((e) => `
         <div style="padding:8px 0; border-bottom:1px solid var(--panel2); font-size:14.5px;">
           ${esc2(e.src)}

@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </p>
 
   <div class="panel" style="margin-top:20px;">
-    <textarea id="src" rows="6" maxlength="4000"
+    <textarea id="src" aria-label="Portuguese text to read" rows="6" maxlength="4000"
       placeholder="Cole aqui um texto em português…&#10;&#10;O elevador do prédio está avariado outra vez. O senhorio disse que vem amanhã tratar disto."
       style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
@@ -47,7 +47,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       “Learn this word” will put new ones straight into your review queue.
     </p>
     <div style="display:flex; gap:8px; flex-wrap:wrap;">
-      <input id="tok" type="text" placeholder="paste the /link code"
+      <input id="tok" aria-label="Link code from the bot" type="text" placeholder="paste the /link code"
         style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
       <button class="btn" id="tok-save">Save</button>
@@ -102,10 +102,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
           method: 'POST', headers: headers(), body: JSON.stringify({ text }),
         });
         const d = await r.json();
-        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — try again tomorrow.' : (d.error ?? r.status));
+        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — try again tomorrow.' : (d.message || 'The server is not answering right now — try again later.'));
         render(text, d);
       } catch (e) {
-        $('status').textContent = 'error: ' + e.message;
+        $('status').textContent = /JSON|token|fetch/i.test(e.message) ? 'No connection — try again in a moment.' : e.message;
       }
       $('go').disabled = false; $('spin').style.display = 'none';
     }
