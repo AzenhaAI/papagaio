@@ -59,9 +59,13 @@ console.log('wrote icon.svg → site/public/');
 
 // Safari and the iOS home screen ignore SVG favicons, so the raster fallbacks
 // are not optional if the tab is to show a bird rather than a blank page.
+//
+// On a home screen the web shortcut draws a smaller bird (0.5) than the app
+// (0.62), so someone with both can tell which is which at a glance. The tab
+// favicon keeps the full size: at 16px a smaller bird is only a dot.
 for (const px of [32, 180]) {
   const name = px === 180 ? 'apple-touch-icon.png' : `icon-${px}.png`;
-  await sharp(Buffer.from(rounded(S, flagBack(S) + parrot(S, 0.62))))
+  await sharp(Buffer.from(rounded(S, flagBack(S) + parrot(S, px === 180 ? 0.5 : 0.62))))
     .resize(px, px).png().toFile(join(WEB, name));
   console.log(`wrote ${name} (${px}px) → site/public/`);
 }
@@ -71,7 +75,8 @@ for (const px of [32, 180]) {
 // twice. The bird is drawn smaller here for the same reason — a maskable icon
 // can be cropped to the middle ~80%.
 for (const px of [192, 512]) {
-  await sharp(Buffer.from(svg(S, flagBack(S) + parrot(S, 0.5))))
+  // 0.42, not the app's 0.5 on Android: the same tell-them-apart rule.
+  await sharp(Buffer.from(svg(S, flagBack(S) + parrot(S, 0.42))))
     .resize(px, px).png().toFile(join(WEB, `icon-${px}.png`));
   console.log(`wrote icon-${px}.png (${px}px) → site/public/`);
 }

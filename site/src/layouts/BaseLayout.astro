@@ -191,10 +191,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; }
     h2 { font-size: 21px; margin: 34px 0 12px; }
   </style>
-    <!-- Smart App Banner: Safari's own strip, linking to the App Store.
-         Held back until the listing is public: a banner pointing at a
-         missing page reads as a broken product. -->
-    <!-- <meta name="apple-itunes-app" content="app-id=6802084974" /> -->
+    <!-- Smart App Banner: Safari's own strip at the top, "Open" or "Get" for
+         the App Store app. The listing is public since 16 August 2026. -->
+    <meta name="apple-itunes-app" content="app-id=6802084974" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="PapaGaio Portugal" />
   <style is:global>
@@ -544,11 +543,20 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     var ua = navigator.userAgent;
     var iOS = /iPhone|iPod|iPad/.test(ua) ||
               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    // iPhone and iPad: the real app is in the App Store, so that is what the
+    // hint offers — a home-screen shortcut to the site is the lesser thing.
+    // Safari also shows its own banner (apple-itunes-app above); Chrome and
+    // Firefox on iOS do not, and this covers them.
     if (iOS) {
-      txt.innerHTML = 'Install this as an app: tap <strong>Share</strong>, ' +
-                      'then <strong>Add to Home Screen</strong>.';
+      txt.innerHTML = '<strong>PapaGaio</strong> is in the App Store — free, ' +
+                      'with the dictionary offline.';
+      go.textContent = 'Get the app';
+      go.hidden = false;
+      go.onclick = function () {
+        location.href = 'https://apps.apple.com/app/id6802084974';
+      };
       // Not immediately: a hint in the first second reads as an ad.
-      setTimeout(function () { if (!deferred) el.hidden = false; }, 2500);
+      setTimeout(function () { el.hidden = false; }, 2500);
     }
   })();
 </script>
