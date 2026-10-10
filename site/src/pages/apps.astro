@@ -3,6 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Everywhere from '../components/Everywhere.astro';
 // Downloads go through our own hostname, which proxies the release assets:
 // a store-bound product does not put an account name on a download button.
+const APP_STORE = 'https://apps.apple.com/app/papagaio-portugal/id6802084974';
+// Flip when the Play listing is public: until then the badge shows "coming
+// soon" and links nowhere, because a Play URL 404s for an unreleased app and
+// a dead badge on a download page reads as a broken product.
+const PLAY_LIVE = false;
+const PLAY = 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio';
+const apple = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.8c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.6-1.3-.1-2.5.7-3.1.7-.7 0-1.7-.7-2.8-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.5 2.2 2.7 2.1 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7c1.2 0 1.9-1 2.6-2.1.8-1.2 1.1-2.3 1.2-2.4 0 0-2.7-1-2.7-3.4ZM14.3 6.6c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.6.7-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2Z"/></svg>';
+const play = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d7fe" d="M4.6 2.6a1 1 0 0 0-.5.9v17a1 1 0 0 0 .5.9l9.1-9.4-9.1-9.4Z"/><path fill="#00f076" d="m14.8 10.9 2.9-3-9.9-5.6 7 8.6Z"/><path fill="#ff3a44" d="m14.8 13.1-7 8.6 9.9-5.6-2.9-3Z"/><path fill="#ffd500" d="m18.9 10.9-2.4-1.4-3 3.5 3 3.5 2.4-1.4c.9-.5.9-1.7 0-2.2Z"/></svg>';
+const appStoreBadge = `<a class="store" href="${APP_STORE}" target="_blank" rel="noopener">${apple}<span><small>Download on the</small>App Store</span></a>`;
+const playBadge = PLAY_LIVE
+  ? `<a class="store" href="${PLAY}" target="_blank" rel="noopener">${play}<span><small>Get it on</small>Google Play</span></a>`
+  : `<span class="store soon-badge" title="The Google Play listing is in review">${play}<span><small>Coming soon to</small>Google Play</span></span>`;
 ---
 <BaseLayout
   title="Apps — PapaGaio"
@@ -12,6 +24,8 @@ import Everywhere from '../components/Everywhere.astro';
     The same account everywhere: pair once with the bot's /link code and your
     progress follows you. Free on every platform — that is the whole point.
   </p>
+
+  <div class="stores" data-unfold set:html={appStoreBadge + playBadge} />
 
   <style is:global>
     .appcard {
@@ -23,6 +37,28 @@ import Everywhere from '../components/Everywhere.astro';
     .appcard h3 { margin: 0 0 2px; font-size: 16.5px; }
     .appcard p { margin: 0 0 8px; color: var(--muted); font-size: 13.5px; }
     .appcard .soon { color: var(--muted); font-size: 13.5px; }
+    /* The stores' own badge shape — black, the store's logo, two lines — is
+       what people recognise and trust; a green button saying "App Store" is not. */
+    .stores { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 6px; }
+    .appcard .stores { margin: 4px 0 10px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #000; color: #fff; text-decoration: none;
+      border: 1px solid #555; border-radius: 12px; padding: 8px 16px 8px 12px;
+      font: 600 19px/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+      white-space: nowrap; min-width: 168px;
+    }
+    .store:hover { border-color: #aaa; text-decoration: none; }
+    .store svg { width: 30px; height: 30px; flex: 0 0 auto; }
+    .store small { display: block; font-size: 11px; font-weight: 500; letter-spacing: .02em; opacity: .9; }
+    .store.soon-badge { opacity: .55; cursor: default; }
+    .store.soon-badge:hover { border-color: #555; }
+    @media (max-width: 420px) {
+      .stores { flex-wrap: nowrap; }
+      .store { flex: 1 1 0; min-width: 0; font-size: 16px; padding: 7px 10px; gap: 8px; }
+      .store svg { width: 24px; height: 24px; }
+      .store small { font-size: 9.5px; }
+    }
   </style>
 
   <div style="margin-top:22px;">
@@ -30,8 +66,10 @@ import Everywhere from '../components/Everywhere.astro';
       <span class="em">🤖</span>
       <div>
         <h3>Android</h3>
-        <p>Direct APK — installs outside Google Play; allow "unknown apps" when asked. Play Store listing is on its way.</p>
-        <a class="btn" href="/dl/PapaGaio.apk">Download APK · 19 MB</a>
+        <p>Google Play is reviewing the listing. Until it is public, the same
+          app installs from the APK below; allow "unknown apps" when asked.</p>
+        <div class="stores" set:html={playBadge} />
+        <a class="btn" href="/dl/PapaGaio.apk">Download APK · 25 MB</a>
       </div>
     </div>
 
@@ -41,13 +79,7 @@ import Everywhere from '../components/Everywhere.astro';
         <h3>iPhone &amp; iPad</h3>
         <p>One universal app for both — the dictionary and the verb tables were
           built for that screen.</p>
-        <a class="btn" href="https://apps.apple.com/app/papagaio-portugal/id6802084974">Download on the App Store</a>
-        <!-- The store link is written but hidden: an App Store URL 404s until
-             the app is actually released, and a dead button on a download page
-             reads as a broken product. Swap the two styles at release. -->
-        <a class="btn" href="https://apps.apple.com/app/id6802084974"
-          style="display:none;">Download on the App Store</a>
-        <a class="btn" href="mailto:agent@azenha.ai?subject=PapaGaio%20for%20iOS" style="background:var(--panel2); color:var(--text);">Request by email</a>
+        <div class="stores" set:html={appStoreBadge} />
       </div>
     </div>
 
@@ -55,7 +87,7 @@ import Everywhere from '../components/Everywhere.astro';
       <span class="em">💻</span>
       <div>
         <h3>macOS</h3>
-        <p>The full app as a Mac citizen — sidebar, keyboard shortcuts, the window where you left it. Unsigned build: right-click → Open on first launch.</p>
+        <p>The full app as a Mac citizen — sidebar, keyboard shortcuts, the window where you left it. Signed and notarised by Apple: it opens with a double click, and tells you itself when a newer version is out.</p>
         <a class="btn" href="/dl/PapaGaio-mac.dmg">Download for macOS · 22 MB</a>
       </div>
     </div>
@@ -65,15 +97,7 @@ import Everywhere from '../components/Everywhere.astro';
       <div>
         <h3>Windows</h3>
         <p>Unzip anywhere and run <code>papagaio_app.exe</code>; SmartScreen will want one reassuring click.</p>
-        <a class="btn" href="/dl/PapaGaio-windows.zip">Download for Windows · 13 MB</a>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">🖥</span>
-      <div>
-        <h3>iPad</h3>
-        <p class="soon">The same universal app, already built for it — it arrives with the App Store release.</p>
+        <a class="btn" href="/dl/PapaGaio-windows.zip">Download for Windows · 19 MB</a>
       </div>
     </div>
 

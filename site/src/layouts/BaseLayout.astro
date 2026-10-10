@@ -280,7 +280,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       var main = document.querySelector('main');
       if (!main) return;
       var kids = Array.prototype.slice.call(main.children);
-      var interactive = 'input, textarea, select, button';
+      // [data-unfold] marks content that must stay in view, like the store
+      // badges on the apps page: links, not controls, but the point of the page.
+      var interactive = 'input, textarea, select, button, [data-unfold]';
       var idx = -1;
       for (var i = 0; i < kids.length; i++) {
         var k = kids[i];
