@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Privacy — PapaGaio" desc="What PapaGaio stores, what it does not, and how to delete everything: no ads, no analytics SDK in the apps, no email needed.">
   <h1>Privacy</h1>
-  <p class="muted">Last updated: 10 October 2026</p>
+  <p class="muted">Last updated: 12 October 2026</p>
 
   <h2>The short version</h2>
   <p style="max-width:640px;">
@@ -14,7 +14,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <h2>Website</h2>
   <ul class="muted" style="max-width:640px; line-height:1.9;">
     <li>Your translation history is stored <strong style="color:var(--text)">only in your browser</strong> (localStorage). We never see it.</li>
-    <li>Text you translate is sent to our server and forwarded to Groq (US) for processing. It is not stored on our side.</li>
+    <li>Text you translate is sent to our server and forwarded to Groq (US) for processing — or, when Groq is busy, to Cloudflare Workers AI. It is not stored on our side.</li>
+    <li>What you say to the AI Coach is sent to Anthropic (Claude, US) to write the coach's reply and correct your Portuguese; when Claude is unavailable, to Groq or Cloudflare Workers AI instead. Anthropic does not use API requests to train its models.</li>
     <li>A daily request counter per IP address exists purely to prevent abuse; it holds no content.</li>
   </ul>
 
@@ -44,9 +45,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>Third parties</h2>
   <ul class="muted" style="max-width:640px; line-height:1.9;">
-    <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database.</li>
+    <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database; Workers AI as a backup for translation and the coach.</li>
+    <li><strong style="color:var(--text)">Anthropic</strong> — the AI Coach's replies and corrections (Claude). Processing happens in the United States.</li>
     <li><strong style="color:var(--text)">Groq</strong> — translation, dialog, speech recognition and reading text from photos. Processing happens in the United States.</li>
-    <li><strong style="color:var(--text)">Microsoft Edge TTS</strong> — audio synthesis (receives only the text to be spoken).</li>
+    <li><strong style="color:var(--text)">Microsoft Edge TTS</strong> — audio synthesis (receives only the text to be spoken). When it is unavailable, your device's own voice speaks instead, and nothing leaves the device.</li>
   </ul>
 
   <h2>Your data, your call</h2>

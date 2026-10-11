@@ -5,7 +5,7 @@
 // through coachTurn, so the personality, the level and the "prefer words the
 // learner already knows" rule can never diverge between the two clients.
 
-import { chatLive as chat } from './llm.js';
+import { chatCoach as chat } from './llm.js';
 
 // Each scene ships its opening line, that line in English, and two things you
 // could say back. The opening turn makes no model call, so without these a

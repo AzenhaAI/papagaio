@@ -66,3 +66,62 @@ export async function chatLive(env, messages, { json = false, maxTokens = 1200 }
   if (spare) return spare;
   return groqChat(env, messages, { json, small: true });
 }
+
+// The coach: Claude Haiku first, when ANTHROPIC_API_KEY is set.
+//
+// The coach is where quality shows: it corrects the learner's own sentence,
+// and a Brazilian construction offered as the fix ("Preciso comprar" for pt-PT
+// "Preciso de comprar") teaches the wrong language. Its traffic is a few
+// hundred turns a day, small enough to pay for. The key lives in its own
+// Anthropic workspace with a monthly limit: a spent balance, an expired key or
+// a timeout is not an error the learner sees — the turn goes to the free lane.
+export const COACH_MODEL = 'claude-haiku-5-5';
+
+/** OpenAI-style messages → Anthropic's system + alternating user/assistant. */
+export function toAnthropic(messages) {
+  const system = messages.filter((m) => m.role === 'system').map((m) => m.content).join('\n\n');
+  const turns = [];
+  for (const m of messages) {
+    if (m.role === 'system') continue;
+    const role = m.role === 'assistant' ? 'assistant' : 'user';
+    const content = String(m.content ?? '');
+    if (turns.length && turns[turns.length - 1].role === role) turns[turns.length - 1].content += `\n${content}`;
+    else turns.push({ role, content });
+  }
+  // The scene opens with the coach's line; the API wants the learner first.
+  if (!turns.length || turns[0].role !== 'user') turns.unshift({ role: 'user', content: '(The scene begins.)' });
+  return { system, messages: turns };
+}
+
+async function chatClaude(env, messages, { json, maxTokens }) {
+  const { system, messages: turns } = toAnthropic(messages);
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'x-api-key': env.ANTHROPIC_API_KEY,
+      'anthropic-version': '2023-06-01',
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify({ model: env.COACH_MODEL || COACH_MODEL, max_tokens: maxTokens, system, messages: turns }),
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!res.ok) throw new Error(`claude ${res.status}: ${(await res.text()).slice(0, 160)}`);
+  const out = await res.json();
+  const text = (out.content ?? []).filter((c) => c?.type === 'text').map((c) => c.text).join('').trim();
+  if (!json) return text || null;
+  return jsonText(text);
+}
+
+export async function chatCoach(env, messages, { json = false, maxTokens = 1200 } = {}) {
+  if (env.ANTHROPIC_API_KEY && env.COACH_LANE !== 'free') {
+    try {
+      const text = await chatClaude(env, messages, { json, maxTokens });
+      if (text) return text;
+      console.log('coach: claude gave no usable answer');
+    } catch (e) {
+      // Why Claude did not answer, never what the learner said.
+      console.log(`coach: claude skipped: ${String(e?.message ?? e).slice(0, 160)}`);
+    }
+  }
+  return chatLive(env, messages, { json, maxTokens });
+}
