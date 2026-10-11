@@ -3,7 +3,7 @@
 // Portuguese. We never do, and we flag every word where the two diverge —
 // that gap is exactly what gets you blank stares in a Funchal bakery.
 
-import { chat } from './groq.js';
+import { chatLive as chat } from './llm.js';
 
 // The European Portuguese guarantee, shared with the photo translator in
 // vision.js so the two can never drift into different dialects.
