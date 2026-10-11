@@ -406,7 +406,14 @@ export async function handleApi(request, env, path) {
   // up live and kept from then on.
   if (path === '/api/lookup' && request.method === 'GET') {
     const q = new URL(request.url).searchParams.get('q') ?? '';
-    if (!q.trim()) return json({ error: 'q required' }, 400);
+    // A row tapped in the search results arrives by id: by name alone, "para"
+    // opened the deck phrase "para a semana" and "house" opened a casa.
+    const byId = new URL(request.url).searchParams.get('id');
+    if (!q.trim() && !byId) return json({ error: 'q required' }, 400);
+    const picked = byId
+      ? await env.DB.prepare(`SELECT * FROM cards WHERE id = ?1 AND (owner IS NULL OR owner = 'lex')`).bind(byId).first()
+      : null;
+    if (byId && !picked && !q.trim()) return json({ error: 'not found' }, 404);
 
     // The deck first: its cards are hand-checked and carry audio. Matching runs
     // on the folded column, so cafe, café and cafe' are the same question.
@@ -416,15 +423,17 @@ export async function handleApi(request, env, path) {
     // below is for the rest, and it read the deck end to end for every
     // article; measured at two to three seconds on the Mac, which the
     // reader experienced as the dictionary not working.
-    const exact = await env.DB.prepare(
-      `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
-         AND (fold = ?1 OR fold LIKE ?2)
-       ORDER BY freq LIMIT 1`
-    ).bind(fq, `${fq} %`).first();
+    const exact = picked
+      ? (picked.owner === null ? picked : null)
+      : await env.DB.prepare(
+        `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
+           AND (fold = ?1 OR fold LIKE ?2)
+         ORDER BY freq LIMIT 1`
+      ).bind(fq, `${fq} %`).first();
     // Whole words beat prefixes: "cat" is gato (trans word "cat"), then only
     // catorze (prefix); and never estar via "loCATed". LIKE has no \b, so the
     // tiers are spelled out by hand.
-    const hit = exact ?? await env.DB.prepare(
+    const hit = exact ?? (picked ? null : await env.DB.prepare(
       `SELECT * FROM cards WHERE owner IS NULL AND pos IS NOT 'drill'
          AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4 OR fold LIKE ?5 OR fold LIKE ?6)
        ORDER BY CASE
@@ -433,17 +442,34 @@ export async function handleApi(request, env, path) {
            WHEN fold LIKE ?5 THEN 2                 -- term prefix
            ELSE 3 END,                              -- word-start anywhere
          freq LIMIT 1`
-    ).bind(fq, `${fq} %`, `% ${fq} %`, `% ${fq}`, `${fq}%`, `% ${fq}%`).first();
+    ).bind(fq, `${fq} %`, `% ${fq} %`, `% ${fq}`, `${fq}%`, `% ${fq}%`).first());
 
-    const exampleLines = async (term, ui2) => {
+    // Example sentences cost a scan of the whole examples table — no index
+    // helps a word in the middle of a sentence. With ORDER BY length every
+    // look-up read all ~90k rows: 45 look-ups on 11.10 read 4M rows and, with
+    // the Russian search, emptied the day's allowance. Without the ORDER BY
+    // the scan stops at the third match, which for a common word is within a
+    // few hundred rows; a rare word (rank past 20,000, or none) seldom has a
+    // Tatoeba line at all and is not scanned; and an answer is kept in the
+    // edge cache for a month, so a word is scanned at most once per colo.
+    const exampleLines = async (term, ui2, freq) => {
+      if (!(freq > 0 && freq <= 20000)) return [];
       const pair = ui2 === 'ru' ? 'pt-ru' : 'pt-en';
       const w = fold(term.replace(/^([oa]s? |um |uma )/, ''));
+      const key = new Request(`https://cache.papagaio/examples/${pair}/${encodeURIComponent(w)}`);
+      const cache = typeof caches !== 'undefined' ? caches.default : null;
+      const kept = cache ? await cache.match(key).catch(() => null) : null;
+      if (kept) return kept.json();
       const { results } = await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE pair = ?1
            AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4)
-         ORDER BY length(src) LIMIT 3`
+         LIMIT 3`
       ).bind(pair, `${w} %`, `% ${w} %`, `% ${w}`).all().catch(() => ({ results: [] }));
-      return results.map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
+      const lines = (results ?? []).map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
+      if (cache) await cache.put(key, new Response(JSON.stringify(lines), {
+        headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=2592000' },
+      })).catch(() => {});
+      return lines;
     };
     const uiLang = new URL(request.url).searchParams.get('ui') === 'ru' ? 'ru' : 'en';
 
@@ -452,14 +478,14 @@ export async function handleApi(request, env, path) {
       // carries the Tatoeba lines just fine.
       const entry = (await ensureEntry(env, hit).catch(() => null))
         ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
-      entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang)];
+      entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang, hit.freq ?? 1)];
       return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term) });
     }
 
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
     // like "gato" costs nothing and answers instantly — the model is for the
     // tail this misses, not for the middle of the language.
-    const lexExact = await env.DB.prepare(
+    const lexExact = picked?.owner === 'lex' ? picked : await env.DB.prepare(
       `SELECT * FROM cards WHERE owner = 'lex' AND (fold = ?1 OR fold LIKE ?2)
        ORDER BY CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
     ).bind(fq, `${fq} %`).first();
@@ -478,7 +504,7 @@ export async function handleApi(request, env, path) {
           entry.meanings.push({ trans: d, note: 'definição em português' });
         }
       }
-      if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang)];
+      if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang, lex.freq)];
       return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term) });
     }
 
@@ -526,6 +552,36 @@ export async function handleApi(request, env, path) {
     // than by the planner. Anything else (Russian input, a word looked for in
     // the middle of a phrase) falls through to the wide query below, which is
     // now rare enough to afford.
+    // A conjugated form leads with its verb even when the spelling exists as a
+    // headword of its own: "fui" was only Brazilian slang for "bye!", "foi"
+    // was "done!", "tinha" was ringworm — real rows, so the lemma resolver
+    // below never ran, and the learner took the homonym for the meaning.
+    const withVerb = async (rows) => {
+      const v = course === 'pt' && !s.includes(' ') ? verbForms().get(s) : null;
+      if (!v || v.word === s) return { q: s, words: rows };
+      const f = fold(v.word);
+      const { results: lemma } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
+          WHERE owner = 'lex' AND course = ?2 AND fold = ?1 ORDER BY freq LIMIT 3`
+      ).bind(f, course).all().catch(() => ({ results: [] }));
+      if (!lemma?.length) return { q: s, words: rows };
+      // But "para" is the preposition before it is parar, and "casa" is a house
+      // before it is casar. The verb leads when the spelling's own rows are a
+      // letter name or an interjection, or when the verb is at least about as
+      // common as they are; otherwise it comes straight after them, and the
+      // page says either way that the form belongs to it.
+      const seen = new Set(lemma.map((r) => r.id));
+      const rest = rows.filter((r) => !seen.has(r.id));
+      const own = rest.filter((r) => fold(r.term) === s);
+      const FUNCTION = /^(prep|conj|pron|adv|art|det|num|contraction)/;
+      const minor = (r) => r.pos === 'interj' || /^(the |an? )?(arabic |greek |hebrew )?letter\b/i.test(r.trans ?? '');
+      const best = Math.min(...own.map((r) => r.freq ?? 1e9));
+      const lead = !own.length
+        || own.every(minor)
+        || (!own.some((r) => FUNCTION.test(r.pos ?? '')) && (lemma[0].freq ?? 1e9) <= best * 4);
+      const words = lead ? [...lemma, ...rest] : [...own, ...lemma, ...rest.filter((r) => !own.includes(r))];
+      return { q: s, words: words.slice(0, 25), from_form: { form: s, ...v, lead } };
+    };
     if (!/[а-яё]/.test(raw)) {
       const last = s.charCodeAt(s.length - 1);
       const upper = s.slice(0, -1) + String.fromCharCode(last + 1);
@@ -542,7 +598,7 @@ export async function handleApi(request, env, path) {
           return f === s ? 0 : f.startsWith(`${s} `) ? 1 : 2;
         };
         rows.sort((a, b) => tier(a) - tier(b) || (a.freq ?? 1e9) - (b.freq ?? 1e9));
-        return json({ q: s, words: rows.slice(0, 25) });
+        return json(await withVerb(rows.slice(0, 25)));
       }
     }
 
@@ -555,6 +611,19 @@ export async function handleApi(request, env, path) {
     // pack they ship with, so what arrives here is the tail — worth a scan,
     // but only once the query is a word.
     if (s.length < 3) return json({ q: s, words: [] });
+
+    // The wide query reads ~140k rows; the same query answered once is kept in
+    // the edge cache for a month (the lexicon changes by release, not by hour).
+    const wideKey = new Request(`https://cache.papagaio/search/${course}/${encodeURIComponent(raw)}`);
+    const edge = typeof caches !== 'undefined' ? caches.default : null;
+    const keptWide = edge ? await edge.match(wideKey).catch(() => null) : null;
+    if (keptWide) return json(await keptWide.json());
+    const answer = async (body) => {
+      if (edge) await edge.put(wideKey, new Response(JSON.stringify(body), {
+        headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=2592000' },
+      })).catch(() => {});
+      return json(body);
+    };
 
     // Matching happens on the accent-blind column: "cao" must find "cão" —
     // and the stored Russian keeps its stress marks (ко́шка), so the acute is
@@ -579,7 +648,7 @@ export async function handleApi(request, env, path) {
       const f = fold(r.term);
       return f === s || f.startsWith(`${s} `);
     });
-    if (exact) return json({ q: s, words: results });
+    if (exact) return answer(await withVerb(results));
 
     for (const lemma of lemmaCandidates(s, course)) {
       const f = fold(lemma.word);
@@ -591,14 +660,14 @@ export async function handleApi(request, env, path) {
       if (byLemma?.length) {
         const seen = new Set(byLemma.map((r) => r.id));
         const rest = (results ?? []).filter((r) => !seen.has(r.id));
-        return json({
+        return answer({
           q: s,
           words: [...byLemma, ...rest].slice(0, 25),
           from_form: { form: s, ...lemma },
         });
       }
     }
-    return json({ q: s, words: results ?? [] });
+    return answer({ q: s, words: results ?? [] });
   }
 
   // Real sentences containing a word, with their translation — Tatoeba pairs.
