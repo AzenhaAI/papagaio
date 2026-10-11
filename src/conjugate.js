@@ -270,10 +270,65 @@ const TER_PRESENTE = ['tenho', 'tens', 'tem', 'temos', 'têm'];
 const IR_PRESENTE = ['vou', 'vais', 'vai', 'vamos', 'vão'];
 
 /** Full conjugation for one infinitive. Returns null for non-verbs. */
+/**
+ * Verbs whose stem ends in a vowel: cair, trair, incluir, construir, moer.
+ *
+ * The regular endings meet that vowel and need the accent that keeps them two
+ * syllables — caímos, incluíram, moía — and the present has its own shape:
+ * caio/cais/cai, incluis/inclui, móis/mói. Generated from the -ir and -er
+ * tables these came out as "cao caes cae", "inclues" and "moes", which the
+ * verbs page and the offline form table both showed as Portuguese.
+ * -guir/-quir are not among them: that u is silent (seguir, distinguir).
+ */
+function hiatus(verb) {
+  if (verb === 'crer') {
+    return {
+      presente: ['creio', 'crês', 'crê', 'cremos', 'creem'],
+      presente_conj: ['creia', 'creias', 'creia', 'creiamos', 'creiam'],
+    };
+  }
+  let m = verb.match(/^(.*[^gq]u|.*a)ir$/);
+  if (m) {
+    const st = m[1];
+    const isA = st.endsWith('a');
+    const presente = isA
+      ? [st + 'io', st + 'is', st + 'i', st + 'ímos', st + 'em']
+      : [st + 'o', st + 'is', st + 'i', st + 'ímos', st + 'em'];
+    // construir and destruir open the vowel where the stress falls on it.
+    const cons = verb.match(/^(.*(?:constr|destr))uir$/);
+    return {
+      presente: cons
+        ? [cons[1] + 'uo', cons[1] + 'óis', cons[1] + 'ói', cons[1] + 'uímos', cons[1] + 'oem']
+        : presente,
+      pps: [st + 'í', st + 'íste', st + 'iu', st + 'ímos', st + 'íram'],
+      imperfeito: [st + 'ía', st + 'ías', st + 'ía', st + 'íamos', st + 'íam'],
+      presente_conj: isA
+        ? [st + 'ia', st + 'ias', st + 'ia', st + 'iamos', st + 'iam']
+        : [st + 'a', st + 'as', st + 'a', st + 'amos', st + 'am'],
+      imperfeito_conj: [st + 'ísse', st + 'ísses', st + 'ísse', st + 'íssemos', st + 'íssem'],
+      futuro_conj: [verb, st + 'íres', verb, verb + 'mos', st + 'írem'],
+      participio: st + 'ído',
+    };
+  }
+  m = verb.match(/^(.*o)er$/);
+  if (m) {
+    const st = m[1];
+    const sv = st.slice(0, -1);
+    return {
+      presente: [st + 'o', sv + 'óis', sv + 'ói', st + 'emos', st + 'em'],
+      pps: [st + 'í', st + 'este', st + 'eu', st + 'emos', st + 'eram'],
+      imperfeito: [st + 'ía', st + 'ías', st + 'ía', st + 'íamos', st + 'íam'],
+      participio: st + 'ído',
+    };
+  }
+  return null;
+}
+
 export function conjugate(infinitive) {
   const verb = String(infinitive || '').trim().toLowerCase();
   const m = verb.match(/^(.*?)(ar|er|ir)$/);
-  const irr = IRREGULAR[verb];
+  const hi = hiatus(verb);
+  const irr = IRREGULAR[verb] ? { ...hi, ...IRREGULAR[verb] } : hi;
   if (!m && verb !== 'pôr') return null;
 
   const stem = verb === 'pôr' ? 'po' : m[1];
