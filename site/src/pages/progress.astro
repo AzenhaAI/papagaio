@@ -49,7 +49,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <style is:global>
     .viz-root {
       --mark: var(--accent);
+      --grid: rgba(232,242,234,.12);
       --grid: color-mix(in srgb, var(--text) 12%, transparent);
+      --axis: rgba(232,242,234,.28);
       --axis: color-mix(in srgb, var(--text) 28%, transparent);
     }
     .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:18px; }

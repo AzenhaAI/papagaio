@@ -88,7 +88,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .msg .b { padding:10px 14px; border-radius:12px; display:inline-block; }
     .coach .b { background:var(--panel2); }
     .me { text-align:right; margin-left:auto; }
-    .me .b { background:color-mix(in srgb, var(--accent) 22%, var(--panel2)); }
+    .me .b { background:rgba(52,209,123,.22); background:color-mix(in srgb, var(--accent) 22%, var(--panel2)); }
     .note { font-size:13.5px; color:var(--accent2); margin-top:4px; }
     .speak { background:none; border:0; cursor:pointer; font-size:15px; padding:0 4px; }
   </style>
@@ -126,10 +126,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             body: JSON.stringify({ courses: 'pt,en' }),
           });
           const d = await r.json();
+          if (d.error === 'offline') throw new Error('offline');
           if (!d.token) throw new Error(d.message ?? d.error ?? 'could not start a session');
           localStorage.setItem(TOKKEY, d.token);
         } catch (e) {
-          $('gate-msg').textContent = 'The server is not answering right now. ' + (/JSON|token|fetch|network/i.test(e.message || '') ? '' : e.message + ' ') + 'Try again later — the dictionary, verbs and translator still work.';
+          $('gate-msg').textContent = (e.message === 'offline' || !navigator.onLine)
+            ? 'No connection. The AI Coach needs the internet — the phrasebook and the 1,100 core words of the dictionary work without it.'
+            : 'The server is not answering right now. ' + (/JSON|token|fetch|network/i.test(e.message || '') ? '' : e.message + ' ') + 'Try again later — the dictionary, verbs and translator still work.';
           return;
         }
       }
@@ -252,6 +255,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         };
         rec.start();
         recording = true;
+        $('mic').style.background = 'rgba(232,69,60,.4)';
         $('mic').style.background = 'color-mix(in srgb, var(--red) 40%, var(--panel2))';
         $('micstate').textContent = '🔴 recording — tap 🎙 again to stop';
       } catch {

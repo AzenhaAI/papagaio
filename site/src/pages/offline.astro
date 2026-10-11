@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<BaseLayout title="Offline — PapaGaio" desc="PapaGaio without a connection: what still works.">
+  <h1>No connection</h1>
+  <p class="muted" style="max-width:600px;">
+    This page has not been saved on this device yet. What works without the
+    internet:
+  </p>
+  <ul style="line-height:2;">
+    <li><a href={`${base}/dictionary/`}>Dictionary</a> — the teaching deck, 1,100+ words with meanings</li>
+    <li><a href={`${base}/phrasebook/`}>Phrasebook</a> — the phrases people actually say</li>
+    <li>Any page you have opened before, as you last saw it</li>
+  </ul>
+  <p class="muted" style="max-width:600px;">
+    The translator, the AI Coach and your cards' schedule think on the server
+    and come back with the connection. The <a href={`${base}/apps/`}>apps</a>
+    carry the full 110,000-entry dictionary offline.
+  </p>
+  <button class="btn" onclick="location.reload()">Try again</button>
+</BaseLayout>

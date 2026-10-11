@@ -211,6 +211,13 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       header.site #burger { margin-left: 0; flex: 0 0 auto; }
     }
     header.site #burger { margin-left: 4px; }
+    /* Listen buttons were a bare 🔊 glyph, 20-26px across: under a thumb on a
+       phone they were easy to miss. 40px is the floor, whatever the page. */
+    button.say, button.exspeak, button.speak,
+    button[onclick*="pgPlayUrl"], button[onclick*="playTts"] {
+      min-width: 40px; min-height: 40px;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
     .pg-tabbar { display: none; }
     /* One prompt at a time: three cards stacked over a 320-point screen read as
        a wall. While the consent card is up, the install prompts wait. */
@@ -238,7 +245,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       .pg-tabbar a span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
       .pg-tabbar a svg { width: 22px; height: 22px; box-sizing: content-box; fill: currentColor; padding: 3px 10px; border-radius: 14px; }
       .pg-tabbar a.on { color: var(--accent); }
-      .pg-tabbar a.on svg { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+      .pg-tabbar a.on svg { background: rgba(52,209,123,.16); background: color-mix(in srgb, var(--accent) 16%, transparent); }
       .pg-tabbar a:hover { text-decoration: none; }
       /* What floats at the bottom of a page sits above the bar. */
       #consent { bottom: calc(14px + 62px + env(safe-area-inset-bottom)) !important; }
@@ -286,6 +293,21 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   </style>
 </head>
 <body>
+  <!-- Shown only without a connection: says why things are quiet instead of
+       leaving panels that look broken. -->
+  <div id="pg-offline" hidden style="position:sticky; top:3px; z-index:65; background:var(--warn); color:#1a1205;
+       font-size:13.5px; font-weight:600; text-align:center; padding:6px 12px;">
+    No connection — pages and words you opened before still work.
+  </div>
+  <script is:inline>
+    (function () {
+      var bar = document.getElementById('pg-offline');
+      function paint() { bar.hidden = navigator.onLine !== false; }
+      window.addEventListener('online', paint);
+      window.addEventListener('offline', paint);
+      paint();
+    })();
+  </script>
   <header class="site">
     <a class="logo" href={`${base}/`}>Papa<span>Gaio</span></a>
     <nav>

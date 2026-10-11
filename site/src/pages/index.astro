@@ -9,8 +9,8 @@ import Everywhere from '../components/Everywhere.astro';
     // The marketing landing stays reachable at /?home (linked from the menu).
     if (!location.search.includes('home')) location.replace('/papagaio/translate/');
   </script>
-  <section style="background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
-    border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
+  <section style="background:var(--panel); background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
+    border:1px solid rgba(52,209,123,.35); border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
     padding:28px 26px; margin-bottom:34px;">
     <div class="muted" style="font-size:13px; letter-spacing:.06em; text-transform:uppercase;">
       🤖 AI · live · free forever</div>
@@ -34,12 +34,12 @@ import Everywhere from '../components/Everywhere.astro';
     </div>
   </section>
   <style is:global>
-    .hero-chip { background:var(--panel2); border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+    .hero-chip { background:var(--panel2); border:1px solid rgba(52,209,123,.3); border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
       border-radius:20px; padding:5px 13px; font-size:13.5px; color:var(--text); }
   </style>
 
   <div class="tilegrid">
-    <a class="tile" href="/papagaio/coach/" style="border-color: color-mix(in srgb, var(--accent) 45%, transparent);">
+    <a class="tile" href="/papagaio/coach/" style="border-color: rgba(52,209,123,.45); border-color: color-mix(in srgb, var(--accent) 45%, transparent);">
       <span class="tile-emoji">🎭</span><strong>AI Coach</strong>
       <span class="muted">roleplay the café, the bank, AIMA — voice in, voice out</span>
     </a>
@@ -142,8 +142,8 @@ import Everywhere from '../components/Everywhere.astro';
       cursor:pointer; margin:0 8px 8px 0;
     }
     .qopt:hover { border-color:var(--accent); }
-    .qopt.right { background:color-mix(in srgb, var(--accent) 25%, var(--panel2)); }
-    .qopt.wrong { background:color-mix(in srgb, var(--red) 25%, var(--panel2)); }
+    .qopt.right { background:rgba(52,209,123,.25); background:color-mix(in srgb, var(--accent) 25%, var(--panel2)); }
+    .qopt.wrong { background:rgba(232,69,60,.25); background:color-mix(in srgb, var(--red) 25%, var(--panel2)); }
   </style>
 
   <script>
