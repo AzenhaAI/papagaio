@@ -128,6 +128,32 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     </>
   )}
   <script is:inline>
+    // One way in for a /link code, used by every page that has a code box.
+    // The code is checked before anything is stored: a typo used to overwrite
+    // the browser's own account and, on the next 401, delete it for good. The
+    // account it replaces is kept under pg_token_prev, so nothing studied here
+    // is ever unreachable.
+    window.pgUseCode = function (code) {
+      code = String(code || '').trim();
+      var cur = null;
+      try { cur = localStorage.getItem('pg_token'); } catch (e) {}
+      if (!code) return Promise.resolve({ ok: false, msg: 'Paste the code first.' });
+      if (code === cur) return Promise.resolve({ ok: true, msg: 'Already connected with this code.' });
+      return fetch('/api/stats', { headers: { 'x-device-token': code } }).then(function (r) {
+        if (r.status === 401 || r.status === 403 || r.status === 404) return { ok: false, msg: 'That code did not work — check it and try again. Nothing was changed.' };
+        if (!r.ok) return { ok: false, msg: 'The server is not answering right now — try again in a minute. Nothing was changed.' };
+        if (cur && !confirm('Switch this browser to that account? What you practised here so far stays on the server under the old account.')) return { ok: false, msg: '' };
+        try {
+          if (cur) localStorage.setItem('pg_token_prev', cur);
+          localStorage.setItem('pg_token', code);
+        } catch (e) {}
+        return { ok: true, msg: 'Connected.' };
+      }, function () {
+        return { ok: false, msg: navigator.onLine ? 'The server is not answering right now — try again in a minute. Nothing was changed.' : 'No connection — try again when you are online. Nothing was changed.' };
+      });
+    };
+  </script>
+  <script is:inline>
     // Theme before first paint — no flash.
     // A theme chosen in Settings wins; otherwise the device's own setting.
     const saved = localStorage.getItem('pg_theme');
@@ -252,7 +278,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       /* azenha.ai's own "Get the app for Android" strip (added by the site's
          middleware) sits above the bar, not over it. */
       #az-apk { bottom: calc(62px + env(safe-area-inset-bottom)) !important; }
+      /* The menu is taller than a phone: it scrolls, and dvh keeps Safari's
+         toolbars from cutting its end off. */
       #drawer { height: calc(100vh - 62px - env(safe-area-inset-bottom)) !important; }
+      @supports (height: 100dvh) { #drawer { height: calc(100dvh - 62px - env(safe-area-inset-bottom)) !important; } }
     }
     /* The narrowest phones (iPhone SE, 320 pt): all six, labels a touch smaller. */
     @media (max-width: 360px) { .pg-tabbar a { font-size: 9.5px; } .pg-tabbar a svg { padding: 3px 8px; } }
@@ -346,7 +375,8 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 
   <div id="drawer-overlay" style="display:none; position:fixed; top:0; right:0; bottom:0; left:0; background:rgba(0,0,0,.5); z-index:40;"></div>
   <aside id="drawer" style="position:fixed; top:0; right:-290px; width:280px; height:100vh; background:var(--panel);
-    z-index:50; transition:right .25s ease; padding:22px; display:flex; flex-direction:column; gap:4px; box-shadow:-8px 0 30px rgba(0,0,0,.35);">
+    z-index:50; transition:right .25s ease; padding:22px; display:flex; flex-direction:column; gap:4px; box-shadow:-8px 0 30px rgba(0,0,0,.35);
+    overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;">
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
       <strong style="font-size:18px;">Menu</strong>
       <button id="drawer-close" aria-label="Close" style="background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer;">✕</button>

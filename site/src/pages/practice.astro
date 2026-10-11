@@ -98,9 +98,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     let deckCache = null; // for distractors
     let done = 0, ok = 0;
 
-    $('tok-save').onclick = () => {
-      const v = $('tok').value.trim();
-      if (v) { localStorage.setItem(TOKKEY, v); boot(); }
+    $('tok-save').onclick = async () => {
+      const res = await window.pgUseCode($('tok').value);
+      if (res.ok) { $('tok').value = ''; boot(); } else if (res.msg) $('gate-msg').textContent = res.msg;
     };
     document.querySelectorAll('.cbtn').forEach((b) => b.onclick = () => {
       course = b.dataset.c;

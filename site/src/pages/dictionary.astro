@@ -77,10 +77,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const whole = new RegExp(`(^|[^a-z0-9])${rx}([^a-z0-9]|$)`);
       const start = new RegExp(`(^|[^a-z0-9])${rx}`);
       const bare = (t) => fold(t).replace(/^(o|a|os|as|um|uma) /, '');
+      const plainEn = (x) => x.replace(/^(to|a|an|the) /, '');
+      const sense1 = (tr) => plainEn(fold(String(tr ?? '').split(/[;,(]/)[0]).trim());
+      const qe = plainEn(q);
       const tier = (c) => {
         const t = bare(c.term), tr = fold(c.trans);
         if (t === q) return 0;
         if (whole.test(t)) return 1;
+        // The word's first English sense IS the query: "dog" → o cão, "house"
+        // → a casa. Ranked with the headword itself, so the deck card leads
+        // the dictionary block instead of trailing dog whistle and dogma.
+        if (sense1(c.trans) === qe) return 1;
         if (t.startsWith(q)) return 2;
         if (whole.test(tr)) return 3;
         if (start.test(t) || start.test(tr)) return 4;
@@ -151,6 +158,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       return q ? '' : '<p class="muted">Nothing matches.</p>';
     }
 
+    const FORM_NAMES = {
+      presente: 'present', pps: 'past (pretérito perfeito)', imperfeito: 'imperfect',
+      ppc: 'pretérito perfeito composto', mais_que_perfeito: 'pluperfect',
+      imperfeito_conj: 'imperfect subjunctive', presente_conj: 'present subjunctive',
+      futuro: 'future', futuro_conj: 'future subjunctive', condicional: 'conditional',
+      imperativo: 'imperative', plural: 'plural', participio: 'past participle', gerundio: 'gerund',
+    };
     let suggestSeq = 0;
     let suggestTimer = 0;
     async function suggest(q, deckHasCards = false) {
@@ -180,33 +194,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         document.getElementById('lookbtn').onclick = () => lookup(q);
         return;
       }
-      lexBox.innerHTML = `<p class="muted" style="font-size:14px; margin-top:6px;">
+      const ff = d.from_form;
+      lexBox.innerHTML = (ff?.word ? `<p style="font-size:14.5px; margin:6px 0;">«${esc(ff.form ?? q)}» is ${ff.lead === false ? 'also ' : ''}a form of
+          <strong>${esc(ff.word)}</strong>${FORM_NAMES[ff.tense ?? ff.kind] ? ` <span class="muted">— ${FORM_NAMES[ff.tense ?? ff.kind]}</span>` : ''}</p>` : '') +
+        `<p class="muted" style="font-size:14px; margin-top:6px;">
           📖 In the dictionary:</p>` +
         d.words.map((w) => `
-          <button class="lexrow" data-t="${esc(w.term)}">
+          <button class="lexrow" data-t="${esc(w.term)}" data-id="${esc(w.id ?? '')}">
             <span><strong>${esc(w.term)}</strong>
               <span class="muted" style="font-size:13px;"> ${esc(w.pos ?? '')}${w.gender ? ' ' + esc(w.gender) : ''}</span>
             </span>
             <span class="muted">${(RU && w.trans_ru) ? esc(w.trans_ru).slice(0, 90) : esc(w.trans).slice(0, 90)}</span>
           </button>`).join('');
-      lexBox.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t); });
+      // The row you tapped is the row you get: by name, "para" opened the deck
+      // phrase "para a semana" and "house" opened a casa.
+      lexBox.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t, b.dataset.id); });
       if (deckHasCards && lexBox.nextElementSibling === list) lexBox.insertAdjacentHTML('beforeend',
         '<p class="muted" style="font-size:14px; margin:14px 0 6px;">In the deck:</p>');
     }
 
-    async function lookup(q) {
+    async function lookup(q, id) {
       clearTimeout(suggestTimer);
       suggestSeq++;
       lexBox.innerHTML = '';
       list.innerHTML = '<p class="muted">looking it up…</p>';
       let d;
       try {
-        d = await (await fetch(`${LOOKUP}?q=${encodeURIComponent(q)}`)).json();
+        d = await (await fetch(`${LOOKUP}?q=${encodeURIComponent(q)}${id ? `&id=${encodeURIComponent(id)}` : ''}`)).json();
       } catch {
         d = { error: 'network' };
       }
       if (d?.error) {
-        list.innerHTML = `<p class="muted">${esc(d.error === 'network' ? 'No connection — try again in a moment.' : (d.message || 'The dictionary server is not answering right now — try again in a minute.'))}</p>`;
+        // A word that does not exist is not an outage: "comboyo" used to say
+        // the server was down.
+        const msg = d.error === 'not found'
+          ? `No entry for «${esc(q)}». Check the spelling — or try the <a href="${location.pathname.replace(/dictionary\/?$/, 'translate/')}">translator</a>, which corrects typos.`
+          : d.error === 'daily limit reached'
+            ? 'Live look-ups are used up for today — the dictionary above still answers. Try again tomorrow.'
+            : esc(d.error === 'network' || d.error === 'offline'
+              ? 'No connection — try again in a moment.'
+              : (d.message || 'The dictionary server is not answering right now — try again in a minute.'));
+        list.innerHTML = `<p class="muted">${msg}</p>`;
         return;
       }
       if (!d || !d.card) {
@@ -324,7 +352,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           renderTags();
           render();
           const card = all.find((c) => c.id === b.dataset.id);
-          if (!card) return;
+          if (!card) {
+            // Most words people open come from the dictionary, not the deck.
+            const x = hist().find((h) => h.id === b.dataset.id);
+            if (x) lookup(x.term, x.id);
+            return;
+          }
           document.getElementById('q').value = card.term;
           render();
           const more = document.querySelector('.morebtn');

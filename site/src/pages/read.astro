@@ -76,12 +76,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     const showTok = () => {
       const t = localStorage.getItem(TOKKEY);
       $('tok-state').textContent = t ? `Connected (…${t.slice(-6)}).` : 'Not connected — words are glossed but not tracked.';
-      if (t) $('tok').value = t;
+      // The token is a password: shown by its last characters only, never put
+      // back into the box where an empty Save used to erase it.
     };
-    $('tok-save').onclick = () => {
-      const v = $('tok').value.trim();
-      if (v) localStorage.setItem(TOKKEY, v); else localStorage.removeItem(TOKKEY);
+    $('tok-save').onclick = async () => {
+      const res = await window.pgUseCode($('tok').value);
+      if (res.ok) $('tok').value = '';
       showTok();
+      if (res.msg) $('tok-state').textContent = res.msg + (res.ok ? '' : ' ' + $('tok-state').textContent);
     };
     showTok();
 

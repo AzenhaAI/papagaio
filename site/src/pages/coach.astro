@@ -102,9 +102,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     let scene = null;
     let level = 'normal';
 
-    $('tok-save').onclick = () => {
-      const v = $('tok').value.trim();
-      if (v) { localStorage.setItem(TOKKEY, v); boot(); }
+    $('tok-save').onclick = async () => {
+      const res = await window.pgUseCode($('tok').value);
+      if (res.ok) { $('tok').value = ''; boot(); } else if (res.msg) $('gate-msg').textContent = res.msg;
     };
     const headers = () => ({ 'content-type': 'application/json', 'x-device-token': localStorage.getItem(TOKKEY) });
 
@@ -153,9 +153,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       scenes();
     }
 
+    // Every call below can fail — no network, a 502 from the model, a quota.
+    // Each one says so in the page instead of going quiet.
+    const ask = async (url, opts) => {
+      try {
+        const r = await fetch(url, opts);
+        return await r.json();
+      } catch {
+        return { error: navigator.onLine ? 'unreachable' : 'offline' };
+      }
+    };
+    const problem = (d) => d.error === 'offline'
+      ? 'No connection — the coach needs the internet.'
+      : (d.error === 'daily limit reached' || /limit/i.test(d.error ?? ''))
+        ? 'The coach has used up today\'s free conversations — back tomorrow.'
+        : 'The coach is not answering right now — try again in a minute.';
+
     async function scenes() {
-      const r = await fetch(`${API}/api/coach/scenarios?course=${course}`);
-      const d = await r.json();
+      const d = await ask(`${API}/api/coach/scenarios?course=${course}`);
+      if (!Array.isArray(d.scenarios)) {
+        $('scenes').innerHTML = `<p class="muted">${esc(problem(d))} <button class="btn" id="scenes-retry" style="margin-left:8px;">Try again</button></p>`;
+        $('scenes-retry').onclick = scenes;
+        return;
+      }
       $('scenes').innerHTML = d.scenarios.map((s) =>
         `<button class="scene" data-k="${s.key}">${esc(s.label)}</button>`).join('');
       $('levels').style.display = 'none';
@@ -168,14 +188,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     document.querySelectorAll('.lbtn').forEach((b) => b.onclick = () => start(b.dataset.l));
 
+    let starting = false;
     async function start(lvl) {
+      if (starting) return;   // a double tap started the scene twice
+      starting = true;
       level = lvl;
-      const r = await fetch(`${API}/api/coach`, {
+      const btns = document.querySelectorAll('.lbtn');
+      btns.forEach((b) => { b.disabled = true; b.style.opacity = '.5'; });
+      $('levels-msg')?.remove();
+      $('levels').insertAdjacentHTML('beforeend', '<p class="muted" id="levels-msg" style="margin:10px 0 0;">Starting the scene…</p>');
+      const d = await ask(`${API}/api/coach`, {
         method: 'POST', headers: headers(),
         body: JSON.stringify({ start: true, course, scenario: scene, level }),
       });
-      const d = await r.json();
-      if (d.error) { alert(d.error); return; }
+      starting = false;
+      btns.forEach((b) => { b.disabled = false; b.style.opacity = ''; });
+      if (d.error || !d.reply) { $('levels-msg').textContent = problem(d); return; }
+      $('levels-msg')?.remove();
       $('pick').style.display = 'none';
       $('recap').style.display = 'none';
       $('chat').style.display = 'block';
@@ -282,30 +311,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       think.innerHTML = '<span class="b muted">🤖 a pensar…</span>';
       $('log').appendChild(think);
       $('log').scrollTop = $('log').scrollHeight;
-      const r = await fetch(`${API}/api/coach`, {
+      const d = await ask(`${API}/api/coach`, {
         method: 'POST', headers: headers(),
         body: JSON.stringify({ message: text, course, scenario: scene, level }),
       });
-      const d = await r.json();
       think.remove();
       if (d.reply) {
         bubble('coach', d.reply, d.note);
         // A spoken turn earns a spoken answer — the full voice loop, in a browser.
         if (voiced) speak(d.reply);
+        return;
       }
+      // The line you typed is not lost: it goes back into the box for a retry.
+      const err = document.createElement('div');
+      err.className = 'msg coach';
+      err.innerHTML = `<span class="b muted">⚠️ ${esc(problem(d))} Your message is back in the box — press Send again.</span>`;
+      $('log').appendChild(err);
+      $('log').scrollTop = $('log').scrollHeight;
+      if (!$('say').value) $('say').value = text;
     }
     $('send').onclick = () => send(false);
     $('say').addEventListener('keydown', (e) => { if (e.key === 'Enter') send(); });
 
     $('finish').onclick = async () => {
-      const r = await fetch(`${API}/api/coach`, {
+      const d = await ask(`${API}/api/coach`, {
         method: 'POST', headers: headers(), body: JSON.stringify({ stop: true }),
       });
-      const d = await r.json();
       $('chat').style.display = 'none';
       $('pick').style.display = 'block';
       $('recap').style.display = 'block';
-      $('recap').innerHTML = `<strong>🏁 Recap</strong><div style="margin-top:8px; white-space:pre-wrap;">${esc(d.recap ?? d.reply ?? 'Session closed.')}</div>`;
+      $('recap').innerHTML = `<strong>🏁 Recap</strong><div style="margin-top:8px; white-space:pre-wrap;">${esc(d.recap || d.reply || (d.error ? problem(d) + ' The scene is closed.' : 'Nothing to recap yet — you did not say anything in this scene.'))}</div>`;
       scenes();
     };
 

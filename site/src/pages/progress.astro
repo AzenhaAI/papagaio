@@ -74,9 +74,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const TOKKEY = 'pg_token';
     const esc = (s) => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 
-    $('tok-save').onclick = () => {
-      const v = $('tok').value.trim();
-      if (v) { localStorage.setItem(TOKKEY, v); load(); }
+    $('tok-save').onclick = async () => {
+      const res = await window.pgUseCode($('tok').value);
+      if (res.ok) { $('tok').value = ''; load(); } else if (res.msg) $('gate').querySelector('p').textContent = res.msg;
     };
 
     async function load() {
