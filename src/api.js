@@ -529,7 +529,8 @@ export async function handleApi(request, env, path) {
     // Two letters is not a lookup, it is a keystroke on the way to one — and
     // for anything the fast path cannot answer it costs a full scan of the
     // lexicon. Three is where a query starts meaning something.
-    if (s.length < 2) return json({ q: raw, words: [] });
+    // One letter is a keystroke — except "é", the most common verb form there is.
+    if (s.length < 2 && !(course === 'pt' && verbForms().has(s))) return json({ q: raw, words: [] });
     // Russian input may arrive in any case form — «кошкой» resolves to its
     // lemma through the inflection table before the glosses are searched.
     let ruQ = raw;
@@ -560,10 +561,18 @@ export async function handleApi(request, env, path) {
       const v = course === 'pt' && !s.includes(' ') ? verbForms().get(s) : null;
       if (!v || v.word === s) return { q: s, words: rows };
       const f = fold(v.word);
-      const { results: lemma } = await env.DB.prepare(
-        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
-          WHERE owner = 'lex' AND course = ?2 AND fold = ?1 ORDER BY freq LIMIT 3`
-      ).bind(f, course).all().catch(() => ({ results: [] }));
+      // fold holds the term AND its gloss ("ir to go; …"), so the headword is
+      // a range on "ir " — an index scan — narrowed here to the bare word;
+      // "ir à bolina" and the other phrases share the prefix and drop out.
+      const { results: near } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq
+           FROM cards INDEXED BY idx_cards_fold
+          WHERE fold >= ?1 AND fold < ?2 AND owner = 'lex' AND course = ?3
+          LIMIT 200`
+      ).bind(`${f} `, `${f}!`, course).all().catch(() => ({ results: [] }));
+      const lemma = (near ?? []).filter((r) => fold(r.term) === f)
+        .sort((a, b) => (a.pos === 'verb' ? 0 : 1) - (b.pos === 'verb' ? 0 : 1) || (a.freq ?? 1e9) - (b.freq ?? 1e9))
+        .slice(0, 3);
       if (!lemma?.length) return { q: s, words: rows };
       // But "para" is the preposition before it is parar, and "casa" is a house
       // before it is casar. The verb leads when the spelling's own rows are a
@@ -572,7 +581,10 @@ export async function handleApi(request, env, path) {
       // page says either way that the form belongs to it.
       const seen = new Set(lemma.map((r) => r.id));
       const rest = rows.filter((r) => !seen.has(r.id));
-      const own = rest.filter((r) => fold(r.term) === s);
+      // The accent decides whose row is "the spelling's own": "é" is not the
+      // conjunction "e", whatever the folded form says.
+      const exactRaw = rest.filter((r) => r.term.toLowerCase() === raw);
+      const own = exactRaw.length ? exactRaw : rest.filter((r) => fold(r.term) === s);
       const FUNCTION = /^(prep|conj|pron|adv|art|det|num|contraction)/;
       const minor = (r) => r.pos === 'interj' || /^(the |an? )?(arabic |greek |hebrew )?letter\b/i.test(r.trans ?? '');
       const best = Math.min(...own.map((r) => r.freq ?? 1e9));
@@ -595,7 +607,9 @@ export async function handleApi(request, env, path) {
       if (rows.length) {
         const tier = (r) => {
           const f = fold(r.term);
-          return f === s ? 0 : f.startsWith(`${s} `) ? 1 : 2;
+          // The word before its abbreviation: "casa" ahead of CASA, "se" ahead of SE.
+          if (f === s) return r.term === r.term.toLowerCase() ? 0 : 0.5;
+          return f.startsWith(`${s} `) ? 1 : 2;
         };
         rows.sort((a, b) => tier(a) - tier(b) || (a.freq ?? 1e9) - (b.freq ?? 1e9));
         return json(await withVerb(rows.slice(0, 25)));
