@@ -2505,7 +2505,7 @@
     },
     {
       "id": "vd0157",
-      "term": "fiço",
+      "term": "fico",
       "trans": "ficar — present, eu",
       "pos": "drill",
       "note": "Agora (right now) is what forces the present here.",
@@ -2521,7 +2521,7 @@
     },
     {
       "id": "vd0158",
-      "term": "fiça",
+      "term": "fica",
       "trans": "ficar — present, ele",
       "pos": "drill",
       "note": "Agora (right now) is what forces the present here.",
@@ -2537,7 +2537,7 @@
     },
     {
       "id": "vd0159",
-      "term": "fiçamos",
+      "term": "ficamos",
       "trans": "ficar — present, nós",
       "pos": "drill",
       "note": "Hoje (today) is what forces the present here.",
@@ -2569,7 +2569,7 @@
     },
     {
       "id": "vd0161",
-      "term": "fiçou",
+      "term": "ficou",
       "trans": "ficar — simple past, ele",
       "pos": "drill",
       "note": "Ontem (yesterday) is what forces the simple past here.",
@@ -2585,7 +2585,7 @@
     },
     {
       "id": "vd0162",
-      "term": "fiçava",
+      "term": "ficava",
       "trans": "ficar — imperfect, eu",
       "pos": "drill",
       "note": "Quando era criança (as a child) is what forces the imperfect here.",
@@ -2601,7 +2601,7 @@
     },
     {
       "id": "vd0163",
-      "term": "fiçava",
+      "term": "ficava",
       "trans": "ficar — imperfect, ele",
       "pos": "drill",
       "note": "Antigamente (in the old days) is what forces the imperfect here.",
@@ -3593,7 +3593,7 @@
     },
     {
       "id": "vd0225",
-      "term": "doe",
+      "term": "dói",
       "trans": "doer — present, ele",
       "pos": "drill",
       "note": "Todos os dias (every day) is what forces the present here.",
@@ -3609,7 +3609,7 @@
     },
     {
       "id": "vd0226",
-      "term": "doi",
+      "term": "doí",
       "trans": "doer — simple past, eu",
       "pos": "drill",
       "note": "Ontem (yesterday) is what forces the simple past here.",
@@ -5913,7 +5913,7 @@
     },
     {
       "id": "vd0370",
-      "term": "esqueque",
+      "term": "esquece",
       "trans": "esquecer — present, ele",
       "pos": "drill",
       "note": "Hoje (today) is what forces the present here.",
@@ -5929,7 +5929,7 @@
     },
     {
       "id": "vd0371",
-      "term": "esquequi",
+      "term": "esqueci",
       "trans": "esquecer — simple past, eu",
       "pos": "drill",
       "note": "Na semana passada (last week) is what forces the simple past here.",
@@ -5945,7 +5945,7 @@
     },
     {
       "id": "vd0372",
-      "term": "esquequeu",
+      "term": "esqueceu",
       "trans": "esquecer — simple past, ele",
       "pos": "drill",
       "note": "Na semana passada (last week) is what forces the simple past here.",
@@ -6041,7 +6041,7 @@
     },
     {
       "id": "vd0378",
-      "term": "conheque",
+      "term": "conhece",
       "trans": "conhecer — present, ele",
       "pos": "drill",
       "note": "Todos os dias (every day) is what forces the present here.",
@@ -6057,7 +6057,7 @@
     },
     {
       "id": "vd0379",
-      "term": "conhequi",
+      "term": "conheci",
       "trans": "conhecer — simple past, eu",
       "pos": "drill",
       "note": "Ontem (yesterday) is what forces the simple past here.",
@@ -6073,7 +6073,7 @@
     },
     {
       "id": "vd0380",
-      "term": "conhequeu",
+      "term": "conheceu",
       "trans": "conhecer — simple past, ele",
       "pos": "drill",
       "note": "Ontem (yesterday) is what forces the simple past here.",
@@ -6153,7 +6153,7 @@
     },
     {
       "id": "vd0385",
-      "term": "transfero",
+      "term": "transfiro",
       "trans": "transferir — present, eu",
       "pos": "drill",
       "note": "Agora (right now) is what forces the present here.",
@@ -6406,6 +6406,4550 @@
       ],
       "unit": "gramatica",
       "freq": 2400
+    },
+    {
+      "id": "vd0401",
+      "term": "descanso",
+      "trans": "descansar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "descansar = to rest",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descansar"
+      ],
+      "unit": "gramatica",
+      "freq": 2401
+    },
+    {
+      "id": "vd0402",
+      "term": "descansa",
+      "trans": "descansar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "descansar = to rest",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descansar"
+      ],
+      "unit": "gramatica",
+      "freq": 2402
+    },
+    {
+      "id": "vd0403",
+      "term": "descansei",
+      "trans": "descansar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "descansar = to rest",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descansar"
+      ],
+      "unit": "gramatica",
+      "freq": 2403
+    },
+    {
+      "id": "vd0404",
+      "term": "descansou",
+      "trans": "descansar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "descansar = to rest",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descansar"
+      ],
+      "unit": "gramatica",
+      "freq": 2404
+    },
+    {
+      "id": "vd0405",
+      "term": "magoo",
+      "trans": "magoar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "magoar = to hurt (injure)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "magoar"
+      ],
+      "unit": "gramatica",
+      "freq": 2405
+    },
+    {
+      "id": "vd0406",
+      "term": "magoa",
+      "trans": "magoar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "magoar = to hurt (injure)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "magoar"
+      ],
+      "unit": "gramatica",
+      "freq": 2406
+    },
+    {
+      "id": "vd0407",
+      "term": "magoei",
+      "trans": "magoar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "magoar = to hurt (injure)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "magoar"
+      ],
+      "unit": "gramatica",
+      "freq": 2407
+    },
+    {
+      "id": "vd0408",
+      "term": "magoou",
+      "trans": "magoar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "magoar = to hurt (injure)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "magoar"
+      ],
+      "unit": "gramatica",
+      "freq": 2408
+    },
+    {
+      "id": "vd0409",
+      "term": "arranjo",
+      "trans": "arranjar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "arranjar = to fix; to get hold of",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arranjar"
+      ],
+      "unit": "gramatica",
+      "freq": 2409
+    },
+    {
+      "id": "vd0410",
+      "term": "arranja",
+      "trans": "arranjar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "arranjar = to fix; to get hold of",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arranjar"
+      ],
+      "unit": "gramatica",
+      "freq": 2410
+    },
+    {
+      "id": "vd0411",
+      "term": "arranjei",
+      "trans": "arranjar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "arranjar = to fix; to get hold of",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arranjar"
+      ],
+      "unit": "gramatica",
+      "freq": 2411
+    },
+    {
+      "id": "vd0412",
+      "term": "arranjou",
+      "trans": "arranjar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "arranjar = to fix; to get hold of",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arranjar"
+      ],
+      "unit": "gramatica",
+      "freq": 2412
+    },
+    {
+      "id": "vd0413",
+      "term": "visto",
+      "trans": "vestir — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "vestir = to put on, dress",
+      "tags": [
+        "drill",
+        "conjugation",
+        "vestir"
+      ],
+      "unit": "gramatica",
+      "freq": 2413
+    },
+    {
+      "id": "vd0414",
+      "term": "veste",
+      "trans": "vestir — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "vestir = to put on, dress",
+      "tags": [
+        "drill",
+        "conjugation",
+        "vestir"
+      ],
+      "unit": "gramatica",
+      "freq": 2414
+    },
+    {
+      "id": "vd0415",
+      "term": "vesti",
+      "trans": "vestir — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "vestir = to put on, dress",
+      "tags": [
+        "drill",
+        "conjugation",
+        "vestir"
+      ],
+      "unit": "gramatica",
+      "freq": 2415
+    },
+    {
+      "id": "vd0416",
+      "term": "vestiu",
+      "trans": "vestir — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "vestir = to put on, dress",
+      "tags": [
+        "drill",
+        "conjugation",
+        "vestir"
+      ],
+      "unit": "gramatica",
+      "freq": 2416
+    },
+    {
+      "id": "vd0417",
+      "term": "experimento",
+      "trans": "experimentar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "experimentar = to try, try on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "experimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2417
+    },
+    {
+      "id": "vd0418",
+      "term": "experimenta",
+      "trans": "experimentar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "experimentar = to try, try on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "experimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2418
+    },
+    {
+      "id": "vd0419",
+      "term": "experimentei",
+      "trans": "experimentar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "experimentar = to try, try on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "experimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2419
+    },
+    {
+      "id": "vd0420",
+      "term": "experimentou",
+      "trans": "experimentar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "experimentar = to try, try on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "experimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2420
+    },
+    {
+      "id": "vd0421",
+      "term": "empresto",
+      "trans": "emprestar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "emprestar = to lend",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emprestar"
+      ],
+      "unit": "gramatica",
+      "freq": 2421
+    },
+    {
+      "id": "vd0422",
+      "term": "empresta",
+      "trans": "emprestar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "emprestar = to lend",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emprestar"
+      ],
+      "unit": "gramatica",
+      "freq": 2422
+    },
+    {
+      "id": "vd0423",
+      "term": "emprestei",
+      "trans": "emprestar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "emprestar = to lend",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emprestar"
+      ],
+      "unit": "gramatica",
+      "freq": 2423
+    },
+    {
+      "id": "vd0424",
+      "term": "emprestou",
+      "trans": "emprestar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "emprestar = to lend",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emprestar"
+      ],
+      "unit": "gramatica",
+      "freq": 2424
+    },
+    {
+      "id": "vd0425",
+      "term": "devolvo",
+      "trans": "devolver — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "devolver = to give back",
+      "tags": [
+        "drill",
+        "conjugation",
+        "devolver"
+      ],
+      "unit": "gramatica",
+      "freq": 2425
+    },
+    {
+      "id": "vd0426",
+      "term": "devolve",
+      "trans": "devolver — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "devolver = to give back",
+      "tags": [
+        "drill",
+        "conjugation",
+        "devolver"
+      ],
+      "unit": "gramatica",
+      "freq": 2426
+    },
+    {
+      "id": "vd0427",
+      "term": "devolvi",
+      "trans": "devolver — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "devolver = to give back",
+      "tags": [
+        "drill",
+        "conjugation",
+        "devolver"
+      ],
+      "unit": "gramatica",
+      "freq": 2427
+    },
+    {
+      "id": "vd0428",
+      "term": "devolveu",
+      "trans": "devolver — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "devolver = to give back",
+      "tags": [
+        "drill",
+        "conjugation",
+        "devolver"
+      ],
+      "unit": "gramatica",
+      "freq": 2428
+    },
+    {
+      "id": "vd0429",
+      "term": "prometo",
+      "trans": "prometer — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "prometer = to promise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "prometer"
+      ],
+      "unit": "gramatica",
+      "freq": 2429
+    },
+    {
+      "id": "vd0430",
+      "term": "promete",
+      "trans": "prometer — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "prometer = to promise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "prometer"
+      ],
+      "unit": "gramatica",
+      "freq": 2430
+    },
+    {
+      "id": "vd0431",
+      "term": "prometi",
+      "trans": "prometer — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "prometer = to promise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "prometer"
+      ],
+      "unit": "gramatica",
+      "freq": 2431
+    },
+    {
+      "id": "vd0432",
+      "term": "prometeu",
+      "trans": "prometer — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "prometer = to promise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "prometer"
+      ],
+      "unit": "gramatica",
+      "freq": 2432
+    },
+    {
+      "id": "vd0433",
+      "term": "convido",
+      "trans": "convidar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "convidar = to invite",
+      "tags": [
+        "drill",
+        "conjugation",
+        "convidar"
+      ],
+      "unit": "gramatica",
+      "freq": 2433
+    },
+    {
+      "id": "vd0434",
+      "term": "convida",
+      "trans": "convidar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "convidar = to invite",
+      "tags": [
+        "drill",
+        "conjugation",
+        "convidar"
+      ],
+      "unit": "gramatica",
+      "freq": 2434
+    },
+    {
+      "id": "vd0435",
+      "term": "convidei",
+      "trans": "convidar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "convidar = to invite",
+      "tags": [
+        "drill",
+        "conjugation",
+        "convidar"
+      ],
+      "unit": "gramatica",
+      "freq": 2435
+    },
+    {
+      "id": "vd0436",
+      "term": "convidou",
+      "trans": "convidar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "convidar = to invite",
+      "tags": [
+        "drill",
+        "conjugation",
+        "convidar"
+      ],
+      "unit": "gramatica",
+      "freq": 2436
+    },
+    {
+      "id": "vd0437",
+      "term": "cumprimento",
+      "trans": "cumprimentar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "cumprimentar = to greet",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cumprimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2437
+    },
+    {
+      "id": "vd0438",
+      "term": "cumprimenta",
+      "trans": "cumprimentar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "cumprimentar = to greet",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cumprimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2438
+    },
+    {
+      "id": "vd0439",
+      "term": "cumprimentei",
+      "trans": "cumprimentar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "cumprimentar = to greet",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cumprimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2439
+    },
+    {
+      "id": "vd0440",
+      "term": "cumprimentou",
+      "trans": "cumprimentar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "cumprimentar = to greet",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cumprimentar"
+      ],
+      "unit": "gramatica",
+      "freq": 2440
+    },
+    {
+      "id": "vd0441",
+      "term": "agradeço",
+      "trans": "agradecer — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "agradecer = to thank",
+      "tags": [
+        "drill",
+        "conjugation",
+        "agradecer"
+      ],
+      "unit": "gramatica",
+      "freq": 2441
+    },
+    {
+      "id": "vd0442",
+      "term": "agradece",
+      "trans": "agradecer — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "agradecer = to thank",
+      "tags": [
+        "drill",
+        "conjugation",
+        "agradecer"
+      ],
+      "unit": "gramatica",
+      "freq": 2442
+    },
+    {
+      "id": "vd0443",
+      "term": "agradeci",
+      "trans": "agradecer — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "agradecer = to thank",
+      "tags": [
+        "drill",
+        "conjugation",
+        "agradecer"
+      ],
+      "unit": "gramatica",
+      "freq": 2443
+    },
+    {
+      "id": "vd0444",
+      "term": "agradeceu",
+      "trans": "agradecer — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "agradecer = to thank",
+      "tags": [
+        "drill",
+        "conjugation",
+        "agradecer"
+      ],
+      "unit": "gramatica",
+      "freq": 2444
+    },
+    {
+      "id": "vd0445",
+      "term": "desisto",
+      "trans": "desistir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "desistir = to give up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "desistir"
+      ],
+      "unit": "gramatica",
+      "freq": 2445
+    },
+    {
+      "id": "vd0446",
+      "term": "desiste",
+      "trans": "desistir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "desistir = to give up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "desistir"
+      ],
+      "unit": "gramatica",
+      "freq": 2446
+    },
+    {
+      "id": "vd0447",
+      "term": "desisti",
+      "trans": "desistir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "desistir = to give up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "desistir"
+      ],
+      "unit": "gramatica",
+      "freq": 2447
+    },
+    {
+      "id": "vd0448",
+      "term": "desistiu",
+      "trans": "desistir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "desistir = to give up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "desistir"
+      ],
+      "unit": "gramatica",
+      "freq": 2448
+    },
+    {
+      "id": "vd0449",
+      "term": "demoro",
+      "trans": "demorar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "demorar = to take time",
+      "tags": [
+        "drill",
+        "conjugation",
+        "demorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2449
+    },
+    {
+      "id": "vd0450",
+      "term": "demora",
+      "trans": "demorar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "demorar = to take time",
+      "tags": [
+        "drill",
+        "conjugation",
+        "demorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2450
+    },
+    {
+      "id": "vd0451",
+      "term": "demorei",
+      "trans": "demorar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "demorar = to take time",
+      "tags": [
+        "drill",
+        "conjugation",
+        "demorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2451
+    },
+    {
+      "id": "vd0452",
+      "term": "demorou",
+      "trans": "demorar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "demorar = to take time",
+      "tags": [
+        "drill",
+        "conjugation",
+        "demorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2452
+    },
+    {
+      "id": "vd0453",
+      "term": "combino",
+      "trans": "combinar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "combinar = to arrange, agree on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "combinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2453
+    },
+    {
+      "id": "vd0454",
+      "term": "combina",
+      "trans": "combinar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "combinar = to arrange, agree on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "combinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2454
+    },
+    {
+      "id": "vd0455",
+      "term": "combinei",
+      "trans": "combinar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "combinar = to arrange, agree on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "combinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2455
+    },
+    {
+      "id": "vd0456",
+      "term": "combinou",
+      "trans": "combinar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "combinar = to arrange, agree on",
+      "tags": [
+        "drill",
+        "conjugation",
+        "combinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2456
+    },
+    {
+      "id": "vd0457",
+      "term": "cozinho",
+      "trans": "cozinhar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "cozinhar = to cook",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozinhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2457
+    },
+    {
+      "id": "vd0458",
+      "term": "cozinha",
+      "trans": "cozinhar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "cozinhar = to cook",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozinhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2458
+    },
+    {
+      "id": "vd0459",
+      "term": "cozinhei",
+      "trans": "cozinhar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "cozinhar = to cook",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozinhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2459
+    },
+    {
+      "id": "vd0460",
+      "term": "cozinhou",
+      "trans": "cozinhar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "cozinhar = to cook",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozinhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2460
+    },
+    {
+      "id": "vd0461",
+      "term": "cozo",
+      "trans": "cozer — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "cozer = to boil, cook in water",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozer"
+      ],
+      "unit": "gramatica",
+      "freq": 2461
+    },
+    {
+      "id": "vd0462",
+      "term": "coze",
+      "trans": "cozer — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "cozer = to boil, cook in water",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozer"
+      ],
+      "unit": "gramatica",
+      "freq": 2462
+    },
+    {
+      "id": "vd0463",
+      "term": "cozi",
+      "trans": "cozer — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "cozer = to boil, cook in water",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozer"
+      ],
+      "unit": "gramatica",
+      "freq": 2463
+    },
+    {
+      "id": "vd0464",
+      "term": "cozeu",
+      "trans": "cozer — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "cozer = to boil, cook in water",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cozer"
+      ],
+      "unit": "gramatica",
+      "freq": 2464
+    },
+    {
+      "id": "vd0465",
+      "term": "asso",
+      "trans": "assar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "assar = to roast, bake",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assar"
+      ],
+      "unit": "gramatica",
+      "freq": 2465
+    },
+    {
+      "id": "vd0466",
+      "term": "assa",
+      "trans": "assar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "assar = to roast, bake",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assar"
+      ],
+      "unit": "gramatica",
+      "freq": 2466
+    },
+    {
+      "id": "vd0467",
+      "term": "assei",
+      "trans": "assar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "assar = to roast, bake",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assar"
+      ],
+      "unit": "gramatica",
+      "freq": 2467
+    },
+    {
+      "id": "vd0468",
+      "term": "assou",
+      "trans": "assar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "assar = to roast, bake",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assar"
+      ],
+      "unit": "gramatica",
+      "freq": 2468
+    },
+    {
+      "id": "vd0469",
+      "term": "frito",
+      "trans": "fritar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "fritar = to fry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2469
+    },
+    {
+      "id": "vd0470",
+      "term": "frita",
+      "trans": "fritar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "fritar = to fry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2470
+    },
+    {
+      "id": "vd0471",
+      "term": "fritei",
+      "trans": "fritar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "fritar = to fry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2471
+    },
+    {
+      "id": "vd0472",
+      "term": "fritou",
+      "trans": "fritar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "fritar = to fry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2472
+    },
+    {
+      "id": "vd0473",
+      "term": "grelho",
+      "trans": "grelhar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "grelhar = to grill",
+      "tags": [
+        "drill",
+        "conjugation",
+        "grelhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2473
+    },
+    {
+      "id": "vd0474",
+      "term": "grelha",
+      "trans": "grelhar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "grelhar = to grill",
+      "tags": [
+        "drill",
+        "conjugation",
+        "grelhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2474
+    },
+    {
+      "id": "vd0475",
+      "term": "grelhei",
+      "trans": "grelhar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "grelhar = to grill",
+      "tags": [
+        "drill",
+        "conjugation",
+        "grelhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2475
+    },
+    {
+      "id": "vd0476",
+      "term": "grelhou",
+      "trans": "grelhar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "grelhar = to grill",
+      "tags": [
+        "drill",
+        "conjugation",
+        "grelhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2476
+    },
+    {
+      "id": "vd0477",
+      "term": "tempero",
+      "trans": "temperar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "temperar = to season",
+      "tags": [
+        "drill",
+        "conjugation",
+        "temperar"
+      ],
+      "unit": "gramatica",
+      "freq": 2477
+    },
+    {
+      "id": "vd0478",
+      "term": "tempera",
+      "trans": "temperar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "temperar = to season",
+      "tags": [
+        "drill",
+        "conjugation",
+        "temperar"
+      ],
+      "unit": "gramatica",
+      "freq": 2478
+    },
+    {
+      "id": "vd0479",
+      "term": "temperei",
+      "trans": "temperar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "temperar = to season",
+      "tags": [
+        "drill",
+        "conjugation",
+        "temperar"
+      ],
+      "unit": "gramatica",
+      "freq": 2479
+    },
+    {
+      "id": "vd0480",
+      "term": "temperou",
+      "trans": "temperar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "temperar = to season",
+      "tags": [
+        "drill",
+        "conjugation",
+        "temperar"
+      ],
+      "unit": "gramatica",
+      "freq": 2480
+    },
+    {
+      "id": "vd0481",
+      "term": "provo",
+      "trans": "provar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "provar = to taste, try",
+      "tags": [
+        "drill",
+        "conjugation",
+        "provar"
+      ],
+      "unit": "gramatica",
+      "freq": 2481
+    },
+    {
+      "id": "vd0482",
+      "term": "prova",
+      "trans": "provar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "provar = to taste, try",
+      "tags": [
+        "drill",
+        "conjugation",
+        "provar"
+      ],
+      "unit": "gramatica",
+      "freq": 2482
+    },
+    {
+      "id": "vd0483",
+      "term": "provei",
+      "trans": "provar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "provar = to taste, try",
+      "tags": [
+        "drill",
+        "conjugation",
+        "provar"
+      ],
+      "unit": "gramatica",
+      "freq": 2483
+    },
+    {
+      "id": "vd0484",
+      "term": "provou",
+      "trans": "provar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "provar = to taste, try",
+      "tags": [
+        "drill",
+        "conjugation",
+        "provar"
+      ],
+      "unit": "gramatica",
+      "freq": 2484
+    },
+    {
+      "id": "vd0485",
+      "term": "misturo",
+      "trans": "misturar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "misturar = to mix",
+      "tags": [
+        "drill",
+        "conjugation",
+        "misturar"
+      ],
+      "unit": "gramatica",
+      "freq": 2485
+    },
+    {
+      "id": "vd0486",
+      "term": "mistura",
+      "trans": "misturar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "misturar = to mix",
+      "tags": [
+        "drill",
+        "conjugation",
+        "misturar"
+      ],
+      "unit": "gramatica",
+      "freq": 2486
+    },
+    {
+      "id": "vd0487",
+      "term": "misturei",
+      "trans": "misturar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "misturar = to mix",
+      "tags": [
+        "drill",
+        "conjugation",
+        "misturar"
+      ],
+      "unit": "gramatica",
+      "freq": 2487
+    },
+    {
+      "id": "vd0488",
+      "term": "misturou",
+      "trans": "misturar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "misturar = to mix",
+      "tags": [
+        "drill",
+        "conjugation",
+        "misturar"
+      ],
+      "unit": "gramatica",
+      "freq": 2488
+    },
+    {
+      "id": "vd0489",
+      "term": "descasco",
+      "trans": "descascar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "descascar = to peel",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descascar"
+      ],
+      "unit": "gramatica",
+      "freq": 2489
+    },
+    {
+      "id": "vd0490",
+      "term": "descasca",
+      "trans": "descascar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "descascar = to peel",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descascar"
+      ],
+      "unit": "gramatica",
+      "freq": 2490
+    },
+    {
+      "id": "vd0491",
+      "term": "descasquei",
+      "trans": "descascar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "descascar = to peel",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descascar"
+      ],
+      "unit": "gramatica",
+      "freq": 2491
+    },
+    {
+      "id": "vd0492",
+      "term": "descascou",
+      "trans": "descascar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "descascar = to peel",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descascar"
+      ],
+      "unit": "gramatica",
+      "freq": 2492
+    },
+    {
+      "id": "vd0493",
+      "term": "conto",
+      "trans": "contar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "contar = to tell; to count",
+      "tags": [
+        "drill",
+        "conjugation",
+        "contar"
+      ],
+      "unit": "gramatica",
+      "freq": 2493
+    },
+    {
+      "id": "vd0494",
+      "term": "conta",
+      "trans": "contar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "contar = to tell; to count",
+      "tags": [
+        "drill",
+        "conjugation",
+        "contar"
+      ],
+      "unit": "gramatica",
+      "freq": 2494
+    },
+    {
+      "id": "vd0495",
+      "term": "contei",
+      "trans": "contar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "contar = to tell; to count",
+      "tags": [
+        "drill",
+        "conjugation",
+        "contar"
+      ],
+      "unit": "gramatica",
+      "freq": 2495
+    },
+    {
+      "id": "vd0496",
+      "term": "contou",
+      "trans": "contar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "contar = to tell; to count",
+      "tags": [
+        "drill",
+        "conjugation",
+        "contar"
+      ],
+      "unit": "gramatica",
+      "freq": 2496
+    },
+    {
+      "id": "vd0497",
+      "term": "explico",
+      "trans": "explicar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "explicar = to explain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "explicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2497
+    },
+    {
+      "id": "vd0498",
+      "term": "explica",
+      "trans": "explicar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "explicar = to explain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "explicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2498
+    },
+    {
+      "id": "vd0499",
+      "term": "expliquei",
+      "trans": "explicar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "explicar = to explain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "explicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2499
+    },
+    {
+      "id": "vd0500",
+      "term": "explicou",
+      "trans": "explicar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "explicar = to explain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "explicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2500
+    },
+    {
+      "id": "vd0501",
+      "term": "repito",
+      "trans": "repetir — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "repetir = to repeat",
+      "tags": [
+        "drill",
+        "conjugation",
+        "repetir"
+      ],
+      "unit": "gramatica",
+      "freq": 2501
+    },
+    {
+      "id": "vd0502",
+      "term": "repete",
+      "trans": "repetir — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "repetir = to repeat",
+      "tags": [
+        "drill",
+        "conjugation",
+        "repetir"
+      ],
+      "unit": "gramatica",
+      "freq": 2502
+    },
+    {
+      "id": "vd0503",
+      "term": "repeti",
+      "trans": "repetir — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "repetir = to repeat",
+      "tags": [
+        "drill",
+        "conjugation",
+        "repetir"
+      ],
+      "unit": "gramatica",
+      "freq": 2503
+    },
+    {
+      "id": "vd0504",
+      "term": "repetiu",
+      "trans": "repetir — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "repetir = to repeat",
+      "tags": [
+        "drill",
+        "conjugation",
+        "repetir"
+      ],
+      "unit": "gramatica",
+      "freq": 2504
+    },
+    {
+      "id": "vd0505",
+      "term": "traduzo",
+      "trans": "traduzir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "traduzir = to translate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "traduzir"
+      ],
+      "unit": "gramatica",
+      "freq": 2505
+    },
+    {
+      "id": "vd0506",
+      "term": "traduz",
+      "trans": "traduzir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "traduzir = to translate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "traduzir"
+      ],
+      "unit": "gramatica",
+      "freq": 2506
+    },
+    {
+      "id": "vd0507",
+      "term": "traduzi",
+      "trans": "traduzir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "traduzir = to translate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "traduzir"
+      ],
+      "unit": "gramatica",
+      "freq": 2507
+    },
+    {
+      "id": "vd0508",
+      "term": "traduziu",
+      "trans": "traduzir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "traduzir = to translate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "traduzir"
+      ],
+      "unit": "gramatica",
+      "freq": 2508
+    },
+    {
+      "id": "vd0509",
+      "term": "significo",
+      "trans": "significar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "significar = to mean",
+      "tags": [
+        "drill",
+        "conjugation",
+        "significar"
+      ],
+      "unit": "gramatica",
+      "freq": 2509
+    },
+    {
+      "id": "vd0510",
+      "term": "significa",
+      "trans": "significar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "significar = to mean",
+      "tags": [
+        "drill",
+        "conjugation",
+        "significar"
+      ],
+      "unit": "gramatica",
+      "freq": 2510
+    },
+    {
+      "id": "vd0511",
+      "term": "signifiquei",
+      "trans": "significar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "significar = to mean",
+      "tags": [
+        "drill",
+        "conjugation",
+        "significar"
+      ],
+      "unit": "gramatica",
+      "freq": 2511
+    },
+    {
+      "id": "vd0512",
+      "term": "significou",
+      "trans": "significar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "significar = to mean",
+      "tags": [
+        "drill",
+        "conjugation",
+        "significar"
+      ],
+      "unit": "gramatica",
+      "freq": 2512
+    },
+    {
+      "id": "vd0513",
+      "term": "soletro",
+      "trans": "soletrar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "soletrar = to spell out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "soletrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2513
+    },
+    {
+      "id": "vd0514",
+      "term": "soletra",
+      "trans": "soletrar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "soletrar = to spell out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "soletrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2514
+    },
+    {
+      "id": "vd0515",
+      "term": "soletrei",
+      "trans": "soletrar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "soletrar = to spell out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "soletrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2515
+    },
+    {
+      "id": "vd0516",
+      "term": "soletrou",
+      "trans": "soletrar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "soletrar = to spell out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "soletrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2516
+    },
+    {
+      "id": "vd0517",
+      "term": "minto",
+      "trans": "mentir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "mentir = to lie",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mentir"
+      ],
+      "unit": "gramatica",
+      "freq": 2517
+    },
+    {
+      "id": "vd0518",
+      "term": "mente",
+      "trans": "mentir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "mentir = to lie",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mentir"
+      ],
+      "unit": "gramatica",
+      "freq": 2518
+    },
+    {
+      "id": "vd0519",
+      "term": "menti",
+      "trans": "mentir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "mentir = to lie",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mentir"
+      ],
+      "unit": "gramatica",
+      "freq": 2519
+    },
+    {
+      "id": "vd0520",
+      "term": "mentiu",
+      "trans": "mentir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "mentir = to lie",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mentir"
+      ],
+      "unit": "gramatica",
+      "freq": 2520
+    },
+    {
+      "id": "vd0521",
+      "term": "grito",
+      "trans": "gritar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "gritar = to shout",
+      "tags": [
+        "drill",
+        "conjugation",
+        "gritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2521
+    },
+    {
+      "id": "vd0522",
+      "term": "grita",
+      "trans": "gritar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "gritar = to shout",
+      "tags": [
+        "drill",
+        "conjugation",
+        "gritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2522
+    },
+    {
+      "id": "vd0523",
+      "term": "gritei",
+      "trans": "gritar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "gritar = to shout",
+      "tags": [
+        "drill",
+        "conjugation",
+        "gritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2523
+    },
+    {
+      "id": "vd0524",
+      "term": "gritou",
+      "trans": "gritar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "gritar = to shout",
+      "tags": [
+        "drill",
+        "conjugation",
+        "gritar"
+      ],
+      "unit": "gramatica",
+      "freq": 2524
+    },
+    {
+      "id": "vd0525",
+      "term": "sussurro",
+      "trans": "sussurrar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "sussurrar = to whisper",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sussurrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2525
+    },
+    {
+      "id": "vd0526",
+      "term": "sussurra",
+      "trans": "sussurrar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "sussurrar = to whisper",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sussurrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2526
+    },
+    {
+      "id": "vd0527",
+      "term": "sussurrei",
+      "trans": "sussurrar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "sussurrar = to whisper",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sussurrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2527
+    },
+    {
+      "id": "vd0528",
+      "term": "sussurrou",
+      "trans": "sussurrar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "sussurrar = to whisper",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sussurrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2528
+    },
+    {
+      "id": "vd0529",
+      "term": "discuto",
+      "trans": "discutir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "discutir = to argue; to discuss",
+      "tags": [
+        "drill",
+        "conjugation",
+        "discutir"
+      ],
+      "unit": "gramatica",
+      "freq": 2529
+    },
+    {
+      "id": "vd0530",
+      "term": "discute",
+      "trans": "discutir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "discutir = to argue; to discuss",
+      "tags": [
+        "drill",
+        "conjugation",
+        "discutir"
+      ],
+      "unit": "gramatica",
+      "freq": 2530
+    },
+    {
+      "id": "vd0531",
+      "term": "discuti",
+      "trans": "discutir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "discutir = to argue; to discuss",
+      "tags": [
+        "drill",
+        "conjugation",
+        "discutir"
+      ],
+      "unit": "gramatica",
+      "freq": 2531
+    },
+    {
+      "id": "vd0532",
+      "term": "discutiu",
+      "trans": "discutir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "discutir = to argue; to discuss",
+      "tags": [
+        "drill",
+        "conjugation",
+        "discutir"
+      ],
+      "unit": "gramatica",
+      "freq": 2532
+    },
+    {
+      "id": "vd0533",
+      "term": "rio",
+      "trans": "rir — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "rir = to laugh",
+      "tags": [
+        "drill",
+        "conjugation",
+        "rir"
+      ],
+      "unit": "gramatica",
+      "freq": 2533
+    },
+    {
+      "id": "vd0534",
+      "term": "ri",
+      "trans": "rir — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "rir = to laugh",
+      "tags": [
+        "drill",
+        "conjugation",
+        "rir"
+      ],
+      "unit": "gramatica",
+      "freq": 2534
+    },
+    {
+      "id": "vd0535",
+      "term": "ri",
+      "trans": "rir — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "rir = to laugh",
+      "tags": [
+        "drill",
+        "conjugation",
+        "rir"
+      ],
+      "unit": "gramatica",
+      "freq": 2535
+    },
+    {
+      "id": "vd0536",
+      "term": "riu",
+      "trans": "rir — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "rir = to laugh",
+      "tags": [
+        "drill",
+        "conjugation",
+        "rir"
+      ],
+      "unit": "gramatica",
+      "freq": 2536
+    },
+    {
+      "id": "vd0537",
+      "term": "sorrio",
+      "trans": "sorrir — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "sorrir = to smile",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sorrir"
+      ],
+      "unit": "gramatica",
+      "freq": 2537
+    },
+    {
+      "id": "vd0538",
+      "term": "sorri",
+      "trans": "sorrir — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "sorrir = to smile",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sorrir"
+      ],
+      "unit": "gramatica",
+      "freq": 2538
+    },
+    {
+      "id": "vd0539",
+      "term": "sorri",
+      "trans": "sorrir — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "sorrir = to smile",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sorrir"
+      ],
+      "unit": "gramatica",
+      "freq": 2539
+    },
+    {
+      "id": "vd0540",
+      "term": "sorriu",
+      "trans": "sorrir — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "sorrir = to smile",
+      "tags": [
+        "drill",
+        "conjugation",
+        "sorrir"
+      ],
+      "unit": "gramatica",
+      "freq": 2540
+    },
+    {
+      "id": "vd0541",
+      "term": "choro",
+      "trans": "chorar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "chorar = to cry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "chorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2541
+    },
+    {
+      "id": "vd0542",
+      "term": "chora",
+      "trans": "chorar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "chorar = to cry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "chorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2542
+    },
+    {
+      "id": "vd0543",
+      "term": "chorei",
+      "trans": "chorar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "chorar = to cry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "chorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2543
+    },
+    {
+      "id": "vd0544",
+      "term": "chorou",
+      "trans": "chorar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "chorar = to cry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "chorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2544
+    },
+    {
+      "id": "vd0545",
+      "term": "assusto",
+      "trans": "assustar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "assustar = to frighten",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assustar"
+      ],
+      "unit": "gramatica",
+      "freq": 2545
+    },
+    {
+      "id": "vd0546",
+      "term": "assusta",
+      "trans": "assustar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "assustar = to frighten",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assustar"
+      ],
+      "unit": "gramatica",
+      "freq": 2546
+    },
+    {
+      "id": "vd0547",
+      "term": "assustei",
+      "trans": "assustar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "assustar = to frighten",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assustar"
+      ],
+      "unit": "gramatica",
+      "freq": 2547
+    },
+    {
+      "id": "vd0548",
+      "term": "assustou",
+      "trans": "assustar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "assustar = to frighten",
+      "tags": [
+        "drill",
+        "conjugation",
+        "assustar"
+      ],
+      "unit": "gramatica",
+      "freq": 2548
+    },
+    {
+      "id": "vd0549",
+      "term": "acalmo",
+      "trans": "acalmar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "acalmar = to calm down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acalmar"
+      ],
+      "unit": "gramatica",
+      "freq": 2549
+    },
+    {
+      "id": "vd0550",
+      "term": "acalma",
+      "trans": "acalmar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "acalmar = to calm down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acalmar"
+      ],
+      "unit": "gramatica",
+      "freq": 2550
+    },
+    {
+      "id": "vd0551",
+      "term": "acalmei",
+      "trans": "acalmar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "acalmar = to calm down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acalmar"
+      ],
+      "unit": "gramatica",
+      "freq": 2551
+    },
+    {
+      "id": "vd0552",
+      "term": "acalmou",
+      "trans": "acalmar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "acalmar = to calm down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acalmar"
+      ],
+      "unit": "gramatica",
+      "freq": 2552
+    },
+    {
+      "id": "vd0553",
+      "term": "apaixono",
+      "trans": "apaixonar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "apaixonar = to fall in love",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apaixonar"
+      ],
+      "unit": "gramatica",
+      "freq": 2553
+    },
+    {
+      "id": "vd0554",
+      "term": "apaixona",
+      "trans": "apaixonar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "apaixonar = to fall in love",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apaixonar"
+      ],
+      "unit": "gramatica",
+      "freq": 2554
+    },
+    {
+      "id": "vd0555",
+      "term": "apaixonei",
+      "trans": "apaixonar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "apaixonar = to fall in love",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apaixonar"
+      ],
+      "unit": "gramatica",
+      "freq": 2555
+    },
+    {
+      "id": "vd0556",
+      "term": "apaixonou",
+      "trans": "apaixonar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "apaixonar = to fall in love",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apaixonar"
+      ],
+      "unit": "gramatica",
+      "freq": 2556
+    },
+    {
+      "id": "vd0557",
+      "term": "odeio",
+      "trans": "odiar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "odiar = to hate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "odiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2557
+    },
+    {
+      "id": "vd0558",
+      "term": "odeia",
+      "trans": "odiar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "odiar = to hate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "odiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2558
+    },
+    {
+      "id": "vd0559",
+      "term": "odiei",
+      "trans": "odiar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "odiar = to hate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "odiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2559
+    },
+    {
+      "id": "vd0560",
+      "term": "odiou",
+      "trans": "odiar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "odiar = to hate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "odiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2560
+    },
+    {
+      "id": "vd0561",
+      "term": "importo",
+      "trans": "importar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "importar = to mind",
+      "tags": [
+        "drill",
+        "conjugation",
+        "importar"
+      ],
+      "unit": "gramatica",
+      "freq": 2561
+    },
+    {
+      "id": "vd0562",
+      "term": "importa",
+      "trans": "importar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "importar = to mind",
+      "tags": [
+        "drill",
+        "conjugation",
+        "importar"
+      ],
+      "unit": "gramatica",
+      "freq": 2562
+    },
+    {
+      "id": "vd0563",
+      "term": "importei",
+      "trans": "importar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "importar = to mind",
+      "tags": [
+        "drill",
+        "conjugation",
+        "importar"
+      ],
+      "unit": "gramatica",
+      "freq": 2563
+    },
+    {
+      "id": "vd0564",
+      "term": "importou",
+      "trans": "importar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "importar = to mind",
+      "tags": [
+        "drill",
+        "conjugation",
+        "importar"
+      ],
+      "unit": "gramatica",
+      "freq": 2564
+    },
+    {
+      "id": "vd0565",
+      "term": "decoro",
+      "trans": "decorar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "decorar = to memorise; to decorate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "decorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2565
+    },
+    {
+      "id": "vd0566",
+      "term": "decora",
+      "trans": "decorar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "decorar = to memorise; to decorate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "decorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2566
+    },
+    {
+      "id": "vd0567",
+      "term": "decorei",
+      "trans": "decorar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "decorar = to memorise; to decorate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "decorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2567
+    },
+    {
+      "id": "vd0568",
+      "term": "decorou",
+      "trans": "decorar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "decorar = to memorise; to decorate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "decorar"
+      ],
+      "unit": "gramatica",
+      "freq": 2568
+    },
+    {
+      "id": "vd0569",
+      "term": "treino",
+      "trans": "treinar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "treinar = to train, practise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "treinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2569
+    },
+    {
+      "id": "vd0570",
+      "term": "treina",
+      "trans": "treinar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "treinar = to train, practise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "treinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2570
+    },
+    {
+      "id": "vd0571",
+      "term": "treinei",
+      "trans": "treinar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "treinar = to train, practise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "treinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2571
+    },
+    {
+      "id": "vd0572",
+      "term": "treinou",
+      "trans": "treinar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "treinar = to train, practise",
+      "tags": [
+        "drill",
+        "conjugation",
+        "treinar"
+      ],
+      "unit": "gramatica",
+      "freq": 2572
+    },
+    {
+      "id": "vd0573",
+      "term": "subo",
+      "trans": "subir — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "subir = to go up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "subir"
+      ],
+      "unit": "gramatica",
+      "freq": 2573
+    },
+    {
+      "id": "vd0574",
+      "term": "sobe",
+      "trans": "subir — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "subir = to go up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "subir"
+      ],
+      "unit": "gramatica",
+      "freq": 2574
+    },
+    {
+      "id": "vd0575",
+      "term": "subi",
+      "trans": "subir — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "subir = to go up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "subir"
+      ],
+      "unit": "gramatica",
+      "freq": 2575
+    },
+    {
+      "id": "vd0576",
+      "term": "subiu",
+      "trans": "subir — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "subir = to go up",
+      "tags": [
+        "drill",
+        "conjugation",
+        "subir"
+      ],
+      "unit": "gramatica",
+      "freq": 2576
+    },
+    {
+      "id": "vd0577",
+      "term": "desço",
+      "trans": "descer — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "descer = to go down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descer"
+      ],
+      "unit": "gramatica",
+      "freq": 2577
+    },
+    {
+      "id": "vd0578",
+      "term": "desce",
+      "trans": "descer — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "descer = to go down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descer"
+      ],
+      "unit": "gramatica",
+      "freq": 2578
+    },
+    {
+      "id": "vd0579",
+      "term": "desci",
+      "trans": "descer — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "descer = to go down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descer"
+      ],
+      "unit": "gramatica",
+      "freq": 2579
+    },
+    {
+      "id": "vd0580",
+      "term": "desceu",
+      "trans": "descer — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "descer = to go down",
+      "tags": [
+        "drill",
+        "conjugation",
+        "descer"
+      ],
+      "unit": "gramatica",
+      "freq": 2580
+    },
+    {
+      "id": "vd0581",
+      "term": "atravesso",
+      "trans": "atravessar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "atravessar = to cross",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atravessar"
+      ],
+      "unit": "gramatica",
+      "freq": 2581
+    },
+    {
+      "id": "vd0582",
+      "term": "atravessa",
+      "trans": "atravessar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "atravessar = to cross",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atravessar"
+      ],
+      "unit": "gramatica",
+      "freq": 2582
+    },
+    {
+      "id": "vd0583",
+      "term": "atravessei",
+      "trans": "atravessar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "atravessar = to cross",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atravessar"
+      ],
+      "unit": "gramatica",
+      "freq": 2583
+    },
+    {
+      "id": "vd0584",
+      "term": "atravessou",
+      "trans": "atravessar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "atravessar = to cross",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atravessar"
+      ],
+      "unit": "gramatica",
+      "freq": 2584
+    },
+    {
+      "id": "vd0585",
+      "term": "sigo",
+      "trans": "seguir — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "seguir = to follow; to continue",
+      "tags": [
+        "drill",
+        "conjugation",
+        "seguir"
+      ],
+      "unit": "gramatica",
+      "freq": 2585
+    },
+    {
+      "id": "vd0586",
+      "term": "segue",
+      "trans": "seguir — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "seguir = to follow; to continue",
+      "tags": [
+        "drill",
+        "conjugation",
+        "seguir"
+      ],
+      "unit": "gramatica",
+      "freq": 2586
+    },
+    {
+      "id": "vd0587",
+      "term": "segui",
+      "trans": "seguir — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "seguir = to follow; to continue",
+      "tags": [
+        "drill",
+        "conjugation",
+        "seguir"
+      ],
+      "unit": "gramatica",
+      "freq": 2587
+    },
+    {
+      "id": "vd0588",
+      "term": "seguiu",
+      "trans": "seguir — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "seguir = to follow; to continue",
+      "tags": [
+        "drill",
+        "conjugation",
+        "seguir"
+      ],
+      "unit": "gramatica",
+      "freq": 2588
+    },
+    {
+      "id": "vd0589",
+      "term": "paro",
+      "trans": "parar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "parar = to stop",
+      "tags": [
+        "drill",
+        "conjugation",
+        "parar"
+      ],
+      "unit": "gramatica",
+      "freq": 2589
+    },
+    {
+      "id": "vd0590",
+      "term": "para",
+      "trans": "parar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "parar = to stop",
+      "tags": [
+        "drill",
+        "conjugation",
+        "parar"
+      ],
+      "unit": "gramatica",
+      "freq": 2590
+    },
+    {
+      "id": "vd0591",
+      "term": "parei",
+      "trans": "parar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "parar = to stop",
+      "tags": [
+        "drill",
+        "conjugation",
+        "parar"
+      ],
+      "unit": "gramatica",
+      "freq": 2591
+    },
+    {
+      "id": "vd0592",
+      "term": "parou",
+      "trans": "parar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "parar = to stop",
+      "tags": [
+        "drill",
+        "conjugation",
+        "parar"
+      ],
+      "unit": "gramatica",
+      "freq": 2592
+    },
+    {
+      "id": "vd0593",
+      "term": "caio",
+      "trans": "cair — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "cair = to fall",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cair"
+      ],
+      "unit": "gramatica",
+      "freq": 2593
+    },
+    {
+      "id": "vd0594",
+      "term": "cai",
+      "trans": "cair — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "cair = to fall",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cair"
+      ],
+      "unit": "gramatica",
+      "freq": 2594
+    },
+    {
+      "id": "vd0595",
+      "term": "caí",
+      "trans": "cair — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "cair = to fall",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cair"
+      ],
+      "unit": "gramatica",
+      "freq": 2595
+    },
+    {
+      "id": "vd0596",
+      "term": "caiu",
+      "trans": "cair — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "cair = to fall",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cair"
+      ],
+      "unit": "gramatica",
+      "freq": 2596
+    },
+    {
+      "id": "vd0597",
+      "term": "salto",
+      "trans": "saltar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "saltar = to jump",
+      "tags": [
+        "drill",
+        "conjugation",
+        "saltar"
+      ],
+      "unit": "gramatica",
+      "freq": 2597
+    },
+    {
+      "id": "vd0598",
+      "term": "salta",
+      "trans": "saltar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "saltar = to jump",
+      "tags": [
+        "drill",
+        "conjugation",
+        "saltar"
+      ],
+      "unit": "gramatica",
+      "freq": 2598
+    },
+    {
+      "id": "vd0599",
+      "term": "saltei",
+      "trans": "saltar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "saltar = to jump",
+      "tags": [
+        "drill",
+        "conjugation",
+        "saltar"
+      ],
+      "unit": "gramatica",
+      "freq": 2599
+    },
+    {
+      "id": "vd0600",
+      "term": "saltou",
+      "trans": "saltar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "saltar = to jump",
+      "tags": [
+        "drill",
+        "conjugation",
+        "saltar"
+      ],
+      "unit": "gramatica",
+      "freq": 2600
+    },
+    {
+      "id": "vd0601",
+      "term": "fujo",
+      "trans": "fugir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "fugir = to run away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fugir"
+      ],
+      "unit": "gramatica",
+      "freq": 2601
+    },
+    {
+      "id": "vd0602",
+      "term": "foge",
+      "trans": "fugir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "fugir = to run away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fugir"
+      ],
+      "unit": "gramatica",
+      "freq": 2602
+    },
+    {
+      "id": "vd0603",
+      "term": "fugi",
+      "trans": "fugir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "fugir = to run away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fugir"
+      ],
+      "unit": "gramatica",
+      "freq": 2603
+    },
+    {
+      "id": "vd0604",
+      "term": "fugiu",
+      "trans": "fugir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "fugir = to run away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "fugir"
+      ],
+      "unit": "gramatica",
+      "freq": 2604
+    },
+    {
+      "id": "vd0605",
+      "term": "acendo",
+      "trans": "acender — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "acender = to switch on, light",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acender"
+      ],
+      "unit": "gramatica",
+      "freq": 2605
+    },
+    {
+      "id": "vd0606",
+      "term": "acende",
+      "trans": "acender — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "acender = to switch on, light",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acender"
+      ],
+      "unit": "gramatica",
+      "freq": 2606
+    },
+    {
+      "id": "vd0607",
+      "term": "acendi",
+      "trans": "acender — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "acender = to switch on, light",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acender"
+      ],
+      "unit": "gramatica",
+      "freq": 2607
+    },
+    {
+      "id": "vd0608",
+      "term": "acendeu",
+      "trans": "acender — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "acender = to switch on, light",
+      "tags": [
+        "drill",
+        "conjugation",
+        "acender"
+      ],
+      "unit": "gramatica",
+      "freq": 2608
+    },
+    {
+      "id": "vd0609",
+      "term": "apago",
+      "trans": "apagar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "apagar = to switch off; to erase",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apagar"
+      ],
+      "unit": "gramatica",
+      "freq": 2609
+    },
+    {
+      "id": "vd0610",
+      "term": "apaga",
+      "trans": "apagar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "apagar = to switch off; to erase",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apagar"
+      ],
+      "unit": "gramatica",
+      "freq": 2610
+    },
+    {
+      "id": "vd0611",
+      "term": "apaguei",
+      "trans": "apagar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "apagar = to switch off; to erase",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apagar"
+      ],
+      "unit": "gramatica",
+      "freq": 2611
+    },
+    {
+      "id": "vd0612",
+      "term": "apagou",
+      "trans": "apagar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "apagar = to switch off; to erase",
+      "tags": [
+        "drill",
+        "conjugation",
+        "apagar"
+      ],
+      "unit": "gramatica",
+      "freq": 2612
+    },
+    {
+      "id": "vd0613",
+      "term": "guardo",
+      "trans": "guardar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "guardar = to keep, put away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "guardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2613
+    },
+    {
+      "id": "vd0614",
+      "term": "guarda",
+      "trans": "guardar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "guardar = to keep, put away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "guardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2614
+    },
+    {
+      "id": "vd0615",
+      "term": "guardei",
+      "trans": "guardar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "guardar = to keep, put away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "guardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2615
+    },
+    {
+      "id": "vd0616",
+      "term": "guardou",
+      "trans": "guardar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "guardar = to keep, put away",
+      "tags": [
+        "drill",
+        "conjugation",
+        "guardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2616
+    },
+    {
+      "id": "vd0617",
+      "term": "atiro",
+      "trans": "atirar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "atirar = to throw",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atirar"
+      ],
+      "unit": "gramatica",
+      "freq": 2617
+    },
+    {
+      "id": "vd0618",
+      "term": "atira",
+      "trans": "atirar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "atirar = to throw",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atirar"
+      ],
+      "unit": "gramatica",
+      "freq": 2618
+    },
+    {
+      "id": "vd0619",
+      "term": "atirei",
+      "trans": "atirar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "atirar = to throw",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atirar"
+      ],
+      "unit": "gramatica",
+      "freq": 2619
+    },
+    {
+      "id": "vd0620",
+      "term": "atirou",
+      "trans": "atirar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "atirar = to throw",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atirar"
+      ],
+      "unit": "gramatica",
+      "freq": 2620
+    },
+    {
+      "id": "vd0621",
+      "term": "seguro",
+      "trans": "segurar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "segurar = to hold",
+      "tags": [
+        "drill",
+        "conjugation",
+        "segurar"
+      ],
+      "unit": "gramatica",
+      "freq": 2621
+    },
+    {
+      "id": "vd0622",
+      "term": "segura",
+      "trans": "segurar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "segurar = to hold",
+      "tags": [
+        "drill",
+        "conjugation",
+        "segurar"
+      ],
+      "unit": "gramatica",
+      "freq": 2622
+    },
+    {
+      "id": "vd0623",
+      "term": "segurei",
+      "trans": "segurar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "segurar = to hold",
+      "tags": [
+        "drill",
+        "conjugation",
+        "segurar"
+      ],
+      "unit": "gramatica",
+      "freq": 2623
+    },
+    {
+      "id": "vd0624",
+      "term": "segurou",
+      "trans": "segurar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "segurar = to hold",
+      "tags": [
+        "drill",
+        "conjugation",
+        "segurar"
+      ],
+      "unit": "gramatica",
+      "freq": 2624
+    },
+    {
+      "id": "vd0625",
+      "term": "parto",
+      "trans": "partir — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "partir = to break; to depart",
+      "tags": [
+        "drill",
+        "conjugation",
+        "partir"
+      ],
+      "unit": "gramatica",
+      "freq": 2625
+    },
+    {
+      "id": "vd0626",
+      "term": "parte",
+      "trans": "partir — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "partir = to break; to depart",
+      "tags": [
+        "drill",
+        "conjugation",
+        "partir"
+      ],
+      "unit": "gramatica",
+      "freq": 2626
+    },
+    {
+      "id": "vd0627",
+      "term": "parti",
+      "trans": "partir — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "partir = to break; to depart",
+      "tags": [
+        "drill",
+        "conjugation",
+        "partir"
+      ],
+      "unit": "gramatica",
+      "freq": 2627
+    },
+    {
+      "id": "vd0628",
+      "term": "partiu",
+      "trans": "partir — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "partir = to break; to depart",
+      "tags": [
+        "drill",
+        "conjugation",
+        "partir"
+      ],
+      "unit": "gramatica",
+      "freq": 2628
+    },
+    {
+      "id": "vd0629",
+      "term": "calço",
+      "trans": "calçar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "calçar = to put on (shoes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "calçar"
+      ],
+      "unit": "gramatica",
+      "freq": 2629
+    },
+    {
+      "id": "vd0630",
+      "term": "calça",
+      "trans": "calçar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "calçar = to put on (shoes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "calçar"
+      ],
+      "unit": "gramatica",
+      "freq": 2630
+    },
+    {
+      "id": "vd0631",
+      "term": "calcei",
+      "trans": "calçar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "calçar = to put on (shoes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "calçar"
+      ],
+      "unit": "gramatica",
+      "freq": 2631
+    },
+    {
+      "id": "vd0632",
+      "term": "calçou",
+      "trans": "calçar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "calçar = to put on (shoes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "calçar"
+      ],
+      "unit": "gramatica",
+      "freq": 2632
+    },
+    {
+      "id": "vd0633",
+      "term": "dispo",
+      "trans": "despir — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "despir = to take off (clothes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "despir"
+      ],
+      "unit": "gramatica",
+      "freq": 2633
+    },
+    {
+      "id": "vd0634",
+      "term": "despe",
+      "trans": "despir — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "despir = to take off (clothes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "despir"
+      ],
+      "unit": "gramatica",
+      "freq": 2634
+    },
+    {
+      "id": "vd0635",
+      "term": "despi",
+      "trans": "despir — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "despir = to take off (clothes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "despir"
+      ],
+      "unit": "gramatica",
+      "freq": 2635
+    },
+    {
+      "id": "vd0636",
+      "term": "despiu",
+      "trans": "despir — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "despir = to take off (clothes)",
+      "tags": [
+        "drill",
+        "conjugation",
+        "despir"
+      ],
+      "unit": "gramatica",
+      "freq": 2636
+    },
+    {
+      "id": "vd0637",
+      "term": "arrepio",
+      "trans": "arrepiar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "arrepiar = to give goosebumps",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrepiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2637
+    },
+    {
+      "id": "vd0638",
+      "term": "arrepia",
+      "trans": "arrepiar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "arrepiar = to give goosebumps",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrepiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2638
+    },
+    {
+      "id": "vd0639",
+      "term": "arrepiei",
+      "trans": "arrepiar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "arrepiar = to give goosebumps",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrepiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2639
+    },
+    {
+      "id": "vd0640",
+      "term": "arrepiou",
+      "trans": "arrepiar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "arrepiar = to give goosebumps",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrepiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2640
+    },
+    {
+      "id": "vd0641",
+      "term": "emigro",
+      "trans": "emigrar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "emigrar = to emigrate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emigrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2641
+    },
+    {
+      "id": "vd0642",
+      "term": "emigra",
+      "trans": "emigrar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "emigrar = to emigrate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emigrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2642
+    },
+    {
+      "id": "vd0643",
+      "term": "emigrei",
+      "trans": "emigrar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "emigrar = to emigrate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emigrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2643
+    },
+    {
+      "id": "vd0644",
+      "term": "emigrou",
+      "trans": "emigrar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "emigrar = to emigrate",
+      "tags": [
+        "drill",
+        "conjugation",
+        "emigrar"
+      ],
+      "unit": "gramatica",
+      "freq": 2644
+    },
+    {
+      "id": "vd0645",
+      "term": "arrevalho",
+      "trans": "arrevalhar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "arrevalhar = to drizzle",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrevalhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2645
+    },
+    {
+      "id": "vd0646",
+      "term": "arrevalha",
+      "trans": "arrevalhar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "arrevalhar = to drizzle",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrevalhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2646
+    },
+    {
+      "id": "vd0647",
+      "term": "arrevalhei",
+      "trans": "arrevalhar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "arrevalhar = to drizzle",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrevalhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2647
+    },
+    {
+      "id": "vd0648",
+      "term": "arrevalhou",
+      "trans": "arrevalhar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "arrevalhar = to drizzle",
+      "tags": [
+        "drill",
+        "conjugation",
+        "arrevalhar"
+      ],
+      "unit": "gramatica",
+      "freq": 2648
+    },
+    {
+      "id": "vd0649",
+      "term": "estio",
+      "trans": "estiar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "estiar = to stop raining",
+      "tags": [
+        "drill",
+        "conjugation",
+        "estiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2649
+    },
+    {
+      "id": "vd0650",
+      "term": "estia",
+      "trans": "estiar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "estiar = to stop raining",
+      "tags": [
+        "drill",
+        "conjugation",
+        "estiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2650
+    },
+    {
+      "id": "vd0651",
+      "term": "estiei",
+      "trans": "estiar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "estiar = to stop raining",
+      "tags": [
+        "drill",
+        "conjugation",
+        "estiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2651
+    },
+    {
+      "id": "vd0652",
+      "term": "estiou",
+      "trans": "estiar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "estiar = to stop raining",
+      "tags": [
+        "drill",
+        "conjugation",
+        "estiar"
+      ],
+      "unit": "gramatica",
+      "freq": 2652
+    },
+    {
+      "id": "vd0653",
+      "term": "merco",
+      "trans": "mercar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "mercar = to buy",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mercar"
+      ],
+      "unit": "gramatica",
+      "freq": 2653
+    },
+    {
+      "id": "vd0654",
+      "term": "merca",
+      "trans": "mercar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "mercar = to buy",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mercar"
+      ],
+      "unit": "gramatica",
+      "freq": 2654
+    },
+    {
+      "id": "vd0655",
+      "term": "merquei",
+      "trans": "mercar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "mercar = to buy",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mercar"
+      ],
+      "unit": "gramatica",
+      "freq": 2655
+    },
+    {
+      "id": "vd0656",
+      "term": "mercou",
+      "trans": "mercar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "mercar = to buy",
+      "tags": [
+        "drill",
+        "conjugation",
+        "mercar"
+      ],
+      "unit": "gramatica",
+      "freq": 2656
+    },
+    {
+      "id": "vd0657",
+      "term": "atremo",
+      "trans": "atremar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "atremar = to catch what was said, to make out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atremar"
+      ],
+      "unit": "gramatica",
+      "freq": 2657
+    },
+    {
+      "id": "vd0658",
+      "term": "atrema",
+      "trans": "atremar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "atremar = to catch what was said, to make out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atremar"
+      ],
+      "unit": "gramatica",
+      "freq": 2658
+    },
+    {
+      "id": "vd0659",
+      "term": "atremei",
+      "trans": "atremar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "atremar = to catch what was said, to make out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atremar"
+      ],
+      "unit": "gramatica",
+      "freq": 2659
+    },
+    {
+      "id": "vd0660",
+      "term": "atremou",
+      "trans": "atremar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "atremar = to catch what was said, to make out",
+      "tags": [
+        "drill",
+        "conjugation",
+        "atremar"
+      ],
+      "unit": "gramatica",
+      "freq": 2660
+    },
+    {
+      "id": "vd0661",
+      "term": "cramo",
+      "trans": "cramar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "cramar = to complain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cramar"
+      ],
+      "unit": "gramatica",
+      "freq": 2661
+    },
+    {
+      "id": "vd0662",
+      "term": "crama",
+      "trans": "cramar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "cramar = to complain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cramar"
+      ],
+      "unit": "gramatica",
+      "freq": 2662
+    },
+    {
+      "id": "vd0663",
+      "term": "cramei",
+      "trans": "cramar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "cramar = to complain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cramar"
+      ],
+      "unit": "gramatica",
+      "freq": 2663
+    },
+    {
+      "id": "vd0664",
+      "term": "cramou",
+      "trans": "cramar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "cramar = to complain",
+      "tags": [
+        "drill",
+        "conjugation",
+        "cramar"
+      ],
+      "unit": "gramatica",
+      "freq": 2664
+    },
+    {
+      "id": "vd0665",
+      "term": "bilhardo",
+      "trans": "bilhardar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "bilhardar = to gossip, to pry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "bilhardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2665
+    },
+    {
+      "id": "vd0666",
+      "term": "bilharda",
+      "trans": "bilhardar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "bilhardar = to gossip, to pry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "bilhardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2666
+    },
+    {
+      "id": "vd0667",
+      "term": "bilhardei",
+      "trans": "bilhardar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "bilhardar = to gossip, to pry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "bilhardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2667
+    },
+    {
+      "id": "vd0668",
+      "term": "bilhardou",
+      "trans": "bilhardar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "bilhardar = to gossip, to pry",
+      "tags": [
+        "drill",
+        "conjugation",
+        "bilhardar"
+      ],
+      "unit": "gramatica",
+      "freq": 2668
+    },
+    {
+      "id": "vd0669",
+      "term": "trompico",
+      "trans": "trompicar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "trompicar = to stumble",
+      "tags": [
+        "drill",
+        "conjugation",
+        "trompicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2669
+    },
+    {
+      "id": "vd0670",
+      "term": "trompica",
+      "trans": "trompicar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "trompicar = to stumble",
+      "tags": [
+        "drill",
+        "conjugation",
+        "trompicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2670
+    },
+    {
+      "id": "vd0671",
+      "term": "trompiquei",
+      "trans": "trompicar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "trompicar = to stumble",
+      "tags": [
+        "drill",
+        "conjugation",
+        "trompicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2671
+    },
+    {
+      "id": "vd0672",
+      "term": "trompicou",
+      "trans": "trompicar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "trompicar = to stumble",
+      "tags": [
+        "drill",
+        "conjugation",
+        "trompicar"
+      ],
+      "unit": "gramatica",
+      "freq": 2672
+    },
+    {
+      "id": "vd0673",
+      "term": "esvaro",
+      "trans": "esvarar — present, eu",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, eu ___.",
+      "ex_trans": "esvarar = to slip",
+      "tags": [
+        "drill",
+        "conjugation",
+        "esvarar"
+      ],
+      "unit": "gramatica",
+      "freq": 2673
+    },
+    {
+      "id": "vd0674",
+      "term": "esvara",
+      "trans": "esvarar — present, ele",
+      "pos": "drill",
+      "note": "Agora (right now) is what forces the present here.",
+      "ex_t": "Agora, ele ___.",
+      "ex_trans": "esvarar = to slip",
+      "tags": [
+        "drill",
+        "conjugation",
+        "esvarar"
+      ],
+      "unit": "gramatica",
+      "freq": 2674
+    },
+    {
+      "id": "vd0675",
+      "term": "esvarei",
+      "trans": "esvarar — simple past, eu",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, eu ___.",
+      "ex_trans": "esvarar = to slip",
+      "tags": [
+        "drill",
+        "conjugation",
+        "esvarar"
+      ],
+      "unit": "gramatica",
+      "freq": 2675
+    },
+    {
+      "id": "vd0676",
+      "term": "esvarou",
+      "trans": "esvarar — simple past, ele",
+      "pos": "drill",
+      "note": "No sábado (on Saturday) is what forces the simple past here.",
+      "ex_t": "No sábado, ele ___.",
+      "ex_trans": "esvarar = to slip",
+      "tags": [
+        "drill",
+        "conjugation",
+        "esvarar"
+      ],
+      "unit": "gramatica",
+      "freq": 2676
+    },
+    {
+      "id": "vd0677",
+      "term": "junto",
+      "trans": "juntar — present, eu",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, eu ___.",
+      "ex_trans": "juntar = to pick up off the ground",
+      "tags": [
+        "drill",
+        "conjugation",
+        "juntar"
+      ],
+      "unit": "gramatica",
+      "freq": 2677
+    },
+    {
+      "id": "vd0678",
+      "term": "junta",
+      "trans": "juntar — present, ele",
+      "pos": "drill",
+      "note": "Todos os dias (every day) is what forces the present here.",
+      "ex_t": "Todos os dias, ele ___.",
+      "ex_trans": "juntar = to pick up off the ground",
+      "tags": [
+        "drill",
+        "conjugation",
+        "juntar"
+      ],
+      "unit": "gramatica",
+      "freq": 2678
+    },
+    {
+      "id": "vd0679",
+      "term": "juntei",
+      "trans": "juntar — simple past, eu",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, eu ___.",
+      "ex_trans": "juntar = to pick up off the ground",
+      "tags": [
+        "drill",
+        "conjugation",
+        "juntar"
+      ],
+      "unit": "gramatica",
+      "freq": 2679
+    },
+    {
+      "id": "vd0680",
+      "term": "juntou",
+      "trans": "juntar — simple past, ele",
+      "pos": "drill",
+      "note": "Ontem (yesterday) is what forces the simple past here.",
+      "ex_t": "Ontem, ele ___.",
+      "ex_trans": "juntar = to pick up off the ground",
+      "tags": [
+        "drill",
+        "conjugation",
+        "juntar"
+      ],
+      "unit": "gramatica",
+      "freq": 2680
+    },
+    {
+      "id": "vd0681",
+      "term": "enfinco",
+      "trans": "enfincar — present, eu",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, eu ___.",
+      "ex_trans": "enfincar = to shove something in",
+      "tags": [
+        "drill",
+        "conjugation",
+        "enfincar"
+      ],
+      "unit": "gramatica",
+      "freq": 2681
+    },
+    {
+      "id": "vd0682",
+      "term": "enfinca",
+      "trans": "enfincar — present, ele",
+      "pos": "drill",
+      "note": "Hoje (today) is what forces the present here.",
+      "ex_t": "Hoje, ele ___.",
+      "ex_trans": "enfincar = to shove something in",
+      "tags": [
+        "drill",
+        "conjugation",
+        "enfincar"
+      ],
+      "unit": "gramatica",
+      "freq": 2682
+    },
+    {
+      "id": "vd0683",
+      "term": "enfinquei",
+      "trans": "enfincar — simple past, eu",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, eu ___.",
+      "ex_trans": "enfincar = to shove something in",
+      "tags": [
+        "drill",
+        "conjugation",
+        "enfincar"
+      ],
+      "unit": "gramatica",
+      "freq": 2683
+    },
+    {
+      "id": "vd0684",
+      "term": "enfincou",
+      "trans": "enfincar — simple past, ele",
+      "pos": "drill",
+      "note": "Na semana passada (last week) is what forces the simple past here.",
+      "ex_t": "Na semana passada, ele ___.",
+      "ex_trans": "enfincar = to shove something in",
+      "tags": [
+        "drill",
+        "conjugation",
+        "enfincar"
+      ],
+      "unit": "gramatica",
+      "freq": 2684
     }
   ]
 }
