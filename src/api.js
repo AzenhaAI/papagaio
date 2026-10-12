@@ -586,7 +586,12 @@ export async function handleApi(request, env, path) {
       const exactRaw = rest.filter((r) => r.term.toLowerCase() === raw);
       const own = exactRaw.length ? exactRaw : rest.filter((r) => fold(r.term) === s);
       const FUNCTION = /^(prep|conj|pron|adv|art|det|num|contraction)/;
-      const minor = (r) => r.pos === 'interj' || /^(the |an? )?(arabic |greek |hebrew )?letter\b/i.test(r.trans ?? '');
+      // A row with no translation (lexpt:, a Portuguese definition only) or a
+      // letter's name — in either language, "nome de letras do alfabeto
+      // árabe" is how há met learners — never outranks the verb.
+      const minor = (r) => r.pos === 'interj' || String(r.id ?? '').startsWith('lexpt:')
+        || /^(the |an? )?(arabic |greek |hebrew )?letter\b/i.test(r.trans ?? '')
+        || /\bletras? d[oa] alfabeto\b|^nome d[ae] letra/i.test(r.trans ?? '');
       const best = Math.min(...own.map((r) => r.freq ?? 1e9));
       const lead = !own.length
         || own.every(minor)
