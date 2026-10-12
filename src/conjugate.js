@@ -261,7 +261,118 @@ const IRREGULAR = {
   },
   abrir: { participio: 'aberto' },
   escrever: { participio: 'escrito' },
+  haver: {
+    presente: ['hei', 'hás', 'há', 'havemos', 'hão'],
+    pps: ['houve', 'houveste', 'houve', 'houvemos', 'houveram'],
+    presente_conj: ['haja', 'hajas', 'haja', 'hajamos', 'hajam'],
+    imperfeito_conj: ['houvesse', 'houvesses', 'houvesse', 'houvéssemos', 'houvessem'],
+    futuro_conj: ['houver', 'houveres', 'houver', 'houvermos', 'houverem'],
+    imperativo: ['', 'há', 'haja', 'hajamos', 'hajam'],
+    participio: 'havido',
+  },
+  valer: {
+    presente: ['valho', 'vales', 'vale', 'valemos', 'valem'],
+    presente_conj: ['valha', 'valhas', 'valha', 'valhamos', 'valham'],
+  },
+  caber: {
+    presente: ['caibo', 'cabes', 'cabe', 'cabemos', 'cabem'],
+    pps: ['coube', 'coubeste', 'coube', 'coubemos', 'couberam'],
+    presente_conj: ['caiba', 'caibas', 'caiba', 'caibamos', 'caibam'],
+    imperfeito_conj: ['coubesse', 'coubesses', 'coubesse', 'coubéssemos', 'coubessem'],
+    futuro_conj: ['couber', 'couberes', 'couber', 'coubermos', 'couberem'],
+  },
+  rir: {
+    presente: ['rio', 'ris', 'ri', 'rimos', 'riem'],
+    presente_conj: ['ria', 'rias', 'ria', 'riamos', 'riam'],
+    participio: 'rido',
+  },
+  medir: {
+    presente: ['meço', 'medes', 'mede', 'medimos', 'medem'],
+    presente_conj: ['meça', 'meças', 'meça', 'meçamos', 'meçam'],
+  },
 };
+
+/** Verbs built on an irregular one conjugate like it, prefix and all:
+ * manter like ter, convir like vir, propor like pôr, impedir like pedir.
+ * Generated from the base they came out regular — "manto, mantes, mante",
+ * "convo", and no forms at all for propor, whose infinitive does not end in
+ * -ar/-er/-ir. Listed rather than matched: dever, meter and escrever end in
+ * the same letters and are nothing of the kind. */
+const DERIVED = {
+  ter: ['manter', 'obter', 'conter', 'deter', 'reter', 'entreter', 'abster', 'ater', 'suster'],
+  vir: ['convir', 'intervir', 'provir', 'advir', 'sobrevir'],
+  ver: ['prever', 'rever', 'antever', 'entrever'],
+  'pôr': ['propor', 'compor', 'supor', 'opor', 'dispor', 'expor', 'impor', 'depor', 'repor',
+    'transpor', 'sobrepor', 'pospor', 'decompor', 'recompor', 'indispor'],
+  fazer: ['satisfazer', 'desfazer', 'refazer'],
+  dizer: ['bendizer', 'maldizer', 'contradizer', 'desdizer', 'predizer'],
+  pedir: ['impedir', 'despedir', 'expedir', 'desimpedir'],
+  rir: ['sorrir'],
+};
+const BASE_OF = new Map(Object.entries(DERIVED).flatMap(([b, vs]) => vs.map((v) => [v, b])));
+// Stressed on the prefix's neighbour, these carry an accent the base does not:
+// ele tem → mantém, tu vens → convéns.
+const DERIVED_ACCENT = { tem: 'tém', tens: 'téns', vem: 'vém', vens: 'véns' };
+
+function derived(verb) {
+  const base = BASE_OF.get(verb);
+  if (!base) return null;
+  const b = conjugate(base);
+  const prefix = verb.slice(0, verb.length - base.length);
+  const pre = (f) => (typeof f === 'string' && f ? prefix + (DERIVED_ACCENT[f] ?? f) : f);
+  const out = {};
+  for (const [k, v] of Object.entries(b)) {
+    if (['mais_que_perfeito', 'ppc', 'futuro_prox'].includes(k)) continue;
+    out[k] = Array.isArray(v) ? v.map(pre) : pre(v);
+  }
+  out.participio = prefix + b.participio;
+  out.mais_que_perfeito = TER_IMPERFEITO.map((t) => `${t} ${out.participio}`);
+  out.ppc = TER_PRESENTE.map((t) => `${t} ${out.participio}`);
+  out.futuro_prox = IR_PRESENTE.map((v) => `${v} ${verb}`);
+  return out;
+}
+
+/** Present-tense patterns that a whole class shares, as overrides for conjugate.
+ *
+ *  -ear (passear, chatear): an i joins the stem wherever the stress falls on
+ *  it — passeio, passeias, passeamos. A handful of -iar verbs (the "MARIO"
+ *  set: mediar, ansiar, remediar, incendiar, odiar) do the same, odeio.
+ *  -uzir (conduzir, traduzir) drop the final e: ele conduz.
+ *  u→o verbs (subir, fugir, consumir) open the stem where it is stressed:
+ *  sobes, foge, consomem — but subo, subimos. */
+const MARIO = ['mediar', 'ansiar', 'remediar', 'incendiar', 'odiar', 'intermediar'];
+const U_TO_O = ['subir', 'fugir', 'sacudir', 'acudir', 'cuspir', 'consumir', 'sumir', 'bulir', 'escapulir'];
+function classPresent(verb) {
+  let m = verb.match(/^(.+e)ar$/);
+  if (m) {
+    const st = m[1];
+    return {
+      presente: [st + 'io', st + 'ias', st + 'ia', st + 'amos', st + 'iam'],
+      presente_conj: [st + 'ie', st + 'ies', st + 'ie', st + 'emos', st + 'iem'],
+    };
+  }
+  if (MARIO.includes(verb)) {
+    const st = verb.slice(0, -3);   // od|iar
+    return {
+      presente: [st + 'eio', st + 'eias', st + 'eia', st + 'iamos', st + 'eiam'],
+      presente_conj: [st + 'eie', st + 'eies', st + 'eie', st + 'iemos', st + 'eiem'],
+    };
+  }
+  m = verb.match(/^(.+uz)ir$/);
+  if (m) {
+    const st = m[1];
+    return { presente: [st + 'o', st + 'es', st, st + 'imos', st + 'em'] };
+  }
+  if (U_TO_O.includes(verb)) {
+    const st = verb.slice(0, -2);
+    const at = st.lastIndexOf('u');
+    const so = st.slice(0, at) + 'o' + st.slice(at + 1);
+    return {
+      presente: [respell(st, 'o', 'ir'), so + 'es', so + 'e', st + 'imos', so + 'em'],
+    };
+  }
+  return null;
+}
 
 // ter, conjugated, is the auxiliary for the compound pasts.
 const TER_IMPERFEITO = ['tinha', 'tinhas', 'tinha', 'tínhamos', 'tinham'];
@@ -327,8 +438,10 @@ function hiatus(verb) {
 export function conjugate(infinitive) {
   const verb = String(infinitive || '').trim().toLowerCase();
   const m = verb.match(/^(.*?)(ar|er|ir)$/);
-  const hi = hiatus(verb);
-  const irr = IRREGULAR[verb] ? { ...hi, ...IRREGULAR[verb] } : hi;
+  const der = derived(verb);
+  if (der) return der;
+  const hi = { ...(classPresent(verb) ?? {}), ...(hiatus(verb) ?? {}) };
+  const irr = IRREGULAR[verb] ? { ...hi, ...IRREGULAR[verb] } : (Object.keys(hi).length ? hi : null);
   if (!m && verb !== 'pôr') return null;
 
   const stem = verb === 'pôr' ? 'po' : m[1];
