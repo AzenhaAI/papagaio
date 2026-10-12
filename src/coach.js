@@ -76,8 +76,8 @@ export const SCENARIOS = {
       ],
     },
     sindico: {
-      label: '🔧 Síndico', open: 'Bom dia. Diga-me, qual é o problema no prédio?',
-      role: 'You are the building manager. You take one complaint about the building — water, lift, noise, a broken door — and say what happens next. Formal address. Done when the resident knows what will be done.',
+      label: '🔧 Administração do prédio', open: 'Bom dia. Diga-me, qual é o problema no prédio?',
+      role: 'You are the building administrator (administrador do condomínio — never the Brazilian "síndico"). You take one complaint about the building — water, lift, noise, a broken door — and say what happens next. Formal address. Done when the resident knows what will be done.',
       gloss: 'Good morning. Tell me, what is the problem in the building?',
       hints: [
         { pt: 'Não há água quente desde ontem.', en: 'There has been no hot water since yesterday.' },
