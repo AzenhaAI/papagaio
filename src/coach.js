@@ -256,6 +256,14 @@ function systemPrompt(course, scen, level, known, ui) {
       `Stay inside your role: do not ask about anything a person in this job would not ask. ` +
       `Prefer words the learner already knows: ${words}. ` +
       `If the learner made a mistake, put a brief correction in ${helper} in "note", else "". ` +
+      // Haiku caught pegar, ponto de ônibus and "faz três dias", and let
+      // "Você pode me ajudar?" through as correct twice in twelve lines.
+      `Brazilian usage counts as a mistake here, corrected kindly with the pt-PT form in "you_fixed": ` +
+      `"você" as the default "you" (in Portugal: o senhor / a senhora with strangers, or no pronoun — ` +
+      `"Pode ajudar-me?"; tu among friends), a pronoun before the verb where pt-PT puts it after ` +
+      `("me ajudar" → "ajudar-me"), the gerund for an ongoing action ("estou fazendo" → "estou a fazer"), ` +
+      `"preciso" + infinitive without "de", "faz" + time ("faz três dias" → "há três dias"), and Brazilian ` +
+      `words (ônibus, ponto, trem, celular, banheiro, café da manhã). Never use these yourself. ` +
       `Also give "gloss": your own line translated into plain ${helper}, and "hints": two or three ` +
       `SHORT things the learner could plausibly say next, each as {"pt": "...", "en": "..."}. ` +
       `The hints must fit this exact moment in the scene, be usable verbatim, and stay at the ` +
