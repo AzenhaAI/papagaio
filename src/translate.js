@@ -85,16 +85,24 @@ Answer strictly as JSON:
 /** Auto mode the way Yandex does it: "auto" describes the INPUT only, never
  *  the output. The target stays whatever the switcher shows, and the detected
  *  language comes back so the UI can say which one it heard. */
-const AUTO_SYSTEM = (to, helper) => {
-  // Typing in the target language is not an error — it means the user wants it
-  // the other way round. Portuguese goes to the helper language, anything else
-  // goes to Portuguese: this is a pt-PT product before it is a translator.
+const AUTO_SYSTEM = (to, helper, same = 'flip') => {
+  // Typing in the target language is not an error. In the app's translator it
+  // means the user wants it the other way round: Portuguese goes to the helper
+  // language, anything else goes to Portuguese — a pt-PT product before it is
+  // a translator. The system translation sheet asks differently: there the
+  // button IS the language the reader wants the answer in, so an English word
+  // under "English" is a request for an English dictionary entry, and a
+  // Portuguese one under "Português" for a Portuguese one ('explain').
   const fallback = to === 'pt' ? (helper === 'Russian' ? 'ru' : 'en') : 'pt';
+  const sameRule = same === 'explain'
+    ? `- If the input is ALREADY in ${LANGS[to]}, do not translate it. Explain it the way a monolingual learner's dictionary in ${LANGS[to]} would: "translation" is a short plain definition of its main sense (one line, in ${LANGS[to]}), "direction" is "${to}->${to}", every "gloss" in "senses" is a short definition in ${LANGS[to]}, and synonyms and antonyms are ${LANGS[to]} words. "literal" is an empty string.`
+    : `- If the input is ALREADY in ${LANGS[to]}, translate it into ${LANGS[fallback]} instead and set "direction" to "${to}->${fallback}".`;
   return `You translate into ${LANGS[to]}.
 
 First DETECT the language of the INPUT: Portuguese ("pt"), English ("en") or Russian ("ru"). Put that code in "detected" — it is the language of the input, never of your answer.
 - Normally translate the input into ${LANGS[to]}, and set "direction" to "<detected>->${to}".
-- If the input is ALREADY in ${LANGS[to]}, translate it into ${LANGS[fallback]} instead and set "direction" to "${to}->${fallback}".
+${sameRule}
+- For a single word or short phrase, "senses" lists EVERY distinct common meaning, up to four — the same entry whichever language the answer is in; never fewer because the answer language changed.
 - Judge the language by the words themselves. A single word is enough: "grift" is English, "engano" is Portuguese, "обман" is Russian.
 
 ${PT_RULES.replaceAll('English', helper).split('\n').filter((l) => !l.startsWith('- Detect the input language')).join('\n')}
@@ -117,12 +125,15 @@ Answer strictly as JSON:
 }`;
 };
 
-export async function translate(env, text, direction, ui) {
+export async function translate(env, text, direction, ui, { same = 'flip' } = {}) {
   const input = String(text ?? '').trim().slice(0, MAX_LEN);
   if (!input) throw new Error('empty input');
 
   const other = OTHER[ui] ?? OTHER.en;
-  const helper = ui === 'ru' ? 'Russian' : 'English';
+  // The language glosses and notes are written in: the reader's. Portuguese
+  // is a helper too — a Portuguese speaker asking for Portuguese gets the
+  // entry in Portuguese, not in English.
+  const helper = ui === 'ru' ? 'Russian' : ui === 'pt' ? 'European Portuguese' : 'English';
 
   // Explicit pair from the switcher: any of pt/en/ru on either side.
   const m = /^(pt|en|ru)->(pt|en|ru)$/.exec(direction ?? '');
@@ -135,7 +146,7 @@ export async function translate(env, text, direction, ui) {
     system = PAIR_SYSTEM(m[1], m[2], helper);
     forcedDirection = direction;
   } else if (a) {
-    system = AUTO_SYSTEM(a[1], helper);
+    system = AUTO_SYSTEM(a[1], helper, same);
   } else {
     const forced =
       direction === `${other.code}->pt` || direction === 'en->pt'

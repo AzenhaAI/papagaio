@@ -12,6 +12,7 @@ import { lookupWiki } from './wiki.js';
 import { synthesize } from './tts.js';
 import { analyse } from './read.js';
 import { buildStats } from './stats.js';
+import { GLOSS_RU } from './verbs_ru.js';
 import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
@@ -143,7 +144,7 @@ export async function handleApi(request, env, path) {
     }
     if (!body?.text?.trim()) return json({ error: 'text is required' }, 400);
     try {
-      const t = await translate(env, body.text, body.direction, body.ui);
+      const t = await translate(env, body.text, body.direction, body.ui, { same: body.same === 'explain' ? 'explain' : 'flip' });
       // Corrections land in the ledger — the recurring ones become cards.
       if (t.corrections?.length) {
         const who = await authUser(env, request).catch(() => null);
@@ -955,7 +956,9 @@ export async function handleApi(request, env, path) {
   // table where the rules break.
   if (path === '/api/conjugate' && request.method === 'GET') {
     const p = new URL(request.url).searchParams;
-    if (p.get('list') !== null) return json({ count: VERBS.length, verbs: VERBS });
+    if (p.get('list') !== null) {
+      return json({ count: VERBS.length, verbs: VERBS.map((v) => ({ ...v, gloss_ru: GLOSS_RU[v.inf] ?? null })) });
+    }
 
     // Reverse lookup: "era" → ser (Imperfeito, eu / ele-ela). What every real
     // dictionary does, because the form is what you actually meet in the wild.
