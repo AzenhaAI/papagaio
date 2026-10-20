@@ -457,16 +457,23 @@ export async function handleApi(request, env, path) {
       if (!(freq > 0 && freq <= 20000)) return [];
       const pair = ui2 === 'ru' ? 'pt-ru' : 'pt-en';
       const w = fold(term.replace(/^([oa]s? |um |uma )/, ''));
-      const key = new Request(`https://cache.papagaio/examples/${pair}/${encodeURIComponent(w)}`);
+      const key = new Request(`https://cache.papagaio/examples2/${pair}/${encodeURIComponent(w)}`);
       const cache = typeof caches !== 'undefined' ? caches.default : null;
       const kept = cache ? await cache.match(key).catch(() => null) : null;
       if (kept) return kept.json();
       const { results } = await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE pair = ?1
            AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4)
-         LIMIT 3`
+         LIMIT 8`
       ).bind(pair, `${w} %`, `% ${w} %`, `% ${w}`).all().catch(() => ({ results: [] }));
-      const lines = (results ?? []).map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
+      // Tatoeba's Portuguese is half Brazilian: "A criança está alisando um
+      // gato" sat under gato. A sentence with the Brazilian progressive or a
+      // Brazil-only word is not shown to someone learning pt-PT.
+      const BR = /\b(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\w+(ando|endo|indo)\b|\b(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente)\b/i;
+      const lines = (results ?? [])
+        .filter((r) => !BR.test(r.src))
+        .slice(0, 3)
+        .map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
       if (cache) await cache.put(key, new Response(JSON.stringify(lines), {
         headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=2592000' },
       })).catch(() => {});

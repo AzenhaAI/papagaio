@@ -29,6 +29,7 @@ Answer strictly as JSON:
 {
   "meanings": [{"trans": "sense in English", "note": "short pt-PT example showing it, or empty string"}],
   "synonyms": ["pt-PT synonyms, may be empty"],
+  "antonyms": ["pt-PT opposites of the main sense, may be empty — none for words with no real opposite (gato, mesa)"],
   "collocations": [{"t": "the Portuguese phrase", "trans": "what it means in English"}],
   "grammar": "one or two sentences on how the word behaves, or empty string",
   "conj": {"presente": ["...","...","...","...","..."], "pps": [...], "imperfeito": [...]}
@@ -57,6 +58,7 @@ function clean(out, isVerb) {
       .slice(0, 6)
       .map((m) => ({ trans: String(m.trans), note: String(m.note ?? '') })),
     synonyms: list(out.synonyms).map(String).filter(Boolean).slice(0, 8),
+    antonyms: list(out.antonyms).map(String).filter(Boolean).slice(0, 6),
     collocations: list(out.collocations)
       .filter((c) => c?.t && c?.trans)
       .slice(0, 8)
@@ -71,6 +73,7 @@ function clean(out, isVerb) {
 const isEmpty = (e) =>
   !e.meanings.length &&
   !e.synonyms.length &&
+  !(e.antonyms ?? []).length &&
   !e.collocations.length &&
   !e.grammar &&
   !Object.keys(e.conj).length;
