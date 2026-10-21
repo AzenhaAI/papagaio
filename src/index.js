@@ -1425,7 +1425,8 @@ function formatEntry(card, e) {
     for (const [tense, name] of Object.entries(TENSES)) {
       if (!e.conj[tense]) continue;
       s += `\n\n*${name}*`;
-      e.conj[tense].forEach((f, i) => { s += `\n${PERSONS[i]} — \`${f}\``; });
+      // A person with no form (the imperative has no eu) prints a dash, not empty backticks.
+      e.conj[tense].forEach((f, i) => { s += `\n${PERSONS[i]} — ${f && f.trim() ? `\`${f}\`` : '—'}`; });
     }
   }
   if (e.collocations?.length) {
