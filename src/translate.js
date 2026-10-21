@@ -20,7 +20,8 @@ export const PT_RULES = `Hard rules:
 - "translation" is ONLY the translated phrase. Never commentary, never advice, never two alternatives joined by a comma, never a sentence about what you would prefer to say. If several renderings are natural, put the best one in "translation" and mention the others in "note".
 - Fixed social formulas translate to the formula the other language actually uses, not word for word: "how do you do?" is "tudo bem?", not a discussion of formality.
 - If the INPUT is a single word or a short phrase (up to three words), fill "senses": its distinct meanings, most common first, at most four. Each sense carries a short gloss in the helper language, the part of speech, and the synonyms and antonyms OF THE TRANSLATION, in the language you are translating into — a learner uses them to say the same thing another way, so they must be words they can actually use. For anything longer than three words, "senses" is an empty list: a sentence has no dictionary entry.
-- "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer.`;
+- "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer.
+- Keep the shape of the input: URLs, e-mail addresses, numbers, names and hashtags exactly as written (never translate or rewrite a link), the same line breaks, and every bullet point or list item on its own line with its own marker.`;
 
 // The second language defaults to English; a learner who set their interface
 // to another language gets the same product with that language in England's
@@ -199,7 +200,63 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
     }
   }
 
+  // A long text must come back in its own shape: list items on their own
+  // lines and links untouched. The model sometimes folds bullets into one
+  // paragraph, so a lost list is asked for once more.
+  const items = (x) => (String(x ?? '').match(/^\s*(?:[•\-*–]|\d+[.)])\s+/gm) ?? []).length;
+  if (items(input) >= 2 && items(out.translation) < items(input)) {
+    const target = /^(?:pt|en|ru)->(pt|en|ru)$/.exec(forcedDirection ?? out.direction ?? '')?.[1];
+    const from = out.detected ?? /^(pt|en|ru)->/.exec(out.direction ?? '')?.[1];
+    if (target && from && target !== from) {
+      try {
+        const again = JSON.parse(await chat(
+          env,
+          [
+            { role: 'system', content: PAIR_SYSTEM(from, target, helper) },
+            { role: 'user', content: input },
+          ],
+          { json: true }
+        ));
+        if (items(again.translation) > items(out.translation)) {
+          out = { ...again, detected: from };
+          forcedDirection = `${from}->${target}`;
+        }
+      } catch {
+        // Keep the first answer rather than fail the request.
+      }
+    }
+  }
+  // Links are copied, never translated: if the answer rewrote them, put the
+  // originals back in order.
+  const urls = (x) => String(x ?? '').match(/https?:\/\/[^\s)\]]*[^\s)\].,;:!?]/g) ?? [];
+  const inUrls = urls(input);
+  if (inUrls.length && typeof out.translation === 'string') {
+    const outUrls = urls(out.translation);
+    if (outUrls.length === inUrls.length && outUrls.some((u, i) => u !== inUrls[i])) {
+      let n = 0;
+      out.translation = out.translation.replace(/https?:\/\/[^\s)\]]*[^\s)\].,;:!?]/g, () => inUrls[n++]);
+    }
+  }
+
   const dir = forcedDirection ?? out.direction ?? 'en->pt';
+
+  // 'explain' sometimes hands the word back as its own definition ("house" →
+  // "house"). The first sense's gloss is already a definition in that same
+  // language, so it stands in without a second call.
+  const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+  const selfDir = /^(pt|en|ru)->\1$/.test(dir);
+  let translation = out.translation ?? '';
+  if (selfDir && fold(translation) === fold(input)) {
+    const def = Array.isArray(out.senses) ? out.senses.find((x) => x?.gloss && fold(x.gloss) !== fold(input))?.gloss : '';
+    if (def) translation = String(def);
+  }
+  // A Brazilian variant is only worth showing for a word that is actually in
+  // the answer; the model sometimes lists its stock examples regardless.
+  const answer = fold(translation);
+  const brDiff = Array.isArray(out.br_diff)
+    ? out.br_diff.filter((d) => d?.pt && d?.br && answer.includes(fold(d.pt)))
+    : [];
+
   return {
     source: input,
     direction: dir,
@@ -208,12 +265,12 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
     detected: /^(pt|en|ru)$/.test(out.detected ?? '')
       ? out.detected
       : (/^(pt|en|ru)->/.exec(dir)?.[1] ?? null),
-    translation: out.translation ?? '',
+    translation,
     corrected_source: out.corrected_source || '',
     corrections: Array.isArray(out.corrections) ? out.corrections.filter((c) => c?.wrong && c?.right) : [],
     literal: out.literal || '',
     register: out.register || 'neutral',
-    br_diff: Array.isArray(out.br_diff) ? out.br_diff.filter((d) => d?.pt && d?.br) : [],
+    br_diff: brDiff,
     note: out.note || '',
     // The dictionary half of the answer: what else this word means, and how
     // else to say it. Only ever filled for a word or a short phrase.
