@@ -174,6 +174,31 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
     out = { direction: 'en->pt', translation: raw, literal: '', register: 'neutral', br_diff: [], note: '' };
   }
 
+  // The default answer (auto->pt, flip): Portuguese input must land in the
+  // reader's language. On a long text with bullets and a link the model once
+  // answered in English for a Russian reader (Kirill, 21.10.2026), so a
+  // Portuguese input that came back anywhere else is redone as an explicit
+  // pair. Costs a second call only when the first one missed.
+  if (a && a[1] === 'pt' && same === 'flip' && out?.detected === 'pt') {
+    const fb = helper === 'Russian' ? 'ru' : 'en';
+    if (!String(out.direction ?? '').endsWith('->' + fb)) {
+      const again = await chat(
+        env,
+        [
+          { role: 'system', content: PAIR_SYSTEM('pt', fb, helper) },
+          { role: 'user', content: input },
+        ],
+        { json: true }
+      );
+      try {
+        out = { ...JSON.parse(again), detected: 'pt' };
+        forcedDirection = `pt->${fb}`;
+      } catch {
+        // Keep the first answer rather than fail the request.
+      }
+    }
+  }
+
   const dir = forcedDirection ?? out.direction ?? 'en->pt';
   return {
     source: input,
