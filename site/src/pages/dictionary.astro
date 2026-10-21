@@ -317,7 +317,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     // Same visual as /verbs: where the action sits, "now" at 50.
     const TL = {
       presente: [42, 58, 0], pps: [16, 26, 0], imperfeito: [6, 38, 0],
-      ppc: [14, 50, 0], mais_que_perfeito: [2, 10, 0], imperfeito_conj: [6, 38, 1],
+      ppc: [14, 50, 0], mais_que_perfeito: [2, 10, 0], imperfeito_conj: [6, 38, 1], presente_conj: [44, 70, 1],
       futuro: [70, 92, 0], futuro_prox: [54, 68, 0], futuro_conj: [62, 88, 1],
       condicional: [56, 84, 1], imperativo: [50, 64, 1],
     };
@@ -428,18 +428,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             for (const [mood, tenses] of moods) {
               cj += `<div class="moodlabel">${mood}</div>`;
               for (const [k, name, when] of tenses) {
-                cj += `<div style="margin-bottom:14px;">
+                cj += `<div style="border:1px solid var(--panel2); border-radius:12px; padding:12px 14px; margin-bottom:14px;">
+                  ${timeline(k)}
                   <strong style="font-size:14.5px;">${name}</strong>
                   ${tensePurpose(k)}
                   ${when ? `<div class="muted" style="font-size:13px;">${when}</div>` : ''}
                   ${tenseMarkers(k)}
-                  ${timeline(k)}
-                  <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
+                  ${tenseNotes(k, e.conjEx?.[k], { sound: false, conj: e.conj })}
+                  <div style="background:var(--panel2); border-radius:10px; padding:10px 14px; margin-top:10px;
                        display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
                   e.conj[k].map((f, n) => f
                     ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
                     : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
-                  '</div>' + tenseNotes(k, e.conjEx?.[k], { sound: false, conj: e.conj }) + '</div>';
+                  '</div></div>';
               }
             }
             cj += '</div>';

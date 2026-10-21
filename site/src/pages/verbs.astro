@@ -45,7 +45,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       imperfeito: [6, 38, 0],
       ppc: [14, 50, 0],
       mais_que_perfeito: [2, 10, 0],
-      imperfeito_conj: [6, 38, 1],
+      imperfeito_conj: [6, 38, 1], presente_conj: [44, 70, 1],
       futuro: [70, 92, 0],
       futuro_prox: [54, 68, 0],
       futuro_conj: [62, 88, 1],
@@ -133,13 +133,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           html += `<div class="moodlabel">${mood}</div>`;
         for (const [k, name, when] of tenses) {
           if (!c[k]?.length) continue;
-          html += `<div style="margin-bottom:16px;">
+          // One framed block per tense: timeline and name, the notes, then the forms.
+          html += `<div class="tblock">
+            ${timeline(k)}
             <strong style="font-size:14.5px;">${name}</strong>
             ${tensePurpose(k)}
             <div class="muted" style="font-size:13px;">${when}</div>
             ${tenseMarkers(k)}
-            ${timeline(k)}
-            <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
+            ${tenseNotes(k, ex[k], { conj: c })}
+            <div style="background:var(--panel2); border-radius:10px; padding:10px 14px; margin-top:10px;
                  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:3px 16px;">` +
             c[k].map((f, n) => f
               ? `<div style="font-size:14.5px; display:flex; align-items:center; gap:6px;">
@@ -149,7 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                      style="background:none; border:0; cursor:pointer; font-size:13px; opacity:.6;">🔊</button>
                  </div>`
               : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
-            '</div>' + tenseNotes(k, ex[k], { conj: c }) + '</div>';
+            '</div></div>';
         }
         }
         html += '</div>';
@@ -246,6 +248,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       padding: 7px 4px; cursor: pointer; width: 100%;
     }
     .vrow:hover { background: var(--panel2); }
+    .tblock {
+      border: 1px solid var(--panel2); border-radius: 12px;
+      padding: 12px 14px; margin-bottom: 14px;
+    }
     .tl {
       position: relative; height: 16px; margin: 6px 0 8px; max-width: 340px;
     }
