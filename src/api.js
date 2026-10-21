@@ -488,7 +488,7 @@ export async function handleApi(request, env, path) {
       const entry = (await ensureEntry(env, hit).catch(() => null))
         ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
       entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang, hit.freq ?? 1)];
-      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term) });
+      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term), examples: VERB_EXAMPLES[hit.term] });
     }
 
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
@@ -514,7 +514,7 @@ export async function handleApi(request, env, path) {
         }
       }
       if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang, lex.freq)];
-      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term) });
+      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term), examples: VERB_EXAMPLES[lex.term] });
     }
 
     if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
@@ -522,7 +522,8 @@ export async function handleApi(request, env, path) {
       const card = await lookupWord(env, q);
       if (!card) return json({ error: 'not found' }, 404);
       // The engine is the authority on forms — the model is not asked for them.
-      return json({ source: 'lookup', card, conj: conjugate(card.term.replace(/^[oa]s? /, '')) });
+      const bare = card.term.replace(/^[oa]s? /, '');
+      return json({ source: 'lookup', card, conj: conjugate(bare), examples: VERB_EXAMPLES[bare] });
     } catch (e) {
       return json({ error: e.message }, 502);
     }

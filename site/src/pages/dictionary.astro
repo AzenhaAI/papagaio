@@ -42,6 +42,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div id="list"></div>
 
   <script>
+    import { tensePurpose, tenseMarkers, tenseNotes } from '../lib/tenses.js';
+
     const AUDIO = 'https://azenha.ai/papagaio/audio/';
     const API = '/api/deck';
     const LOOKUP = '/api/lookup';
@@ -142,6 +144,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             try {
               const d = await (await fetch(`${CONJ}?v=${encodeURIComponent(cards[i].term)}`)).json();
               if (d?.conj) entry.conj = d.conj;
+              if (d?.examples) entry.conjEx = d.examples;
             } catch { /* the stub is better than nothing */ }
           }
           box.innerHTML = renderEntry(entry, cards[i], i);
@@ -246,6 +249,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       // article happens to carry.
       const e = c.entry ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
       if (d.conj) e.conj = d.conj;
+      if (d.examples) e.conjEx = d.examples;
       remember({ ...c, course: c.course ?? 'pt' });
 
       list.innerHTML = `
@@ -426,14 +430,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               for (const [k, name, when] of tenses) {
                 cj += `<div style="margin-bottom:14px;">
                   <strong style="font-size:14.5px;">${name}</strong>
+                  ${tensePurpose(k)}
                   ${when ? `<div class="muted" style="font-size:13px;">${when}</div>` : ''}
+                  ${tenseMarkers(k)}
                   ${timeline(k)}
                   <div style="background:var(--panel2); border-radius:10px; padding:10px 14px;
                        display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
                   e.conj[k].map((f, n) => f
                     ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
                     : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
-                  '</div></div>';
+                  '</div>' + tenseNotes(k, e.conjEx?.[k], { sound: false, conj: e.conj }) + '</div>';
               }
             }
             cj += '</div>';
