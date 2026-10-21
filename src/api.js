@@ -13,6 +13,7 @@ import { synthesize } from './tts.js';
 import { analyse } from './read.js';
 import { buildStats } from './stats.js';
 import { GLOSS_RU } from './verbs_ru.js';
+import { VERB_EXAMPLES } from './verb_examples.js';
 import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
@@ -994,7 +995,11 @@ export async function handleApi(request, env, path) {
     const inf = (known?.inf ?? v).replace(/-se$/, '').trim().toLowerCase();
     const forms = conjugate(inf);
     if (!forms) return json({ error: 'not a verb' }, 404);
-    return json({ verb: known?.inf ?? inf, gloss: known?.gloss ?? '', conj: forms });
+    const name = known?.inf ?? inf;
+    return json({
+      verb: name, gloss: known?.gloss ?? '', gloss_ru: GLOSS_RU[name] ?? null, conj: forms,
+      examples: VERB_EXAMPLES[name] ?? VERB_EXAMPLES[inf] ?? null,
+    });
   }
 
   if (path === '/api/coach/scenarios' && request.method === 'GET') {

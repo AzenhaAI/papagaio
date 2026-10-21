@@ -261,6 +261,18 @@ const IRREGULAR = {
   },
   abrir: { participio: 'aberto' },
   escrever: { participio: 'escrito' },
+  // Irregular participles a learner meets with ter. ganhar, gastar and pagar
+  // take the short form in Portugal: "tenho pago", not "tenho pagado".
+  cobrir: { participio: 'coberto' },
+  descobrir: { participio: 'descoberto' },
+  encobrir: { participio: 'encoberto' },
+  descrever: { participio: 'descrito' },
+  inscrever: { participio: 'inscrito' },
+  prescrever: { participio: 'prescrito' },
+  subscrever: { participio: 'subscrito' },
+  ganhar: { participio: 'ganho' },
+  gastar: { participio: 'gasto' },
+  pagar: { participio: 'pago' },
   haver: {
     presente: ['hei', 'hás', 'há', 'havemos', 'hão'],
     pps: ['houve', 'houveste', 'houve', 'houvemos', 'houveram'],
