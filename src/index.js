@@ -17,6 +17,7 @@ import { publishCommands } from './commands.js';
 import { botUi, botDirection, L, S, settingsKeyboard, UI_LANGS } from './bot_lang.js';
 import { MADEIRA } from './madeira.js';
 import { LEVELS as WORD_LEVELS } from './levels.js';
+import { FORMS } from './forms.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -801,9 +802,12 @@ async function handleTranslation(env, uid, chatId, text, from) {
       ).bind(w, `${w} %`).all();
       for (const h of hits ?? []) {
         const lv = WORD_LEVELS[fold(h.term)];
+        const fm = FORMS[h.term];
+        const formsLine = fm ? [fm.pl && `pl. ${fm.pl}`, fm.f && `f. ${fm.f}`].filter(Boolean).join(' · ') : '';
         extra += `\n\n📖 *${strip(h.term)}*` + (lv ? ` · ${lv}` : '') +
           (h.gender ? ` (${h.gender})` : '') + (h.pos ? ` — _${strip(h.pos)}_` : '') +
-          `\n${strip(ui === 'ru' && h.trans_ru ? h.trans_ru : h.trans).slice(0, 160)}`;
+          `\n${strip(ui === 'ru' && h.trans_ru ? h.trans_ru : h.trans).slice(0, 160)}` +
+          (formsLine ? `\n_${strip(formsLine)}_` : '');
       }
       const { results: exs } = await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE pair = 'pt-en'

@@ -16,6 +16,7 @@ import { GLOSS_RU } from './verbs_ru.js';
 import { VERB_EXAMPLES } from './verb_examples.js';
 import { MADEIRA } from './madeira.js';
 import { LEVELS as WORD_LEVELS } from './levels.js';
+import { FORMS } from './forms.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
 // a into b — the app's offline rule (offline_dict.dart _oneEditApart).
@@ -520,7 +521,7 @@ export async function handleApi(request, env, path) {
       const entry = (await ensureEntry(env, hit).catch(() => null))
         ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
       entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang, hit.freq ?? 1)];
-      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term), examples: VERB_EXAMPLES[hit.term], madeira: madeiraOf(hit.term), level: levelOf(hit.term) });
+      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term), examples: VERB_EXAMPLES[hit.term], madeira: madeiraOf(hit.term), level: levelOf(hit.term), forms: FORMS[String(hit.term).replace(/^([oa]s? |um |uma )/i, '')] });
     }
 
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
@@ -546,7 +547,7 @@ export async function handleApi(request, env, path) {
         }
       }
       if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang, lex.freq)];
-      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term), examples: VERB_EXAMPLES[lex.term], madeira: madeiraOf(lex.term), level: levelOf(lex.term) });
+      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term), examples: VERB_EXAMPLES[lex.term], madeira: madeiraOf(lex.term), level: levelOf(lex.term), forms: FORMS[String(lex.term).replace(/^([oa]s? |um |uma )/i, '')] });
     }
 
     if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
@@ -555,7 +556,7 @@ export async function handleApi(request, env, path) {
       if (!card) return json({ error: 'not found' }, 404);
       // The engine is the authority on forms — the model is not asked for them.
       const bare = card.term.replace(/^[oa]s? /, '');
-      return json({ source: 'lookup', card, conj: conjugate(bare), examples: VERB_EXAMPLES[bare], madeira: madeiraOf(bare), level: levelOf(bare) });
+      return json({ source: 'lookup', card, conj: conjugate(bare), examples: VERB_EXAMPLES[bare], madeira: madeiraOf(bare), level: levelOf(bare), forms: FORMS[String(bare).replace(/^([oa]s? |um |uma )/i, '')] });
     } catch (e) {
       return json({ error: e.message }, 502);
     }

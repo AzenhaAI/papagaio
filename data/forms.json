@@ -1,0 +1,7502 @@
+{
+"um": {
+"pl": "uns",
+"f": "uma",
+"fpl": "umas",
+"note": ""
+},
+"bem": {
+"pl": "bens",
+"f": null,
+"fpl": null,
+"note": "plural 'bens' = goods, assets"
+},
+"sim": {
+"pl": "sins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mais": {
+"pl": "mais",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"meu": {
+"pl": null,
+"f": "minha",
+"fpl": "minhas",
+"note": ""
+},
+"ser": {
+"pl": "seres",
+"f": null,
+"fpl": null,
+"note": "noun 'seres' = beings"
+},
+"dizer": {
+"pl": "dizeres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"são": {
+"pl": "sãos",
+"f": "sã",
+"fpl": "sãs",
+"note": ""
+},
+"seu": {
+"pl": null,
+"f": "sua",
+"fpl": "suas",
+"note": ""
+},
+"bom": {
+"pl": "bons",
+"f": "boa",
+"fpl": "boas",
+"note": ""
+},
+"teu": {
+"pl": null,
+"f": "tua",
+"fpl": "tuas",
+"note": ""
+},
+"falar": {
+"pl": "falares",
+"f": null,
+"fpl": null,
+"note": "noun 'falares' = dialects"
+},
+"vez": {
+"pl": "vezes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"favor": {
+"pl": "favores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"melhor": {
+"pl": "melhores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"deus": {
+"pl": "deuses",
+"f": "deusa",
+"fpl": "deusas",
+"note": ""
+},
+"homem": {
+"pl": "homens",
+"f": null,
+"fpl": null,
+"note": "female: mulher (different word)"
+},
+"dois": {
+"pl": null,
+"f": "duas",
+"fpl": null,
+"note": "numeral"
+},
+"senhor": {
+"pl": "senhores",
+"f": "senhora",
+"fpl": "senhoras",
+"note": ""
+},
+"saber": {
+"pl": "saberes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vão": {
+"pl": "vãos",
+"f": "vã",
+"fpl": "vãs",
+"note": ""
+},
+"mulher": {
+"pl": "mulheres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mal": {
+"pl": "males",
+"f": null,
+"fpl": null,
+"note": "irregular: mal -> males"
+},
+"menos": {
+"pl": "menos",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"lugar": {
+"pl": "lugares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"algum": {
+"pl": "alguns",
+"f": "alguma",
+"fpl": "algumas",
+"note": ""
+},
+"razão": {
+"pl": "razões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"amor": {
+"pl": "amores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tal": {
+"pl": "tais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"irmão": {
+"pl": "irmãos",
+"f": "irmã",
+"fpl": "irmãs",
+"note": ""
+},
+"feliz": {
+"pl": "felizes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rapaz": {
+"pl": "rapazes",
+"f": null,
+"fpl": null,
+"note": "female: rapariga (different word)"
+},
+"pessoal": {
+"pl": "pessoais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"adeus": {
+"pl": "adeuses",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"difícil": {
+"pl": "difíceis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"poder": {
+"pl": "poderes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fim": {
+"pl": "fins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"coração": {
+"pl": "corações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mão": {
+"pl": "mãos",
+"f": null,
+"fpl": null,
+"note": "feminine noun despite -ão"
+},
+"maior": {
+"pl": "maiores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"mau": {
+"pl": null,
+"f": "má",
+"fpl": "más",
+"note": ""
+},
+"andar": {
+"pl": "andares",
+"f": null,
+"fpl": null,
+"note": "noun 'andar' = floor/storey"
+},
+"capitão": {
+"pl": "capitães",
+"f": "capitã",
+"fpl": "capitãs",
+"note": ""
+},
+"possível": {
+"pl": "possíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"olhar": {
+"pl": "olhares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mil": {
+"pl": "mil",
+"f": null,
+"fpl": null,
+"note": "invariable as a numeral (dois mil)"
+},
+"fácil": {
+"pl": "fáceis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"prazer": {
+"pl": "prazeres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"jantar": {
+"pl": "jantares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"paz": {
+"pl": "pazes",
+"f": null,
+"fpl": null,
+"note": "plural mainly in 'fazer as pazes'"
+},
+"demais": {
+"pl": "demais",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"local": {
+"pl": "locais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pior": {
+"pl": "piores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"país": {
+"pl": "países",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"prisão": {
+"pl": "prisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"especial": {
+"pl": "especiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rei": {
+"pl": null,
+"f": "rainha",
+"fpl": "rainhas",
+"note": ""
+},
+"ar": {
+"pl": "ares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hospital": {
+"pl": "hospitais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"atenção": {
+"pl": "atenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"luz": {
+"pl": "luzes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"haver": {
+"pl": "haveres",
+"f": null,
+"fpl": null,
+"note": "noun 'haveres' = possessions"
+},
+"querer": {
+"pl": "quereres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"jovem": {
+"pl": "jovens",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"situação": {
+"pl": "situações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"natal": {
+"pl": "natais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"capaz": {
+"pl": "capazes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"questão": {
+"pl": "questões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"relação": {
+"pl": "relações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cão": {
+"pl": "cães",
+"f": null,
+"fpl": null,
+"note": "female: cadela (different word)"
+},
+"sinal": {
+"pl": "sinais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mensagem": {
+"pl": "mensagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"doutor": {
+"pl": "doutores",
+"f": "doutora",
+"fpl": "doutoras",
+"note": ""
+},
+"viagem": {
+"pl": "viagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"final": {
+"pl": "finais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"chão": {
+"pl": "chãos",
+"f": "chã",
+"fpl": "chãs",
+"note": ""
+},
+"normal": {
+"pl": "normais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tom": {
+"pl": "tons",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"simples": {
+"pl": "simples",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"real": {
+"pl": "reais",
+"f": null,
+"fpl": null,
+"note": "old currency plural: réis"
+},
+"ordem": {
+"pl": "ordens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"avião": {
+"pl": "aviões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"missão": {
+"pl": "missões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"informação": {
+"pl": "informações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sol": {
+"pl": "sóis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hotel": {
+"pl": "hotéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"incrível": {
+"pl": "incríveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"dor": {
+"pl": "dores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"voz": {
+"pl": "vozes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"professor": {
+"pl": "professores",
+"f": "professora",
+"fpl": "professoras",
+"note": ""
+},
+"telemóvel": {
+"pl": "telemóveis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reunião": {
+"pl": "reuniões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"general": {
+"pl": "generais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"mês": {
+"pl": "meses",
+"f": null,
+"fpl": null,
+"note": "accent drops in the plural"
+},
+"papel": {
+"pl": "papéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bar": {
+"pl": "bares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"parabéns": {
+"pl": "parabéns",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"tradução": {
+"pl": "traduções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"impossível": {
+"pl": "impossíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"costas": {
+"pl": "costas",
+"f": null,
+"fpl": null,
+"note": "plural only (the back)"
+},
+"decisão": {
+"pl": "decisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"posição": {
+"pl": "posições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tribunal": {
+"pl": "tribunais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"horrível": {
+"pl": "horríveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"coronel": {
+"pl": "coronéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"parecer": {
+"pl": "pareceres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"paul": {
+"pl": "pauis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mar": {
+"pl": "mares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nível": {
+"pl": "níveis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mestre": {
+"pl": null,
+"f": "mestra",
+"fpl": "mestras",
+"note": ""
+},
+"serão": {
+"pl": "serões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"computador": {
+"pl": "computadores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"investigação": {
+"pl": "investigações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"avô": {
+"pl": "avôs, avós",
+"f": "avó",
+"fpl": "avós",
+"note": "avós also means 'grandparents'"
+},
+"ligação": {
+"pl": "ligações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"terrível": {
+"pl": "terríveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"oficial": {
+"pl": "oficiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"televisão": {
+"pl": "televisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"responsável": {
+"pl": "responsáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cartão": {
+"pl": "cartões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"operação": {
+"pl": "operações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"principal": {
+"pl": "principais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"par": {
+"pl": "pares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"opinião": {
+"pl": "opiniões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"senão": {
+"pl": "senões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"verão": {
+"pl": "verões, verãos",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"direcção": {
+"pl": "direções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: direção"
+},
+"azul": {
+"pl": "azuis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"calças": {
+"pl": "calças",
+"f": null,
+"fpl": null,
+"note": "usually plural (umas calças)"
+},
+"comum": {
+"pl": "comuns",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"estação": {
+"pl": "estações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pressão": {
+"pl": "pressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"igual": {
+"pl": "iguais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"prestes": {
+"pl": "prestes",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"andas": {
+"pl": "andas",
+"f": null,
+"fpl": null,
+"note": "plural only (stilts)"
+},
+"cantar": {
+"pl": "cantares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"herói": {
+"pl": null,
+"f": "heroína",
+"fpl": "heroínas",
+"note": ""
+},
+"inglês": {
+"pl": "ingleses",
+"f": "inglesa",
+"fpl": "inglesas",
+"note": "accent drops in the inflected forms"
+},
+"férias": {
+"pl": "férias",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"coragem": {
+"pl": "coragens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"animal": {
+"pl": "animais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"acção": {
+"pl": "ações",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: ação"
+},
+"juiz": {
+"pl": "juízes",
+"f": "juíza",
+"fpl": "juízas",
+"note": "accent added in the plural: juízes"
+},
+"som": {
+"pl": "sons",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"valor": {
+"pl": "valores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cor": {
+"pl": "cores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"líder": {
+"pl": "líderes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"imagem": {
+"pl": "imagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nariz": {
+"pl": "narizes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"visão": {
+"pl": "visões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"canção": {
+"pl": "canções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"central": {
+"pl": "centrais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"perdão": {
+"pl": "perdões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"interior": {
+"pl": "interiores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"total": {
+"pl": "totais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"confusão": {
+"pl": "confusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"director": {
+"pl": "diretores",
+"f": "diretora",
+"fpl": "diretoras",
+"note": "pre-1990 spelling; AO1990: diretor"
+},
+"cabrão": {
+"pl": "cabrões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nacional": {
+"pl": "nacionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"major": {
+"pl": "majores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"agradável": {
+"pl": "agradáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"calor": {
+"pl": "calores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"jornal": {
+"pl": "jornais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"profissional": {
+"pl": "profissionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"anel": {
+"pl": "anéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"milhão": {
+"pl": "milhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"militar": {
+"pl": "militares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"material": {
+"pl": "materiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"camião": {
+"pl": "camiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"príncipe": {
+"pl": null,
+"f": "princesa",
+"fpl": "princesas",
+"note": ""
+},
+"solução": {
+"pl": "soluções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sensação": {
+"pl": "sensações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"futebol": {
+"pl": "futebóis",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"legal": {
+"pl": "legais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"dever": {
+"pl": "deveres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"natural": {
+"pl": "naturais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"maldição": {
+"pl": "maldições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"patrão": {
+"pl": "patrões",
+"f": "patroa",
+"fpl": "patroas",
+"note": ""
+},
+"corredor": {
+"pl": "corredores",
+"f": "corredora",
+"fpl": "corredoras",
+"note": ""
+},
+"ás": {
+"pl": "ases",
+"f": null,
+"fpl": null,
+"note": "accent drops in the plural"
+},
+"gás": {
+"pl": "gases",
+"f": null,
+"fpl": null,
+"note": "accent drops in the plural"
+},
+"lar": {
+"pl": "lares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"original": {
+"pl": "originais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"familiar": {
+"pl": "familiares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"treinador": {
+"pl": "treinadores",
+"f": "treinadora",
+"fpl": "treinadoras",
+"note": ""
+},
+"jardim": {
+"pl": "jardins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"opção": {
+"pl": "opções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sexual": {
+"pl": "sexuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pequeno-almoço": {
+"pl": "pequenos-almoços",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"explosão": {
+"pl": "explosões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"útil": {
+"pl": "úteis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"protecção": {
+"pl": "proteções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: proteção"
+},
+"funeral": {
+"pl": "funerais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"ladrão": {
+"pl": "ladrões",
+"f": "ladra",
+"fpl": "ladras",
+"note": "feminine also ladrona (colloquial)"
+},
+"pão": {
+"pl": "pães",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"social": {
+"pl": "sociais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"casal": {
+"pl": "casais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"autorização": {
+"pl": "autorizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"impressão": {
+"pl": "impressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"assustador": {
+"pl": "assustadores",
+"f": "assustadora",
+"fpl": "assustadoras",
+"note": ""
+},
+"vírus": {
+"pl": "vírus",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"mundial": {
+"pl": "mundiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"intenção": {
+"pl": "intenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"francês": {
+"pl": "franceses",
+"f": "francesa",
+"fpl": "francesas",
+"note": "accent drops in the inflected forms"
+},
+"imbecil": {
+"pl": "imbecis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"particular": {
+"pl": "particulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lição": {
+"pl": "lições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"superior": {
+"pl": "superiores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"geral": {
+"pl": "gerais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"federal": {
+"pl": "federais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"óculos": {
+"pl": "óculos",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"inútil": {
+"pl": "inúteis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"diversão": {
+"pl": "diversões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"localização": {
+"pl": "localizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"menor": {
+"pl": "menores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"álcool": {
+"pl": "álcoois",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"passagem": {
+"pl": "passagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"revisão": {
+"pl": "revisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"discussão": {
+"pl": "discussões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"identificação": {
+"pl": "identificações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"motor": {
+"pl": "motores",
+"f": "motora, motriz",
+"fpl": "motoras, motrizes",
+"note": "adjective feminine: motora or motriz (força motriz)"
+},
+"senador": {
+"pl": "senadores",
+"f": "senadora",
+"fpl": "senadoras",
+"note": ""
+},
+"humor": {
+"pl": "humores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"canal": {
+"pl": "canais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fim-de-semana": {
+"pl": "fins de semana",
+"f": null,
+"fpl": null,
+"note": "AO1990 spelling: fim de semana"
+},
+"ilegal": {
+"pl": "ilegais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"governador": {
+"pl": "governadores",
+"f": "governadora",
+"fpl": "governadoras",
+"note": ""
+},
+"permissão": {
+"pl": "permissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"gigante": {
+"pl": null,
+"f": "giganta",
+"fpl": "gigantas",
+"note": "noun only; the adjective is invariable"
+},
+"confortável": {
+"pl": "confortáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tripulação": {
+"pl": "tripulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"provável": {
+"pl": "prováveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"adorável": {
+"pl": "adoráveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"acusação": {
+"pl": "acusações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"garagem": {
+"pl": "garagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"versão": {
+"pl": "versões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"campeão": {
+"pl": "campeões",
+"f": "campeã",
+"fpl": "campeãs",
+"note": ""
+},
+"gentil": {
+"pl": "gentis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"divisão": {
+"pl": "divisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"dom": {
+"pl": "dons",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"padrão": {
+"pl": "padrões",
+"f": null,
+"fpl": null,
+"note": "as an adjective often invariable (tamanhos padrão)"
+},
+"elevador": {
+"pl": "elevadores",
+"f": "elevadora",
+"fpl": "elevadoras",
+"note": "feminine only as an adjective"
+},
+"vantagem": {
+"pl": "vantagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"selvagem": {
+"pl": "selvagens",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"saudável": {
+"pl": "saudáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"atirador": {
+"pl": "atiradores",
+"f": "atiradora",
+"fpl": "atiradoras",
+"note": ""
+},
+"educação": {
+"pl": "educações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nação": {
+"pl": "nações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"armazém": {
+"pl": "armazéns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escuridão": {
+"pl": "escuridões",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"cadáver": {
+"pl": "cadáveres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mel": {
+"pl": "méis, meles",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"jogador": {
+"pl": "jogadores",
+"f": "jogadora",
+"fpl": "jogadoras",
+"note": ""
+},
+"botão": {
+"pl": "botões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"explicação": {
+"pl": "explicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reputação": {
+"pl": "reputações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ciúmes": {
+"pl": "ciúmes",
+"f": null,
+"fpl": null,
+"note": "usually plural (ter ciúmes)"
+},
+"sessão": {
+"pl": "sessões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"paixão": {
+"pl": "paixões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"alimentar": {
+"pl": "alimentares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"alemão": {
+"pl": "alemães",
+"f": "alemã",
+"fpl": "alemãs",
+"note": ""
+},
+"organização": {
+"pl": "organizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"açúcar": {
+"pl": "açúcares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"meia-noite": {
+"pl": "meias-noites",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"inacreditável": {
+"pl": "inacreditáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"portão": {
+"pl": "portões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"preocupação": {
+"pl": "preocupações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"anterior": {
+"pl": "anteriores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"comunicação": {
+"pl": "comunicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cruel": {
+"pl": "cruéis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"exterior": {
+"pl": "exteriores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"comissão": {
+"pl": "comissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"produção": {
+"pl": "produções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"declaração": {
+"pl": "declarações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"civil": {
+"pl": "civis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"dragão": {
+"pl": "dragões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"secção": {
+"pl": "secções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"popular": {
+"pl": "populares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"maricas": {
+"pl": "maricas",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"sexta-feira": {
+"pl": "sextas-feiras",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"gravação": {
+"pl": "gravações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sal": {
+"pl": "sais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vencedor": {
+"pl": "vencedores",
+"f": "vencedora",
+"fpl": "vencedoras",
+"note": ""
+},
+"metal": {
+"pl": "metais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"disponível": {
+"pl": "disponíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"combustível": {
+"pl": "combustíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"adaptação": {
+"pl": "adaptações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"condição": {
+"pl": "condições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"violação": {
+"pl": "violações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cruz": {
+"pl": "cruzes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"virgem": {
+"pl": "virgens",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"mental": {
+"pl": "mentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"túnel": {
+"pl": "túneis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"refeição": {
+"pl": "refeições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"espacial": {
+"pl": "espaciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"destruição": {
+"pl": "destruições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nuclear": {
+"pl": "nucleares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"papa": {
+"pl": null,
+"f": "papisa",
+"fpl": "papisas",
+"note": ""
+},
+"traidor": {
+"pl": "traidores",
+"f": "traidora",
+"fpl": "traidoras",
+"note": ""
+},
+"cuecas": {
+"pl": "cuecas",
+"f": null,
+"fpl": null,
+"note": "usually plural (umas cuecas)"
+},
+"expressão": {
+"pl": "expressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"origem": {
+"pl": "origens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tensão": {
+"pl": "tensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"judeu": {
+"pl": null,
+"f": "judia",
+"fpl": "judias",
+"note": "feminine: judia, not judeia"
+},
+"imperador": {
+"pl": "imperadores",
+"f": "imperatriz",
+"fpl": "imperatrizes",
+"note": "feminine: imperatriz"
+},
+"paragem": {
+"pl": "paragens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"comercial": {
+"pl": "comerciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"internacional": {
+"pl": "internacionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"competição": {
+"pl": "competições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"moral": {
+"pl": "morais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"união": {
+"pl": "uniões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"região": {
+"pl": "regiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"mortal": {
+"pl": "mortais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"imaginação": {
+"pl": "imaginações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"espião": {
+"pl": "espiões",
+"f": "espia",
+"fpl": "espias",
+"note": "feminine is espia, not espiã"
+},
+"inspector": {
+"pl": "inspetores",
+"f": "inspetora",
+"fpl": "inspetoras",
+"note": "pre-1990 spelling; AO1990: inspetor"
+},
+"traição": {
+"pl": "traições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"colar": {
+"pl": "colares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"infeliz": {
+"pl": "infelizes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"chinês": {
+"pl": "chineses",
+"f": "chinesa",
+"fpl": "chinesas",
+"note": "accent drops in the inflected forms"
+},
+"espectacular": {
+"pl": "espetaculares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine; pre-1990 spelling; AO1990: espetacular"
+},
+"azar": {
+"pl": "azares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"perfil": {
+"pl": "perfis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"policial": {
+"pl": "policiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"capital": {
+"pl": "capitais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"salão": {
+"pl": "salões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"direção": {
+"pl": "direções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ideal": {
+"pl": "ideais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"multidão": {
+"pl": "multidões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reacção": {
+"pl": "reações",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: reação"
+},
+"pénis": {
+"pl": "pénis",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"geração": {
+"pl": "gerações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"revolução": {
+"pl": "revoluções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"basebol": {
+"pl": "basebóis",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"construção": {
+"pl": "construções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"invasão": {
+"pl": "invasões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"potencial": {
+"pl": "potenciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"confissão": {
+"pl": "confissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sensível": {
+"pl": "sensíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"linguagem": {
+"pl": "linguagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"administração": {
+"pl": "administrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"personagem": {
+"pl": "personagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"portal": {
+"pl": "portais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"exposição": {
+"pl": "exposições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"condicional": {
+"pl": "condicionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"flor": {
+"pl": "flores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"condutor": {
+"pl": "condutores",
+"f": "condutora",
+"fpl": "condutoras",
+"note": ""
+},
+"tradição": {
+"pl": "tradições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"noção": {
+"pl": "noções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sabor": {
+"pl": "sabores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"população": {
+"pl": "populações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"religião": {
+"pl": "religiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"respiração": {
+"pl": "respirações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pastor": {
+"pl": "pastores",
+"f": "pastora",
+"fpl": "pastoras",
+"note": ""
+},
+"genial": {
+"pl": "geniais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"estupidez": {
+"pl": "estupidezes",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"cerebral": {
+"pl": "cerebrais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"motel": {
+"pl": "motéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escritor": {
+"pl": "escritores",
+"f": "escritora",
+"fpl": "escritoras",
+"note": ""
+},
+"espanhol": {
+"pl": "espanhóis",
+"f": "espanhola",
+"fpl": "espanholas",
+"note": ""
+},
+"nu": {
+"pl": null,
+"f": "nua",
+"fpl": "nuas",
+"note": ""
+},
+"terror": {
+"pl": "terrores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"formação": {
+"pl": "formações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tatuagem": {
+"pl": "tatuagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ação": {
+"pl": "ações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"conspiração": {
+"pl": "conspirações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"caçador": {
+"pl": "caçadores",
+"f": "caçadora",
+"fpl": "caçadoras",
+"note": ""
+},
+"anormal": {
+"pl": "anormais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"amável": {
+"pl": "amáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"radiação": {
+"pl": "radiações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"dólar": {
+"pl": "dólares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"transmissão": {
+"pl": "transmissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"condução": {
+"pl": "conduções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"actor": {
+"pl": "atores",
+"f": "atriz",
+"fpl": "atrizes",
+"note": "feminine: atriz; pre-1990 spelling; AO1990: ator"
+},
+"solar": {
+"pl": "solares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"segunda-feira": {
+"pl": "segundas-feiras",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"conde": {
+"pl": null,
+"f": "condessa",
+"fpl": "condessas",
+"note": ""
+},
+"embaixador": {
+"pl": "embaixadores",
+"f": "embaixadora",
+"fpl": "embaixadoras",
+"note": "embaixatriz = an ambassador's wife"
+},
+"leão": {
+"pl": "leões",
+"f": "leoa",
+"fpl": "leoas",
+"note": ""
+},
+"combinação": {
+"pl": "combinações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"função": {
+"pl": "funções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"visual": {
+"pl": "visuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"miserável": {
+"pl": "miseráveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"diretor": {
+"pl": "diretores",
+"f": "diretora",
+"fpl": "diretoras",
+"note": ""
+},
+"infantil": {
+"pl": "infantis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"apresentação": {
+"pl": "apresentações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"grátis": {
+"pl": "grátis",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"audição": {
+"pl": "audições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"recepção": {
+"pl": "receções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: receção"
+},
+"descrição": {
+"pl": "descrições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ocasião": {
+"pl": "ocasiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"procurador": {
+"pl": "procuradores",
+"f": "procuradora",
+"fpl": "procuradoras",
+"note": ""
+},
+"criminal": {
+"pl": "criminais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"esquadrão": {
+"pl": "esquadrões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tigre": {
+"pl": null,
+"f": "tigresa",
+"fpl": "tigresas",
+"note": ""
+},
+"estelar": {
+"pl": "estelares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"ténis": {
+"pl": "ténis",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"actual": {
+"pl": "atuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine; pre-1990 spelling; AO1990: atual"
+},
+"habitual": {
+"pl": "habituais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"global": {
+"pl": "globais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"digital": {
+"pl": "digitais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sensual": {
+"pl": "sensuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"contagem": {
+"pl": "contagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bestial": {
+"pl": "bestiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"razoável": {
+"pl": "razoáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sandes": {
+"pl": "sandes",
+"f": null,
+"fpl": null,
+"note": "invariable (uma sandes, duas sandes)"
+},
+"caixão": {
+"pl": "caixões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"meio-dia": {
+"pl": "meios-dias",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"profissão": {
+"pl": "profissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"festival": {
+"pl": "festivais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"álbum": {
+"pl": "álbuns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vendedor": {
+"pl": "vendedores",
+"f": "vendedora",
+"fpl": "vendedoras",
+"note": ""
+},
+"agressão": {
+"pl": "agressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"peru": {
+"pl": null,
+"f": "perua",
+"fpl": "peruas",
+"note": ""
+},
+"estável": {
+"pl": "estáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"disposição": {
+"pl": "disposições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"detenção": {
+"pl": "detenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ruim": {
+"pl": "ruins",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"emoção": {
+"pl": "emoções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"criação": {
+"pl": "criações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"colecção": {
+"pl": "coleções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: coleção"
+},
+"cirurgião": {
+"pl": "cirurgiões, cirurgiães",
+"f": "cirurgiã",
+"fpl": "cirurgiãs",
+"note": ""
+},
+"conclusão": {
+"pl": "conclusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"boas-vindas": {
+"pl": "boas-vindas",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"refém": {
+"pl": "reféns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"amanhecer": {
+"pl": "amanheceres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"desagradável": {
+"pl": "desagradáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"invisível": {
+"pl": "invisíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tubarão": {
+"pl": "tubarões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"super-homem": {
+"pl": "super-homens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"emocional": {
+"pl": "emocionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"confidencial": {
+"pl": "confidenciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"infecção": {
+"pl": "infeções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: infeção"
+},
+"recuperação": {
+"pl": "recuperações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tumor": {
+"pl": "tumores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"encantador": {
+"pl": "encantadores",
+"f": "encantadora",
+"fpl": "encantadoras",
+"note": ""
+},
+"ritual": {
+"pl": "rituais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"medicação": {
+"pl": "medicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sincronização": {
+"pl": "sincronizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"leal": {
+"pl": "leais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cidadão": {
+"pl": "cidadãos",
+"f": "cidadã",
+"fpl": "cidadãs",
+"note": ""
+},
+"quinta-feira": {
+"pl": "quintas-feiras",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"sector": {
+"pl": "setores",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: setor"
+},
+"avaliação": {
+"pl": "avaliações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"portátil": {
+"pl": "portáteis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"musical": {
+"pl": "musicais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"terça-feira": {
+"pl": "terças-feiras",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"execução": {
+"pl": "execuções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cal": {
+"pl": "cales, cais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ex": {
+"pl": "ex",
+"f": null,
+"fpl": null,
+"note": "invariable (os meus ex)"
+},
+"civilização": {
+"pl": "civilizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"promoção": {
+"pl": "promoções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cristal": {
+"pl": "cristais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fiel": {
+"pl": "fiéis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"manual": {
+"pl": "manuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"perseguição": {
+"pl": "perseguições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"trevas": {
+"pl": "trevas",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"maquilhagem": {
+"pl": "maquilhagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"arroz": {
+"pl": "arrozes",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"bagagem": {
+"pl": "bagagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"quintal": {
+"pl": "quintais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escondidas": {
+"pl": "escondidas",
+"f": null,
+"fpl": null,
+"note": "plural only (às escondidas)"
+},
+"xadrez": {
+"pl": "xadrezes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"horror": {
+"pl": "horrores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"duque": {
+"pl": null,
+"f": "duquesa",
+"fpl": "duquesas",
+"note": ""
+},
+"proteção": {
+"pl": "proteções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"radar": {
+"pl": "radares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"concentração": {
+"pl": "concentrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"compaixão": {
+"pl": "compaixões",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"gravidez": {
+"pl": "gravidezes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"espiritual": {
+"pl": "espirituais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"bênção": {
+"pl": "bênçãos",
+"f": null,
+"fpl": null,
+"note": "plural -ãos"
+},
+"associação": {
+"pl": "associações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ocidental": {
+"pl": "ocidentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"margem": {
+"pl": "margens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sugestão": {
+"pl": "sugestões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"brutal": {
+"pl": "brutais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"basquetebol": {
+"pl": "basquetebóis",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"mansão": {
+"pl": "mansões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"elefante": {
+"pl": null,
+"f": "elefanta",
+"fpl": "elefantas",
+"note": "also aliá"
+},
+"japonês": {
+"pl": "japoneses",
+"f": "japonesa",
+"fpl": "japonesas",
+"note": "accent drops in the inflected forms"
+},
+"incapaz": {
+"pl": "incapazes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lutador": {
+"pl": "lutadores",
+"f": "lutadora",
+"fpl": "lutadoras",
+"note": ""
+},
+"carruagem": {
+"pl": "carruagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"excepção": {
+"pl": "exceções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: exceção"
+},
+"autor": {
+"pl": "autores",
+"f": "autora",
+"fpl": "autoras",
+"note": ""
+},
+"libertação": {
+"pl": "libertações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ilusão": {
+"pl": "ilusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fundação": {
+"pl": "fundações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"balcão": {
+"pl": "balcões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"informador": {
+"pl": "informadores",
+"f": "informadora",
+"fpl": "informadoras",
+"note": ""
+},
+"colher": {
+"pl": "colheres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reabilitação": {
+"pl": "reabilitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pensão": {
+"pl": "pensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"produtor": {
+"pl": "produtores",
+"f": "produtora",
+"fpl": "produtoras",
+"note": ""
+},
+"cicatriz": {
+"pl": "cicatrizes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"lavagem": {
+"pl": "lavagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"essencial": {
+"pl": "essenciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"inferior": {
+"pl": "inferiores",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"repórter": {
+"pl": "repórteres",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"quarta-feira": {
+"pl": "quartas-feiras",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"intervenção": {
+"pl": "intervenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"desconfortável": {
+"pl": "desconfortáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"inicial": {
+"pl": "iniciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"depressão": {
+"pl": "depressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"português": {
+"pl": "portugueses",
+"f": "portuguesa",
+"fpl": "portuguesas",
+"note": "accent drops in the inflected forms"
+},
+"nuvem": {
+"pl": "nuvens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fatal": {
+"pl": "fatais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"observação": {
+"pl": "observações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"obrigação": {
+"pl": "obrigações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vulnerável": {
+"pl": "vulneráveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"perfeição": {
+"pl": "perfeições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"inspiração": {
+"pl": "inspirações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"gerador": {
+"pl": "geradores",
+"f": "geradora",
+"fpl": "geradoras",
+"note": "feminine only as an adjective"
+},
+"manutenção": {
+"pl": "manutenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aterragem": {
+"pl": "aterragens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"salvador": {
+"pl": "salvadores",
+"f": "salvadora",
+"fpl": "salvadoras",
+"note": ""
+},
+"lápis": {
+"pl": "lápis",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"formidável": {
+"pl": "formidáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"consideração": {
+"pl": "considerações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"promotor": {
+"pl": "promotores",
+"f": "promotora",
+"fpl": "promotoras",
+"note": ""
+},
+"aprovação": {
+"pl": "aprovações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"salvação": {
+"pl": "salvações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"edição": {
+"pl": "edições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"amigável": {
+"pl": "amigáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"separação": {
+"pl": "separações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"guião": {
+"pl": "guiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ficção": {
+"pl": "ficções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"oração": {
+"pl": "orações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pelotão": {
+"pl": "pelotões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"instável": {
+"pl": "instáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"massagem": {
+"pl": "massagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"realização": {
+"pl": "realizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"inevitável": {
+"pl": "inevitáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"vulgar": {
+"pl": "vulgares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"frágil": {
+"pl": "frágeis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"evolução": {
+"pl": "evoluções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"leilão": {
+"pl": "leilões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aluguer": {
+"pl": "alugueres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"homossexual": {
+"pl": "homossexuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"dimensão": {
+"pl": "dimensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"júnior": {
+"pl": "juniores",
+"f": null,
+"fpl": null,
+"note": "stress moves: júnior -> juniores; same form for the feminine"
+},
+"finanças": {
+"pl": "finanças",
+"f": null,
+"fpl": null,
+"note": "usually plural"
+},
+"postal": {
+"pl": "postais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"eleição": {
+"pl": "eleições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"guardião": {
+"pl": "guardiões, guardiães",
+"f": "guardiã",
+"fpl": "guardiãs",
+"note": ""
+},
+"cais": {
+"pl": "cais",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"solidão": {
+"pl": "solidões",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"quarteirão": {
+"pl": "quarteirões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"balão": {
+"pl": "balões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"lua-de-mel": {
+"pl": "luas de mel",
+"f": null,
+"fpl": null,
+"note": "AO1990 spelling: lua de mel"
+},
+"painel": {
+"pl": "painéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"federação": {
+"pl": "federações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"convés": {
+"pl": "conveses",
+"f": null,
+"fpl": null,
+"note": "accent drops in the plural"
+},
+"terminal": {
+"pl": "terminais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cartel": {
+"pl": "cartéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"editor": {
+"pl": "editores",
+"f": "editora",
+"fpl": "editoras",
+"note": ""
+},
+"convenção": {
+"pl": "convenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"lesão": {
+"pl": "lesões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"canhão": {
+"pl": "canhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"primeiro-ministro": {
+"pl": "primeiros-ministros",
+"f": "primeira-ministra",
+"fpl": "primeiras-ministras",
+"note": "both parts inflect"
+},
+"municipal": {
+"pl": "municipais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"vapor": {
+"pl": "vapores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escolar": {
+"pl": "escolares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"barão": {
+"pl": "barões",
+"f": "baronesa",
+"fpl": "baronesas",
+"note": "feminine has suffix -esa"
+},
+"carácter": {
+"pl": "caracteres",
+"f": null,
+"fpl": null,
+"note": "stress moves: carácter -> caracteres"
+},
+"instituição": {
+"pl": "instituições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"míssil": {
+"pl": "mísseis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cobertor": {
+"pl": "cobertores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"orientação": {
+"pl": "orientações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"guarda-costas": {
+"pl": "guarda-costas",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"temporal": {
+"pl": "temporais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sótão": {
+"pl": "sótãos",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"invulgar": {
+"pl": "invulgares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lobisomem": {
+"pl": "lobisomens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"trabalhador": {
+"pl": "trabalhadores",
+"f": "trabalhadora",
+"fpl": "trabalhadoras",
+"note": ""
+},
+"eficaz": {
+"pl": "eficazes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fusão": {
+"pl": "fusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"gratidão": {
+"pl": "gratidões",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"votação": {
+"pl": "votações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aberração": {
+"pl": "aberrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vital": {
+"pl": "vitais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"grandalhão": {
+"pl": "grandalhões",
+"f": "grandalhona",
+"fpl": "grandalhonas",
+"note": ""
+},
+"quartel": {
+"pl": "quartéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"criador": {
+"pl": "criadores",
+"f": "criadora",
+"fpl": "criadoras",
+"note": ""
+},
+"amendoim": {
+"pl": "amendoins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"demonstração": {
+"pl": "demonstrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"poeta": {
+"pl": null,
+"f": "poetisa",
+"fpl": "poetisas",
+"note": "'a poeta' is also used"
+},
+"inspetor": {
+"pl": "inspetores",
+"f": "inspetora",
+"fpl": "inspetoras",
+"note": ""
+},
+"sem-abrigo": {
+"pl": "sem-abrigo",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"cor-de-rosa": {
+"pl": "cor-de-rosa",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"estimação": {
+"pl": "estimações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"irlandês": {
+"pl": "irlandeses",
+"f": "irlandesa",
+"fpl": "irlandesas",
+"note": "accent drops in the inflected forms"
+},
+"obsessão": {
+"pl": "obsessões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"confirmação": {
+"pl": "confirmações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"limão": {
+"pl": "limões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"supervisor": {
+"pl": "supervisores",
+"f": "supervisora",
+"fpl": "supervisoras",
+"note": ""
+},
+"abordagem": {
+"pl": "abordagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"monitor": {
+"pl": "monitores",
+"f": "monitora",
+"fpl": "monitoras",
+"note": ""
+},
+"protector": {
+"pl": "protetores",
+"f": "protetora",
+"fpl": "protetoras",
+"note": "pre-1990 spelling; AO1990: protetor"
+},
+"tradicional": {
+"pl": "tradicionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rim": {
+"pl": "rins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"carvão": {
+"pl": "carvões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hambúrguer": {
+"pl": "hambúrgueres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"evacuação": {
+"pl": "evacuações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"trem": {
+"pl": "trens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sermão": {
+"pl": "sermões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"notável": {
+"pl": "notáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"servidor": {
+"pl": "servidores",
+"f": "servidora",
+"fpl": "servidoras",
+"note": ""
+},
+"injecção": {
+"pl": "injeções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: injeção"
+},
+"comprador": {
+"pl": "compradores",
+"f": "compradora",
+"fpl": "compradoras",
+"note": ""
+},
+"campus": {
+"pl": "campus",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"automóvel": {
+"pl": "automóveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"falcão": {
+"pl": "falcões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"auxiliar": {
+"pl": "auxiliares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"bónus": {
+"pl": "bónus",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"realizador": {
+"pl": "realizadores",
+"f": "realizadora",
+"fpl": "realizadoras",
+"note": ""
+},
+"contentor": {
+"pl": "contentores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"altar": {
+"pl": "altares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"avatar": {
+"pl": "avatares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"laurel": {
+"pl": "lauréis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ambição": {
+"pl": "ambições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"judicial": {
+"pl": "judiciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"anual": {
+"pl": "anuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"improvável": {
+"pl": "improváveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"expedição": {
+"pl": "expedições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bastão": {
+"pl": "bastões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cristão": {
+"pl": "cristãos",
+"f": "cristã",
+"fpl": "cristãs",
+"note": ""
+},
+"cardeal": {
+"pl": "cardeais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"radical": {
+"pl": "radicais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"demissão": {
+"pl": "demissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"investigador": {
+"pl": "investigadores",
+"f": "investigadora",
+"fpl": "investigadoras",
+"note": ""
+},
+"anoitecer": {
+"pl": "anoiteceres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"recordação": {
+"pl": "recordações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"historial": {
+"pl": "historiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"industrial": {
+"pl": "industriais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"precaução": {
+"pl": "precauções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"suor": {
+"pl": "suores",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"chantagem": {
+"pl": "chantagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"batalhão": {
+"pl": "batalhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"circular": {
+"pl": "circulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"facial": {
+"pl": "faciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"distracção": {
+"pl": "distrações",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: distração"
+},
+"compreensão": {
+"pl": "compreensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"porão": {
+"pl": "porões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"poção": {
+"pl": "poções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"algodão": {
+"pl": "algodões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"definição": {
+"pl": "definições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"invenção": {
+"pl": "invenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"corrupção": {
+"pl": "corrupções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"calções": {
+"pl": "calções",
+"f": null,
+"fpl": null,
+"note": "usually plural (shorts)"
+},
+"atum": {
+"pl": "atuns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"representação": {
+"pl": "representações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"barril": {
+"pl": "barris",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"jurisdição": {
+"pl": "jurisdições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cantor": {
+"pl": "cantores",
+"f": "cantora",
+"fpl": "cantoras",
+"note": ""
+},
+"extensão": {
+"pl": "extensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"constituição": {
+"pl": "constituições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cartaz": {
+"pl": "cartazes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"preparação": {
+"pl": "preparações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"homenagem": {
+"pl": "homenagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"amador": {
+"pl": "amadores",
+"f": "amadora",
+"fpl": "amadoras",
+"note": ""
+},
+"profeta": {
+"pl": null,
+"f": "profetisa",
+"fpl": "profetisas",
+"note": ""
+},
+"reação": {
+"pl": "reações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"formal": {
+"pl": "formais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cooperação": {
+"pl": "cooperações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cócegas": {
+"pl": "cócegas",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"espionagem": {
+"pl": "espionagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"distribuição": {
+"pl": "distribuições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"oriental": {
+"pl": "orientais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"operacional": {
+"pl": "operacionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cãozinho": {
+"pl": "cãezinhos",
+"f": null,
+"fpl": null,
+"note": "plural built on cães"
+},
+"réu": {
+"pl": null,
+"f": "ré",
+"fpl": "rés",
+"note": ""
+},
+"estadual": {
+"pl": "estaduais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"letal": {
+"pl": "letais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"celular": {
+"pl": "celulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"adopção": {
+"pl": "adoções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: adoção"
+},
+"instalação": {
+"pl": "instalações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"batom": {
+"pl": "batons",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"furacão": {
+"pl": "furacões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"satisfação": {
+"pl": "satisfações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"colchão": {
+"pl": "colchões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hostil": {
+"pl": "hostis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"imortal": {
+"pl": "imortais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sentimental": {
+"pl": "sentimentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"corporal": {
+"pl": "corporais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"gestão": {
+"pl": "gestões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"raiz": {
+"pl": "raízes",
+"f": null,
+"fpl": null,
+"note": "accent added in the plural: raízes"
+},
+"feijão": {
+"pl": "feijões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"artificial": {
+"pl": "artificiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"galo": {
+"pl": null,
+"f": "galinha",
+"fpl": "galinhas",
+"note": ""
+},
+"digressão": {
+"pl": "digressões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"precisão": {
+"pl": "precisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"marcação": {
+"pl": "marcações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"transmissor": {
+"pl": "transmissores",
+"f": "transmissora",
+"fpl": "transmissoras",
+"note": "feminine only as an adjective"
+},
+"espetacular": {
+"pl": "espetaculares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lateral": {
+"pl": "laterais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"impecável": {
+"pl": "impecáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"aplicação": {
+"pl": "aplicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"paisagem": {
+"pl": "paisagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"celebração": {
+"pl": "celebrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"despertar": {
+"pl": "despertares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"estupor": {
+"pl": "estupores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"verificação": {
+"pl": "verificações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"incomum": {
+"pl": "incomuns",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"vilão": {
+"pl": "vilões, vilãos",
+"f": "vilã",
+"fpl": "vilãs",
+"note": ""
+},
+"rumor": {
+"pl": "rumores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reitor": {
+"pl": "reitores",
+"f": "reitora",
+"fpl": "reitoras",
+"note": ""
+},
+"reportagem": {
+"pl": "reportagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imigração": {
+"pl": "imigrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"crucial": {
+"pl": "cruciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"oposição": {
+"pl": "oposições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ventilação": {
+"pl": "ventilações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fundamental": {
+"pl": "fundamentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pulmão": {
+"pl": "pulmões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fax": {
+"pl": "faxes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"recomendação": {
+"pl": "recomendações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"arsenal": {
+"pl": "arsenais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aceitável": {
+"pl": "aceitáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"transição": {
+"pl": "transições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pudim": {
+"pl": "pudins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sabão": {
+"pl": "sabões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"arredores": {
+"pl": "arredores",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"insensível": {
+"pl": "insensíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"alimentação": {
+"pl": "alimentações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"negociação": {
+"pl": "negociações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"transformação": {
+"pl": "transformações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imperial": {
+"pl": "imperiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"monge": {
+"pl": null,
+"f": "monja",
+"fpl": "monjas",
+"note": ""
+},
+"condenação": {
+"pl": "condenações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"consultor": {
+"pl": "consultores",
+"f": "consultora",
+"fpl": "consultoras",
+"note": ""
+},
+"exibição": {
+"pl": "exibições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"camarão": {
+"pl": "camarões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"anão": {
+"pl": "anões, anãos",
+"f": "anã",
+"fpl": "anãs",
+"note": ""
+},
+"polegar": {
+"pl": "polegares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pôr-do-sol": {
+"pl": "pores do sol",
+"f": null,
+"fpl": null,
+"note": "AO1990 spelling: pôr do sol; plural rare"
+},
+"vedação": {
+"pl": "vedações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"arterial": {
+"pl": "arteriais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"navegação": {
+"pl": "navegações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ocupação": {
+"pl": "ocupações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"naval": {
+"pl": "navais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"bordel": {
+"pl": "bordéis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"atracção": {
+"pl": "atrações",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: atração"
+},
+"localizador": {
+"pl": "localizadores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reles": {
+"pl": "reles",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"exploração": {
+"pl": "explorações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"arranhão": {
+"pl": "arranhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"correcção": {
+"pl": "correções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: correção"
+},
+"participação": {
+"pl": "participações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"racional": {
+"pl": "racionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"insuportável": {
+"pl": "insuportáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"comparação": {
+"pl": "comparações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"presidencial": {
+"pl": "presidenciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"inaceitável": {
+"pl": "inaceitáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"resolução": {
+"pl": "resoluções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"motim": {
+"pl": "motins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"rebelião": {
+"pl": "rebeliões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bazar": {
+"pl": "bazares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"memorial": {
+"pl": "memoriais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"humilhação": {
+"pl": "humilhações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tentação": {
+"pl": "tentações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"suspensão": {
+"pl": "suspensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"excitação": {
+"pl": "excitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"perdedor": {
+"pl": "perdedores",
+"f": "perdedora",
+"fpl": "perdedoras",
+"note": ""
+},
+"plantar": {
+"pl": "plantares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"filmagem": {
+"pl": "filmagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sacerdote": {
+"pl": null,
+"f": "sacerdotisa",
+"fpl": "sacerdotisas",
+"note": ""
+},
+"garanhão": {
+"pl": "garanhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"alteração": {
+"pl": "alterações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"regular": {
+"pl": "regulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"ator": {
+"pl": "atores",
+"f": "atriz",
+"fpl": "atrizes",
+"note": "feminine: atriz"
+},
+"farol": {
+"pl": "faróis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"extinção": {
+"pl": "extinções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pormenor": {
+"pl": "pormenores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"interruptor": {
+"pl": "interruptores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"decoração": {
+"pl": "decorações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vulcão": {
+"pl": "vulcões, vulcãos",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escalar": {
+"pl": "escalares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"subtil": {
+"pl": "subtis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pintor": {
+"pl": "pintores",
+"f": "pintora",
+"fpl": "pintoras",
+"note": ""
+},
+"raptor": {
+"pl": "raptores",
+"f": "raptora",
+"fpl": "raptoras",
+"note": ""
+},
+"intuição": {
+"pl": "intuições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ascensão": {
+"pl": "ascensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"motivação": {
+"pl": "motivações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"exemplar": {
+"pl": "exemplares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"arco-íris": {
+"pl": "arco-íris",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"mentor": {
+"pl": "mentores",
+"f": "mentora",
+"fpl": "mentoras",
+"note": ""
+},
+"detonador": {
+"pl": "detonadores",
+"f": "detonadora",
+"fpl": "detonadoras",
+"note": "feminine only as an adjective"
+},
+"estatal": {
+"pl": "estatais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"gravador": {
+"pl": "gravadores",
+"f": "gravadora",
+"fpl": "gravadoras",
+"note": "feminine only as an adjective"
+},
+"punhal": {
+"pl": "punhais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"agricultor": {
+"pl": "agricultores",
+"f": "agricultora",
+"fpl": "agricultoras",
+"note": ""
+},
+"universal": {
+"pl": "universais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"salmão": {
+"pl": "salmões",
+"f": null,
+"fpl": null,
+"note": "as a colour adjective: invariable (camisas salmão)"
+},
+"móvel": {
+"pl": "móveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fornecedor": {
+"pl": "fornecedores",
+"f": "fornecedora",
+"fpl": "fornecedoras",
+"note": ""
+},
+"rival": {
+"pl": "rivais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pulsação": {
+"pl": "pulsações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"revelação": {
+"pl": "revelações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"negação": {
+"pl": "negações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"simulação": {
+"pl": "simulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"item": {
+"pl": "itens",
+"f": null,
+"fpl": null,
+"note": "no accent in the plural"
+},
+"comichão": {
+"pl": "comichões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"punição": {
+"pl": "punições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"factor": {
+"pl": "fatores",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: fator"
+},
+"pesar": {
+"pl": "pesares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"prostituição": {
+"pl": "prostituições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"predador": {
+"pl": "predadores",
+"f": "predadora",
+"fpl": "predadoras",
+"note": ""
+},
+"aproximação": {
+"pl": "aproximações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"rancor": {
+"pl": "rancores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"colaboração": {
+"pl": "colaborações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"oral": {
+"pl": "orais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"compreensível": {
+"pl": "compreensíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"atual": {
+"pl": "atuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"determinação": {
+"pl": "determinações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"anfitrião": {
+"pl": "anfitriões",
+"f": "anfitriã",
+"fpl": "anfitriãs",
+"note": "feminine also anfitrioa"
+},
+"coral": {
+"pl": "corais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"certidão": {
+"pl": "certidões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"linhagem": {
+"pl": "linhagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"programação": {
+"pl": "programações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"medalhão": {
+"pl": "medalhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"respeitável": {
+"pl": "respeitáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"inspecção": {
+"pl": "inspeções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: inspeção"
+},
+"tesão": {
+"pl": "tesões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ignição": {
+"pl": "ignições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"implacável": {
+"pl": "implacáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lunar": {
+"pl": "lunares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pontuação": {
+"pl": "pontuações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hóspede": {
+"pl": null,
+"f": "hóspeda",
+"fpl": "hóspedas",
+"note": "'a hóspede' is also used"
+},
+"discrição": {
+"pl": "discrições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bilhar": {
+"pl": "bilhares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vaivém": {
+"pl": "vaivéns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pilar": {
+"pl": "pilares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"chanceler": {
+"pl": "chanceleres",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"reactor": {
+"pl": "reatores",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: reator"
+},
+"pára-quedas": {
+"pl": "paraquedas",
+"f": null,
+"fpl": null,
+"note": "invariable; AO1990 spelling: paraquedas"
+},
+"visível": {
+"pl": "visíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"desilusão": {
+"pl": "desilusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"leitor": {
+"pl": "leitores",
+"f": "leitora",
+"fpl": "leitoras",
+"note": ""
+},
+"intelectual": {
+"pl": "intelectuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"operador": {
+"pl": "operadores",
+"f": "operadora",
+"fpl": "operadoras",
+"note": ""
+},
+"circulação": {
+"pl": "circulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"superficial": {
+"pl": "superficiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"detector": {
+"pl": "detetores",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: detetor"
+},
+"agressor": {
+"pl": "agressores",
+"f": "agressora",
+"fpl": "agressoras",
+"note": ""
+},
+"transcrição": {
+"pl": "transcrições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"percentagem": {
+"pl": "percentagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"hangar": {
+"pl": "hangares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"objecção": {
+"pl": "objeções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: objeção"
+},
+"cultural": {
+"pl": "culturais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"montagem": {
+"pl": "montagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imitação": {
+"pl": "imitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fogão": {
+"pl": "fogões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"expansão": {
+"pl": "expansões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"revólver": {
+"pl": "revólveres",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"irresponsável": {
+"pl": "irresponsáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"parcial": {
+"pl": "parciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fundador": {
+"pl": "fundadores",
+"f": "fundadora",
+"fpl": "fundadoras",
+"note": ""
+},
+"maestro": {
+"pl": null,
+"f": "maestrina",
+"fpl": "maestrinas",
+"note": ""
+},
+"corporação": {
+"pl": "corporações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"manifestação": {
+"pl": "manifestações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"rapidez": {
+"pl": "rapidezes",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"pescador": {
+"pl": "pescadores",
+"f": "pescadora",
+"fpl": "pescadoras",
+"note": ""
+},
+"percepção": {
+"pl": "perceções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: perceção"
+},
+"supervisão": {
+"pl": "supervisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"acelerador": {
+"pl": "aceleradores",
+"f": "aceleradora",
+"fpl": "aceleradoras",
+"note": "feminine only as an adjective"
+},
+"violador": {
+"pl": "violadores",
+"f": "violadora",
+"fpl": "violadoras",
+"note": ""
+},
+"órgão": {
+"pl": "órgãos",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"salva-vidas": {
+"pl": "salva-vidas",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"abdómen": {
+"pl": "abdómenes, abdomens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"perturbador": {
+"pl": "perturbadores",
+"f": "perturbadora",
+"fpl": "perturbadoras",
+"note": ""
+},
+"administrador": {
+"pl": "administradores",
+"f": "administradora",
+"fpl": "administradoras",
+"note": ""
+},
+"vereador": {
+"pl": "vereadores",
+"f": "vereadora",
+"fpl": "vereadoras",
+"note": ""
+},
+"agitação": {
+"pl": "agitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"quartel-general": {
+"pl": "quartéis-generais",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"erupção": {
+"pl": "erupções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"iluminação": {
+"pl": "iluminações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"interpretação": {
+"pl": "interpretações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"virtual": {
+"pl": "virtuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"bonitão": {
+"pl": "bonitões",
+"f": "bonitona",
+"fpl": "bonitonas",
+"note": ""
+},
+"composição": {
+"pl": "composições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"colisão": {
+"pl": "colisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sobrenatural": {
+"pl": "sobrenaturais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"durão": {
+"pl": "durões",
+"f": "durona",
+"fpl": "duronas",
+"note": ""
+},
+"contenção": {
+"pl": "contenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fiscal": {
+"pl": "fiscais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"desvantagem": {
+"pl": "desvantagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"procurador-geral": {
+"pl": "procuradores-gerais",
+"f": "procuradora-geral",
+"fpl": "procuradoras-gerais",
+"note": "both parts take the plural"
+},
+"doação": {
+"pl": "doações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sénior": {
+"pl": "seniores",
+"f": null,
+"fpl": null,
+"note": "stress moves: sénior -> seniores; same form for the feminine"
+},
+"capuz": {
+"pl": "capuzes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"dedicação": {
+"pl": "dedicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"observador": {
+"pl": "observadores",
+"f": "observadora",
+"fpl": "observadoras",
+"note": ""
+},
+"tambor": {
+"pl": "tambores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"desordem": {
+"pl": "desordens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"confiável": {
+"pl": "confiáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"selecção": {
+"pl": "seleções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: seleção"
+},
+"equação": {
+"pl": "equações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"desprezível": {
+"pl": "desprezíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"inauguração": {
+"pl": "inaugurações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"conexão": {
+"pl": "conexões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"infernal": {
+"pl": "infernais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"voador": {
+"pl": "voadores",
+"f": "voadora",
+"fpl": "voadoras",
+"note": ""
+},
+"feroz": {
+"pl": "ferozes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"coleção": {
+"pl": "coleções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"macarrão": {
+"pl": "macarrões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imprevisível": {
+"pl": "imprevisíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"preliminar": {
+"pl": "preliminares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"extorsão": {
+"pl": "extorsões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"admissão": {
+"pl": "admissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"canalizador": {
+"pl": "canalizadores",
+"f": "canalizadora",
+"fpl": "canalizadoras",
+"note": ""
+},
+"odor": {
+"pl": "odores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"espertalhão": {
+"pl": "espertalhões",
+"f": "espertalhona",
+"fpl": "espertalhonas",
+"note": ""
+},
+"citação": {
+"pl": "citações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aprendiz": {
+"pl": "aprendizes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"trovão": {
+"pl": "trovões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"excepcional": {
+"pl": "excecionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine; pre-1990 spelling; AO1990: excecional"
+},
+"inscrição": {
+"pl": "inscrições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"experimental": {
+"pl": "experimentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"anular": {
+"pl": "anulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rendição": {
+"pl": "rendições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"marcial": {
+"pl": "marciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sensor": {
+"pl": "sensores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"legião": {
+"pl": "legiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cordão": {
+"pl": "cordões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"petição": {
+"pl": "petições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"carregador": {
+"pl": "carregadores",
+"f": "carregadora",
+"fpl": "carregadoras",
+"note": ""
+},
+"compatível": {
+"pl": "compatíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"frontal": {
+"pl": "frontais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"juvenil": {
+"pl": "juvenis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"messias": {
+"pl": "messias",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"moção": {
+"pl": "moções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reconstrução": {
+"pl": "reconstruções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"defensor": {
+"pl": "defensores",
+"f": "defensora",
+"fpl": "defensoras",
+"note": ""
+},
+"tropical": {
+"pl": "tropicais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"invencível": {
+"pl": "invencíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"escocês": {
+"pl": "escoceses",
+"f": "escocesa",
+"fpl": "escocesas",
+"note": "accent drops in the inflected forms"
+},
+"grão": {
+"pl": "grãos",
+"f": "grã",
+"fpl": "grãs",
+"note": "adj. 'grão' (grand) mostly in compounds: grão-mestre, grã-cruz"
+},
+"caminhão": {
+"pl": "caminhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"admirável": {
+"pl": "admiráveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"congelador": {
+"pl": "congeladores",
+"f": "congeladora",
+"fpl": "congeladoras",
+"note": "feminine only as an adjective"
+},
+"pinguim": {
+"pl": "pinguins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"luar": {
+"pl": "luares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tostão": {
+"pl": "tostões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"marcador": {
+"pl": "marcadores",
+"f": "marcadora",
+"fpl": "marcadoras",
+"note": "feminine only as an adjective"
+},
+"sensacional": {
+"pl": "sensacionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"ônibus": {
+"pl": "ônibus",
+"f": null,
+"fpl": null,
+"note": "invariable; Brazilian word, pt-PT autocarro"
+},
+"previsão": {
+"pl": "previsões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"restrição": {
+"pl": "restrições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"órfão": {
+"pl": "órfãos",
+"f": "órfã",
+"fpl": "órfãs",
+"note": ""
+},
+"devoção": {
+"pl": "devoções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"falsificação": {
+"pl": "falsificações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"lamentável": {
+"pl": "lamentáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"impostor": {
+"pl": "impostores",
+"f": "impostora",
+"fpl": "impostoras",
+"note": ""
+},
+"europeu": {
+"pl": null,
+"f": "europeia",
+"fpl": "europeias",
+"note": ""
+},
+"porta-voz": {
+"pl": "porta-vozes",
+"f": null,
+"fpl": null,
+"note": "only the second part inflects"
+},
+"natação": {
+"pl": "natações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"emissão": {
+"pl": "emissões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fedor": {
+"pl": "fedores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ambiental": {
+"pl": "ambientais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"casual": {
+"pl": "casuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"regional": {
+"pl": "regionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"obstrução": {
+"pl": "obstruções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"acidental": {
+"pl": "acidentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"óscar": {
+"pl": "óscares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"infiel": {
+"pl": "infiéis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"mutação": {
+"pl": "mutações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"travão": {
+"pl": "travões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"peão": {
+"pl": "peões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"plantação": {
+"pl": "plantações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"empurrão": {
+"pl": "empurrões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"instrutor": {
+"pl": "instrutores",
+"f": "instrutora",
+"fpl": "instrutoras",
+"note": ""
+},
+"castor": {
+"pl": "castores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cultivar": {
+"pl": "cultivares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"angariação": {
+"pl": "angariações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"redução": {
+"pl": "reduções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"interrupção": {
+"pl": "interrupções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reparação": {
+"pl": "reparações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"contribuição": {
+"pl": "contribuições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"diabetes": {
+"pl": "diabetes",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"ocular": {
+"pl": "oculares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"matriz": {
+"pl": "matrizes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"médico-legista": {
+"pl": "médicos-legistas",
+"f": "médica-legista",
+"fpl": "médicas-legistas",
+"note": ""
+},
+"escorpião": {
+"pl": "escorpiões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"atriz": {
+"pl": "atrizes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"super-herói": {
+"pl": null,
+"f": "super-heroína",
+"fpl": "super-heroínas",
+"note": ""
+},
+"licor": {
+"pl": "licores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"previsível": {
+"pl": "previsíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"batedor": {
+"pl": "batedores",
+"f": "batedora",
+"fpl": "batedoras",
+"note": "feminine only as an adjective"
+},
+"barragem": {
+"pl": "barragens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"covil": {
+"pl": "covis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"transportador": {
+"pl": "transportadores",
+"f": "transportadora",
+"fpl": "transportadoras",
+"note": "feminine only as an adjective"
+},
+"afirmação": {
+"pl": "afirmações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"boletim": {
+"pl": "boletins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vibração": {
+"pl": "vibrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"embalagem": {
+"pl": "embalagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ressurreição": {
+"pl": "ressurreições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"irracional": {
+"pl": "irracionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"roupão": {
+"pl": "roupões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"camuflagem": {
+"pl": "camuflagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"munição": {
+"pl": "munições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"apagão": {
+"pl": "apagões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"constipação": {
+"pl": "constipações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"similar": {
+"pl": "similares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"indicação": {
+"pl": "indicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"setor": {
+"pl": "setores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"matinal": {
+"pl": "matinais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"doador": {
+"pl": "doadores",
+"f": "doadora",
+"fpl": "doadoras",
+"note": ""
+},
+"constrangedor": {
+"pl": "constrangedores",
+"f": "constrangedora",
+"fpl": "constrangedoras",
+"note": ""
+},
+"atendedor": {
+"pl": "atendedores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"adicional": {
+"pl": "adicionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"contador": {
+"pl": "contadores",
+"f": "contadora",
+"fpl": "contadoras",
+"note": ""
+},
+"credível": {
+"pl": "credíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"holandês": {
+"pl": "holandeses",
+"f": "holandesa",
+"fpl": "holandesas",
+"note": "accent drops in the inflected forms"
+},
+"redenção": {
+"pl": "redenções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sémen": {
+"pl": "sémenes, semens",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"flexível": {
+"pl": "flexíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fenomenal": {
+"pl": "fenomenais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fezes": {
+"pl": "fezes",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"vagão": {
+"pl": "vagões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"liberal": {
+"pl": "liberais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"mártir": {
+"pl": "mártires",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"aquisição": {
+"pl": "aquisições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"catedral": {
+"pl": "catedrais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"corretor": {
+"pl": "corretores",
+"f": "corretora",
+"fpl": "corretoras",
+"note": ""
+},
+"considerável": {
+"pl": "consideráveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"excursão": {
+"pl": "excursões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"individual": {
+"pl": "individuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rejeição": {
+"pl": "rejeições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"convencional": {
+"pl": "convencionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cabedal": {
+"pl": "cabedais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"decomposição": {
+"pl": "decomposições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vegetal": {
+"pl": "vegetais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tutor": {
+"pl": "tutores",
+"f": "tutora",
+"fpl": "tutoras",
+"note": ""
+},
+"compensação": {
+"pl": "compensações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"substituição": {
+"pl": "substituições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"medricas": {
+"pl": "medricas",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"camarim": {
+"pl": "camarins",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"nomeação": {
+"pl": "nomeações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imperatriz": {
+"pl": "imperatrizes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"especulação": {
+"pl": "especulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"introdução": {
+"pl": "introduções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aprendizagem": {
+"pl": "aprendizagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"admirador": {
+"pl": "admiradores",
+"f": "admiradora",
+"fpl": "admiradoras",
+"note": ""
+},
+"dador": {
+"pl": "dadores",
+"f": "dadora",
+"fpl": "dadoras",
+"note": ""
+},
+"manipulação": {
+"pl": "manipulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"convicção": {
+"pl": "convicções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"melhoras": {
+"pl": "melhoras",
+"f": null,
+"fpl": null,
+"note": "plural only (as melhoras = get well)"
+},
+"distinção": {
+"pl": "distinções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"foguetão": {
+"pl": "foguetões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"duração": {
+"pl": "durações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"frustração": {
+"pl": "frustrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"muscular": {
+"pl": "musculares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"matador": {
+"pl": "matadores",
+"f": "matadora",
+"fpl": "matadoras",
+"note": ""
+},
+"imóvel": {
+"pl": "imóveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"viável": {
+"pl": "viáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"vigor": {
+"pl": "vigores",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"celestial": {
+"pl": "celestiais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pulmonar": {
+"pl": "pulmonares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"espiral": {
+"pl": "espirais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"peculiar": {
+"pl": "peculiares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"dental": {
+"pl": "dentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"czar": {
+"pl": "czares",
+"f": "czarina",
+"fpl": "czarinas",
+"note": ""
+},
+"meditação": {
+"pl": "meditações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"maxilar": {
+"pl": "maxilares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"animação": {
+"pl": "animações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"controlador": {
+"pl": "controladores",
+"f": "controladora",
+"fpl": "controladoras",
+"note": ""
+},
+"cinturão": {
+"pl": "cinturões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bom-dia": {
+"pl": "bons-dias",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"estripador": {
+"pl": "estripadores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"admiração": {
+"pl": "admirações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"anal": {
+"pl": "anais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rotação": {
+"pl": "rotações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"decepção": {
+"pl": "deceções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: deceção"
+},
+"incisão": {
+"pl": "incisões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"alucinação": {
+"pl": "alucinações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vocação": {
+"pl": "vocações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"canalização": {
+"pl": "canalizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"promissor": {
+"pl": "promissores",
+"f": "promissora",
+"fpl": "promissoras",
+"note": ""
+},
+"receptor": {
+"pl": "recetores",
+"f": "recetora",
+"fpl": "recetoras",
+"note": "pre-1990 spelling; AO1990: recetor; feminine only as an adjective"
+},
+"vil": {
+"pl": "vis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"descolagem": {
+"pl": "descolagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"perseguidor": {
+"pl": "perseguidores",
+"f": "perseguidora",
+"fpl": "perseguidoras",
+"note": ""
+},
+"ventilador": {
+"pl": "ventiladores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"gel": {
+"pl": "géis, geles",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"repetição": {
+"pl": "repetições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"irregular": {
+"pl": "irregulares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"porta-bagagens": {
+"pl": "porta-bagagens",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"graduação": {
+"pl": "graduações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"temporizador": {
+"pl": "temporizadores",
+"f": "temporizadora",
+"fpl": "temporizadoras",
+"note": "feminine only as an adjective"
+},
+"habitação": {
+"pl": "habitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tentador": {
+"pl": "tentadores",
+"f": "tentadora",
+"fpl": "tentadoras",
+"note": ""
+},
+"marechal": {
+"pl": "marechais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"exceção": {
+"pl": "exceções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"prisional": {
+"pl": "prisionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"cachecol": {
+"pl": "cachecóis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sucção": {
+"pl": "sucções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pecador": {
+"pl": "pecadores",
+"f": "pecadora",
+"fpl": "pecadoras",
+"note": ""
+},
+"detonação": {
+"pl": "detonações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"suposição": {
+"pl": "suposições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"funcional": {
+"pl": "funcionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"perspicaz": {
+"pl": "perspicazes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"investidor": {
+"pl": "investidores",
+"f": "investidora",
+"fpl": "investidoras",
+"note": ""
+},
+"ancião": {
+"pl": "anciãos, anciões, anciães",
+"f": "anciã",
+"fpl": "anciãs",
+"note": ""
+},
+"medieval": {
+"pl": "medievais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"portador": {
+"pl": "portadores",
+"f": "portadora",
+"fpl": "portadoras",
+"note": ""
+},
+"polar": {
+"pl": "polares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"fértil": {
+"pl": "férteis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"apreensão": {
+"pl": "apreensões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"governamental": {
+"pl": "governamentais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"transacção": {
+"pl": "transações",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: transação"
+},
+"inspirador": {
+"pl": "inspiradores",
+"f": "inspiradora",
+"fpl": "inspiradoras",
+"note": ""
+},
+"contaminação": {
+"pl": "contaminações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aparição": {
+"pl": "aparições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"vertical": {
+"pl": "verticais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"lençol": {
+"pl": "lençóis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"alferes": {
+"pl": "alferes",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"microondas": {
+"pl": "micro-ondas",
+"f": null,
+"fpl": null,
+"note": "invariable; AO1990 spelling: micro-ondas"
+},
+"veloz": {
+"pl": "velozes",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"molecular": {
+"pl": "moleculares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"retaliação": {
+"pl": "retaliações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"status": {
+"pl": "status",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"barracão": {
+"pl": "barracões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"aspirador": {
+"pl": "aspiradores",
+"f": "aspiradora",
+"fpl": "aspiradoras",
+"note": "feminine only as an adjective"
+},
+"médium": {
+"pl": "médiuns",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sabotagem": {
+"pl": "sabotagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"erecção": {
+"pl": "ereções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: ereção"
+},
+"tórax": {
+"pl": "tórax",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"jardinagem": {
+"pl": "jardinagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"exterminador": {
+"pl": "exterminadores",
+"f": "exterminadora",
+"fpl": "exterminadoras",
+"note": ""
+},
+"interminável": {
+"pl": "intermináveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"pregador": {
+"pl": "pregadores",
+"f": "pregadora",
+"fpl": "pregadoras",
+"note": ""
+},
+"integral": {
+"pl": "integrais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"indicador": {
+"pl": "indicadores",
+"f": "indicadora",
+"fpl": "indicadoras",
+"note": "feminine only as an adjective"
+},
+"instrução": {
+"pl": "instruções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"fénix": {
+"pl": "fénix",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"marfim": {
+"pl": "marfins",
+"f": null,
+"fpl": null,
+"note": "as a colour adjective: invariable"
+},
+"irresistível": {
+"pl": "irresistíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"amigão": {
+"pl": "amigões",
+"f": "amigona",
+"fpl": "amigonas",
+"note": ""
+},
+"documentação": {
+"pl": "documentações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"caráter": {
+"pl": "caracteres",
+"f": null,
+"fpl": null,
+"note": "stress moves: caráter -> caracteres; pt-PT also carácter"
+},
+"intencional": {
+"pl": "intencionais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"delegação": {
+"pl": "delegações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"distração": {
+"pl": "distrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"reprodução": {
+"pl": "reproduções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escravidão": {
+"pl": "escravidões",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"obra-prima": {
+"pl": "obras-primas",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"aviação": {
+"pl": "aviações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"marquês": {
+"pl": "marqueses",
+"f": "marquesa",
+"fpl": "marquesas",
+"note": "accent drops in the inflected forms"
+},
+"utilizador": {
+"pl": "utilizadores",
+"f": "utilizadora",
+"fpl": "utilizadoras",
+"note": ""
+},
+"lançador": {
+"pl": "lançadores",
+"f": "lançadora",
+"fpl": "lançadoras",
+"note": ""
+},
+"viral": {
+"pl": "virais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"sondagem": {
+"pl": "sondagens",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"racial": {
+"pl": "raciais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"indemnização": {
+"pl": "indemnizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sonar": {
+"pl": "sonares",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"canil": {
+"pl": "canis",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"congregação": {
+"pl": "congregações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"saudação": {
+"pl": "saudações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"jaguar": {
+"pl": "jaguares",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"eliminação": {
+"pl": "eliminações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"propulsão": {
+"pl": "propulsões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"serial": {
+"pl": "seriais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"porção": {
+"pl": "porções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"destruidor": {
+"pl": "destruidores",
+"f": "destruidora",
+"fpl": "destruidoras",
+"note": ""
+},
+"graal": {
+"pl": "graais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"imoral": {
+"pl": "imorais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"rigor": {
+"pl": "rigores",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"paranormal": {
+"pl": "paranormais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"intoxicação": {
+"pl": "intoxicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"carnaval": {
+"pl": "carnavais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"empresarial": {
+"pl": "empresariais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"escavação": {
+"pl": "escavações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"herpes": {
+"pl": "herpes",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"pontual": {
+"pl": "pontuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"benção": {
+"pl": "bênçãos",
+"f": null,
+"fpl": null,
+"note": "nonstandard spelling of bênção"
+},
+"camponês": {
+"pl": "camponeses",
+"f": "camponesa",
+"fpl": "camponesas",
+"note": "accent drops in the inflected forms"
+},
+"ração": {
+"pl": "rações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"atuação": {
+"pl": "atuações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"perfuração": {
+"pl": "perfurações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"bilião": {
+"pl": "biliões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sultão": {
+"pl": "sultões, sultães, sultãos",
+"f": "sultana",
+"fpl": "sultanas",
+"note": "sultões is the most common plural"
+},
+"perturbação": {
+"pl": "perturbações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"poluição": {
+"pl": "poluições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"encenação": {
+"pl": "encenações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"cru": {
+"pl": null,
+"f": "crua",
+"fpl": "cruas",
+"note": ""
+},
+"plausível": {
+"pl": "plausíveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"capataz": {
+"pl": "capatazes",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"rural": {
+"pl": "rurais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"blusão": {
+"pl": "blusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"anulação": {
+"pl": "anulações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"sucessor": {
+"pl": "sucessores",
+"f": "sucessora",
+"fpl": "sucessoras",
+"note": ""
+},
+"penal": {
+"pl": "penais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"neural": {
+"pl": "neurais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"primeira-dama": {
+"pl": "primeiras-damas",
+"f": null,
+"fpl": null,
+"note": "both parts take the plural"
+},
+"atração": {
+"pl": "atrações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"tractor": {
+"pl": "tratores",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: trator"
+},
+"aceitação": {
+"pl": "aceitações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"conservador": {
+"pl": "conservadores",
+"f": "conservadora",
+"fpl": "conservadoras",
+"note": ""
+},
+"estéril": {
+"pl": "estéreis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"caução": {
+"pl": "cauções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"viação": {
+"pl": "viações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"projecção": {
+"pl": "projeções",
+"f": null,
+"fpl": null,
+"note": "pre-1990 spelling; AO1990: projeção"
+},
+"distribuidor": {
+"pl": "distribuidores",
+"f": "distribuidora",
+"fpl": "distribuidoras",
+"note": ""
+},
+"descartável": {
+"pl": "descartáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"heterossexual": {
+"pl": "heterossexuais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tradutor": {
+"pl": "tradutores",
+"f": "tradutora",
+"fpl": "tradutoras",
+"note": ""
+},
+"nudez": {
+"pl": "nudezes",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"valentão": {
+"pl": "valentões",
+"f": "valentona",
+"fpl": "valentonas",
+"note": ""
+},
+"compositor": {
+"pl": "compositores",
+"f": "compositora",
+"fpl": "compositoras",
+"note": ""
+},
+"pólen": {
+"pl": "pólenes, polens",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"núpcias": {
+"pl": "núpcias",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"apresentador": {
+"pl": "apresentadores",
+"f": "apresentadora",
+"fpl": "apresentadoras",
+"note": ""
+},
+"córtex": {
+"pl": "córtex, córtices",
+"f": null,
+"fpl": null,
+"note": "usually invariable"
+},
+"colesterol": {
+"pl": "colesteróis",
+"f": null,
+"fpl": null,
+"note": "rarely plural"
+},
+"avental": {
+"pl": "aventais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"coroação": {
+"pl": "coroações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"utilização": {
+"pl": "utilizações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"transfusão": {
+"pl": "transfusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"escombros": {
+"pl": "escombros",
+"f": null,
+"fpl": null,
+"note": "plural only"
+},
+"contusão": {
+"pl": "contusões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"ditador": {
+"pl": "ditadores",
+"f": "ditadora",
+"fpl": "ditadoras",
+"note": ""
+},
+"mineral": {
+"pl": "minerais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"tremor": {
+"pl": "tremores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"inventor": {
+"pl": "inventores",
+"f": "inventora",
+"fpl": "inventoras",
+"note": ""
+},
+"equador": {
+"pl": "equadores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"informal": {
+"pl": "informais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"comunhão": {
+"pl": "comunhões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"pavor": {
+"pl": "pavores",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"inundação": {
+"pl": "inundações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"publicação": {
+"pl": "publicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"remoção": {
+"pl": "remoções",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"convulsão": {
+"pl": "convulsões",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"intimação": {
+"pl": "intimações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"recital": {
+"pl": "recitais",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"despertador": {
+"pl": "despertadores",
+"f": "despertadora",
+"fpl": "despertadoras",
+"note": "feminine only as an adjective"
+},
+"imperdoável": {
+"pl": "imperdoáveis",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"oval": {
+"pl": "ovais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"superstição": {
+"pl": "superstições",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"construtor": {
+"pl": "construtores",
+"f": "construtora",
+"fpl": "construtoras",
+"note": ""
+},
+"pascal": {
+"pl": "pascais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"prior": {
+"pl": "priores",
+"f": "prioresa",
+"fpl": "prioresas",
+"note": "feminine has suffix -esa"
+},
+"desintoxicação": {
+"pl": "desintoxicações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"abdominal": {
+"pl": "abdominais",
+"f": null,
+"fpl": null,
+"note": "same form for the feminine"
+},
+"negociador": {
+"pl": "negociadores",
+"f": "negociadora",
+"fpl": "negociadoras",
+"note": ""
+},
+"irritação": {
+"pl": "irritações",
+"f": null,
+"fpl": null,
+"note": ""
+},
+"desmancha-prazeres": {
+"pl": "desmancha-prazeres",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"porta-aviões": {
+"pl": "porta-aviões",
+"f": null,
+"fpl": null,
+"note": "invariable"
+},
+"imitador": {
+"pl": "imitadores",
+"f": "imitadora",
+"fpl": "imitadoras",
+"note": ""
+},
+"hesitação": {
+"pl": "hesitações",
+"f": null,
+"fpl": null,
+"note": ""
+}
+}
