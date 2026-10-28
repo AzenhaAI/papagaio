@@ -16,6 +16,7 @@ import { runHealthCheck, formatHealth, runFastCheck, alertOnChange } from './hea
 import { publishCommands } from './commands.js';
 import { botUi, botDirection, L, S, settingsKeyboard, UI_LANGS } from './bot_lang.js';
 import { MADEIRA } from './madeira.js';
+import { LEVELS as WORD_LEVELS } from './levels.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -799,7 +800,8 @@ async function handleTranslation(env, uid, chatId, text, from) {
          ORDER BY freq LIMIT 2`
       ).bind(w, `${w} %`).all();
       for (const h of hits ?? []) {
-        extra += `\n\n📖 *${strip(h.term)}*` +
+        const lv = WORD_LEVELS[fold(h.term)];
+        extra += `\n\n📖 *${strip(h.term)}*` + (lv ? ` · ${lv}` : '') +
           (h.gender ? ` (${h.gender})` : '') + (h.pos ? ` — _${strip(h.pos)}_` : '') +
           `\n${strip(ui === 'ru' && h.trans_ru ? h.trans_ru : h.trans).slice(0, 160)}`;
       }

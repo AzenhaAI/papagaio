@@ -15,6 +15,22 @@ import { buildStats } from './stats.js';
 import { GLOSS_RU } from './verbs_ru.js';
 import { VERB_EXAMPLES } from './verb_examples.js';
 import { MADEIRA } from './madeira.js';
+import { LEVELS as WORD_LEVELS } from './levels.js';
+
+// True when one substitution, insertion, deletion or swap of neighbours turns
+// a into b — the app's offline rule (offline_dict.dart _oneEditApart).
+function oneEditApart(a, b) {
+  if (a.length === b.length) {
+    const diff = [];
+    for (let i = 0; i < a.length; i++) if (a[i] !== b[i] && diff.push(i) > 2) return false;
+    if (diff.length === 1) return true;
+    return diff.length === 2 && diff[1] === diff[0] + 1 && a[diff[0]] === b[diff[1]] && a[diff[1]] === b[diff[0]];
+  }
+  const [long, short] = a.length > b.length ? [a, b] : [b, a];
+  let i = 0;
+  while (i < short.length && long[i] === short[i]) i++;
+  return long.slice(i + 1) === short.slice(i);
+}
 
 // The Madeiran senses of a word (1950 dictionary), or undefined so the field
 // drops out of the answer.
@@ -23,6 +39,10 @@ const madeiraOf = (term) => {
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
   return MADEIRA[k];
 };
+
+// CEFR level of a word (A1-A2 / B1 / B2), when a course book lists it.
+const levelOf = (term) => WORD_LEVELS[String(term ?? '').replace(/^([oa]s? |um |uma )/i, '').toLowerCase()
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()];
 import { recordMistakes } from './mistakes.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 import { conjugate } from './conjugate.js';
@@ -500,7 +520,7 @@ export async function handleApi(request, env, path) {
       const entry = (await ensureEntry(env, hit).catch(() => null))
         ?? { meanings: [], synonyms: [], collocations: [], grammar: '', conj: {} };
       entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(hit.term, uiLang, hit.freq ?? 1)];
-      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term), examples: VERB_EXAMPLES[hit.term], madeira: madeiraOf(hit.term) });
+      return json({ source: 'deck', card: { ...hit, entry }, conj: conjugate(hit.term), examples: VERB_EXAMPLES[hit.term], madeira: madeiraOf(hit.term), level: levelOf(hit.term) });
     }
 
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
@@ -526,7 +546,7 @@ export async function handleApi(request, env, path) {
         }
       }
       if (entry) entry.corpus = [...(entry.corpus ?? []), ...await exampleLines(lex.term, uiLang, lex.freq)];
-      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term), examples: VERB_EXAMPLES[lex.term], madeira: madeiraOf(lex.term) });
+      return json({ source: 'lexicon', card: { ...lex, entry }, conj: conjugate(lex.term), examples: VERB_EXAMPLES[lex.term], madeira: madeiraOf(lex.term), level: levelOf(lex.term) });
     }
 
     if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
@@ -535,7 +555,7 @@ export async function handleApi(request, env, path) {
       if (!card) return json({ error: 'not found' }, 404);
       // The engine is the authority on forms — the model is not asked for them.
       const bare = card.term.replace(/^[oa]s? /, '');
-      return json({ source: 'lookup', card, conj: conjugate(bare), examples: VERB_EXAMPLES[bare], madeira: madeiraOf(bare) });
+      return json({ source: 'lookup', card, conj: conjugate(bare), examples: VERB_EXAMPLES[bare], madeira: madeiraOf(bare), level: levelOf(bare) });
     } catch (e) {
       return json({ error: e.message }, 502);
     }
@@ -706,6 +726,28 @@ export async function handleApi(request, env, path) {
           words: [...byLemma, ...rest].slice(0, 25),
           from_form: { form: s, ...lemma },
         });
+      }
+    }
+    // One letter off, with nothing found: "comboyo" is comboio. Same rule as
+    // the app's offline search — the headwords one substitution, insertion,
+    // deletion or neighbour swap away, commonest first — over the headwords
+    // that share the first three letters (one index range, read once: the
+    // answer is edge-cached with the rest).
+    if (!(results ?? []).length && /^[a-zà-ü]{4,}$/.test(s)) {
+      const p3 = s.slice(0, 3);
+      const { results: pool } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq
+           FROM cards INDEXED BY idx_cards_fold
+          WHERE fold >= ?1 AND fold < ?2 AND owner = 'lex' AND course = ?3
+          LIMIT 3000`
+      ).bind(p3, p3.slice(0, 2) + String.fromCharCode(p3.charCodeAt(2) + 1), course).all()
+        .catch(() => ({ results: [] }));
+      const near = (pool ?? []).filter((r) => {
+        const f = fold(r.term);
+        return !f.includes(' ') && Math.abs(f.length - s.length) <= 1 && f !== s && oneEditApart(f, s);
+      }).sort((a, b) => (a.freq ?? 1e9) - (b.freq ?? 1e9)).slice(0, 3);
+      if (near.length) {
+        return answer({ q: s, words: near, from_form: { form: s, word: near[0].term, kind: 'spelling' } });
       }
     }
     return answer({ q: s, words: results ?? [] });
