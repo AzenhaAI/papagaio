@@ -256,7 +256,10 @@ export async function handleApi(request, env, path) {
     const image = String(body?.image ?? '');
     if (!image) return json({ error: 'image is required' }, 400);
     try {
-      const out = await readAndTranslate(env, image, body?.direction);
+      const ui = ['en', 'pt', 'ru'].includes(body?.ui) ? body.ui : 'en';
+      const out = await readAndTranslate(env, image, body?.direction, ui, {
+        same: body?.same === 'explain' ? 'explain' : 'flip',
+      });
       if (!out.source) return json({ error: 'no text found in that picture' }, 422);
       return json(out);
     } catch (e) {

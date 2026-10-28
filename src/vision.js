@@ -19,10 +19,17 @@ import { translate } from './translate.js';
 
 // Tried in order; the first that answers wins. Availability moves, so a failure
 // falls through instead of taking the endpoint down.
+// Llama 4 Scout reads long screenshots line by line; the 3.2 vision model
+// often answered with a description of the picture instead ("The image shows
+// a screenshot of an email…", Kirill, 28.10.2026), so it is only a fallback.
 const VISION_MODELS = [
-  '@cf/meta/llama-3.2-11b-vision-instruct',
-  '@cf/llava-hf/llava-1.5-7b-hf',
+  { id: '@cf/meta/llama-4-scout-17b-16e-instruct', chat: true },
+  { id: '@cf/meta/llama-3.2-11b-vision-instruct' },
+  { id: '@cf/llava-hf/llava-1.5-7b-hf' },
 ];
+
+// An answer that talks ABOUT the picture rather than copying its text.
+const DESCRIBES = /^\s*(the|this) (image|picture|photo|photograph|screenshot)\b|^\s*(here is|here's) (the|a) (transcription|text)|^\s*the text (in|on|of) (the|this) (image|picture)/i;
 
 const READ_PROMPT =
   'Transcribe every piece of text visible in this image, exactly as written, ' +
@@ -46,13 +53,24 @@ export async function readText(env, image) {
   let lastError;
   for (const model of VISION_MODELS) {
     try {
-      const out = await env.AI.run(model, {
-        image: [...bytes],
-        prompt: READ_PROMPT,
-        max_tokens: 800,
-      });
+      const out = model.chat
+        ? await env.AI.run(model.id, {
+            messages: [{
+              role: 'user',
+              content: [
+                { type: 'text', text: READ_PROMPT },
+                { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${b64}` } },
+              ],
+            }],
+            max_tokens: 1500,
+          })
+        : await env.AI.run(model.id, {
+            image: [...bytes],
+            prompt: READ_PROMPT,
+            max_tokens: 1500,
+          });
       const text = String(out?.description ?? out?.response ?? '').trim();
-      if (text) return { text, model };
+      if (text && !DESCRIBES.test(text)) return { text, model: model.id };
     } catch (e) {
       lastError = e;
     }
@@ -65,10 +83,13 @@ export async function readText(env, image) {
  * Reads and translates the text in an image.
  * `image` is a data URL or bare base64 of a JPEG/PNG.
  */
-export async function readAndTranslate(env, image, direction) {
+export async function readAndTranslate(env, image, direction, ui, { same = 'flip' } = {}) {
   const { text, model } = await readText(env, image);
   if (!text) return { source: '', translation: '' };
 
-  const out = await translate(env, text, direction);
+  // The same rule as typed text: Portuguese goes into the reader's interface
+  // language, anything else into Portuguese. Without `ui` the photo path sent
+  // Portuguese into English for a Russian reader.
+  const out = await translate(env, text, direction, ui, { same });
   return { ...out, source: text, read_by: model };
 }
