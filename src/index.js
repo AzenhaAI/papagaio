@@ -14,6 +14,8 @@ import { START_LEVELS, applyLevel } from './level.js';
 import { buildBulletin, getBulletin } from './news.js';
 import { runHealthCheck, formatHealth, runFastCheck, alertOnChange } from './health.js';
 import { publishCommands } from './commands.js';
+import { botUi, botDirection, L, S, settingsKeyboard, UI_LANGS } from './bot_lang.js';
+import { MADEIRA } from './madeira.js';
 import { courseMap, lessonById, lessonScene, checkGoal, completeLesson } from './course.js';
 
 const COURSES = {
@@ -190,6 +192,26 @@ async function handleUpdate(update, env) {
     return;
   }
 
+  // Interface language and where translations go — one message, two rows.
+  if (text.startsWith('/settings') || /^\/ui(@\S+)?$/.test(text)) {
+    const user = await getUser(env, uid);
+    const ui = botUi(user, msg.from);
+    await tg(env, 'sendMessage', {
+      chat_id: chat, text: L(ui, S.settingsTitle), parse_mode: 'Markdown',
+      reply_markup: settingsKeyboard(user, ui),
+    });
+    return;
+  }
+
+  // A word from the 1950 Madeiran dictionary: the one asked for, or any.
+  if (text.startsWith('/madeira')) {
+    const user = await getUser(env, uid);
+    const ui = botUi(user, msg.from);
+    const q = text.replace(/^\/madeira(@\S+)?\s*/, '').trim();
+    await sendMadeira(env, chat, ui, q);
+    return;
+  }
+
   if (text.startsWith('/lang')) {
     await tg(env, 'sendMessage', {
       chat_id: chat, text: 'Which languages are we learning?', reply_markup: courseKeyboard(),
@@ -211,7 +233,7 @@ async function handleUpdate(update, env) {
       });
       return;
     }
-    await handleTranslation(env, uid, chat, q);
+    await handleTranslation(env, uid, chat, q, msg.from);
     return;
   }
 
@@ -689,19 +711,56 @@ async function handleUpdate(update, env) {
 
   // Anything else is a translation request. This is the point of the product:
   // a translator that never slips into Brazilian, wired straight into the deck.
-  await handleTranslation(env, uid, chat, text);
+  await handleTranslation(env, uid, chat, text, msg.from);
 }
 
-async function handleTranslation(env, uid, chatId, text) {
+// ---------- Madeirense ----------
+
+const MADEIRA_ALL = [...new Map(Object.values(MADEIRA).flat().map((e) => [e.i, e])).values()];
+
+/** One Madeiran entry as a message block, in the reader's language. */
+function madeiraBlock(e, ui) {
+  const strip = (x) => String(x ?? '').replace(/[*_`[\]]/g, '');
+  const meaning = ui === 'ru' ? e.ru : ui === 'pt' ? e.d : e.e;
+  return `*${strip(e.t)}*` + (e.lo ? ` _(${L(ui, S.uncertain)})_` : '') +
+    `\n${strip(meaning)}` +
+    (ui !== 'pt' && e.d ? `\n_«${strip(e.d)}»_` : '');
+}
+
+async function sendMadeira(env, chatId, ui, q) {
+  const hits = q ? (MADEIRA[fold(q)] ?? []) : [MADEIRA_ALL[Math.floor(Math.random() * MADEIRA_ALL.length)]];
+  if (!hits.length) {
+    await tg(env, 'sendMessage', { chat_id: chatId, text: L(ui, S.madeiraNone) });
+    return;
+  }
+  await tg(env, 'sendMessage', {
+    chat_id: chatId,
+    parse_mode: 'Markdown',
+    text: `${L(ui, S.madeiraIntro)}\n\n` + hits.slice(0, 3).map((e) => madeiraBlock(e, ui)).join('\n\n') +
+      `\n\n_${L(ui, S.madeiraSource)}_`,
+    reply_markup: { inline_keyboard: [[
+      { text: L(ui, S.madeiraMore), callback_data: 'mad:any' },
+      { text: '🌍 azenha.ai', url: 'https://azenha.ai/papagaio/madeirense/' },
+    ]] },
+  });
+}
+
+async function handleTranslation(env, uid, chatId, text, from) {
   if (!env.GROQ_API_KEY) {
     await tg(env, 'sendMessage', { chat_id: chatId, text: 'The translator needs GROQ_API_KEY to be set.' });
     return;
   }
   await tg(env, 'sendChatAction', { chat_id: chatId, action: 'typing' });
 
+  // The app's rule: Portuguese into the reader's language, anything else into
+  // Portuguese — unless /settings fixed where translations go.
+  const user = await getUser(env, uid);
+  const ui = botUi(user, from);
+  const { direction, same } = botDirection(user);
+
   let t;
   try {
-    t = await translate(env, text);
+    t = await translate(env, text, direction, ui, { same });
   } catch (e) {
     await tg(env, 'sendMessage', { chat_id: chatId, text: 'Translation failed: ' + e.message.slice(0, 120) });
     return;
@@ -735,14 +794,14 @@ async function handleTranslation(env, uid, chatId, text) {
       const strip = (s) => String(s ?? '').replace(/[*_`[\]]/g, '');
       const w = fold(clean);
       const { results: hits } = await env.DB.prepare(
-        `SELECT term, trans, pos, gender FROM cards
+        `SELECT term, trans, trans_ru, pos, gender FROM cards
          WHERE owner = 'lex' AND course = 'pt' AND (fold = ?1 OR fold LIKE ?2)
          ORDER BY freq LIMIT 2`
       ).bind(w, `${w} %`).all();
       for (const h of hits ?? []) {
         extra += `\n\n📖 *${strip(h.term)}*` +
           (h.gender ? ` (${h.gender})` : '') + (h.pos ? ` — _${strip(h.pos)}_` : '') +
-          `\n${strip(h.trans).slice(0, 160)}`;
+          `\n${strip(ui === 'ru' && h.trans_ru ? h.trans_ru : h.trans).slice(0, 160)}`;
       }
       const { results: exs } = await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE pair = 'pt-en'
@@ -754,16 +813,21 @@ async function handleTranslation(env, uid, chatId, text) {
         for (const e of exs) extra += `\n💬 ${strip(e.src)} — _${strip(e.dst)}_`;
       }
       if (findVerb(clean)) {
-        extra += `\n\n🔀 Every tense: azenha.ai/papagaio/verbs/`;
+        extra += `\n\n${L(ui, S.everyTense)}: azenha.ai/papagaio/verbs/`;
+      }
+      // The island's own sense of the word, from the 1950 dictionary.
+      const mad = MADEIRA[w] ?? [];
+      if (mad.length) {
+        extra += `\n\n${L(ui, S.onMadeira)}\n` + mad.slice(0, 2).map((e) => madeiraBlock(e, ui)).join('\n');
       }
     }
   } catch { /* the dictionary block is a bonus, never a blocker */ }
 
   await tg(env, 'sendMessage', {
     chat_id: chatId,
-    text: formatTranslation(t) + extra,
+    text: formatTranslation(t, ui) + extra,
     parse_mode: 'Markdown',
-    reply_markup: { inline_keyboard: [[{ text: '➕ Learn this word', callback_data: 'add' }, { text: '🔊 Listen', callback_data: 'say' }]] },
+    reply_markup: { inline_keyboard: [[{ text: L(ui, S.learn), callback_data: 'add' }, { text: L(ui, S.listen), callback_data: 'say' }]] },
   });
 }
 
@@ -1017,6 +1081,35 @@ async function sendBulletin(env, chatId, level) {
 async function handleCallback(cb, env) {
   const uid = cb.from.id;
   const data = cb.data ?? '';
+
+  if (data === 'noop') {
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    return;
+  }
+
+  // /settings: interface language and where translations go.
+  if (data.startsWith('ui:') || data.startsWith('to:')) {
+    const [kind, v] = data.split(':');
+    const col = kind === 'ui' ? 'ui' : 'tr_to';
+    const value = UI_LANGS.includes(v) ? v : null; // 'to:auto' clears it
+    await env.DB.prepare(`UPDATE users SET ${col} = ? WHERE id = ?`).bind(value, uid).run();
+    const user = await getUser(env, uid);
+    const ui = botUi(user, cb.from);
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id, text: L(ui, S.saved) });
+    await tg(env, 'editMessageText', {
+      chat_id: cb.message.chat.id, message_id: cb.message.message_id,
+      text: L(ui, S.settingsTitle), parse_mode: 'Markdown',
+      reply_markup: settingsKeyboard(user, ui),
+    });
+    return;
+  }
+
+  if (data === 'mad:any') {
+    await tg(env, 'answerCallbackQuery', { callback_query_id: cb.id });
+    const user = await getUser(env, uid);
+    await sendMadeira(env, cb.message.chat.id, botUi(user, cb.from), '');
+    return;
+  }
 
   // Placement: everything below the chosen rank is booked as known.
   if (data.startsWith('lv:')) {

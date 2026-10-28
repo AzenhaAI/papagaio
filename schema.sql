@@ -14,7 +14,9 @@ CREATE TABLE IF NOT EXISTS users (
   paused_until  TEXT,                         -- ISO; snooze and auto-quiet
   miss_streak   INTEGER NOT NULL DEFAULT 0,   -- 3 ignores in a row → quiet until tomorrow
   last_push_at  TEXT,
-  created_at    TEXT    NOT NULL
+  created_at    TEXT    NOT NULL,
+  ui            TEXT,                         -- bot interface: en | pt | ru; NULL = Telegram's language
+  tr_to         TEXT                          -- bot translations go into en | pt | ru; NULL = auto rule
 );
 
 CREATE TABLE IF NOT EXISTS cards (

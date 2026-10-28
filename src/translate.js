@@ -4,6 +4,7 @@
 // that gap is exactly what gets you blank stares in a Funchal bakery.
 
 import { chatLive as chat } from './llm.js';
+import { L, S } from './bot_lang.js';
 
 // The European Portuguese guarantee, shared with the photo translator in
 // vision.js so the two can never drift into different dialects.
@@ -291,7 +292,8 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
 const FLAG = { pt: '🇵🇹', en: '🇬🇧', ru: '🇷🇺' };
 
 /** Renders a translation for Telegram (Markdown), self-explanatory card. */
-export function formatTranslation(t) {
+export function formatTranslation(t, ui = 'en') {
+  const l = (k) => L(ui, S[k]);
   // Read the flags off the direction itself: hardcoding en->pt drew a Union
   // Jack over Russian input the moment auto learned a third language.
   const [from, to] = String(t.direction ?? 'en->pt').split('->');
@@ -299,20 +301,20 @@ export function formatTranslation(t) {
   let s = `${FLAG[from] ?? '🏳️'} → ${FLAG[to] ?? '🏳️'}\n*${t.translation}*`;
 
   if (t.corrections.length) {
-    s += `\n\n✏️ *Your text had a slip:*`;
+    s += `\n\n${l('slip')}`;
     for (const c of t.corrections) {
       s += `\n• \`${c.wrong}\` → \`${c.right}\`${c.why ? ` — ${c.why}` : ''}`;
     }
-    if (t.corrected_source) s += `\nCorrect version: _${t.corrected_source}_`;
+    if (t.corrected_source) s += `\n${l('correctVersion')}: _${t.corrected_source}_`;
   }
 
-  if (t.literal && t.literal !== t.translation) s += `\n📐 literally: _${t.literal}_`;
-  if (t.register !== 'neutral') s += `\n🗣 register: ${t.register}`;
+  if (t.literal && t.literal !== t.translation) s += `\n📐 ${l('literally')}: _${t.literal}_`;
+  if (t.register !== 'neutral') s += `\n🗣 ${l('register')}: ${t.register}`;
 
   if (t.br_diff.length) {
-    s += `\n\n⚠️ *pt-PT, not Brazilian:*`;
+    s += `\n\n${l('notBrazilian')}`;
     for (const d of t.br_diff) {
-      s += `\n• \`${d.pt}\` — in Brazil they say \`${d.br}\`${d.gloss ? ` (${d.gloss})` : ''}`;
+      s += `\n• \`${d.pt}\` — ${l('inBrazil')} \`${d.br}\`${d.gloss ? ` (${d.gloss})` : ''}`;
     }
   }
   if (t.note) s += `\n\nℹ️ ${t.note}`;

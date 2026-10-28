@@ -266,6 +266,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div id="e-look"></div>
         </div>`;
       document.getElementById('e-look').innerHTML = renderEntry(e, c, 'look');
+      // The island's own senses of the word, from the 1950 dictionary.
+      if (Array.isArray(d.madeira) && d.madeira.length) {
+        document.getElementById('e-look').insertAdjacentHTML('beforeend',
+          `<div class="moodlabel" style="margin-top:14px;">🌴 On Madeira</div>` +
+          d.madeira.slice(0, 3).map((m) => `<div style="margin:4px 0 10px;">
+            <strong>${esc(m.t)}</strong>${m.lo ? ' <span class="muted" style="font-size:12px;">(meaning not established)</span>' : ''}
+            <div>${esc(m.e)}</div>
+            ${m.d ? `<div class="muted" style="font-size:13.5px; font-style:italic;">${esc(m.d)}</div>` : ''}
+          </div>`).join('') +
+          `<div class="muted" style="font-size:12px;">Vocabulário Popular da Madeira, 1950 —
+            <a href="${location.pathname.replace(/dictionary\/?$/, 'madeirense/')}?q=${encodeURIComponent(c.term)}">all Madeiran words</a></div>`);
+      }
       wireTabs('look');
       document.getElementById('saybtn').onclick = async () => {
         const r = await fetch(TTS, {

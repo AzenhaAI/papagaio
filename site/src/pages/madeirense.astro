@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Built by scripts/build_madeira.mjs: the 1950 regional dictionary, with
+// modern spelling, English and Russian meanings and links to the standard
+// dictionary added by us. Rendered at build time — the whole book is one
+// static page, readable without the API and by search engines.
+import data from '../../../data/madeira/madeira.json';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const fold = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const POS = { 'noun-m': 'n. m.', 'noun-f': 'n. f.', noun: 'n.', adj: 'adj.', verb: 'v.', adv: 'adv.', interj: 'interj.', phrase: 'loc.' };
+const entries = data.entries;
+const letters = [...new Set(entries.map((e) => fold(e.term)[0]?.toUpperCase()).filter(Boolean))];
+const plain = (s) => String(s ?? '').replace(/\s*\(.*?\)\s*/g, ' ').trim().toLowerCase();
+const { source } = data;
+---
+<BaseLayout
+  title="Madeirense — PapaGaio"
+  desc={`The words of Madeira: ${entries.length} regional words from the ${source.year} "${source.title}", with modern spelling and meanings in English and Russian.`}>
+  <h1>Madeirense</h1>
+  <p class="muted">
+    The words of Madeira, from <em>{source.title}</em> by {source.author}
+    ({source.publisher}, {source.year}) — {entries.length} entries. The
+    definitions are the author's; the modern spelling, the English and Russian
+    meanings and the links to standard Portuguese are ours.
+  </p>
+  {data.draft && (
+    <p style="color:var(--warn); font-size:13.5px;">Preview: these meanings are not checked yet.</p>
+  )}
+
+  <div style="display:flex; gap:10px; margin:18px 0 10px;">
+    <input id="q" type="search" aria-label="Search Madeiran words"
+      placeholder="Search a word or a meaning — semilha, potato, картофель…"
+      style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
+             border-radius:10px; padding:10px 16px; font:inherit;" />
+  </div>
+  <nav id="az" style="display:flex; flex-wrap:wrap; gap:4px 10px; margin-bottom:14px; font-size:14px;">
+    {letters.map((l) => <a href={`#l-${l}`}>{l}</a>)}
+  </nav>
+  <p id="count" class="muted" style="font-size:13px;"></p>
+
+  <div id="hits"></div>
+  <div id="list">
+    {letters.map((l) => (
+      <section class="letter" data-l={l}>
+        <h2 id={`l-${l}`} style="font-size:18px; margin:20px 0 8px;">{l}</h2>
+        {entries.map((e, n) => [e, n]).filter(([e]) => fold(e.term)[0]?.toUpperCase() === l).map(([e, n]) => (
+          <article class="mw panel" data-n={n}
+            data-k={fold([e.term, e.term_1950, e.en, e.ru, e.definition_pt_modern].join(' '))}>
+            <div style="display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;">
+              <strong style="font-size:17px;">{e.term}</strong>
+              {POS[e.pos] && <span class="muted" style="font-size:12.5px;">{POS[e.pos]}</span>}
+              {plain(e.term_1950) !== e.term && (
+                <span class="muted" style="font-size:12.5px;">1950: {e.term_1950}</span>
+              )}
+            </div>
+            {e.confidence === 'low' && <div class="muted" style="font-size:12.5px;">Meaning not established</div>}
+            <div style="margin-top:3px;">{e.en}</div>
+            <div class="muted" style="font-size:13.5px;">{e.ru}</div>
+            <div style="font-size:13.5px; font-style:italic; margin-top:5px;">{e.definition_pt_modern}</div>
+            {e.form_note && <div class="muted" style="font-size:12.5px;">{e.form_note}</div>}
+            {e.standard?.lemma && e.standard.relation !== 'same_meaning' && (
+              <div class="muted" style="font-size:12.5px; margin-top:4px;">
+                In standard Portuguese:{' '}
+                <a href={`${base}/dictionary/?q=${encodeURIComponent(e.standard.lemma)}`}>{e.standard.lemma}</a>
+                {e.standard.standard_en && ` — ${e.standard.standard_en}`}
+              </div>
+            )}
+          </article>
+        ))}
+      </section>
+    ))}
+  </div>
+
+  <script>
+    const fold = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const q = document.getElementById('q');
+    const count = document.getElementById('count');
+    const rows = [...document.querySelectorAll('.mw')];
+    const sections = [...document.querySelectorAll('.letter')];
+    // While searching, the hits leave their letters and line up by how well
+    // they match: the headword itself, then words starting with it, then
+    // meanings that mention it. Clearing the box puts every row back.
+    const hits = document.getElementById('hits');
+    const home = new Map(rows.map((r) => [r, r.parentElement]));
+    const term = (r) => fold(r.querySelector('strong').textContent);
+    const show = () => {
+      const v = fold(q.value.trim());
+      if (!v) {
+        for (const r of rows) home.get(r).appendChild(r);
+        // Rows went back in arbitrary order; restore the book's.
+        for (const s of sections) [...s.querySelectorAll('.mw')].sort((a, b) => a.dataset.n - b.dataset.n).forEach((r) => s.appendChild(r));
+        sections.forEach((s) => (s.style.display = ''));
+        hits.innerHTML = '';
+        count.textContent = '';
+        return;
+      }
+      const rank = (r) => { const t = term(r); return t === v ? 0 : t.startsWith(v) ? 1 : r.dataset.k.includes(v) ? 2 : 3; };
+      const found = rows.map((r) => [rank(r), r]).filter(([k]) => k < 3).sort((a, b) => a[0] - b[0] || a[1].dataset.n - b[1].dataset.n);
+      sections.forEach((s) => (s.style.display = 'none'));
+      hits.replaceChildren(...found.map(([, r]) => r));
+      count.textContent = `Found: ${found.length}`;
+    };
+    q.addEventListener('input', show);
+    const pre = new URLSearchParams(location.search).get('q');
+    if (pre) { q.value = pre; show(); }
+  </script>
+
+  <style>
+    .mw { padding: 12px 16px; margin-bottom: 8px; }
+  </style>
+</BaseLayout>
