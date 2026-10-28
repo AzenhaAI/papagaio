@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Everywhere from '../components/Everywhere.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <BaseLayout title="Translate — PapaGaio"
   desc="A translator that guarantees European Portuguese: pt-PT output, misspellings corrected, Brazilian divergences flagged. Single words get a full dictionary article with real example sentences.">
-  <h1>Translate into European Portuguese</h1>
-  <p class="muted" style="max-width: 640px;">
+  <h1 data-t>Translate into European Portuguese</h1>
+  <p class="muted" style="max-width: 640px;" data-t>
     The Portuguese actually spoken in Portugal and Madeira. Big translators
     default to the Brazilian variant — PapaGaio always answers in pt-PT and
     marks every word where the two diverge. Single words also get a dictionary
@@ -13,20 +14,25 @@ import Everywhere from '../components/Everywhere.astro';
   </p>
 
   <div class="panel" style="margin-top: 22px;">
-    <!-- The pair switcher, the way Yandex or Lingvo draw it: from ⇄ to. -->
+    <!-- The pair switcher, the way Yandex or Lingvo draw it: from ⇄ to, with
+         PT, EN and RU on both sides whatever the interface speaks, exactly as
+         in the app (lib/pages/translate_page.dart). -->
     <div style="display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; align-items:center;">
-      <button id="fromchip" class="pairchip">🇬🇧 English</button>
-      <button id="swap" class="iconbtn" title="Swap languages" style="font-size:20px;">⇄</button>
-      <button id="tochip" class="pairchip">🇵🇹 Portuguese</button>
-      <label class="muted" style="font-size:13.5px; display:flex; align-items:center; gap:5px; margin-left:6px;">
-        <input type="checkbox" id="auto" checked style="accent-color:var(--accent);" /> auto-detect
-      </label>
+      <div class="pick">
+        <button id="fromchip" class="pairchip" aria-haspopup="true" aria-expanded="false">Auto</button>
+        <div class="pickmenu" id="frommenu" hidden></div>
+      </div>
+      <button id="swap" class="iconbtn" title="Swap" data-ta style="font-size:20px;">⇄</button>
+      <div class="pick">
+        <button id="tochip" class="pairchip" aria-haspopup="true" aria-expanded="false">🇬🇧 EN</button>
+        <div class="pickmenu" id="tomenu" hidden></div>
+      </div>
     </div>
     <div style="position:relative;">
-      <textarea id="src" aria-label="Text to translate" rows="5" maxlength="600" placeholder="Type a word or phrase…"
+      <textarea id="src" aria-label="Text to translate" rows="5" maxlength="600" placeholder="Type Portuguese, English or Russian…" data-tp
         style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
                border-radius:10px; padding:12px 38px 12px 14px; font:inherit; resize:vertical;"></textarea>
-      <button id="clear" class="iconbtn" title="Clear"
+      <button id="clear" class="iconbtn" title="Clear" data-ta
         style="display:none; position:absolute; top:8px; right:6px; color:var(--muted); font-size:17px;">✕</button>
     </div>
     <div class="muted" id="counter" style="font-size:12.5px; text-align:right; margin-top:4px;">0 / 600</div>
@@ -37,7 +43,7 @@ import Everywhere from '../components/Everywhere.astro';
       <button class="chip">Can I pay by card?</button>
     </div>
     <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
-      <button class="btn" id="go">Translate</button>
+      <button class="btn" id="go" data-t>Translate</button>
       <span id="spin" style="display:none; width:18px; height:18px; border:2.5px solid var(--panel2); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite;"></span>
       <span class="muted" id="status"></span>
       <span class="muted" id="dirhint" style="font-size:13.5px;"></span>
@@ -46,44 +52,70 @@ import Everywhere from '../components/Everywhere.astro';
     <div id="out" style="display:none; margin-top:18px;">
       <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
         <div id="tr" style="font-size:22px; font-weight:600;"></div>
-        <button class="iconbtn" id="speak" title="Listen">🔊</button>
-        <button class="iconbtn" id="copy" title="Copy">📋</button>
+        <button class="iconbtn" id="speak" title="Listen" data-ta>🔊</button>
+        <button class="iconbtn" id="copy" title="Copy" data-ta>📋</button>
       </div>
       <div id="fix" style="margin-top:8px;"></div>
       <div id="lit" class="muted" style="font-style:italic;"></div>
       <div id="diff" style="margin-top:12px;"></div>
       <div id="note" class="muted" style="margin-top:10px;"></div>
+      <div id="senses" style="margin-top:12px;"></div>
     </div>
+
+    <!-- A paragraph is the reader's job, as in the app: the link whispers
+         until the box holds one, then points. -->
+    <a id="readlink" href={`${base}/read/`} class="muted" style="display:inline-flex; align-items:center; gap:6px; margin-top:14px; font-size:13.5px;">
+      📄 <span id="readlabel" data-t>Longer text? Read it word by word instead</span> →
+    </a>
   </div>
 
   <!-- Single words fall through to the dictionary: even when the model is over
        its daily cap, "gato" still answers instantly from 110k lexicon rows. -->
   <div id="dictbox" class="panel" style="margin-top:14px; display:none;">
-    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">📖 In the dictionary</div>
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">📖 <span data-t>In the dictionary</span></div>
     <div id="dictlist"></div>
   </div>
 
   <div id="exbox" class="panel" style="margin-top:14px; display:none;">
-    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">💬 From real texts <span style="opacity:.7;">· Tatoeba · CC-BY</span></div>
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">💬 <span data-t>From real texts</span> <span style="opacity:.7;">· Tatoeba · CC-BY</span></div>
     <div id="exlist"></div>
   </div>
 
   <div id="histbox" class="panel" style="margin-top:14px; display:none;">
-    <div class="muted" style="font-size:13.5px; margin-bottom:8px;">Recent (stored only in your browser)</div>
+    <div class="muted" style="font-size:13.5px; margin-bottom:8px;" data-t>Recent (stored only in your browser)</div>
     <div id="histlist"></div>
   </div>
 
   <div class="muted" style="margin-top:16px; font-size:14px;">
-    Want it as a flashcard with audio?
-    Use the <a href="/papagaio/apps/">app</a> or <a href="https://t.me/papagaio_ebot">the bot</a> — one tap adds it to your deck.
+    <span data-t>Want it as a flashcard with audio?</span>
+    <span data-t>Use the</span> <a href="/papagaio/apps/" data-t>app</a> <span data-t>or</span> <a href="https://t.me/papagaio_ebot" data-t>the bot</a> <span data-t>— one tap adds it to your deck.</span>
   </div>
 
   <style is:global>
     .pairchip {
       background: var(--panel2); color: var(--text); border: 1px solid #2a4433;
       border-radius: 10px; padding: 7px 14px; font: inherit; font-size: 14.5px;
-      font-weight: 600; cursor: default;
+      font-weight: 600; cursor: pointer;
     }
+    .pairchip::after { content: ' ▾'; color: var(--muted); font-weight: 400; }
+    .pairchip.detected { color: var(--accent); }
+    .pick { position: relative; }
+    .pickmenu {
+      position: absolute; top: calc(100% + 4px); left: 0; z-index: 30; min-width: 170px;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 4px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .pickmenu button {
+      display: block; width: 100%; text-align: left; background: none; border: 0;
+      color: var(--text); font: inherit; font-size: 14.5px; padding: 8px 10px;
+      border-radius: 8px; cursor: pointer; white-space: nowrap;
+    }
+    .pickmenu button:hover { background: var(--panel2); }
+    .pickmenu button.on { color: var(--accent); font-weight: 600; }
+    #swap { color: var(--muted); }
+    #swap:disabled { opacity: .35; cursor: default; }
+    .sense { padding: 5px 0; border-bottom: 1px solid var(--panel2); font-size: 15px; }
+    .sense:last-child { border-bottom: 0; }
     .chip {
       background: none; border: 1px dashed #2a4433; color: var(--muted); border-radius: 20px;
       padding: 5px 12px; font: inherit; font-size: 13.5px; cursor: pointer;
@@ -100,41 +132,120 @@ import Everywhere from '../components/Everywhere.astro';
   </style>
 
   <script>
+    import { ui, t as T, langName } from '../lib/i18n.js';
+
     const $ = (id) => document.getElementById(id);
     const API = '';   // same origin: /api/* is routed to the worker
     const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
-    const LANGS = { en: '🇬🇧 English', pt: '🇵🇹 Portuguese' };
-    // Russian joins only when switched on in Settings, as in the app.
-    let RU = false;
-    try { RU = localStorage.getItem('pg_ru') === '1'; } catch (e) {}
-    if (RU) LANGS.ru = '🇷🇺 Russian';
-    const ORDER = Object.keys(LANGS);
-    const nextLang = (cur, skip) => {
-      const list = ORDER.filter((l) => l !== skip);
-      return list[(list.indexOf(cur) + 1) % list.length];
+    const UI_LANG = ui();
+    const LANGS = ['pt', 'en', 'ru'];
+    const FLAG = { pt: '🇵🇹', en: '🇬🇧', ru: '🇷🇺' };
+    const NAME = { pt: 'Portuguese', en: 'English', ru: 'Russian' };
+    const code = (l) => `${FLAG[l] ?? ''} ${String(l).toUpperCase()}`;
+    // Real sentences come with the reader's own language beside them.
+    const PAIR = UI_LANG === 'ru' ? 'pt-ru' : 'pt-en';
+
+    // The app's rule (Kirill, 21.10.2026): the input is taken as Portuguese and
+    // auto-detect checks it. Portuguese goes into the interface language
+    // (English when the interface is Portuguese); anything else goes into
+    // Portuguese. The page sends 'auto->pt' with ui and the server applies the
+    // rule. Portuguese into Portuguese happens only when someone picks PT on the
+    // right themselves: then the answer is the word's meaning in Portuguese,
+    // with synonyms and antonyms. A pick is remembered for the session.
+    const home = UI_LANG === 'pt' ? 'en' : UI_LANG;
+    const SKEY = 'pg_tr_pair';
+    let from = 'auto';
+    let toPicked = null;   // an explicit target, or null for the default rule
+    let landed = null;     // where the last default answer actually went
+    let detected = null;   // what Auto heard last time
+    try {
+      const saved = JSON.parse(sessionStorage.getItem(SKEY) || 'null');
+      if (saved && (saved.from === 'auto' || LANGS.includes(saved.from))) from = saved.from;
+      if (saved && LANGS.includes(saved.to)) toPicked = saved.to;
+    } catch (e) { /* storage blocked: the default pair */ }
+    const savePair = () => {
+      try { sessionStorage.setItem(SKEY, JSON.stringify({ from, to: toPicked })); } catch (e) {}
     };
-    let from = 'en', to = 'pt';
+
+    // The target chip's value: the pick, else where the last answer went, else
+    // the language Portuguese input will go to.
+    const toLang = () => {
+      if (toPicked && (toPicked !== from || toPicked === 'pt')) return toPicked;
+      if (from === 'pt') return home;
+      if (from !== 'auto') return 'pt';
+      return landed ?? home;
+    };
+    const explain = () => toPicked === 'pt' && (from === 'auto' || from === 'pt');
+    const direction = () => {
+      if (explain()) return 'auto->pt';
+      if (!toPicked || toPicked === from) {
+        if (from === 'auto') return 'auto->pt';
+        return from === 'pt' ? `pt->${home}` : `${from}->pt`;
+      }
+      return from === 'auto' ? `auto->${toPicked}` : `${from}->${toPicked}`;
+    };
+
     let last = null, lastReq = '', inflight = null, debounce = null;
 
     function drawPair() {
-      $('fromchip').textContent = LANGS[from];
-      $('tochip').textContent = LANGS[to];
-      $('dirhint').textContent = $('auto').checked
-        ? `Auto: I detect what you typed and translate it into ${LANGS[to]}. Portuguese output is always pt-PT.`
-        : `${LANGS[from]} in — ${LANGS[to]} out.`;
+      const fc = $('fromchip');
+      fc.textContent = from === 'auto'
+        ? (detected ? `${T('Auto')} · ${String(detected).toUpperCase()}` : T('Auto'))
+        : code(from);
+      // Auto without feedback is a guess you cannot check.
+      fc.classList.toggle('detected', from === 'auto' && !!detected);
+      $('tochip').textContent = code(toLang());
+      $('swap').disabled = from === 'auto';
+      $('dirhint').textContent = explain()
+        ? T('Portuguese in — its meaning in Portuguese, with synonyms and antonyms.')
+        : from === 'auto' && !toPicked
+          ? T('Auto: Portuguese goes into {lang}, anything else into Portuguese. Portuguese output is always pt-PT.').replace('{lang}', langName(home))
+          : from === 'auto'
+            ? T('Auto: I detect what you typed and translate it into {lang}.').replace('{lang}', langName(toPicked))
+            : `${T(NAME[from])} → ${T(NAME[toLang()])}`;
     }
-    $('swap').onclick = () => { [from, to] = [to, from]; $('auto').checked = false; drawPair(); run(true); };
-    // The target chip steps through the languages; the source chip leaves
-    // auto-detect and steps through the rest. With only English and
-    // Portuguese this is the old toggle; with Russian on it reaches all three.
-    $('tochip').onclick = () => { to = nextLang(to, $('auto').checked ? null : from); drawPair(); run(true); };
-    $('fromchip').onclick = () => {
-      if ($('auto').checked) $('auto').checked = false;
-      else from = nextLang(from, to);
-      if (from === to) from = nextLang(from, to);
-      drawPair(); run(true);
+
+    // The two pickers: a chip that opens a short list, like the app's menu.
+    function closeMenus() {
+      for (const id of ['frommenu', 'tomenu']) $(id).hidden = true;
+      for (const id of ['fromchip', 'tochip']) $(id).setAttribute('aria-expanded', 'false');
+    }
+    function openMenu(chip, menu, options, current, onPick) {
+      const wasOpen = !menu.hidden;
+      closeMenus();
+      if (wasOpen) return;
+      menu.innerHTML = options.map((o) =>
+        `<button type="button" data-l="${o}" class="${o === current ? 'on' : ''}">` +
+        (o === 'auto' ? esc(T('Auto')) : `${code(o)} · ${esc(T(NAME[o]))}`) + '</button>').join('');
+      menu.querySelectorAll('button').forEach((b) => {
+        b.onclick = (ev) => { ev.stopPropagation(); closeMenus(); onPick(b.dataset.l); savePair(); drawPair(); run(true); };
+      });
+      menu.hidden = false;
+      chip.setAttribute('aria-expanded', 'true');
+    }
+    $('fromchip').onclick = (ev) => {
+      ev.stopPropagation();
+      openMenu($('fromchip'), $('frommenu'), ['auto', ...LANGS], from, (v) => {
+        from = v;
+        detected = null;
+        if (from !== 'auto' && from !== 'pt' && toLang() === from) toPicked = LANGS.find((l) => l !== from);
+      });
     };
-    $('auto').onchange = drawPair;
+    $('tochip').onclick = (ev) => {
+      ev.stopPropagation();
+      // PT stays offered under PT: picking it asks for the meaning.
+      openMenu($('tochip'), $('tomenu'), LANGS.filter((l) => l !== from || l === 'pt'), toLang(),
+        (v) => { toPicked = v; });
+    };
+    document.addEventListener('click', closeMenus);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
+    $('swap').onclick = () => {
+      if (from === 'auto') return;
+      const f = from;
+      from = toLang();
+      toPicked = f;
+      savePair(); drawPair(); run(true);
+    };
     drawPair();
 
     const HKEY = 'pg_history';
@@ -175,7 +286,7 @@ import Everywhere from '../components/Everywhere.astro';
         const [pt, en, ex] = await Promise.all([
           fetch(`${API}/api/search?q=${encodeURIComponent(text)}&course=pt`).then((r) => r.json()),
           fetch(`${API}/api/search?q=${encodeURIComponent(text)}&course=en`).then((r) => r.json()),
-          fetch(`${API}/api/examples?q=${encodeURIComponent(text)}&pair=pt-en&limit=5`).then((r) => r.json()),
+          fetch(`${API}/api/examples?q=${encodeURIComponent(text)}&pair=${PAIR}&limit=5`).then((r) => r.json()),
         ]);
         const hits = [...(pt.words ?? []), ...(en.words ?? [])].slice(0, 6);
         $('dictbox').style.display = hits.length ? 'block' : 'none';
@@ -183,14 +294,14 @@ import Everywhere from '../components/Everywhere.astro';
           `<div class="dicthit"><a href="${BASE}/dictionary/?q=${encodeURIComponent(w.term)}" style="font-weight:600;">${esc(w.term)}</a>` +
           (w.gender ? `<span class="muted" style="font-size:13px;">${w.gender}.</span>` : '') +
           (w.pos ? `<span class="muted" style="font-size:13px;">${esc(w.pos)}</span>` : '') +
-          `<span>${esc(w.trans ?? w.trans_pt ?? '')}</span></div>`).join('');
+          `<span>${esc((UI_LANG === 'ru' && w.trans_ru) || (w.trans ?? w.trans_pt ?? ''))}</span></div>`).join('');
         const exs = ex.examples ?? [];
         $('exbox').style.display = exs.length ? 'block' : 'none';
         $('exlist').innerHTML = exs.map((e, i) =>
-          `<div class="exline">${esc(e.src)} <button class="iconbtn exspeak" data-t="${esc(e.src)}" style="font-size:15px;">🔊</button>` +
+          `<div class="exline">${esc(e.src)} <button class="iconbtn exspeak" data-say="${esc(e.src)}" style="font-size:15px;">🔊</button>` +
           (e.via ? `<span class="muted" style="font-size:11px;"> · via ${esc(e.via.toUpperCase())}</span>` : '') +
           `<div class="muted" style="font-size:14px;">${esc(e.dst)}</div></div>`).join('');
-        document.querySelectorAll('.exspeak').forEach((b) => { b.onclick = () => say(b.dataset.t, b); });
+        document.querySelectorAll('.exspeak').forEach((b) => { b.onclick = () => say(b.dataset.say, b); });
       } catch { /* the dictionary layer is best-effort */ }
     }
 
@@ -204,60 +315,92 @@ import Everywhere from '../components/Everywhere.astro';
         });
         if (!r.ok) throw new Error(r.status);
         pgPlayUrl(URL.createObjectURL(await r.blob()));
-      } catch { $('status').textContent = 'audio failed'; }
+      } catch { $('status').textContent = T('audio failed'); }
       btn.textContent = was;
+    }
+
+    // The Portuguese side of an answer, for 🔊: the input when it was
+    // Portuguese (a word asked about in Portuguese included), else the
+    // translation when that is. English into Russian has none, and the
+    // Portuguese voice reading Russian or English would teach nothing.
+    const ptSide = (r) => {
+      const [a, b] = String(r?.direction ?? '').split('->');
+      if (a === 'pt') return r.corrected_source || r.source;
+      if (b === 'pt') return r.translation;
+      return null;
+    };
+
+    // Each sense with the other ways to say it: what an explicit PT pick
+    // asks for, and what short words bring along anyway.
+    function sensesHtml(list) {
+      const ss = (list ?? []).filter((x) => x && x.gloss);
+      if (!ss.some((x) => (x.synonyms ?? []).length || (x.antonyms ?? []).length)) return '';
+      return `<div class="muted" style="font-size:13.5px; margin-bottom:4px;">${esc(T('Meanings'))}</div>` +
+        ss.map((x, i) => `<div class="sense"><span class="muted">${i + 1}.</span> ` +
+          (x.pos ? `<span class="muted" style="font-size:13px;">${esc(x.pos)}</span> ` : '') + esc(x.gloss) +
+          ((x.synonyms ?? []).length ? `<div style="font-size:14px;"><span class="muted">${esc(T('Synonyms'))}:</span> ${x.synonyms.map(esc).join(', ')}</div>` : '') +
+          ((x.antonyms ?? []).length ? `<div style="font-size:14px;"><span class="muted">${esc(T('Antonyms'))}:</span> ${x.antonyms.map(esc).join(', ')}</div>` : '') +
+          '</div>').join('');
     }
 
     async function run(force = false) {
       const text = $('src').value.trim();
       if (!text || text.length < 2) return;
       dictAndExamples(text);
-      // Auto describes the INPUT only — the target chip still decides where
-      // the text lands, the way Yandex does it.
-      const dir = $('auto').checked ? `auto->${to}` : `${from}->${to}`;
-      const sig = dir + '|' + text;
+      const dir = direction();
+      const ex = explain();
+      const sig = dir + (ex ? '|explain' : '') + '|' + text;
       if (!force && sig === lastReq) return;
       lastReq = sig;
       inflight?.abort();
       inflight = new AbortController();
       setBusy(true);
       try {
+        const body = { text, direction: dir, ui: UI_LANG };
+        if (ex) body.same = 'explain';
         const r = await fetch(`${API}/api/translate`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text, direction: dir }),
+          body: JSON.stringify(body),
           signal: inflight.signal,
         });
         const t = await r.json();
-        if (!r.ok) throw new Error(r.status === 429 ? 'Daily free limit reached — the dictionary below still works, or use the Telegram bot.' : (t.error ?? r.status));
+        if (!r.ok) throw new Error(r.status === 429 ? T('Daily free limit reached — the dictionary below still works, or use the Telegram bot.') : (t.error ?? r.status));
         last = t;
-        $('out').style.display = 'block';
-        const FLAG = { pt: '🇵🇹', en: '🇬🇧', ru: '🇷🇺' };
+        // The chips say what happened: which language Auto heard, and where
+        // the default answer actually landed.
+        detected = from === 'auto' ? (t.detected ?? null) : null;
         const outLang = String(t.direction ?? '').split('->')[1];
+        if (!toPicked && LANGS.includes(outLang)) landed = outLang;
+        drawPair();
+        $('out').style.display = 'block';
         $('tr').textContent = (FLAG[outLang] ?? '') + ' ' + t.translation;
-        // Say which language it heard, so a wrong guess is visible, not silent.
-        $('fromchip').textContent = $('auto').checked && t.detected
-          ? `${LANGS[t.detected] ?? t.detected} · auto` : LANGS[from];
+        $('speak').style.display = ptSide(t) ? '' : 'none';
         $('fix').innerHTML = (t.corrections ?? []).length
-          ? '<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ Your text had a slip</div>' +
+          ? `<div style="color:var(--accent2); font-weight:600; margin-bottom:4px;">✏️ ${esc(T('Your text had a slip'))}</div>` +
             t.corrections.map((c) =>
               `<div><code>${esc(c.wrong)}</code> → <code style="color:var(--accent)">${esc(c.right)}</code>` +
               (c.why ? ` <span class="muted">— ${esc(c.why)}</span>` : '') + '</div>').join('') +
-            (t.corrected_source ? `<div class="muted" style="font-size:14px;">Correct version: <em>${esc(t.corrected_source)}</em></div>` : '')
+            (t.corrected_source ? `<div class="muted" style="font-size:14px;">${esc(T('Correct version:'))} <em>${esc(t.corrected_source)}</em></div>` : '')
           : '';
-        $('lit').textContent = t.literal && t.literal !== t.translation ? 'literally: ' + t.literal : '';
+        $('lit').textContent = t.literal && t.literal !== t.translation ? T('literally:') + ' ' + t.literal : '';
         $('diff').innerHTML = (t.br_diff ?? []).length
-          ? '<div style="color:var(--red); font-weight:600; margin-bottom:6px;">🇵🇹 Portugal, not Brazil</div>' +
+          ? `<div style="color:var(--red); font-weight:600; margin-bottom:6px;">🇵🇹 ${esc(T('Portugal, not Brazil'))}</div>` +
             t.br_diff.map((d) =>
               `<div><code style="color:var(--accent)">${esc(d.pt)}</code>` +
-              ` <span class="muted">— in Brazil</span> <code>${esc(d.br)}</code>` +
+              ` <span class="muted">— ${esc(T('in Brazil'))}</span> <code>${esc(d.br)}</code>` +
               (d.gloss ? ` <span class="muted">(${esc(d.gloss)})</span>` : '') + '</div>'
             ).join('')
           : '';
         $('note').textContent = t.note || '';
+        $('senses').innerHTML = sensesHtml(t.senses);
         pushHist(text, t);
       } catch (e) {
-        if (e.name !== 'AbortError') $('status').textContent = 'error: ' + e.message;
+        if (e.name !== 'AbortError') {
+          $('status').textContent = navigator.onLine === false
+            ? T('No connection — the translator needs one. The dictionary below still works.')
+            : T('error:') + ' ' + e.message;
+        }
         setBusy(false);
         return;
       }
@@ -268,7 +411,15 @@ import Everywhere from '../components/Everywhere.astro';
       const v = $('src').value;
       $('counter').textContent = `${v.length} / 600`;
       $('clear').style.display = v ? 'block' : 'none';
+      const long = v.trim().length > 80;
+      $('readlabel').textContent = T(long ? 'Open this text in the reader — word by word' : 'Longer text? Read it word by word instead');
+      $('readlink').style.color = long ? 'var(--accent)' : '';
     }
+    // The reader picks the text up from the session (read.astro, pg_read_text).
+    $('readlink').addEventListener('click', () => {
+      const v = $('src').value.trim();
+      try { if (v) sessionStorage.setItem('pg_read_text', v); } catch (e) {}
+    });
     $('go').addEventListener('click', () => run(true));
     $('src').addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run(true);
@@ -290,8 +441,8 @@ import Everywhere from '../components/Everywhere.astro';
     });
 
     $('speak').addEventListener('click', () => {
-      if (!last) return;
-      say(last.direction.endsWith('->pt') ? last.translation : last.source, $('speak'));
+      const p = ptSide(last);
+      if (p) say(p, $('speak'));
     });
     $('copy').addEventListener('click', async () => {
       if (!last) return;

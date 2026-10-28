@@ -183,5 +183,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     $('src').addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) run();
     });
+
+    // The translator's "Read it word by word" hands its text over through the
+    // session: taken once, then forgotten, so a reload does not re-read it.
+    let handed = null;
+    try {
+      handed = sessionStorage.getItem('pg_read_text');
+      sessionStorage.removeItem('pg_read_text');
+    } catch (e) {}
+    if (handed) { $('src').value = handed.slice(0, 4000); run(); }
   </script>
 </BaseLayout>

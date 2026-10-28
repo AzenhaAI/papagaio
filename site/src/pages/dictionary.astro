@@ -2,18 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Dictionary — PapaGaio" desc="European Portuguese dictionary: 110,000+ entries with meanings in English and Russian, audio, examples and twelve-tense conjugations. Search without accents.">
-  <h1>Dictionary</h1>
-  <p class="muted">
+  <h1 data-t>Dictionary</h1>
+  <p class="muted" data-t>
     Search the teaching deck first, then the full dictionary behind it. The
     deck is what the app and the bot teach from: European Portuguese from A1
     (survival first, Madeira vocabulary included) and English from B1–B2.
     Every card has native-quality audio.
   </p>
   <p class="muted" style="font-size:13.5px;">
-    Search anything, not just what the deck teaches: <span id="lexcount">110,000+</span> further headwords sit
-    behind it, and words neither knows are looked up live. Lexicon from
+    <span data-t>Search anything, not just what the deck teaches:</span> <span id="lexcount">110,000+</span> <span data-t>further headwords sit
+    behind it, and words neither knows are looked up live.</span> <span data-t>Lexicon from</span>
     <a href="https://en.wiktionary.org/">English Wiktionary</a> (CC BY-SA 4.0),
-    ranked by an <a href="https://github.com/hermitdave/FrequencyWords">OpenSubtitles
+    <span data-t>ranked by an</span> <a href="https://github.com/hermitdave/FrequencyWords" data-t>OpenSubtitles
     frequency list</a> (CC BY-SA 4.0).
   </p>
   <!-- The Lingvo shelf: which dictionaries sit behind the search box, with
@@ -21,9 +21,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <div id="layers" style="display:none; gap:8px; flex-wrap:wrap; margin-top:2px;"></div>
 
   <div style="display:flex; gap:10px; margin: 18px 0; flex-wrap:wrap;">
-    <button class="btn" data-course="pt" id="btn-pt">🇵🇹 Portuguese</button>
-    <button class="btn" data-course="en" id="btn-en" style="background:var(--panel2); color:var(--text);">🇬🇧 English</button>
-    <input id="q" aria-label="Search the dictionary" type="search" placeholder="Search…"
+    <button class="btn" data-course="pt" id="btn-pt">🇵🇹 <span data-t>Portuguese</span></button>
+    <button class="btn" data-course="en" id="btn-en" style="background:var(--panel2); color:var(--text);">🇬🇧 <span data-t>English</span></button>
+    <input id="q" aria-label="Search the dictionary" type="search" placeholder="Search…" data-tp
       style="flex:1; min-width:180px; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:8px 14px; font:inherit;" />
   </div>
@@ -31,9 +31,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div id="histbox" style="display:none; margin-bottom:16px;">
     <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:8px;">
-      <strong style="font-size:14.5px;">Recently opened</strong>
+      <strong style="font-size:14.5px;" data-t>Recently opened</strong>
       <button id="histclear" class="muted"
-        style="background:none; border:0; font:inherit; font-size:13px; cursor:pointer; text-decoration:underline;">clear</button>
+        style="background:none; border:0; font:inherit; font-size:13px; cursor:pointer; text-decoration:underline;" data-t>clear</button>
     </div>
     <div id="histstrip" style="display:flex; gap:8px; overflow-x:auto; padding-bottom:6px;"></div>
   </div>
@@ -43,6 +43,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <script>
     import { tensePurpose, tenseMarkers, tenseNotes } from '../lib/tenses.js';
+    import { ui, t as T } from '../lib/i18n.js';
 
     const AUDIO = 'https://azenha.ai/papagaio/audio/';
     const API = '/api/deck';
@@ -61,9 +62,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     // Searching "cafe" must find "café": nobody reaches for the accent key, and
     // Portuguese puts one on a great many words.
-    // Russian meanings when switched on in Settings, English beside them.
-    let RU = false;
-    try { RU = localStorage.getItem('pg_ru') === '1'; } catch (e) {}
+    // Russian meanings when the interface is Russian (or the old Settings
+    // switch is on), English beside them.
+    let RU = ui() === 'ru';
+    try { RU = RU || localStorage.getItem('pg_ru') === '1'; } catch (e) {}
     const meaning = (en, ru) => (RU && ru) ? `${ru} <span class="muted" style="font-size:.88em;">· ${en}</span>` : en;
     const fold = (x) => String(x ?? '').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['\u2019`´]/g, '');
@@ -167,6 +169,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       imperfeito_conj: 'imperfect subjunctive', presente_conj: 'present subjunctive',
       futuro: 'future', futuro_conj: 'future subjunctive', condicional: 'conditional',
       imperativo: 'imperative', plural: 'plural', participio: 'past participle', gerundio: 'gerund',
+      spelling: 'closest spelling',
     };
     let suggestSeq = 0;
     let suggestTimer = 0;
@@ -198,12 +201,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         return;
       }
       const ff = d.from_form;
-      lexBox.innerHTML = (ff?.word ? `<p style="font-size:14.5px; margin:6px 0;">«${esc(ff.form ?? q)}» is ${ff.lead === false ? 'also ' : ''}a form of
+      // A Brazilian word: the one Portugal uses, pinned above the answer.
+      const inPt = d.in_portugal
+        ? `<button class="lexrow" data-term="${esc(d.in_portugal)}" style="border:1px solid var(--accent);">
+            <span>🇵🇹 <strong>${esc(T('In Portugal:'))} ${esc(d.in_portugal)}</strong></span>
+            <span class="muted">«${esc(q)}» · ${esc(T('Brazilian usage'))}</span></button>`
+        : '';
+      // One letter off: an offer, not a claim that it is a form of the word.
+      const spell = ff?.kind === 'spelling'
+        ? `<p style="font-size:14.5px; margin:6px 0;">${esc(T('Did you mean'))} <strong>${esc(ff.word)}</strong>?</p>`
+        : '';
+      lexBox.innerHTML = inPt + spell + (ff?.word && ff.kind !== 'spelling' ? `<p style="font-size:14.5px; margin:6px 0;">«${esc(ff.form ?? q)}» is ${ff.lead === false ? 'also ' : ''}a form of
           <strong>${esc(ff.word)}</strong>${FORM_NAMES[ff.tense ?? ff.kind] ? ` <span class="muted">— ${FORM_NAMES[ff.tense ?? ff.kind]}</span>` : ''}</p>` : '') +
         `<p class="muted" style="font-size:14px; margin-top:6px;">
           📖 In the dictionary:</p>` +
         d.words.map((w) => `
-          <button class="lexrow" data-t="${esc(w.term)}" data-id="${esc(w.id ?? '')}">
+          <button class="lexrow" data-term="${esc(w.term)}" data-id="${esc(w.id ?? '')}">
             <span><strong>${esc(w.term)}</strong>
               <span class="muted" style="font-size:13px;"> ${esc(w.pos ?? '')}${w.gender ? ' ' + esc(w.gender) : ''}</span>
             </span>
@@ -211,7 +224,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </button>`).join('');
       // The row you tapped is the row you get: by name, "para" opened the deck
       // phrase "para a semana" and "house" opened a casa.
-      lexBox.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.t, b.dataset.id); });
+      lexBox.querySelectorAll('.lexrow').forEach((b) => { b.onclick = () => lookup(b.dataset.term, b.dataset.id); });
       if (deckHasCards && lexBox.nextElementSibling === list) lexBox.insertAdjacentHTML('beforeend',
         '<p class="muted" style="font-size:14px; margin:14px 0 6px;">In the deck:</p>');
     }
@@ -266,17 +279,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div id="e-look"></div>
         </div>`;
       document.getElementById('e-look').innerHTML = renderEntry(e, c, 'look');
+      // The forms learners get wrong: cães, alemã, papéis, óculos.
+      if (d.forms) {
+        const fm = d.forms;
+        const parts = [fm.pl && `${T('Plural:')} ${fm.pl}`, fm.f && `${T('Feminine:')} ${fm.f}${fm.fpl ? ' · ' + fm.fpl : ''}`].filter(Boolean);
+        if (parts.length) document.getElementById('e-look').insertAdjacentHTML('afterbegin',
+          `<div class="muted" style="font-size:13.5px; margin:6px 0 2px;">${esc(parts.join(' · '))}${fm.note && ui() === 'en' ? ' — ' + esc(fm.note) : ''}</div>`);
+      }
       // The island's own senses of the word, from the 1950 dictionary.
       if (Array.isArray(d.madeira) && d.madeira.length) {
         document.getElementById('e-look').insertAdjacentHTML('beforeend',
-          `<div class="moodlabel" style="margin-top:14px;">🌴 On Madeira</div>` +
+          `<div class="moodlabel" style="margin-top:14px;">🌴 ${esc(T('On Madeira'))}</div>` +
           d.madeira.slice(0, 3).map((m) => `<div style="margin:4px 0 10px;">
-            <strong>${esc(m.t)}</strong>${m.lo ? ' <span class="muted" style="font-size:12px;">(meaning not established)</span>' : ''}
-            <div>${esc(m.e)}</div>
+            <strong>${esc(m.t)}</strong>${m.lo ? ` <span class="muted" style="font-size:12px;">(${esc(T('Meaning not established'))})</span>` : ''}
+            <div>${esc(ui() === 'ru' && m.ru ? m.ru : m.e)}</div>
             ${m.d ? `<div class="muted" style="font-size:13.5px; font-style:italic;">${esc(m.d)}</div>` : ''}
           </div>`).join('') +
           `<div class="muted" style="font-size:12px;">Vocabulário Popular da Madeira, 1950 —
-            <a href="${location.pathname.replace(/dictionary\/?$/, 'madeirense/')}?q=${encodeURIComponent(c.term)}">all Madeiran words</a></div>`);
+            <a href="${location.pathname.replace(/dictionary\/?$/, 'madeirense/')}?q=${encodeURIComponent(c.term)}">${esc(T('all Madeiran words'))}</a></div>`);
       }
       wireTabs('look');
       document.getElementById('saybtn').onclick = async () => {
@@ -337,7 +357,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const t = TL[k];
       return t ? `<div class="tl"><div class="tl-seg${t[2] ? ' unreal' : ''}"
         style="left:${t[0]}%; width:${t[1] - t[0]}%"></div>
-        <div class="tl-now"><span>now</span></div></div>` : '';
+        <div class="tl-now"><span>${esc(T('now'))}</span></div></div>` : '';
     };
 
     // Looking a word up is the signal worth keeping — not merely scrolling past it.
@@ -433,25 +453,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           const def = Math.min(1, groups.length - 1);
           let cj = `<div class="timerow" style="display:flex; gap:4px; margin-bottom:12px;">` +
             groups.map(([label], g) =>
-              `<button class="time ${g === def ? 'on' : ''}" data-i="${i}" data-g="${g}">${label}</button>`).join('') +
+              `<button class="time ${g === def ? 'on' : ''}" data-i="${i}" data-g="${g}">${esc(T(label))}</button>`).join('') +
             '</div>';
           groups.forEach(([, moods], g) => {
             cj += `<div class="timepane" data-i="${i}" data-g="${g}" style="display:${g === def ? 'block' : 'none'};">`;
             for (const [mood, tenses] of moods) {
-              cj += `<div class="moodlabel">${mood}</div>`;
+              cj += `<div class="moodlabel">${esc(T(mood))}</div>`;
               for (const [k, name, when] of tenses) {
                 cj += `<div style="border:1px solid var(--panel2); border-radius:12px; padding:12px 14px; margin-bottom:14px;">
                   ${timeline(k)}
                   <strong style="font-size:14.5px;">${name}</strong>
                   ${tensePurpose(k)}
-                  ${when ? `<div class="muted" style="font-size:13px;">${when}</div>` : ''}
+                  ${when ? `<div class="muted" style="font-size:13px;">${esc(T(when))}</div>` : ''}
                   ${tenseMarkers(k)}
                   ${tenseNotes(k, e.conjEx?.[k], { sound: false, conj: e.conj })}
                   <div style="background:var(--panel2); border-radius:10px; padding:10px 14px; margin-top:10px;
                        display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:2px 16px;">` +
-                  e.conj[k].map((f, n) => f
+                  // No form for this person (imperative "eu"): a muted dash.
+                  e.conj[k].map((f, n) => f && !/^[\s—–-]*$/.test(String(f))
                     ? `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> ${esc(f)}</div>`
-                    : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
+                    : `<div style="font-size:14.5px;"><span class="muted">${PERSONS[n]}</span> <span class="muted">—</span></div>`).join('') +
                   '</div></div>';
               }
             }
@@ -495,11 +516,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       all.forEach((c) => JSON.parse(c.tags ?? '[]').forEach((t) => { counts[t] = (counts[t] ?? 0) + 1; }));
       const box = document.getElementById('tags');
       box.innerHTML = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([t, n]) =>
-        `<button class="tagbtn" data-t="${t}" style="background:${tag === t ? 'var(--accent)' : 'var(--panel2)'};
+        `<button class="tagbtn" data-tag="${t}" style="background:${tag === t ? 'var(--accent)' : 'var(--panel2)'};
           color:${tag === t ? '#08130c' : 'var(--muted)'}; border:0; border-radius:16px; padding:4px 12px;
           font:inherit; font-size:13px; cursor:pointer;">${t} · ${n}</button>`).join('');
       box.querySelectorAll('.tagbtn').forEach((b) => {
-        b.onclick = () => { tag = tag === b.dataset.t ? null : b.dataset.t; renderTags(); render(); };
+        b.onclick = () => { tag = tag === b.dataset.tag ? null : b.dataset.tag; renderTags(); render(); };
       });
     }
 

@@ -1,6 +1,12 @@
 // Tense notes shared by the verbs page and the dictionary: what each tense
 // is for, the words that call for it, how English says it, the classic trap,
 // and the verb's own example from /api/conjugate.
+//
+// The Portuguese stays Portuguese whatever the interface; the English half of
+// each line goes through t(), and a Russian interface reads the example's
+// Russian translation instead of the English one.
+
+import { ui, t } from './i18n.js';
 
 // What each tense is *for*, the way teachers in Portugal head a worksheet
 // ("Imperfeito do Indicativo – hábitos e descrição no passado"). Same tables as
@@ -67,7 +73,7 @@ const trapLine = (k, e, conj) => {
   if (!TRAP[k] || !pps || !ppc) return '';
   const parts = String(e?.en_form ?? '').split('·');
   const en = k === 'pps' && parts.length > 1 ? parts.pop().trim() : 'I have …';
-  return TRAP[k].replace('{en}', en).replace('{pps}', pps).replace('{ppc}', ppc);
+  return t(TRAP[k]).replace('{en}', en).replace('{pps}', pps).replace('{ppc}', ppc);
 };
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
@@ -77,9 +83,9 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
 // line) its marker words.
 export const tensePurpose = (k) => PURPOSE[k]
   ? `<div style="font-size:13.5px;"><strong>${PURPOSE[k][0]}</strong>
-    <span class="muted"> — ${PURPOSE[k][1]}</span></div>` : '';
+    <span class="muted"> — ${esc(t(PURPOSE[k][1]))}</span></div>` : '';
 export const tenseMarkers = (k) => MARKERS[k]
-  ? `<div class="muted" style="font-size:12.5px;">Markers:
+  ? `<div class="muted" style="font-size:12.5px;">${esc(t('Markers:'))}
     <em style="color:var(--text);">${MARKERS[k]}</em></div>` : '';
 
 // Under the table: the English pattern, the trap, and this verb's own
@@ -87,14 +93,15 @@ export const tenseMarkers = (k) => MARKERS[k]
 export const tenseNotes = (k, e, { sound = true, conj } = {}) => {
   const en = e?.en_form || ENGLISH[k];
   let h = '';
-  if (en) h += `<div class="muted" style="font-size:12.5px; margin-top:6px;">In English:
+  if (en) h += `<div class="muted" style="font-size:12.5px; margin-top:6px;">${esc(t('In English:'))}
     <span style="color:var(--text);">${esc(en)}</span></div>`;
   const trap = trapLine(k, e, conj);
   if (trap) h += `<div style="font-size:12.5px; color:var(--warn); margin-top:2px;">${esc(trap)}</div>`;
+  const tr = (ui() === 'ru' && e?.ru) || e?.en;
   if (e?.pt) h += `<div style="margin-top:6px; display:flex; gap:6px; align-items:flex-start;">
     <div><div style="font-size:14.5px; font-style:italic;">${esc(e.pt)}</div>
-    ${e.en ? `<div class="muted" style="font-size:12.5px;">${esc(e.en)}</div>` : ''}</div>
-    ${sound ? `<button class="say" data-t="${esc(e.pt)}"
+    ${tr ? `<div class="muted" style="font-size:12.5px;">${esc(tr)}</div>` : ''}</div>
+    ${sound ? `<button class="say" data-say="${esc(e.pt)}"
       style="background:none; border:0; cursor:pointer; font-size:13px; opacity:.6;">🔊</button>` : ''}</div>`;
   return h;
 };

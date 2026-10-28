@@ -4,30 +4,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Verbs — PapaGaio"
   desc="Conjugate any European Portuguese verb: present, preterite, imperfect, future, conditional, all three subjunctives and the imperative — with the pt-PT forms Brazilian tables get wrong.">
-  <h1>Verbs</h1>
+  <h1 data-t>Verbs</h1>
   <p class="muted">
-    Every form generated from the rules, with an explicit table where the rules
+    <span data-t>Every form generated from the rules, with an explicit table where the rules
     break. European Portuguese throughout — including the ones Brazilian
-    conjugators quietly drop, like the future subjunctive you need after
-    <em>quando</em> and <em>se</em>.
+    conjugators quietly drop, like the future subjunctive you need after</span>
+    <em>quando</em> <span data-t>and</span> <em>se</em>.
   </p>
 
   <div style="display:flex; gap:10px; margin:18px 0;">
-    <input id="q" aria-label="Verb to conjugate" type="search" placeholder="Type any verb — falar, pôr, abrandar…"
+    <input id="q" aria-label="Verb to conjugate" type="search" placeholder="Type any verb — falar, pôr, abrandar…" data-tp
       style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:10px 16px; font:inherit;" />
   </div>
 
   <div id="out"></div>
+  <div id="forms"></div>
   <div id="index"></div>
 
   <script>
     import { tensePurpose, tenseMarkers, tenseNotes } from '../lib/tenses.js';
+    import { ui, t } from '../lib/i18n.js';
 
     const API = '/api/conjugate';
     const TTS = '/api/tts';
     const out = document.getElementById('out');
     const index = document.getElementById('index');
+    const formsBox = document.getElementById('forms');
+    const RU = ui() === 'ru';
+    // The verb list's meaning in the reader's language: Russian when the
+    // interface is Russian and the verb has one, English otherwise.
+    const gloss = (v) => (RU && v.gloss_ru) || v.gloss || '';
     let verbs = [];
 
     const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
@@ -54,11 +61,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     };
 
     const timeline = (k) => {
-      const t = TL[k];
-      if (!t) return '';
+      const tl = TL[k];
+      if (!tl) return '';
       return `<div class="tl">
-        <div class="tl-seg${t[2] ? ' unreal' : ''}" style="left:${t[0]}%; width:${t[1] - t[0]}%"></div>
-        <div class="tl-now"><span>now</span></div>
+        <div class="tl-seg${tl[2] ? ' unreal' : ''}" style="left:${tl[0]}%; width:${tl[1] - tl[0]}%"></div>
+        <div class="tl-now"><span>${esc(t('now'))}</span></div>
       </div>`;
     };
 
@@ -100,21 +107,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       ]],
     ];
 
-    async function show(v) {
-      out.innerHTML = '<p class="muted">conjugating…</p>';
+    // A person the tense has no form for (imperative "eu"): a muted dash and
+    // nothing to listen to.
+    const hasForm = (f) => !!f && !/^[\s—–-]*$/.test(String(f));
+
+    // `note` is the line that says how a typed form led here ("era" → ser).
+    async function show(v, note = '') {
+      out.innerHTML = `<p class="muted">${esc(t('conjugating…'))}</p>`;
       const d = await (await fetch(`${API}?v=${encodeURIComponent(v)}`)).json().catch(() => null);
       if (!d || d.error) {
-        out.innerHTML = `<p class="muted">«${esc(v)}» is not a verb we can conjugate.
-          Infinitives end in -ar, -er, -ir (and pôr).</p>`;
+        out.innerHTML = `<p class="muted">«${esc(v)}» ${esc(t('is not a verb we can conjugate.'))}
+          ${esc(t('Infinitives end in -ar, -er, -ir (and pôr).'))}</p>`;
         return;
       }
       const c = d.conj;
       const ex = d.examples ?? {};
+      const dg = gloss(d);
       let html = `<div class="panel" style="padding:18px;">
+        ${note ? `<div class="muted" style="font-size:13.5px; margin-bottom:6px;">${esc(note)}</div>` : ''}
         <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
           <strong style="font-size:22px;">${esc(d.verb)}</strong>
-          ${d.gloss ? `<span class="muted">${esc(d.gloss)}</span>` : ''}
-          <button class="say" data-t="${esc(d.verb)}"
+          ${dg ? `<span class="muted">${esc(dg)}</span>` : ''}
+          <button class="say" data-say="${esc(d.verb)}"
             style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>
         </div>
         <div class="muted" style="font-size:13.5px; margin-top:4px;">
@@ -122,7 +136,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="grow" style="display:flex; gap:6px; margin:16px 0 12px; flex-wrap:wrap;">` +
         GROUPS.map(([name], g) =>
-          `<button class="mood ${g === 1 ? 'on' : ''}" data-g="${g}">${name}</button>`).join('') +
+          `<button class="mood ${g === 1 ? 'on' : ''}" data-g="${g}">${esc(t(name))}</button>`).join('') +
         '</div>';
 
       GROUPS.forEach(([, moods], g) => {
@@ -130,7 +144,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         for (const [mood, tenses] of moods) {
           // A mood heading with nothing under it is noise: prune both levels.
           if (!tenses.some(([k]) => c[k]?.length)) continue;
-          html += `<div class="moodlabel">${mood}</div>`;
+          html += `<div class="moodlabel">${esc(t(mood))}</div>`;
         for (const [k, name, when] of tenses) {
           if (!c[k]?.length) continue;
           // One framed block per tense: timeline and name, the notes, then the forms.
@@ -138,19 +152,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             ${timeline(k)}
             <strong style="font-size:14.5px;">${name}</strong>
             ${tensePurpose(k)}
-            <div class="muted" style="font-size:13px;">${when}</div>
+            <div class="muted" style="font-size:13px;">${esc(t(when))}</div>
             ${tenseMarkers(k)}
             ${tenseNotes(k, ex[k], { conj: c })}
             <div style="background:var(--panel2); border-radius:10px; padding:10px 14px; margin-top:10px;
                  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:3px 16px;">` +
-            c[k].map((f, n) => f
+            c[k].map((f, n) => hasForm(f)
               ? `<div style="font-size:14.5px; display:flex; align-items:center; gap:6px;">
                    <span class="muted" style="min-width:60px;">${PERSONS[n]}</span>
                    <span>${esc(f)}</span>
-                   <button class="say" data-t="${esc(f)}"
+                   <button class="say" data-say="${esc(f)}"
                      style="background:none; border:0; cursor:pointer; font-size:13px; opacity:.6;">🔊</button>
                  </div>`
-              : `<div style="font-size:14.5px;" class="muted">${PERSONS[n]} —</div>`).join('') +
+              : `<div style="font-size:14.5px; display:flex; align-items:center; gap:6px; min-height:40px;">
+                   <span class="muted" style="min-width:60px;">${PERSONS[n]}</span>
+                   <span class="muted">—</span>
+                 </div>`).join('') +
             '</div></div>';
         }
         }
@@ -171,7 +188,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           const r = await fetch(TTS, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({ text: b.dataset.t, course: 'pt' }),
+            body: JSON.stringify({ text: b.dataset.say, course: 'pt' }),
           });
           if (r.ok) pgPlayUrl(URL.createObjectURL(await r.blob()));
         };
@@ -187,9 +204,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       // Infinitive matches first, and gloss matches only on word starts —
       // "ter" must find ter, not every English word ending in -ter.
       const wordRe = q && new RegExp('\\b' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      // Russian glosses are searched too: «ждать» finds esperar and aguardar.
+      // \b is ASCII-only, so Cyrillic is matched at a word start by hand
+      // (both sides folded, so «е» finds «ё» and «и» finds «й»).
+      const ruRe = q && new RegExp('(^|[^а-яё])' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      const byGloss = (v) => wordRe.test(fold(v.gloss)) || ruRe.test(fold(v.gloss_ru));
       const shown = q
         ? [...verbs.filter((v) => fold(v.inf).startsWith(q)),
-           ...verbs.filter((v) => !fold(v.inf).startsWith(q) && wordRe.test(fold(v.gloss)))]
+           ...verbs.filter((v) => !fold(v.inf).startsWith(q) && byGloss(v))]
         : verbs;
 
       const ess = q ? [] : ESSENTIALS
@@ -197,14 +219,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const byLetter = {};
       for (const v of shown) (byLetter[fold(v.inf)[0].toUpperCase()] ??= []).push(v);
 
-      index.innerHTML = (ess.length ? `<h2>The essentials</h2>
+      index.innerHTML = (ess.length ? `<h2>${esc(t('The essentials'))}</h2>
         <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:2px 18px; margin-bottom:8px;">` +
         ess.map((v) => `<button class="vrow" data-v="${esc(v.inf)}">
             <span><strong>${esc(v.inf)}</strong></span>
-            <span class="muted">${esc(v.gloss)}</span>
+            <span class="muted">${esc(gloss(v))}</span>
           </button>`).join('') + '</div>' : '') +
-        `<h2>All verbs <span class="muted" style="font-weight:400; font-size:15px;">
-          · ${shown.length}</span></h2>` +
+        (q && !shown.length ? '' : `<h2>${esc(q && formsBox.innerHTML ? t('Found in meanings:') : t('All verbs'))} <span class="muted" style="font-weight:400; font-size:15px;">
+          · ${shown.length}</span></h2>`) +
         Object.keys(byLetter).sort().map((L) => `
           <div style="margin-bottom:18px;">
             <div class="muted" style="font-size:13px; letter-spacing:.08em; margin-bottom:6px;">${L}</div>
@@ -212,11 +234,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             byLetter[L].map((v) =>
               `<button class="vrow" data-v="${esc(v.inf)}">
                  <span>${esc(v.inf)}</span>
-                 <span class="muted">${esc(v.gloss)}</span>
+                 <span class="muted">${esc(gloss(v))}</span>
                </button>`).join('') +
           '</div></div>').join('');
 
+      if (q && !shown.length && !formsBox.innerHTML) index.innerHTML = `<p class="muted">${esc(t('No verb matches.'))}</p>`;
       index.querySelectorAll('.vrow').forEach((b) => { b.onclick = () => show(b.dataset.v); });
+    }
+
+    // A conjugated form finds its verb: "era" is not an infinitive, but it is
+    // absolutely a verb. /api/conjugate?form= answers with every verb, tense
+    // and person it can be; the infinitive leads, as in the app.
+    const SHORT = {
+      presente: 'present', pps: 'past', imperfeito: 'imperfect past',
+      mais_que_perfeito: 'past perfect', ppc: 'present perfect', futuro: 'future',
+      futuro_prox: 'future', condicional: 'conditional', presente_conj: 'subjunctive',
+      imperfeito_conj: 'past subjunctive', futuro_conj: 'future subjunctive',
+      imperativo: 'imperative', participio: 'participle', gerundio: 'gerund',
+    };
+    // «era» is a form of ser — imperfect past (eu, ele/ela)
+    const formLine = (form, hits) => {
+      const tenses = [...new Set(hits.map((h) => h.tense))];
+      const persons = [...new Set(hits.filter((h) => h.person >= 0).map((h) => PERSONS[h.person]))];
+      return `«${form}» ${t('is a form of')} ${hits[0].verb} — ` +
+        tenses.map((k) => t(SHORT[k] ?? k)).join(', ') + (persons.length ? ` (${persons.join(', ')})` : '');
+    };
+    const byVerb = (matches) => {
+      const m = new Map();
+      for (const h of matches ?? []) { if (!m.has(h.verb)) m.set(h.verb, []); m.get(h.verb).push(h); }
+      return m;
+    };
+    let formSeq = 0;
+    async function lookupForm(form) {
+      try {
+        const d = await (await fetch(`${API}?form=${encodeURIComponent(form)}`)).json();
+        return byVerb(d.matches);
+      } catch { return new Map(); }
+    }
+    const isInfinitive = (s) => verbs.some((v) => fold(v.inf) === fold(s));
+    async function findForms(raw) {
+      const mine = ++formSeq;
+      const q = fold(raw);
+      formsBox.innerHTML = '';
+      if (q.length < 2 || verbs.some((v) => fold(v.inf).startsWith(q))) return;
+      const found = await lookupForm(raw);
+      if (mine !== formSeq) return;
+      if (!found.size) { renderIndex(raw); return; }
+      formsBox.innerHTML = `<p class="muted" style="font-size:13.5px; margin:4px 0 6px;">${esc(t('A form, not an infinitive — it belongs to:'))}</p>` +
+        [...found].map(([verb, hits]) => {
+          const v = verbs.find((x) => x.inf === verb);
+          return `<button class="vrow formrow" data-v="${esc(verb)}" data-note="${esc(formLine(raw, hits))}">
+            <span><strong>${esc(verb)}</strong>
+              <span class="muted" style="display:block; text-align:left; font-size:13px;">${esc(formLine(raw, hits))}</span></span>
+            <span class="muted">${esc(v ? gloss(v) : hits[0].gloss)}</span>
+          </button>`;
+        }).join('');
+      formsBox.querySelectorAll('.formrow').forEach((b) => { b.onclick = () => show(b.dataset.v, b.dataset.note); });
+      renderIndex(raw);
     }
 
     (async () => {
@@ -226,10 +300,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     })();
 
     const q = document.getElementById('q');
-    q.addEventListener('input', () => renderIndex(q.value.trim()));
+    let formTimer = null;
+    q.addEventListener('input', () => {
+      const v = q.value.trim();
+      formsBox.innerHTML = '';
+      renderIndex(v);
+      clearTimeout(formTimer);
+      formTimer = setTimeout(() => findForms(v), 300);
+    });
     // Enter conjugates whatever was typed, even a verb outside the list — the
-    // rules do not care whether we thought to include it.
-    q.addEventListener('keydown', (e) => { if (e.key === 'Enter' && q.value.trim()) show(q.value.trim()); });
+    // rules do not care whether we thought to include it. A typed form that is
+    // not an infinitive opens the verb it belongs to, saying so.
+    q.addEventListener('keydown', async (e) => {
+      const v = q.value.trim();
+      if (e.key !== 'Enter' || !v) return;
+      if (!isInfinitive(v)) {
+        const found = await lookupForm(v);
+        const first = [...found][0];
+        if (first && fold(first[0]) !== fold(v)) { show(first[0], formLine(v, first[1])); return; }
+      }
+      show(v);
+    });
   </script>
   <style is:global>
     .mood {

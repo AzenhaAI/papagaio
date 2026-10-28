@@ -17,20 +17,20 @@ const { source } = data;
 <BaseLayout
   title="Madeirense — PapaGaio"
   desc={`The words of Madeira: ${entries.length} regional words from the ${source.year} "${source.title}", with modern spelling and meanings in English and Russian.`}>
-  <h1>Madeirense</h1>
+  <h1 data-t>Madeirense</h1>
   <p class="muted">
-    The words of Madeira, from <em>{source.title}</em> by {source.author}
-    ({source.publisher}, {source.year}) — {entries.length} entries. The
-    definitions are the author's; the modern spelling, the English and Russian
-    meanings and the links to standard Portuguese are ours.
+    <span data-t>The words of Madeira, from</span> <em>{source.title}</em> <span data-t>by</span> {source.author}
+    ({source.publisher}, {source.year}) <span data-t="— {n} entries." data-tn={entries.length}>— {entries.length} entries.</span>
+    <span data-t>The definitions are the author's; the modern spelling, the English and Russian
+    meanings and the links to standard Portuguese are ours.</span>
   </p>
   {data.draft && (
-    <p style="color:var(--warn); font-size:13.5px;">Preview: these meanings are not checked yet.</p>
+    <p style="color:var(--warn); font-size:13.5px;" data-t>Preview: these meanings are not checked yet.</p>
   )}
 
   <div style="display:flex; gap:10px; margin:18px 0 10px;">
     <input id="q" type="search" aria-label="Search Madeiran words"
-      placeholder="Search a word or a meaning — semilha, potato, картофель…"
+      placeholder="Search a word or a meaning — semilha, potato, картофель…" data-tp
       style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:10px 16px; font:inherit;" />
   </div>
@@ -54,14 +54,14 @@ const { source } = data;
                 <span class="muted" style="font-size:12.5px;">1950: {e.term_1950}</span>
               )}
             </div>
-            {e.confidence === 'low' && <div class="muted" style="font-size:12.5px;">Meaning not established</div>}
+            {e.confidence === 'low' && <div class="muted" style="font-size:12.5px;" data-t>Meaning not established</div>}
             <div style="margin-top:3px;">{e.en}</div>
             <div class="muted" style="font-size:13.5px;">{e.ru}</div>
             <div style="font-size:13.5px; font-style:italic; margin-top:5px;">{e.definition_pt_modern}</div>
             {e.form_note && <div class="muted" style="font-size:12.5px;">{e.form_note}</div>}
             {e.standard?.lemma && e.standard.relation !== 'same_meaning' && (
               <div class="muted" style="font-size:12.5px; margin-top:4px;">
-                In standard Portuguese:{' '}
+                <span data-t>In standard Portuguese:</span>{' '}
                 <a href={`${base}/dictionary/?q=${encodeURIComponent(e.standard.lemma)}`}>{e.standard.lemma}</a>
                 {e.standard.standard_en && ` — ${e.standard.standard_en}`}
               </div>
@@ -73,6 +73,7 @@ const { source } = data;
   </div>
 
   <script>
+    import { t } from '../lib/i18n.js';
     const fold = (s) => String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     const q = document.getElementById('q');
     const count = document.getElementById('count');
@@ -99,7 +100,7 @@ const { source } = data;
       const found = rows.map((r) => [rank(r), r]).filter(([k]) => k < 3).sort((a, b) => a[0] - b[0] || a[1].dataset.n - b[1].dataset.n);
       sections.forEach((s) => (s.style.display = 'none'));
       hits.replaceChildren(...found.map(([, r]) => r));
-      count.textContent = `Found: ${found.length}`;
+      count.textContent = `${t('Found:')} ${found.length}`;
     };
     q.addEventListener('input', show);
     const pre = new URLSearchParams(location.search).get('q');

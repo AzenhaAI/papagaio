@@ -17,6 +17,7 @@ import { VERB_EXAMPLES } from './verb_examples.js';
 import { MADEIRA } from './madeira.js';
 import { LEVELS as WORD_LEVELS } from './levels.js';
 import { FORMS } from './forms.js';
+import { BR_TO_PT } from './br_pt.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
 // a into b — the app's offline rule (offline_dict.dart _oneEditApart).
@@ -64,6 +65,8 @@ const json = (data, status = 200) =>
     status,
     headers: { 'content-type': 'application/json; charset=utf-8', ...CORS },
   });
+// The same, under a name a handler can wrap without shadowing it.
+const jsonResp = (data, status) => json(data, status);
 
 // Public translate endpoint powers the website, so it needs a cheap abuse guard.
 // Live-translate fires on typing pauses, so the cap is per-request, not per-phrase.
@@ -569,6 +572,10 @@ export async function handleApi(request, env, path) {
     const course = sp.get('course') === 'en' ? 'en' : 'pt';
     const raw = (sp.get('q') ?? '').trim().toLowerCase();
     const s = fold(raw);
+    // A Brazilian word gets the Portuguese one pinned above the answer, as in
+    // the app ("ônibus" → autocarro).
+    const inPt = course === 'pt' ? BR_TO_PT[s] : undefined;
+    const json = (body, status) => jsonResp(inPt && body && typeof body === 'object' ? { ...body, in_portugal: inPt } : body, status);
     // Two letters is not a lookup, it is a keystroke on the way to one — and
     // for anything the fast path cannot answer it costs a full scan of the
     // lexicon. Three is where a query starts meaning something.

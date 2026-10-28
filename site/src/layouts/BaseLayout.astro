@@ -38,6 +38,48 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         };
       }
     })();
+    // The interface language, EN · PT · RU: the pill in the header writes
+    // pg_ui; without one the browser's language decides. src/lib/i18n.js has
+    // the same rule for the page scripts — keep the two in step. Every request
+    // to the worker that writes words for a reader (translations, the coach,
+    // photo reading, dictionary articles) carries it, so a Russian reader gets
+    // Russian glosses without each page having to remember to ask.
+    (function () {
+      function pgUi() {
+        try {
+          var v = localStorage.getItem('pg_ui');
+          if (v === 'en' || v === 'pt' || v === 'ru') return v;
+        } catch (e) {}
+        var n = String(navigator.language || '').toLowerCase();
+        return n.indexOf('ru') === 0 ? 'ru' : n.indexOf('pt') === 0 ? 'pt' : 'en';
+      }
+      window.pgUi = pgUi;
+      try { document.documentElement.lang = pgUi() === 'pt' ? 'pt-PT' : pgUi(); } catch (e) {}
+      if (!window.fetch) return;
+      var real = window.fetch;
+      var BODY = /^\/api\/(translate|vision|coach)(\/|$)/;
+      var QUERY = /^\/api\/(lookup$|entry\/)/;
+      window.fetch = function (input, init) {
+        try {
+          var isReq = typeof Request !== 'undefined' && input instanceof Request;
+          var u = new URL(typeof input === 'string' ? input : isReq ? input.url : String(input), location.href);
+          if (u.origin === location.origin) {
+            var method = String((init && init.method) || (isReq && input.method) || 'GET').toUpperCase();
+            if (BODY.test(u.pathname) && init && typeof init.body === 'string') {
+              var d = JSON.parse(init.body);
+              if (d && typeof d === 'object' && !Array.isArray(d) && !('ui' in d)) {
+                d.ui = pgUi();
+                init = Object.assign({}, init, { body: JSON.stringify(d) });
+              }
+            } else if (QUERY.test(u.pathname) && method === 'GET' && !u.searchParams.has('ui')) {
+              u.searchParams.set('ui', pgUi());
+              input = isReq ? new Request(u.href, input) : u.href;
+            }
+          }
+        } catch (e) { /* not JSON, or an odd input: send it as it was */ }
+        return real.call(window, input, init);
+      };
+    })();
     // When the server's voice fails, the device speaks instead. The server
     // uses Microsoft Edge's online voices, and on 10 Oct 2026 Microsoft
     // started refusing every third-party client (edge-tts included) with 403.
@@ -319,6 +361,44 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       border: 1px solid var(--border); border-radius: 999px;
       padding: 6px 12px; font-size: 13px; line-height: 1; white-space: nowrap; }
     .getapp-pill:hover { border-color: var(--accent); }
+    .langpill {
+      display: inline-flex; flex: 0 0 auto; padding: 3px; gap: 0;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 999px;
+    }
+    .langpill button {
+      min-width: 40px; min-height: 34px; padding: 0 8px;
+      background: none; border: 0; border-radius: 999px; cursor: pointer;
+      color: var(--muted); font: inherit; font-size: 13px; font-weight: 600; line-height: 1;
+    }
+    .langpill button:hover { color: var(--text); }
+    .langpill button.on { background: var(--accent); color: #08130c; cursor: default; }
+    /* A phone has room for the logo, the pill and the burger: "Get the app"
+       shrinks to its icon, and on the narrowest screens it lives only in the
+       menu (Apps), where it always was too. */
+    /* Desktop: seven links, the get-the-app pill, the language pill and the
+       burger did not fit the 880 px column even in English. The header gets
+       a little more width than the text column, and if the row still does
+       not fit (Russian labels are longer) the links scroll sideways as they
+       do on a tablet instead of pushing the burger off the screen. (:root because
+       this block lands before the base header rules in the built CSS.) Outside
+       English the get-the-app pill is its icon; the burger lists Apps too. */
+    @media (min-width: 861px) {
+      :root header.site { max-width: calc(var(--max) + 200px); }
+      :root header.site nav {
+        flex: 0 1 auto; min-width: 0; padding: 4px 0;
+        overflow-x: auto; scrollbar-width: none;
+      }
+      :root header.site nav::-webkit-scrollbar { display: none; }
+      :root:not([lang="en"]) header.site .getapp-pill .gl { display: none; }
+    }
+    @media (max-width: 760px) {
+      :root header.site .getapp-pill .gl { display: none; }
+      :root header.site #burger { padding: 4px 6px !important; }
+    }
+    @media (max-width: 400px) {
+      :root header.site { padding-left: 14px; padding-right: 14px; gap: 6px !important; }
+      :root header.site .getapp-pill { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -326,7 +406,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
        leaving panels that look broken. -->
   <div id="pg-offline" hidden style="position:sticky; top:3px; z-index:65; background:var(--warn); color:#1a1205;
        font-size:13.5px; font-weight:600; text-align:center; padding:6px 12px;">
-    No connection — pages and words you opened before still work.
+    <span data-t>No connection — pages and words you opened before still work.</span>
   </div>
   <script is:inline>
     (function () {
@@ -344,16 +424,22 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
            links stretched the header across the window and read as a list;
            what does not belong here lives in the burger and as chips on the
            cards page, exactly as in the app. -->
-      <a class={active('coach')} href={`${base}/coach/`}>AI Coach</a>
-      <a class={active('practice')} href={`${base}/practice/`}>Cards</a>
-      <a class={active('translate')} href={`${base}/translate/`}>Translate</a>
-      <a class={active('dictionary')} href={`${base}/dictionary/`}>Dictionary</a>
-      <a class={active('verbs')} href={`${base}/verbs/`}>Verbs</a>
-      <a class={active('progress')} href={`${base}/progress/`}>Progress</a>
-      <a class={active('settings')} href={`${base}/settings/`}>Settings</a>
-      <a class="getapp-pill" href={`${base}/apps/`}>📱 Get the app</a>
+      <a class={active('coach')} href={`${base}/coach/`} data-t>AI Coach</a>
+      <a class={active('practice')} href={`${base}/practice/`} data-t>Cards</a>
+      <a class={active('translate')} href={`${base}/translate/`} data-t>Translate</a>
+      <a class={active('dictionary')} href={`${base}/dictionary/`} data-t>Dictionary</a>
+      <a class={active('verbs')} href={`${base}/verbs/`} data-t>Verbs</a>
+      <a class={active('progress')} href={`${base}/progress/`} data-t>Progress</a>
+      <a class={active('settings')} href={`${base}/settings/`} data-t>Settings</a>
+      <a class="getapp-pill" href={`${base}/apps/`}>📱 <span class="gl" data-t>Get the app</span></a>
     </nav>
-    <button id="burger" aria-label="Menu" style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
+    <!-- The interface language, the app's own pill (lib/theme.dart _LangChips):
+         one pill, segments at least 40×34, the active one filled. It sits
+         after the nav on desktop and beside the burger on a phone. -->
+    <div class="langpill" role="group" aria-label="Interface language" data-ta>
+      <button type="button" data-ui="en">EN</button><button type="button" data-ui="pt">PT</button><button type="button" data-ui="ru">RU</button>
+    </div>
+    <button id="burger" aria-label="Menu" data-ta style="background:none; border:0; color:var(--text); font-size:24px; cursor:pointer; padding:4px 8px;">☰</button>
   </header>
   <!-- The bottom tab bar on phones: the app's own bar, same six places, same
        order, same icons, so someone who uses both never looks for anything.
@@ -368,7 +454,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       ['settings', 'Settings', 'M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z'],
     ].map(([p, label, d]) => (
       <a class={active(p) ? 'on' : ''} aria-current={active(p) ? 'page' : undefined} href={`${base}/${p}/`}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d={d} /></svg><span>{label}</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d={d} /></svg><span data-t>{label}</span>
       </a>
     ))}
   </nav>
@@ -378,29 +464,29 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     z-index:50; transition:right .25s ease; padding:22px; display:flex; flex-direction:column; gap:4px; box-shadow:-8px 0 30px rgba(0,0,0,.35);
     overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch;">
     <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-      <strong style="font-size:18px;">Menu</strong>
-      <button id="drawer-close" aria-label="Close" style="background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer;">✕</button>
+      <strong style="font-size:18px;" data-t>Menu</strong>
+      <button id="drawer-close" aria-label="Close" data-ta style="background:none; border:0; color:var(--muted); font-size:22px; cursor:pointer;">✕</button>
     </div>
-    <a class="drawer-link" href={`${base}/?home`}>🏠 Home</a>
-    <a class="drawer-link" href={`${base}/translate/`}>🔤 Translator</a>
-    <a class="drawer-link" href={`${base}/practice/`}>🎴 Practice</a>
-    <a class="drawer-link" href={`${base}/coach/`}>🎭 AI coach</a>
-    <a class="drawer-link" href={`${base}/news/`}>🗞 Island news</a>
-    <a class="drawer-link" href={`${base}/read/`}>📰 Reader</a>
-    <a class="drawer-link" href={`${base}/dictionary/`}>📖 Dictionary</a>
-    <a class="drawer-link" href={`${base}/phrasebook/`}>💬 Phrasebook</a>
-    <a class="drawer-link" href={`${base}/verbs/`}>🔀 Verbs</a>
-    <a class="drawer-link" href={`${base}/progress/`}>📊 Progress</a>
-    <a class="drawer-link" href={`${base}/settings/`}>⚙️ Settings</a>
-    <a class="drawer-link" href={`${base}/features/`}>✨ What it does</a>
-    <a class="drawer-link" href={`${base}/about/`}>ℹ️ About</a>
-    <a class="drawer-link" href="https://t.me/papagaio_ebot">✈️ Telegram bot</a>
+    <a class="drawer-link" href={`${base}/?home`}>🏠 <span data-t>Home</span></a>
+    <a class="drawer-link" href={`${base}/translate/`}>🔤 <span data-t>Translator</span></a>
+    <a class="drawer-link" href={`${base}/practice/`}>🎴 <span data-t>Practice</span></a>
+    <a class="drawer-link" href={`${base}/coach/`}>🎭 <span data-t>AI coach</span></a>
+    <a class="drawer-link" href={`${base}/news/`}>🗞 <span data-t>Island news</span></a>
+    <a class="drawer-link" href={`${base}/read/`}>📰 <span data-t>Reader</span></a>
+    <a class="drawer-link" href={`${base}/dictionary/`}>📖 <span data-t>Dictionary</span></a>
+    <a class="drawer-link" href={`${base}/phrasebook/`}>💬 <span data-t>Phrasebook</span></a>
+    <a class="drawer-link" href={`${base}/verbs/`}>🔀 <span data-t>Verbs</span></a>
+    <a class="drawer-link" href={`${base}/progress/`}>📊 <span data-t>Progress</span></a>
+    <a class="drawer-link" href={`${base}/settings/`}>⚙️ <span data-t>Settings</span></a>
+    <a class="drawer-link" href={`${base}/features/`}>✨ <span data-t>What it does</span></a>
+    <a class="drawer-link" href={`${base}/about/`}>ℹ️ <span data-t>About</span></a>
+    <a class="drawer-link" href="https://t.me/papagaio_ebot">✈️ <span data-t>Telegram bot</span></a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <button id="theme-toggle" class="drawer-link" style="background:none; border:0; font:inherit; text-align:left; cursor:pointer; width:100%;">🌗 Theme: <span id="theme-name">dark</span></button>
+    <button id="theme-toggle" class="drawer-link" style="background:none; border:0; font:inherit; text-align:left; cursor:pointer; width:100%;">🌗 <span data-t>Theme</span>: <span id="theme-name" data-t>dark</span></button>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <a class="drawer-link" href="mailto:agent@azenha.ai">✉️ Contact</a>
+    <a class="drawer-link" href="mailto:agent@azenha.ai">✉️ <span data-t>Contact</span></a>
     <hr style="border:0; border-top:1px solid var(--panel2); margin:10px 0;" />
-    <a class="drawer-link" href={`${base}/apps/`}>⬇️ Apps — Android · iPhone · Mac · Windows</a>
+    <a class="drawer-link" href={`${base}/apps/`}>⬇️ <span data-t>Apps — Android · iPhone · Mac · Windows</span></a>
   </aside>
   <main><slot /></main>
 
@@ -439,6 +525,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       d.className = 'intro-fold';
       var sum = document.createElement('summary');
       sum.textContent = 'What this page is';
+      sum.setAttribute('data-t', '');
       d.appendChild(sum);
       main.insertBefore(d, intro[0]);
       for (var n = 0; n < intro.length; n++) d.appendChild(intro[n]);
@@ -447,9 +534,9 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     /* The strip scrolls, so on a section further along it opens showing the first
        links and not the one you are on. Bring the current section into view. */
     (function () {
-      if (window.innerWidth > 860) return;
       var nav = document.querySelector('header.site nav');
-      if (!nav) return;
+      // Only a strip that actually overflows scrolls; desktop can too now.
+      if (!nav || nav.scrollWidth <= nav.clientWidth) return;
       var cur = nav.querySelector('a.active');
       if (!cur) return;
       /* offsetLeft is measured against the nearest positioned ancestor, which is
@@ -515,13 +602,54 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     };
 
     const nameEl = document.getElementById('theme-name');
+    // pgT is i18n.js t(), set by the module below; until it runs the
+    // name stays English and the module's own pass translates it.
+    const themeLabel = (n) => (window.pgT ? window.pgT(n) : n);
     nameEl.textContent = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
     document.getElementById('theme-toggle').onclick = () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = next;
       localStorage.setItem('pg_theme', next);
-      nameEl.textContent = next;
+      nameEl.textContent = themeLabel(next);
     };
+  </script>
+  <script>
+    // One pass over the static text: [data-t] elements swap their text, [data-tp]
+    // their placeholder and [data-ta] their aria-label/title, keyed by the
+    // English. An empty attribute means "the English is what is written there";
+    // data-tn fills a {n} in the string. English pages are left exactly as built.
+    import { UI, ui, setUi, t } from '../lib/i18n.js';
+
+    window.pgT = t;
+    const lang = ui();
+    const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim();
+    if (lang !== 'en') {
+      document.querySelectorAll('[data-t]').forEach((el) => {
+        let s = t(el.getAttribute('data-t') || norm(el.textContent));
+        if (el.dataset.tn != null) s = s.replace('{n}', el.dataset.tn);
+        el.textContent = s;
+      });
+      document.querySelectorAll('[data-tp]').forEach((el) => {
+        el.placeholder = t(el.getAttribute('data-tp') || el.getAttribute('placeholder') || '');
+      });
+      document.querySelectorAll('[data-ta]').forEach((el) => {
+        const key = el.getAttribute('data-ta');
+        for (const a of ['aria-label', 'title']) {
+          if (el.hasAttribute(a)) el.setAttribute(a, t(key || el.getAttribute(a)));
+        }
+      });
+    }
+
+    document.querySelectorAll('.langpill button').forEach((b) => {
+      const on = b.dataset.ui === lang;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      b.onclick = () => {
+        if (on || !UI.includes(b.dataset.ui)) return;
+        setUi(b.dataset.ui);
+        location.reload();
+      };
+    });
   </script>
   <footer class="site">
     PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.
