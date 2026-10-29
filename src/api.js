@@ -122,6 +122,11 @@ function verbForms() {
   return VERB_FORMS;
 }
 
+// Tatoeba's Portuguese is half Brazilian: "A criança está alisando um gato"
+// sat under gato, "Você fala." under falar. A sentence with the Brazilian
+// progressive or a Brazil-only word is not shown to someone learning pt-PT.
+const BR_SENTENCE = /\b(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\w+(ando|endo|indo)\b|\b(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente|você|vocês)\b/i;
+
 /**
  * Lemmas a Portuguese word form might belong to, best guess first.
  *
@@ -503,12 +508,8 @@ export async function handleApi(request, env, path) {
            AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4)
          LIMIT 8`
       ).bind(pair, `${w} %`, `% ${w} %`, `% ${w}`).all().catch(() => ({ results: [] }));
-      // Tatoeba's Portuguese is half Brazilian: "A criança está alisando um
-      // gato" sat under gato. A sentence with the Brazilian progressive or a
-      // Brazil-only word is not shown to someone learning pt-PT.
-      const BR = /\b(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\w+(ando|endo|indo)\b|\b(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente)\b/i;
       const lines = (results ?? [])
-        .filter((r) => !BR.test(r.src))
+        .filter((r) => !BR_SENTENCE.test(r.src))
         .slice(0, 3)
         .map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
       if (cache) await cache.put(key, new Response(JSON.stringify(lines), {
@@ -732,7 +733,9 @@ export async function handleApi(request, env, path) {
         return answer({
           q: s,
           words: [...byLemma, ...rest].slice(0, 25),
-          from_form: { form: s, ...lemma },
+          // The reader's own spelling and the headword as written: "cães is the
+          // plural of cão", never the folded "caes … cao".
+          from_form: { ...lemma, form: raw, word: (byLemma.find((r) => fold(r.term) === f) ?? {}).term ?? lemma.word },
         });
       }
     }
@@ -780,6 +783,10 @@ export async function handleApi(request, env, path) {
       for (const t of Object.values(conjugate(verb.inf))) {
         for (const f of [t].flat()) if (typeof f === 'string') forms.add(fold(f));
       }
+    } else if (FORMS[raw.toLowerCase()]?.pl) {
+      // A known plural beats the spelling rules: the generic -ãos turned cão
+      // into "caos" and the examples were about chaos.
+      forms.add(fold(FORMS[raw.toLowerCase()].pl));
     } else {
       if (w.endsWith('ao')) { forms.add(`${w.slice(0, -2)}oes`); forms.add(`${w.slice(0, -2)}aes`); forms.add(`${w}s`); }
       else if (w.endsWith('m')) forms.add(`${w.slice(0, -1)}ns`);
@@ -795,9 +802,11 @@ export async function handleApi(request, env, path) {
     const { results } = await env.DB.prepare(
       `SELECT src, dst, via FROM examples WHERE pair = ?1 AND (${cond})
        ORDER BY via IS NOT NULL, length(src)
-       LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20)}`
+       LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20) * 2}`
     ).bind(pair, ...list.map((f) => ` ${f} `)).all();
-    return json({ examples: results });
+    const limit = Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20);
+    const ptSide = pair.startsWith('pt');
+    return json({ examples: (results ?? []).filter((r) => !ptSide || !BR_SENTENCE.test(r.src)).slice(0, limit) });
   }
 
   // Offline dictionary packs, served from our own hostname. GitHub releases

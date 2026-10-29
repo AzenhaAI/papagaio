@@ -21,7 +21,7 @@ export const PT_RULES = `Hard rules:
 - "translation" is ONLY the translated phrase. Never commentary, never advice, never two alternatives joined by a comma, never a sentence about what you would prefer to say. If several renderings are natural, put the best one in "translation" and mention the others in "note".
 - Fixed social formulas translate to the formula the other language actually uses, not word for word: "how do you do?" is "tudo bem?", not a discussion of formality.
 - If the INPUT is a single word or a short phrase (up to three words), fill "senses": its distinct meanings, most common first, at most four. Each sense carries a short gloss in the helper language, the part of speech, and the synonyms and antonyms OF THE TRANSLATION, in the language you are translating into — a learner uses them to say the same thing another way, so they must be words they can actually use. For anything longer than three words, "senses" is an empty list: a sentence has no dictionary entry.
-- "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer, and it is written in the same language as "translation" (a Russian answer gets a Russian literal, never an English one).
+- "literal" is the word-for-word rendering of the INPUT, or an empty string. It is never a fragment of your answer, and it is written in the same language as "translation" (a Russian answer gets a Russian literal, never an English one; a Portuguese literal is European Portuguese too — autocarro, comboio, telemóvel, never ônibus, trem, celular). For input longer than one sentence it is an empty string.
 - Keep the shape of the input: URLs, e-mail addresses, numbers, names and hashtags exactly as written (never translate or rewrite a link), the same line breaks, and every bullet point or list item on its own line with its own marker.`;
 
 // The second language defaults to English; a learner who set their interface
@@ -32,11 +32,11 @@ const SYSTEM = (other) => `You translate between ${other.name} and EUROPEAN Port
 ${PT_RULES.replaceAll('English', other.name)}
 
 - If the INPUT contains spelling or grammar mistakes, still translate the intended meaning, but list every fix in "corrections" and give the fully corrected input in "corrected_source". This is a learning tool — never fix silently.
-- "gloss" fields, "why" explanations and "note" are written in ${'${other.name}'}.
+- "gloss" fields, "why" explanations and "note" are written in ${other.name}.
 
 Answer strictly as JSON:
 {
-  "direction": "${'${other.code}'}->pt" or "pt->${'${other.code}'}",
+  "direction": "${other.code}->pt" or "pt->${other.code}",
   "translation": "the translation",
   "corrected_source": "the input with mistakes fixed, or empty string if the input was already correct",
   "corrections": [{"wrong": "cista", "right": "custa", "why": "verb custar — to cost"}],
@@ -246,7 +246,10 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
   // language, so it stands in without a second call.
   const fold = (x) => String(x ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
   const selfDir = /^(pt|en|ru)->\1$/.test(dir);
-  let translation = out.translation ?? '';
+  // U+2011 (non-breaking hyphen) shows up in "chamar‑te": it looks right and
+  // breaks every search, copy and text-to-speech that follows.
+  const plainHyphen = (x) => String(x ?? '').replace(/\u2011/g, '-');
+  let translation = plainHyphen(out.translation);
   if (selfDir && fold(translation) === fold(input)) {
     const def = Array.isArray(out.senses) ? out.senses.find((x) => x?.gloss && fold(x.gloss) !== fold(input))?.gloss : '';
     if (def) translation = String(def);
@@ -269,7 +272,11 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
     translation,
     corrected_source: out.corrected_source || '',
     corrections: Array.isArray(out.corrections) ? out.corrections.filter((c) => c?.wrong && c?.right) : [],
-    literal: out.literal || '',
+    // A literal is a word-for-word aid for a phrase. On a paragraph the model
+    // renders only its opening line, and in Portuguese it slips into Brazil
+    // (ônibus, pegar o trem) — both worse than no line at all.
+    literal: /\n/.test(input) || input.length > 200 || /\b(ônibus|trem|celular|você|pegar o)\b/i.test(out.literal ?? '')
+      ? '' : plainHyphen(out.literal),
     register: out.register || 'neutral',
     br_diff: brDiff,
     note: out.note || '',

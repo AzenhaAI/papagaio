@@ -1002,9 +1002,12 @@ async function handleInline(q, env) {
     return;
   }
 
+  // The same rule as a chat message, from the Telegram app's language alone:
+  // an inline query is typed fast and often, not worth a D1 read for /settings.
+  const ui = botUi(null, q.from);
   let t;
   try {
-    t = await translate(env, text, 'auto', 'en');
+    t = await translate(env, text, 'auto->pt', ui);
   } catch {
     await tg(env, 'answerInlineQuery', { inline_query_id: q.id, results: JSON.stringify([]), cache_time: 5 });
     return;
@@ -1035,7 +1038,7 @@ async function handleInline(q, env) {
         title: `${t.translation} — with the explanation`,
         description: 'Sends the translation plus what a Brazilian would say differently',
         input_message_content: {
-          message_text: formatTranslation(t),
+          message_text: formatTranslation(t, ui),
           parse_mode: 'Markdown',
         },
       },
