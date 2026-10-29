@@ -454,7 +454,7 @@ const PT = {
   "What we collect": "O que recolhemos",
   "Send /link to the": "Envie /link ao",
   "Telegram bot": "bot do Telegram",
-  "(or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.": "(ou abra Definições → Emparelhar na aplicação) e cole o código aqui. Cartões, treinador e progresso passam a acompanhá-lo entre dispositivos.",
+  "(or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.": "(ou abra Definições → Associar na aplicação) e cole o código aqui. Cartões, treinador e progresso passam a acompanhá-lo entre dispositivos.",
   "is a form of": "é uma forma de",
   "is also a form of": "é também uma forma de",
   "In the dictionary:": "No dicionário:",
