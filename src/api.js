@@ -314,19 +314,20 @@ export async function handleApi(request, env, path) {
     const body = await request.json().catch(() => ({}));
     const courses = body?.courses === 'en' || body?.courses === 'pt,en' ? body.courses : 'pt';
 
-    const row = await env.DB.prepare(
-      `SELECT MIN(id) AS lo FROM users WHERE id < 0`
-    ).first();
-    const id = Math.min(-1, (row?.lo ?? 0) - 1);
-
+    // The next free negative id is taken inside the batch (one transaction),
+    // not read first: two first visits in the same second used to read the
+    // same MIN(id) and the second one failed with a 500.
     const token = crypto.randomUUID();
+    const now = new Date().toISOString();
     await env.DB.batch([
       env.DB.prepare(
-        `INSERT INTO users (id, chat_id, name, courses, created_at) VALUES (?, ?, 'app', ?, ?)`
-      ).bind(id, id, courses, new Date().toISOString()),
+        `INSERT INTO users (id, chat_id, name, courses, created_at)
+         SELECT m, m, 'app', ?1, ?2 FROM (SELECT min(coalesce(min(id), 0), 0) - 1 AS m FROM users WHERE id < 0)`
+      ).bind(courses, now),
       env.DB.prepare(
-        `INSERT INTO devices (token, user_id, label, created_at) VALUES (?, ?, 'app', ?)`
-      ).bind(token, id, new Date().toISOString()),
+        `INSERT INTO devices (token, user_id, label, created_at)
+         SELECT ?1, MIN(id), 'app', ?2 FROM users WHERE id < 0`
+      ).bind(token, now),
     ]);
     return json({ token, courses });
   }

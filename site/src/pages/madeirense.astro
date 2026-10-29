@@ -34,8 +34,8 @@ const { source } = data;
       style="flex:1; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:10px 16px; font:inherit;" />
   </div>
-  <nav id="az" style="display:flex; flex-wrap:wrap; gap:4px 10px; margin-bottom:14px; font-size:14px;">
-    {letters.map((l) => <a href={`#l-${l}`}>{l}</a>)}
+  <nav id="az" style="display:flex; flex-wrap:wrap; gap:2px; margin-bottom:14px; font-size:15px;">
+    {letters.map((l) => <a href={`#l-${l}`} style="display:inline-flex; align-items:center; justify-content:center; min-width:34px; height:34px; border-radius:8px;">{l}</a>)}
   </nav>
   <p id="count" class="muted" style="font-size:13px;"></p>
 

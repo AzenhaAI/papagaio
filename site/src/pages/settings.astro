@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <BaseLayout title="Settings — PapaGaio" desc="PapaGaio settings on the web: Russian in the translator and dictionary, theme, connecting your progress from the app or the Telegram bot, and deleting your data.">
-  <h1>Settings</h1>
+  <h1 data-t>Settings</h1>
 
   <style is:global>
     .set { background: var(--panel); border-radius: var(--radius); padding: 16px 18px; margin: 0 0 12px; }
@@ -22,84 +22,86 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     .switch input:checked + span::before { transform: translateX(20px); background: #08130c; }
     .set input[type=text] { flex: 1; min-width: 0; background: var(--panel2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; font: inherit; }
     .set .danger { background: none; border: 1px solid var(--red); color: var(--red); border-radius: 10px; padding: 8px 14px; font: inherit; cursor: pointer; min-height: 40px; }
-    .set .links a { display: block; padding: 9px 0; }
+    .set.links a { display: block; padding: 9px 0; }
   </style>
 
   <section class="set" data-unfold>
-    <h2>Languages</h2>
+    <h2 data-t>Languages</h2>
     <div class="row">
       <div>
-        <strong>Russian</strong>
-        <p>Adds Russian to the translator and shows Russian meanings in the dictionary — the same switch as in the app.</p>
+        <strong data-t>Russian meanings</strong>
+        <p data-t>Shows Russian meanings in the dictionary even when the interface is in English or Portuguese.</p>
       </div>
-      <label class="switch" aria-label="Russian in the translator and dictionary">
+      <label class="switch" aria-label="Russian meanings in the dictionary" data-ta>
         <input type="checkbox" id="ru" /><span></span>
       </label>
     </div>
     <div class="row">
       <div>
-        <strong>Interface</strong>
-        <p>The website is in English. The apps also speak Portuguese and Russian.</p>
+        <strong data-t>Interface</strong>
+        <p data-t>Switch EN · PT · RU at the top of any page. The apps speak the same three languages.</p>
       </div>
     </div>
   </section>
 
   <section class="set">
-    <h2>Appearance</h2>
+    <h2 data-t>Appearance</h2>
     <div class="row">
-      <strong>Theme</strong>
-      <div class="seg" role="group" aria-label="Theme">
-        <button data-theme-opt="system">System</button>
-        <button data-theme-opt="dark">Dark</button>
-        <button data-theme-opt="light">Light</button>
+      <strong data-t>Theme</strong>
+      <div class="seg" role="group" aria-label="Theme" data-ta>
+        <button data-theme-opt="system" data-t>System</button>
+        <button data-theme-opt="dark" data-t>Dark</button>
+        <button data-theme-opt="light" data-t>Light</button>
       </div>
     </div>
   </section>
 
   <section class="set">
-    <h2>Your progress</h2>
+    <h2 data-t>Your progress</h2>
     <div class="row" id="paired" style="display:none;">
       <div>
-        <strong>Connected</strong>
+        <strong data-t>Connected</strong>
         <p id="paired-id"></p>
       </div>
-      <button class="danger" id="unpair" style="border-color:var(--border); color:var(--text);">Disconnect</button>
+      <button class="danger" id="unpair" style="border-color:var(--border); color:var(--text);" data-t>Disconnect</button>
     </div>
     <div class="row" id="pair" style="display:none; flex-wrap:wrap;">
       <div style="flex:1 1 100%;">
-        <strong>Connect your deck</strong>
+        <strong data-t>Connect your deck</strong>
         <p>Send /link to the <a href="https://t.me/papagaio_ebot">Telegram bot</a> (or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.</p>
       </div>
-      <input type="text" id="tok" aria-label="Link code from the bot" placeholder="paste the /link code" autocomplete="off" />
-      <button class="btn" id="connect">Connect</button>
+      <input type="text" id="tok" aria-label="Link code from the bot" placeholder="paste the /link code" data-tp autocomplete="off" />
+      <button class="btn" id="connect" data-t>Connect</button>
       <p id="pair-msg" style="flex:1 1 100%; margin:4px 0 0; color:var(--muted); font-size:13.5px;"></p>
     </div>
   </section>
 
   <section class="set">
-    <h2>Your data</h2>
+    <h2 data-t>Your data</h2>
     <div class="row">
       <div>
-        <strong>Delete my account</strong>
-        <p>Erases your schedule, history, your own cards and every paired device. Immediate, cannot be undone. In the bot: /delete.</p>
+        <strong data-t>Delete my account</strong>
+        <p data-t>Erases your schedule, history, your own cards and every paired device. Immediate, cannot be undone. In the bot: /delete.</p>
       </div>
-      <button class="danger" id="del">Delete</button>
+      <button class="danger" id="del" data-t>Delete</button>
     </div>
     <p class="muted" id="del-msg" style="font-size:13.5px; margin:4px 0 0;"></p>
   </section>
 
   <section class="set links">
-    <h2>More</h2>
-    <a href={`${base}/verbs/`}>🔀 Verbs</a>
-    <a href={`${base}/apps/`}>📱 Apps for iPhone, Android, Mac and Windows</a>
-    <a href={`${base}/privacy/`}>🔒 Privacy</a>
-    <a href={`${base}/support/`}>💬 Support</a>
-    <a href={`${base}/about/`}>ℹ️ About</a>
+    <h2 data-t>More</h2>
+    <a href={`${base}/verbs/`}>🔀 <span data-t>Verbs</span></a>
+    <a href={`${base}/apps/`}>📱 <span data-t>Apps for iPhone, Android, Mac and Windows</span></a>
+    <a href={`${base}/privacy/`}>🔒 <span data-t>Privacy</span></a>
+    <a href={`${base}/support/`}>💬 <span data-t>Support</span></a>
+    <a href={`${base}/about/`}>ℹ️ <span data-t>About</span></a>
   </section>
 
   <script is:inline>
     (function () {
       var $ = function (id) { return document.getElementById(id); };
+      // The layout's module script sets pgT after this inline one has run.
+      var T = function (x) { return window.pgT ? window.pgT(x) : x; };
       // Russian: one switch the translator and the dictionary both read.
       var ru = $('ru');
       ru.checked = localStorage.getItem('pg_ru') === '1';
@@ -134,7 +136,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         var t = localStorage.getItem(KEY);
         $('paired').style.display = t ? 'flex' : 'none';
         $('pair').style.display = t ? 'none' : 'flex';
-        if (t) $('paired-id').textContent = 'Device ' + t.slice(0, 8) + '…';
+        if (t) $('paired-id').textContent = T('Device') + ' ' + t.slice(0, 8) + '…';
       }
       $('connect').onclick = function () {
         window.pgUseCode($('tok').value).then(function (res) {
@@ -143,24 +145,25 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         });
       };
       $('unpair').onclick = function () {
-        if (!confirm('Disconnect this browser? Your progress stays on the server and comes back with the code.')) return;
+        if (!confirm(T('Disconnect this browser? Your progress stays on the server and comes back with the code.'))) return;
         localStorage.removeItem(KEY);
         paintPair();
       };
       paintPair();
+      document.addEventListener('DOMContentLoaded', paintPair);
 
       $('del').onclick = async function () {
         var t = localStorage.getItem(KEY);
-        if (!t) { $('del-msg').textContent = 'Nothing to delete: this browser has no account yet.'; return; }
-        if (!confirm('Delete your PapaGaio account and all its progress? This cannot be undone.')) return;
+        if (!t) { $('del-msg').textContent = T('Nothing to delete: this browser has no account yet.'); return; }
+        if (!confirm(T('Delete your PapaGaio account and all its progress? This cannot be undone.'))) return;
         try {
           var r = await fetch('/api/account', { method: 'DELETE', headers: { 'x-device-token': t } });
           if (!r.ok) throw new Error(r.status);
           localStorage.removeItem(KEY);
           paintPair();
-          $('del-msg').textContent = 'Deleted. Everything tied to this account is gone.';
+          $('del-msg').textContent = T('Deleted. Everything tied to this account is gone.');
         } catch (e) {
-          $('del-msg').textContent = 'The server is not answering right now — nothing was deleted. Try again later.';
+          $('del-msg').textContent = T('The server is not answering right now — nothing was deleted. Try again later.');
         }
       };
     })();

@@ -211,10 +211,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const spell = ff?.kind === 'spelling'
         ? `<p style="font-size:14.5px; margin:6px 0;">${esc(T('Did you mean'))} <strong>${esc(ff.word)}</strong>?</p>`
         : '';
-      lexBox.innerHTML = inPt + spell + (ff?.word && ff.kind !== 'spelling' ? `<p style="font-size:14.5px; margin:6px 0;">«${esc(ff.form ?? q)}» is ${ff.lead === false ? 'also ' : ''}a form of
-          <strong>${esc(ff.word)}</strong>${FORM_NAMES[ff.tense ?? ff.kind] ? ` <span class="muted">— ${FORM_NAMES[ff.tense ?? ff.kind]}</span>` : ''}</p>` : '') +
+      lexBox.innerHTML = inPt + spell + (ff?.word && ff.kind !== 'spelling' ? `<p style="font-size:14.5px; margin:6px 0;">«${esc(ff.form ?? q)}» ${esc(T(ff.lead === false ? 'is also a form of' : 'is a form of'))}
+          <strong>${esc(ff.word)}</strong>${FORM_NAMES[ff.tense ?? ff.kind] ? ` <span class="muted">— ${esc(T(FORM_NAMES[ff.tense ?? ff.kind]))}</span>` : ''}</p>` : '') +
         `<p class="muted" style="font-size:14px; margin-top:6px;">
-          📖 In the dictionary:</p>` +
+          📖 ${esc(T('In the dictionary:'))}</p>` +
         d.words.map((w) => `
           <button class="lexrow" data-term="${esc(w.term)}" data-id="${esc(w.id ?? '')}">
             <span><strong>${esc(w.term)}</strong>
