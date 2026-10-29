@@ -46,7 +46,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
   <section class="set">
     <h2 data-t>Appearance</h2>
-    <div class="row">
+    <div class="row" style="flex-wrap:wrap;">
       <strong data-t>Theme</strong>
       <div class="seg" role="group" aria-label="Theme" data-ta>
         <button data-theme-opt="system" data-t>System</button>
@@ -68,7 +68,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div class="row" id="pair" style="display:none; flex-wrap:wrap;">
       <div style="flex:1 1 100%;">
         <strong data-t>Connect your deck</strong>
-        <p>Send /link to the <a href="https://t.me/papagaio_ebot">Telegram bot</a> (or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.</p>
+        <p><span data-t>Send /link to the</span> <a href="https://t.me/papagaio_ebot" data-t>Telegram bot</a> <span data-t>(or open Settings → Pair in the app) and paste the code here. Cards, coach and progress then follow you between devices.</span></p>
       </div>
       <input type="text" id="tok" aria-label="Link code from the bot" placeholder="paste the /link code" data-tp autocomplete="off" />
       <button class="btn" id="connect" data-t>Connect</button>
