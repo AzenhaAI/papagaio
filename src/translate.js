@@ -275,7 +275,8 @@ export async function translate(env, text, direction, ui, { same = 'flip' } = {}
     // A literal is a word-for-word aid for a phrase. On a paragraph the model
     // renders only its opening line, and in Portuguese it slips into Brazil
     // (ônibus, pegar o trem) — both worse than no line at all.
-    literal: /\n/.test(input) || input.length > 200 || /\b(ônibus|trem|celular|você|pegar o)\b/i.test(out.literal ?? '')
+    // A single word has no word order to show: "literally: обригадо".
+    literal: /\n/.test(input) || input.length > 200 || !/\S\s+\S/.test(input.trim()) || /\b(ônibus|trem|celular|você|pegar o)\b/i.test(out.literal ?? '')
       ? '' : plainHyphen(out.literal),
     register: out.register || 'neutral',
     br_diff: brDiff,
