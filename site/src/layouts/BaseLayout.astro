@@ -787,6 +787,10 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     var deferred = null;
     window.addEventListener('beforeinstallprompt', function (e) {
       e.preventDefault();
+      // Android phones get the Google Play strip from the site middleware
+      // instead: the store app updates itself, and two install offers
+      // stacked at the bottom of the screen read as nagging.
+      if (/Android/.test(navigator.userAgent)) return;
       deferred = e;
       txt.textContent = 'Install this as an app — it opens full-screen, without a browser bar.';
       go.hidden = false;
