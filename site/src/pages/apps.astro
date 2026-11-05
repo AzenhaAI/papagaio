@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Everywhere from '../components/Everywhere.astro';
 // Downloads go through our own hostname, which proxies the release assets:
 // a store-bound product does not put an account name on a download button.
 const APP_STORE = 'https://apps.apple.com/app/papagaio-portugal/id6802084974';
@@ -19,28 +18,57 @@ const playBadge = PLAY_LIVE
 <BaseLayout
   title="Apps — PapaGaio"
   desc="PapaGaio on your phone, your Mac, your PC and in Telegram: European Portuguese dictionary, verb conjugator, translator and AI coach, free on every platform.">
-  <h1>One parrot, every screen</h1>
-  <p class="muted">
-    The same account everywhere: pair once with the bot's /link code and your
-    progress follows you. Free on every platform — that is the whole point.
-  </p>
+  <h1 data-t>One parrot, every screen</h1>
+  <p class="lead" data-t>Free everywhere. One account — your cards follow you.</p>
 
   <div class="stores" data-unfold set:html={appStoreBadge + playBadge} />
 
+  <!-- One tile per door: an icon, a name, one line. The paragraphs that used
+       to sit here explained every platform to everyone; the tile the visitor
+       is actually holding is marked by the script below instead, and the
+       install advice lives in the fold under the grid. -->
+  <div class="tiles" data-unfold>
+    <a class="tile" data-os="ios" href={APP_STORE} target="_blank" rel="noopener">
+      <span class="ic">📱</span><b data-t>iPhone &amp; iPad</b><small>App Store</small>
+    </a>
+    <a class="tile" data-os="android" href={PLAY} target="_blank" rel="noopener">
+      <span class="ic">🤖</span><b>Android</b><small>Google Play</small>
+    </a>
+    <a class="tile" data-os="mac" href="/dl/PapaGaio-mac.dmg">
+      <span class="ic">💻</span><b>Mac</b><small>22 MB</small>
+    </a>
+    <a class="tile" data-os="win" href="/dl/PapaGaio-windows.zip">
+      <span class="ic">🪟</span><b>Windows</b><small>19 MB</small>
+    </a>
+    <a class="tile" href="https://t.me/papagaio_ebot">
+      <span class="ic">✈️</span><b>Telegram</b><small>@papagaio_ebot</small>
+    </a>
+    <a class="tile" id="tile-web" href="./translate/">
+      <span class="ic">🌐</span><b data-t>Browser</b><small id="tile-web-line" data-t>Nothing to install</small>
+    </a>
+    <a class="tile" href="/dl/PapaGaio-chrome.zip">
+      <span class="ic">🧩</span><b>Chrome</b><small data-t>Extension</small>
+    </a>
+    <a class="tile" href="/dl/PapaGaio.apk">
+      <span class="ic">📦</span><b>APK</b><small data-t>Android without Google Play</small>
+    </a>
+  </div>
+
+  <details class="tips">
+    <summary data-t>Install tips</summary>
+    <ul>
+      <li data-t>APK: allow “unknown apps” when Android asks. It is a separate install from the Google Play one.</li>
+      <li data-t>Windows: unzip and run papagaio_app.exe — SmartScreen wants one click.</li>
+      <li data-t>Browser on a phone: Share → Add to Home Screen, and it opens like an app.</li>
+      <li data-t>Only the apps work offline — the browser asks the server each time.</li>
+    </ul>
+  </details>
+
   <style is:global>
-    .appcard {
-      display: flex; gap: 16px; align-items: flex-start;
-      background: var(--panel); border-radius: var(--radius);
-      padding: 18px 20px; margin-bottom: 12px;
-    }
-    .appcard .em { font-size: 30px; line-height: 1.1; }
-    .appcard h3 { margin: 0 0 2px; font-size: 16.5px; }
-    .appcard p { margin: 0 0 8px; color: var(--muted); font-size: 13.5px; }
-    .appcard .soon { color: var(--muted); font-size: 13.5px; }
+    .lead { color: var(--muted); margin: -4px 0 0; font-size: 15px; }
     /* The stores' own badge shape — black, the store's logo, two lines — is
        what people recognise and trust; a green button saying "App Store" is not. */
     .stores { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 6px; }
-    .appcard .stores { margin: 4px 0 10px; }
     .store {
       display: inline-flex; align-items: center; gap: 10px;
       background: #000; color: #fff; text-decoration: none;
@@ -59,101 +87,69 @@ const playBadge = PLAY_LIVE
       .store svg { width: 24px; height: 24px; }
       .store small { font-size: 9.5px; }
     }
+
+    .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 18px 0 14px; }
+    @media (min-width: 640px) { .tiles { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    .tile {
+      position: relative; display: flex; flex-direction: column; gap: 3px;
+      background: var(--panel); border: 1px solid var(--border, transparent);
+      border-radius: var(--radius, 14px); padding: 14px 14px 13px;
+      color: var(--text); text-decoration: none; min-width: 0;
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .tile:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-1px); }
+    .tile .ic { font-size: 28px; line-height: 1; margin-bottom: 6px; }
+    .tile b { font-size: 15.5px; font-weight: 700; }
+    .tile small { color: var(--muted); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .tile.mine { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+    .tile.mine::after {
+      content: attr(data-mine); position: absolute; top: 10px; right: 10px;
+      font-size: 10.5px; font-weight: 700; letter-spacing: .03em;
+      background: var(--accent); color: #08210f; border-radius: 999px; padding: 2px 7px;
+    }
+
+    .tips { margin: 4px 0 8px; color: var(--muted); font-size: 13.5px; }
+    .tips summary { cursor: pointer; font-weight: 600; color: var(--text); }
+    .tips ul { margin: 8px 0 0; padding-left: 18px; }
+    .tips li { margin: 4px 0; }
   </style>
-
-  <div style="margin-top:22px;">
-    <div class="appcard">
-      <span class="em">🤖</span>
-      <div>
-        <h3>Android</h3>
-        <p>On Google Play, which keeps it updated. A phone without Google Play
-          can install the APK instead; allow "unknown apps" when asked. The two
-          are separate installs, so pick one.</p>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=ai.azenha.papagaio">Google Play</a>
-        <a class="btn" href="/dl/PapaGaio.apk">APK · 25 MB</a>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">📱</span>
-      <div>
-        <h3>iPhone &amp; iPad</h3>
-        <p>One universal app for both — the dictionary and the verb tables were
-          built for that screen. Get it with the App Store badge above.</p>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">💻</span>
-      <div>
-        <h3>macOS</h3>
-        <p>The full app as a Mac citizen — sidebar, keyboard shortcuts, the window where you left it. Signed with a Developer ID and notarised by Apple: it opens with a double click, and tells you itself when a newer version is out.</p>
-        <a class="btn" href="/dl/PapaGaio-mac.dmg">Download for macOS · 22 MB</a>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">🪟</span>
-      <div>
-        <h3>Windows</h3>
-        <p>Unzip anywhere and run <code>papagaio_app.exe</code>; SmartScreen will want one reassuring click.</p>
-        <a class="btn" href="/dl/PapaGaio-windows.zip">Download for Windows · 19 MB</a>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">✈️</span>
-      <div>
-        <h3>Telegram bot</h3>
-        <p>A card every 15 minutes, voice dialogues, /translate anything. Where PapaGaio was born.</p>
-        <a class="btn" href="https://t.me/papagaio_ebot">Open @papagaio_ebot</a>
-      </div>
-    </div>
-
-    <div class="appcard">
-      <span class="em">🌐</span>
-      <div>
-        <h3>Web — and on the phone, without installing</h3>
-        <p>Everything works right here: dictionary, verbs, translator, coach,
-          the cards. On a phone it is also the fastest way to start — open it in
-          the browser and, if you want it as an icon, <strong>Share → Add to
-          Home Screen</strong>. It then opens full-screen, without the address
-          bar, and looks like the app.</p>
-        <p>On a computer it installs too: Chrome and Edge show an install
-          icon in the address bar, or use their menu → <strong>Install
-          PapaGaio</strong>; Safari on macOS has <strong>File → Add to
-          Dock</strong>. It then runs in its own window, out of the browser
-          tabs, and keeps its place in the Dock.</p>
-        <p class="soon">The one thing the browser cannot do is work with no
-          signal — the installed apps keep your deck and its audio on the
-          device, the web version asks the server each time.</p>
-        <a class="btn" href="./" style="background:var(--panel2); color:var(--text);">You are here</a>
-        <button class="btn" id="pwa-install" style="display:none; margin-left:8px;">Install as an app</button>
-      </div>
-    </div>
-  </div>
-  <Everywhere />
 </BaseLayout>
 
 <script>
+  import { t } from '../lib/i18n.js';
+
+  // Mark the tile for the device in hand, so nobody reads the grid to find it.
+  // An iPad reports itself as a Mac since iPadOS 13; touch points give it away.
+  const ua = navigator.userAgent;
+  const os = /Android/.test(ua) ? 'android'
+    : (/iPhone|iPod|iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) ? 'ios'
+    : /Mac/.test(ua) ? 'mac'
+    : /Win/.test(ua) ? 'win' : '';
+  const mine = os && document.querySelector(`.tile[data-os="${os}"]`);
+  if (mine) {
+    mine.classList.add('mine');
+    mine.dataset.mine = t('Yours');
+    mine.parentElement.prepend(mine);
+  }
+
   // The browser decides whether installing is possible — it fires this event
-  // only when it is, and never on a device that already has the app. So the
-  // button appears exactly when it would work and stays hidden otherwise,
-  // rather than promising something the browser will refuse.
+  // only when it is, and never on a device that already has the app. The
+  // Browser tile then installs instead of opening the translator.
   let deferred = null;
-  const btn = document.getElementById('pwa-install');
+  const web = document.getElementById('tile-web');
+  const line = document.getElementById('tile-web-line');
   addEventListener('beforeinstallprompt', (e) => {
+    if (/Android/.test(ua)) return; // Android gets Google Play, not the web app
     e.preventDefault();
     deferred = e;
-    if (btn) btn.style.display = '';
+    if (line) line.textContent = t('Install as an app');
   });
-  btn?.addEventListener('click', async () => {
+  web?.addEventListener('click', async (e) => {
     if (!deferred) return;
-    btn.disabled = true;
+    e.preventDefault();
     deferred.prompt();
     await deferred.userChoice;
     deferred = null;
-    btn.style.display = 'none';
+    if (line) line.textContent = t('Nothing to install');
   });
-  addEventListener('appinstalled', () => { if (btn) btn.style.display = 'none'; });
 </script>
