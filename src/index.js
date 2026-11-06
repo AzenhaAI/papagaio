@@ -2,7 +2,7 @@
 
 import { schedule } from './fsrs.js';
 import { unitProgress, randomDistractors } from './progress.js';
-import { synthesize } from './tts.js';
+import { synthesize, configureTts } from './tts.js';
 import { transcribe, chat } from './groq.js';
 import { translate, formatTranslation } from './translate.js';
 import { fold, findVerb } from './verbs.js';
@@ -70,6 +70,7 @@ const UNIT_ORDER = {
 
 export default {
   async fetch(request, env) {
+    configureTts(env);
     const url = new URL(request.url);
     if (request.method === 'POST' && url.pathname === `/tg/${env.WEBHOOK_SECRET}`) {
       const update = await request.json();
@@ -90,6 +91,7 @@ export default {
   },
 
   async scheduled(_event, env) {
+    configureTts(env);
     await tick(env);
   },
 };
