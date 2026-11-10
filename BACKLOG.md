@@ -83,6 +83,25 @@ audio, sitting behind a search box that Google cannot use.
 Cost: a page generator over the existing deck, the same shape as the trail
 pages on the other site.
 
+Checked on 10 November 2026: a shared word link (`/papagaio/dictionary/?q=olá`)
+comes back with the generic title "Dictionary — PapaGaio", a canonical pointing
+at `/papagaio/dictionary/`, and none of the entry's text in the HTML — the card
+is drawn in the browser from `/api/lookup`. The sitemap lists 16 URLs. To
+Google, 110,000 entries are one page.
+
+Plan agreed with the owner:
+
+1. At site build, fetch `/api/lookup` for the first 1,000 deck words and the
+   149 phrasebook phrases (once per build, not per visit).
+2. Render the same card as static HTML at `/papagaio/palavra/<word>/`: a title
+   and description per word, a self-canonical, og tags for messenger previews,
+   meanings, examples, collocations, synonyms, grammar, "On Madeira", audio.
+3. Every page in `sitemap.xml`; synonyms and collocations link to their own
+   pages; the card's Share button hands out the new URL.
+4. The apps and the existing `/dictionary/` search stay exactly as they are.
+   Ship through azenha main (the nightly deploy publishes it); widen past
+   1,000 words only if search traffic shows up.
+
 ---
 
 ## Deliberately not doing
