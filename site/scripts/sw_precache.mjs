@@ -19,6 +19,9 @@ export function precache(dist, base = '/papagaio/') {
   for (const f of files.sort()) {
     const rel = relative(dist, f).split('\\').join('/');
     if (rel === 'sw.js' || rel === 'sitemap.xml' || rel === 'og.png' || rel.startsWith('audio/')) continue;
+    // A thousand word pages are for search, not for offline use: a reader
+    // who opens one gets it cached on the way, nobody downloads all of them.
+    if (rel.startsWith('palavra/')) continue;
     if (!/\.(html|css|js|png|svg|ico|webmanifest)$/.test(rel)) continue;
     hash.update(rel).update(readFileSync(f));
     urls.push(base + (rel.endsWith('index.html') ? rel.slice(0, -'index.html'.length) : rel));

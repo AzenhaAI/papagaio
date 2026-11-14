@@ -16,6 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <span data-t>ranked by an</span> <a href="https://github.com/hermitdave/FrequencyWords" data-t>OpenSubtitles
     frequency list</a> (CC BY-SA 4.0).
   </p>
+  <p style="font-size:14px; margin:4px 0;"><a href="/papagaio/palavra/" data-t>Browse every deck word, one page each</a> →</p>
   <!-- The Lingvo shelf: which dictionaries sit behind the search box, with
        live counts. One line of chips, not a page of methodology. -->
   <div id="layers" style="display:none; gap:8px; flex-wrap:wrap; margin-top:2px;"></div>
@@ -70,6 +71,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     const fold = (x) => String(x ?? '').toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/['\u2019`´]/g, '');
 
+    // Deck words have their own page at /palavra/<slug>/ — the address worth
+    // sharing and the one search engines index. Same rule as
+    // scripts/export_word_pages.mjs; keep the two in step.
+    const slugOf = (t) => String(t ?? '').replace(/^([oa]s? |um |uma )/i, '').trim().normalize('NFC').toLowerCase()
+      .replace(/\.\.\.|…/g, ' ').replace(/[?!¿¡.,;:"«»()\[\]/\\]+/g, ' ').replace(/['’`´]/g, '')
+      .trim().replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+    const pageOf = (c) => (c && c.course === 'pt' && c.pos !== 'ref' && c.entry && slugOf(c.term))
+      ? `${location.pathname.replace(/dictionary\/?$/, '')}palavra/${slugOf(c.term)}/` : null;
+    const pageLink = (c) => { const h = pageOf(c); return h ? `<a href="${esc(h)}" title="${esc(T('Word page'))}"
+      style="font-size:13px; text-decoration:none;">🔗 ${esc(T('page'))}</a>` : ''; };
+
     function render() {
       const q = fold(document.getElementById('q').value.trim());
       // Ranked, not just filtered. A bare substring test kept deck order, so
@@ -112,6 +124,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <span>— ${meaning(c.trans, c.trans_ru)}</span>
           ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${c.audio}')"
             style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>` : ''}
+          ${pageLink(c)}
           ${c.entry ? `<button class="morebtn" data-i="${i}"
             style="background:none; border:1px solid #2a4433; border-radius:8px; color:var(--accent);
                    cursor:pointer; font-size:13px; padding:2px 10px;">📖 more</button>` : ''}
@@ -272,6 +285,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             ${c.gender ? `<span class="muted">(${esc(c.gender)})</span>` : ''}
             <span>— ${esc(c.trans)}</span>
             <button id="saybtn" style="background:none; border:0; cursor:pointer; font-size:17px;">🔊</button>
+            ${d.source === 'deck' ? pageLink({ ...c, course: c.course ?? 'pt', entry: 1 }) : ''}
             ${d.source === 'lookup' ? '<span class="muted" style="font-size:12.5px;">looked up live</span>' : ''}
           </div>
           ${c.note ? `<div class="muted" style="font-size:14px;">${esc(c.note)}</div>` : ''}

@@ -45,6 +45,25 @@ export function langName(code) {
 }
 
 const RU = {
+  // Word pages (/palavra/)
+  "Word page": "Страница слова",
+  "Browse every deck word, one page each": "Все слова колоды — у каждого своя страница",
+  "page": "страница",
+  "Words": "Слова",
+  "Meanings": "Значения",
+  "Collocations": "Сочетания",
+  "Synonyms": "Синонимы",
+  "Opposites": "Антонимы",
+  "Grammar": "Грамматика",
+  "Conjugations": "Спряжение",
+  "All twelve tenses": "Все двенадцать времён",
+  "Related words": "Похожие слова",
+  "Learn it with spaced repetition": "Выучить с интервальными повторениями",
+  "Open in the dictionary": "Открыть в словаре",
+  "Practise now": "Потренироваться",
+  "Search the full dictionary": "Искать во всём словаре",
+  "Every word and phrase the PapaGaio deck teaches, one page each: meanings in English and Russian, audio, examples, collocations, grammar and, for verbs, the tenses you need first.": "Все слова и фразы колоды PapaGaio, у каждого своя страница: значения на английском и русском, озвучка, примеры, сочетания, грамматика, а у глаголов — главные времена.",
+  "This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.": "Это слово есть в колоде PapaGaio: приложение, Telegram-бот и карточки на сайте его тренируют, а ИИ-коуч заставит применить его в сценке. Бесплатно, без регистрации.",
   // Apps page
   "One parrot, every screen": "Один попугай — на всех экранах",
   "Free everywhere. One account — your cards follow you.": "Бесплатно везде. Один аккаунт — карточки с вами на любом устройстве.",
@@ -274,6 +293,25 @@ const RU = {
 
 // European Portuguese (pt-PT) throughout, never Brazilian.
 const PT = {
+  // Word pages (/palavra/)
+  "Word page": "Página da palavra",
+  "Browse every deck word, one page each": "Todas as palavras do baralho, cada uma com a sua página",
+  "page": "página",
+  "Words": "Palavras",
+  "Meanings": "Significados",
+  "Collocations": "Combinações",
+  "Synonyms": "Sinónimos",
+  "Opposites": "Antónimos",
+  "Grammar": "Gramática",
+  "Conjugations": "Conjugação",
+  "All twelve tenses": "Os doze tempos",
+  "Related words": "Palavras relacionadas",
+  "Learn it with spaced repetition": "Aprenda-a com repetição espaçada",
+  "Open in the dictionary": "Abrir no dicionário",
+  "Practise now": "Praticar agora",
+  "Search the full dictionary": "Pesquisar no dicionário completo",
+  "Every word and phrase the PapaGaio deck teaches, one page each: meanings in English and Russian, audio, examples, collocations, grammar and, for verbs, the tenses you need first.": "Todas as palavras e expressões do baralho PapaGaio, cada uma com a sua página: significados em inglês e russo, áudio, exemplos, combinações, gramática e, nos verbos, os tempos de que precisa primeiro.",
+  "This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.": "Esta palavra está no baralho PapaGaio: a app, o bot do Telegram e os cartões na web treinam-na, e o coach de IA põe-na a uso numa cena. Grátis, sem conta.",
   // Apps page
   "One parrot, every screen": "Um papagaio, todos os ecrãs",
   "Free everywhere. One account — your cards follow you.": "Grátis em todo o lado. Uma conta — os teus cartões vão contigo.",

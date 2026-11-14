@@ -402,6 +402,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       :root header.site .getapp-pill { display: none; }
     }
   </style>
+  <slot name="head" />
 </head>
 <body>
   <!-- Shown only without a connection: says why things are quiet instead of

@@ -1,0 +1,268 @@
+---
+// One page per deck word or phrase, drawn at build time from
+// src/data/words.json (scripts/export_word_pages.mjs). The same article the
+// dictionary card shows, but in the HTML itself, at its own address, with its
+// own title — the dictionary's ?q= card is invisible to a search engine.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GetApp from '../../components/GetApp.astro';
+import data from '../../data/words.json';
+
+export function getStaticPaths() {
+  return data.pages.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const base = '/papagaio';
+const AUDIO = 'https://azenha.ai/papagaio/audio/';
+const href = (s) => `${base}/palavra/${s}/`;
+const first = (s) => String(s ?? '').split(/[;,/]| \(/)[0].trim();
+const head = String(p.term).replace(/^([oa]s? |um |uma )/i, '').trim();
+const POS = { noun: 'noun', verb: 'verb', adj: 'adjective', adv: 'adverb', phrase: 'phrase', interj: 'interjection',
+  num: 'number', pron: 'pronoun', conj: 'conjunction', prep: 'preposition' };
+const posName = POS[p.pos] ?? p.pos;
+const gender = p.gender === 'm' ? 'masculine' : p.gender === 'f' ? 'feminine' : p.gender;
+const ru1 = first(p.meanings[0]?.ru ?? p.trans_ru);
+const en1 = first(p.trans);
+
+const title = `${head} — ${en1}${ru1 ? ` · ${ru1}` : ''} | European Portuguese · PapaGaio`;
+const desc = [
+  `${p.term} (${posName}${gender ? ', ' + gender : ''}): ${p.trans}.`,
+  ru1 ? `Russian: ${ru1}.` : '',
+  p.ex_t ? `«${p.ex_t}»${p.ex_trans ? ' — ' + p.ex_trans : ''}` : '',
+  'Audio, examples and grammar in European Portuguese (pt-PT).',
+].filter(Boolean).join(' ').slice(0, 300);
+
+const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
+const TENSES = [
+  ['presente', 'Presente do Indicativo', 'now, and general truths'],
+  ['pps', 'Pretérito Perfeito Simples', 'finished, at a point in the past'],
+  ['imperfeito', 'Pretérito Imperfeito', 'ongoing or habitual back then'],
+  ['futuro_prox', 'Futuro Próximo (ir + infinitivo)', 'the spoken future'],
+  ['condicional', 'Condicional', 'would'],
+  ['presente_conj', 'Presente do Conjuntivo', 'after que, talvez, espero que'],
+  ['imperativo', 'Imperativo', 'telling someone to do it'],
+];
+const tenses = p.conj ? TENSES.filter(([k]) => Array.isArray(p.conj[k])) : [];
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'DefinedTerm',
+      name: p.term,
+      inLanguage: 'pt-PT',
+      description: p.meanings.map((m) => m.trans).join('; ') || p.trans,
+      url: `https://azenha.ai${href(p.slug)}`,
+      inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'PapaGaio — European Portuguese dictionary', url: 'https://azenha.ai/papagaio/dictionary/' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'PapaGaio', item: 'https://azenha.ai/papagaio/' },
+        { '@type': 'ListItem', position: 2, name: 'Words', item: 'https://azenha.ai/papagaio/palavra/' },
+        { '@type': 'ListItem', position: 3, name: head, item: `https://azenha.ai${href(p.slug)}` },
+      ],
+    },
+  ],
+};
+---
+<BaseLayout title={title} desc={desc}>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld)} />
+
+  <nav class="crumbs muted" aria-label="Breadcrumb">
+    <a href={`${base}/dictionary/`} data-t>Dictionary</a> ›
+    <a href={`${base}/palavra/`} data-t>Words</a> ›
+    <span>{head}</span>
+  </nav>
+
+  <article class="panel word" lang="pt-PT">
+    <header class="wh">
+      <h1>{p.term}</h1>
+      {p.gender && <span class="muted">({p.gender})</span>}
+      <span class="muted pos">{posName}</span>
+      {p.level && <span class="lvl">{p.level}</span>}
+      {p.audio && <button class="say" data-src={AUDIO + p.audio} aria-label={`Play ${head}`} title="Listen">🔊</button>}
+      <button class="share" data-title={`${head} — ${en1}`} aria-label="Share" title="Share">🔗</button>
+    </header>
+    <p class="lead" lang="en">{p.trans}</p>
+    {p.trans_ru && <p class="ru muted" lang="ru">🇷🇺 {p.trans_ru}</p>}
+    {p.note && <p class="muted note" lang="en">{p.note}</p>}
+    {p.forms && (p.forms.pl || p.forms.f) && (
+      <p class="muted small" lang="en">
+        {p.forms.pl && <>Plural: <strong>{p.forms.pl}</strong></>}
+        {p.forms.pl && p.forms.f && ' · '}
+        {p.forms.f && <>Feminine: <strong>{p.forms.f}</strong>{p.forms.fpl && ` · ${p.forms.fpl}`}</>}
+      </p>
+    )}
+
+    {p.ex_t && (
+      <blockquote class="ex">
+        <div>{p.ex_t}</div>
+        {p.ex_trans && <div class="muted" lang="en">{p.ex_trans}</div>}
+      </blockquote>
+    )}
+
+    {p.meanings.length > 0 && (
+      <section>
+        <h2 class="moodlabel" data-t>Meanings</h2>
+        <ol class="means">
+          {p.meanings.map((m) => (
+            <li>
+              <strong lang="en">{m.trans}</strong>
+              {m.ru && <span class="muted" lang="ru"> · {m.ru}</span>}
+              {m.pt && <div class="muted small">{m.pt}</div>}
+              {m.ex && <div class="small"><em>{m.ex}</em></div>}
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {p.collocations.length > 0 && (
+      <section>
+        <h2 class="moodlabel" data-t>Collocations</h2>
+        {p.collocations.map((c) => (
+          <div class="coll">
+            {c.s ? <a href={href(c.s)}><code>{c.t}</code></a> : <code>{c.t}</code>}
+            <span class="muted" lang="en"> — {c.trans}</span>
+            {c.ru && <span class="muted" lang="ru"> · {c.ru}</span>}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {(p.synonyms.length > 0 || p.antonyms.length > 0) && (
+      <section>
+        {p.synonyms.length > 0 && <h2 class="moodlabel" data-t>Synonyms</h2>}
+        <div class="chips">
+          {p.synonyms.map((x) => x.s ? <a class="syn" href={href(x.s)}>{x.w}</a> : <span class="syn">{x.w}</span>)}
+        </div>
+        {p.antonyms.length > 0 && <h2 class="moodlabel" data-t>Opposites</h2>}
+        <div class="chips">
+          {p.antonyms.map((x) => x.s ? <a class="syn" href={href(x.s)}>{x.w}</a> : <span class="syn">{x.w}</span>)}
+        </div>
+      </section>
+    )}
+
+    {(p.grammar || p.grammar_ru) && (
+      <section>
+        <h2 class="moodlabel" data-t>Grammar</h2>
+        {p.grammar && <p class="small" lang="en">ℹ️ {p.grammar}</p>}
+        {p.grammar_ru && <p class="small muted" lang="ru">{p.grammar_ru}</p>}
+      </section>
+    )}
+
+    {tenses.length > 0 && (
+      <section>
+        <h2 class="moodlabel" data-t>Conjugations</h2>
+        {(p.conj.participio || p.conj.gerundio) && (
+          <p class="muted small">
+            {p.conj.participio && <>particípio <strong>{p.conj.participio}</strong></>}
+            {p.conj.participio && p.conj.gerundio && ' · '}
+            {p.conj.gerundio && <>gerúndio <strong>{p.conj.gerundio}</strong></>}
+          </p>
+        )}
+        <div class="tenses">
+          {tenses.map(([k, name, when]) => (
+            <div class="tense">
+              <strong>{name}</strong>
+              <div class="muted small" lang="en">{when}</div>
+              <table>
+                {p.conj[k].map((f, n) => (
+                  <tr><td class="muted">{PERSONS[n]}</td><td>{f && !/^[\s—–-]*$/.test(String(f)) ? f : '—'}</td></tr>
+                ))}
+              </table>
+              {p.conjEx?.[k]?.pt && <div class="small"><em>{p.conjEx[k].pt}</em>{p.conjEx[k].en && <span class="muted" lang="en"> — {p.conjEx[k].en}</span>}</div>}
+            </div>
+          ))}
+        </div>
+        <p class="small"><a href={`${base}/verbs/?v=${encodeURIComponent(head)}`} data-t>All twelve tenses</a> →</p>
+      </section>
+    )}
+
+    {p.madeira && p.madeira.length > 0 && (
+      <section>
+        <h2 class="moodlabel">🌴 <span data-t>On Madeira</span></h2>
+        {p.madeira.map((m) => (
+          <div class="isl">
+            <strong>{m.t}</strong>
+            <span lang="en"> — {m.e}</span>
+            {m.ru && <span class="muted" lang="ru"> · {m.ru}</span>}
+            {m.d && <div class="muted small"><em>{m.d}</em></div>}
+          </div>
+        ))}
+        <div class="muted small">Vocabulário Popular da Madeira, 1950 —
+          <a href={`${base}/madeirense/?q=${encodeURIComponent(head)}`} data-t>all Madeiran words</a></div>
+      </section>
+    )}
+  </article>
+
+  {p.related.length > 0 && (
+    <section class="rel">
+      <h2 class="moodlabel" data-t>Related words</h2>
+      <div class="relgrid">
+        {p.related.map((r) => (
+          <a class="relw" href={href(r.s)}><strong>{r.term}</strong><span class="muted">{r.trans}</span></a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <div class="panel cta">
+    <strong data-t>Learn it with spaced repetition</strong>
+    <p class="muted small" data-t>This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.</p>
+    <GetApp />
+    <p class="small"><a href={`${base}/dictionary/?q=${encodeURIComponent(head)}`} data-t>Open in the dictionary</a> · <a href={`${base}/practice/`} data-t>Practise now</a></p>
+  </div>
+
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('.say').forEach((b) => {
+      b.onclick = () => (window as any).pgPlayUrl?.(b.dataset.src) ?? new Audio(b.dataset.src).play();
+    });
+    document.querySelectorAll<HTMLButtonElement>('.share').forEach((b) => {
+      b.onclick = async () => {
+        const url = location.origin + location.pathname;
+        try {
+          if (navigator.share) { await navigator.share({ title: b.dataset.title, url }); return; }
+          await navigator.clipboard.writeText(url);
+          b.textContent = '✓';
+          setTimeout(() => { b.textContent = '🔗'; }, 1500);
+        } catch { /* cancelled */ }
+      };
+    });
+  </script>
+  <style>
+    .crumbs { font-size: 13.5px; margin: 0 0 12px; }
+    .word { padding: 20px 22px; }
+    .wh { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .wh h1 { margin: 0; font-size: 30px; }
+    .pos { font-size: 13.5px; font-style: italic; }
+    .lvl { font-size: 11.5px; background: var(--panel2); border-radius: 8px; padding: 2px 8px; color: var(--accent2); }
+    .say, .share { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 0 2px; }
+    .lead { font-size: 19px; margin: 8px 0 2px; }
+    .ru { margin: 2px 0 6px; }
+    .note { font-size: 14.5px; }
+    .small { font-size: 14px; }
+    .ex { margin: 14px 0 6px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--panel2); border-radius: 0 10px 10px 0; }
+    section { margin-top: 18px; }
+    h2.moodlabel { color: var(--muted); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; margin: 4px 0 8px; }
+    .means { margin: 0; padding-left: 20px; }
+    .means li { margin-bottom: 8px; }
+    .coll { font-size: 14.5px; margin-bottom: 4px; }
+    .coll code { color: var(--accent); }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+    .syn { background: var(--panel2); border-radius: 14px; padding: 3px 11px; font-size: 13.5px; color: var(--accent2); text-decoration: none; }
+    a.syn:hover { outline: 1px solid var(--accent); }
+    .tenses { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; }
+    .tense { border: 1px solid var(--panel2); border-radius: 12px; padding: 10px 12px; }
+    .tense table { margin-top: 6px; font-size: 14.5px; border-collapse: collapse; }
+    .tense td { padding: 1px 10px 1px 0; }
+    .isl { margin: 4px 0 10px; }
+    .rel { margin-top: 22px; }
+    .relgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+    .relw { display: flex; flex-direction: column; background: var(--panel); border-radius: 12px; padding: 10px 12px; text-decoration: none; color: var(--text); font-size: 14.5px; }
+    .relw:hover { outline: 1px solid var(--accent); }
+    .relw .muted { font-size: 12.5px; }
+    .cta { margin-top: 22px; }
+  </style>
+</BaseLayout>

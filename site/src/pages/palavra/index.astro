@@ -1,0 +1,54 @@
+---
+// Every word page, by topic: the door a crawler (and a browsing reader) uses
+// to reach the pages without a search box.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import data from '../../data/words.json';
+
+const base = '/papagaio';
+const NAMES = {
+  core: 'Everyday words', comida: 'Food', tempo: 'Time and days', madeira: 'Madeira', casa: 'Home',
+  fado: 'Fado', compras: 'Shopping', transporte: 'Transport', saude: 'Health', lugar: 'Places',
+  frase: 'Phrases', trabalho: 'Work', burocracia: 'Paperwork', sigla: 'Acronyms', roupa: 'Clothes',
+  financas: 'Money', natureza: 'Nature', social: 'People', numero: 'Numbers', familia: 'Family',
+  adverbio: 'Adverbs', cozinha: 'Kitchen', irregular: 'Irregular verbs', corpo: 'Body', escola: 'School',
+  sentimento: 'Feelings', minpair: 'Sound pairs', direcoes: 'Directions', cor: 'Colours',
+  'lugar-prep': 'Where things are', sobrevivencia: 'Survival', tecnologia: 'Technology',
+  material: 'Materials', cortesia: 'Courtesy', trap: 'False friends', animal: 'Animals',
+  pronome: 'Pronouns', interrogativo: 'Questions', media: 'Media', saudacao: 'Greetings',
+  cidade: 'Town', emergencia: 'Emergencies', cafe: 'Café', conector: 'Connectors', 'tempo-meteo': 'Weather',
+};
+const groups = new Map();
+for (const p of data.pages) {
+  if (!groups.has(p.topic)) groups.set(p.topic, []);
+  groups.get(p.topic).push(p);
+}
+const ordered = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+---
+<BaseLayout
+  title={`European Portuguese words — ${data.count} with audio and examples | PapaGaio`}
+  desc={`${data.count} European Portuguese (pt-PT) words and phrases, each with its meaning in English and Russian, native audio, examples, collocations and grammar. By topic: food, health, paperwork, transport, Madeira.`}>
+  <h1 data-t>Words</h1>
+  <p class="muted">
+    <span data-t>Every word and phrase the PapaGaio deck teaches, one page each: meanings in English and Russian, audio, examples, collocations, grammar and, for verbs, the tenses you need first.</span>
+    <a href={`${base}/dictionary/`} data-t>Search the full dictionary</a> →
+  </p>
+  <nav class="toc">
+    {ordered.map(([t, ps]) => <a href={`#${t}`}>{NAMES[t] ?? t} <span class="muted">{ps.length}</span></a>)}
+  </nav>
+  {ordered.map(([t, ps]) => (
+    <section id={t}>
+      <h2>{NAMES[t] ?? t}</h2>
+      <ul class="wl">
+        {ps.map((p) => <li><a href={`${base}/palavra/${p.slug}/`}>{p.term}</a> <span class="muted">— {p.trans}</span></li>)}
+      </ul>
+    </section>
+  ))}
+  <style>
+    .toc { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 6px; }
+    .toc a { background: var(--panel2); border-radius: 14px; padding: 3px 11px; font-size: 13.5px; text-decoration: none; }
+    section { margin-top: 22px; }
+    h2 { font-size: 18px; margin: 0 0 8px; }
+    .wl { columns: 260px; column-gap: 24px; margin: 0; padding: 0; list-style: none; }
+    .wl li { break-inside: avoid; font-size: 14.5px; padding: 2px 0; }
+  </style>
+</BaseLayout>
