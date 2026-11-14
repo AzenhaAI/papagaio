@@ -19,6 +19,7 @@ import { LEVELS as WORD_LEVELS } from './levels.js';
 import { FORMS } from './forms.js';
 import { BR_TO_PT } from './br_pt.js';
 import { searchKeys } from './search_keys.js';
+import { enFirst } from './en_first.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
 // a into b — the app's offline rule (offline_dict.dart _oneEditApart).
@@ -597,6 +598,26 @@ export async function handleApi(request, env, path) {
       ).bind(...keyIds).all().catch(() => ({ results: [] }));
       keyed = keyIds.map((id) => (results ?? []).find((r) => r.id === id)).filter(Boolean);
     }
+    // An English word leads with the Portuguese word it translates ("iron" →
+    // ferro) — but only when no Portuguese headword is spelled like the query,
+    // checked once the rows are in. Without it the prefix scan below answered
+    // "iron" with ironia, irónico, ironicamente. scripts/build_en_first.py.
+    const enIds = course === 'pt' && !keyed.length && !/[а-яё]/.test(raw) ? enFirst().get(s) : undefined;
+    // A Portuguese headword spelled like the query keeps the lead unless it is
+    // a rare loanword next to a common translation: "bus" (computing) and "go"
+    // (the board game) are real rows, autocarro and ir are what was meant.
+    const keyEnglish = async (rows) => {
+      if (!enIds?.length) return;
+      const same = rows.filter((r) => fold(r.term) === s);
+      const { results } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards WHERE id IN (${enIds.map((_, i) => `?${i + 1}`).join(',')})`
+      ).bind(...enIds).all().catch(() => ({ results: [] }));
+      const found = enIds.map((id) => (results ?? []).find((r) => r.id === id)).filter(Boolean);
+      if (!found.length) return;
+      const rank = (r) => (r.freq > 0 && r.freq < 900000 ? r.freq : 1e9);
+      if (same.length && Math.min(...same.map(rank)) < Math.min(...found.map(rank)) * 10) return;
+      keyed = found;
+    };
     // Two letters is not a lookup, it is a keystroke on the way to one — and
     // for anything the fast path cannot answer it costs a full scan of the
     // lexicon. Three is where a query starts meaning something.
@@ -688,6 +709,7 @@ export async function handleApi(request, env, path) {
           return f.startsWith(`${s} `) ? 1 : 2;
         };
         rows.sort((a, b) => tier(a) - tier(b) || (a.freq ?? 1e9) - (b.freq ?? 1e9));
+        await keyEnglish(rows);
         return json(await withVerb(rows.slice(0, 25)));
       }
     }
@@ -700,6 +722,7 @@ export async function handleApi(request, env, path) {
     // by substring, and the reader is still typing. The apps answer from the
     // pack they ship with, so what arrives here is the tail — worth a scan,
     // but only once the query is a word.
+    await keyEnglish([]);
     if (s.length < 3) return json({ q: s, words: [] });
 
     // The wide query reads ~140k rows; the same query answered once is kept in
