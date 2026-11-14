@@ -18,6 +18,7 @@ import { MADEIRA } from './madeira.js';
 import { LEVELS as WORD_LEVELS } from './levels.js';
 import { FORMS } from './forms.js';
 import { BR_TO_PT } from './br_pt.js';
+import { searchKeys } from './search_keys.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
 // a into b — the app's offline rule (offline_dict.dart _oneEditApart).
@@ -577,7 +578,25 @@ export async function handleApi(request, env, path) {
     // A Brazilian word gets the Portuguese one pinned above the answer, as in
     // the app ("ônibus" → autocarro).
     const inPt = course === 'pt' ? BR_TO_PT[s] : undefined;
-    const json = (body, status) => jsonResp(inPt && body && typeof body === 'object' ? { ...body, in_portugal: inPt } : body, status);
+    // Everyday phrases a resident types ("bus stop", «автобусная остановка»)
+    // lead with the word Portugal uses, as in the app's pack; a set phrase has
+    // no frequency of its own, so the ranking below let a Brazilian one-word
+    // gloss win, and "tax number" found nothing.
+    let keyed = [];
+    const json = (body, status) => {
+      if (keyed.length && body && Array.isArray(body.words)) {
+        const ids = new Set(keyed.map((r) => r.id));
+        body = { ...body, words: [...keyed, ...body.words.filter((r) => !ids.has(r.id))].slice(0, 25) };
+      }
+      return jsonResp(inPt && body && typeof body === 'object' ? { ...body, in_portugal: inPt } : body, status);
+    };
+    const keyIds = course === 'pt' ? searchKeys().get(s) : undefined;
+    if (keyIds?.length) {
+      const { results } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards WHERE id IN (${keyIds.map((_, i) => `?${i + 1}`).join(',')})`
+      ).bind(...keyIds).all().catch(() => ({ results: [] }));
+      keyed = keyIds.map((id) => (results ?? []).find((r) => r.id === id)).filter(Boolean);
+    }
     // Two letters is not a lookup, it is a keystroke on the way to one — and
     // for anything the fast path cannot answer it costs a full scan of the
     // lexicon. Three is where a query starts meaning something.
