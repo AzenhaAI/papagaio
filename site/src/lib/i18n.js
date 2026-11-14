@@ -45,6 +45,22 @@ export function langName(code) {
 }
 
 const RU = {
+  // Apps page
+  "One parrot, every screen": "Один попугай — на всех экранах",
+  "Free everywhere. One account — your cards follow you.": "Бесплатно везде. Один аккаунт — карточки с вами на любом устройстве.",
+  "iPhone & iPad": "iPhone и iPad",
+  "Browser": "Браузер",
+  "Nothing to install": "Без установки",
+  "Extension": "Расширение",
+  "Android without Google Play": "Android без Google Play",
+  "Install tips": "Советы по установке",
+  "APK: allow “unknown apps” when Android asks. It is a separate install from the Google Play one.": "APK: разрешите «неизвестные приложения», когда Android спросит. Это отдельная установка, не та, что из Google Play.",
+  "Windows: unzip and run papagaio_app.exe — SmartScreen wants one click.": "Windows: распакуйте и запустите papagaio_app.exe — SmartScreen попросит один клик.",
+  "Browser on a phone: Share → Add to Home Screen, and it opens like an app.": "Браузер на телефоне: «Поделиться» → «На экран Домой», и он откроется как приложение.",
+  "Only the apps work offline — the browser asks the server each time.": "Без интернета работают только приложения — браузер каждый раз обращается к серверу.",
+  "Yours": "Ваше",
+  "Install as an app": "Установить как приложение",
+
   'In Portugal:': 'В Португалии:',
   'Brazilian usage': 'бразильское',
   'Did you mean': 'Возможно, вы имели в виду',
@@ -258,6 +274,22 @@ const RU = {
 
 // European Portuguese (pt-PT) throughout, never Brazilian.
 const PT = {
+  // Apps page
+  "One parrot, every screen": "Um papagaio, todos os ecrãs",
+  "Free everywhere. One account — your cards follow you.": "Grátis em todo o lado. Uma conta — os teus cartões vão contigo.",
+  "iPhone & iPad": "iPhone e iPad",
+  "Browser": "Navegador",
+  "Nothing to install": "Sem instalar nada",
+  "Extension": "Extensão",
+  "Android without Google Play": "Android sem Google Play",
+  "Install tips": "Dicas de instalação",
+  "APK: allow “unknown apps” when Android asks. It is a separate install from the Google Play one.": "APK: permite «apps desconhecidas» quando o Android pedir. É uma instalação separada da do Google Play.",
+  "Windows: unzip and run papagaio_app.exe — SmartScreen wants one click.": "Windows: descomprime e abre papagaio_app.exe — o SmartScreen pede um clique.",
+  "Browser on a phone: Share → Add to Home Screen, and it opens like an app.": "Navegador no telemóvel: Partilhar → Adicionar ao ecrã principal, e abre como uma app.",
+  "Only the apps work offline — the browser asks the server each time.": "Só as apps funcionam offline — o navegador pergunta ao servidor de cada vez.",
+  "Yours": "O teu",
+  "Install as an app": "Instalar como app",
+
   'In Portugal:': 'Em Portugal:',
   'Brazilian usage': 'uso brasileiro',
   'Did you mean': 'Queria dizer',

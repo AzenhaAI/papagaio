@@ -255,9 +255,10 @@ async function handleUpdate(update, env) {
           [
             { text: '🌍 Website', url: 'https://azenha.ai/papagaio/' },
             { text: '📱 App Store', url: 'https://apps.apple.com/app/id6802084974' },
+            { text: '▶️ Google Play', url: 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio' },
           ],
           [
-            { text: '🤖 Android', url: 'https://azenha.ai/dl/PapaGaio.apk' },
+            { text: '🤖 Android APK', url: 'https://azenha.ai/dl/PapaGaio.apk' },
             { text: '💻 macOS', url: 'https://azenha.ai/dl/PapaGaio-mac.dmg' },
             { text: '🪟 Windows', url: 'https://azenha.ai/dl/PapaGaio-windows.zip' },
           ],
@@ -322,7 +323,8 @@ async function handleUpdate(update, env) {
         '🗑 /delete — erase me from your life, permanently.\n\n' +
         'Everything is free and there is nothing to buy.\n\n' +
         '📱 On the App Store: apps.apple.com/app/id6802084974\n' +
-        'Android, Mac, Windows and the web: azenha.ai/papagaio',
+        '▶️ On Google Play: play.google.com/store/apps/details?id=ai.azenha.papagaio\n' +
+        'Mac, Windows and the web: azenha.ai/papagaio',
     });
     return;
   }
