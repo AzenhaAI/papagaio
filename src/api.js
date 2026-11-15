@@ -9,7 +9,7 @@ import { chat, transcribe, availableModels, rateLimits } from './groq.js';
 import { chatCF } from './cfai.js';
 import { readAndTranslate } from './vision.js';
 import { lookupWiki } from './wiki.js';
-import { synthesize } from './tts.js';
+import { synthesize, googleVoiceList } from './tts.js';
 import { analyse } from './read.js';
 import { buildStats } from './stats.js';
 import { GLOSS_RU } from './verbs_ru.js';
@@ -200,6 +200,18 @@ export async function handleApi(request, env, path) {
       await env.DB.prepare(
         `INSERT INTO api_errors (at, path, why) VALUES (?1, '/api/translate', ?2)`
       ).bind(new Date().toISOString(), String(e.message ?? e).slice(0, 200)).run().catch(() => {});
+      return json({ error: e.message }, 502);
+    }
+  }
+
+  // Lists Google's voices for choosing GOOGLE_VOICES. Only in a local
+  // `wrangler dev --var TTS_DEBUG:1` run; production never sets TTS_DEBUG.
+  if (path === '/api/tts/voices' && env.TTS_DEBUG === '1') {
+    const lang = new URL(request.url).searchParams.get('lang') || 'pt-PT';
+    try {
+      const voices = await googleVoiceList(lang);
+      return json(voices.map((v) => ({ name: v.name, gender: v.ssmlGender })));
+    } catch (e) {
       return json({ error: e.message }, 502);
     }
   }
