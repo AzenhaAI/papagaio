@@ -2113,7 +2113,9 @@ async function tgVoice(env, chatId, bytes, caption) {
     body: fd,
   });
   const j = await r.json();
-  if (!j.ok) console.log('sendVoice failed:', JSON.stringify(j).slice(0, 200));
+  // Thrown, not just logged: every caller has a text fallback in its catch,
+  // and a refused voice used to skip it and lose the reply altogether.
+  if (!j.ok) throw new Error('sendVoice: ' + String(j.description ?? 'refused').slice(0, 200));
   return j;
 }
 

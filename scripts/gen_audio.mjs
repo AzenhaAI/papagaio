@@ -1,5 +1,5 @@
 // Card audio via Azure AI Speech, through src/tts.js itself.
-// Needs AZURE_SPEECH_KEY (and AZURE_SPEECH_REGION if not westeurope) in the env.
+// Needs AZURE_SPEECH_KEY (and AZURE_SPEECH_REGION if not northeurope) in the env.
 // Each character counts against the Speech resource's monthly quota.
 // Incremental: skips ids that already have an mp3 in OUT_DIR.
 // Output: mp3 files + build/audio.sql with UPDATE cards SET audio=...

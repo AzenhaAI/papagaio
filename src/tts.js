@@ -12,7 +12,7 @@
 // pre-generated and served from AUDIO_BASE, not synthesised here.
 //
 // Worker secrets: AZURE_SPEECH_KEY. Variable: AZURE_SPEECH_REGION (e.g.
-// "westeurope", the region the Speech resource was created in).
+// "northeurope", the region the Speech resource was created in).
 
 export const VOICES = {
   pt: 'pt-PT-DuarteNeural',
@@ -63,5 +63,9 @@ export async function synthesize(text, course) {
       : (await resp.text().catch(() => '')).slice(0, 120);
     throw new Error(`tts: HTTP ${resp.status} ${why}`.trim());
   }
-  return new Uint8Array(await resp.arrayBuffer());
+  const audio = new Uint8Array(await resp.arrayBuffer());
+  // Azure answers 200 with no bytes for text it cannot pronounce; an empty
+  // mp3 is a failure, not an answer (it was cached and sent to Telegram).
+  if (!audio.byteLength) throw new Error('tts: empty audio');
+  return audio;
 }

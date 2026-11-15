@@ -205,19 +205,25 @@ export async function handleApi(request, env, path) {
   }
 
   if (path === '/api/tts' && request.method === 'POST') {
-    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
     const body = await request.json().catch(() => null);
     const text = String(body?.text ?? '').trim().slice(0, 300);
     if (!text) return json({ error: 'text is required' }, 400);
     const course = body?.course === 'en' ? 'en' : 'pt';
+    // Both voices read Latin script only. Cyrillic or emoji alone came back
+    // as nonsense or as an empty mp3 (cached for a week, so the button stayed
+    // silent); a 422 lets the client fall back to the device voice.
+    if (!/\p{Script=Latin}/u.test(text)) return json({ error: 'nothing to say in this voice' }, 422);
 
-    // Same phrase → same audio; cache it at the edge for a week.
+    // Same phrase → same audio; cache it at the edge for a week. Looked up
+    // before the daily cap: a replay from the cache costs neither a D1 write
+    // nor a synthesis.
     const cache = caches.default;
     const key = new Request(
       `https://papagaio.cache/tts/${course}/${encodeURIComponent(text)}`
     );
     const hit = await cache.match(key);
     if (hit) return hit;
+    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
 
     try {
       const audio = await synthesize(text, course);
