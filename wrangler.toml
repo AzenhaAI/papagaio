@@ -62,5 +62,6 @@ service = "morning-brief-bot"
 
 [vars]
 AUDIO_BASE = "https://azenha.ai/papagaio/audio/"
+AZURE_SPEECH_REGION = "westeurope"
 
-# Secrets (not in this file): TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY, ALERT_SECRET (same as morning-brief-bot's) — see scripts/setup_webhook.sh
+# Secrets (not in this file): AZURE_SPEECH_KEY (Azure AI Speech, src/tts.js), TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY, ALERT_SECRET (same as morning-brief-bot's) — see scripts/setup_webhook.sh
