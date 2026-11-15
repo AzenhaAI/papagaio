@@ -1,5 +1,5 @@
 // Packs the built word pages into a shell plus a few data files, so they cost
-// the site 17 files instead of one each.
+// the site SHARDS + 1 files instead of one each.
 //
 // Why: azenha.ai deploys to Cloudflare Pages, which refuses any deployment
 // over 20,000 files, and the site already sat at ~19,840. 1,088 pages as
@@ -15,7 +15,11 @@
 import { readFileSync, writeFileSync, readdirSync, rmSync, mkdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const SHARDS = 16;
+// 11,000 pages as 16 shards made each a ~3 MB JSON the Function parses on a
+// cold start; 64 keep a shard well under a megabyte. The count is written into
+// the shell (<!--pg-shards:N-->), so the Function reads it instead of keeping
+// a copy of this number in step.
+export const SHARDS = 64;
 // Same hash in the Function: which shard a slug lives in.
 export const shardOf = (slug) => {
   let h = 0;
@@ -72,7 +76,7 @@ export function packWordPages(dist) {
   if (!count) return { count };
   const out = join(dist, '_words');
   mkdirSync(out, { recursive: true });
-  writeFileSync(join(out, 'shell.html'), shell);
+  writeFileSync(join(out, 'shell.html'), `<!--pg-shards:${SHARDS}-->` + shell);
   shards.forEach((s, i) => writeFileSync(join(out, `${i}.json`), JSON.stringify(s)));
   return { count, files: SHARDS + 1 };
 }

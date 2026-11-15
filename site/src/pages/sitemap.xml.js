@@ -1,6 +1,7 @@
 // sitemap.xml: the hand-kept section pages plus one URL per word page.
 // Replaces the static public/sitemap.xml so new word pages are never missing.
 import data from '../data/words.json';
+import { letterOf } from '../lib/letters.js';
 
 const STATIC = [
   ['https://azenha.ai/papagaio/', '1.0'],
@@ -23,8 +24,12 @@ const STATIC = [
 
 export function GET() {
   const enc = (s) => encodeURI(s).replace(/&/g, '&amp;');
-  const words = data.pages.map((p) => [`https://azenha.ai/papagaio/palavra/${p.slug}/`, p.rank && p.rank <= 300 ? '0.6' : '0.5']);
-  const all = [...STATIC, ['https://azenha.ai/papagaio/palavra/', '0.7'], ...words];
+  const words = data.pages.map((p) => [`https://azenha.ai/papagaio/palavra/${p.slug}/`,
+    p.lex ? '0.4' : p.rank && p.rank <= 300 ? '0.6' : '0.5']);
+  const letters = [...new Set(data.pages.filter((p) => p.lex).map((p) => letterOf(p.term)))]
+    .filter((l) => /^[a-z]$/.test(l)).sort()
+    .map((l) => [`https://azenha.ai/papagaio/palavras/${l}/`, '0.5']);
+  const all = [...STATIC, ['https://azenha.ai/papagaio/palavra/', '0.7'], ...letters, ...words];
   const body = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     all.map(([u, pr]) => `  <url><loc>${enc(u)}</loc><lastmod>${data.built}</lastmod><priority>${pr}</priority></url>`).join('\n') +
     '\n</urlset>\n';

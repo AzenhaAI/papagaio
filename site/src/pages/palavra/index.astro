@@ -3,6 +3,7 @@
 // to reach the pages without a search box.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import data from '../../data/words.json';
+import { letterOf } from '../../lib/letters.js';
 
 const base = '/papagaio';
 const NAMES = {
@@ -17,21 +18,28 @@ const NAMES = {
   pronome: 'Pronouns', interrogativo: 'Questions', media: 'Media', saudacao: 'Greetings',
   cidade: 'Town', emergencia: 'Emergencies', cafe: 'Café', conector: 'Connectors', 'tempo-meteo': 'Weather',
 };
+const deck = data.pages.filter((p) => !p.lex);
+const letters = [...new Set(data.pages.filter((p) => p.lex).map((p) => letterOf(p.term)))]
+  .filter((l) => /^[a-z]$/.test(l)).sort();
 const groups = new Map();
-for (const p of data.pages) {
+for (const p of deck) {
   if (!groups.has(p.topic)) groups.set(p.topic, []);
   groups.get(p.topic).push(p);
 }
 const ordered = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
 ---
 <BaseLayout
-  title={`European Portuguese words — ${data.count} with audio and examples | PapaGaio`}
-  desc={`${data.count} European Portuguese (pt-PT) words and phrases, each with its meaning in English and Russian, native audio, examples, collocations and grammar. By topic: food, health, paperwork, transport, Madeira.`}>
+  title={`European Portuguese words — ${data.count.toLocaleString('en')} with meanings and examples | PapaGaio`}
+  desc={`${deck.length} European Portuguese (pt-PT) words and phrases with native audio, examples, collocations and grammar, by topic — and ${(data.count - deck.length).toLocaleString('en')} more frequent dictionary words A–Z, each with its meaning in English and Russian.`}>
   <h1 data-t>Words</h1>
   <p class="muted">
     <span data-t>Every word and phrase the PapaGaio deck teaches, one page each: meanings in English and Russian, audio, examples, collocations, grammar and, for verbs, the tenses you need first.</span>
     <a href={`${base}/dictionary/`} data-t>Search the full dictionary</a> →
   </p>
+  <p><strong data-t>Dictionary words A–Z</strong> <span class="muted small" data-t>The next 10,000 most frequent words of the dictionary, one page each, by first letter.</span></p>
+  <nav class="toc az">
+    {letters.map((l) => <a href={`${base}/palavras/${l}/`}>{l.toUpperCase()}</a>)}
+  </nav>
   <nav class="toc">
     {ordered.map(([t, ps]) => <a href={`#${t}`}>{NAMES[t] ?? t} <span class="muted">{ps.length}</span></a>)}
   </nav>

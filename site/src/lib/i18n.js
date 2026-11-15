@@ -46,6 +46,10 @@ export function langName(code) {
 
 const RU = {
   // Word pages (/palavra/)
+  "Examples": "Примеры",
+  "Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.": "Добавьте его в свои карточки в приложении PapaGaio: 110 000 слов без интернета, все глаголы во всех временах и слова Мадейры. Бесплатно, без регистрации.",
+  "Dictionary words A–Z": "Слова словаря от А до Я",
+  "The next 10,000 most frequent words of the dictionary, one page each, by first letter.": "Следующие 10 000 самых частых слов словаря, у каждого своя страница, по первой букве.",
   "Word page": "Страница слова",
   "Browse every deck word, one page each": "Все слова колоды — у каждого своя страница",
   "page": "страница",
@@ -294,6 +298,10 @@ const RU = {
 // European Portuguese (pt-PT) throughout, never Brazilian.
 const PT = {
   // Word pages (/palavra/)
+  "Examples": "Exemplos",
+  "Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.": "Junte-a aos seus cartões na app PapaGaio: 110 000 palavras sem internet, todos os verbos em todos os tempos e as palavras da Madeira. Grátis, sem conta.",
+  "Dictionary words A–Z": "Palavras do dicionário de A a Z",
+  "The next 10,000 most frequent words of the dictionary, one page each, by first letter.": "As 10 000 palavras seguintes mais frequentes do dicionário, cada uma com a sua página, pela primeira letra.",
   "Word page": "Página da palavra",
   "Browse every deck word, one page each": "Todas as palavras do baralho, cada uma com a sua página",
   "page": "página",

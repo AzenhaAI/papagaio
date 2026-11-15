@@ -1,5 +1,6 @@
 ---
-// One page per deck word or phrase, drawn at build time from
+// One page per deck word or phrase, and per frequent dictionary headword
+// (p.lex: the offline pack's meanings, Tatoeba examples), drawn at build time from
 // src/data/words.json (scripts/export_word_pages.mjs). The same article the
 // dictionary card shows, but in the HTML itself, at its own address, with its
 // own title — the dictionary's ?q= card is invisible to a search engine.
@@ -29,7 +30,9 @@ const desc = [
   `${p.term} (${posName}${gender ? ', ' + gender : ''}): ${p.trans}.`,
   ru1 ? `Russian: ${ru1}.` : '',
   p.ex_t ? `«${p.ex_t}»${p.ex_trans ? ' — ' + p.ex_trans : ''}` : '',
-  'Audio, examples and grammar in European Portuguese (pt-PT).',
+  p.lex
+    ? `Meaning in English and Russian, Portuguese definition${p.ex_t ? ', examples' : ''}${p.conj ? ', conjugation' : ''}. European Portuguese (pt-PT).`
+    : 'Audio, examples and grammar in European Portuguese (pt-PT).',
 ].filter(Boolean).join(' ').slice(0, 300);
 
 const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
@@ -108,6 +111,7 @@ const ld = {
         <ol class="means">
           {p.meanings.map((m) => (
             <li>
+              {p.lex && p.meanings.length > 1 && m.pos && <span class="muted pos">{POS[m.pos] ?? m.pos}{m.g ? ` (${m.g})` : ''} </span>}
               <strong lang="en">{m.trans}</strong>
               {m.ru && <span class="muted" lang="ru"> · {m.ru}</span>}
               {m.pt && <div class="muted small">{m.pt}</div>}
@@ -115,6 +119,19 @@ const ld = {
             </li>
           ))}
         </ol>
+      </section>
+    )}
+
+    {p.examples?.length > 0 && (
+      <section>
+        <h2 class="moodlabel" data-t>Examples</h2>
+        {p.examples.map((e) => (
+          <div class="exl">
+            <div>{e.pt}</div>
+            {e.en && <div class="muted small" lang="en">{e.en}</div>}
+            {e.ru && <div class="muted small" lang="ru">{e.ru}</div>}
+          </div>
+        ))}
       </section>
     )}
 
@@ -195,6 +212,11 @@ const ld = {
           <a href={`${base}/madeirense/?q=${encodeURIComponent(head)}`} data-t>all Madeiran words</a></div>
       </section>
     )}
+    {p.lex && (
+      <p class="muted src">
+        <span data-t>Meanings</span>: <a href={`https://en.wiktionary.org/wiki/${encodeURIComponent(head)}#Portuguese`} rel="nofollow">Wiktionary</a> (CC BY-SA 4.0){(p.ex_t || p.examples?.length > 0) && <> · <span data-t>Examples</span>: <a href="https://tatoeba.org" rel="nofollow">Tatoeba</a> (CC BY 2.0 FR)</>}
+      </p>
+    )}
   </article>
 
   {p.related.length > 0 && (
@@ -210,7 +232,9 @@ const ld = {
 
   <div class="panel cta">
     <strong data-t>Learn it with spaced repetition</strong>
-    <p class="muted small" data-t>This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.</p>
+    {p.lex
+      ? <p class="muted small" data-t>Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.</p>
+      : <p class="muted small" data-t>This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.</p>}
     <GetApp />
     <p class="small"><a href={`${base}/dictionary/?q=${encodeURIComponent(head)}`} data-t>Open in the dictionary</a> · <a href={`${base}/practice/`} data-t>Practise now</a></p>
   </div>
@@ -258,6 +282,8 @@ const ld = {
     .tense table { margin-top: 6px; font-size: 14.5px; border-collapse: collapse; }
     .tense td { padding: 1px 10px 1px 0; }
     .isl { margin: 4px 0 10px; }
+    .exl { margin: 0 0 10px; padding-left: 12px; border-left: 2px solid var(--panel2); }
+    .src { font-size: 12.5px; margin: 18px 0 0; }
     .rel { margin-top: 22px; }
     .relgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
     .relw { display: flex; flex-direction: column; background: var(--panel); border-radius: 12px; padding: 10px 12px; text-decoration: none; color: var(--text); font-size: 14.5px; }

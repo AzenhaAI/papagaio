@@ -1,0 +1,46 @@
+---
+// The dictionary word pages by first letter: how a crawler (and a browsing
+// reader) reaches the 10,000 /palavra/ pages that are not on the deck. Real
+// files, one per letter; the word pages themselves are served by a Function.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import data from '../../data/words.json';
+import { letterOf } from '../../lib/letters.js';
+
+export function getStaticPaths() {
+  const by = new Map();
+  for (const p of data.pages.filter((x) => x.lex)) {
+    const l = letterOf(p.term);
+    if (!/^[a-z]$/.test(l)) continue;
+    if (!by.has(l)) by.set(l, []);
+    by.get(l).push(p);
+  }
+  const letters = [...by.keys()].sort();
+  return letters.map((l) => ({
+    params: { letter: l },
+    props: { l, letters, words: by.get(l).sort((a, b) => a.term.localeCompare(b.term, 'pt')) },
+  }));
+}
+const { l, letters, words } = Astro.props;
+const base = '/papagaio';
+const L = l.toUpperCase();
+---
+<BaseLayout
+  title={`European Portuguese words starting with ${L} — ${words.length} with meanings | PapaGaio`}
+  desc={`${words.length} frequent European Portuguese (pt-PT) words starting with ${L}, each on its own page: meaning in English and Russian, Portuguese definition, examples and, for verbs, conjugation.`}>
+  <nav class="crumbs muted"><a href={`${base}/palavra/`} data-t>Words</a> › {L}</nav>
+  <h1>{L}</h1>
+  <nav class="az">
+    {letters.map((x) => x === l ? <strong>{x.toUpperCase()}</strong> : <a href={`${base}/palavras/${x}/`}>{x.toUpperCase()}</a>)}
+  </nav>
+  <ul class="wl">
+    {words.map((p) => <li><a href={`${base}/palavra/${p.slug}/`}>{p.term}</a> <span class="muted">— {p.trans}</span></li>)}
+  </ul>
+  <style>
+    .crumbs { font-size: 13.5px; margin: 0 0 8px; }
+    .az { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 16px; }
+    .az a, .az strong { min-width: 30px; text-align: center; background: var(--panel2); border-radius: 10px; padding: 4px 8px; text-decoration: none; }
+    .az strong { background: var(--accent); color: var(--bg); }
+    .wl { columns: 260px; column-gap: 24px; margin: 0; padding: 0; list-style: none; }
+    .wl li { break-inside: avoid; font-size: 14.5px; padding: 2px 0; }
+  </style>
+</BaseLayout>
