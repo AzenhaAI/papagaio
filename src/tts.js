@@ -27,7 +27,7 @@ let config = { key: '', region: '' };
 export function configureTts(env) {
   config = {
     key: env?.AZURE_SPEECH_KEY || '',
-    region: env?.AZURE_SPEECH_REGION || 'westeurope',
+    region: env?.AZURE_SPEECH_REGION || 'northeurope',
   };
 }
 
