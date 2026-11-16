@@ -71,6 +71,11 @@ AZURE_SPEECH_REGION = "northeurope"
 # place of LIKE/instr scans that emptied D1's free daily read allowance. They
 # deploy with the code, so index and code never disagree. run_worker_first
 # keeps them off the public paths: only the Worker reads them.
+# build/ is not in git: a checkout without the index stops here instead of
+# deploying a Worker whose wide search answers nothing.
+[build]
+command = "test -f build/search_index/manifest.json || { echo 'search index missing: node scripts/build_search_index.mjs --dump --dump-examples' >&2; exit 1; }"
+
 [assets]
 directory = "./build/search_index"
 binding = "SEARCH_FILES"

@@ -617,7 +617,7 @@ export async function handleApi(request, env, path) {
     const cardsById = async (list) => {
       if (!list.length) return [];
       const { results: got } = await env.DB.prepare(
-        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards WHERE id IN (${list.map((_, i) => `?${i + 1}`).join(',')})`
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq, fold FROM cards WHERE id IN (${list.map((_, i) => `?${i + 1}`).join(',')})`
       ).bind(...list).all();
       const m = new Map((got ?? []).map((r) => [r.id, r]));
       return list.map((id) => m.get(id)).filter(Boolean);
@@ -762,8 +762,9 @@ export async function handleApi(request, env, path) {
     const edge = typeof caches !== 'undefined' ? caches.default : null;
     const keptWide = edge ? await edge.match(wideKey).catch(() => null) : null;
     if (keptWide) return json(await keptWide.json());
+    let indexFailed = false;
     const answer = async (body) => {
-      if (edge) await edge.put(wideKey, new Response(JSON.stringify(body), {
+      if (edge && !indexFailed) await edge.put(wideKey, new Response(JSON.stringify(body), {
         headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=2592000' },
       })).catch(() => {});
       return json(body);
@@ -778,9 +779,23 @@ export async function handleApi(request, env, path) {
     // the old scan runs.
     let results;
     const cyr = /[а-яё]/.test(raw);
-    const ids = await indexSearch(env, course, cyr ? [s, ruNorm(raw), ruNorm(ruQ)] : [s]).catch(() => []);
+    // A phrase is matched word by word (src/search_index.js), so its rows are
+    // checked for the whole phrase here; extra candidates cover the ones the
+    // check drops. A failed index read is logged and its answer not cached:
+    // an empty result kept for a month would hide the word long after.
+    const phrase = (cyr ? ruQ : s).includes(' ');
+    const ids = await indexSearch(env, course, cyr ? [s, ruNorm(raw), ruNorm(ruQ)] : [s], phrase ? 75 : 25)
+      .catch((e) => { console.error('search index', e?.message ?? e); indexFailed = true; return []; });
     if (ids) {
       results = await cardsById(ids);
+      if (phrase) {
+        const words = (x) => ` ${String(x ?? '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim()} `;
+        const has = (hay, needle) => words(hay).includes(words(needle));
+        results = results.filter((r) => has(r.fold, s)
+          || has(ruNorm(r.trans_ru), ruNorm(ruQ)) || has(ruNorm(r.trans_ru), ruNorm(raw))).slice(0, 25);
+      }
+      // fold is for the check above, not for the app.
+      results = results.map(({ fold: _f, ...r }) => r);
     } else {
       ({ results } = await env.DB.prepare(
         `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
@@ -895,7 +910,8 @@ export async function handleApi(request, env, path) {
     // then reads those few rows by rowid instead of instr() over the pair.
     // A phrase ("bom dia") is found word by word, so its rows are checked for
     // the words in order here; extra candidates make up for the ones dropped.
-    const exIds = await exampleIds(env, pair, list, limit * 4).catch(() => []);
+    const exIds = await exampleIds(env, pair, list, limit * 4)
+      .catch((e) => { console.error('examples index', e?.message ?? e); return []; });
     let results;
     if (exIds) {
       if (exIds.length) {

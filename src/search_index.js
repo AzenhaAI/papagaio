@@ -27,7 +27,7 @@ export const tokens = (s) => String(s ?? '').split(/[^\p{L}\p{N}]+/u).filter((t)
 // Shards are small and immutable until the next upload, so an isolate keeps
 // the last few it read.
 const kept = new Map();
-const KEEP = 24;
+const KEEP = 48;
 
 async function shard(env, course, n) {
   const key = `${course}/${n}.json`;
@@ -60,20 +60,29 @@ async function matchToken(env, course, t) {
   return hits;
 }
 
-/** A phrase matches cards holding all its words; the last may be unfinished. */
+/** At most this many words of a query are looked up: each is a shard read. */
+export const MAX_WORDS = 4;
+
+/** A phrase matches cards holding all its words; the last may be unfinished.
+ *  A word whose list is full (CAP entries: "для", "the") cannot narrow the set
+ *  without losing rows, so it is left to the caller's phrase check. */
 async function matchPhrase(env, course, text) {
-  const ts = tokens(text);
+  const ts = tokens(text).slice(0, MAX_WORDS);
   if (!ts.length) return new Map();
+  const lists = [];
+  for (const t of ts) lists.push(await matchToken(env, course, t));
+  const narrowing = lists.filter((m) => m.size < CAP);
+  const use = narrowing.length ? narrowing : lists;
   let acc = null;
-  for (const t of ts) {
-    const m = await matchToken(env, course, t);
-    if (!acc) { acc = m; continue; }
+  for (const m of use) {
+    if (!acc) { acc = new Map(m); continue; }
     const next = new Map();
     for (const [id, a] of acc) {
       const b = m.get(id);
       if (b) next.set(id, { tier: Math.max(a.tier, b.tier), freq: a.freq });
     }
     acc = next;
+    if (!acc.size) break;
   }
   return acc;
 }
@@ -108,6 +117,9 @@ export async function indexSearch(env, course, texts, limit = 25) {
 
 export const EX_SHARDS = 512;
 export const EX_CAP = 60;
+/** Forms of a word looked up for examples: the word, then its commonest forms.
+ *  A verb has ~50; each is a shard read, so the list is cut here. */
+export const MAX_FORMS = 24;
 export const exTokens = (s) => String(s ?? '').split(/[^\p{L}\p{N}]+/u).filter((t) => t.length >= 2);
 export const exShardOf = (t) => shardOf(t) % EX_SHARDS;
 
@@ -116,16 +128,22 @@ export const exShardOf = (t) => shardOf(t) % EX_SHARDS;
 export async function exampleIds(env, pair, forms, limit) {
   if (!env.SEARCH_FILES) return null;
   const best = new Map();
-  for (const form of forms) {
-    const ts = exTokens(form);
-    let acc = null;
+  for (const form of forms.slice(0, MAX_FORMS)) {
+    const ts = exTokens(form).slice(0, MAX_WORDS);
+    const lists = [];
     for (const t of ts) {
       const s = await shard(env, `ex-${pair}`, exShardOf(t));
-      const m = new Map(s[t] ?? []);
+      lists.push(new Map(s[t] ?? []));
+    }
+    // As in matchPhrase: a full list cannot narrow; the caller checks the phrase.
+    const narrowing = lists.filter((m) => m.size < EX_CAP);
+    const use = narrowing.length ? narrowing : lists;
+    let acc = null;
+    for (const m of use) {
       acc = acc ? new Map([...acc].filter(([id]) => m.has(id))) : m;
       if (!acc.size) break;
     }
-    for (const [id, rank] of acc ?? []) best.set(id, rank);
+    for (const [id, rank] of acc ?? []) if (!best.has(id) || rank < best.get(id)) best.set(id, rank);
   }
   return [...best].sort((a, b) => a[1] - b[1] || a[0] - b[0]).slice(0, limit).map(([id]) => id);
 }
