@@ -8,8 +8,10 @@ import { letterOf } from '../../lib/letters.js';
 
 export function getStaticPaths() {
   const by = new Map();
-  for (const p of data.pages.filter((x) => x.lex)) {
-    const l = letterOf(p.term);
+  // Every word page, deck and dictionary alike, filed by its headword without
+  // the article ("o gato" under g), the same letter its breadcrumb names.
+  for (const p of data.pages) {
+    const l = letterOf(String(p.term).replace(/^([oa]s? |um |uma )/i, ''));
     if (!/^[a-z]$/.test(l)) continue;
     if (!by.has(l)) by.set(l, []);
     by.get(l).push(p);

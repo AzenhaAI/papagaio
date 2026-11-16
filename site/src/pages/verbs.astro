@@ -321,6 +321,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       }
       show(v);
     });
+    // ?v=falar opens that verb straight away: the word pages link here with it
+    // ("All twelve tenses"), and the link used to land on an empty search.
+    const asked = new URLSearchParams(location.search).get('v');
+    if (asked) { q.value = asked; show(asked.trim()); }
   </script>
   <style is:global>
     .mood {
