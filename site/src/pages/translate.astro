@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Everywhere from '../components/Everywhere.astro';
+import { APP_LD } from '../lib/app_ld.js';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
-<BaseLayout title="Translate — PapaGaio"
-  desc="A translator that guarantees European Portuguese: pt-PT output, misspellings corrected, Brazilian divergences flagged. Single words get a full dictionary article with real example sentences.">
+<BaseLayout title="Portuguese translator (pt-PT) — PapaGaio"
+  desc="Free English and Russian to European Portuguese translator: pt-PT only, typos fixed, Brazilian variants flagged, every word with audio and examples.">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(APP_LD)} />
   <h1 data-t>Translate into European Portuguese</h1>
   <p class="muted" style="max-width: 640px;" data-t>
     The Portuguese actually spoken in Portugal and Madeira. Big translators

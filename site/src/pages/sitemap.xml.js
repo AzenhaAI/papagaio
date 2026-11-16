@@ -4,8 +4,10 @@ import data from '../data/words.json';
 import { shelfOf } from '../lib/letters.js';
 
 const STATIC = [
-  ['https://azenha.ai/papagaio/', '1.0'],
-  ['https://azenha.ai/papagaio/translate/', '0.9'],
+  // /papagaio/ opens the translator, so the translator is the page search
+  // engines index as the front door: first, and at the top priority.
+  ['https://azenha.ai/papagaio/translate/', '1.0'],
+  ['https://azenha.ai/papagaio/', '0.9'],
   ['https://azenha.ai/papagaio/practice/', '0.9'],
   ['https://azenha.ai/papagaio/coach/', '0.9'],
   ['https://azenha.ai/papagaio/read/', '0.9'],
