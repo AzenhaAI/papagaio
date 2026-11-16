@@ -3,14 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Support — PapaGaio"
   desc="Help for the PapaGaio apps: starting without Telegram, syncing progress between devices, offline dictionaries, audio and account deletion.">
-  <h1>Support</h1>
-  <p class="muted" style="max-width:640px;">
+  <h1 data-th="support.title">Support</h1>
+  <p data-th="support.intro" class="muted" style="max-width:640px;">
     Help for the PapaGaio apps — iPhone, iPad, Android, Mac and Windows — and
     for the Telegram bot.
   </p>
 
-  <h2>Contact</h2>
-  <p style="max-width:640px;">
+  <h2 data-th="support.contact.h">Contact</h2>
+  <p data-th="support.contact" style="max-width:640px;">
     Email <a href="mailto:agent@azenha.ai">agent@azenha.ai</a> —
     questions, bug reports and suggestions are all welcome, usually answered
     within a couple of days. If you prefer chat, the bot
@@ -19,17 +19,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Written out again, unlinked: Cloudflare rewrites mailto links into its
        own anti-spam redirect, so anyone reading the page source — an app
        reviewer, for instance — sees a placeholder instead of an address. -->
-  <p class="muted" style="max-width:640px; font-size:14px;">
+  <p data-th="support.spelled" class="muted" style="max-width:640px; font-size:14px;">
     Support address, spelled out: agent [at] azenha.ai — Cloudflare rewrites
     any address it recognises into an anti-spam redirect, so the readable copy
     has to dodge the scanner to stay readable in the page source.
   </p>
 
-  <h2>Common questions</h2>
+  <h2 data-th="support.faq.h">Common questions</h2>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>Do I need an account?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.account.q">Do I need an account?</strong>
+    <p data-th="support.account.a" class="muted" style="margin:6px 0 0;">
       No. The app opens straight into the translator and the dictionary. Tap
       <em>start here</em> on the Cards tab and it creates a profile on the
       spot — no email, no password, nothing to remember.
@@ -37,8 +37,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>How do I get the same progress on my phone and my laptop?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.sync.q">How do I get the same progress on my phone and my laptop?</strong>
+    <p data-th="support.sync.a" class="muted" style="margin:6px 0 0;">
       Send <code>/link</code> to <a href="https://t.me/papagaio_ebot">@papagaio_ebot</a>,
       then paste the code it replies with into the app (Settings → Pairing
       code). Every device holding that code shares one deck and one review
@@ -47,8 +47,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>Does it work without internet?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.offline.q">Does it work without internet?</strong>
+    <p data-th="support.offline.a" class="muted" style="margin:6px 0 0;">
       In the apps, yes: the Portuguese dictionary (110,133 entries) is built in
       and works offline from the first launch, and more packs are in Settings →
       Offline dictionaries. This website needs a connection. Cards you have already synced also review offline, and your
@@ -58,8 +58,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>There is no sound.</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.sound.q">There is no sound.</strong>
+    <p data-th="support.sound.a" class="muted" style="margin:6px 0 0;">
       Check the silent switch and the volume first — audio plays through the
       media channel. Recorded audio is fetched once and cached, so the very
       first play of a word needs a connection.
@@ -67,8 +67,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>Why European Portuguese only?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.ptpt.q">Why European Portuguese only?</strong>
+    <p data-th="support.ptpt.a" class="muted" style="margin:6px 0 0;">
       Because that is the point. Most translators quietly answer in the
       Brazilian variant; PapaGaio always answers in the Portuguese spoken in
       Portugal and Madeira, and flags every word where the two differ.
@@ -76,8 +76,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>How do I delete my data?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.delete.q">How do I delete my data?</strong>
+    <p data-th="support.delete.a" class="muted" style="margin:6px 0 0;">
       Send <code>/delete</code> to the bot, or email us from the address above
       and say so — the profile, the cards you added and the review history go
       with it. Deleting the app alone removes only the local copy.
@@ -85,16 +85,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div>
 
   <div class="panel" style="max-width:720px; margin-bottom:12px;">
-    <strong>Is it really free?</strong>
-    <p class="muted" style="margin:6px 0 0;">
+    <strong data-th="support.free.q">Is it really free?</strong>
+    <p data-th="support.free.a" class="muted" style="margin:6px 0 0;">
       Yes — no ads, no subscription, no premium tier, nothing locked. It runs on
       free infrastructure and is built as a language-learning tool, not a
       business.
     </p>
   </div>
 
-  <h2>Privacy</h2>
-  <p class="muted" style="max-width:640px;">
+  <h2 data-th="support.privacy.h">Privacy</h2>
+  <p data-th="support.privacy" class="muted" style="max-width:640px;">
     What is stored and what is not:
     <a href="/papagaio/privacy/">privacy policy</a>.
   </p>

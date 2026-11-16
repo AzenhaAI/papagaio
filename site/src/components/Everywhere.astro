@@ -4,35 +4,74 @@
 // The product lives in seven places and each page mentioned whichever one it
 // happened to be about — someone reading the translator page had no idea the
 // bot existed, and the browser panel was invisible unless you went looking.
+// The doors are written out one by one rather than mapped from a list, so
+// that each line carries its own [data-th] id (scripts/check_l10n.mjs reads
+// the ids from the source).
 const base = '/papagaio';
-
-const doors = [
-  { icon: '🌍', name: 'In the browser', line: 'Nothing to install', href: `${base}/translate/` },
-  { icon: '📱', name: 'iPhone & iPad', line: 'On the App Store', href: 'https://apps.apple.com/app/papagaio-portugal/id6802084974' },
-  { icon: '🤖', name: 'Android', line: 'On Google Play', href: 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio' },
-  { icon: '💻', name: 'macOS', line: 'Disk image, 22 MB', href: '/dl/PapaGaio-mac.dmg' },
-  { icon: '🪟', name: 'Windows', line: 'Zip, 19 MB', href: '/dl/PapaGaio-windows.zip' },
-  { icon: '✈️', name: 'Telegram bot', line: 'Cards and voice in chat', href: 'https://t.me/papagaio_ebot' },
-  { icon: '🧩', name: 'Chrome', line: 'Select a word, read it in place', href: '/dl/PapaGaio-chrome.zip' },
-  { icon: '🧭', name: 'Safari', line: 'Comes inside the iPhone app', href: `${base}/features/` },
-];
 ---
 <section class="everywhere">
-  <h2>PapaGaio, wherever you read</h2>
-  <p class="muted" style="max-width:640px; margin-top:-6px;">
+  <h2 data-th="everywhere.title">PapaGaio, wherever you read</h2>
+  <p class="muted" style="max-width:640px; margin-top:-6px;" data-th="everywhere.lead">
     Same account across all of them — the bot's <code>/link</code> code pairs a
     device, and your deck follows.
   </p>
   <div class="doors">
-    {doors.map((d) => (
-      <a class="door" href={d.href}>
-        <span class="ic">{d.icon}</span>
-        <span>
-          <strong>{d.name}</strong>
-          <small>{d.line}</small>
-        </span>
-      </a>
-    ))}
+    <a class="door" href={`${base}/translate/`}>
+      <span class="ic">🌍</span>
+      <span>
+        <strong data-th="everywhere.browser">In the browser</strong>
+        <small data-th="everywhere.browser-line">Nothing to install</small>
+      </span>
+    </a>
+    <a class="door" href="https://apps.apple.com/app/papagaio-portugal/id6802084974">
+      <span class="ic">📱</span>
+      <span>
+        <strong data-th="everywhere.ios">iPhone &amp; iPad</strong>
+        <small data-th="everywhere.ios-line">On the App Store</small>
+      </span>
+    </a>
+    <a class="door" href="https://play.google.com/store/apps/details?id=ai.azenha.papagaio">
+      <span class="ic">🤖</span>
+      <span>
+        <strong>Android</strong>
+        <small data-th="everywhere.android-line">On Google Play</small>
+      </span>
+    </a>
+    <a class="door" href="/dl/PapaGaio-mac.dmg">
+      <span class="ic">💻</span>
+      <span>
+        <strong>macOS</strong>
+        <small data-th="everywhere.mac-line">Disk image, 22 MB</small>
+      </span>
+    </a>
+    <a class="door" href="/dl/PapaGaio-windows.zip">
+      <span class="ic">🪟</span>
+      <span>
+        <strong>Windows</strong>
+        <small data-th="everywhere.win-line">Zip, 19 MB</small>
+      </span>
+    </a>
+    <a class="door" href="https://t.me/papagaio_ebot">
+      <span class="ic">✈️</span>
+      <span>
+        <strong data-th="everywhere.telegram">Telegram bot</strong>
+        <small data-th="everywhere.telegram-line">Cards and voice in chat</small>
+      </span>
+    </a>
+    <a class="door" href="/dl/PapaGaio-chrome.zip">
+      <span class="ic">🧩</span>
+      <span>
+        <strong>Chrome</strong>
+        <small data-th="everywhere.chrome-line">Select a word, read it in place</small>
+      </span>
+    </a>
+    <a class="door" href={`${base}/features/`}>
+      <span class="ic">🧭</span>
+      <span>
+        <strong>Safari</strong>
+        <small data-th="everywhere.safari-line">Comes inside the iPhone app</small>
+      </span>
+    </a>
   </div>
 </section>
 

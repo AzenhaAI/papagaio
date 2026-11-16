@@ -2,6 +2,7 @@
 // Replaces the static public/sitemap.xml so new word pages are never missing.
 import data from '../data/words.json';
 import { shelfOf } from '../lib/letters.js';
+import { LANGS, LOCALIZED, pageUrl } from '../lib/locales.js';
 
 const STATIC = [
   // /papagaio/ opens the translator, so the translator is the page search
@@ -31,7 +32,11 @@ export function GET() {
   const letters = [...new Set(data.pages.map((p) => shelfOf(p.term)).filter(Boolean))]
     .sort()
     .map((l) => [`https://azenha.ai/papagaio/palavras/${l}/`, '0.5']);
-  const all = [...STATIC, ['https://azenha.ai/papagaio/palavra/', '0.7'], ...letters, ...words];
+  // Language versions at the priority of their English page.
+  const prio = Object.fromEntries(STATIC);
+  const langs = LANGS.filter((l) => l !== 'en').flatMap((l) =>
+    LOCALIZED.map((s) => [pageUrl(l, s), prio[pageUrl('en', s)] ?? '0.5']));
+  const all = [...STATIC, ...langs, ['https://azenha.ai/papagaio/palavra/', '0.7'], ...letters, ...words];
   const body = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     all.map(([u, pr]) => `  <url><loc>${enc(u)}</loc><lastmod>${data.built}</lastmod><priority>${pr}</priority></url>`).join('\n') +
     '\n</urlset>\n';

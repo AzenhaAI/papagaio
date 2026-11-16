@@ -46,6 +46,8 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     // Russian glosses without each page having to remember to ask.
     (function () {
       function pgUi() {
+        var page = document.documentElement.getAttribute('data-ui');
+        if (page === 'en' || page === 'pt' || page === 'ru') return page;
         try {
           var v = localStorage.getItem('pg_ui');
           if (v === 'en' || v === 'pt' || v === 'ru') return v;
@@ -54,6 +56,18 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         return n.indexOf('ru') === 0 ? 'ru' : n.indexOf('pt') === 0 ? 'pt' : 'en';
       }
       window.pgUi = pgUi;
+      // Someone who picked a language and opens the English address of a
+      // section that has a version in it goes there. The hreflang links come
+      // right after <meta charset> (scripts/localize_pages.mjs), so they are
+      // already parsed here. Only a saved choice moves anyone: a first visit
+      // stays on the address it asked for, whatever the browser language.
+      try {
+        var saved = localStorage.getItem('pg_ui');
+        if (!document.documentElement.getAttribute('data-ui') && (saved === 'pt' || saved === 'ru')) {
+          var alt = document.querySelector('link[rel="alternate"][hreflang="' + (saved === 'pt' ? 'pt-PT' : 'ru') + '"]');
+          if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+        }
+      } catch (e) {}
       try { document.documentElement.lang = pgUi() === 'pt' ? 'pt-PT' : pgUi(); } catch (e) {}
       if (!window.fetch) return;
       var real = window.fetch;
@@ -673,17 +687,22 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       b.onclick = () => {
         if (on || !UI.includes(b.dataset.ui)) return;
         setUi(b.dataset.ui);
-        location.reload();
+        // A section with language versions goes to that language's address
+        // (hreflang links in the head); any other page translates in place.
+        const hl = { en: 'en', pt: 'pt-PT', ru: 'ru' }[b.dataset.ui];
+        const alt = document.querySelector(`link[rel="alternate"][hreflang="${hl}"]`);
+        if (alt) location.href = new URL(alt.href).pathname + location.search + location.hash;
+        else location.reload();
       };
     });
   </script>
   <footer class="site">
-    PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.
-    · <a href={`${base}/privacy/`}>Privacy</a>
-    · <a href={`${base}/support/`}>Support</a>
+    <span data-t>PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.</span>
+    · <a href={`${base}/privacy/`} data-t>Privacy</a>
+    · <a href={`${base}/support/`} data-t>Support</a>
 
-    · Part of <a href="https://azenha.ai">azenha.ai</a>
-    · <a href="https://azenha.ai/apps/">All apps</a>
+    · <span data-t>Part of</span> <a href="https://azenha.ai">azenha.ai</a>
+    · <a href="https://azenha.ai/apps/" data-t>All apps</a>
   </footer>
 <script is:inline>
   // One audio element for the whole site, claimed inside a tap.

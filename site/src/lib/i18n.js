@@ -14,6 +14,10 @@
 export const UI = ['en', 'pt', 'ru'];
 
 export function ui() {
+  // A language version (/papagaio/pt/..., /papagaio/ru/...) is in its own
+  // language whatever was chosen before; scripts/localize_pages.mjs marks it.
+  const page = typeof document !== 'undefined' && document.documentElement.getAttribute('data-ui');
+  if (UI.includes(page)) return page;
   try {
     const v = localStorage.getItem('pg_ui');
     if (UI.includes(v)) return v;
@@ -31,9 +35,13 @@ export function setUi(v) {
 
 // The RU or PT string for an English key; the key itself when missing.
 export function t(en) {
-  const u = ui();
-  if (u === 'ru') return RU[en] ?? en;
-  if (u === 'pt') return PT[en] ?? en;
+  return tr(ui(), en);
+}
+
+// The same for a given language: the build writes the language versions with it.
+export function tr(lang, en) {
+  if (lang === 'ru') return RU[en] ?? en;
+  if (lang === 'pt') return PT[en] ?? en;
   return en;
 }
 
@@ -45,6 +53,15 @@ export function langName(code) {
 }
 
 const RU = {
+  // Footer
+  "PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.": "PapaGaio — европейский португальский, который на самом деле звучит в Португалии. Бесплатно навсегда, без премиум-тарифа.",
+  "Part of": "Часть",
+  "All apps": "Все приложения",
+  // Status lines that page scripts also write (coach, practice, read)
+  "Getting you a scene…": "Подбираем сцену…",
+  "Getting your deck…": "Загружаем вашу колоду…",
+  "🎙 speak instead of typing — the coach will answer out loud": "🎙 говорите вместо того, чтобы печатать, — коуч ответит вслух",
+  "➕ Learn this word": "➕ Учить это слово",
   // Word pages (/palavra/)
   "Examples": "Примеры",
   "Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.": "Добавьте его в свои карточки в приложении PapaGaio: 110 000 слов без интернета, все глаголы во всех временах и слова Мадейры. Бесплатно, без регистрации.",
@@ -135,7 +152,7 @@ const RU = {
   "Contact": "Связаться",
   "Apps — Android · iPhone · Mac · Windows": "Приложения — Android · iPhone · Mac · Windows",
   "Interface language": "Язык интерфейса",
-  "No connection — pages and words you opened before still work.": "Нет связи — страницы и слова, которые ты уже открывал, работают.",
+  "No connection — pages and words you opened before still work.": "Нет связи — страницы и слова, которые вы уже открывали, работают.",
   "What this page is": "Что это за страница",
   "Portuguese": "Португальский",
   "English": "Английский",
@@ -151,14 +168,14 @@ const RU = {
   // Translator
   "Translate into European Portuguese": "Переводчик европейского португальского",
   "The Portuguese actually spoken in Portugal and Madeira. Big translators default to the Brazilian variant — PapaGaio always answers in pt-PT and marks every word where the two diverge. Single words also get a dictionary article and real sentences from the Tatoeba corpus.": "Португальский, на котором на самом деле говорят в Португалии и на Мадейре. Крупные переводчики по умолчанию выдают бразильский вариант — PapaGaio всегда отвечает на pt-PT и отмечает каждое слово, где они расходятся. Для отдельных слов есть ещё словарная статья и реальные предложения из корпуса Tatoeba.",
-  "Type Portuguese, English or Russian…": "Введи по-португальски, по-английски или по-русски…",
+  "Type Portuguese, English or Russian…": "Введите по-португальски, по-английски или по-русски…",
   "Longer text? Read it word by word instead": "Длинный текст? Лучше открыть в читалке",
   "Open this text in the reader — word by word": "Открыть этот текст в читалке — слово за словом",
   "In the dictionary": "В словаре",
   "From real texts": "Из реальных текстов",
   "Recent (stored only in your browser)": "Недавнее (хранится только в твоём браузере)",
-  "Want it as a flashcard with audio?": "Хочешь карточку с озвучкой?",
-  "Use the": "Открой",
+  "Want it as a flashcard with audio?": "Хотите карточку с озвучкой?",
+  "Use the": "Откройте",
   "app": "приложение",
   "the bot": "бота",
   "— one tap adds it to your deck.": "— одно касание добавит её в колоду.",
@@ -314,6 +331,15 @@ const RU = {
 
 // European Portuguese (pt-PT) throughout, never Brazilian.
 const PT = {
+  // Footer
+  "PapaGaio — the European Portuguese you actually hear in Portugal. Free forever, no premium tier.": "PapaGaio — o português europeu que se ouve mesmo em Portugal. Grátis para sempre, sem versão premium.",
+  "Part of": "Parte de",
+  "All apps": "Todas as apps",
+  // Status lines that page scripts also write (coach, practice, read)
+  "Getting you a scene…": "A preparar uma cena…",
+  "Getting your deck…": "A carregar o seu baralho…",
+  "🎙 speak instead of typing — the coach will answer out loud": "🎙 fale em vez de escrever — o tutor responde em voz alta",
+  "➕ Learn this word": "➕ Aprender esta palavra",
   // Word pages (/palavra/)
   "Examples": "Exemplos",
   "Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.": "Adicione-a aos seus cartões na app PapaGaio: 110 000 palavras sem internet, todos os verbos em todos os tempos e as palavras da Madeira. Grátis, sem conta.",

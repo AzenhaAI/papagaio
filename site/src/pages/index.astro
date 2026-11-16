@@ -15,10 +15,10 @@ import { APP_LD as ld } from '../lib/app_ld.js';
   <section style="background:var(--panel); background:linear-gradient(135deg, var(--panel) 0%, color-mix(in srgb, var(--accent) 14%, var(--panel)) 100%);
     border:1px solid rgba(52,209,123,.35); border:1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius:18px;
     padding:28px 26px; margin-bottom:34px;">
-    <div class="muted" style="font-size:13px; letter-spacing:.06em; text-transform:uppercase;">
+    <div class="muted" style="font-size:13px; letter-spacing:.06em; text-transform:uppercase;" data-th="home.kicker">
       🤖 AI · live · free forever</div>
-    <h1 style="margin-top:8px;">Talk your way around Madeira —<br />with an AI Coach that talks back</h1>
-    <p class="muted" style="max-width:620px;">
+    <h1 style="margin-top:8px;" data-th="home.hero-title">Talk your way around Madeira —<br />with an AI Coach that talks back</h1>
+    <p class="muted" style="max-width:620px;" data-th="home.hero-lead">
       A live AI conversation partner in European Portuguese. It plays the barista,
       the landlord, the AIMA official — hears you, answers in a neural pt-PT voice,
       corrects you gently mid-scene and writes up your mistakes at the end.
@@ -28,11 +28,11 @@ import { APP_LD as ld } from '../lib/app_ld.js';
     <div style="display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 18px;">
       <span class="hero-chip">☕ Café</span><span class="hero-chip">🏦 Banco</span>
       <span class="hero-chip">🛂 AIMA</span><span class="hero-chip">🩺 Médico</span>
-      <span class="hero-chip">🚕 Táxi</span><span class="hero-chip">🐢→🏃 3 speeds</span>
+      <span class="hero-chip">🚕 Táxi</span><span class="hero-chip" data-th="home.chip-speeds">🐢→🏃 3 speeds</span>
     </div>
     <div style="display:flex; gap:10px; flex-wrap:wrap;">
-      <a class="btn" href="/papagaio/coach/">🎭 Talk to the AI Coach</a>
-      <a class="btn" href="https://t.me/papagaio_ebot"
+      <a class="btn" href="/papagaio/coach/" data-th="home.cta-coach">🎭 Talk to the AI Coach</a>
+      <a class="btn" href="https://t.me/papagaio_ebot" data-th="home.cta-telegram"
         style="background:var(--panel2); color:var(--text);">🎙 Voice version in Telegram</a>
     </div>
   </section>
@@ -43,80 +43,80 @@ import { APP_LD as ld } from '../lib/app_ld.js';
 
   <div class="tilegrid">
     <a class="tile" href="/papagaio/coach/" style="border-color: rgba(52,209,123,.45); border-color: color-mix(in srgb, var(--accent) 45%, transparent);">
-      <span class="tile-emoji">🎭</span><strong>AI Coach</strong>
-      <span class="muted">roleplay the café, the bank, AIMA — voice in, voice out</span>
+      <span class="tile-emoji">🎭</span><strong data-th="home.tile-coach-name">AI Coach</strong>
+      <span class="muted" data-th="home.tile-coach">roleplay the café, the bank, AIMA — voice in, voice out</span>
     </a>
     <a class="tile" href="/papagaio/practice/">
-      <span class="tile-emoji">🎴</span><strong>Cards</strong>
-      <span class="muted">spaced repetition on a <span data-count="deck">1,100+</span>-card pt-PT deck</span>
+      <span class="tile-emoji">🎴</span><strong data-th="home.tile-cards-name">Cards</strong>
+      <span class="muted" data-th="home.tile-cards">spaced repetition on a <span data-count="deck">1,100+</span>-card pt-PT deck</span>
     </a>
     <a class="tile" href="/papagaio/read/">
-      <span class="tile-emoji">📰</span><strong>Reader</strong>
-      <span class="muted">paste any text — see exactly what you don't know yet</span>
+      <span class="tile-emoji">📰</span><strong data-th="home.tile-reader-name">Reader</strong>
+      <span class="muted" data-th="home.tile-reader">paste any text — see exactly what you don't know yet</span>
     </a>
     <a class="tile" href="/papagaio/dictionary/">
-      <span class="tile-emoji">📖</span><strong>Dictionary</strong>
-      <span class="muted">articles with examples and twelve-tense conjugations</span>
+      <span class="tile-emoji">📖</span><strong data-th="home.tile-dict-name">Dictionary</strong>
+      <span class="muted" data-th="home.tile-dict">articles with examples and twelve-tense conjugations</span>
     </a>
     <a class="tile" href="/papagaio/translate/">
-      <span class="tile-emoji">🔤</span><strong>Translate</strong>
-      <span class="muted">guaranteed pt-PT, Brazilian divergences flagged</span>
+      <span class="tile-emoji">🔤</span><strong data-th="home.tile-translate-name">Translate</strong>
+      <span class="muted" data-th="home.tile-translate">guaranteed pt-PT, Brazilian divergences flagged</span>
     </a>
     <a class="tile" href="/papagaio/phrasebook/">
-      <span class="tile-emoji">💬</span><strong>Phrasebook</strong>
-      <span class="muted"><span data-count="frases">170+</span> phrases people actually say, with native audio</span>
+      <span class="tile-emoji">💬</span><strong data-th="home.tile-phrases-name">Phrasebook</strong>
+      <span class="muted" data-th="home.tile-phrases"><span data-count="frases">170+</span> phrases people actually say, with native audio</span>
     </a>
     <a class="tile" href="/papagaio/verbs/">
-      <span class="tile-emoji">🔀</span><strong>Verbs</strong>
-      <span class="muted">conjugate anything — twelve tenses, pt-PT forms</span>
+      <span class="tile-emoji">🔀</span><strong data-th="home.tile-verbs-name">Verbs</strong>
+      <span class="muted" data-th="home.tile-verbs">conjugate anything — twelve tenses, pt-PT forms</span>
     </a>
     <a class="tile" href="/papagaio/progress/">
-      <span class="tile-emoji">📊</span><strong>Progress</strong>
-      <span class="muted">review load ahead and a CIPLE readiness proxy</span>
+      <span class="tile-emoji">📊</span><strong data-th="home.tile-progress-name">Progress</strong>
+      <span class="muted" data-th="home.tile-progress">review load ahead and a CIPLE readiness proxy</span>
     </a>
     <a class="tile" href="/papagaio/apps/">
-      <span class="tile-emoji">⬇️</span><strong>Apps</strong>
-      <span class="muted">Android, iPhone, Mac, Windows — free everywhere</span>
+      <span class="tile-emoji">⬇️</span><strong data-th="home.tile-apps-name">Apps</strong>
+      <span class="muted" data-th="home.tile-apps">Android, iPhone, Mac, Windows — free everywhere</span>
     </a>
     <a class="tile" href="https://t.me/papagaio_ebot">
-      <span class="tile-emoji">✈️</span><strong>Telegram bot</strong>
-      <span class="muted">a card every 15 minutes, voice dialogs, /translate anything</span>
+      <span class="tile-emoji">✈️</span><strong data-th="home.tile-bot-name">Telegram bot</strong>
+      <span class="muted" data-th="home.tile-bot">a card every 15 minutes, voice dialogs, /translate anything</span>
     </a>
   </div>
 
   <div class="panel" style="margin-top:26px;">
     <div style="display:flex; align-items:baseline; gap:10px;">
-      <h2 style="margin:0;">🇵🇹 or 🇧🇷 — can you tell?</h2>
+      <h2 style="margin:0;" data-th="home.quiz-title">🇵🇹 or 🇧🇷 — can you tell?</h2>
       <span class="muted" id="quiz-score" style="font-size:14px;"></span>
     </div>
-    <p class="muted" style="font-size:14.5px; margin:8px 0 14px;">
+    <p class="muted" style="font-size:14.5px; margin:8px 0 14px;" data-th="home.quiz-lead">
       Big translators quietly teach the Brazilian word. Pick the one Portugal actually uses.
     </p>
     <div id="quiz"></div>
   </div>
 
-  <h2>What's new</h2>
+  <h2 data-th="home.news-title">What's new</h2>
   <div class="panel" style="padding:16px 22px;">
-    <div class="rel"><span class="rel-date">1 Oct</span> A checked dictionary: the 20,000 most
+    <div class="rel" data-th="home.rel-1001"><span class="rel-date">1 Oct</span> A checked dictionary: the 20,000 most
       frequent words reviewed in English, Russian and Portuguese, with English meanings that start
       with the word you would say (<em>casa</em>: house, home). Search works without accents
       (<em>cao</em> finds <em>cão</em>) and in any Russian case form.</div>
-    <div class="rel"><span class="rel-date">4 Sep</span> PapaGaio for Mac and Windows, and the
+    <div class="rel" data-th="home.rel-0904"><span class="rel-date">4 Sep</span> PapaGaio for Mac and Windows, and the
       110,000-entry dictionary built into every app, so lookups work offline.</div>
-    <div class="rel"><span class="rel-date">16 Aug</span> PapaGaio for iPhone and iPad in the
+    <div class="rel" data-th="home.rel-0816"><span class="rel-date">16 Aug</span> PapaGaio for iPhone and iPad in the
       <a href="https://apps.apple.com/app/papagaio-portugal/id6802084974">App Store</a>.</div>
-    <div class="rel"><span class="rel-date">3 Aug</span> Dictionary articles grew tabs — Examples and
+    <div class="rel" data-th="home.rel-0803a"><span class="rel-date">3 Aug</span> Dictionary articles grew tabs — Examples and
       Conjugations with ten tenses, grouped Past / Present / Future, generated by rule so
       <em>pudemos</em> can never come back as <em>podemos</em>. Plus a “recently opened” strip.</div>
-    <div class="rel"><span class="rel-date">3 Aug</span> The AI Coach hears you in the browser:
+    <div class="rel" data-th="home.rel-0803b"><span class="rel-date">3 Aug</span> The AI Coach hears you in the browser:
       tap 🎙, speak, it answers out loud. No Telegram needed.</div>
-    <div class="rel"><span class="rel-date">29 Jul</span> Conversation mistakes become cards — the recap
+    <div class="rel" data-th="home.rel-0729a"><span class="rel-date">29 Jul</span> Conversation mistakes become cards — the recap
       after /stop ships every correction straight into your review queue. Also /undo and /export.</div>
-    <div class="rel"><span class="rel-date">29 Jul</span> Production exercises: fill-the-gap, dictation
+    <div class="rel" data-th="home.rel-0729b"><span class="rel-date">29 Jul</span> Production exercises: fill-the-gap, dictation
       and typed answers, plus 154 grammar drills — contractions, ser/estar, conjugation.</div>
-    <div class="rel"><span class="rel-date">28 Jul</span> Reader, this website, and the deck at 519
+    <div class="rel" data-th="home.rel-0728"><span class="rel-date">28 Jul</span> Reader, this website, and the deck at 519
       Portuguese cards + 251 English, every one with native-quality audio.</div>
-    <div class="rel"><span class="rel-date">27 Jul</span> PapaGaio hatches: a card every 15 minutes in
+    <div class="rel" data-th="home.rel-0727"><span class="rel-date">27 Jul</span> PapaGaio hatches: a card every 15 minutes in
       Telegram, and a voice coach that plays the barista.</div>
   </div>
 
@@ -193,36 +193,36 @@ import { APP_LD as ld } from '../lib/app_ld.js';
     quizRound();
   </script>
 
-  <h2 style="margin-top:0;">Translate into European Portuguese</h2>
-  <p class="muted" style="max-width: 640px;">
+  <h2 style="margin-top:0;" data-th="home.translate-title">Translate into European Portuguese</h2>
+  <p class="muted" style="max-width: 640px;" data-th="home.translate-lead">
     The Portuguese actually spoken in Portugal and Madeira. Big translators
     default to the Brazilian variant — PapaGaio always answers in pt-PT and
     marks every word where the two diverge.
     <a href="/papagaio/translate/">Open the translator →</a>
   </p>
 
-  <h2>How it works</h2>
+  <h2 data-th="home.how-title">How it works</h2>
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:14px;">
     <div class="panel">
       <div style="font-size:26px;">🎭</div>
-      <strong>Talk to the AI coach</strong>
-      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
+      <strong data-th="home.how-coach-title">Talk to the AI coach</strong>
+      <p class="muted" style="font-size:14.5px; margin:6px 0 0;" data-th="home.how-coach">
         /talk starts a voice roleplay — café, bank, doctor. It speaks pt-PT,
         hears your replies and corrects gently. /stop gives an error recap.
       </p>
     </div>
     <div class="panel">
       <div style="font-size:26px;">1️⃣</div>
-      <strong>Translate anything</strong>
-      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
+      <strong data-th="home.how-translate-title">Translate anything</strong>
+      <p class="muted" style="font-size:14.5px; margin:6px 0 0;" data-th="home.how-translate">
         Here or in the Telegram bot. Always European Portuguese, misspellings
         corrected, Brazilian divergences flagged.
       </p>
     </div>
     <div class="panel">
       <div style="font-size:26px;">2️⃣</div>
-      <strong>One tap → your deck</strong>
-      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
+      <strong data-th="home.how-deck-title">One tap → your deck</strong>
+      <p class="muted" style="font-size:14.5px; margin:6px 0 0;" data-th="home.how-deck">
         In the bot every translation has a “Learn this word” button, and the
         reader here has one too: the phrase gets audio and joins your
         spaced-repetition queue.
@@ -230,8 +230,8 @@ import { APP_LD as ld } from '../lib/app_ld.js';
     </div>
     <div class="panel">
       <div style="font-size:26px;">3️⃣</div>
-      <strong>A card every 15 minutes</strong>
-      <p class="muted" style="font-size:14.5px; margin:6px 0 0;">
+      <strong data-th="home.how-cards-title">A card every 15 minutes</strong>
+      <p class="muted" style="font-size:14.5px; margin:6px 0 0;" data-th="home.how-cards">
         During working hours the bot sends one-tap cards: recognition, listening,
         pronunciation. Ignore three — it politely goes quiet until tomorrow.
       </p>
@@ -239,8 +239,8 @@ import { APP_LD as ld } from '../lib/app_ld.js';
 
   </div>
 
-  <h2>Why this exists</h2>
-  <p class="muted" style="max-width: 640px;">
+  <h2 data-th="home.why-title">Why this exists</h2>
+  <p class="muted" style="max-width: 640px;" data-th="home.why">
     Three years of language schools and every big translator quietly teaching the
     wrong dialect. PapaGaio is a translator, a frequency deck with spaced
     repetition, a pronunciation checker and an AI voice coach — on the web, in

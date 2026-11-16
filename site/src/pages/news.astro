@@ -6,8 +6,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // in would mean a deploy a day to say what happened today.
 ---
 <BaseLayout title="Island news in European Portuguese" desc="A short daily news bulletin from Madeira in European Portuguese, at A2, B1 or B2 level, with the words worth keeping.">
-  <h1>Today on the island</h1>
-  <p class="lede" style="max-width: 680px;">
+  <h1 data-th="news.title">Today on the island</h1>
+  <p data-th="news.lede" class="lede" style="max-width: 680px;">
     What happened in Madeira this morning, rewritten at the level you read, with
     the words worth keeping underneath. Written from the headlines of
     <a href="https://www.jm-madeira.pt/" rel="noreferrer">JM-Madeira</a> — never
@@ -25,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div id="words"></div>
 
-  <p class="muted" style="margin-top: 26px; font-size: 13px;">
+  <p data-th="news.bot" class="muted" style="margin-top: 26px; font-size: 13px;">
     Want it every morning without coming here?
     <a href="https://t.me/papagaio_ebot">The bot sends it</a> — /news — and the
     app has it with the audio and one tap to keep the words.

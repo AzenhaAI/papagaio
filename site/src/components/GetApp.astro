@@ -5,9 +5,9 @@
 // already knows which one they want and should not have to scroll for it.
 const base = '/papagaio';
 
+// The two labelled buttons are written out in the markup, so that each label
+// carries its own [data-th] id; the icon-only rest come from this list.
 const buttons = [
-  { icon: '✈️', title: 'Telegram bot', href: 'https://t.me/papagaio_ebot', wide: true, label: 'Bot' },
-  { icon: '🌍', title: 'Open in the browser', href: `${base}/translate/`, wide: true, label: 'Web' },
   { icon: '🍎', title: 'iPhone & iPad — App Store', href: 'https://apps.apple.com/app/papagaio-portugal/id6802084974' },
   { icon: '▶️', title: 'Android — Google Play', href: 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio' },
   { icon: '🤖', title: 'Android APK', href: '/dl/PapaGaio.apk' },
@@ -17,9 +17,15 @@ const buttons = [
 ];
 ---
 <div class="getapp">
+  <a class="gb wide" href="https://t.me/papagaio_ebot" title="Telegram bot" aria-label="Telegram bot">
+    <span>✈️</span><em data-th="getapp.bot">Bot</em>
+  </a>
+  <a class="gb wide" href={`${base}/translate/`} title="Open in the browser" aria-label="Open in the browser">
+    <span>🌍</span><em data-th="getapp.web">Web</em>
+  </a>
   {buttons.map((b) => (
-    <a class={b.wide ? 'gb wide' : 'gb'} href={b.href} title={b.title} aria-label={b.title}>
-      <span>{b.icon}</span>{b.wide && <em>{b.label}</em>}
+    <a class="gb" href={b.href} title={b.title} aria-label={b.title}>
+      <span>{b.icon}</span>
     </a>
   ))}
 </div>

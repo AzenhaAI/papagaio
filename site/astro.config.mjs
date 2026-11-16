@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import { fileURLToPath } from 'node:url';
 import { precache } from './scripts/sw_precache.mjs';
 import { packWordPages } from './scripts/pack_word_pages.mjs';
+import { localizePages } from './scripts/localize_pages.mjs';
 
 // After every build the service worker gets this build's file list and a
 // content version, so offline copies are complete and never outlive a deploy.
@@ -11,6 +12,8 @@ const swPrecache = {
     'astro:build:done': ({ dir }) => {
       const w = packWordPages(fileURLToPath(dir));
       console.log(`word pages packed: ${w.count} into ${w.files ?? 0} files`);
+      const l = localizePages(fileURLToPath(dir));
+      console.log(`language versions: ${l.written} pages for ${l.sections} sections`);
       const r = precache(fileURLToPath(dir));
       console.log(`sw precache: ${r.count} files, version ${r.version}`);
     },

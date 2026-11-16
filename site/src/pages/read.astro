@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <BaseLayout title="Reader — PapaGaio" desc="Paste any European Portuguese text and read it with every word glossed and checked against your own deck.">
-  <h1>Read real Portuguese</h1>
-  <p class="muted" style="max-width:640px;">
+  <h1 data-th="read.title">Read real Portuguese</h1>
+  <p class="muted" style="max-width:640px;" data-th="read.lead">
     Paste a notice from your building, a letter from Finanças, a news article.
     Every content word gets a gloss, and words already in your deck stop being
     highlighted — so what stands out is exactly what you still have to learn.
@@ -16,7 +16,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       style="width:100%; background:var(--panel2); color:var(--text); border:1px solid #2a4433;
              border-radius:10px; padding:12px 14px; font:inherit; resize:vertical;"></textarea>
     <div style="display:flex; align-items:center; gap:14px; margin-top:12px; flex-wrap:wrap;">
-      <button class="btn" id="go">Read it</button>
+      <button class="btn" id="go" data-th="read.go">Read it</button>
       <span id="spin" style="display:none; width:18px; height:18px; border:2.5px solid var(--panel2); border-top-color:var(--accent); border-radius:50%; animation:spin .7s linear infinite;"></span>
       <span class="muted" id="status" style="font-size:14px;"></span>
     </div>
@@ -35,13 +35,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
       <button class="iconbtn" id="pop-say" title="Listen">🔊</button>
       <button id="pop-add" style="background:var(--accent); color:#08130c; border:0; border-radius:8px;
-        padding:6px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer;">➕ Learn this word</button>
+        padding:6px 14px; font:inherit; font-size:14px; font-weight:600; cursor:pointer;" data-t>➕ Learn this word</button>
     </div>
   </div>
 
   <details style="margin-top:24px;">
-    <summary class="muted" style="cursor:pointer;">Connect your deck</summary>
-    <p class="muted" style="font-size:14.5px; max-width:640px;">
+    <summary class="muted" style="cursor:pointer;" data-th="read.link-summary">Connect your deck</summary>
+    <p class="muted" style="font-size:14.5px; max-width:640px;" data-th="read.link-text">
       Send <code>/link</code> to the <a href="https://t.me/papagaio_ebot">Telegram bot</a> and paste
       the code here. The reader will then know which words you have already learned, and
       “Learn this word” will put new ones straight into your review queue.
@@ -50,7 +50,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
       <input id="tok" aria-label="Link code from the bot" type="text" placeholder="paste the /link code"
         style="flex:1; min-width:240px; background:var(--panel2); color:var(--text);
                border:1px solid #2a4433; border-radius:10px; padding:8px 14px; font:inherit;" />
-      <button class="btn" id="tok-save">Save</button>
+      <button class="btn" id="tok-save" data-th="read.save">Save</button>
     </div>
     <div class="muted" id="tok-state" style="font-size:13.5px; margin-top:8px;"></div>
   </details>
@@ -66,6 +66,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   </style>
 
   <script>
+    import { t as tr } from '../lib/i18n.js';
     const API = '';   // same origin: /api/* is routed to the worker
     const $ = (id) => document.getElementById(id);
     const TOKKEY = 'pg_token';
@@ -176,7 +177,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         body: JSON.stringify({ term: current.lemma, trans: current.gloss, course: 'pt' }),
       });
       $('pop-add').textContent = r.ok ? '✅ Added' : '✕ Failed';
-      setTimeout(() => { $('pop').style.display = 'none'; $('pop-add').textContent = '➕ Learn this word'; }, 900);
+      setTimeout(() => { $('pop').style.display = 'none'; $('pop-add').textContent = tr('➕ Learn this word'); }, 900);
     };
 
     $('go').onclick = run;

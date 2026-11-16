@@ -4,16 +4,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout
   title="Phrasebook — PapaGaio"
   desc="The European Portuguese phrases people actually say — se calhar, pois é, está bem — with native audio and the literal story behind each one.">
-  <h1>Phrasebook</h1>
-  <p class="muted">
+  <h1 data-th="phrasebook.title">Phrasebook</h1>
+  <p class="muted" data-th="phrasebook.lead">
     The phrases that carry real conversations in Portugal — the ones textbooks
     save for chapter twelve and Lisbon uses before breakfast. Native audio on
     every line. Tap a phrase for its full article.
   </p>
 
   <div class="panel" style="margin-top:18px; padding:16px 18px;">
-    <strong style="font-size:15px;">🔎 Search real sentences</strong>
-    <p class="muted" style="font-size:13px; margin:4px 0 10px;">
+    <strong style="font-size:15px;" data-th="phrasebook.search-title">🔎 Search real sentences</strong>
+    <p class="muted" style="font-size:13px; margin:4px 0 10px;" data-th="phrasebook.search-note">
       181,000 sentence pairs from <a href="https://tatoeba.org">Tatoeba</a> (CC-BY).
       Type any Portuguese word — see how people actually use it.</p>
     <div style="display:flex; gap:8px;">
@@ -30,9 +30,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div id="sres" style="margin-top:10px;"></div>
   </div>
 
-  <div id="list" style="margin-top:18px;"><p class="muted">loading…</p></div>
+  <div id="list" style="margin-top:18px;"><p class="muted" data-th="phrasebook.loading">loading…</p></div>
 
-  <p class="muted" style="margin-top:22px; font-size:13.5px;">
+  <p class="muted" style="margin-top:22px; font-size:13.5px;" data-th="phrasebook.footer">
     These are cards from <a href="/papagaio/dictionary/">the deck</a> — the bot drills
     them with spaced repetition, and the
     <a href="/papagaio/coach/">AI coach</a> makes you use them in scenes.

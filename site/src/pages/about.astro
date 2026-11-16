@@ -2,50 +2,50 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="About — PapaGaio" desc="Why PapaGaio exists and how it works: a free European Portuguese tutor with a translator, dictionary, flashcards and an AI voice coach.">
-  <h1>About PapaGaio</h1>
-  <p style="max-width: 640px;">
+  <h1 data-th="about.title">About PapaGaio</h1>
+  <p data-th="about.origin" style="max-width: 640px;">
     Born out of frustration: three years of language schools, flashcard apps that
     paywall the useful parts, and translators that quietly teach Brazilian
     Portuguese to people living in Portugal.
   </p>
 
-  <h2>What it does</h2>
+  <h2 data-th="about.does.h">What it does</h2>
   <ul class="muted" style="max-width: 640px; line-height: 1.9;">
-    <li><strong style="color:var(--text)">AI voice coach</strong> — scenario roleplay (café, bank, doctor), speaks and listens, corrects gently.</li>
-    <li><strong style="color:var(--text)">Translator with a pt-PT guarantee</strong> — flags every Brazilian divergence.</li>
-    <li><strong style="color:var(--text)">A card every 15 minutes</strong> in Telegram during working hours. One tap. FSRS spaced repetition.</li>
-    <li><strong style="color:var(--text)">Pronunciation checks</strong> — say the word, Whisper verifies what you actually said.</li>
-    <li><strong style="color:var(--text)">Your phrases become cards</strong> — translate anything, one tap adds it to your deck with audio.</li>
+    <li data-th="about.does.coach"><strong style="color:var(--text)">AI voice coach</strong> — scenario roleplay (café, bank, doctor), speaks and listens, corrects gently.</li>
+    <li data-th="about.does.translator"><strong style="color:var(--text)">Translator with a pt-PT guarantee</strong> — flags every Brazilian divergence.</li>
+    <li data-th="about.does.card"><strong style="color:var(--text)">A card every 15 minutes</strong> in Telegram during working hours. One tap. FSRS spaced repetition.</li>
+    <li data-th="about.does.pron"><strong style="color:var(--text)">Pronunciation checks</strong> — say the word, Whisper verifies what you actually said.</li>
+    <li data-th="about.does.phrases"><strong style="color:var(--text)">Your phrases become cards</strong> — translate anything, one tap adds it to your deck with audio.</li>
   </ul>
 
-  <h2>Anti-features</h2>
+  <h2 data-th="about.anti.h">Anti-features</h2>
   <ul class="muted" style="max-width: 640px; line-height: 1.9;">
-    <li>No subscriptions, no premium tier, no locked content. Ever.</li>
-    <li>No streak shaming — ignore three cards and the bot politely goes quiet until tomorrow.</li>
-    <li>No Brazilian Portuguese mixed in. pt-PT only, checked card by card.</li>
+    <li data-th="about.anti.paywall">No subscriptions, no premium tier, no locked content. Ever.</li>
+    <li data-th="about.anti.streak">No streak shaming — ignore three cards and the bot politely goes quiet until tomorrow.</li>
+    <li data-th="about.anti.br">No Brazilian Portuguese mixed in. pt-PT only, checked card by card.</li>
   </ul>
 
-  <h2>Stack</h2>
-  <p class="muted" style="max-width: 640px;">
+  <h2 data-th="about.stack.h">Stack</h2>
+  <p data-th="about.stack" class="muted" style="max-width: 640px;">
     Cloudflare Workers + D1, Edge TTS, Groq Whisper, FSRS. Everything runs on
     free tiers.
   </p>
 
-  <h2>FAQ</h2>
+  <h2 data-th="about.faq.h">FAQ</h2>
   <div style="max-width:640px;">
-    <p><strong>Is it really free?</strong><br />
-    <span class="muted">Yes, entirely and permanently. The whole stack runs on free tiers; there is nothing to charge for and no premium tier planned. That's the founding principle, not a promo.</span></p>
-    <p><strong>What exactly is pt-PT?</strong><br />
-    <span class="muted">European Portuguese — the variant spoken in Portugal and Madeira. It differs from Brazilian in vocabulary (autocarro vs ônibus), grammar (estou a fazer vs estou fazendo) and pronunciation. Most apps teach Brazilian without telling you.</span></p>
-    <p><strong>Why spaced repetition instead of lessons?</strong><br />
-    <span class="muted">FSRS schedules each card for the moment you're about to forget it. Twenty seconds every 15 minutes beats an hour on Sunday — the math on forgetting curves is brutal and well studied.</span></p>
-    <p><strong>Where do my voice messages go?</strong><br />
-    <span class="muted">To Groq (US) for transcription, then they're discarded. Details in <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/privacy/`}>privacy</a>.</span></p>
-    <p><strong>Can I use it outside Telegram?</strong><br />
-    <span class="muted">Yes. There are apps for iPhone and iPad (App Store), Android (APK while the Google Play listing is in review), Mac and Windows, and this website has the coach, cards, translator, dictionary and verbs.</span></p>
+    <p><strong data-th="about.faq.free.q">Is it really free?</strong><br />
+    <span data-th="about.faq.free.a" class="muted">Yes, entirely and permanently. The whole stack runs on free tiers; there is nothing to charge for and no premium tier planned. That's the founding principle, not a promo.</span></p>
+    <p><strong data-th="about.faq.ptpt.q">What exactly is pt-PT?</strong><br />
+    <span data-th="about.faq.ptpt.a" class="muted">European Portuguese — the variant spoken in Portugal and Madeira. It differs from Brazilian in vocabulary (autocarro vs ônibus), grammar (estou a fazer vs estou fazendo) and pronunciation. Most apps teach Brazilian without telling you.</span></p>
+    <p><strong data-th="about.faq.srs.q">Why spaced repetition instead of lessons?</strong><br />
+    <span data-th="about.faq.srs.a" class="muted">FSRS schedules each card for the moment you're about to forget it. Twenty seconds every 15 minutes beats an hour on Sunday — the math on forgetting curves is brutal and well studied.</span></p>
+    <p><strong data-th="about.faq.voice.q">Where do my voice messages go?</strong><br />
+    <span data-th="about.faq.voice.a" class="muted">To Groq (US) for transcription, then they're discarded. Details in <a href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/privacy/`}>privacy</a>.</span></p>
+    <p><strong data-th="about.faq.outside.q">Can I use it outside Telegram?</strong><br />
+    <span data-th="about.faq.outside.a" class="muted">Yes. There are apps for iPhone and iPad (App Store), Android (APK while the Google Play listing is in review), Mac and Windows, and this website has the coach, cards, translator, dictionary and verbs.</span></p>
   </div>
 
   <p style="margin-top: 30px;">
-    <a class="btn" href="https://t.me/papagaio_ebot">Open the bot →</a>
+    <a data-th="about.cta" class="btn" href="https://t.me/papagaio_ebot">Open the bot →</a>
   </p>
 </BaseLayout>
