@@ -65,3 +65,13 @@ AUDIO_BASE = "https://audio.azenha.ai/"
 AZURE_SPEECH_REGION = "northeurope"
 
 # Secrets (not in this file): AZURE_SPEECH_KEY (Azure AI Speech, src/tts.js), TG_TOKEN, WEBHOOK_SECRET, GROQ_API_KEY, ALERT_SECRET (same as morning-brief-bot's) — see scripts/setup_webhook.sh
+
+# The dictionary's search index (scripts/build_search_index.mjs): ~3,600 small
+# JSON files read by src/search_index.js through the SEARCH_FILES binding, in
+# place of LIKE/instr scans that emptied D1's free daily read allowance. They
+# deploy with the code, so index and code never disagree. run_worker_first
+# keeps them off the public paths: only the Worker reads them.
+[assets]
+directory = "./build/search_index"
+binding = "SEARCH_FILES"
+run_worker_first = true

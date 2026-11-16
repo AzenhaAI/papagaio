@@ -800,10 +800,10 @@ async function handleTranslation(env, uid, chatId, text, from) {
       const strip = (s) => String(s ?? '').replace(/[*_`[\]]/g, '');
       const w = fold(clean);
       const { results: hits } = await env.DB.prepare(
-        `SELECT term, trans, trans_ru, pos, gender FROM cards
-         WHERE owner = 'lex' AND course = 'pt' AND (fold = ?1 OR fold LIKE ?2)
+        `SELECT term, trans, trans_ru, pos, gender FROM cards INDEXED BY idx_cards_owner_fold
+         WHERE owner = 'lex' AND fold >= ?1 AND fold < ?2 AND course = 'pt'
          ORDER BY freq LIMIT 2`
-      ).bind(w, `${w} %`).all();
+      ).bind(w, `${w}!`).all();
       for (const h of hits ?? []) {
         const lv = WORD_LEVELS[fold(h.term)];
         const fm = FORMS[h.term];

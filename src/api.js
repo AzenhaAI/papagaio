@@ -19,6 +19,7 @@ import { LEVELS as WORD_LEVELS } from './levels.js';
 import { FORMS } from './forms.js';
 import { BR_TO_PT } from './br_pt.js';
 import { searchKeys } from './search_keys.js';
+import { indexSearch, ruNorm, exampleIds } from './search_index.js';
 import { enFirst } from './en_first.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
@@ -552,10 +553,13 @@ export async function handleApi(request, env, path) {
     // Then the lexicon: 18k Wiktionary headwords, human-written and free. A word
     // like "gato" costs nothing and answers instantly — the model is for the
     // tail this misses, not for the middle of the language.
+    // The headword's own rows as one index range ("fq" up to "fq!"), the
+    // same as the search's lemma step; ordered here, not by a full scan.
     const lexExact = picked?.owner === 'lex' ? picked : await env.DB.prepare(
-      `SELECT * FROM cards WHERE owner = 'lex' AND (fold = ?1 OR fold LIKE ?2)
-       ORDER BY CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
-    ).bind(fq, `${fq} %`).first();
+      `SELECT * FROM cards INDEXED BY idx_cards_owner_fold
+        WHERE owner = 'lex' AND fold >= ?1 AND fold < ?2
+        ORDER BY CASE pos WHEN 'noun' THEN 0 WHEN 'verb' THEN 1 ELSE 2 END, freq LIMIT 1`
+    ).bind(fq, `${fq}!`).first();
     const lex = lexExact ?? await env.DB.prepare(
       `SELECT * FROM cards WHERE owner = 'lex' AND (lower(term) = ?1 OR fold LIKE ?2 OR fold LIKE ?4 OR lower(trans_ru) LIKE ?3)
        ORDER BY CASE WHEN lower(term) = ?1 THEN 0 ELSE 1 END,
@@ -608,6 +612,15 @@ export async function handleApi(request, env, path) {
         body = { ...body, words: [...keyed, ...body.words.filter((r) => !ids.has(r.id))].slice(0, 25) };
       }
       return jsonResp(inPt && body && typeof body === 'object' ? { ...body, in_portugal: inPt } : body, status);
+    };
+    // Rows by id, in the order given (the index's ranking).
+    const cardsById = async (list) => {
+      if (!list.length) return [];
+      const { results: got } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards WHERE id IN (${list.map((_, i) => `?${i + 1}`).join(',')})`
+      ).bind(...list).all();
+      const m = new Map((got ?? []).map((r) => [r.id, r]));
+      return list.map((id) => m.get(id)).filter(Boolean);
     };
     const keyIds = course === 'pt' ? searchKeys().get(s) : undefined;
     if (keyIds?.length) {
@@ -756,19 +769,30 @@ export async function handleApi(request, env, path) {
       return json(body);
     };
 
-    // Matching happens on the accent-blind column: "cao" must find "cão" —
-    // and the stored Russian keeps its stress marks (ко́шка), so the acute is
-    // stripped at compare time.
-    const { results } = await env.DB.prepare(
-      `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
-       WHERE owner = 'lex' AND course = ?7 AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5
-         OR replace(lower(trans_ru), '́', '') LIKE ?4
-         OR replace(lower(trans_ru), '́', '') LIKE ?8)
-       ORDER BY CASE WHEN fold = ?3 OR fold LIKE ?6 THEN 0
-                     WHEN fold LIKE ?2 THEN 1
-                     WHEN fold LIKE ?1 THEN 2 ELSE 3 END, freq
-       LIMIT 25`
-    ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course, `%${ruQ}%`).all();
+    // Matching happens on the accent-blind words of the card: "cao" must find
+    // "cão", and the stored Russian keeps its stress marks (ко́шка), dropped
+    // at compare time. The token index shipped with the Worker (src/search_index.js) answers
+    // with the matching card ids, so D1 reads ~25 rows by primary key instead
+    // of scanning the lexicon (67–112k rows a query, which emptied the free
+    // daily allowance on 15.11.2026). Without the index bound (no [assets])
+    // the old scan runs.
+    let results;
+    const cyr = /[а-яё]/.test(raw);
+    const ids = await indexSearch(env, course, cyr ? [s, ruNorm(raw), ruNorm(ruQ)] : [s]).catch(() => []);
+    if (ids) {
+      results = await cardsById(ids);
+    } else {
+      ({ results } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
+         WHERE owner = 'lex' AND course = ?7 AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?5
+           OR replace(lower(trans_ru), '́', '') LIKE ?4
+           OR replace(lower(trans_ru), '́', '') LIKE ?8)
+         ORDER BY CASE WHEN fold = ?3 OR fold LIKE ?6 THEN 0
+                       WHEN fold LIKE ?2 THEN 1
+                       WHEN fold LIKE ?1 THEN 2 ELSE 3 END, freq
+         LIMIT 25`
+      ).bind(`${s}%`, `% ${s} %`, s, `%${raw}%`, `% ${s}%`, `${s} %`, course, `%${ruQ}%`).all());
+    }
 
     // A headword is a lemma; the reader met a FORM. "gatos" used to answer
     // with gato-pingado and gatonet — real rows, so the old empty-results
@@ -783,11 +807,17 @@ export async function handleApi(request, env, path) {
 
     for (const lemma of lemmaCandidates(s, course)) {
       const f = fold(lemma.word);
-      const { results: byLemma } = await env.DB.prepare(
-        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq FROM cards
-         WHERE owner = 'lex' AND course = ?3 AND (fold = ?1 OR fold LIKE ?2)
-         ORDER BY freq LIMIT 25`
-      ).bind(f, `${f} %`, course).all();
+      // The headword and its phrases ("f", "f …") as one range on
+      // (owner, fold): "f" up to "f!" holds exactly those, since a space sorts
+      // just below "!". The LIKE form read the whole lexicon every time:
+      // 1.8M rows in 16 runs on 15.11.2026.
+      const { results: near } = await env.DB.prepare(
+        `SELECT id, term, trans, trans_ru, trans_pt, pos, gender, freq
+           FROM cards INDEXED BY idx_cards_owner_fold
+          WHERE owner = 'lex' AND fold >= ?1 AND fold < ?2 AND course = ?3
+          LIMIT 400`
+      ).bind(f, `${f}!`, course).all();
+      const byLemma = (near ?? []).sort((a, b) => (a.freq ?? 1e9) - (b.freq ?? 1e9)).slice(0, 25);
       if (byLemma?.length) {
         const seen = new Set(byLemma.map((r) => r.id));
         const rest = (results ?? []).filter((r) => !seen.has(r.id));
@@ -858,15 +888,35 @@ export async function handleApi(request, env, path) {
     }
 
     const list = [...forms].slice(0, 60);
-    const cond = list.map((_, i) => `instr(' '||fold||' ', ?${i + 2}) > 0`).join(' OR ');
-    // Direct pairs outrank pivoted ones (via='en'): human beats chained.
-    const { results } = await env.DB.prepare(
-      `SELECT src, dst, via FROM examples WHERE pair = ?1 AND (${cond})
-       ORDER BY via IS NOT NULL, length(src)
-       LIMIT ${Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20) * 2}`
-    ).bind(pair, ...list.map((f) => ` ${f} `)).all();
     const limit = Math.min(parseInt(sp.get('limit') ?? '4', 10) || 4, 20);
     const ptSide = pair.startsWith('pt');
+    // The word index shipped with the Worker names the sentences (src/search_index.js), already
+    // in the old order: direct pairs before pivoted ones, shorter first. D1
+    // then reads those few rows by rowid instead of instr() over the pair.
+    // A phrase ("bom dia") is found word by word, so its rows are checked for
+    // the words in order here; extra candidates make up for the ones dropped.
+    const exIds = await exampleIds(env, pair, list, limit * 4).catch(() => []);
+    let results;
+    if (exIds) {
+      if (exIds.length) {
+        ({ results } = await env.DB.prepare(
+          `SELECT rowid AS r, src, dst, via, fold FROM examples WHERE rowid IN (${exIds.map((_, i) => `?${i + 1}`).join(',')})`
+        ).bind(...exIds).all());
+        const at = new Map(exIds.map((id, i) => [id, i]));
+        results = (results ?? [])
+          .filter((x) => list.some((f) => ` ${x.fold} `.includes(` ${f} `)))
+          .sort((a, b) => at.get(a.r) - at.get(b.r))
+          .map(({ r, fold: _f, ...rest }) => rest);
+      } else results = [];
+    } else {
+      const cond = list.map((_, i) => `instr(' '||fold||' ', ?${i + 2}) > 0`).join(' OR ');
+      // Direct pairs outrank pivoted ones (via='en'): human beats chained.
+      ({ results } = await env.DB.prepare(
+        `SELECT src, dst, via FROM examples WHERE pair = ?1 AND (${cond})
+         ORDER BY via IS NOT NULL, length(src)
+         LIMIT ${limit * 2}`
+      ).bind(pair, ...list.map((f) => ` ${f} `)).all());
+    }
     return json({ examples: (results ?? []).filter((r) => !ptSide || !BR_SENTENCE.test(r.src)).slice(0, limit) });
   }
 
