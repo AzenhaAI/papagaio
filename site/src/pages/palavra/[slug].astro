@@ -28,14 +28,26 @@ const ru1 = first(p.meanings[0]?.ru ?? p.trans_ru);
 const en1 = first(p.trans);
 
 const title = `${head} — ${en1}${ru1 ? ` · ${ru1}` : ''} | European Portuguese · PapaGaio`;
-const desc = [
+// Search results show about 160 characters: keep whole parts that fit, in
+// order. A part that does not fit is skipped, unless the text so far is still
+// short (under 120, which Bing flags): then it is cut at a word boundary.
+const fit = (parts, max = 160) => {
+  let out = '';
+  for (const part of parts) {
+    const next = out ? `${out} ${part}` : part;
+    if (next.length <= max) { out = next; continue; }
+    if (out.length < 120) { out = next.slice(0, max - 1).replace(/\s+\S*$/, '').replace(/[\s,;:—–-]+$/, '') + '…'; break; }
+  }
+  return out;
+};
+const desc = fit([
   `${p.term} (${posName}${gender ? ', ' + gender : ''}): ${p.trans}.`,
   ru1 ? `Russian: ${ru1}.` : '',
   p.ex_t ? `«${p.ex_t}»${p.ex_trans ? ' — ' + p.ex_trans : ''}` : '',
   p.lex
     ? `Meaning in English and Russian, Portuguese definition${p.ex_t ? ', examples' : ''}${p.conj ? ', conjugation' : ''}. European Portuguese (pt-PT).`
     : 'Audio, examples and grammar in European Portuguese (pt-PT).',
-].filter(Boolean).join(' ').slice(0, 300);
+].filter(Boolean));
 
 const PERSONS = ['eu', 'tu', 'ele/ela', 'nós', 'eles/elas'];
 const TENSES = [

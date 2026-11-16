@@ -45,11 +45,11 @@ export const SEO = {
   practice: {
     pt: {
       title: 'Cartões de português europeu — PapaGaio',
-      desc: 'Reveja os seus cartões no browser: o mesmo baralho e o mesmo calendário de repetição que no bot do Telegram e na app.',
+      desc: 'Reveja os seus cartões de português europeu no browser: o mesmo baralho e o mesmo calendário de repetição espaçada que no bot do Telegram e na app. Grátis.',
     },
     ru: {
       title: 'Карточки: европейский португальский — PapaGaio',
-      desc: 'Повторяйте карточки прямо в браузере: та же колода и то же расписание повторений, что в Telegram-боте и в приложении.',
+      desc: 'Повторяйте карточки по европейскому португальскому в браузере: та же колода и то же расписание интервальных повторений, что в Telegram-боте и в приложении.',
     },
   },
   coach: {
@@ -65,11 +65,11 @@ export const SEO = {
   read: {
     pt: {
       title: 'Ler português europeu palavra a palavra — PapaGaio',
-      desc: 'Cole qualquer texto em português europeu e leia-o com cada palavra explicada e comparada com o seu baralho.',
+      desc: 'Cole qualquer texto em português europeu, uma notícia, uma carta ou uma ementa, e leia-o com cada palavra explicada e comparada com o seu baralho de cartões.',
     },
     ru: {
       title: 'Чтение на португальском с переводом слов — PapaGaio',
-      desc: 'Вставьте любой текст на европейском португальском и читайте его с переводом каждого слова и сверкой с вашей колодой.',
+      desc: 'Вставьте любой текст на европейском португальском — новость, письмо или меню — и читайте его с переводом каждого слова и сверкой с вашей колодой карточек.',
     },
   },
   dictionary: {
