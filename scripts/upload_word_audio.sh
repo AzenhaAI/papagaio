@@ -12,14 +12,19 @@
 set -u
 cd "$(dirname "$0")/../build/word_audio" || exit 1
 touch uploaded.txt
-ls *.mp3 | sort > /tmp/pg_all.$$ ; sort -u uploaded.txt > /tmp/pg_done.$$
-if [ "${FORCE:-0}" = 1 ]; then cp /tmp/pg_all.$$ /tmp/pg_todo.$$; else comm -23 /tmp/pg_all.$$ /tmp/pg_done.$$ > /tmp/pg_todo.$$; fi
-echo "$(wc -l < /tmp/pg_todo.$$) to upload"
-xargs -P 8 -I{} sh -c '
-  npx wrangler r2 object put "papagaio-audio/{}" --file "{}" \
+tmp=$(mktemp -d) || exit 1
+ls *.mp3 | sort > "$tmp/all"; sort -u uploaded.txt > "$tmp/done"
+if [ "${FORCE:-0}" = 1 ]; then cp "$tmp/all" "$tmp/todo"; else comm -23 "$tmp/all" "$tmp/done" > "$tmp/todo"; fi
+echo "$(wc -l < "$tmp/todo") to upload"
+# The file name goes in as $1, not through -I: BSD xargs caps an -I command
+# at 255 bytes and refuses the whole run ("command line cannot be assembled").
+xargs -P 8 -n 1 sh -c '
+  npx wrangler r2 object put "papagaio-audio/$1" --file "$1" \
     --content-type audio/mpeg --cache-control "public, max-age=31536000, immutable" --remote >/dev/null 2>&1 \
-    && echo "{}" >> uploaded.txt || echo "FAILED {}" >&2' < /tmp/pg_todo.$$ 2> upload_failed.txt
-rm -f /tmp/pg_all.$$ /tmp/pg_done.$$ /tmp/pg_todo.$$
+    && echo "$1" >> uploaded.txt || echo "FAILED $1" >&2' _ < "$tmp/todo" 2> upload_failed.txt
+xs=$?
+rm -rf "$tmp"
 n=$(grep -c FAILED upload_failed.txt)
-echo "uploaded total: $(sort -u uploaded.txt | wc -l), failed this run: $n"
+echo "uploaded total: $(sort -u uploaded.txt | wc -l), failed this run: $n, xargs status $xs"
+[ "$xs" = 0 ] || { cat upload_failed.txt >&2; exit 1; }
 [ "$n" = 0 ]
