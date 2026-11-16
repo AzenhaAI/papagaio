@@ -21,7 +21,7 @@
 //
 // Input: build/d1/search_rows.json [{id, course, fold, trans_ru, freq}] —
 // written by `node scripts/build_search_index.mjs --dump` (reads D1 once,
-// ~140k rows, about 3% of a day's allowance). Without it the older
+// the whole cards table by rowid range, ~230k rows read, under 5% of a day's allowance). Without it the older
 // build/d1/cards.json is used and fold is rebuilt the way the loaders did;
 // good for development, not for upload.
 //
@@ -44,13 +44,19 @@ if (process.argv.includes('--dump')) {
   let read = 0;
   for (let last = 0; ;) {
     const txt = execFileSync('npx', ['wrangler', 'd1', 'execute', 'papagaio', '--remote', '--json', '--command',
-      `SELECT rowid AS _rid, id, course, fold, trans_ru, freq FROM cards WHERE rowid > ${last} AND owner = 'lex' ORDER BY rowid LIMIT 5000`],
+      // No owner filter in SQL: with one, the planner picks idx_cards_owner_fold
+      // and re-reads every lex row per page (16.11.2026: 31 pages read 6.5M
+      // rows, more than a day's allowance, right after the 00:00 UTC reset).
+      // A bare rowid range reads exactly the 5,000 rows it returns.
+      `SELECT rowid AS _rid, id, course, fold, trans_ru, freq, owner FROM cards WHERE rowid > ${last} ORDER BY rowid LIMIT 5000`],
       { cwd: root, encoding: 'utf8', maxBuffer: 256 << 20, stdio: ['ignore', 'pipe', 'pipe'] });
     const res = JSON.parse(txt.slice(txt.search(/^\[/m)))[0];
     read += res.meta?.rows_read ?? 0;
+    // A page must cost about what it returns; anything more is a scan, stop.
+    if ((res.meta?.rows_read ?? 0) > 20000) throw new Error(`dump page read ${res.meta.rows_read} rows — query plan regressed, stopping`);
     if (!res.results.length) break;
     last = res.results[res.results.length - 1]._rid;
-    for (const r of res.results) { delete r._rid; rows.push(r); }
+    for (const r of res.results) { const own = r.owner; delete r._rid; delete r.owner; if (own === 'lex') rows.push(r); }
     process.stderr.write(`\r${rows.length} rows, ${read} read   `);
   }
   process.stderr.write('\n');

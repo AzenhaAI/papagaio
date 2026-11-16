@@ -90,7 +90,9 @@ const ld = {
       {p.gender && <span class="muted">({p.gender})</span>}
       <span class="muted pos" data-t>{posName}</span>
       {p.level && <span class="lvl">{p.level}</span>}
-      {p.audio && <button class="say" data-src={AUDIO + p.audio} aria-label={`Play ${head}`} title="Listen">🔊</button>}
+      {/* Every headword gets a speaker: the recorded file when there is one,
+          otherwise the same voice made on request (pgSpeak, /api/tts). */}
+      <button class="say" data-src={p.audio ? AUDIO + p.audio : undefined} data-say={p.term} aria-label={`Play ${head}`} title="Listen">🔊</button>
       <button class="share" data-title={`${head} — ${en1}`} aria-label="Share" title="Share">🔗</button>
     </header>
     <p class="lead" lang="en">{p.trans}</p>
@@ -247,7 +249,11 @@ const ld = {
 
   <script>
     document.querySelectorAll<HTMLButtonElement>('.say').forEach((b) => {
-      b.onclick = () => (window as any).pgPlayUrl?.(b.dataset.src) ?? new Audio(b.dataset.src).play();
+      b.onclick = () => {
+        const w = window as any;
+        if (b.dataset.src) w.pgPlayUrl(b.dataset.src, b);
+        else w.pgSpeak(b.dataset.say, 'pt', b);
+      };
     });
     document.querySelectorAll<HTMLButtonElement>('.share').forEach((b) => {
       b.onclick = async () => {

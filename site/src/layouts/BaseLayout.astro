@@ -88,8 +88,15 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     // Apple devices, Google's pt-PT voice on Android) and the page gets a
     // moment of silence back, so it neither reports "audio failed" nor stalls
     // the coach's turn.
+    //
+    // It also claims the site's audio element at the moment of the tap (the
+    // fetch starts inside the click handler; the play comes after the await,
+    // when Safari no longer counts the tap) and drops an answer that arrives
+    // after a newer tap, so slow words do not play out of order. See
+    // pgClaim / pgPlayUrl at the end of the body.
     (function () {
-      if (!window.fetch || !window.speechSynthesis || !window.SpeechSynthesisUtterance) return;
+      if (!window.fetch) return;
+      var canSpeak = !!(window.speechSynthesis && window.SpeechSynthesisUtterance);
       var real = window.fetch.bind(window);
       function silence() {
         var b = new Uint8Array(46), v = new DataView(b.buffer);
@@ -101,6 +108,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         return new Response(new Blob([b], { type: 'audio/wav' }), { status: 200, headers: { 'content-type': 'audio/wav' } });
       }
       function say(body) {
+        if (!canSpeak) return false;
         try {
           var d = JSON.parse(body || '{}'), lang = d.course === 'en' ? 'en-GB' : 'pt-PT';
           if (!d.text) return false;
@@ -116,10 +124,18 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
         var url = typeof input === 'string' ? input : (input && input.url) || '';
         if (!/\/api\/tts(\?|$)/.test(url)) return real(input, init);
         var body = init && init.body;
+        var ticket = window.pgClaim ? window.pgClaim() : 0;
+        function late() { return ticket && window.pgTicket && window.pgTicket() !== ticket; }
+        function dropped() {
+          return new Response(new Blob([new Uint8Array(1)], { type: 'audio/x-pg-stale' }),
+            { status: 200, headers: { 'content-type': 'audio/x-pg-stale' } });
+        }
         return real(input, init).then(function (r) {
+          if (late()) return dropped();
           if (r.ok) return r;
           return say(body) ? silence() : r;
         }, function (e) {
+          if (late()) return dropped();
           if (say(body)) return silence();
           throw e;
         });
@@ -286,6 +302,13 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       min-width: 40px; min-height: 40px;
       display: inline-flex; align-items: center; justify-content: center;
     }
+    /* Sound states set by pgPlayUrl: waiting for the file, playing, and a
+       hint when nothing could be played. */
+    .pg-loading { animation: pg-pulse 0.9s ease-in-out infinite; }
+    .pg-playing { color: var(--accent, #0a7); text-shadow: 0 0 6px currentColor; }
+    @keyframes pg-pulse { 50% { opacity: 0.35; } }
+    @media (prefers-reduced-motion: reduce) { .pg-loading { animation: none; opacity: 0.6; } }
+    .pg-hint { display: inline-block; margin-left: 6px; font-size: 13px; opacity: 0.8; }
     .pg-tabbar { display: none; }
     /* One prompt at a time: three cards stacked over a 320-point screen read as
        a wall. While the consent card is up, the install prompts wait. */
@@ -663,58 +686,132 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     · <a href="https://azenha.ai/apps/">All apps</a>
   </footer>
 <script is:inline>
-  // One audio element for the whole site, unlocked by the first tap.
+  // One audio element for the whole site, claimed inside a tap.
   //
-  // Every page used to do `new Audio(url).play()` after awaiting the network.
-  // On desktop Chrome that works; in Safari, and on every iPhone, the user
-  // gesture has expired by the time the fetch returns and play() is refused —
-  // silently, as a rejected promise nobody caught. That is the "sometimes it
-  // does not play" testers reported: it depended on the browser, not the word.
+  // Browsers let a page start sound only during a tap. Pages that fetch
+  // /api/tts first and play after the await have lost that tap by then
+  // (Safari, every iPhone), so the element is claimed at the moment of the
+  // tap: a silent clip starts on it, and the real sound later replaces the
+  // source on an element that is already allowed to play.
   //
-  // Creating the element inside the gesture and only setting its source later
-  // keeps the permission the tap granted.
+  // 16.11.2026 rewrite. The old unlock played the element muted on the first
+  // pointerdown and paused it when that settled; when the first tap was the
+  // 🔊 itself, it muted and paused the real word (first tap silent, second
+  // fine, on every page). On phones pointerdown does not even count as a tap
+  // for this purpose. Now: claim on click/touchend, never pause, never mute.
+  // Every sound request takes a ticket; a slow /api/tts answer that arrives
+  // after a newer tap is dropped instead of playing over it.
   (function () {
-    var el = null;
+    var SILENT = 'data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQIAAACAgA==';
+    var el = null, seq = 0, spoke = false, cur = null, timer = 0, next = null;
     function element() {
-      if (!el) el = new Audio();
+      if (!el) {
+        el = new Audio();
+        el.addEventListener('playing', function () { if (!/^data:/.test(el.src)) state('pg-playing'); });
+        el.addEventListener('ended', function () { if (!/^data:/.test(el.src)) state(null); });
+        el.addEventListener('error', function () { if (!/^data:/.test(el.src)) fail(); });
+      }
       return el;
     }
-    // The first tap anywhere unlocks it, so even the first Listen has a
-    // primed element to hand.
-    addEventListener('pointerdown', function once() {
-      removeEventListener('pointerdown', once);
+    // The button being served: pg-loading -> pg-playing -> plain, or a hint.
+    function state(cls) {
+      clearTimeout(timer);
+      if (!cur) return;
+      cur.classList.remove('pg-loading', 'pg-playing');
+      if (cls) cur.classList.add(cls);
+      cur.setAttribute('aria-busy', cls === 'pg-loading' ? 'true' : 'false');
+      if (!cls) cur = null;
+    }
+    function hint(btn) {
+      if (!btn || !btn.parentNode) return;
+      var h = btn.parentNode.querySelector('.pg-hint');
+      if (!h) {
+        h = document.createElement('span');
+        h.className = 'pg-hint';
+        h.setAttribute('role', 'status');
+        btn.insertAdjacentElement('afterend', h);
+      }
+      h.textContent = 'No sound? Check the volume and the silent switch, then tap again.';
+      setTimeout(function () { if (h.parentNode) h.remove(); }, 6000);
+    }
+    function fail() { var b = cur; state(null); hint(b); }
+    function claim() {
       var a = element();
-      a.muted = true;
-      a.play().catch(function () {}).finally(function () {
-        a.pause();
-        a.muted = false;
-      });
-    }, { once: true });
+      try { a.muted = false; a.src = SILENT; a.play().catch(function () {}); } catch (e) {}
+      // iOS ignores speechSynthesis.speak() until it has once run inside a
+      // tap; the device-voice fallback (fetch override above) speaks later.
+      if (!spoke && window.speechSynthesis && window.SpeechSynthesisUtterance) {
+        spoke = true;
+        try { speechSynthesis.speak(new SpeechSynthesisUtterance('')); } catch (e) {}
+      }
+    }
+    function first() {
+      removeEventListener('click', first, true);
+      removeEventListener('touchend', first, true);
+      claim();
+    }
+    addEventListener('click', first, true);
+    addEventListener('touchend', first, true);
 
-    window.pgPlayUrl = function (url) {
+    function button(btn) {
+      if (btn && btn.nodeType === 1) return btn;
+      var f = document.activeElement;
+      return f && f.tagName === 'BUTTON' ? f : null;
+    }
+    // Called by the /api/tts fetch override, inside the tap: claim the
+    // element, mark the button, hand back a ticket.
+    window.pgClaim = function () {
+      claim();
+      state(null);
+      cur = button(next);
+      next = null;
+      state('pg-loading');
+      // A page that never plays the answer must not leave the button pulsing.
+      timer = setTimeout(function () { state(null); }, 25000);
+      return ++seq;
+    };
+    window.pgTicket = function () { return seq; };
+    // Blob URLs of answers that came too late (see the fetch override).
+    var stale = {};
+    var make = URL.createObjectURL.bind(URL);
+    URL.createObjectURL = function (b) {
+      var u = make(b);
+      if (b && b.type === 'audio/x-pg-stale') stale[u] = 1;
+      return u;
+    };
+
+    /** Plays a URL on the shared element; resolves true when it started. */
+    window.pgPlayUrl = function (url, btn) {
+      if (stale[url]) return Promise.resolve(true);
       var a = element();
+      btn = button(btn) || cur;
+      if (btn !== cur) state(null);
+      cur = btn;
+      state('pg-loading');
+      ++seq;
+      a.muted = false;
       a.src = url;
-      return a.play().catch(function (e) {
+      // Nothing after 8 s (dead network, blocked audio): say so.
+      timer = setTimeout(fail, 8000);
+      return a.play().then(function () { return true; }, function (e) {
+        if (e && e.name === 'AbortError') return true; // replaced by a newer tap
         console.warn('audio refused', e && e.name);
+        fail();
+        return false;
       });
     };
 
-    window.pgSpeak = async function (text, course) {
-      var a = element();
-      // Claim the element while the gesture is still fresh, then fill it.
-      a.play().catch(function () {});
-      try {
-        var r = await fetch('/api/tts', {
-          method: 'POST',
-          headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ text: text, course: course || 'pt' }),
-        });
-        if (!r.ok) return;
-        a.src = URL.createObjectURL(await r.blob());
-        await a.play();
-      } catch (e) {
-        console.warn('audio refused', e && e.name);
-      }
+    /** Speaks text through /api/tts (device voice if the server fails). */
+    window.pgSpeak = function (text, course, btn) {
+      next = btn || null;
+      return fetch('/api/tts', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ text: text, course: course || 'pt' }),
+      }).then(function (r) {
+        if (!r.ok) { fail(); return false; }
+        return r.blob().then(function (b) { return window.pgPlayUrl(URL.createObjectURL(b), btn); });
+      }).catch(function () { fail(); return false; });
     };
   })();
 </script>

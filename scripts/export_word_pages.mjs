@@ -25,6 +25,19 @@ import { VERB_EXAMPLES } from '../src/verb_examples.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'site/src/data/words.json');
+// Audio for pages the deck never voiced (scripts/gen_word_audio.mjs, files in
+// R2 papagaio-audio next to the deck's): term -> file for lexicon words,
+// id -> file for deck cards added after the last deck audio run.
+const WORD_AUDIO_PATH = join(ROOT, 'build/word_audio/manifest.json');
+// Only files confirmed in the bucket (upload_word_audio.sh writes uploaded.txt):
+// a page must not offer a recording that failed to upload.
+const UPLOADED = new Set(existsSync(join(ROOT, 'build/word_audio/uploaded.txt'))
+  ? readFileSync(join(ROOT, 'build/word_audio/uploaded.txt'), 'utf8').split('\n').filter(Boolean) : []);
+const WORD_AUDIO = { terms: {}, ids: {} };
+if (existsSync(WORD_AUDIO_PATH)) {
+  const m = JSON.parse(readFileSync(WORD_AUDIO_PATH, 'utf8'));
+  for (const k of ['terms', 'ids']) for (const [key, f] of Object.entries(m[k] ?? {})) if (UPLOADED.has(f)) WORD_AUDIO[k][key] = f;
+}
 const DECK = 'https://azenha.ai/api/deck?course=pt&limit=2000';
 // The dictionary half: the most frequent headwords of the offline pack the
 // app ships (term, part of speech, gender, frequency rank, English and
@@ -87,7 +100,7 @@ for (const c of cards.sort((a, b) => (a.freq ?? 1e9) - (b.freq ?? 1e9))) {
     slug, id: c.id, term: c.term, pos: c.pos, gender: c.gender ?? null,
     trans: c.trans, trans_ru: c.trans_ru ?? null, trans_pt: c.trans_pt ?? null,
     note: c.note ?? null, ex_t: c.ex_t ?? null, ex_trans: c.ex_trans ?? null,
-    audio: c.audio ?? null, tags, unit: c.unit ?? null, rank: c.freq ?? null,
+    audio: c.audio ?? WORD_AUDIO.ids[c.id] ?? null, tags, unit: c.unit ?? null, rank: c.freq ?? null,
     level: LEVELS[fold(c.term).toLowerCase()] ?? null,
     meanings: (e.meanings ?? []).map((m) => ({ trans: m.trans, ru: m.trans_ru ?? null, pt: m.trans_pt ?? null, ex: m.note ?? null })),
     collocations: (e.collocations ?? []).map((x) => ({ t: x.t, trans: x.trans, ru: x.trans_ru ?? null })),
@@ -267,7 +280,7 @@ for (const [t, rows] of lexTerms) {
     trans: m0.trans, trans_ru: m0.ru ?? null, trans_pt: m0.pt ?? null,
     note: null, ex_t: ex[0]?.pt ?? null, ex_trans: ex[0]?.en ?? ex[0]?.ru ?? null,
     ex_lang: ex[0]?.en ? 'en' : ex[0]?.ru ? 'ru' : null,
-    audio: null, tags: [], unit: null, rank: rankOf(rows),
+    audio: WORD_AUDIO.terms[t] ?? null, tags: [], unit: null, rank: rankOf(rows),
     level: LEVELS[fold(t).toLowerCase()] ?? null,
     meanings,
     examples: ex.slice(1),
