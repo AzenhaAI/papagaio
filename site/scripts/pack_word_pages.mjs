@@ -76,7 +76,9 @@ export function packWordPages(dist) {
   if (!count) return { count };
   const out = join(dist, '_words');
   mkdirSync(out, { recursive: true });
-  writeFileSync(join(out, 'shell.html'), `<!--pg-shards:${SHARDS}-->` + shell);
+  // The build stamp names this build in the Function's edge-cache key, so a
+  // deploy is seen at once instead of after the cached copies expire.
+  writeFileSync(join(out, 'shell.html'), `<!--pg-shards:${SHARDS}:${Date.now().toString(36)}-->` + shell);
   shards.forEach((s, i) => writeFileSync(join(out, `${i}.json`), JSON.stringify(s)));
   return { count, files: SHARDS + 1 };
 }
