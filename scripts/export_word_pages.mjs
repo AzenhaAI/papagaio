@@ -246,8 +246,17 @@ for (const [t, rows] of lexTerms) {
   // verb. A noun follows an article or a preposition (a parte, de volta, uma
   // volta); "tinha", "cabe" and "é" almost never do. Without enough sentences,
   // a form of one of the 300 most frequent verbs leads.
+  // The verb form leads only when the spelling's own senses are minor (a
+  // letter's name, an interjection) or when nothing in them is a function
+  // word and the corpus says the word behaves like a verb. "para" is "for"
+  // before it is a form of parar, "sobre" is "about" before sobrar; "é" has
+  // only the letter E of its own, so "is" leads there.
+  const FUNCTION = /^(prep|conj|pron|adv|art|article|det|num|contraction)/;
+  const minor = (m) => m.pos === 'interj' || /^(the |an? )?(arabic |greek |hebrew |latin )?letter\b/i.test(m.trans ?? '');
   const verbLeads = (() => {
     if (!forms.length) return false;
+    if (!own.length || own.every(minor)) return true;
+    if (own.some((m) => FUNCTION.test(m.pos ?? ''))) return false;
     const det = detRate(t);
     return det == null ? forms.some((m) => m.top) : det < 0.3;
   })();

@@ -7,7 +7,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GetApp from '../../components/GetApp.astro';
 import data from '../../data/words.json';
-import { letterOf } from '../../lib/letters.js';
+import { shelfOf } from '../../lib/letters.js';
 
 export function getStaticPaths() {
   return data.pages.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -49,8 +49,8 @@ const TENSES = [
 ];
 const tenses = p.conj ? TENSES.filter(([k]) => Array.isArray(p.conj[k])) : [];
 
-const letter = letterOf(head);
-const lettered = /^[a-z]$/.test(letter); // the A–Z pages exist for these only
+const letter = shelfOf(p.term) ?? '';
+const lettered = !!letter; // the A–Z pages exist for letters and 0-9 only
 const ld = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -59,7 +59,7 @@ const ld = {
       name: p.term,
       inLanguage: 'pt-PT',
       description: p.meanings.map((m) => m.trans).join('; ') || p.trans,
-      url: `https://azenha.ai${href(p.slug)}`,
+      url: `https://azenha.ai${href(encodeURIComponent(p.slug))}`,
       inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'PapaGaio — European Portuguese dictionary', url: 'https://azenha.ai/papagaio/dictionary/' },
     },
     {
@@ -68,7 +68,7 @@ const ld = {
         { '@type': 'ListItem', position: 1, name: 'Dictionary', item: 'https://azenha.ai/papagaio/dictionary/' },
         { '@type': 'ListItem', position: 2, name: 'Words', item: 'https://azenha.ai/papagaio/palavra/' },
         ...(lettered ? [{ '@type': 'ListItem', position: 3, name: letter.toUpperCase(), item: `https://azenha.ai${base}/palavras/${letter}/` }] : []),
-        { '@type': 'ListItem', position: lettered ? 4 : 3, name: head, item: `https://azenha.ai${href(p.slug)}` },
+        { '@type': 'ListItem', position: lettered ? 4 : 3, name: head, item: `https://azenha.ai${href(encodeURIComponent(p.slug))}` },
       ],
     },
   ],
@@ -88,7 +88,7 @@ const ld = {
     <header class="wh">
       <h1>{p.term}</h1>
       {p.gender && <span class="muted">({p.gender})</span>}
-      <span class="muted pos">{posName}</span>
+      <span class="muted pos" data-t>{posName}</span>
       {p.level && <span class="lvl">{p.level}</span>}
       {p.audio && <button class="say" data-src={AUDIO + p.audio} aria-label={`Play ${head}`} title="Listen">🔊</button>}
       <button class="share" data-title={`${head} — ${en1}`} aria-label="Share" title="Share">🔗</button>
@@ -117,7 +117,7 @@ const ld = {
         <ol class="means">
           {p.meanings.map((m) => (
             <li>
-              {p.lex && p.meanings.length > 1 && m.pos && <span class="muted pos">{POS[m.pos] ?? m.pos}{m.g ? ` (${m.g})` : ''} </span>}
+              {p.lex && p.meanings.length > 1 && m.pos && <span class="muted pos"><span data-t>{POS[m.pos] ?? m.pos}</span>{m.g ? ` (${m.g})` : ''} </span>}
               {m.s ? <a href={href(m.s)}><strong lang="en">{m.trans}</strong></a> : <strong lang="en">{m.trans}</strong>}
               {m.ru && <span class="muted" lang="ru"> · {m.ru}</span>}
               {m.pt && <div class="muted small">{m.pt}</div>}
@@ -268,7 +268,7 @@ const ld = {
     .wh h1 { margin: 0; font-size: 30px; }
     .pos { font-size: 13.5px; font-style: italic; }
     .lvl { font-size: 11.5px; background: var(--panel2); border-radius: 8px; padding: 2px 8px; color: var(--accent2); }
-    .say, .share { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 0 2px; }
+    .say, .share { background: none; border: 0; cursor: pointer; font-size: 18px; padding: 10px; min-width: 44px; min-height: 44px; }
     .lead { font-size: 19px; margin: 8px 0 2px; }
     .ru { margin: 2px 0 6px; }
     .note { font-size: 14.5px; }

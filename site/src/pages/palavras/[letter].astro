@@ -4,15 +4,15 @@
 // files, one per letter; the word pages themselves are served by a Function.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import data from '../../data/words.json';
-import { letterOf } from '../../lib/letters.js';
+import { shelfOf } from '../../lib/letters.js';
 
 export function getStaticPaths() {
   const by = new Map();
   // Every word page, deck and dictionary alike, filed by its headword without
   // the article ("o gato" under g), the same letter its breadcrumb names.
   for (const p of data.pages) {
-    const l = letterOf(String(p.term).replace(/^([oa]s? |um |uma )/i, ''));
-    if (!/^[a-z]$/.test(l)) continue;
+    const l = shelfOf(p.term);
+    if (!l) continue;
     if (!by.has(l)) by.set(l, []);
     by.get(l).push(p);
   }
@@ -29,7 +29,7 @@ const L = l.toUpperCase();
 <BaseLayout
   title={`European Portuguese words starting with ${L} — ${words.length} with meanings | PapaGaio`}
   desc={`${words.length} frequent European Portuguese (pt-PT) words starting with ${L}, each on its own page: meaning in English and Russian, Portuguese definition, examples and, for verbs, conjugation.`}>
-  <nav class="crumbs muted"><a href={`${base}/palavra/`} data-t>Words</a> › {L}</nav>
+  <nav class="crumbs muted"><a href={`${base}/dictionary/`} data-t>Dictionary</a> › <a href={`${base}/palavra/`} data-t>Words</a> › {L}</nav>
   <h1>{L}</h1>
   <nav class="az">
     {letters.map((x) => x === l ? <strong>{x.toUpperCase()}</strong> : <a href={`${base}/palavras/${x}/`}>{x.toUpperCase()}</a>)}

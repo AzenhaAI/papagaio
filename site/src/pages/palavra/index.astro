@@ -3,7 +3,7 @@
 // to reach the pages without a search box.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import data from '../../data/words.json';
-import { letterOf } from '../../lib/letters.js';
+import { shelfOf } from '../../lib/letters.js';
 
 const base = '/papagaio';
 const NAMES = {
@@ -19,8 +19,8 @@ const NAMES = {
   cidade: 'Town', emergencia: 'Emergencies', cafe: 'Café', conector: 'Connectors', 'tempo-meteo': 'Weather',
 };
 const deck = data.pages.filter((p) => !p.lex);
-const letters = [...new Set(data.pages.filter((p) => p.lex).map((p) => letterOf(p.term)))]
-  .filter((l) => /^[a-z]$/.test(l)).sort();
+const letters = [...new Set(data.pages.map((p) => shelfOf(p.term)).filter(Boolean))]
+  .sort();
 const groups = new Map();
 for (const p of deck) {
   if (!groups.has(p.topic)) groups.set(p.topic, []);
@@ -33,7 +33,7 @@ const ordered = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
   desc={`${deck.length} European Portuguese (pt-PT) words and phrases with native audio, examples, collocations and grammar, by topic — and ${(data.count - deck.length).toLocaleString('en')} more frequent dictionary words A–Z, each with its meaning in English and Russian.`}>
   <h1 data-t>Words</h1>
   <p class="muted">
-    <span data-t>Every word and phrase the PapaGaio deck teaches, one page each: meanings in English and Russian, audio, examples, collocations, grammar and, for verbs, the tenses you need first.</span>
+    <span data-t>Every word of the PapaGaio deck and the 10,000 commonest words of the dictionary, one page each: meanings in English and Russian, examples, grammar and, for verbs, the tenses you need first. Deck words come with audio.</span>
     <a href={`${base}/dictionary/`} data-t>Search the full dictionary</a> →
   </p>
   <p><strong data-t>Dictionary words A–Z</strong> <span class="muted small" data-t>The next 10,000 most frequent words of the dictionary, one page each, by first letter.</span></p>
