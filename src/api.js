@@ -74,9 +74,15 @@ const jsonResp = (data, status) => json(data, status);
 // Public translate endpoint powers the website, so it needs a cheap abuse guard.
 // Live-translate fires on typing pauses, so the cap is per-request, not per-phrase.
 const PUBLIC_DAILY_CAP = 500;
+// Speech has its own allowance (16.11.2026): it shared the 500 with
+// translation and the coach, so people behind one carrier or café IP ran out
+// of sound because others had translated. Edge-cached replays cost nothing
+// and are not counted; this caps fresh syntheses only.
+const TTS_DAILY_CAP = 1000;
 
-async function underPublicCap(env, request) {
-  const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+async function underPublicCap(env, request, kind = '') {
+  const ip = (kind ? kind + ':' : '') + (request.headers.get('cf-connecting-ip') ?? 'unknown');
+  const cap = kind === 'tts' ? TTS_DAILY_CAP : PUBLIC_DAILY_CAP;
   const day = new Date().toISOString().slice(0, 10);
   try {
     const row = await env.DB.prepare(
@@ -84,7 +90,7 @@ async function underPublicCap(env, request) {
        ON CONFLICT(day, ip) DO UPDATE SET n = n + 1
        RETURNING n`
     ).bind(day, ip).first();
-    return (row?.n ?? 0) <= PUBLIC_DAILY_CAP;
+    return (row?.n ?? 0) <= cap;
   } catch {
     // The ledger that limits a free service must not be able to switch the
     // service off. When the database refuses — its own daily quota spent, an
@@ -236,7 +242,7 @@ export async function handleApi(request, env, path) {
     );
     const hit = await cache.match(key);
     if (hit) return hit;
-    if (!(await underPublicCap(env, request))) return json({ error: 'daily limit reached' }, 429);
+    if (!(await underPublicCap(env, request, 'tts'))) return json({ error: 'daily limit reached' }, 429);
 
     try {
       const audio = await synthesize(text, course);
