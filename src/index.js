@@ -91,9 +91,17 @@ export default {
     return new Response('PapaGaio 🦜');
   },
 
-  async scheduled(_event, env) {
+  async scheduled(event, env) {
     configureTts(env);
     await tick(env);
+    // The abuse counter keys on IP addresses (api_usage, see underPublicCap
+    // in api.js). It only ever needs today's row, so anything older than 30
+    // days is deleted, once a day, in the 03:00 UTC run of the 5-minute cron.
+    const at = new Date(event?.scheduledTime ?? Date.now());
+    if (at.getUTCHours() === 3 && at.getUTCMinutes() < 5) {
+      const cutoff = new Date(at.getTime() - 30 * 86400000).toISOString().slice(0, 10);
+      await env.DB.prepare(`DELETE FROM api_usage WHERE day < ?1`).bind(cutoff).run().catch(() => {});
+    }
   },
 };
 
