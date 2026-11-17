@@ -156,13 +156,21 @@ const lexTerms = [...byTerm.entries()]
 // Word edges by lookaround, not \b: in JavaScript \b only knows ASCII, so
 // "\bônibus" never matched anything.
 const BR = /(?<!\p{L})(?:ônibus|trem|celular|banheiro|café da manhã|geladeira|xícara|tela|time de|moça|garoto|bonde|aeromoça|você|vocês|cadê|pra|tá|tô|equipe|fato|me dá|a gente vai)(?!\p{L})|(?<!\p{L})(?:estou|está|estás|estamos|estão|estava|estavam|estive|esteve|fico|fica|ficou|ficava|ficamos|continua|continuo|continuou|anda|ando|andava) \p{L}+(?:ando|endo|indo)(?!\p{L})/iu;
+// Proclisis pt-PT does not use, the other common Brazilian giveaway: a weak
+// pronoun opening the sentence or a clause after a comma ("Me ajude", "Por
+// favor, me ajude"), or right after a bare subject at the start ("Eu te amo",
+// "Tom se mudou"). Portugal says ajude-me, amo-te, mudou-se. Only me/te/lhe
+// at a clause start: there "se" is "if" and "nos" is "in the". "Se faz favor"
+// is the Portuguese phrase itself. "Eu o vi" is Brazilian too (vi-o).
+const BR_CLITIC = /(?:^|[,;:—]\s*)(?:me|te|lhes?)\s+\p{L}|^(?:(?:o|a)\s+)?(?:eu|tu|ele|ela|eles|elas|nós|tom|mary|maria|john|joão)\s+(?:me|te|lhes?|se|nos)\s+(?!(?:não|nunca)(?!\p{L}))\p{L}|^(?:eu|tu|ele|ela|nós|eles|elas)\s+(?:o|a|os|as)\s+\p{L}/iu;
+const brazilian = (s) => BR.test(s) || BR_CLITIC.test(s);
 const exIndex = new Map();
 // The pack the app downloads, when no local copy is given.
 const examples = JSON.parse(gunzipSync(existsSync(EXAMPLES)
   ? readFileSync(EXAMPLES)
   : Buffer.from(await (await fetch('https://azenha.ai/packs/examples.json.gz')).arrayBuffer())));
 examples.forEach((e, i) => {
-  if (!e.s || e.s.length > 90 || BR.test(e.s)) return;
+  if (!e.s || e.s.length > 90 || brazilian(e.s)) return;
   for (const w of new Set(e.s.toLowerCase().match(/\p{L}+(?:-\p{L}+)*/gu) ?? [])) {
     if (!exIndex.has(w)) exIndex.set(w, []);
     exIndex.get(w).push(i);
@@ -171,7 +179,12 @@ examples.forEach((e, i) => {
 function examplesFor(term) {
   const key = term.toLowerCase();
   if (/\s/.test(key)) return [];
-  const ids = (exIndex.get(key) ?? []).map((i) => examples[i]).sort((a, b) => a.s.length - b.s.length);
+  // A name without its article ("Tom viu", Portugal says "O Tom viu") is
+  // Tatoeba's Brazilian habit; such lines go last instead of out, there are
+  // too many of them to lose.
+  const bare = (e) => (/^(?:Tom|Mary|John|Maria|João)\s/.test(e.s) ? 1 : 0);
+  const ids = (exIndex.get(key) ?? []).map((i) => examples[i])
+    .sort((a, b) => bare(a) - bare(b) || a.s.length - b.s.length);
   const en = ids.filter((e) => e.p === 'pt-en').slice(0, 2);
   const ru = ids.filter((e) => e.p === 'pt-ru' && !en.some((x) => x.s === e.s)).slice(0, 1);
   return [...en.map((e) => ({ pt: e.s, en: e.d })), ...ru.map((e) => ({ pt: e.s, ru: e.d }))];
