@@ -946,7 +946,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       go.textContent = t('Get the app');
       go.hidden = false;
       go.onclick = function () {
-        (window as any).gtag?.('event', 'store_click', { store: 'app_store', placement: 'ios_hint', page_lang: document.documentElement.lang, transport_type: 'beacon' });
+        (window as any).gtag?.('event', 'store_click', { store: 'app_store', page_type: 'ios_hint', page_lang: document.documentElement.lang, transport_type: 'beacon' });
         location.href = 'https://apps.apple.com/app/id6802084974';
       };
       // Not immediately: a hint in the first second reads as an ad.
@@ -956,7 +956,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
 </script>
 <script>
   // GA4 events for the store doors and for coming back (17.11.2026, growth
-  // goals: store clicks by placement, and 7-day returns). gtag() only queues
+  // goals: store clicks by page_type, and 7-day returns). gtag() only queues
   // into dataLayer; nothing reaches Google unless the visitor consented and
   // gtag.js was loaded by the consent gate above.
   const STORES: [RegExp, string][] = [
@@ -971,7 +971,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     if (!hit) return;
     gtag('event', 'store_click', {
       store: hit[1],
-      placement: a.closest('[data-place]')?.getAttribute('data-place') ?? 'other',
+      page_type: a.closest('[data-place]')?.getAttribute('data-place') ?? 'other',
       page_lang: document.documentElement.lang,
       transport_type: 'beacon',
     });
