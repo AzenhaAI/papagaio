@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import AppHandoff from '../components/AppHandoff.astro';
 ---
 <BaseLayout title="Dictionary — PapaGaio" desc="European Portuguese dictionary: 110,000+ entries with meanings in English and Russian, audio, examples and twelve-tense conjugations. Search without accents.">
   <h1 data-t>Dictionary</h1>
@@ -630,4 +631,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       font-size: 13.5px; color: var(--accent2);
     }
   </style>
+  <AppHandoff place="dictionary" />
 </BaseLayout>

@@ -1,0 +1,73 @@
+---
+// "Continue in the app": the store doors in the order that fits the device.
+// Android sees Google Play first and the APK beside it, iPhone and iPad the
+// App Store, a computer every door plus the desktop builds. Clicks on any store
+// link are counted by the listener in BaseLayout (GA4 event store_click),
+// `data-place` naming where on the site the click came from.
+interface Props { place?: string }
+const { place = 'handoff' } = Astro.props;
+---
+<section class="handoff" data-place={place}>
+  <div class="handoff-text">
+    <strong data-t>Continue in the app</strong>
+    <span class="muted" data-t>Your words and cards with audio, offline, and a gentle daily reminder. Free.</span>
+  </div>
+  <div class="handoff-doors">
+    <a class="hd play" data-door="play" href="https://play.google.com/store/apps/details?id=ai.azenha.papagaio&referrer=utm_source%3Dazenha.ai%26utm_medium%3Dsite%26utm_campaign%3Dhandoff">
+      <span class="ic">▶</span><span><small data-t>Get it on</small>Google Play</span>
+    </a>
+    <a class="hd ios" data-door="ios" href="https://apps.apple.com/app/papagaio-portugal/id6802084974">
+      <span class="ic">🍎</span><span><small data-t>Download on the</small>App Store</span>
+    </a>
+    <a class="hd apk" data-door="apk" href="/dl/PapaGaio.apk">
+      <span class="ic">⬇</span><span><small data-t>Android without Play</small>APK</span>
+    </a>
+    <a class="hd desk" data-door="desk" href="/papagaio/apps/">
+      <span class="ic">💻</span><span><small data-t>Mac and Windows</small><b data-t>Desktop apps</b></span>
+    </a>
+    <a class="hd tg" data-door="tg" href="https://t.me/papagaio_ebot?start=web">
+      <span class="ic">✈️</span><span><small data-t>No install</small>Telegram</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .handoff { margin: 26px 0 8px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--panel); display: grid; gap: 12px; }
+  .handoff-text { display: grid; gap: 2px; }
+  .handoff-text strong { font-size: 17px; }
+  .handoff-text span { font-size: 14.5px; }
+  .handoff-doors { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hd { display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px 7px 11px; border-radius: 10px;
+    text-decoration: none; color: var(--text); border: 1px solid var(--border); background: var(--panel2);
+    line-height: 1.15; font-weight: 700; font-size: 15px; }
+  .hd small { display: block; font-weight: 500; font-size: 11px; color: var(--muted); }
+  .hd b { font-weight: 700; }
+  .hd .ic { font-size: 18px; width: 20px; text-align: center; }
+  .hd:hover { border-color: var(--accent); }
+  .hd.first { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+  .hd.first small { color: var(--bg); opacity: .8; }
+  .hd[hidden] { display: none; }
+</style>
+
+<script>
+  // One pass per page: every handoff block is ordered for this device.
+  const ua = navigator.userAgent;
+  const android = /Android/i.test(ua);
+  const ios = !android && (/iPhone|iPod|iPad/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+  const order = android ? ['play', 'apk', 'tg']
+    : ios ? ['ios', 'tg']
+    : ['play', 'ios', 'desk', 'apk', 'tg'];
+  for (const box of document.querySelectorAll('.handoff-doors')) {
+    const doors = Object.fromEntries([...box.children].map((a) => [a.dataset.door, a]));
+    for (const a of Object.values(doors)) a.hidden = true;
+    order.forEach((k, i) => {
+      const a = doors[k];
+      if (!a) return;
+      a.hidden = false;
+      a.classList.toggle('first', i === 0);
+      box.appendChild(a);
+    });
+  }
+</script>

@@ -5,7 +5,7 @@
 // dictionary card shows, but in the HTML itself, at its own address, with its
 // own title — the dictionary's ?q= card is invisible to a search engine.
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import GetApp from '../../components/GetApp.astro';
+import AppHandoff from '../../components/AppHandoff.astro';
 import data from '../../data/words.json';
 import { shelfOf } from '../../lib/letters.js';
 
@@ -255,7 +255,7 @@ const ld = {
     {p.lex
       ? <p class="muted small" data-t>Add it to your cards in the PapaGaio app: 110,000 words that work offline, every verb in every tense, and the words of Madeira. Free, no account.</p>
       : <p class="muted small" data-t>This word is on the PapaGaio deck: the app, the Telegram bot and the web cards drill it, and the AI coach makes you use it in a scene. Free, no account.</p>}
-    <GetApp />
+    <AppHandoff place="word" />
     <p class="small"><a href={`${base}/dictionary/?q=${encodeURIComponent(head)}`} data-t>Open in the dictionary</a> · <a href={`${base}/practice/`} data-t>Practise now</a></p>
   </div>
 

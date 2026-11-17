@@ -1,0 +1,76 @@
+---
+// One deck word a day, the same for everyone (src/pages/wotd.json.js holds the
+// pool in a fixed order; the day number picks the entry). A reason to come
+// back tomorrow, with the bot as the way to get it without coming back.
+---
+<section class="wotd panel" id="wotd" data-place="wotd" hidden>
+  <div class="wotd-head">
+    <span class="wotd-label" data-t>Word of the day</span>
+    <span class="muted wotd-date" id="wotd-date"></span>
+  </div>
+  <div class="wotd-word">
+    <a id="wotd-term" href="/papagaio/palavra/"></a>
+    <button type="button" class="wotd-play" id="wotd-play" data-ta aria-label="Listen" title="Listen">🔊</button>
+  </div>
+  <div class="wotd-trans" id="wotd-trans"></div>
+  <p class="wotd-ex"><span id="wotd-ex"></span><br /><span class="muted" id="wotd-exe"></span></p>
+  <div class="wotd-actions">
+    <a class="wotd-btn" id="wotd-open" href="/papagaio/palavra/" data-t>Open the word</a>
+    <a class="wotd-btn ghost" href="https://t.me/papagaio_ebot?start=wotd" data-t>A new word every day in Telegram</a>
+  </div>
+</section>
+
+<style>
+  .wotd { margin-top: 18px; }
+  .wotd[hidden] { display: none; }
+  .wotd-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .wotd-label { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  .wotd-date { font-size: 13px; }
+  .wotd-word { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+  #wotd-term { font-size: 28px; font-weight: 700; color: var(--text); text-decoration: none; }
+  #wotd-term:hover { text-decoration: underline; }
+  .wotd-play { border: 1px solid var(--border); background: var(--panel2); border-radius: 999px;
+    width: 38px; height: 38px; font-size: 17px; cursor: pointer; }
+  .wotd-trans { font-size: 16.5px; margin-top: 2px; }
+  .wotd-ex { margin: 10px 0 0; font-size: 15px; line-height: 1.45; }
+  .wotd-ex #wotd-ex { font-style: italic; }
+  .wotd-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .wotd-btn { display: inline-block; padding: 8px 14px; border-radius: 10px; font-weight: 600; font-size: 14.5px;
+    text-decoration: none; background: var(--accent); color: var(--bg); }
+  .wotd-btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .wotd-btn.ghost:hover { border-color: var(--accent); }
+</style>
+
+<script>
+  import { ui } from '../lib/i18n.js';
+
+  const AUDIO = 'https://audio.azenha.ai/';
+  const box = document.getElementById('wotd');
+  fetch('/papagaio/wotd.json')
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((pool) => {
+      if (!pool.length) return;
+      const day = Math.floor(Date.now() / 86_400_000);
+      const w = pool[day % pool.length];
+      const lang = ui();
+      const href = `/papagaio/palavra/${w.s}/`;
+      const term = document.getElementById('wotd-term');
+      term.textContent = w.t;
+      term.href = href;
+      document.getElementById('wotd-open').href = href;
+      document.getElementById('wotd-trans').textContent = lang === 'ru' && w.r ? w.r : w.e;
+      document.getElementById('wotd-ex').textContent = w.x;
+      document.getElementById('wotd-exe').textContent = w.xe ?? '';
+      document.getElementById('wotd-date').textContent = new Date().toLocaleDateString(
+        lang === 'ru' ? 'ru-RU' : lang === 'pt' ? 'pt-PT' : 'en-GB', { day: 'numeric', month: 'long' });
+      let audio = null;
+      document.getElementById('wotd-play').onclick = () => {
+        audio ??= new Audio(AUDIO + w.a);
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+        window.gtag?.('event', 'wotd_listen', { word: w.s });
+      };
+      box.hidden = false;
+    })
+    .catch(() => {});
+</script>
