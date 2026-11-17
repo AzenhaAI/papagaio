@@ -41,6 +41,11 @@ const PARTS = {
   main: /(<main[^>]*>)[\s\S]*?(<\/main>)/,
 };
 
+// A match is a slice of the string it was taken from, and V8 keeps that whole
+// string alive behind it: ten parts kept ten copies of every page in memory,
+// ~10 GB for 11,000 pages, and the build died out of heap. Copy what we keep.
+const own = (s) => Buffer.from(s, 'utf8').toString('utf8');
+
 function split(html) {
   const got = {};
   let shell = html;
@@ -48,10 +53,10 @@ function split(html) {
     const m = shell.match(rx);
     if (!m) throw new Error(`word page without ${k}`);
     if (k === 'main') {
-      got[k] = m[0].slice(m[1].length, m[0].length - m[2].length);
+      got[k] = own(m[0].slice(m[1].length, m[0].length - m[2].length));
       shell = shell.replace(rx, `$1@@${k}@@$2`);
     } else {
-      got[k] = m[0];
+      got[k] = own(m[0]);
       shell = shell.replace(rx, `@@${k}@@`);
     }
   }
@@ -70,7 +75,7 @@ export function packWordPages(dist) {
     if (!statSync(p).isDirectory()) continue;
     const html = readFileSync(join(p, 'index.html'), 'utf8');
     const s = split(html);
-    if (shell === null) shell = s.shell;
+    if (shell === null) shell = own(s.shell);
     else if (s.shell !== shell) throw new Error(`word page ${slug}: shell differs from the others — the Function would serve it wrong`);
     shards[shardOf(slug.normalize('NFC'))][slug.normalize('NFC')] = s.got;
     rmSync(p, { recursive: true });
