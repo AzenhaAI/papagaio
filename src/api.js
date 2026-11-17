@@ -20,6 +20,7 @@ import { FORMS } from './forms.js';
 import { BR_TO_PT } from './br_pt.js';
 import { searchKeys } from './search_keys.js';
 import { indexSearch, ruNorm, exampleRows, randomExampleIds } from './search_index.js';
+import { isBrazilian } from './brazilian.js';
 import { enFirst } from './en_first.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
@@ -131,12 +132,8 @@ function verbForms() {
   return VERB_FORMS;
 }
 
-// Tatoeba's Portuguese is half Brazilian: "A criança está alisando um gato"
-// sat under gato, "Você fala." under falar. A sentence with the Brazilian
-// progressive or a Brazil-only word is not shown to someone learning pt-PT.
-// Word edges by letter, not \b: \b is ASCII-only, so it never matched after
-// "você" or before "ônibus" and those sentences went through.
-const BR_SENTENCE = /(?<!\p{L})(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\p{L}+(ando|endo|indo)(?!\p{L})|(?<!\p{L})(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente|você|vocês)(?!\p{L})/iu;
+// Which sentences read as Brazilian: src/brazilian.js, shared with the bot
+// and the word pages.
 
 /**
  * Lemmas a Portuguese word form might belong to, best guess first.
@@ -542,7 +539,7 @@ export async function handleApi(request, env, path) {
          LIMIT 8`
       ).bind(pair, `${w} %`, `% ${w} %`, `% ${w}`).all().catch(() => ({ results: [] }));
       const lines = (results ?? [])
-        .filter((r) => !BR_SENTENCE.test(r.src))
+        .filter((r) => !isBrazilian(r.src))
         .slice(0, 3)
         .map((r) => ({ t: `${r.src} — ${r.dst}`, tag: 'Tatoeba CC-BY' }));
       if (cache) await cache.put(key, new Response(JSON.stringify(lines), {
@@ -932,7 +929,7 @@ export async function handleApi(request, env, path) {
          LIMIT ${limit * 2}`
       ).bind(pair, ...list.map((f) => ` ${f} `)).all());
     }
-    return json({ examples: (results ?? []).filter((r) => !ptSide || !BR_SENTENCE.test(r.src)).slice(0, limit) });
+    return json({ examples: (results ?? []).filter((r) => !ptSide || !isBrazilian(r.src)).slice(0, limit) });
   }
 
   // Offline dictionary packs, served from our own hostname. GitHub releases
@@ -1028,7 +1025,7 @@ export async function handleApi(request, env, path) {
       const { results } = await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE rowid IN (${picked.map((_, i) => `?${i + 1}`).join(',')})`
       ).bind(...picked).all();
-      const ok = (results ?? []).filter((r) => !pair.startsWith('pt') || !BR_SENTENCE.test(r.src));
+      const ok = (results ?? []).filter((r) => !pair.startsWith('pt') || !isBrazilian(r.src));
       return json({ examples: ok.slice(0, want) });
     }
     const span = await env.DB.prepare(`SELECT MAX(rowid) AS hi FROM examples`).first();

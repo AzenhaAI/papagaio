@@ -3,6 +3,8 @@
 // token replaces a scan of the whole lexicon; D1 then reads only the rows
 // that matched, by primary key.
 
+import { isBrazilian, bareName } from './brazilian.js';
+
 export const SHARDS = 1024;
 export const CAP = 100;
 
@@ -160,9 +162,13 @@ export async function exampleRows(env, pair, forms, limit) {
     `SELECT rowid AS r, src, dst, via, fold FROM examples WHERE rowid IN (${ids.map((_, i) => `?${i + 1}`).join(',')})`
   ).bind(...ids).all();
   const at = new Map(ids.map((id, i) => [id, i]));
+  // Portuguese side first in pt-* pairs: Brazilian lines out, a name without
+  // its article after the rest (src/brazilian.js).
+  const pt = pair.startsWith('pt');
   return (results ?? [])
     .filter((x) => forms.some((f) => ` ${x.fold} `.includes(` ${f} `)))
-    .sort((a, b) => at.get(a.r) - at.get(b.r))
+    .filter((x) => !pt || !isBrazilian(x.src))
+    .sort((a, b) => (pt ? bareName(a.src) - bareName(b.src) : 0) || at.get(a.r) - at.get(b.r))
     .map(({ r: _r, fold: _f, ...rest }) => rest);
 }
 
