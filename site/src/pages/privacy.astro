@@ -16,7 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li>Your translation history is stored <strong style="color:var(--text)">only in your browser</strong> (localStorage). We never see it.</li>
     <li>Text you translate is sent to our server and forwarded to Groq (US) for processing — or, when Groq is busy, to Cloudflare Workers AI. It is not stored on our side.</li>
     <li>What you say to the AI Coach is sent to Anthropic (Claude, US) to write the coach's reply and correct your Portuguese; when Claude is unavailable, to Groq or Cloudflare Workers AI instead. Anthropic does not use API requests to train its models.</li>
-    <li>A daily request counter per IP address exists purely to prevent abuse; it holds no content.</li>
+    <li>A daily request counter per IP address exists purely to prevent abuse; it holds no content and is deleted after 30 days.</li>
   </ul>
 
   <h2>Analytics</h2>
@@ -36,7 +36,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <ul class="muted" style="max-width:640px; line-height:1.9;">
     <li>Tapping <strong style="color:var(--text)">Start here</strong> creates an anonymous account on our server. There is no email, no password and no social sign-in — the account is identified by a random token stored securely on your device.</li>
     <li>Tied to that token we keep your <strong style="color:var(--text)">learning progress</strong>: which cards you have answered, how you graded them and when each is due next. This is what lets the schedule survive a reinstall and stay in step with the Telegram bot if you pair them.</li>
-    <li>Cards you write yourself are stored with the account, as is the text you send to the reader and the recent turns of a coach conversation.</li>
+    <li>Cards you write yourself are stored with the account, as are the recent turns of a coach conversation and the corrections the coach made.</li>
+    <li>Text you paste into the reader is analysed and not kept. Only the words you choose to collect from it become cards, each with the sentence it came from.</li>
     <li>Voice recordings you make for pronunciation practice, and photos you point at Portuguese text, are sent for processing and are <strong style="color:var(--text)">not kept</strong> afterwards.</li>
     <li>The browser extensions (Chrome, Safari) send only the text you select to be translated, and keep nothing.</li>
     <li><strong style="color:var(--text)">Anonymous usage statistics</strong> (in app versions from November 2026 on). The app keeps simple daily tallies of how it is used: which screens you open and in what order, which features you use (for example saving a word, answering a card or translating), which word lists and verbs from our catalog you open, how often you open the app and how long you spend in it. It also counts app errors (the type of error and where in the code it happened, never what was on screen), a few device settings (your phone's language, phone or tablet, dark or light theme, large text) and, on the first run only, where the app was installed from, such as a Google Play campaign or a link we shared. Each batch also carries the app version, the system (iPhone, Android, Mac or Windows) and the day the app was installed.<br />Whenever you open or leave the app, it sends these tallies to our server at Cloudflare; they are stored in the EU. They carry no device ID, account or advertising ID, and nothing you type, translate or say is sent with them. They are not linked to your PapaGaio deck. Your IP address is used only for a short limit against abuse and is not kept. The server only adds the tallies to totals, so nothing on it can be traced back to you. We use the totals only to improve the app.<br />This is on by default. To turn it off, open <strong style="color:var(--text)">Settings → Share anonymous usage statistics</strong>; this also deletes the tallies not yet sent. Earlier versions send nothing.</li>
@@ -46,10 +47,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <h2>Third parties</h2>
   <ul class="muted" style="max-width:640px; line-height:1.9;">
-    <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database; Workers AI as a backup for translation and the coach.</li>
+    <li><strong style="color:var(--text)">Cloudflare</strong> — hosting and database; Workers AI reads the text in photos you point at, and is a backup for translation and the coach.</li>
     <li><strong style="color:var(--text)">Anthropic</strong> — the AI Coach's replies and corrections (Claude). Processing happens in the United States.</li>
-    <li><strong style="color:var(--text)">Groq</strong> — translation, dialog, speech recognition and reading text from photos. Processing happens in the United States.</li>
-    <li><strong style="color:var(--text)">Microsoft Edge TTS</strong> — audio synthesis (receives only the text to be spoken). When it is unavailable, your device's own voice speaks instead, and nothing leaves the device.</li>
+    <li><strong style="color:var(--text)">Groq</strong> — translation (including the text read from a photo), the reader, dialog and speech recognition. Processing happens in the United States.</li>
+    <li><strong style="color:var(--text)">Microsoft Azure Speech</strong> (North Europe) — audio synthesis, with <strong style="color:var(--text)">Google Cloud Text-to-Speech</strong> as a backup. Both receive only the text to be spoken. When neither answers, your device's own voice speaks instead, and nothing leaves the device.</li>
   </ul>
 
   <h2>Your data, your call</h2>
