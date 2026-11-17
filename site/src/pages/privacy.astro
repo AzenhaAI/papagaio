@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Privacy — PapaGaio" desc="What PapaGaio stores, what it does not, and how to delete everything: no ads, no analytics SDK in the apps, no email needed.">
+<BaseLayout title="Privacy — PapaGaio" desc="What PapaGaio stores, what it does not, and how to delete everything: no ads, no analytics SDK in the apps, anonymous usage counts you can switch off, no email needed.">
   <h1>Privacy</h1>
-  <p class="muted">Last updated: 12 October 2026</p>
+  <p class="muted">Last updated: 17 November 2026</p>
 
   <h2>The short version</h2>
   <p style="max-width:640px;">
@@ -39,7 +39,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <li>Cards you write yourself are stored with the account, as is the text you send to the reader and the recent turns of a coach conversation.</li>
     <li>Voice recordings you make for pronunciation practice, and photos you point at Portuguese text, are sent for processing and are <strong style="color:var(--text)">not kept</strong> afterwards.</li>
     <li>The browser extensions (Chrome, Safari) send only the text you select to be translated, and keep nothing.</li>
-    <li>The app has no advertising, no analytics SDK and no crash reporter. Nothing about you is sold or handed to advertisers.</li>
+    <li><strong style="color:var(--text)">Anonymous usage statistics.</strong> Newer versions of the app count, per day, which screens and features were used, whether the app was opened, and how many unexpected errors happened (the kind of error and where in the app's code, never what you typed). The app also keeps its install date on your device. When you open or leave the app, it sends any new counts to our server (Cloudflare, EU) without any identifier: no device ID, account, IP address or advertising ID is stored with them. We use the totals only to improve the app. You can turn this off in <strong style="color:var(--text)">Settings → Share anonymous usage statistics</strong>; counts not yet sent are deleted at once.</li>
+    <li>The app has no advertising, no third-party analytics SDK and no crash reporter. Nothing about you is sold or handed to advertisers.</li>
     <li><strong style="color:var(--text)">Delete everything from inside the app:</strong> Settings → Delete my account. That erases the profile, the schedule, the review history, the cards you wrote and every paired device. It is immediate and cannot be undone.</li>
   </ul>
 
