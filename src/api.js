@@ -19,7 +19,7 @@ import { LEVELS as WORD_LEVELS } from './levels.js';
 import { FORMS } from './forms.js';
 import { BR_TO_PT } from './br_pt.js';
 import { searchKeys } from './search_keys.js';
-import { indexSearch, ruNorm, exampleIds } from './search_index.js';
+import { indexSearch, ruNorm, exampleRows, randomExampleIds } from './search_index.js';
 import { enFirst } from './en_first.js';
 
 // True when one substitution, insertion, deletion or swap of neighbours turns
@@ -134,7 +134,9 @@ function verbForms() {
 // Tatoeba's Portuguese is half Brazilian: "A criança está alisando um gato"
 // sat under gato, "Você fala." under falar. A sentence with the Brazilian
 // progressive or a Brazil-only word is not shown to someone learning pt-PT.
-const BR_SENTENCE = /\b(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\w+(ando|endo|indo)\b|\b(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente|você|vocês)\b/i;
+// Word edges by letter, not \b: \b is ASCII-only, so it never matched after
+// "você" or before "ônibus" and those sentences went through.
+const BR_SENTENCE = /(?<!\p{L})(est(ou|á|ás|amos|ão|ava|avam|ive|eve)|fic(a|ou|ava)|continu(a|ou)|and(a|ava))\s+\p{L}+(ando|endo|indo)(?!\p{L})|(?<!\p{L})(ônibus|trem|celular|banheiro|geladeira|xícara|café da manhã|em um|em uma|a gente|você|vocês)(?!\p{L})/iu;
 
 /**
  * Lemmas a Portuguese word form might belong to, best guess first.
@@ -531,7 +533,10 @@ export async function handleApi(request, env, path) {
       const cache = typeof caches !== 'undefined' ? caches.default : null;
       const kept = cache ? await cache.match(key).catch(() => null) : null;
       if (kept) return kept.json();
-      const { results } = await env.DB.prepare(
+      // From the example index first: a few rows by rowid instead of a scan
+      // that, for a word with no sentence, read the whole pair.
+      const indexed = await exampleRows(env, pair, [w], 8).catch(() => []);
+      const { results } = indexed ? { results: indexed } : await env.DB.prepare(
         `SELECT src, dst FROM examples WHERE pair = ?1
            AND (fold LIKE ?2 OR fold LIKE ?3 OR fold LIKE ?4)
          LIMIT 8`
@@ -916,21 +921,9 @@ export async function handleApi(request, env, path) {
     // then reads those few rows by rowid instead of instr() over the pair.
     // A phrase ("bom dia") is found word by word, so its rows are checked for
     // the words in order here; extra candidates make up for the ones dropped.
-    const exIds = await exampleIds(env, pair, list, limit * 4)
+    let results = await exampleRows(env, pair, list, limit)
       .catch((e) => { console.error('examples index', e?.message ?? e); return []; });
-    let results;
-    if (exIds) {
-      if (exIds.length) {
-        ({ results } = await env.DB.prepare(
-          `SELECT rowid AS r, src, dst, via, fold FROM examples WHERE rowid IN (${exIds.map((_, i) => `?${i + 1}`).join(',')})`
-        ).bind(...exIds).all());
-        const at = new Map(exIds.map((id, i) => [id, i]));
-        results = (results ?? [])
-          .filter((x) => list.some((f) => ` ${x.fold} `.includes(` ${f} `)))
-          .sort((a, b) => at.get(a.r) - at.get(b.r))
-          .map(({ r, fold: _f, ...rest }) => rest);
-      } else results = [];
-    } else {
+    if (!results) {
       const cond = list.map((_, i) => `instr(' '||fold||' ', ?${i + 2}) > 0`).join(' OR ');
       // Direct pairs outrank pivoted ones (via='en'): human beats chained.
       ({ results } = await env.DB.prepare(
@@ -1023,6 +1016,21 @@ export async function handleApi(request, env, path) {
     // we drop into the table at a random rowid and walk forward until we have
     // enough. Rows are not evenly spread across pairs, so a landing near the
     // end can come up short; one wrap around from the start covers that.
+    // Better still, the example index shipped with the Worker already lists
+    // every sentence with its length: random rowids come from there and D1
+    // reads only the rows handed back. The walk below is the fallback for a
+    // Worker without the index (local dev).
+    // Twice the count is drawn so Brazilian sentences can be dropped for the
+    // Portuguese pairs, as /api/examples does.
+    const picked = await randomExampleIds(env, pair, want * 2)
+      .catch((e) => { console.error('random examples index', e?.message ?? e); return null; });
+    if (picked?.length) {
+      const { results } = await env.DB.prepare(
+        `SELECT src, dst FROM examples WHERE rowid IN (${picked.map((_, i) => `?${i + 1}`).join(',')})`
+      ).bind(...picked).all();
+      const ok = (results ?? []).filter((r) => !pair.startsWith('pt') || !BR_SENTENCE.test(r.src));
+      return json({ examples: ok.slice(0, want) });
+    }
     const span = await env.DB.prepare(`SELECT MAX(rowid) AS hi FROM examples`).first();
     const from = Math.floor(Math.random() * Math.max(1, span?.hi ?? 1));
     const draw = (start, limit) => env.DB.prepare(

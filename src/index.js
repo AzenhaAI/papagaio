@@ -8,6 +8,7 @@ import { translate, formatTranslation } from './translate.js';
 import { fold, findVerb } from './verbs.js';
 import { recordMistakes, promoteMistakes } from './mistakes.js';
 import { handleApi } from './api.js';
+import { exampleRows } from './search_index.js';
 import { buildStats } from './stats.js';
 import { SCENARIOS, LEVELS, coachTurn, coachRecap } from './coach.js';
 import { START_LEVELS, applyLevel } from './level.js';
@@ -813,11 +814,15 @@ async function handleTranslation(env, uid, chatId, text, from) {
           `\n${strip(ui === 'ru' && h.trans_ru ? h.trans_ru : h.trans).slice(0, 160)}` +
           (formsLine ? `\n_${strip(formsLine)}_` : '');
       }
-      const { results: exs } = await env.DB.prepare(
-        `SELECT src, dst FROM examples WHERE pair = 'pt-en'
-           AND (instr(' '||fold||' ', ?1) > 0 OR instr(' '||fold||' ', ?2) > 0)
-         ORDER BY via IS NOT NULL, length(src) LIMIT 2`
-      ).bind(` ${w} `, ` ${w}s `).all();
+      // The example index names the sentences; D1 reads just those rows. The
+      // instr() scan stays only for a Worker without the index (local dev).
+      const exs = await exampleRows(env, 'pt-en', [w, `${w}s`], 2).catch(() => [])
+        ?? (await env.DB.prepare(
+          `SELECT src, dst FROM examples WHERE pair = 'pt-en'
+             AND (instr(' '||fold||' ', ?1) > 0 OR instr(' '||fold||' ', ?2) > 0)
+           ORDER BY via IS NOT NULL, length(src) LIMIT 2`
+        ).bind(` ${w} `, ` ${w}s `).all()).results;
+      exs.splice(2);
       if (exs?.length) {
         extra += '\n';
         for (const e of exs) extra += `\n💬 ${strip(e.src)} — _${strip(e.dst)}_`;
@@ -1925,11 +1930,16 @@ async function tatoebaFor(env, card) {
   if (term.length < 3) return null;
   const w = term.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/ +/g, ' ').trim();
-  const row = await env.DB.prepare(
-    `SELECT src, dst FROM examples WHERE pair = 'pt-en'
-       AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?3)
-     ORDER BY RANDOM() LIMIT 1`
-  ).bind(`${w} %`, `% ${w} %`, `% ${w}`).first().catch(() => null);
+  // A random one of the best few the example index names for the term; the
+  // old ORDER BY RANDOM() read the whole pair (90k rows) for one sentence.
+  const indexed = await exampleRows(env, 'pt-en', [w], 6).catch(() => []);
+  const row = indexed
+    ? indexed[Math.floor(Math.random() * indexed.length)] ?? null
+    : await env.DB.prepare(
+      `SELECT src, dst FROM examples WHERE pair = 'pt-en'
+         AND (fold LIKE ?1 OR fold LIKE ?2 OR fold LIKE ?3)
+       ORDER BY RANDOM() LIMIT 1`
+    ).bind(`${w} %`, `% ${w} %`, `% ${w}`).first().catch(() => null);
   if (!row) return null;
   const idx = row.src.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .indexOf(w.split(' ')[0]);

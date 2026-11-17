@@ -25,7 +25,8 @@
 // build/d1/cards.json is used and fold is rebuilt the way the loaders did;
 // good for development, not for upload.
 //
-// Output: build/search_index/<course>/<n>.json and manifest.json.
+// Output: build/search_index/<course>/<n>.json and manifest.json (with the
+// per-unit card counts when build/d1/unit_totals.json exists, --dump-units).
 // Deploy: wrangler.toml [assets] points at build/search_index, so `wrangler deploy` uploads the
 // changed files with the code. Rebuild before deploying whenever the lexicon or examples change.
 
@@ -152,5 +153,25 @@ if (existsSync(exSrc)) {
     manifest.examples.pairs[pair] = { rows: ex.filter((r) => r.p === pair).length, tokens: idx.size, bytes: sizes.reduce((a, b) => a + b, 0), median: sizes[sizes.length >> 1], max: sizes[sizes.length - 1] };
     console.error(`ex-${pair}`, manifest.examples.pairs[pair]);
   }
+}
+// Cards per unit of the course decks, for progress screens (src/progress.js
+// unitTotals): the same for everyone, so counted here once instead of by a
+// GROUP BY over the deck (32k rows a count). --dump-units reads D1 once
+// (one pass over the deck by the owner index); rebuild when a course changes.
+const unitSrc = join(root, 'build', 'd1', 'unit_totals.json');
+if (process.argv.includes('--dump-units')) {
+  const txt = execFileSync('npx', ['wrangler', 'd1', 'execute', 'papagaio', '--remote', '--json', '--command',
+    `SELECT course, unit, COUNT(*) AS n FROM cards WHERE owner IS NULL GROUP BY course, unit`],
+    { cwd: root, encoding: 'utf8', maxBuffer: 64 << 20, stdio: ['ignore', 'pipe', 'pipe'] });
+  const res = JSON.parse(txt.slice(txt.search(/^\[/m)))[0];
+  const units = {};
+  for (const r of res.results) (units[r.course] ??= {})[r.unit] = r.n;
+  console.error(`unit totals: ${res.results.length} units, ${res.meta?.rows_read} rows read`);
+  writeFileSync(unitSrc, JSON.stringify({ at: new Date().toISOString(), units }));
+}
+if (existsSync(unitSrc)) {
+  const u = JSON.parse(readFileSync(unitSrc, 'utf8'));
+  manifest.units = u.units;
+  manifest.units_at = u.at;
 }
 writeFileSync(join(out, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');

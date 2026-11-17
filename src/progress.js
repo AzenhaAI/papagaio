@@ -1,3 +1,4 @@
+import { indexManifest } from './search_index.js';
 // Per-unit progress and random distractors, done without reading the deck.
 //
 // Both used to be the two most expensive things the service did — 78% of all
@@ -22,6 +23,10 @@ export function unitTotals(env, course) {
 }
 
 async function countUnits(env, course) {
+  // Shipped with the Worker: scripts/build_search_index.mjs --dump-units
+  // counts the decks once and puts the totals in the index manifest.
+  const shipped = (await indexManifest(env).catch(() => null))?.units?.[course];
+  if (shipped) return shipped;
   const key = `units_${course}`;
   const saved = await env.DB.prepare(`SELECT v, at FROM stats WHERE k = ?1`)
     .bind(key).first().catch(() => null);

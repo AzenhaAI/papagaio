@@ -147,3 +147,62 @@ export async function exampleIds(env, pair, forms, limit) {
   }
   return [...best].sort((a, b) => a[1] - b[1] || a[0] - b[0]).slice(0, limit).map(([id]) => id);
 }
+
+/** Example rows {src, dst, via} holding any of `forms`, best first, read from
+ *  D1 by rowid — a handful of rows instead of a scan of the pair. Phrases are
+ *  checked word by word here, so extra candidates are fetched to make up for
+ *  the ones dropped. null without the [assets] index, so callers can fall back. */
+export async function exampleRows(env, pair, forms, limit) {
+  const ids = await exampleIds(env, pair, forms, limit * 4);
+  if (!ids) return null;
+  if (!ids.length) return [];
+  const { results } = await env.DB.prepare(
+    `SELECT rowid AS r, src, dst, via, fold FROM examples WHERE rowid IN (${ids.map((_, i) => `?${i + 1}`).join(',')})`
+  ).bind(...ids).all();
+  const at = new Map(ids.map((id, i) => [id, i]));
+  return (results ?? [])
+    .filter((x) => forms.some((f) => ` ${x.fold} `.includes(` ${f} `)))
+    .sort((a, b) => at.get(a.r) - at.get(b.r))
+    .map(({ r: _r, fold: _f, ...rest }) => rest);
+}
+
+/** Rowids of `want` random direct (not pivoted) sentences of a pair whose
+ *  length is within [min, max], drawn from a few random shards of the index:
+ *  the cloze stream's "any sentence" without reading the table to find them. */
+export async function randomExampleIds(env, pair, want, min = 15, max = 70) {
+  if (!env.SEARCH_FILES) return null;
+  // A shard holds words sharing their first three letters, so one shard's
+  // sentences all revolve around "deixar" or "sentir": a few from each of
+  // several shards keeps the stream varied.
+  const shuffle = (a) => {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+  const SPREAD = 8;
+  const each = Math.ceil(want / SPREAD) + 1;
+  const picked = new Set();
+  for (let tries = 0; tries < SPREAD * 2 && picked.size < want; tries++) {
+    const s = await shard(env, `ex-${pair}`, Math.floor(Math.random() * EX_SHARDS));
+    const fit = new Set();
+    for (const list of Object.values(s)) {
+      for (const [id, rank] of list) if (rank >= min && rank <= max && !picked.has(id)) fit.add(id);
+    }
+    for (const id of shuffle([...fit]).slice(0, each)) picked.add(id);
+  }
+  return shuffle([...picked]).slice(0, want);
+}
+
+/** The index manifest (scripts/build_search_index.mjs), kept per isolate. */
+let manifest = null;
+export async function indexManifest(env) {
+  if (!env.SEARCH_FILES) return null;
+  if (!manifest) {
+    const res = await env.SEARCH_FILES.fetch('https://index.local/manifest.json');
+    if (!res.ok) return null;
+    manifest = await res.json();
+  }
+  return manifest;
+}
