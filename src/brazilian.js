@@ -16,9 +16,10 @@ const BR_WORDS = /(?<!\p{L})(?:ônibus|trem|celular|banheiro|café da manhã|gel
 // after a bare subject at the start ("Eu te amo", "Tom se mudou", "Eu o vi").
 // Portugal says ajude-me, amo-te, mudou-se, vi-o. Only me/te/lhe at a clause
 // start: there "se" is "if" and "nos" is "in the", and "se faz favor" is the
-// Portuguese phrase itself. After não/nunca the pronoun goes first in
+// Portuguese phrase itself, though "Nos vemos" (vemo-nos) is caught by its
+// -mos verb. After não/nunca the pronoun goes first in
 // Portugal too, so those stay.
-const BR_CLITIC = /(?:^|[,;:—]\s*)(?:me|te|lhes?)\s+\p{L}|^(?:(?:o|a)\s+)?(?:eu|tu|ele|ela|eles|elas|nós|tom|mary|maria|john|joão)\s+(?:me|te|lhes?|se|nos)\s+(?!(?:não|nunca)(?!\p{L}))\p{L}|^(?:eu|tu|ele|ela|nós|eles|elas)\s+(?:o|a|os|as)\s+\p{L}/iu;
+const BR_CLITIC = /(?:^|[,;:—]\s*)(?:me|te|lhes?)\s+\p{L}|^(?:(?:o|a)\s+)?(?:eu|tu|ele|ela|eles|elas|nós|tom|mary|maria|john|joão)\s+(?:me|te|lhes?|se|nos)\s+(?!(?:não|nunca)(?!\p{L}))\p{L}|^(?:eu|tu|ele|ela|nós|eles|elas)\s+(?:o|a|os|as)\s+\p{L}|^nos\s+\p{L}+mos(?!\p{L})/iu;
 
 /** True when a Portuguese sentence reads as Brazilian. */
 export const isBrazilian = (s) => BR_WORDS.test(s ?? '') || BR_CLITIC.test(s ?? '');
