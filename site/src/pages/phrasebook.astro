@@ -1,6 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AppHandoff from '../components/AppHandoff.astro';
+import data from '../data/words.json';
+
+// The phrases and the song shelf are written into the page at build time from
+// the deck (src/data/words.json), each linking to its own word page. They used
+// to arrive by script from /api/deck, fetched twice, so search engines saw an
+// empty list and none of the 200 links.
+const AUDIO = 'https://audio.azenha.ai/';
+const deck = data.pages.filter((p) => !p.lex).sort((a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9));
+const phrases = deck.filter((p) => (p.tags ?? []).includes('frase'));
+const fado = deck.filter((p) => (p.tags ?? []).includes('fado'));
+const ru1 = (p) => String(p.meanings?.[0]?.ru ?? p.trans_ru ?? '').split(/[;/]| \(/)[0].trim();
 ---
 <BaseLayout
   title="Phrasebook — PapaGaio"
@@ -31,7 +42,50 @@ import AppHandoff from '../components/AppHandoff.astro';
     <div id="sres" style="margin-top:10px;"></div>
   </div>
 
-  <div id="list" style="margin-top:18px;"><p class="muted" data-th="phrasebook.loading">loading…</p></div>
+  <div id="list" style="margin-top:18px;">
+    {phrases.map((c) => (
+      <div class="panel phr" id={c.slug}>
+        <div class="phr-head">
+          <a class="phr-term" href={`/papagaio/palavra/${c.slug}/`}>{c.term}</a>
+          <span class="muted">— <span class="tr-en">{c.trans}</span>{ru1(c) && <span class="tr-ru">{ru1(c)}</span>}</span>
+          {c.audio && <button type="button" class="phr-say" data-audio={AUDIO + c.audio} data-ta aria-label="Listen" title="Listen">🔊</button>}
+        </div>
+        {c.note && <div class="muted phr-note" lang="en">{c.note}</div>}
+        {c.ex_t && <div class="muted phr-ex"><span lang="pt-PT">{c.ex_t}</span>{c.ex_trans && <> — <span lang="en">{c.ex_trans}</span></>}</div>}
+      </div>
+    ))}
+    {fado.length > 0 && <>
+      <h2 style="margin-top:30px;" data-th="phrasebook.fado-title">🎶 Fado &amp; song words</h2>
+      <p class="muted" style="font-size:13.5px;" data-th="phrasebook.fado-lead">The vocabulary fado and the
+        bailinho are made of — saudade, o cais, o luar. Take them to the
+        <a href="/papagaio/coach/">coach</a>: there's a casa-de-fados scene to try them in.</p>
+      {fado.map((c) => (
+        <div class="panel phr" id={c.slug}>
+          <div class="phr-head">
+            <a class="phr-term" href={`/papagaio/palavra/${c.slug}/`}>{c.term}</a>
+            <span class="muted">— <span class="tr-en">{c.trans}</span>{ru1(c) && <span class="tr-ru">{ru1(c)}</span>}</span>
+            {c.audio && <button type="button" class="phr-say" data-audio={AUDIO + c.audio} data-ta aria-label="Listen" title="Listen">🔊</button>}
+          </div>
+          {c.ex_t && <div class="muted phr-ex"><span lang="pt-PT">{c.ex_t}</span>{c.ex_trans && <> — <span lang="en">{c.ex_trans}</span></>}</div>}
+        </div>
+      ))}
+    </>}
+  </div>
+
+  <style>
+    .phr { margin-bottom: 10px; padding: 14px 18px; scroll-margin-top: 80px; }
+    .phr:target { border-color: var(--accent); }
+    .phr-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .phr-term { font-size: 17.5px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .phr-term:hover { text-decoration: underline; }
+    .phr-say { background: none; border: 0; cursor: pointer; font-size: 16px; }
+    .phr-note, .phr-ex { font-size: 13.5px; margin-top: 2px; }
+    .phr-ex { font-style: italic; }
+    /* The meaning in the reader's language: Russian on the Russian pages. */
+    .tr-ru { display: none; }
+    :global(html[data-ui="ru"]) .tr-ru { display: inline; }
+    :global(html[data-ui="ru"]) .tr-en { display: none; }
+  </style>
 
   <p class="muted" style="margin-top:22px; font-size:13.5px;" data-th="phrasebook.footer">
     These are cards from <a href="/papagaio/dictionary/">the deck</a> — the bot drills
@@ -81,56 +135,11 @@ import AppHandoff from '../components/AppHandoff.astro';
       clearTimeout(stimer); stimer = setTimeout(ssearch, 350);
     });
     document.getElementById('spair').addEventListener('change', ssearch);
-    const API = '/api/deck?course=pt&limit=2000';
-    const list = document.getElementById('list');
-    const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
-      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-
-    (async () => {
-      let cards = [];
-      try {
-        cards = (await (await fetch(API)).json()).cards
-          .filter((c) => (c.tags ?? '').includes('"frase"'));
-      } catch {
-        list.innerHTML = '<p class="muted">Could not load the phrasebook — try again in a minute.</p>';
-        return;
-      }
-      const fado = (await (await fetch(API)).json()).cards
-        .filter((c) => (c.tags ?? '').includes('"fado"'));
-      list.innerHTML = cards.map((c) => `
-        <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
-          <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
-            <strong style="font-size:17.5px;">${esc(c.term)}</strong>
-            <span class="muted">— ${esc(c.trans)}</span>
-            ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${esc(c.audio)}')"
-              style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
-          </div>
-          ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
-          ${c.ex_t ? `<div class="muted" style="font-size:13.5px; font-style:italic; margin-top:2px;">
-            ${esc(c.ex_t)}${c.ex_trans ? ` — ${esc(c.ex_trans)}` : ''}</div>` : ''}
-        </div>`).join('') || '<p class="muted">Nothing here yet.</p>';
-
-      // The song shelf: fado and Madeiran folk vocabulary. Words, never lyrics
-      // — songwriters own their lines; the images are everybody's.
-      if (fado.length) {
-        list.innerHTML += `<h2 style="margin-top:30px;">🎶 Fado & song words</h2>
-          <p class="muted" style="font-size:13.5px;">The vocabulary fado and the
-          bailinho are made of — saudade, o cais, o luar. Take them to the
-          <a href="/papagaio/coach/">coach</a>: there's a casa-de-fados scene to try them in.</p>` +
-          fado.map((c) => `
-          <div class="panel" style="margin-bottom:10px; padding:14px 18px;">
-            <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
-              <strong style="font-size:17.5px;">${esc(c.term)}</strong>
-              <span class="muted">— ${esc(c.trans)}</span>
-              ${c.audio ? `<button onclick="pgPlayUrl('${AUDIO}${esc(c.audio)}')"
-                style="background:none; border:0; cursor:pointer; font-size:16px;">🔊</button>` : ''}
-            </div>
-            ${c.note ? `<div class="muted" style="font-size:13.5px; margin-top:2px;">${esc(c.note)}</div>` : ''}
-            ${c.ex_t ? `<div class="muted" style="font-size:13.5px; font-style:italic; margin-top:2px;">
-              ${esc(c.ex_t)}${c.ex_trans ? ` — ${esc(c.ex_trans)}` : ''}</div>` : ''}
-          </div>`).join('');
-      }
-    })();
+    // The 🔊 on each phrase plays its recorded audio.
+    document.getElementById('list')?.addEventListener('click', (e) => {
+      const b = (e.target as Element).closest?.('.phr-say') as HTMLElement | null;
+      if (b?.dataset.audio) (window as any).pgPlayUrl(b.dataset.audio, b);
+    });
   </script>
   <AppHandoff place="phrasebook" />
 </BaseLayout>

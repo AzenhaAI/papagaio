@@ -340,6 +340,9 @@ const RU = {
   "Install this as an app — it opens full-screen, without a browser bar.": "Установите как приложение: откроется на весь экран, без панели браузера.",
   "Install": "Установить",
   "Mac and Windows": "Mac и Windows",
+  "Phrases with this word": "Фразы с этим словом",
+  "All phrases in the phrasebook": "Все фразы разговорника",
+  "This phrase in the phrasebook": "Эта фраза в разговорнике",
   "PapaGaio is in the App Store — free, with the dictionary offline.": "PapaGaio есть в App Store — бесплатно, словарь работает без интернета.",
 };
 
@@ -632,5 +635,8 @@ const PT = {
   "Install this as an app — it opens full-screen, without a browser bar.": "Instale como app: abre em ecrã inteiro, sem a barra do browser.",
   "Install": "Instalar",
   "Mac and Windows": "Mac e Windows",
+  "Phrases with this word": "Expressões com esta palavra",
+  "All phrases in the phrasebook": "Todas as expressões do guia de conversação",
+  "This phrase in the phrasebook": "Esta expressão no guia de conversação",
   "PapaGaio is in the App Store — free, with the dictionary offline.": "O PapaGaio está na App Store — grátis, com o dicionário offline.",
 };

@@ -8,12 +8,15 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppHandoff from '../../components/AppHandoff.astro';
 import data from '../../data/words.json';
 import { shelfOf } from '../../lib/letters.js';
+import { phrasesWith, isPhrase } from '../../lib/phrases.js';
+import { ogImage } from '../../lib/og.js';
 
 export function getStaticPaths() {
   return data.pages.map((p) => ({ params: { slug: p.slug }, props: { p } }));
 }
 
 const { p } = Astro.props;
+const inPhrases = phrasesWith(p);
 const base = '/papagaio';
 const AUDIO = 'https://audio.azenha.ai/';
 const href = (s) => `${base}/palavra/${s}/`;
@@ -86,7 +89,7 @@ const ld = {
   ],
 };
 ---
-<BaseLayout title={title} desc={desc}>
+<BaseLayout title={title} desc={desc} image={ogImage(p.slug)}>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld)} />
 
   <nav class="crumbs muted" aria-label="Breadcrumb">
@@ -248,6 +251,21 @@ const ld = {
         ))}
       </div>
     </section>
+  )}
+
+  {inPhrases.length > 0 && (
+    <section class="rel">
+      <h2 class="moodlabel" data-t>Phrases with this word</h2>
+      <div class="relgrid">
+        {inPhrases.map((r) => (
+          <a class="relw" href={href(r.slug)}><strong>{r.term}</strong><span class="muted">{first(r.trans)}</span></a>
+        ))}
+      </div>
+      <p class="small"><a href={`${base}/phrasebook/`} data-t>All phrases in the phrasebook</a> →</p>
+    </section>
+  )}
+  {isPhrase(p) && (
+    <p class="small"><a href={`${base}/phrasebook/#${p.slug}`} data-t>This phrase in the phrasebook</a> →</p>
   )}
 
   <div class="panel cta">

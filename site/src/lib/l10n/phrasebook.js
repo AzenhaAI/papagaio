@@ -10,7 +10,10 @@ export default {
     'phrasebook.search-note': `181 000 pares de frases do
     <a href="https://tatoeba.org">Tatoeba</a> (CC-BY). Escreva qualquer palavra
     portuguesa — e veja como se usa de verdade.`,
-    'phrasebook.loading': 'a carregar…',
+    'phrasebook.fado-title': '🎶 Fado e palavras das canções',
+    'phrasebook.fado-lead': `O vocabulário de que são feitos o fado e o
+    bailinho — saudade, o cais, o luar. Leve-as ao
+    <a href="/papagaio/coach/">Tutor IA</a>: há uma cena numa casa de fados para as experimentar.`,
     'phrasebook.footer': `São cartões do <a href="/papagaio/dictionary/">baralho</a>
     — o bot treina-os com repetição espaçada, e o
     <a href="/papagaio/coach/">Tutor IA</a> pede-lhe que os use em cenas.`,
@@ -25,7 +28,10 @@ export default {
     'phrasebook.search-note': `181 000 пар предложений из
     <a href="https://tatoeba.org">Tatoeba</a> (CC-BY). Введите любое португальское
     слово — и посмотрите, как его употребляют на самом деле.`,
-    'phrasebook.loading': 'загрузка…',
+    'phrasebook.fado-title': '🎶 Фаду и слова из песен',
+    'phrasebook.fado-lead': `Слова, из которых сделаны фаду и байлинью, —
+    saudade, o cais, o luar. Попробуйте их с
+    <a href="/papagaio/coach/">ИИ-коучем</a>: там есть сцена в доме фаду.`,
     'phrasebook.footer': `Это карточки из <a href="/papagaio/dictionary/">колоды</a>:
     бот тренирует их интервальными повторениями, а
     <a href="/papagaio/coach/">ИИ-коуч</a> заставляет применять их в сценах.`,

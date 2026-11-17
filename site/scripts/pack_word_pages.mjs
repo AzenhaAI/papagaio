@@ -7,7 +7,7 @@
 //
 // How: Astro still renders every page, so the HTML is exactly what was
 // designed. This step splits each page into the parts that differ — title,
-// description, canonical, og tags, JSON-LD and the <main> — and the shell
+// description, canonical, og tags and images, JSON-LD and the <main> — and the shell
 // that is byte-identical across all of them (checked here, the build fails
 // otherwise). The azenha Pages Function functions/papagaio/palavra/[[path]].js
 // puts them back together per request, so readers and crawlers get the same
@@ -34,6 +34,9 @@ const PARTS = {
   ogt: /<meta property="og:title"[^>]*>/,
   ogd: /<meta property="og:description"[^>]*>/,
   ogu: /<meta property="og:url"[^>]*>/,
+  // Each word has its own share card (src/lib/og.js).
+  ogi: /<meta property="og:image"[^>]*>/,
+  twi: /<meta name="twitter:image"[^>]*>/,
   ld: /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
   main: /(<main[^>]*>)[\s\S]*?(<\/main>)/,
 };
