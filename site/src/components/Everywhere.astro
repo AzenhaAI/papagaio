@@ -1,4 +1,5 @@
 ---
+import { appStoreLink, playLink } from '../lib/store.js';
 // Every door into PapaGaio, in one strip.
 //
 // The product lives in seven places and each page mentioned whichever one it
@@ -23,14 +24,14 @@ const base = '/papagaio';
         <small data-th="everywhere.browser-line">Nothing to install</small>
       </span>
     </a>
-    <a class="door" href="https://apps.apple.com/app/papagaio-portugal/id6802084974">
+    <a class="door" href={appStoreLink('everywhere')}>
       <span class="ic">📱</span>
       <span>
         <strong data-th="everywhere.ios">iPhone &amp; iPad</strong>
         <small data-th="everywhere.ios-line">On the App Store</small>
       </span>
     </a>
-    <a class="door" href="https://play.google.com/store/apps/details?id=ai.azenha.papagaio">
+    <a class="door" href={playLink('everywhere')}>
       <span class="ic">🤖</span>
       <span>
         <strong>Android</strong>

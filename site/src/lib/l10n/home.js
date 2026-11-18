@@ -1,4 +1,5 @@
 // [data-th] translations for the home page; see index.js.
+import { appStoreLink } from '../store.js';
 export default {
   pt: {
     'home.kicker': '🤖 IA · ao vivo · grátis para sempre',
@@ -35,7 +36,7 @@ export default {
     'home.news-title': 'Novidades',
     'home.rel-1001': '<span class="rel-date">1 out.</span> Um dicionário revisto: as 20 000 palavras mais frequentes verificadas em inglês, russo e português, com significados em inglês que começam pela palavra que diria (<em>casa</em>: house, home). A pesquisa funciona sem acentos (<em>cao</em> encontra <em>cão</em>) e com qualquer caso gramatical do russo.',
     'home.rel-0904': '<span class="rel-date">4 set.</span> O PapaGaio para Mac e Windows, e o dicionário de 110 000 entradas integrado em todas as aplicações, para pesquisar sem internet.',
-    'home.rel-0816': '<span class="rel-date">16 ago.</span> O PapaGaio para iPhone e iPad chega à <a href="https://apps.apple.com/app/papagaio-portugal/id6802084974">App Store</a>.',
+    'home.rel-0816': '<span class="rel-date">16 ago.</span> O PapaGaio para iPhone e iPad chega à <a href="' + appStoreLink('home') + '">App Store</a>.',
     'home.rel-0803a': '<span class="rel-date">3 ago.</span> Os artigos do dicionário ganharam separadores — Exemplos e Conjugações com dez tempos, agrupados em Passado / Presente / Futuro e gerados por regra, para que <em>pudemos</em> nunca apareça como <em>podemos</em>. E ainda uma faixa de «abertos recentemente».',
     'home.rel-0803b': '<span class="rel-date">3 ago.</span> O Tutor IA ouve-o no navegador: toque em 🎙, fale, e ele responde em voz alta. Já não precisa do Telegram.',
     'home.rel-0729a': '<span class="rel-date">29 jul.</span> Os erros da conversa passam a cartões — o resumo depois do /stop envia cada correção diretamente para a sua fila de revisão. E ainda /undo e /export.',
@@ -94,7 +95,7 @@ export default {
     'home.news-title': 'Что нового',
     'home.rel-1001': '<span class="rel-date">1 окт.</span> Выверенный словарь: 20 000 самых частых слов проверены на английском, русском и португальском, а английские значения начинаются с того слова, которое вы бы и сказали (<em>casa</em>: house, home). Поиск работает без диакритики (<em>cao</em> находит <em>cão</em>) и по любой падежной форме русского слова.',
     'home.rel-0904': '<span class="rel-date">4 сен.</span> PapaGaio для Mac и Windows, а словарь на 110 000 статей встроен во все приложения — поиск работает без интернета.',
-    'home.rel-0816': '<span class="rel-date">16 авг.</span> PapaGaio для iPhone и iPad в <a href="https://apps.apple.com/app/papagaio-portugal/id6802084974">App Store</a>.',
+    'home.rel-0816': '<span class="rel-date">16 авг.</span> PapaGaio для iPhone и iPad в <a href="' + appStoreLink('home') + '">App Store</a>.',
     'home.rel-0803a': '<span class="rel-date">3 авг.</span> В словарных статьях появились вкладки — «Примеры» и «Спряжение» с десятью временами, сгруппированными на прошлое, настоящее и будущее. Формы строятся по правилам, так что <em>pudemos</em> никогда не превратится в <em>podemos</em>. И ещё лента «Недавние».',
     'home.rel-0803b': '<span class="rel-date">3 авг.</span> ИИ-коуч слышит вас прямо в браузере: нажмите 🎙, говорите — он ответит вслух. Telegram не нужен.',
     'home.rel-0729a': '<span class="rel-date">29 июл.</span> Ошибки из разговора становятся карточками — разбор после /stop отправляет каждое исправление прямо в очередь повторения. А ещё /undo и /export.',

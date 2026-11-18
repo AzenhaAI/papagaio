@@ -1,4 +1,5 @@
 ---
+import { appStoreLink, playLink } from '../lib/store.js';
 // The compact row: five platforms as icon buttons, no words to read.
 //
 // The card strip further down explains each door; this is for the person who
@@ -8,8 +9,8 @@ const base = '/papagaio';
 // The two labelled buttons are written out in the markup, so that each label
 // carries its own [data-th] id; the icon-only rest come from this list.
 const buttons = [
-  { icon: '🍎', title: 'iPhone & iPad — App Store', href: 'https://apps.apple.com/app/papagaio-portugal/id6802084974' },
-  { icon: '▶️', title: 'Android — Google Play', href: 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio' },
+  { icon: '🍎', title: 'iPhone & iPad — App Store', href: appStoreLink('getapp') },
+  { icon: '▶️', title: 'Android — Google Play', href: playLink('getapp') },
   { icon: '🤖', title: 'Android APK', href: '/dl/PapaGaio.apk' },
   { icon: '💻', title: 'macOS', href: '/dl/PapaGaio-mac.dmg' },
   { icon: '🪟', title: 'Windows', href: '/dl/PapaGaio-windows.zip' },

@@ -394,7 +394,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   </style>
     <!-- Smart App Banner: Safari's own strip at the top, "Open" or "Get" for
          the App Store app. The listing is public since 16 August 2026. -->
-    <meta name="apple-itunes-app" content="app-id=6802084974" />
+    <meta name="apple-itunes-app" content="app-id=6802084974, affiliate-data=ct=web-papagaio-banner&pt=129240922" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
   <style is:global>
     .getapp-pill { display: inline-flex; align-items: center; gap: 6px;
@@ -882,6 +882,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   #a2hs-x{width:28px;height:28px;font-size:18px;line-height:1}
 </style>
 <script>
+  import { appStoreLink } from '../lib/store.js';
   import { t } from '../lib/i18n.js';
   (function () {
     var el = document.getElementById('a2hs');
@@ -948,7 +949,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       go.hidden = false;
       go.onclick = function () {
         (window as any).gtag?.('event', 'store_click', { store: 'app_store', page_type: 'ios_hint', page_lang: document.documentElement.lang, transport_type: 'beacon' });
-        location.href = 'https://apps.apple.com/app/id6802084974';
+        location.href = appStoreLink('ios-hint');
       };
       // Not immediately: a hint in the first second reads as an ad.
       setTimeout(function () { el.hidden = false; }, 2500);
