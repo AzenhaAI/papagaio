@@ -1,0 +1,138 @@
+---
+// The "get the app" strip for phone browsers (18.11.2026, the same spec for
+// every azenha.ai product). One store per system: Android sees Google Play
+// (with the APK as a small second door), iPhone and iPad the App Store.
+// Computers see nothing: the header pill and the handoff blocks serve them.
+//
+// Safari on iOS already draws Apple's own Smart App Banner from the
+// apple-itunes-app meta in BaseLayout, with "Open" when the app is installed,
+// so this strip appears on iOS only in Chrome, Firefox, Edge and in-app web
+// views, which have no such banner.
+//
+// It replaces azenha.ai's middleware strip (#az-apk) on PapaGaio pages: that
+// one is English-only, ignores the consent card and counts nothing.
+//
+// Quiet rules: never inside an app web view (?app=1, Android's "; wv)"), never
+// in the installed PWA, not while the cookie card is up, and not for 14 days
+// after the cross or a store tap. Store taps are counted by the store_click
+// listener in BaseLayout through data-place="mobile_banner".
+const PLAY = 'https://play.google.com/store/apps/details?id=ai.azenha.papagaio&referrer=utm_source%3Dsite%26utm_medium%3Dmobile_banner';
+const IOS = 'https://apps.apple.com/app/papagaio-portugal/id6802084974?pt=129240922&ct=mobile_banner&mt=8';
+---
+<div id="pg-appbar" data-place="mobile_banner" data-ios={IOS} hidden>
+  <img src="/papagaio/icon-192.png" alt="" width="36" height="36" />
+  <p><b>PapaGaio</b><span id="pg-appbar-text"></span></p>
+  <a id="pg-appbar-get" href={PLAY} rel="noopener"></a>
+  <a id="pg-appbar-apk" href="/dl/PapaGaio.apk" hidden>APK</a>
+  <button type="button" id="pg-appbar-x" aria-label="Dismiss">&times;</button>
+</div>
+
+<style is:global>
+  /* The middleware's English-only Android strip gives way to this one. */
+  #az-apk { display: none !important; }
+  #pg-appbar { position: fixed; left: 0; right: 0; z-index: 70;
+    bottom: env(safe-area-inset-bottom, 0px);
+    display: flex; align-items: center; gap: 10px; padding: 8px 8px 8px 12px;
+    background: var(--panel2); color: var(--text);
+    border-top: 1px solid var(--border, rgba(255,255,255,.12));
+    box-shadow: 0 -4px 16px rgba(0,0,0,.22);
+    font: 14px/1.25 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  #pg-appbar[hidden] { display: none; }
+  #pg-appbar img { flex: none; width: 36px; height: 36px; border-radius: 9px; }
+  #pg-appbar p { margin: 0; flex: 1; min-width: 0; display: grid; }
+  #pg-appbar p b { font-size: 14.5px; }
+  #pg-appbar p span { font-size: 12.5px; color: var(--muted); }
+  #pg-appbar a { flex: none; text-decoration: none; border-radius: 9px; font-weight: 700; white-space: nowrap; }
+  #pg-appbar-get { background: var(--accent); color: #08130c; padding: 8px 13px; font-size: 14px; }
+  #pg-appbar-apk { color: var(--muted); font-size: 12.5px; padding: 8px 2px; }
+  #pg-appbar-apk[hidden] { display: none; }
+  #pg-appbar button { flex: none; width: 32px; height: 32px; border: 0; background: none;
+    color: var(--muted); font-size: 22px; line-height: 1; cursor: pointer; }
+  /* Phones: above the section bar, never over it, and the page end stays reachable. */
+  @media (max-width: 760px) {
+    #pg-appbar { bottom: calc(62px + env(safe-area-inset-bottom, 0px)); }
+    html.pg-appbar-on body { padding-bottom: calc(62px + 54px + env(safe-area-inset-bottom, 0px)); }
+  }
+  html.pg-appbar-on body { padding-bottom: calc(54px + env(safe-area-inset-bottom, 0px)); }
+  @media (prefers-reduced-motion: no-preference) {
+    #pg-appbar:not([hidden]) { animation: pg-appbar-up .25s ease-out; }
+    @keyframes pg-appbar-up { from { transform: translateY(100%); opacity: 0; } }
+  }
+  /* The narrowest phones (320 pt): the APK door goes, Play stays. */
+  @media (max-width: 350px) { #pg-appbar-apk { display: none !important; } #pg-appbar p span { font-size: 11.5px; } }
+</style>
+
+<script>
+  import { t } from '../lib/i18n.js';
+  (function () {
+    const el = document.getElementById('pg-appbar');
+    if (!el) return;
+    const KEY = 'pg_appbar_until';
+    const DAYS = 14;
+    const gtag = (...a: unknown[]) => (window as any).gtag?.(...a);
+
+    const ua = navigator.userAgent;
+    const uad = (navigator as any).userAgentData;
+    const android = uad?.platform === 'Android' || /Android/i.test(ua);
+    // iPadOS 13+ says "Macintosh"; a Mac with touch points is an iPad.
+    const ios = !android && (/iPhone|iPod|iPad/.test(ua) ||
+      (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1));
+    if (!android && !ios) return;
+    // Safari proper (not Chrome, Firefox, Edge, Opera, Google app, Yandex,
+    // DuckDuckGo, nor an in-app web view, which has no "Safari/" token)
+    // draws Apple's Smart App Banner itself.
+    const iosSafari = ios && /Safari\//.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|OPT\/|GSA\/|YaBrowser|DuckDuckGo|Instagram|FBAN|FBAV/.test(ua);
+    if (iosSafari) return;
+
+    const q = new URLSearchParams(location.search);
+    if (q.has('app') || q.has('embed') || /; wv\)/.test(ua)) return;
+    try { if (window.top !== window.self) return; } catch (e) { return; }
+    try {
+      if (matchMedia('(display-mode: standalone)').matches || (navigator as any).standalone) return;
+    } catch (e) { /* no matchMedia: carry on */ }
+    try {
+      const until = Number(localStorage.getItem(KEY));
+      if (until && Date.now() < until) return;
+    } catch (e) { /* storage blocked: show it, but it cannot remember the cross */ }
+
+    const platform = android ? 'android' : 'ios';
+    const get = document.getElementById('pg-appbar-get') as HTMLAnchorElement;
+    const apk = document.getElementById('pg-appbar-apk') as HTMLAnchorElement;
+    // The store is named on the button, so the line itself stays short
+    // enough for one row on a 360-point phone in all three languages.
+    document.getElementById('pg-appbar-text')!.textContent = t('Practise in the app — free');
+    if (android) {
+      get.textContent = 'Google Play';
+      apk.hidden = false;
+    } else {
+      get.textContent = 'App Store';
+      get.href = (el.dataset.ios as string) || get.href;
+    }
+
+    const quiet = () => { try { localStorage.setItem(KEY, String(Date.now() + DAYS * 864e5)); } catch (e) {} };
+    const close = () => {
+      el.hidden = true;
+      document.documentElement.classList.remove('pg-appbar-on');
+    };
+    document.getElementById('pg-appbar-x')!.addEventListener('click', () => {
+      gtag('event', 'app_banner_dismiss', { platform, page_lang: document.documentElement.lang });
+      quiet(); close();
+    });
+    // A store tap: the visitor has seen the offer; the same 14 days of quiet.
+    for (const a of [get, apk]) a.addEventListener('click', quiet);
+
+    const show = () => {
+      el.hidden = false;
+      document.documentElement.classList.add('pg-appbar-on');
+      gtag('event', 'app_banner_view', { platform, page_lang: document.documentElement.lang });
+    };
+    // Not in the first second (it reads as an ad), and never next to the
+    // cookie card: until that is answered, the strip waits for the answer.
+    const later = () => setTimeout(show, 1500);
+    let answered = false;
+    try { answered = !!localStorage.getItem('pg_consent'); } catch (e) { answered = true; }
+    if (answered) later();
+    else for (const id of ['consent-yes', 'consent-no'])
+      document.getElementById(id)?.addEventListener('click', later, { once: true });
+  })();
+</script>
