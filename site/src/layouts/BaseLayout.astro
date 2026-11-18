@@ -1,4 +1,5 @@
 ---
+import MobileAppBar from '../components/MobileAppBar.astro';
 const { title = 'PapaGaio', desc = 'A live AI conversation coach for European Portuguese (pt-PT): roleplay the caf\u00e9, the bank, AIMA, and get corrected. Plus a translator and flashcards. Free.', image = 'https://azenha.ai/papagaio/og.png' } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const canonical = new URL(Astro.url.pathname.replace(/\/?$/, '/'), 'https://azenha.ai').href;
@@ -328,7 +329,8 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     /* One prompt at a time: three cards stacked over a 320-point screen read as
        a wall. While the consent card is up, the install prompts wait. */
     body:has(#consent[style*="block"]) #az-apk,
-    body:has(#consent[style*="block"]) #a2hs { display: none !important; }
+    body:has(#consent[style*="block"]) #a2hs,
+    body:has(#consent[style*="block"]) #pg-appbar { display: none !important; }
     /* Phones: the six sections move from the header strip to the bar, so
        nothing is listed twice; the logo, Get the app and the burger stay. */
     @media (max-width: 760px) {
@@ -835,6 +837,7 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
     };
   })();
 </script>
+<MobileAppBar />
 <!-- Install prompt — the reference copy, inserted before </body>.
      Source of truth: ~/Projects/_stores/ios-install-hint.html
 
@@ -882,7 +885,6 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
   #a2hs-x{width:28px;height:28px;font-size:18px;line-height:1}
 </style>
 <script>
-  import { appStoreLink } from '../lib/store.js';
   import { t } from '../lib/i18n.js';
   (function () {
     var el = document.getElementById('a2hs');
@@ -932,28 +934,8 @@ const active = (p) => here.endsWith(`/${p}`) ? 'active' : '';
       try { localStorage.setItem(KEY, '1'); } catch (e) {}
     });
 
-    // iOS: no button exists, so point the way to it.
-    var ua = navigator.userAgent;
-    // The iPad test (a "Mac" with touch points) also matched Android phones
-    // in some emulators, which then got the App Store offer; Android is ruled
-    // out by name.
-    var iOS = !/Android/.test(ua) && (/iPhone|iPod|iPad/.test(ua) ||
-              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
-    // iPhone and iPad: the real app is in the App Store, so that is what the
-    // hint offers — a home-screen shortcut to the site is the lesser thing.
-    // Safari also shows its own banner (apple-itunes-app above); Chrome and
-    // Firefox on iOS do not, and this covers them.
-    if (iOS) {
-      txt.textContent = t('PapaGaio is in the App Store — free, with the dictionary offline.');
-      go.textContent = t('Get the app');
-      go.hidden = false;
-      go.onclick = function () {
-        (window as any).gtag?.('event', 'store_click', { store: 'app_store', page_type: 'ios_hint', page_lang: document.documentElement.lang, transport_type: 'beacon' });
-        location.href = appStoreLink('ios-hint');
-      };
-      // Not immediately: a hint in the first second reads as an ad.
-      setTimeout(function () { el.hidden = false; }, 2500);
-    }
+    // iPhone and iPad: the App Store offer is MobileAppBar's (Apple's own
+    // Smart App Banner in Safari); a home-screen shortcut would be the lesser thing.
   })();
 </script>
 <script>
