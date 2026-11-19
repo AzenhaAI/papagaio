@@ -9,7 +9,7 @@ const uploaded = new Set(existsSync(LIST)
   ? readFileSync(LIST, 'utf8').split('\n').filter(Boolean).map((f) => f.replace(/\.png$/, ''))
   : []);
 
-export const GENERIC_OG = 'https://azenha.ai/papagaio/og.png';
+export const GENERIC_OG = 'https://azenha.ai/papagaio/og.png?v=2';
 export const ogImage = (slug) => (uploaded.has(slug)
   ? `https://audio.azenha.ai/og/${encodeURIComponent(slug)}.png`
   : GENERIC_OG);
