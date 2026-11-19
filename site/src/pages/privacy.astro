@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Privacy — PapaGaio" desc="What PapaGaio stores, what it does not, and how to delete everything: no ads, no analytics SDK in the apps, anonymous usage counts you can switch off, no email needed.">
   <h1>Privacy</h1>
-  <p class="muted">Last updated: 17 November 2026</p>
+  <p class="muted">Last updated: 18 November 2026</p>
 
   <h2>The short version</h2>
   <p style="max-width:640px;">
@@ -23,6 +23,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <ul class="muted" style="max-width:640px; line-height:1.9;">
     <li><strong style="color:var(--text)">Cloudflare Web Analytics</strong> runs always: page counts with no cookies and no cross-site tracking.</li>
     <li><strong style="color:var(--text)">Google Analytics</strong> loads <em>only</em> if you press Allow on the banner. Decline and the script is never fetched. Your choice is remembered in your browser; clear site data to be asked again.</li>
+    <li><strong style="color:var(--text)">Microsoft Clarity</strong> also loads <em>only</em> after Allow. It records clicks, taps and scrolling, which we can replay as a recording of a visit or see as heatmaps, to find where pages are hard to use. It sets cookies and sends this to Microsoft (<a href="https://privacy.microsoft.com/privacystatement" rel="noopener">Microsoft privacy statement</a>). Decline and it is never fetched.</li>
   </ul>
 
   <h2>Telegram bot</h2>
