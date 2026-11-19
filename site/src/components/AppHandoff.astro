@@ -1,4 +1,5 @@
 ---
+import { appStoreLink, playLink } from '../lib/store.js';
 // "Continue in the app": the store doors in the order that fits the device.
 // Android sees Google Play first and the APK beside it, iPhone and iPad the
 // App Store, a computer every door plus the desktop builds. Clicks on any store
@@ -13,10 +14,10 @@ const { place = 'handoff' } = Astro.props;
     <span class="muted" data-t>Your words and cards with audio, offline, and a gentle daily reminder. Free.</span>
   </div>
   <div class="handoff-doors">
-    <a class="hd play" data-door="play" href="https://play.google.com/store/apps/details?id=ai.azenha.papagaio&referrer=utm_source%3Dazenha.ai%26utm_medium%3Dsite%26utm_campaign%3Dhandoff">
+    <a class="hd play" data-door="play" href={playLink(place)}>
       <span class="ic">▶</span><span><small data-t>Get it on</small>Google Play</span>
     </a>
-    <a class="hd ios" data-door="ios" href="https://apps.apple.com/app/papagaio-portugal/id6802084974">
+    <a class="hd ios" data-door="ios" href={appStoreLink(place)}>
       <span class="ic">🍎</span><span><small data-t>Download on the</small>App Store</span>
     </a>
     <a class="hd apk" data-door="apk" href="/dl/PapaGaio.apk">
